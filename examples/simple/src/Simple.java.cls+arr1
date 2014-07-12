@@ -1,0 +1,30 @@
+import chord.analyses.expax.*;
+
+public class Simple {
+
+	public static void main(String[] args) {
+		Class[] G = new Class[10];
+		for (int i=0; i<10; i++)
+			G[i] = new Class(i);
+		int x=0;
+		G[0].a = x;
+	  G[0].a = accept(G[0].a); 
+		G[0].a = x;
+		G[0].a = precise(G[0].a); 
+	}
+	public static int accept(int i){return i;}
+	public static int precise(int i){return i;}
+}
+
+class Class {
+	public int a;
+	Class(int a){
+		this.a = a;
+	}
+	public int getA(){
+		return a;
+	}
+}
+
+
+

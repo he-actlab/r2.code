@@ -1,0 +1,35 @@
+import chord.analyses.expax.*;
+
+public class Simple {
+
+	public static void main(String[] args) {
+		int x;
+		int y=1; // move to y
+		int z=2;
+		Class.A = y; // move to Class.A
+		x = Class.A; // load Class.A, move to x
+		x = accept(x); 
+		Class.A = x+z;
+		z = Class.A;
+		z = precise(z); // move to x
+	}
+
+	public static int accept(int i){
+		return i;
+	}
+
+	public static int precise(int i){
+		return i;
+	}
+
+}
+
+class Class {
+	public static int A;
+	Class(){
+		this.A = 10;
+	}
+}
+
+
+

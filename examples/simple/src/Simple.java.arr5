@@ -1,0 +1,37 @@
+import chord.analyses.expax.*;
+
+public class Simple {
+
+	public static void main(String[] args) {
+		int[][] G = new int[10][];
+		for (int i=0; i<10; i++)
+			G[i] = new int[10];
+
+		for (int i=0; i<10; i++)
+			for (int j=0; j<10; j++)
+				G[i][j] = accept(G[i][j]);
+
+		for (int i=0; i<10; i++)
+			for (int j=0; j<10; j++) {
+				G[i][j] = 10;
+				System.out.println(G[i][j]);
+			}
+
+		for (int i=0; i<10; i++)
+			for (int j=0; j<10; j++)
+				G[i][j] = precise(G[i][j]);
+
+	}
+
+	public static int accept(int i){
+		return i;
+	}
+
+	public static int precise(int i){
+		return i;
+	}
+
+}
+
+
+

@@ -1,0 +1,8 @@
+1 HF ARRAY ARRAY
+2 G m [I jnt.scimark2.Random
+3 HF ARRAY ARRAY 
+4 HF ARRAY ARRAY
+
+TAG1 -> int[] pixels
+TAG2 -> BitMatrix.bits
+TAG3 -> ResultPoint

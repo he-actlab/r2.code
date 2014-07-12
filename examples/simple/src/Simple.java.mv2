@@ -1,0 +1,23 @@
+import chord.analyses.expax.*;
+
+public class Simple {
+
+	public static void main(String[] args) {
+		int a = 1; // move to a
+		int b = a+1; // add, move to b
+		b = accept(b);
+		int c = b+1;
+		c = precise(c); // move to c
+	}
+
+	public static int accept(int i){
+		return i;
+	}
+
+	public static int precise(int i){
+		return i;
+	}
+
+}
+
+

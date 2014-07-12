@@ -1,0 +1,13 @@
+# name=checkIncludedQ-dlog
+
+.include "M.dom"
+.include "P.dom"
+
+.bddvarorder M0_P0
+
+checkExcludedM(m:M0) input
+MP(m:M0,p:P0) input
+checkIncludedP(p:P0) output
+
+checkIncludedP(p) :- MP(m,p), !checkExcludedM(m).
+

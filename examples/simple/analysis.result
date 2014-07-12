@@ -1,0 +1,8 @@
+5
+Simple#main(java.lang.String[])#void#9#4: ASTORE_I IConst: 1, R3, IConst: 0
+Simple#main(java.lang.String[])#void#15#8: ADD_I T9, T8, R1
+Simple#main(java.lang.String[])#void#1#1: MOVE_I R1, IConst: 3
+Simple#main(java.lang.String[])#void#13#7: ALOAD_I T8, R3, IConst: 0
+Simple#main(java.lang.String[])#void#16#9: ASTORE_I T9, T6, T5
+1
+Simple#main(java.lang.String[])#void#3#2: NEWARRAY T2, IConst: 3, int[]#ARRAY#int[]#ARRAY

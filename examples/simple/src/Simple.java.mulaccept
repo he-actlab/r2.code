@@ -1,0 +1,35 @@
+import chord.analyses.expax.*;
+
+public class Simple {
+
+	public static void main(String[] args) {
+		int a = 10;  
+		boolean x;
+
+		a = 20; 
+
+		if (a == 10)
+			x = true; 
+		else
+			x = false; 
+
+		x = accept(x);
+		x = precise(x);
+		
+	}
+
+	public static int accept(int a){
+		return a;
+	}
+
+	public static boolean accept(boolean i){
+		return i;
+	}
+
+	public static boolean precise(boolean i){
+		return i;
+	}
+
+}
+
+

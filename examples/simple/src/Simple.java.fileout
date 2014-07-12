@@ -1,0 +1,48 @@
+import chord.analyses.expax.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.nio.charset.Charset;
+import java.util.Hashtable;
+import java.util.Vector;
+//import enerj.lang.*;
+
+public class Simple {
+
+	public static void main(String[] args) {
+		File f = new File("simple.out");
+		Writer out = null;
+		try{
+			out = new OutputStreamWriter(new FileOutputStream(f), Charset.forName("UTF8"));
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+
+		try{
+			double a = 1;
+			double b;
+			b = a;
+			b = accept(b);
+			out.write(b);
+//			b = precise(b);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}	
+	}
+	
+	public static double accept(double i){
+		return i;
+	}
+
+	public static double precise(double i){
+		return i;
+	}
+
+}

@@ -1,0 +1,1 @@
+cat all | grep -v MOVE_I | grep -v MOVE_D | grep -v ALOAD_I | grep -v ASTORE_I | grep -v ARRAYLENGTH | grep -v ADD_I | grep -v MUL_D | grep -v ALOAD_D | grep -v MOVE_L | grep -v MUL_I | grep -v ASTORE_D | grep -v ADD_D | grep -v DIV_I | grep -v GETFIELD_D | grep -v SUB_I | grep -v SUB_D | grep -v GETFIELD_I | grep -v PUTFIELD_I | grep -v AND_I | grep -v PUTFIELD_D | grep -v DIV_D

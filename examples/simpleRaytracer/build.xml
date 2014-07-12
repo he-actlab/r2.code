@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="simpleRaytracer" default="build">
+
+  <target name="build" depends="clean">
+    <mkdir dir="classes"/>
+    <javac srcdir="src"
+           destdir="classes"
+           optimize="true"
+           debug="true"
+           deprecation="true">
+    </javac>
+    <jar jarfile="simpleRaytracer.jar" basedir="classes"/>
+  </target>
+
+  <target name="clean">
+    <delete dir="classes"/>
+    <delete file="simpleRaytracer.jar"/>
+		<delete dir="chord_output_expax"/>
+  </target>
+
+</project>

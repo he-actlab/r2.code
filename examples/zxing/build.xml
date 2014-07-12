@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="zxing" default="build">
+  <target name="build">
+    <mkdir dir="classes"/>
+    <javac srcdir="src"
+           destdir="classes"
+           optimize="true"
+           debug="true"
+           deprecation="true">
+    </javac>
+    <jar jarfile="zxing.jar" basedir="classes"/>
+  </target>
+  <target name="clean">
+    <delete dir="classes"/>
+    <delete file="zxing.jar"/>
+		<delete dir="chord_output_expax"/>
+  </target>
+
+</project>

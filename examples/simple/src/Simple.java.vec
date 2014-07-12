@@ -1,0 +1,25 @@
+public class Simple {
+
+	public static int a;
+
+	public static void main(String[] args) {
+		Vector2f v = new Vector2f();
+		v.x = 2;	// approx: 5: PUTFIELD_I R3, .x, IConst: 2
+		v.y = 3;	// approx: 6: PUTFIELD_I R3, .y, IConst: 3
+		int sum = v.x + v.y;	// approx: 7: GETFIELD_I T8, R3, .x	// approx: 8: GETFIELD_I T6, R3, .y	// approx: 9: ADD_I T9, T8, T6	// approx: 10: MOVE_I R10, T9
+		sum = accept(sum);
+		sum = precise(sum);	// approx: 14: MOVE_I R14, T13
+		
+	}
+
+	private static int accept(int i){ return i;}
+	private static int precise(int i){ return i;}
+
+}
+
+class Vector2f{
+	public int x;
+	public int y;
+}
+
+

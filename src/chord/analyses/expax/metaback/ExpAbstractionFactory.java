@@ -1,0 +1,62 @@
+package chord.analyses.expax.metaback;
+
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
+import joeq.Compiler.Quad.Quad;
+import chord.project.analyses.metaback.Abstraction;
+import chord.project.analyses.metaback.AbstractionFactory;
+import chord.util.dnf.Clause;
+import chord.util.dnf.DNF;
+import chord.util.dnf.Domain;
+import chord.util.dnf.Variable;
+import chord.util.tuple.object.Pair;
+
+public class ExpAbstractionFactory implements AbstractionFactory {
+	public final static ExpAbstractionFactory singleton = new ExpAbstractionFactory();
+	
+	private ExpAbstractionFactory(){}
+	
+	@Override
+	public Abstraction genAbsFromNC(DNF dnf) {
+		Set<Integer> approxQ = new HashSet<Integer>(SharedData.allApproxStatements);
+		Set<Pair<Integer,Integer>> approxS = new HashSet<Pair<Integer,Integer>>(SharedData.allApproxStorage);
+		if(dnf.isTrue())
+			return new ExpAbstraction(approxQ, approxS);
+		if(dnf.isFalse())
+			throw new RuntimeException();
+		Clause c = dnf.getClauses().first();
+		for(Map.Entry<Variable, Domain> predicate : c.getLiterals().entrySet())
+			if(predicate.getKey() instanceof OVariable){
+				OVariable ov = (OVariable)predicate.getKey();
+				if(BoolDomain.F.equals(predicate.getValue())) {
+					// jspark: for debug
+					Quad q = SharedData.indexQuadMap.get(ov.getIdx()); 
+					if (q != null) {
+						if (!SharedData.prevRemovedQuad.contains(q)) {
+							System.out.println("*** EXPAX_LOG: REMOVED QUAD (" + SharedData.indexQuadMap.get(new Integer(ov.getIdx())).toString() + ")");
+							SharedData.prevRemovedQuad.add(q);
+						}
+					}
+					approxQ.remove(ov.getIdx());
+				}
+			} else if (predicate.getKey() instanceof STVariable) {
+				STVariable stv = (STVariable)predicate.getKey();
+				if(BoolDomain.F.equals(predicate.getValue())) {
+					approxS.remove(stv.getPair());
+				}
+			}
+			else
+				throw new RuntimeException();
+		return new ExpAbstraction(approxQ, approxS);
+	}
+
+	@Override
+	public Abstraction genAbsFromStr(String s) {
+		ExpAbstraction ret = new ExpAbstraction();
+		ret.decode(s);
+		return ret;
+	}
+
+}

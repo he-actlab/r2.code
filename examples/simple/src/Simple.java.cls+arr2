@@ -1,0 +1,42 @@
+import chord.analyses.expax.*;
+
+public class Simple {
+
+	public static void main(String[] args) {
+		A[] G = new A[10];
+		for (int i=0; i<10; i++) {
+			B b = new B();
+			G[i] = new A(b);
+		}
+		int x=0;
+		G[0].getB().arr[0] = x;		// approx: 9: ASTORE_I R14, T17, IConst: 0
+	  accept_all(G[0].getB().arr); 		
+		G[0].getB().arr[0] = x;
+		precise_all(G[0].getB().arr); 
+	}
+	public static int[] accept_all(int[] i){return i;}
+	public static int[] precise_all(int[] i){return i;}
+}
+
+class A {
+	public B b;
+	A(B b){
+		this.b = b;
+	}
+	public B getB(){
+		return b;
+	}
+}
+
+class B {
+	public int[] arr;
+	B(){
+		this.arr = new int[10];
+	}
+	public int[] getArr(){
+		return arr;
+	}
+}
+
+
+

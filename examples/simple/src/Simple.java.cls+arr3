@@ -1,0 +1,48 @@
+import chord.analyses.expax.*;
+
+public class Simple {
+
+	public B b = new B();
+	public int[] k = new int[3];		
+
+	public static void main(String[] args) {
+		Simple s = new Simple();
+		s.init();
+	}
+	
+	public void init(){
+		k[0] = 1;		
+		k = accept_all(k);		
+		k[0] = 1;
+		k = precise_all(k);	
+	}
+
+	public static int accept_all(int i){return i;}
+	public static int precise_all(int i){return i;}
+	public static int[] accept_all(int[] i){return i;}
+	public static int[] precise_all(int[] i){return i;}
+}
+
+class A {
+	public B b;
+	A(B b){
+		this.b = b;
+	}
+	public B getB(){
+		return b;
+	}
+}
+
+class B {
+	public int x;
+	public int[] arr;
+	B(){
+		this.arr = new int[10];
+	}
+	public int[] getArr(){
+		return arr;
+	}
+}
+
+
+

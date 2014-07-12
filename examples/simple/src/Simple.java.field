@@ -1,0 +1,20 @@
+public class Simple {
+
+	public static int a;
+
+	public static void main(String[] args) {
+		A a = new A();
+		a.x = 1;			
+		a.x = accept_all(a.x);		
+		a.x = precise_all(a.x);			
+	}
+
+	private static int accept_all(int i){ return i; }
+	private static int precise_all(int i){ return i; }
+}
+
+class A{
+	public int x;
+}
+
+

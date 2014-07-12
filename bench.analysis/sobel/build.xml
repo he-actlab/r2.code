@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="sobel" default="build">
+
+  <target name="build">
+    <mkdir dir="build"/>
+  	<javac srcdir="sobel" destdir="build"/>
+    <jar jarfile="sobel.jar" basedir="build"/>
+  </target>
+
+  <target name="clean">
+    <delete dir="build"/>
+    <delete file="sobel.jar"/>
+  </target>
+
+</project>
