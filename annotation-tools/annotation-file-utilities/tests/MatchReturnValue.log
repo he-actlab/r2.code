@@ -1,0 +1,2 @@
+Found class annotator.tests.MatchReturnValue, but unable to insert @java.lang.ShouldNotAppearInOutput:
+  @java.lang.ShouldNotAppearInOutput (nl=true) @ [in method 'clone()Ljava.lang.Object;', In class 'annotator.tests.MatchReturnValue' (exactly), In class 'annotator.tests.MatchReturnValue' (exactly)]

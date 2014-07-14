@@ -1,4 +1,4 @@
-build
+build/
 nohup.out
 eclipse-log/
 .classpath
