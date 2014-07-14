@@ -1,0 +1,8 @@
+#!/bin/sh
+jsr308jar=$JSR308/checkers/binary/jsr308-all.jar
+cfrtdir=`dirname $0`/..
+cfrtjar=$cfrtdir/build/cfrt.jar
+exjar=$cfrtdir/build/jillexample.jar
+
+command="java -Xbootclasspath/a:$jsr308jar:$cfrtjar:$exjar $*"
+exec $command

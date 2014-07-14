@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="libs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/enerjInst/libs/cfrt.jar!/" />
+      <root url="jar://$PROJECT_DIR$/enerjInst/libs/ant.jar!/" />
+      <root url="jar://$PROJECT_DIR$/enerjInst/libs/rt.jar!/" />
+      <root url="jar://$PROJECT_DIR$/enerjInst/libs/jce.jar!/" />
+      <root url="jar://$PROJECT_DIR$/enerjInst/libs/core.jar!/" />
+      <root url="jar://$PROJECT_DIR$/enerjInst/libs/soot-2.5.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/enerjInst/libs/enerj.jar!/" />
+      <root url="jar://$PROJECT_DIR$/enerjInst/libs/ant-launcher.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

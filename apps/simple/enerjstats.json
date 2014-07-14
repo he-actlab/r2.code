@@ -1,0 +1,1 @@
+{"operations":{"storeARRAYEL":[0,1],"storeVARIABLE":[2,0],"loadVARIABLE":[2,0],"storeFIELD":[2,2]},"footprint":{"stack-bytes":[32,0],"heap-bytes":[16,12],"heap-objects":[1,1],"stack-objects":[4,0]}}

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="scimark2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/apps/scimark2/scimark2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/apps/scimark2/new.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

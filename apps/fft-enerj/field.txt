@@ -1,0 +1,2 @@
+1	HF ARRAY ARRAY
+2 G m [I jnt.scimark2.Random

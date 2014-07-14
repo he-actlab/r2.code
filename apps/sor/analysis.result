@@ -1,0 +1,25 @@
+23
+jnt.scimark2.Random#<init>(int)#void#6#2: PUTFIELD_I R0, .seed, IConst: 0
+jnt.scimark2.SOR#execute(double,double[][],int)#void#125#43: ALOAD_D T54, R15, R43
+jnt.scimark2.SOR#execute(double,double[][],int)#void#118#42: MUL_D T53, R9, T52
+jnt.scimark2.Random#<init>(int)#void#101#33: PUTFIELD_D R0, .right, DConst: 1.0
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#15#5: MOVE_D T5, DConst: 1.25
+jnt.scimark2.SOR#execute(double,double[][],int)#void#128#46: ASTORE_D T56, R15, R43
+jnt.scimark2.SOR#execute(double,double[][],int)#void#19#8: SUB_D T30, DConst: 1.0, R0
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#69#30: ALOAD_D T11, T24, R20
+jnt.scimark2.SOR#execute(double,double[][],int)#void#127#45: ADD_D T56, T53, T55
+jnt.scimark2.SOR#execute(double,double[][],int)#void#117#41: ADD_D T52, T49, T51
+jnt.scimark2.SOR#execute(double,double[][],int)#void#15#7: MOVE_D R9, T29
+jnt.scimark2.SOR#execute(double,double[][],int)#void#126#44: MUL_D T55, R10, T54
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#58#14: ASTORE_D T8, T18, R17
+jnt.scimark2.Random#initialize(int)#void#2#1: PUTFIELD_I R0, .seed, R1
+jnt.scimark2.commandline#main(java.lang.String[])#void#3#1: MOVE_D R1, DConst: 2.0
+jnt.scimark2.SOR#execute(double,double[][],int)#void#95#33: ALOAD_D T44, R17, R43
+jnt.scimark2.SOR#execute(double,double[][],int)#void#109#38: ADD_D T49, T46, T48
+jnt.scimark2.SOR#execute(double,double[][],int)#void#108#37: ALOAD_D T48, R15, T47
+jnt.scimark2.SOR#execute(double,double[][],int)#void#116#40: ALOAD_D T51, R15, T50
+jnt.scimark2.SOR#execute(double,double[][],int)#void#20#9: MOVE_D R10, T30
+jnt.scimark2.SOR#execute(double,double[][],int)#void#14#6: MUL_D T29, R0, DConst: 0.25
+jnt.scimark2.SOR#execute(double,double[][],int)#void#100#34: ALOAD_D T45, R18, R43
+jnt.scimark2.SOR#execute(double,double[][],int)#void#101#35: ADD_D T46, T44, T45
+0

@@ -1,0 +1,9 @@
+8
+Simple#main(java.lang.String[])#void#3#115#IDENT#x
+Simple#<init>()#void#1#31#IDENT#super
+Simple#<init>()#void#0#31#IDENT#super
+Simple#precise(int)#int#0#198#IDENT#x
+Simple#main(java.lang.String[])#void#4#113#MUL#x * x
+Simple#main(java.lang.String[])#void#2#111#IDENT#x
+Simple#main(java.lang.String[])#void#5#107#VARDEF#int y = x * x
+Simple#main(java.lang.String[])#void#1#94#VARDEF#int x = 1

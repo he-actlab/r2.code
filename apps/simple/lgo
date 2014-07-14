@@ -1,0 +1,950 @@
+Buildfile: /Users/jspark/projects/expax/apps/simple/build.xml
+
+clean:
+   [delete] Deleting directory /Users/jspark/projects/expax/apps/simple/build
+   [delete] Deleting: /Users/jspark/projects/expax/apps/simple/simple.jar
+
+build:
+    [mkdir] Created dir: /Users/jspark/projects/expax/apps/simple/build
+   [enerjc] /Users/jspark/projects/expax/apps/simple/build.xml:47: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+   [enerjc] Compiling 1 source file to /Users/jspark/projects/expax/apps/simple/build
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/simple/src/Simple.java]]
+   [enerjc] [parsing completed 14ms]
+   [enerjc] [search path for source files: /Users/jspark/projects/expax/apps/simple/src]
+   [enerjc] [search path for class files: /Users/jspark/projects/expax/checker-framework/checkers/binary/jsr308-all.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/resources.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/rt.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/sunrsasign.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/jsse.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/jce.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/charsets.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/jfr.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/JObjC.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/classes,../../checker-runtime/build/cfrt.jar,../../enerj/build/enerj.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/dnsns.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/localedata.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/sunec.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/zipfs.jar,/System/Library/Java/Extensions/MRJToolkit.jar,/System/Library/Java/Extensions/QTJava.zip,/Users/jspark/projects/expax/apps/simple/build,/Users/jspark/projects/expax/ant/lib/ant-launcher.jar,/Users/jspark/projects/expax/ant/lib/ant-antlr.jar,/Users/jspark/projects/expax/ant/lib/ant-apache-bcel.jar,/Users/jspark/projects/expax/ant/lib/ant-apache-bsf.jar,/Users/jspark/projects/expax/ant/lib/ant-apache-log4j.jar,/Users/jspark/projects/expax/ant/lib/ant-apache-oro.jar,/Users/jspark/projects/expax/ant/lib/ant-apache-regexp.jar,/Users/jspark/projects/expax/ant/lib/ant-apache-resolver.jar,/Users/jspark/projects/expax/ant/lib/ant-apache-xalan2.jar,/Users/jspark/projects/expax/ant/lib/ant-commons-logging.jar,/Users/jspark/projects/expax/ant/lib/ant-commons-net.jar,/Users/jspark/projects/expax/ant/lib/ant-jai.jar,/Users/jspark/projects/expax/ant/lib/ant-javamail.jar,/Users/jspark/projects/expax/ant/lib/ant-jdepend.jar,/Users/jspark/projects/expax/ant/lib/ant-jmf.jar,/Users/jspark/projects/expax/ant/lib/ant-jsch.jar,/Users/jspark/projects/expax/ant/lib/ant-junit.jar,/Users/jspark/projects/expax/ant/lib/ant-junit4.jar,/Users/jspark/projects/expax/ant/lib/ant-netrexx.jar,/Users/jspark/projects/expax/ant/lib/ant-swing.jar,/Users/jspark/projects/expax/ant/lib/ant-testutil.jar,/Users/jspark/projects/expax/ant/lib/ant.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/tools.jar]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Object.class)]]
+   [enerjc] *** EXPAX_PC: value = mbstatic,simulation,/Users/jspark/projects/expax/apps/simple/analysis.flag,/Users/jspark/projects/expax/apps/simple/simple-bc-offset.info,/Users/jspark/projects/expax/apps/simple/analysis.result
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/String.class)]]
+   [enerjc] *** EXPAX_PC: read analysis flag: false
+   [enerjc] [loading ZipFileIndexFileObject[../../enerj/build/enerj.jar(enerj/lang/Approx.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Annotation.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Retention.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/annotation/RetentionPolicy.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Target.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Users/jspark/projects/expax/checker-framework/checkers/binary/jsr308-all.jar(java/lang/annotation/ElementType.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Users/jspark/projects/expax/checker-framework/checkers/binary/jsr308-all.jar(checkers/quals/SubtypeOf.class)]]
+   [enerjc] Round 1:
+   [enerjc] 	input files: {Simple, A}
+   [enerjc] 	annotations: []
+   [enerjc] 	last round: false
+   [enerjc] Processor enerj.PrecisionChecker matches [] and returns false.
+   [enerjc] [search path for source files: /Users/jspark/projects/expax/apps/simple/src]
+   [enerjc] [search path for class files: /Users/jspark/projects/expax/checker-framework/checkers/binary/jsr308-all.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/resources.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/rt.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/sunrsasign.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/jsse.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/jce.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/charsets.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/jfr.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/JObjC.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/classes,../../checker-runtime/build/cfrt.jar,../../enerj/build/enerj.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/dnsns.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/localedata.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/sunec.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/zipfs.jar,/System/Library/Java/Extensions/MRJToolkit.jar,/System/Library/Java/Extensions/QTJava.zip,/Users/jspark/projects/expax/apps/simple/build,/Users/jspark/projects/expax/ant/lib/ant-launcher.jar,/Users/jspark/projects/expax/ant/lib/ant-antlr.jar,/Users/jspark/projects/expax/ant/lib/ant-apache-bcel.jar,/Users/jspark/projects/expax/ant/lib/ant-apache-bsf.jar,/Users/jspark/projects/expax/ant/lib/ant-apache-log4j.jar,/Users/jspark/projects/expax/ant/lib/ant-apache-oro.jar,/Users/jspark/projects/expax/ant/lib/ant-apache-regexp.jar,/Users/jspark/projects/expax/ant/lib/ant-apache-resolver.jar,/Users/jspark/projects/expax/ant/lib/ant-apache-xalan2.jar,/Users/jspark/projects/expax/ant/lib/ant-commons-logging.jar,/Users/jspark/projects/expax/ant/lib/ant-commons-net.jar,/Users/jspark/projects/expax/ant/lib/ant-jai.jar,/Users/jspark/projects/expax/ant/lib/ant-javamail.jar,/Users/jspark/projects/expax/ant/lib/ant-jdepend.jar,/Users/jspark/projects/expax/ant/lib/ant-jmf.jar,/Users/jspark/projects/expax/ant/lib/ant-jsch.jar,/Users/jspark/projects/expax/ant/lib/ant-junit.jar,/Users/jspark/projects/expax/ant/lib/ant-junit4.jar,/Users/jspark/projects/expax/ant/lib/ant-netrexx.jar,/Users/jspark/projects/expax/ant/lib/ant-swing.jar,/Users/jspark/projects/expax/ant/lib/ant-testutil.jar,/Users/jspark/projects/expax/ant/lib/ant.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/tools.jar]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Object.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/String.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[../../enerj/build/enerj.jar(enerj/lang/Approx.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Annotation.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Retention.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/annotation/RetentionPolicy.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Target.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Users/jspark/projects/expax/checker-framework/checkers/binary/jsr308-all.jar(java/lang/annotation/ElementType.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Users/jspark/projects/expax/checker-framework/checkers/binary/jsr308-all.jar(checkers/quals/SubtypeOf.class)]]
+   [enerjc] Round 2:
+   [enerjc] 	input files: {}
+   [enerjc] 	annotations: []
+   [enerjc] 	last round: true
+   [enerjc] [search path for source files: /Users/jspark/projects/expax/apps/simple/src]
+   [enerjc] [search path for class files: /Users/jspark/projects/expax/checker-framework/checkers/binary/jsr308-all.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/resources.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/rt.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/sunrsasign.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/jsse.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/jce.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/charsets.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/jfr.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/JObjC.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/classes,../../checker-runtime/build/cfrt.jar,../../enerj/build/enerj.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/dnsns.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/localedata.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/sunec.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/zipfs.jar,/System/Library/Java/Extensions/MRJToolkit.jar,/System/Library/Java/Extensions/QTJava.zip,/Users/jspark/projects/expax/apps/simple/build,/Users/jspark/projects/expax/ant/lib/ant-launcher.jar,/Users/jspark/projects/expax/ant/lib/ant-antlr.jar,/Users/jspark/projects/expax/ant/lib/ant-apache-bcel.jar,/Users/jspark/projects/expax/ant/lib/ant-apache-bsf.jar,/Users/jspark/projects/expax/ant/lib/ant-apache-log4j.jar,/Users/jspark/projects/expax/ant/lib/ant-apache-oro.jar,/Users/jspark/projects/expax/ant/lib/ant-apache-regexp.jar,/Users/jspark/projects/expax/ant/lib/ant-apache-resolver.jar,/Users/jspark/projects/expax/ant/lib/ant-apache-xalan2.jar,/Users/jspark/projects/expax/ant/lib/ant-commons-logging.jar,/Users/jspark/projects/expax/ant/lib/ant-commons-net.jar,/Users/jspark/projects/expax/ant/lib/ant-jai.jar,/Users/jspark/projects/expax/ant/lib/ant-javamail.jar,/Users/jspark/projects/expax/ant/lib/ant-jdepend.jar,/Users/jspark/projects/expax/ant/lib/ant-jmf.jar,/Users/jspark/projects/expax/ant/lib/ant-jsch.jar,/Users/jspark/projects/expax/ant/lib/ant-junit.jar,/Users/jspark/projects/expax/ant/lib/ant-junit4.jar,/Users/jspark/projects/expax/ant/lib/ant-netrexx.jar,/Users/jspark/projects/expax/ant/lib/ant-swing.jar,/Users/jspark/projects/expax/ant/lib/ant-testutil.jar,/Users/jspark/projects/expax/ant/lib/ant.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/tools.jar]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Object.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/String.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[../../enerj/build/enerj.jar(enerj/lang/Approx.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Annotation.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Retention.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/annotation/RetentionPolicy.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Target.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Users/jspark/projects/expax/checker-framework/checkers/binary/jsr308-all.jar(java/lang/annotation/ElementType.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Users/jspark/projects/expax/checker-framework/checkers/binary/jsr308-all.jar(checkers/quals/SubtypeOf.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[../../enerj/build/enerj.jar(enerj/lang/Precise.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[../../enerj/build/enerj.jar(enerj/lang/Top.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Users/jspark/projects/expax/checker-framework/checkers/binary/jsr308-all.jar(checkers/quals/ImplicitFor.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[../../enerj/build/enerj.jar(enerj/lang/Context.class)]]
+   [enerjc] [checking Simple]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/AutoCloseable.class)]]
+   [enerjc] *** EXPAX_ST: SimulationTranslator start!
+   [enerjc] *** EXPAX_ST: visitSelect: tree = enerj.lang.*
+   [enerjc] *** EXPAX_ST: visitSelect: tree = enerj.lang
+   [enerjc] *** EXPAX_ST: visitIdent: tree = enerj
+   [enerjc] *** EXPAX_ST: visitIdent: tree = super
+   [enerjc] *** EXPAX_ST: visitSelect: tree = enerj.rt.PrecisionRuntimeRoot.impl.enterConstructor
+   [enerjc] *** EXPAX_ST: visitSelect: tree = enerj.rt.PrecisionRuntimeRoot.impl
+   [enerjc] *** EXPAX_ST: visitSelect: tree = enerj.rt.PrecisionRuntimeRoot
+   [enerjc] *** EXPAX_ST: visitSelect: tree = enerj.rt
+   [enerjc] *** EXPAX_ST: visitIdent: tree = enerj
+   [enerjc] *** EXPAX_ST: visitIdent: tree = this
+   [enerjc] *** EXPAX_PRT: approx is false = VARDEF
+   [enerjc] *** EXPAX_PRT: approx is false = String[] args
+   [enerjc] *** EXPAX_ST: visitVarDef: tree = String[] args
+   [enerjc] *** EXPAX_ST: visitIdent: tree = String
+   [enerjc] *** EXPAX_PRT: approx is false = VARDEF
+   [enerjc] *** EXPAX_PRT: approx is false = @Approx()
+   [enerjc] int[] arr = enerj.rt.PrecisionRuntimeRoot.impl.newArray(new int[3], 1, false, 4, 0)
+   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
+   [enerjc] *** EXPAX_PRT: approx is true = @Approx()
+   [enerjc] int x = arr[0]
+   [enerjc] *** EXPAX_ST: visitVarDef: tree = enerj.rt.Reference<String[]> args__REF__ = new <String[]>enerj.rt.Reference<String[]>(args, false, false)
+   [enerjc] *** EXPAX_ST: visitVarDef: tree = @Approx()
+   [enerjc] int[] arr = enerj.rt.PrecisionRuntimeRoot.impl.newArray(new int[3], 1, false, 4, 0)
+   [enerjc] *** EXPAX_ST: visitIdent: tree = Approx
+   [enerjc] *** EXPAX_ST: visitSelect: tree = enerj.rt.PrecisionRuntimeRoot.impl.newArray
+   [enerjc] *** EXPAX_ST: visitSelect: tree = enerj.rt.PrecisionRuntimeRoot.impl
+   [enerjc] *** EXPAX_ST: visitSelect: tree = enerj.rt.PrecisionRuntimeRoot
+   [enerjc] *** EXPAX_ST: visitSelect: tree = enerj.rt
+   [enerjc] *** EXPAX_ST: visitIdent: tree = enerj
+   [enerjc] *** EXPAX_ST: call isApprox - storeCall
+   [enerjc] *** EXPAX_PRT: approx is false = VARDEF
+   [enerjc] *** EXPAX_PRT: approx is false = @Approx()
+   [enerjc] int[] arr = enerj.rt.PrecisionRuntimeRoot.impl.newArray(new int[3], 1, false, 4, 0)
+   [enerjc] *** EXPAX_ST: visitVarDef: tree = @Approx()
+   [enerjc] enerj.rt.Reference<int[]> arr__REF__ = new <int[]>enerj.rt.Reference<int[]>(arr, false, false)
+   [enerjc] *** EXPAX_ST: visitAssign: tree = arr[0] = 1
+   [enerjc] *** EXPAX_ST: call isApprox - visitAssign
+   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
+   [enerjc] *** EXPAX_PRT: approx is true = arr[0]
+   [enerjc] *** EXPAX_ST: visitIndexed: tree = arr[0]
+   [enerjc] *** EXPAX_ST: visitIdent: tree = arr
+   [enerjc] *** EXPAX_PRT: approx is false = IDENT
+   [enerjc] *** EXPAX_PRT: approx is false = arr
+   [enerjc] *** EXPAX_ST: visitVarDef: tree = @Approx()
+   [enerjc] int x = arr[0]
+   [enerjc] *** EXPAX_ST: visitIdent: tree = Approx
+   [enerjc] *** EXPAX_ST: visitIndexed: tree = arr[0]
+   [enerjc] *** EXPAX_ST: visitIdent: tree = arr
+   [enerjc] *** EXPAX_PRT: approx is false = IDENT
+   [enerjc] *** EXPAX_PRT: approx is false = arr
+   [enerjc] *** EXPAX_ST: call isApprox - visitIndexed
+   [enerjc] *** EXPAX_PRT: approx is false = INDEXED
+   [enerjc] *** EXPAX_PRT: approx is false = enerj.rt.PrecisionRuntimeRoot.impl.<int[]>loadLocal(arr__REF__, false)[0]
+   [enerjc] *** EXPAX_ST: call isApprox - storeCall
+   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
+   [enerjc] *** EXPAX_PRT: approx is true = @Approx()
+   [enerjc] int x = enerj.rt.PrecisionRuntimeRoot.impl.<java.lang.Integer>loadArray(enerj.rt.PrecisionRuntimeRoot.impl.<int[]>loadLocal(arr__REF__, false), 0, false).intValue()
+   [enerjc] *** EXPAX_ST: visitVarDef: tree = @Approx()
+   [enerjc] enerj.rt.Reference<java.lang.Integer> x__REF__ = new <java.lang.Integer>enerj.rt.Reference<java.lang.Integer>(x, true, true)
+   [enerjc] *** EXPAX_PRT: approx is false = VARDEF
+   [enerjc] *** EXPAX_PRT: approx is false = int x
+   [enerjc] *** EXPAX_ST: visitVarDef: tree = int x
+   [enerjc] *** EXPAX_ST: visitVarDef: tree = enerj.rt.Reference<java.lang.Integer> x__REF__ = new <java.lang.Integer>enerj.rt.Reference<java.lang.Integer>(x, false, true)
+   [enerjc] *** EXPAX_ST: visitIdent: tree = x
+   [enerjc] *** EXPAX_PRT: approx is false = IDENT
+   [enerjc] *** EXPAX_PRT: approx is false = x
+   [enerjc] *** EXPAX_PRT: approx is false = VARDEF
+   [enerjc] *** EXPAX_PRT: approx is false = int x
+   [enerjc] *** EXPAX_ST: visitVarDef: tree = int x
+   [enerjc] *** EXPAX_ST: visitVarDef: tree = enerj.rt.Reference<java.lang.Integer> x__REF__ = new <java.lang.Integer>enerj.rt.Reference<java.lang.Integer>(x, false, true)
+   [enerjc] *** EXPAX_ST: visitIdent: tree = x
+   [enerjc] [loading ZipFileIndexFileObject[/Users/jspark/projects/expax/checker-framework/checkers/binary/jsr308-all.jar(checkers/quals/PolyAll.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Users/jspark/projects/expax/checker-framework/checkers/binary/jsr308-all.jar(checkers/quals/Unqualified.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/util/Vector.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[../../enerj/build/enerj.jar(enerj/rt/PrecisionRuntimeRoot.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[../../enerj/build/enerj.jar(enerj/rt/PrecisionRuntime.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[../../checker-runtime/build/cfrt.jar(checkers/runtime/rt/Runtime.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[../../enerj/build/enerj.jar(enerj/rt/Reference.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Integer.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Number.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[../../enerj/build/enerj.jar(enerj/rt/PrecisionRuntime$MemKind.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Byte.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Character.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Short.class)]]
+   [enerjc] *** EXPAX_PRT: approx is false = IDENT
+   [enerjc] *** EXPAX_PRT: approx is false = x
+   [enerjc] *** EXPAX_ST: visitIdent: tree = super
+   [enerjc] *** EXPAX_ST: visitSelect: tree = enerj.rt.PrecisionRuntimeRoot.impl.enterConstructor
+   [enerjc] *** EXPAX_ST: visitSelect: tree = enerj.rt.PrecisionRuntimeRoot.impl
+   [enerjc] *** EXPAX_ST: visitSelect: tree = enerj.rt.PrecisionRuntimeRoot
+   [enerjc] *** EXPAX_ST: visitSelect: tree = enerj.rt
+   [enerjc] *** EXPAX_ST: visitIdent: tree = enerj
+   [enerjc] *** EXPAX_ST: visitIdent: tree = this
+   [enerjc] *** EXPAX_ST: visitVarDef: tree = @Approx()
+   [enerjc] public int x
+   [enerjc] *** EXPAX_ST: visitIdent: tree = Approx
+   [enerjc] *** EXPAX_ST: visitVarDef: tree = @Approx()
+   [enerjc] public static int y
+   [enerjc] *** EXPAX_ST: visitIdent: tree = Approx
+   [enerjc] *** EXPAX_TEST_GEN: class = Simple
+   [enerjc] *** EXPAX_TEST_GEN: genDef - tree.toString() = 
+   [enerjc] public <init>() {
+   [enerjc]     super();
+   [enerjc]     enerj.rt.PrecisionRuntimeRoot.impl.enterConstructor(this);
+   [enerjc] }
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = METHODDEF
+   [enerjc] *** EXPAX_TEST_GEN: visitMethodDef - tree.toString() = 
+   [enerjc] public <init>() {
+   [enerjc]     super();
+   [enerjc]     enerj.rt.PrecisionRuntimeRoot.impl.enterConstructor(this);
+   [enerjc] }
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = METHODDEF
+   [enerjc] *** EXPAX_TEST_GEN: method name = Simple()
+   [enerjc] *** EXPAX_TEST_GEN: return type = void
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = METHODDEF
+   [enerjc] *** EXPAX_TEST_GEN: genDef - tree.toString() = {
+   [enerjc]     super();
+   [enerjc]     enerj.rt.PrecisionRuntimeRoot.impl.enterConstructor(this);
+   [enerjc] }
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = BLOCK
+   [enerjc] *** EXPAX_TEST_GEN: genDef - code.bytecodeOffset = 0
+   [enerjc] *** EXPAX_TEST_GEN: visitBlock = {
+   [enerjc]     super();
+   [enerjc]     enerj.rt.PrecisionRuntimeRoot.impl.enterConstructor(this);
+   [enerjc] }
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = BLOCK
+   [enerjc] *** EXPAX_TEST_GEN: genDef - tree.toString() = super();
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = EXEC
+   [enerjc] *** EXPAX_TEST_GEN: genDef - code.bytecodeOffset = 0
+   [enerjc] *** EXPAX_TEST_GEN: visitExec - tree.toString() = super();
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = EXEC
+   [enerjc] *** EXPAX_TEST_GEN: visitApply = super()
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: visitIdent - tree.toString() = super
+   [enerjc] *** EXPAX_TEST_GEN: visitIdent (bytecode offset) = 0
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = IDENT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple Simple() void 0 29 IDENT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = IDENT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple Simple() void 1 29 IDENT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple Simple() void 4 29 APPLY
+   [enerjc] *** EXPAX_TEST_GEN: genDef - tree.toString() = enerj.rt.PrecisionRuntimeRoot.impl.enterConstructor(this);
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = EXEC
+   [enerjc] *** EXPAX_TEST_GEN: genDef - code.bytecodeOffset = 4
+   [enerjc] *** EXPAX_TEST_GEN: visitExec - tree.toString() = enerj.rt.PrecisionRuntimeRoot.impl.enterConstructor(this);
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = EXEC
+   [enerjc] *** EXPAX_TEST_GEN: visitApply = enerj.rt.PrecisionRuntimeRoot.impl.enterConstructor(this)
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect - tree.toString() = enerj.rt.PrecisionRuntimeRoot.impl.enterConstructor
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect (bytecode offset) = 4
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple Simple() void 4 0 SELECT
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect - tree.toString() = enerj.rt.PrecisionRuntimeRoot.impl
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect (bytecode offset) = 4
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple Simple() void 4 0 SELECT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple Simple() void 4 0 SELECT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple Simple() void 7 0 SELECT
+   [enerjc] *** EXPAX_TEST_GEN: visitIdent - tree.toString() = this
+   [enerjc] *** EXPAX_TEST_GEN: visitIdent (bytecode offset) = 7
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = IDENT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple Simple() void 7 0 IDENT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = IDENT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple Simple() void 7 0 IDENT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple Simple() void 13 0 APPLY
+   [enerjc] *** EXPAX_TEST_GEN: genDef - tree.toString() = 
+   [enerjc] public static void main(String[] args) {
+   [enerjc]     enerj.rt.Reference args__REF__ = new <String[]>enerj.rt.Reference(args, false, false);
+   [enerjc]     @Approx()
+   [enerjc]     int[] arr = (int[])(int[])enerj.rt.PrecisionRuntimeRoot.impl.storeValue(enerj.rt.PrecisionRuntimeRoot.impl.newArray(new int[3], 1, false, 4, 0), false, enerj.rt.PrecisionRuntime$MemKind.VARIABLE);
+   [enerjc]     @Approx()
+   [enerjc]     enerj.rt.Reference arr__REF__ = new <int[]>enerj.rt.Reference(arr, false, false);
+   [enerjc]     ((Integer)enerj.rt.PrecisionRuntimeRoot.impl.<java.lang.Integer>storeArray(enerj.rt.PrecisionRuntimeRoot.impl.<int[]>loadLocal(arr__REF__, false), 0, true, Integer.valueOf((int)1))).intValue();
+   [enerjc]     @Approx()
+   [enerjc]     int x = (int)((Integer)enerj.rt.PrecisionRuntimeRoot.impl.storeValue((java.lang.Integer)Integer.valueOf(((Integer)enerj.rt.PrecisionRuntimeRoot.impl.<java.lang.Integer>loadArray(enerj.rt.PrecisionRuntimeRoot.impl.<int[]>loadLocal(arr__REF__, false), 0, false)).intValue()), true, enerj.rt.PrecisionRuntime$MemKind.VARIABLE)).intValue();
+   [enerjc]     @Approx()
+   [enerjc]     enerj.rt.Reference x__REF__ = new <java.lang.Integer>enerj.rt.Reference(Integer.valueOf(x), true, true);
+   [enerjc] }
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = METHODDEF
+   [enerjc] *** EXPAX_TEST_GEN: genDef - code.bytecodeOffset = 15
+   [enerjc] *** EXPAX_TEST_GEN: visitMethodDef - tree.toString() = 
+   [enerjc] public static void main(String[] args) {
+   [enerjc]     enerj.rt.Reference args__REF__ = new <String[]>enerj.rt.Reference(args, false, false);
+   [enerjc]     @Approx()
+   [enerjc]     int[] arr = (int[])(int[])enerj.rt.PrecisionRuntimeRoot.impl.storeValue(enerj.rt.PrecisionRuntimeRoot.impl.newArray(new int[3], 1, false, 4, 0), false, enerj.rt.PrecisionRuntime$MemKind.VARIABLE);
+   [enerjc]     @Approx()
+   [enerjc]     enerj.rt.Reference arr__REF__ = new <int[]>enerj.rt.Reference(arr, false, false);
+   [enerjc]     ((Integer)enerj.rt.PrecisionRuntimeRoot.impl.<java.lang.Integer>storeArray(enerj.rt.PrecisionRuntimeRoot.impl.<int[]>loadLocal(arr__REF__, false), 0, true, Integer.valueOf((int)1))).intValue();
+   [enerjc]     @Approx()
+   [enerjc]     int x = (int)((Integer)enerj.rt.PrecisionRuntimeRoot.impl.storeValue((java.lang.Integer)Integer.valueOf(((Integer)enerj.rt.PrecisionRuntimeRoot.impl.<java.lang.Integer>loadArray(enerj.rt.PrecisionRuntimeRoot.impl.<int[]>loadLocal(arr__REF__, false), 0, false)).intValue()), true, enerj.rt.PrecisionRuntime$MemKind.VARIABLE)).intValue();
+   [enerjc]     @Approx()
+   [enerjc]     enerj.rt.Reference x__REF__ = new <java.lang.Integer>enerj.rt.Reference(Integer.valueOf(x), true, true);
+   [enerjc] }
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = METHODDEF
+   [enerjc] *** EXPAX_TEST_GEN: method name = main(java.lang.String[])
+   [enerjc] *** EXPAX_TEST_GEN: return type = void
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = METHODDEF
+   [enerjc] *** EXPAX_TEST_GEN: genDef - tree.toString() = {
+   [enerjc]     enerj.rt.Reference args__REF__ = new <String[]>enerj.rt.Reference(args, false, false);
+   [enerjc]     @Approx()
+   [enerjc]     int[] arr = (int[])(int[])enerj.rt.PrecisionRuntimeRoot.impl.storeValue(enerj.rt.PrecisionRuntimeRoot.impl.newArray(new int[3], 1, false, 4, 0), false, enerj.rt.PrecisionRuntime$MemKind.VARIABLE);
+   [enerjc]     @Approx()
+   [enerjc]     enerj.rt.Reference arr__REF__ = new <int[]>enerj.rt.Reference(arr, false, false);
+   [enerjc]     ((Integer)enerj.rt.PrecisionRuntimeRoot.impl.<java.lang.Integer>storeArray(enerj.rt.PrecisionRuntimeRoot.impl.<int[]>loadLocal(arr__REF__, false), 0, true, Integer.valueOf((int)1))).intValue();
+   [enerjc]     @Approx()
+   [enerjc]     int x = (int)((Integer)enerj.rt.PrecisionRuntimeRoot.impl.storeValue((java.lang.Integer)Integer.valueOf(((Integer)enerj.rt.PrecisionRuntimeRoot.impl.<java.lang.Integer>loadArray(enerj.rt.PrecisionRuntimeRoot.impl.<int[]>loadLocal(arr__REF__, false), 0, false)).intValue()), true, enerj.rt.PrecisionRuntime$MemKind.VARIABLE)).intValue();
+   [enerjc]     @Approx()
+   [enerjc]     enerj.rt.Reference x__REF__ = new <java.lang.Integer>enerj.rt.Reference(Integer.valueOf(x), true, true);
+   [enerjc] }
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = BLOCK
+   [enerjc] *** EXPAX_TEST_GEN: genDef - code.bytecodeOffset = 0
+   [enerjc] *** EXPAX_TEST_GEN: visitBlock = {
+   [enerjc]     enerj.rt.Reference args__REF__ = new <String[]>enerj.rt.Reference(args, false, false);
+   [enerjc]     @Approx()
+   [enerjc]     int[] arr = (int[])(int[])enerj.rt.PrecisionRuntimeRoot.impl.storeValue(enerj.rt.PrecisionRuntimeRoot.impl.newArray(new int[3], 1, false, 4, 0), false, enerj.rt.PrecisionRuntime$MemKind.VARIABLE);
+   [enerjc]     @Approx()
+   [enerjc]     enerj.rt.Reference arr__REF__ = new <int[]>enerj.rt.Reference(arr, false, false);
+   [enerjc]     ((Integer)enerj.rt.PrecisionRuntimeRoot.impl.<java.lang.Integer>storeArray(enerj.rt.PrecisionRuntimeRoot.impl.<int[]>loadLocal(arr__REF__, false), 0, true, Integer.valueOf((int)1))).intValue();
+   [enerjc]     @Approx()
+   [enerjc]     int x = (int)((Integer)enerj.rt.PrecisionRuntimeRoot.impl.storeValue((java.lang.Integer)Integer.valueOf(((Integer)enerj.rt.PrecisionRuntimeRoot.impl.<java.lang.Integer>loadArray(enerj.rt.PrecisionRuntimeRoot.impl.<int[]>loadLocal(arr__REF__, false), 0, false)).intValue()), true, enerj.rt.PrecisionRuntime$MemKind.VARIABLE)).intValue();
+   [enerjc]     @Approx()
+   [enerjc]     enerj.rt.Reference x__REF__ = new <java.lang.Integer>enerj.rt.Reference(Integer.valueOf(x), true, true);
+   [enerjc] }
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = BLOCK
+   [enerjc] *** EXPAX_TEST_GEN: genDef - tree.toString() = enerj.rt.Reference args__REF__ = new <String[]>enerj.rt.Reference(args, false, false)
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = VARDEF
+   [enerjc] *** EXPAX_TEST_GEN: genDef - code.bytecodeOffset = 0
+   [enerjc] *** EXPAX_TEST_GEN: visitVarDef = enerj.rt.Reference args__REF__ = new <String[]>enerj.rt.Reference(args, false, false)
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = VARDEF
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 0 0 VARDEF
+   [enerjc] *** EXPAX_TEST_GEN: visitNewClass = new <String[]>enerj.rt.Reference(args, false, false)
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = NEWCLASS
+   [enerjc] *** EXPAX_TEST_GEN: visitIdent - tree.toString() = args
+   [enerjc] *** EXPAX_TEST_GEN: visitIdent (bytecode offset) = 4
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = IDENT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 4 0 IDENT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = IDENT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 4 0 IDENT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = LITERAL
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 5 0 LITERAL
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = LITERAL
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 6 0 LITERAL
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = NEWCLASS
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 10 0 NEWCLASS
+   [enerjc] *** EXPAX_TEST_GEN: genDef - tree.toString() = @Approx()
+   [enerjc] int[] arr = (int[])(int[])enerj.rt.PrecisionRuntimeRoot.impl.storeValue(enerj.rt.PrecisionRuntimeRoot.impl.newArray(new int[3], 1, false, 4, 0), false, enerj.rt.PrecisionRuntime$MemKind.VARIABLE)
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = VARDEF
+   [enerjc] *** EXPAX_TEST_GEN: genDef - code.bytecodeOffset = 11
+   [enerjc] *** EXPAX_TEST_GEN: visitVarDef = @Approx()
+   [enerjc] int[] arr = (int[])(int[])enerj.rt.PrecisionRuntimeRoot.impl.storeValue(enerj.rt.PrecisionRuntimeRoot.impl.newArray(new int[3], 1, false, 4, 0), false, enerj.rt.PrecisionRuntime$MemKind.VARIABLE)
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = VARDEF
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 11 101 VARDEF
+   [enerjc] *** EXPAX_TEST_GEN: visitApply = enerj.rt.PrecisionRuntimeRoot.impl.storeValue(enerj.rt.PrecisionRuntimeRoot.impl.newArray(new int[3], 1, false, 4, 0), false, enerj.rt.PrecisionRuntime$MemKind.VARIABLE)
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect - tree.toString() = enerj.rt.PrecisionRuntimeRoot.impl.storeValue
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect (bytecode offset) = 11
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 11 0 SELECT
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect - tree.toString() = enerj.rt.PrecisionRuntimeRoot.impl
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect (bytecode offset) = 11
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 11 0 SELECT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 11 0 SELECT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 14 0 SELECT
+   [enerjc] *** EXPAX_TEST_GEN: visitApply = enerj.rt.PrecisionRuntimeRoot.impl.newArray(new int[3], 1, false, 4, 0)
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect - tree.toString() = enerj.rt.PrecisionRuntimeRoot.impl.newArray
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect (bytecode offset) = 14
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 14 0 SELECT
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect - tree.toString() = enerj.rt.PrecisionRuntimeRoot.impl
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect (bytecode offset) = 14
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 14 0 SELECT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 14 0 SELECT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 17 0 SELECT
+   [enerjc] *** EXPAX_TEST_GEN: visitNewArray = new int[3]
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = NEWARRAY
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = LITERAL
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 17 115 LITERAL
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = NEWARRAY
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 20 107 NEWARRAY
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = LITERAL
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 20 0 LITERAL
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = LITERAL
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 21 0 LITERAL
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = LITERAL
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 22 0 LITERAL
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = LITERAL
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 23 0 LITERAL
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 29 0 APPLY
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = LITERAL
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 29 0 LITERAL
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect - tree.toString() = enerj.rt.PrecisionRuntime$MemKind.VARIABLE
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect (bytecode offset) = 30
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 30 0 SELECT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 30 0 SELECT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 38 0 APPLY
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = TYPECAST
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 41 0 TYPECAST
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = TYPECAST
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 44 0 TYPECAST
+   [enerjc] *** EXPAX_TEST_GEN: genDef - tree.toString() = @Approx()
+   [enerjc] enerj.rt.Reference arr__REF__ = new <int[]>enerj.rt.Reference(arr, false, false)
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = VARDEF
+   [enerjc] *** EXPAX_TEST_GEN: genDef - code.bytecodeOffset = 45
+   [enerjc] *** EXPAX_TEST_GEN: visitVarDef = @Approx()
+   [enerjc] enerj.rt.Reference arr__REF__ = new <int[]>enerj.rt.Reference(arr, false, false)
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = VARDEF
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 45 0 VARDEF
+   [enerjc] *** EXPAX_TEST_GEN: visitNewClass = new <int[]>enerj.rt.Reference(arr, false, false)
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = NEWCLASS
+   [enerjc] *** EXPAX_TEST_GEN: visitIdent - tree.toString() = arr
+   [enerjc] *** EXPAX_TEST_GEN: visitIdent (bytecode offset) = 49
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = IDENT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 49 0 IDENT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = IDENT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 49 0 IDENT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = LITERAL
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 50 0 LITERAL
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = LITERAL
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 51 0 LITERAL
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = NEWCLASS
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 55 0 NEWCLASS
+   [enerjc] *** EXPAX_TEST_GEN: genDef - tree.toString() = ((Integer)enerj.rt.PrecisionRuntimeRoot.impl.<java.lang.Integer>storeArray(enerj.rt.PrecisionRuntimeRoot.impl.<int[]>loadLocal(arr__REF__, false), 0, true, Integer.valueOf((int)1))).intValue();
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = EXEC
+   [enerjc] *** EXPAX_TEST_GEN: genDef - code.bytecodeOffset = 56
+   [enerjc] *** EXPAX_TEST_GEN: visitExec - tree.toString() = ((Integer)enerj.rt.PrecisionRuntimeRoot.impl.<java.lang.Integer>storeArray(enerj.rt.PrecisionRuntimeRoot.impl.<int[]>loadLocal(arr__REF__, false), 0, true, Integer.valueOf((int)1))).intValue();
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = EXEC
+   [enerjc] *** EXPAX_TEST_GEN: visitApply = ((Integer)enerj.rt.PrecisionRuntimeRoot.impl.<java.lang.Integer>storeArray(enerj.rt.PrecisionRuntimeRoot.impl.<int[]>loadLocal(arr__REF__, false), 0, true, Integer.valueOf((int)1))).intValue()
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect - tree.toString() = ((Integer)enerj.rt.PrecisionRuntimeRoot.impl.<java.lang.Integer>storeArray(enerj.rt.PrecisionRuntimeRoot.impl.<int[]>loadLocal(arr__REF__, false), 0, true, Integer.valueOf((int)1))).intValue
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect (bytecode offset) = 56
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 56 0 SELECT
+   [enerjc] *** EXPAX_TEST_GEN: visitApply = enerj.rt.PrecisionRuntimeRoot.impl.<java.lang.Integer>storeArray(enerj.rt.PrecisionRuntimeRoot.impl.<int[]>loadLocal(arr__REF__, false), 0, true, Integer.valueOf((int)1))
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect - tree.toString() = enerj.rt.PrecisionRuntimeRoot.impl.storeArray
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect (bytecode offset) = 56
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 56 0 SELECT
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect - tree.toString() = enerj.rt.PrecisionRuntimeRoot.impl
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect (bytecode offset) = 56
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 56 0 SELECT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 56 0 SELECT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 59 0 SELECT
+   [enerjc] *** EXPAX_TEST_GEN: visitApply = enerj.rt.PrecisionRuntimeRoot.impl.<int[]>loadLocal(arr__REF__, false)
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect - tree.toString() = enerj.rt.PrecisionRuntimeRoot.impl.loadLocal
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect (bytecode offset) = 59
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 59 0 SELECT
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect - tree.toString() = enerj.rt.PrecisionRuntimeRoot.impl
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect (bytecode offset) = 59
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 59 0 SELECT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 59 0 SELECT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 62 0 SELECT
+   [enerjc] *** EXPAX_TEST_GEN: visitIdent - tree.toString() = arr__REF__
+   [enerjc] *** EXPAX_TEST_GEN: visitIdent (bytecode offset) = 62
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = IDENT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 62 0 IDENT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = IDENT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 62 0 IDENT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = LITERAL
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 63 0 LITERAL
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 69 0 APPLY
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = LITERAL
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 69 125 LITERAL
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = LITERAL
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 70 0 LITERAL
+   [enerjc] *** EXPAX_TEST_GEN: visitApply = Integer.valueOf((int)1)
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect - tree.toString() = Integer.valueOf
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect (bytecode offset) = 71
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 71 0 SELECT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 71 0 SELECT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = TYPECAST
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 71 0 TYPECAST
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 75 0 APPLY
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 80 0 APPLY
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = TYPECAST
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 83 0 TYPECAST
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 83 0 SELECT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 86 0 APPLY
+   [enerjc] *** EXPAX_TEST_GEN: genDef - tree.toString() = @Approx()
+   [enerjc] int x = (int)((Integer)enerj.rt.PrecisionRuntimeRoot.impl.storeValue((java.lang.Integer)Integer.valueOf(((Integer)enerj.rt.PrecisionRuntimeRoot.impl.<java.lang.Integer>loadArray(enerj.rt.PrecisionRuntimeRoot.impl.<int[]>loadLocal(arr__REF__, false), 0, false)).intValue()), true, enerj.rt.PrecisionRuntime$MemKind.VARIABLE)).intValue()
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = VARDEF
+   [enerjc] *** EXPAX_TEST_GEN: genDef - code.bytecodeOffset = 87
+   [enerjc] *** EXPAX_TEST_GEN: visitVarDef = @Approx()
+   [enerjc] int x = (int)((Integer)enerj.rt.PrecisionRuntimeRoot.impl.storeValue((java.lang.Integer)Integer.valueOf(((Integer)enerj.rt.PrecisionRuntimeRoot.impl.<java.lang.Integer>loadArray(enerj.rt.PrecisionRuntimeRoot.impl.<int[]>loadLocal(arr__REF__, false), 0, false)).intValue()), true, enerj.rt.PrecisionRuntime$MemKind.VARIABLE)).intValue()
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = VARDEF
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 87 147 VARDEF
+   [enerjc] *** EXPAX_TEST_GEN: visitApply = ((Integer)enerj.rt.PrecisionRuntimeRoot.impl.storeValue((java.lang.Integer)Integer.valueOf(((Integer)enerj.rt.PrecisionRuntimeRoot.impl.<java.lang.Integer>loadArray(enerj.rt.PrecisionRuntimeRoot.impl.<int[]>loadLocal(arr__REF__, false), 0, false)).intValue()), true, enerj.rt.PrecisionRuntime$MemKind.VARIABLE)).intValue()
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect - tree.toString() = ((Integer)enerj.rt.PrecisionRuntimeRoot.impl.storeValue((java.lang.Integer)Integer.valueOf(((Integer)enerj.rt.PrecisionRuntimeRoot.impl.<java.lang.Integer>loadArray(enerj.rt.PrecisionRuntimeRoot.impl.<int[]>loadLocal(arr__REF__, false), 0, false)).intValue()), true, enerj.rt.PrecisionRuntime$MemKind.VARIABLE)).intValue
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect (bytecode offset) = 87
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 87 0 SELECT
+   [enerjc] *** EXPAX_TEST_GEN: visitApply = enerj.rt.PrecisionRuntimeRoot.impl.storeValue((java.lang.Integer)Integer.valueOf(((Integer)enerj.rt.PrecisionRuntimeRoot.impl.<java.lang.Integer>loadArray(enerj.rt.PrecisionRuntimeRoot.impl.<int[]>loadLocal(arr__REF__, false), 0, false)).intValue()), true, enerj.rt.PrecisionRuntime$MemKind.VARIABLE)
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect - tree.toString() = enerj.rt.PrecisionRuntimeRoot.impl.storeValue
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect (bytecode offset) = 87
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 87 0 SELECT
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect - tree.toString() = enerj.rt.PrecisionRuntimeRoot.impl
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect (bytecode offset) = 87
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 87 0 SELECT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 87 0 SELECT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 90 0 SELECT
+   [enerjc] *** EXPAX_TEST_GEN: visitApply = Integer.valueOf(((Integer)enerj.rt.PrecisionRuntimeRoot.impl.<java.lang.Integer>loadArray(enerj.rt.PrecisionRuntimeRoot.impl.<int[]>loadLocal(arr__REF__, false), 0, false)).intValue())
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect - tree.toString() = Integer.valueOf
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect (bytecode offset) = 90
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 90 0 SELECT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 90 0 SELECT
+   [enerjc] *** EXPAX_TEST_GEN: visitApply = ((Integer)enerj.rt.PrecisionRuntimeRoot.impl.<java.lang.Integer>loadArray(enerj.rt.PrecisionRuntimeRoot.impl.<int[]>loadLocal(arr__REF__, false), 0, false)).intValue()
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect - tree.toString() = ((Integer)enerj.rt.PrecisionRuntimeRoot.impl.<java.lang.Integer>loadArray(enerj.rt.PrecisionRuntimeRoot.impl.<int[]>loadLocal(arr__REF__, false), 0, false)).intValue
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect (bytecode offset) = 90
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 90 0 SELECT
+   [enerjc] *** EXPAX_TEST_GEN: visitApply = enerj.rt.PrecisionRuntimeRoot.impl.<java.lang.Integer>loadArray(enerj.rt.PrecisionRuntimeRoot.impl.<int[]>loadLocal(arr__REF__, false), 0, false)
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect - tree.toString() = enerj.rt.PrecisionRuntimeRoot.impl.loadArray
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect (bytecode offset) = 90
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 90 0 SELECT
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect - tree.toString() = enerj.rt.PrecisionRuntimeRoot.impl
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect (bytecode offset) = 90
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 90 0 SELECT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 90 0 SELECT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 93 0 SELECT
+   [enerjc] *** EXPAX_TEST_GEN: visitApply = enerj.rt.PrecisionRuntimeRoot.impl.<int[]>loadLocal(arr__REF__, false)
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect - tree.toString() = enerj.rt.PrecisionRuntimeRoot.impl.loadLocal
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect (bytecode offset) = 93
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 93 0 SELECT
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect - tree.toString() = enerj.rt.PrecisionRuntimeRoot.impl
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect (bytecode offset) = 93
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 93 0 SELECT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 93 0 SELECT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 96 0 SELECT
+   [enerjc] *** EXPAX_TEST_GEN: visitIdent - tree.toString() = arr__REF__
+   [enerjc] *** EXPAX_TEST_GEN: visitIdent (bytecode offset) = 96
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = IDENT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 96 0 IDENT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = IDENT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 96 0 IDENT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = LITERAL
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 97 0 LITERAL
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 103 0 APPLY
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = LITERAL
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 103 155 LITERAL
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = LITERAL
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 104 0 LITERAL
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 110 0 APPLY
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = TYPECAST
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 113 0 TYPECAST
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 113 0 SELECT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 116 0 APPLY
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 119 0 APPLY
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = TYPECAST
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 119 0 TYPECAST
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = LITERAL
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 119 0 LITERAL
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect - tree.toString() = enerj.rt.PrecisionRuntime$MemKind.VARIABLE
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect (bytecode offset) = 120
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 120 0 SELECT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 120 0 SELECT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 128 0 APPLY
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = TYPECAST
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 131 0 TYPECAST
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 131 0 SELECT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 134 0 APPLY
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = TYPECAST
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 134 0 TYPECAST
+   [enerjc] *** EXPAX_TEST_GEN: genDef - tree.toString() = @Approx()
+   [enerjc] enerj.rt.Reference x__REF__ = new <java.lang.Integer>enerj.rt.Reference(Integer.valueOf(x), true, true)
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = VARDEF
+   [enerjc] *** EXPAX_TEST_GEN: genDef - code.bytecodeOffset = 136
+   [enerjc] *** EXPAX_TEST_GEN: visitVarDef = @Approx()
+   [enerjc] enerj.rt.Reference x__REF__ = new <java.lang.Integer>enerj.rt.Reference(Integer.valueOf(x), true, true)
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = VARDEF
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 136 0 VARDEF
+   [enerjc] *** EXPAX_TEST_GEN: visitNewClass = new <java.lang.Integer>enerj.rt.Reference(Integer.valueOf(x), true, true)
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = NEWCLASS
+   [enerjc] *** EXPAX_TEST_GEN: visitApply = Integer.valueOf(x)
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect - tree.toString() = Integer.valueOf
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect (bytecode offset) = 140
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 140 0 SELECT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 140 0 SELECT
+   [enerjc] *** EXPAX_TEST_GEN: visitIdent - tree.toString() = x
+   [enerjc] *** EXPAX_TEST_GEN: visitIdent (bytecode offset) = 140
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = IDENT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 140 0 IDENT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = IDENT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 140 0 IDENT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 145 0 APPLY
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = LITERAL
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 145 0 LITERAL
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = LITERAL
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 146 0 LITERAL
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = NEWCLASS
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple main(java.lang.String[]) void 150 0 NEWCLASS
+   [enerjc] *** EXPAX_TEST_GEN: genDef - tree.toString() = 
+   [enerjc] public static int accept(int x) {
+   [enerjc]     enerj.rt.Reference x__REF__ = new <java.lang.Integer>enerj.rt.Reference(Integer.valueOf(x), false, true);
+   [enerjc]     return ((Integer)enerj.rt.PrecisionRuntimeRoot.impl.<java.lang.Integer>loadLocal(x__REF__, false)).intValue();
+   [enerjc] }
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = METHODDEF
+   [enerjc] *** EXPAX_TEST_GEN: genDef - code.bytecodeOffset = 153
+   [enerjc] *** EXPAX_TEST_GEN: visitMethodDef - tree.toString() = 
+   [enerjc] public static int accept(int x) {
+   [enerjc]     enerj.rt.Reference x__REF__ = new <java.lang.Integer>enerj.rt.Reference(Integer.valueOf(x), false, true);
+   [enerjc]     return ((Integer)enerj.rt.PrecisionRuntimeRoot.impl.<java.lang.Integer>loadLocal(x__REF__, false)).intValue();
+   [enerjc] }
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = METHODDEF
+   [enerjc] *** EXPAX_TEST_GEN: method name = accept(int)
+   [enerjc] *** EXPAX_TEST_GEN: return type = int
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = METHODDEF
+   [enerjc] *** EXPAX_TEST_GEN: genDef - tree.toString() = {
+   [enerjc]     enerj.rt.Reference x__REF__ = new <java.lang.Integer>enerj.rt.Reference(Integer.valueOf(x), false, true);
+   [enerjc]     return ((Integer)enerj.rt.PrecisionRuntimeRoot.impl.<java.lang.Integer>loadLocal(x__REF__, false)).intValue();
+   [enerjc] }
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = BLOCK
+   [enerjc] *** EXPAX_TEST_GEN: genDef - code.bytecodeOffset = 0
+   [enerjc] *** EXPAX_TEST_GEN: visitBlock = {
+   [enerjc]     enerj.rt.Reference x__REF__ = new <java.lang.Integer>enerj.rt.Reference(Integer.valueOf(x), false, true);
+   [enerjc]     return ((Integer)enerj.rt.PrecisionRuntimeRoot.impl.<java.lang.Integer>loadLocal(x__REF__, false)).intValue();
+   [enerjc] }
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = BLOCK
+   [enerjc] *** EXPAX_TEST_GEN: genDef - tree.toString() = enerj.rt.Reference x__REF__ = new <java.lang.Integer>enerj.rt.Reference(Integer.valueOf(x), false, true)
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = VARDEF
+   [enerjc] *** EXPAX_TEST_GEN: genDef - code.bytecodeOffset = 0
+   [enerjc] *** EXPAX_TEST_GEN: visitVarDef = enerj.rt.Reference x__REF__ = new <java.lang.Integer>enerj.rt.Reference(Integer.valueOf(x), false, true)
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = VARDEF
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple accept(int) int 0 0 VARDEF
+   [enerjc] *** EXPAX_TEST_GEN: visitNewClass = new <java.lang.Integer>enerj.rt.Reference(Integer.valueOf(x), false, true)
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = NEWCLASS
+   [enerjc] *** EXPAX_TEST_GEN: visitApply = Integer.valueOf(x)
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect - tree.toString() = Integer.valueOf
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect (bytecode offset) = 4
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple accept(int) int 4 0 SELECT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple accept(int) int 4 0 SELECT
+   [enerjc] *** EXPAX_TEST_GEN: visitIdent - tree.toString() = x
+   [enerjc] *** EXPAX_TEST_GEN: visitIdent (bytecode offset) = 4
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = IDENT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple accept(int) int 4 0 IDENT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = IDENT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple accept(int) int 4 0 IDENT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple accept(int) int 8 0 APPLY
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = LITERAL
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple accept(int) int 8 0 LITERAL
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = LITERAL
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple accept(int) int 9 0 LITERAL
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = NEWCLASS
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple accept(int) int 13 0 NEWCLASS
+   [enerjc] *** EXPAX_TEST_GEN: genDef - tree.toString() = return ((Integer)enerj.rt.PrecisionRuntimeRoot.impl.<java.lang.Integer>loadLocal(x__REF__, false)).intValue();
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = RETURN
+   [enerjc] *** EXPAX_TEST_GEN: genDef - code.bytecodeOffset = 14
+   [enerjc] *** EXPAX_TEST_GEN: visitReturn = return ((Integer)enerj.rt.PrecisionRuntimeRoot.impl.<java.lang.Integer>loadLocal(x__REF__, false)).intValue();
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = RETURN
+   [enerjc] *** EXPAX_TEST_GEN: visitApply = ((Integer)enerj.rt.PrecisionRuntimeRoot.impl.<java.lang.Integer>loadLocal(x__REF__, false)).intValue()
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect - tree.toString() = ((Integer)enerj.rt.PrecisionRuntimeRoot.impl.<java.lang.Integer>loadLocal(x__REF__, false)).intValue
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect (bytecode offset) = 14
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple accept(int) int 14 0 SELECT
+   [enerjc] *** EXPAX_TEST_GEN: visitApply = enerj.rt.PrecisionRuntimeRoot.impl.<java.lang.Integer>loadLocal(x__REF__, false)
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect - tree.toString() = enerj.rt.PrecisionRuntimeRoot.impl.loadLocal
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect (bytecode offset) = 14
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple accept(int) int 14 0 SELECT
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect - tree.toString() = enerj.rt.PrecisionRuntimeRoot.impl
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect (bytecode offset) = 14
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple accept(int) int 14 0 SELECT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple accept(int) int 14 0 SELECT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple accept(int) int 17 0 SELECT
+   [enerjc] *** EXPAX_TEST_GEN: visitIdent - tree.toString() = x__REF__
+   [enerjc] *** EXPAX_TEST_GEN: visitIdent (bytecode offset) = 17
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = IDENT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple accept(int) int 17 0 IDENT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = IDENT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple accept(int) int 17 0 IDENT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = LITERAL
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple accept(int) int 18 0 LITERAL
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple accept(int) int 24 0 APPLY
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = TYPECAST
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple accept(int) int 27 0 TYPECAST
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple accept(int) int 27 0 SELECT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple accept(int) int 30 0 APPLY
+   [enerjc] *** EXPAX_TEST_GEN: genDef - tree.toString() = 
+   [enerjc] public static int precise(int x) {
+   [enerjc]     enerj.rt.Reference x__REF__ = new <java.lang.Integer>enerj.rt.Reference(Integer.valueOf(x), false, true);
+   [enerjc]     return ((Integer)enerj.rt.PrecisionRuntimeRoot.impl.<java.lang.Integer>loadLocal(x__REF__, false)).intValue();
+   [enerjc] }
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = METHODDEF
+   [enerjc] *** EXPAX_TEST_GEN: genDef - code.bytecodeOffset = 31
+   [enerjc] *** EXPAX_TEST_GEN: visitMethodDef - tree.toString() = 
+   [enerjc] public static int precise(int x) {
+   [enerjc]     enerj.rt.Reference x__REF__ = new <java.lang.Integer>enerj.rt.Reference(Integer.valueOf(x), false, true);
+   [enerjc]     return ((Integer)enerj.rt.PrecisionRuntimeRoot.impl.<java.lang.Integer>loadLocal(x__REF__, false)).intValue();
+   [enerjc] }
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = METHODDEF
+   [enerjc] *** EXPAX_TEST_GEN: method name = precise(int)
+   [enerjc] *** EXPAX_TEST_GEN: return type = int
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = METHODDEF
+   [enerjc] *** EXPAX_TEST_GEN: genDef - tree.toString() = {
+   [enerjc]     enerj.rt.Reference x__REF__ = new <java.lang.Integer>enerj.rt.Reference(Integer.valueOf(x), false, true);
+   [enerjc]     return ((Integer)enerj.rt.PrecisionRuntimeRoot.impl.<java.lang.Integer>loadLocal(x__REF__, false)).intValue();
+   [enerjc] }
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = BLOCK
+   [enerjc] *** EXPAX_TEST_GEN: genDef - code.bytecodeOffset = 0
+   [enerjc] *** EXPAX_TEST_GEN: visitBlock = {
+   [enerjc]     enerj.rt.Reference x__REF__ = new <java.lang.Integer>enerj.rt.Reference(Integer.valueOf(x), false, true);
+   [enerjc]     return ((Integer)enerj.rt.PrecisionRuntimeRoot.impl.<java.lang.Integer>loadLocal(x__REF__, false)).intValue();
+   [enerjc] }
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = BLOCK
+   [enerjc] *** EXPAX_TEST_GEN: genDef - tree.toString() = enerj.rt.Reference x__REF__ = new <java.lang.Integer>enerj.rt.Reference(Integer.valueOf(x), false, true)
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = VARDEF
+   [enerjc] *** EXPAX_TEST_GEN: genDef - code.bytecodeOffset = 0
+   [enerjc] *** EXPAX_TEST_GEN: visitVarDef = enerj.rt.Reference x__REF__ = new <java.lang.Integer>enerj.rt.Reference(Integer.valueOf(x), false, true)
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = VARDEF
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple precise(int) int 0 0 VARDEF
+   [enerjc] *** EXPAX_TEST_GEN: visitNewClass = new <java.lang.Integer>enerj.rt.Reference(Integer.valueOf(x), false, true)
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = NEWCLASS
+   [enerjc] *** EXPAX_TEST_GEN: visitApply = Integer.valueOf(x)
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect - tree.toString() = Integer.valueOf
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect (bytecode offset) = 4
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple precise(int) int 4 0 SELECT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple precise(int) int 4 0 SELECT
+   [enerjc] *** EXPAX_TEST_GEN: visitIdent - tree.toString() = x
+   [enerjc] *** EXPAX_TEST_GEN: visitIdent (bytecode offset) = 4
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = IDENT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple precise(int) int 4 0 IDENT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = IDENT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple precise(int) int 4 0 IDENT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple precise(int) int 8 0 APPLY
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = LITERAL
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple precise(int) int 8 0 LITERAL
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = LITERAL
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple precise(int) int 9 0 LITERAL
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = NEWCLASS
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple precise(int) int 13 0 NEWCLASS
+   [enerjc] *** EXPAX_TEST_GEN: genDef - tree.toString() = return ((Integer)enerj.rt.PrecisionRuntimeRoot.impl.<java.lang.Integer>loadLocal(x__REF__, false)).intValue();
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = RETURN
+   [enerjc] *** EXPAX_TEST_GEN: genDef - code.bytecodeOffset = 14
+   [enerjc] *** EXPAX_TEST_GEN: visitReturn = return ((Integer)enerj.rt.PrecisionRuntimeRoot.impl.<java.lang.Integer>loadLocal(x__REF__, false)).intValue();
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = RETURN
+   [enerjc] *** EXPAX_TEST_GEN: visitApply = ((Integer)enerj.rt.PrecisionRuntimeRoot.impl.<java.lang.Integer>loadLocal(x__REF__, false)).intValue()
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect - tree.toString() = ((Integer)enerj.rt.PrecisionRuntimeRoot.impl.<java.lang.Integer>loadLocal(x__REF__, false)).intValue
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect (bytecode offset) = 14
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple precise(int) int 14 0 SELECT
+   [enerjc] *** EXPAX_TEST_GEN: visitApply = enerj.rt.PrecisionRuntimeRoot.impl.<java.lang.Integer>loadLocal(x__REF__, false)
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect - tree.toString() = enerj.rt.PrecisionRuntimeRoot.impl.loadLocal
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect (bytecode offset) = 14
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple precise(int) int 14 0 SELECT
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect - tree.toString() = enerj.rt.PrecisionRuntimeRoot.impl
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect (bytecode offset) = 14
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple precise(int) int 14 0 SELECT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple precise(int) int 14 0 SELECT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple precise(int) int 17 0 SELECT
+   [enerjc] *** EXPAX_TEST_GEN: visitIdent - tree.toString() = x__REF__
+   [enerjc] *** EXPAX_TEST_GEN: visitIdent (bytecode offset) = 17
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = IDENT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple precise(int) int 17 0 IDENT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = IDENT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple precise(int) int 17 0 IDENT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = LITERAL
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple precise(int) int 18 0 LITERAL
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple precise(int) int 24 0 APPLY
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = TYPECAST
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple precise(int) int 27 0 TYPECAST
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple precise(int) int 27 0 SELECT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = Simple precise(int) int 30 0 APPLY
+   [enerjc] *** EXPAX_ST: SimulationTranslator start!
+   [enerjc] *** EXPAX_ST: visitSelect: tree = enerj.lang.*
+   [enerjc] *** EXPAX_ST: visitSelect: tree = enerj.lang
+   [enerjc] *** EXPAX_ST: visitIdent: tree = enerj
+   [enerjc] *** EXPAX_ST: visitIdent: tree = super
+   [enerjc] *** EXPAX_ST: visitSelect: tree = enerj.rt.PrecisionRuntimeRoot.impl.enterConstructor
+   [enerjc] *** EXPAX_ST: visitSelect: tree = enerj.rt.PrecisionRuntimeRoot.impl
+   [enerjc] *** EXPAX_ST: visitSelect: tree = enerj.rt.PrecisionRuntimeRoot
+   [enerjc] *** EXPAX_ST: visitSelect: tree = enerj.rt
+   [enerjc] *** EXPAX_ST: visitIdent: tree = enerj
+   [enerjc] *** EXPAX_ST: visitIdent: tree = this
+   [enerjc] *** EXPAX_ST: visitSelect: tree = enerj.rt.PrecisionRuntimeRoot.impl.enterConstructor
+   [enerjc] *** EXPAX_ST: visitSelect: tree = enerj.rt.PrecisionRuntimeRoot.impl
+   [enerjc] *** EXPAX_ST: visitSelect: tree = enerj.rt.PrecisionRuntimeRoot
+   [enerjc] *** EXPAX_ST: visitSelect: tree = enerj.rt
+   [enerjc] *** EXPAX_ST: visitIdent: tree = enerj
+   [enerjc] *** EXPAX_ST: visitIdent: tree = this
+   [enerjc] *** EXPAX_ST: visitVarDef: tree = @Approx()
+   [enerjc] public int x
+   [enerjc] *** EXPAX_ST: visitIdent: tree = Approx
+   [enerjc] *** EXPAX_ST: visitVarDef: tree = @Approx()
+   [enerjc] public static int y
+   [enerjc] *** EXPAX_ST: visitIdent: tree = Approx
+   [enerjc] *** EXPAX_TEST_GEN: class = A
+   [enerjc] *** EXPAX_TEST_GEN: genDef - tree.toString() = 
+   [enerjc] <init>() {
+   [enerjc]     super();
+   [enerjc]     enerj.rt.PrecisionRuntimeRoot.impl.enterConstructor(this);
+   [enerjc]     enerj.rt.PrecisionRuntimeRoot.impl.enterConstructor(this);
+   [enerjc] }
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = METHODDEF
+   [enerjc] *** EXPAX_TEST_GEN: genDef - code.bytecodeOffset = 31
+   [enerjc] *** EXPAX_TEST_GEN: visitMethodDef - tree.toString() = 
+   [enerjc] <init>() {
+   [enerjc]     super();
+   [enerjc]     enerj.rt.PrecisionRuntimeRoot.impl.enterConstructor(this);
+   [enerjc]     enerj.rt.PrecisionRuntimeRoot.impl.enterConstructor(this);
+   [enerjc] }
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = METHODDEF
+   [enerjc] *** EXPAX_TEST_GEN: method name = A()
+   [enerjc] *** EXPAX_TEST_GEN: return type = void
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = METHODDEF
+   [enerjc] *** EXPAX_TEST_GEN: genDef - tree.toString() = {
+   [enerjc]     super();
+   [enerjc]     enerj.rt.PrecisionRuntimeRoot.impl.enterConstructor(this);
+   [enerjc]     enerj.rt.PrecisionRuntimeRoot.impl.enterConstructor(this);
+   [enerjc] }
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = BLOCK
+   [enerjc] *** EXPAX_TEST_GEN: genDef - code.bytecodeOffset = 0
+   [enerjc] *** EXPAX_TEST_GEN: visitBlock = {
+   [enerjc]     super();
+   [enerjc]     enerj.rt.PrecisionRuntimeRoot.impl.enterConstructor(this);
+   [enerjc]     enerj.rt.PrecisionRuntimeRoot.impl.enterConstructor(this);
+   [enerjc] }
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = BLOCK
+   [enerjc] *** EXPAX_TEST_GEN: genDef - tree.toString() = super();
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = EXEC
+   [enerjc] *** EXPAX_TEST_GEN: genDef - code.bytecodeOffset = 0
+   [enerjc] *** EXPAX_TEST_GEN: visitExec - tree.toString() = super();
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = EXEC
+   [enerjc] *** EXPAX_TEST_GEN: visitApply = super()
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: visitIdent - tree.toString() = super
+   [enerjc] *** EXPAX_TEST_GEN: visitIdent (bytecode offset) = 0
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = IDENT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = A A() void 0 255 IDENT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = IDENT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = A A() void 1 255 IDENT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = A A() void 4 255 APPLY
+   [enerjc] *** EXPAX_TEST_GEN: genDef - tree.toString() = enerj.rt.PrecisionRuntimeRoot.impl.enterConstructor(this);
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = EXEC
+   [enerjc] *** EXPAX_TEST_GEN: genDef - code.bytecodeOffset = 4
+   [enerjc] *** EXPAX_TEST_GEN: visitExec - tree.toString() = enerj.rt.PrecisionRuntimeRoot.impl.enterConstructor(this);
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = EXEC
+   [enerjc] *** EXPAX_TEST_GEN: visitApply = enerj.rt.PrecisionRuntimeRoot.impl.enterConstructor(this)
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect - tree.toString() = enerj.rt.PrecisionRuntimeRoot.impl.enterConstructor
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect (bytecode offset) = 4
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = A A() void 4 0 SELECT
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect - tree.toString() = enerj.rt.PrecisionRuntimeRoot.impl
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect (bytecode offset) = 4
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = A A() void 4 0 SELECT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = A A() void 4 0 SELECT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = A A() void 7 0 SELECT
+   [enerjc] *** EXPAX_TEST_GEN: visitIdent - tree.toString() = this
+   [enerjc] *** EXPAX_TEST_GEN: visitIdent (bytecode offset) = 7
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = IDENT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = A A() void 7 0 IDENT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = IDENT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = A A() void 7 0 IDENT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = A A() void 13 0 APPLY
+   [enerjc] *** EXPAX_TEST_GEN: genDef - tree.toString() = enerj.rt.PrecisionRuntimeRoot.impl.enterConstructor(this);
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = EXEC
+   [enerjc] *** EXPAX_TEST_GEN: genDef - code.bytecodeOffset = 14
+   [enerjc] *** EXPAX_TEST_GEN: visitExec - tree.toString() = enerj.rt.PrecisionRuntimeRoot.impl.enterConstructor(this);
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = EXEC
+   [enerjc] *** EXPAX_TEST_GEN: visitApply = enerj.rt.PrecisionRuntimeRoot.impl.enterConstructor(this)
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect - tree.toString() = enerj.rt.PrecisionRuntimeRoot.impl.enterConstructor
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect (bytecode offset) = 14
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = A A() void 14 0 SELECT
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect - tree.toString() = enerj.rt.PrecisionRuntimeRoot.impl
+   [enerjc] *** EXPAX_TEST_GEN: visitSelect (bytecode offset) = 14
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = A A() void 14 0 SELECT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = A A() void 14 0 SELECT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = SELECT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = A A() void 17 0 SELECT
+   [enerjc] *** EXPAX_TEST_GEN: visitIdent - tree.toString() = this
+   [enerjc] *** EXPAX_TEST_GEN: visitIdent (bytecode offset) = 17
+   [enerjc] *** EXPAX_TEST_GEN: tree.getTag() = IDENT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = A A() void 17 0 IDENT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = IDENT
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = A A() void 17 0 IDENT
+   [enerjc] *** EXPAX_TES_GEN: genExpr - tag = APPLY
+   [enerjc] *** EXPAX_TEST_GEN: add to expaxInfo = A A() void 23 0 APPLY
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Long.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Float.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Double.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Boolean.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Void.class)]]
+   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/simple/build/Simple.class]]
+   [enerjc] [checking A]
+   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/simple/build/A.class]]
+   [enerjc] [total 433ms]
+      [jar] Building jar: /Users/jspark/projects/expax/apps/simple/simple.jar
+
+BUILD SUCCESSFUL
+Total time: 0 seconds

@@ -1,0 +1,699 @@
+Compiled from "RgbImage.java"
+public class Sobel.RgbImage {
+  public int width;
+
+  public int height;
+
+  public int[][][] image;
+
+  public Sobel.RgbImage();
+    Code:
+       0: aload_0       
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return        
+
+  public void load(java.lang.String) throws java.io.IOException;
+    Code:
+       0: new           #2                  // class Sobel/TextFile
+       3: dup           
+       4: aload_1       
+       5: getstatic     #3                  // Field Sobel/TextFile$Mode.READ:LSobel/TextFile$Mode;
+       8: invokespecial #4                  // Method Sobel/TextFile."<init>":(Ljava/lang/String;LSobel/TextFile$Mode;)V
+      11: astore_2      
+      12: aload_0       
+      13: aload_2       
+      14: invokevirtual #5                  // Method Sobel/TextFile.loadInt:()I
+      17: putfield      #6                  // Field width:I
+      20: aload_2       
+      21: invokevirtual #7                  // Method Sobel/TextFile.loadChar:()C
+      24: pop           
+      25: aload_0       
+      26: aload_2       
+      27: invokevirtual #5                  // Method Sobel/TextFile.loadInt:()I
+      30: putfield      #8                  // Field height:I
+      33: aload_0       
+      34: aload_0       
+      35: getfield      #8                  // Field height:I
+      38: anewarray     #9                  // class "[[I"
+      41: putfield      #10                 // Field image:[[[I
+      44: iconst_0      
+      45: istore_3      
+      46: iload_3       
+      47: aload_0       
+      48: getfield      #8                  // Field height:I
+      51: if_icmpge     103
+      54: aload_0       
+      55: getfield      #10                 // Field image:[[[I
+      58: iload_3       
+      59: aload_0       
+      60: getfield      #6                  // Field width:I
+      63: anewarray     #11                 // class "[I"
+      66: aastore       
+      67: iconst_0      
+      68: istore        4
+      70: iload         4
+      72: aload_0       
+      73: getfield      #6                  // Field width:I
+      76: if_icmpge     97
+      79: aload_0       
+      80: getfield      #10                 // Field image:[[[I
+      83: iload_3       
+      84: aaload        
+      85: iload         4
+      87: iconst_3      
+      88: newarray       int
+      90: aastore       
+      91: iinc          4, 1
+      94: goto          70
+      97: iinc          3, 1
+     100: goto          46
+     103: iconst_0      
+     104: istore_3      
+     105: iload_3       
+     106: aload_0       
+     107: getfield      #8                  // Field height:I
+     110: if_icmpge     208
+     113: iconst_0      
+     114: istore        4
+     116: iload         4
+     118: aload_0       
+     119: getfield      #6                  // Field width:I
+     122: if_icmpge     202
+     125: aload_0       
+     126: getfield      #10                 // Field image:[[[I
+     129: iload_3       
+     130: aaload        
+     131: iload         4
+     133: aaload        
+     134: iconst_0      
+     135: aload_2       
+     136: invokevirtual #5                  // Method Sobel/TextFile.loadInt:()I
+     139: iastore       
+     140: aload_2       
+     141: invokevirtual #7                  // Method Sobel/TextFile.loadChar:()C
+     144: pop           
+     145: aload_0       
+     146: getfield      #10                 // Field image:[[[I
+     149: iload_3       
+     150: aaload        
+     151: iload         4
+     153: aaload        
+     154: iconst_1      
+     155: aload_2       
+     156: invokevirtual #5                  // Method Sobel/TextFile.loadInt:()I
+     159: iastore       
+     160: aload_2       
+     161: invokevirtual #7                  // Method Sobel/TextFile.loadChar:()C
+     164: pop           
+     165: aload_0       
+     166: getfield      #10                 // Field image:[[[I
+     169: iload_3       
+     170: aaload        
+     171: iload         4
+     173: aaload        
+     174: iconst_2      
+     175: aload_2       
+     176: invokevirtual #5                  // Method Sobel/TextFile.loadInt:()I
+     179: iastore       
+     180: iload         4
+     182: aload_0       
+     183: getfield      #6                  // Field width:I
+     186: iconst_1      
+     187: isub          
+     188: if_icmpge     196
+     191: aload_2       
+     192: invokevirtual #7                  // Method Sobel/TextFile.loadChar:()C
+     195: pop           
+     196: iinc          4, 1
+     199: goto          116
+     202: iinc          3, 1
+     205: goto          105
+     208: return        
+
+  public void slideWindow(int, int, int[][][]);
+    Code:
+       0: aload_3       
+       1: arraylength   
+       2: istore        4
+       4: aload_3       
+       5: iconst_0      
+       6: aaload        
+       7: arraylength   
+       8: istore        5
+      10: iload_1       
+      11: iload         5
+      13: i2f           
+      14: f2d           
+      15: ldc2_w        #12                 // double 2.0d
+      18: ddiv          
+      19: d2i           
+      20: isub          
+      21: istore        6
+      23: iload_1       
+      24: iload         5
+      26: i2f           
+      27: f2d           
+      28: ldc2_w        #12                 // double 2.0d
+      31: ddiv          
+      32: d2i           
+      33: iadd          
+      34: istore        7
+      36: iload_2       
+      37: iload         4
+      39: i2f           
+      40: f2d           
+      41: ldc2_w        #12                 // double 2.0d
+      44: ddiv          
+      45: d2i           
+      46: isub          
+      47: istore        8
+      49: iload_2       
+      50: iload         4
+      52: i2f           
+      53: f2d           
+      54: ldc2_w        #12                 // double 2.0d
+      57: ddiv          
+      58: d2i           
+      59: iadd          
+      60: istore        9
+      62: iconst_0      
+      63: istore        10
+      65: iload         8
+      67: istore        11
+      69: iload         11
+      71: iload         9
+      73: if_icmpgt     303
+      76: iload         11
+      78: iflt          90
+      81: iload         11
+      83: aload_0       
+      84: getfield      #8                  // Field height:I
+      87: if_icmplt     149
+      90: iload         6
+      92: istore        12
+      94: iload         12
+      96: iload         7
+      98: if_icmpgt     146
+     101: aload_3       
+     102: iload         10
+     104: aaload        
+     105: iload         12
+     107: iload         6
+     109: isub          
+     110: aaload        
+     111: iconst_0      
+     112: iconst_0      
+     113: iastore       
+     114: aload_3       
+     115: iload         10
+     117: aaload        
+     118: iload         12
+     120: iload         6
+     122: isub          
+     123: aaload        
+     124: iconst_1      
+     125: iconst_0      
+     126: iastore       
+     127: aload_3       
+     128: iload         10
+     130: aaload        
+     131: iload         12
+     133: iload         6
+     135: isub          
+     136: aaload        
+     137: iconst_2      
+     138: iconst_0      
+     139: iastore       
+     140: iinc          12, 1
+     143: goto          94
+     146: goto          294
+     149: iload         6
+     151: istore        12
+     153: iload         12
+     155: iload         7
+     157: if_icmpgt     294
+     160: iload         12
+     162: iflt          174
+     165: iload         12
+     167: aload_0       
+     168: getfield      #6                  // Field width:I
+     171: if_icmplt     216
+     174: aload_3       
+     175: iload         10
+     177: aaload        
+     178: iload         12
+     180: iload         6
+     182: isub          
+     183: aaload        
+     184: iconst_0      
+     185: iconst_0      
+     186: iastore       
+     187: aload_3       
+     188: iload         10
+     190: aaload        
+     191: iload         12
+     193: iload         6
+     195: isub          
+     196: aaload        
+     197: iconst_1      
+     198: iconst_0      
+     199: iastore       
+     200: aload_3       
+     201: iload         10
+     203: aaload        
+     204: iload         12
+     206: iload         6
+     208: isub          
+     209: aaload        
+     210: iconst_2      
+     211: iconst_0      
+     212: iastore       
+     213: goto          288
+     216: aload_3       
+     217: iload         10
+     219: aaload        
+     220: iload         12
+     222: iload         6
+     224: isub          
+     225: aaload        
+     226: iconst_0      
+     227: aload_0       
+     228: getfield      #10                 // Field image:[[[I
+     231: iload         11
+     233: aaload        
+     234: iload         12
+     236: aaload        
+     237: iconst_0      
+     238: iaload        
+     239: iastore       
+     240: aload_3       
+     241: iload         10
+     243: aaload        
+     244: iload         12
+     246: iload         6
+     248: isub          
+     249: aaload        
+     250: iconst_1      
+     251: aload_0       
+     252: getfield      #10                 // Field image:[[[I
+     255: iload         11
+     257: aaload        
+     258: iload         12
+     260: aaload        
+     261: iconst_1      
+     262: iaload        
+     263: iastore       
+     264: aload_3       
+     265: iload         10
+     267: aaload        
+     268: iload         12
+     270: iload         6
+     272: isub          
+     273: aaload        
+     274: iconst_2      
+     275: aload_0       
+     276: getfield      #10                 // Field image:[[[I
+     279: iload         11
+     281: aaload        
+     282: iload         12
+     284: aaload        
+     285: iconst_2      
+     286: iaload        
+     287: iastore       
+     288: iinc          12, 1
+     291: goto          153
+     294: iinc          10, 1
+     297: iinc          11, 1
+     300: goto          69
+     303: return        
+
+  public static double sqrt(double);
+    Code:
+       0: dload_0       
+       1: invokestatic  #14                 // Method java/lang/Math.sqrt:(D)D
+       4: dreturn       
+
+  public double sobel(int[][][]);
+    Code:
+       0: aload_0       
+       1: aload_1       
+       2: iconst_0      
+       3: aaload        
+       4: iconst_0      
+       5: aaload        
+       6: invokevirtual #15                 // Method luminance:([I)I
+       9: i2d           
+      10: dstore_2      
+      11: aload_0       
+      12: aload_1       
+      13: iconst_0      
+      14: aaload        
+      15: iconst_1      
+      16: aaload        
+      17: invokevirtual #15                 // Method luminance:([I)I
+      20: i2d           
+      21: dstore        4
+      23: aload_0       
+      24: aload_1       
+      25: iconst_0      
+      26: aaload        
+      27: iconst_2      
+      28: aaload        
+      29: invokevirtual #15                 // Method luminance:([I)I
+      32: i2d           
+      33: dstore        6
+      35: aload_0       
+      36: aload_1       
+      37: iconst_1      
+      38: aaload        
+      39: iconst_0      
+      40: aaload        
+      41: invokevirtual #15                 // Method luminance:([I)I
+      44: i2d           
+      45: dstore        8
+      47: aload_0       
+      48: aload_1       
+      49: iconst_1      
+      50: aaload        
+      51: iconst_1      
+      52: aaload        
+      53: invokevirtual #15                 // Method luminance:([I)I
+      56: i2d           
+      57: dstore        10
+      59: aload_0       
+      60: aload_1       
+      61: iconst_1      
+      62: aaload        
+      63: iconst_2      
+      64: aaload        
+      65: invokevirtual #15                 // Method luminance:([I)I
+      68: i2d           
+      69: dstore        12
+      71: aload_0       
+      72: aload_1       
+      73: iconst_2      
+      74: aaload        
+      75: iconst_0      
+      76: aaload        
+      77: invokevirtual #15                 // Method luminance:([I)I
+      80: i2d           
+      81: dstore        14
+      83: aload_0       
+      84: aload_1       
+      85: iconst_2      
+      86: aaload        
+      87: iconst_1      
+      88: aaload        
+      89: invokevirtual #15                 // Method luminance:([I)I
+      92: i2d           
+      93: dstore        16
+      95: aload_0       
+      96: aload_1       
+      97: iconst_2      
+      98: aaload        
+      99: iconst_2      
+     100: aaload        
+     101: invokevirtual #15                 // Method luminance:([I)I
+     104: i2d           
+     105: dstore        18
+     107: dload_2       
+     108: dload         4
+     110: dload         4
+     112: dadd          
+     113: dadd          
+     114: dload         6
+     116: dadd          
+     117: dload         14
+     119: dsub          
+     120: dload         16
+     122: dload         16
+     124: dadd          
+     125: dsub          
+     126: dload         18
+     128: dsub          
+     129: dstore        20
+     131: dload         6
+     133: dload         12
+     135: dload         12
+     137: dadd          
+     138: dadd          
+     139: dload         18
+     141: dadd          
+     142: dload_2       
+     143: dsub          
+     144: dload         8
+     146: dload         8
+     148: dadd          
+     149: dsub          
+     150: dload         14
+     152: dsub          
+     153: dstore        22
+     155: dload         20
+     157: dload         20
+     159: dmul          
+     160: dload         22
+     162: dload         22
+     164: dmul          
+     165: dadd          
+     166: invokestatic  #16                 // Method sqrt:(D)D
+     169: dstore        24
+     171: dload         24
+     173: dreturn       
+
+  public int luminance(int[]);
+    Code:
+       0: ldc2_w        #17                 // double 0.3d
+       3: dstore_2      
+       4: ldc2_w        #19                 // double 0.59d
+       7: dstore        4
+       9: ldc2_w        #21                 // double 0.11d
+      12: dstore        6
+      14: dload_2       
+      15: aload_1       
+      16: iconst_0      
+      17: iaload        
+      18: i2d           
+      19: dmul          
+      20: dload         4
+      22: aload_1       
+      23: iconst_1      
+      24: iaload        
+      25: i2d           
+      26: dmul          
+      27: dadd          
+      28: dload         6
+      30: aload_1       
+      31: iconst_2      
+      32: iaload        
+      33: i2d           
+      34: dmul          
+      35: dadd          
+      36: ldc2_w        #23                 // double 0.5d
+      39: dadd          
+      40: d2i           
+      41: sipush        256
+      44: irem          
+      45: ireturn       
+
+  public void makeGrayscale();
+    Code:
+       0: ldc2_w        #25                 // double 0.001171875d
+       3: dstore        5
+       5: ldc2_w        #27                 // double 0.0023046875d
+       8: dstore        7
+      10: ldc2_w        #29                 // double 4.296875E-4d
+      13: dstore        9
+      15: iconst_0      
+      16: istore_1      
+      17: iload_1       
+      18: aload_0       
+      19: getfield      #10                 // Field image:[[[I
+      22: arraylength   
+      23: if_icmpge     144
+      26: iconst_0      
+      27: istore_2      
+      28: iload_2       
+      29: aload_0       
+      30: getfield      #10                 // Field image:[[[I
+      33: iload_1       
+      34: aaload        
+      35: arraylength   
+      36: if_icmpge     138
+      39: dload         5
+      41: aload_0       
+      42: getfield      #10                 // Field image:[[[I
+      45: iload_1       
+      46: aaload        
+      47: iload_2       
+      48: aaload        
+      49: iconst_0      
+      50: iaload        
+      51: i2d           
+      52: dmul          
+      53: dload         7
+      55: aload_0       
+      56: getfield      #10                 // Field image:[[[I
+      59: iload_1       
+      60: aaload        
+      61: iload_2       
+      62: aaload        
+      63: iconst_1      
+      64: iaload        
+      65: i2d           
+      66: dmul          
+      67: dadd          
+      68: dload         9
+      70: aload_0       
+      71: getfield      #10                 // Field image:[[[I
+      74: iload_1       
+      75: aaload        
+      76: iload_2       
+      77: aaload        
+      78: iconst_2      
+      79: iaload        
+      80: i2d           
+      81: dmul          
+      82: dadd          
+      83: dstore_3      
+      84: aload_0       
+      85: getfield      #10                 // Field image:[[[I
+      88: iload_1       
+      89: aaload        
+      90: iload_2       
+      91: aaload        
+      92: iconst_0      
+      93: dload_3       
+      94: ldc2_w        #31                 // double 256.0d
+      97: dmul          
+      98: d2i           
+      99: iastore       
+     100: aload_0       
+     101: getfield      #10                 // Field image:[[[I
+     104: iload_1       
+     105: aaload        
+     106: iload_2       
+     107: aaload        
+     108: iconst_1      
+     109: dload_3       
+     110: ldc2_w        #31                 // double 256.0d
+     113: dmul          
+     114: d2i           
+     115: iastore       
+     116: aload_0       
+     117: getfield      #10                 // Field image:[[[I
+     120: iload_1       
+     121: aaload        
+     122: iload_2       
+     123: aaload        
+     124: iconst_2      
+     125: dload_3       
+     126: ldc2_w        #31                 // double 256.0d
+     129: dmul          
+     130: d2i           
+     131: iastore       
+     132: iinc          2, 1
+     135: goto          28
+     138: iinc          1, 1
+     141: goto          17
+     144: return        
+
+  public static int accept(int);
+    Code:
+       0: iload_0       
+       1: ireturn       
+
+  public static int precise(int);
+    Code:
+       0: iload_0       
+       1: ireturn       
+
+  public static void main(java.lang.String[]) throws java.io.IOException;
+    Code:
+       0: new           #33                 // class Sobel/RgbImage
+       3: dup           
+       4: invokespecial #34                 // Method "<init>":()V
+       7: astore_1      
+       8: aload_1       
+       9: aload_0       
+      10: iconst_0      
+      11: aaload        
+      12: invokevirtual #35                 // Method load:(Ljava/lang/String;)V
+      15: aload_1       
+      16: invokevirtual #36                 // Method makeGrayscale:()V
+      19: iconst_3      
+      20: anewarray     #9                  // class "[[I"
+      23: astore_2      
+      24: iconst_0      
+      25: istore_3      
+      26: iload_3       
+      27: iconst_3      
+      28: if_icmpge     68
+      31: aload_2       
+      32: iload_3       
+      33: iconst_3      
+      34: anewarray     #11                 // class "[I"
+      37: aastore       
+      38: iconst_0      
+      39: istore        4
+      41: iload         4
+      43: iconst_3      
+      44: if_icmpge     62
+      47: aload_2       
+      48: iload_3       
+      49: aaload        
+      50: iload         4
+      52: iconst_3      
+      53: newarray       int
+      55: aastore       
+      56: iinc          4, 1
+      59: goto          41
+      62: iinc          3, 1
+      65: goto          26
+      68: iconst_0      
+      69: istore        5
+      71: iload         5
+      73: aload_1       
+      74: getfield      #8                  // Field height:I
+      77: if_icmpge     166
+      80: iconst_0      
+      81: istore        6
+      83: iload         6
+      85: aload_1       
+      86: getfield      #6                  // Field width:I
+      89: if_icmpge     160
+      92: aload_1       
+      93: iload         6
+      95: iload         5
+      97: aload_2       
+      98: invokevirtual #37                 // Method slideWindow:(II[[[I)V
+     101: aload_1       
+     102: aload_2       
+     103: invokevirtual #38                 // Method sobel:([[[I)D
+     106: dstore_3      
+     107: dload_3       
+     108: d2i           
+     109: istore        7
+     111: iload         7
+     113: invokestatic  #39                 // Method accept:(I)I
+     116: istore        7
+     118: iload         7
+     120: sipush        256
+     123: if_icmplt     131
+     126: sipush        255
+     129: istore        7
+     131: iload         7
+     133: ifge          139
+     136: iconst_0      
+     137: istore        7
+     139: getstatic     #40                 // Field java/lang/System.out:Ljava/io/PrintStream;
+     142: iload         7
+     144: invokevirtual #41                 // Method java/io/PrintStream.println:(I)V
+     147: iload         7
+     149: invokestatic  #42                 // Method precise:(I)I
+     152: istore        7
+     154: iinc          6, 1
+     157: goto          83
+     160: iinc          5, 1
+     163: goto          71
+     166: return        
+}

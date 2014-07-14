@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="enerjInst">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/enerjInst/jars/enerjInst.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

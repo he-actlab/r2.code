@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/apps/apps.iml" filepath="$PROJECT_DIR$/apps/apps.iml" />
+      <module fileurl="file://$PROJECT_DIR$/checker-runtime/checker-runtime.iml" filepath="$PROJECT_DIR$/checker-runtime/checker-runtime.iml" />
+      <module fileurl="file://$PROJECT_DIR$/checker-framework/checkers/checkers.iml" filepath="$PROJECT_DIR$/checker-framework/checkers/checkers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/apps/zxing/core/core.iml" filepath="$PROJECT_DIR$/apps/zxing/core/core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/enerj/enerj.iml" filepath="$PROJECT_DIR$/enerj/enerj.iml" />
+      <module fileurl="file://$PROJECT_DIR$/enerjInst/enerjInst.iml" filepath="$PROJECT_DIR$/enerjInst/enerjInst.iml" />
+      <module fileurl="file://$PROJECT_DIR$/checker-framework/checkers/jdk/igj/igj.iml" filepath="$PROJECT_DIR$/checker-framework/checkers/jdk/igj/igj.iml" />
+      <module fileurl="file://$PROJECT_DIR$/apps/imagefill/imagefill.iml" filepath="$PROJECT_DIR$/apps/imagefill/imagefill.iml" />
+      <module fileurl="file://$PROJECT_DIR$/checker-framework/checkers/jdk/javari/javari.iml" filepath="$PROJECT_DIR$/checker-framework/checkers/jdk/javari/javari.iml" />
+      <module fileurl="file://$PROJECT_DIR$/apps/zxing/javase/javase.iml" filepath="$PROJECT_DIR$/apps/zxing/javase/javase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/apps/jmeint/jmeint.iml" filepath="$PROJECT_DIR$/apps/jmeint/jmeint.iml" />
+      <module fileurl="file://$PROJECT_DIR$/checker-framework/checkers/jdk/nullness/nullness.iml" filepath="$PROJECT_DIR$/checker-framework/checkers/jdk/nullness/nullness.iml" />
+      <module fileurl="file://$PROJECT_DIR$/checker-framework/checkers/tests/oigj/oigj.iml" filepath="$PROJECT_DIR$/checker-framework/checkers/tests/oigj/oigj.iml" />
+      <module fileurl="file://$PROJECT_DIR$/checker-framework/checkers/tests/tests.iml" filepath="$PROJECT_DIR$/checker-framework/checkers/tests/tests.iml" />
+    </modules>
+  </component>
+</project>
+

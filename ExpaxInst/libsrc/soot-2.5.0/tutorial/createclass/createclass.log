@@ -1,0 +1,159 @@
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2012.1.16)  22 JAN 2012 14:19
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**createclass
+(./createclass.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2009-06-19, ngerman-x-2009-06-19, afrikaans, ancientgreek, ibycus, arabi
+c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
+h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
+h, french, galician, german, ngerman, swissgerman, monogreek, greek, hungarian,
+ icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, marathi, or
+iya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, kurmanji,
+ lao, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk, pol
+ish, portuguese, romanian, russian, sanskrit, serbian, serbianc, slovak, sloven
+ian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, welsh, loaded
+.
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/preprint/fullpage.sty
+Package: fullpage 1999/02/23 1.1 (PWD)
+\FP@margin=\skip43
+)
+(/Users/eric/Library/texmf/tex/latex/html/html.sty
+Package: html 1996/12/22 v1.1 hypertext commands for latex2html (nd, hws, rrm)
+\c@lpart=\count87
+\c@lchapter=\count88
+\c@lsection=\count89
+\c@lsubsection=\count90
+\c@lsubsubsection=\count91
+\c@lparagraph=\count92
+\c@lsubparagraph=\count93
+\c@lequation=\count94
+\c@lsubsubparagraph=\count95
+\ptrfile=\write3
+) (./createclass.aux)
+\openout1 = `createclass.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 16.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 16.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 16.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 24.
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 24.
+ [1
+
+] [2]
+Overfull \hbox (13.24077pt too wide) in paragraph at lines 238--238
+[]    \OT1/cmtt/m/n/10 String fileName = SourceLocator.v().getFileNameFor(sClas
+s, Options.output_format_class);[] 
+ []
+
+[3]
+Overfull \hbox (18.49072pt too wide) in paragraph at lines 261--261
+[]    \OT1/cmtt/m/n/10 String fileName = SourceLocator.v().getFileNameFor(sClas
+s, Options.output_format_jimple);[] 
+ []
+
+[4] [5]
+Overfull \hbox (2.74086pt too wide) in paragraph at lines 422--422
+[]                \OT1/cmtt/m/n/10 Arrays.asList(new Type[] {ArrayType.v(RefTyp
+e.v("java.lang.String"), 1)}),[] 
+ []
+
+
+Overfull \hbox (28.99063pt too wide) in paragraph at lines 422--422
+[]                \OT1/cmtt/m/n/10 arg = Jimple.v().newLocal("l0", ArrayType.v(
+RefType.v("java.lang.String"), 1));[] 
+ []
+
+
+Overfull \hbox (55.2404pt too wide) in paragraph at lines 422--422
+[]                     \OT1/cmtt/m/n/10 Jimple.v().newParameterRef(ArrayType.v(
+RefType.v("java.lang.String"), 1), 0)));[] 
+ []
+
+
+Overfull \hbox (49.99045pt too wide) in paragraph at lines 422--422
+[]                    \OT1/cmtt/m/n/10 Scene.v().getField("<java.lang.System: j
+ava.io.PrintStream out>").makeRef())));[] 
+ []
+
+
+Overfull \hbox (123.4898pt too wide) in paragraph at lines 422--422
+[]                \OT1/cmtt/m/n/10 SootMethod toCall = Scene.v().getMethod("<ja
+va.io.PrintStream: void println(java.lang.String)>");[] 
+ []
+
+
+Overfull \hbox (291.48834pt too wide) in paragraph at lines 422--422
+[]                \OT1/cmtt/m/n/10 units.add(Jimple.v().newInvokeStmt(Jimple.v(
+).newVirtualInvokeExpr(tmpRef, toCall.makeRef(), StringConstant.v("Hello world!
+"))));[] 
+ []
+
+[6]
+Overfull \hbox (34.24059pt too wide) in paragraph at lines 422--422
+[]        \OT1/cmtt/m/n/10 String fileName = SourceLocator.v().getFileNameFor(s
+Class, Options.output_format_class);[] 
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmtt on input line 426
+.
+LaTeX Font Info:    No file OMScmtt.fd. on input line 426.
+
+LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textbullet' on input line 426.
+
+[7] (./createclass.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 496 strings out of 493634
+ 5887 string characters out of 3143400
+ 58423 words of memory out of 3000000
+ 3855 multiletter control sequences out of 15000+200000
+ 8747 words of font info for 32 fonts, out of 3000000 for 9000
+ 831 hyphenation exceptions out of 8191
+ 23i,6n,19p,171b,239s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on createclass.dvi (7 pages, 17600 bytes).

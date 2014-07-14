@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="imagefill">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/apps/imagefill/imagefill.jar!/" />
+      <root url="jar://$PROJECT_DIR$/apps/imagefill/new.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

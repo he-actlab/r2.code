@@ -1,0 +1,16 @@
+12
+jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#5#2: MOVE_D R10, DConst: 0.0
+jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#26#8: MOVE_D R14, T13
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#43#31: MOVE_D R23, T22
+jnt.scimark2.Random#initialize(int)#void#2#1: PUTFIELD_I R0, .seed, R1
+jnt.scimark2.Random#<init>(int)#void#101#33: PUTFIELD_D R0, .right, DConst: 1.0
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#24#25: MOVE_D R10, T18
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#36#28: MUL_D T20, R10, R10
+jnt.scimark2.commandline#main(java.lang.String[])#void#3#1: MOVE_D R1, DConst: 2.0
+jnt.scimark2.Random#<init>(int)#void#6#2: PUTFIELD_I R0, .seed, IConst: 0
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#41#29: MUL_D T21, R11, R11
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#42#30: ADD_D T22, T20, T21
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#30#27: MOVE_D R11, T19
+2
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#0#1: NEW T2, jnt.scimark2.Random#right#D#jnt.scimark2.Random
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#0#1: NEW T2, jnt.scimark2.Random#seed#I#jnt.scimark2.Random

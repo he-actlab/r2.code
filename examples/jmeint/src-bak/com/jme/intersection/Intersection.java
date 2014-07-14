@@ -51,42 +51,29 @@ public class Intersection {
 	/**
 	 * EPSILON represents the error buffer used to denote a hit.
 	 */
-	public static final double EPSILON = 1e-12;
-
-	private static final Vector3f tempVa = new Vector3f();
-
-	private static final Vector3f tempVb = new Vector3f();
-
-	private static final Vector3f tempVc;
-	private static final Vector3f tempVd;
+	public static  double EPSILON = 1e-12;
+	private static  Vector3f tempVa = new Vector3f();
+	private static  Vector3f tempVb = new Vector3f();
+	private static  Vector3f tempVc;
+	private static  Vector3f tempVd;
+	private static  Vector3f tempVe;
+	private static  float[] tempFa; 
+	private static  float[] tempFb; 
+	private static  Vector2f tempV2a = new Vector2f();
+	private static  Vector2f tempV2b = new Vector2f();
 
 	static {
 		alloc_TAG3();
 		tempVc = new Vector3f();
 		alloc_TAG3();
 		tempVd = new Vector3f();
-	}
-	
-	private static final Vector3f tempVe;
-	
-	static {
 		alloc_TAG1();
 		tempVe = new Vector3f();
-	}
-
-	private static final float[] tempFa; 
-	private static final float[] tempFb; 
-	
-	static {
 		alloc_TAG2();
 		tempFa = new float[2];
 		alloc_TAG2();
 		tempFb = new float[2];
 	}
-
-	private static final Vector2f tempV2a = new Vector2f();
-
-	private static final Vector2f tempV2b = new Vector2f();
 
 	public static boolean intersection(Vector3f v0, Vector3f v1, Vector3f v2,
 			Vector3f u0, Vector3f u1, Vector3f u2) {

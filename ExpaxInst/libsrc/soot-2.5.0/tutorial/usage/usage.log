@@ -1,0 +1,135 @@
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2012.1.16)  22 JAN 2012 14:19
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**usage
+(./usage.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2009-06-19, ngerman-x-2009-06-19, afrikaans, ancientgreek, ibycus, arabi
+c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
+h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
+h, french, galician, german, ngerman, swissgerman, monogreek, greek, hungarian,
+ icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, marathi, or
+iya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, kurmanji,
+ lao, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk, pol
+ish, portuguese, romanian, russian, sanskrit, serbian, serbianc, slovak, sloven
+ian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, welsh, loaded
+.
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/preprint/fullpage.sty
+Package: fullpage 1999/02/23 1.1 (PWD)
+\FP@margin=\skip43
+)
+(/Users/eric/Library/texmf/tex/latex/html/html.sty
+Package: html 1996/12/22 v1.1 hypertext commands for latex2html (nd, hws, rrm)
+\c@lpart=\count87
+\c@lchapter=\count88
+\c@lsection=\count89
+\c@lsubsection=\count90
+\c@lsubsubsection=\count91
+\c@lparagraph=\count92
+\c@lsubparagraph=\count93
+\c@lequation=\count94
+\c@lsubsubparagraph=\count95
+\ptrfile=\write3
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip44
+\LTright=\skip45
+\LTpre=\skip46
+\LTpost=\skip47
+\LTchunksize=\count96
+\LTcapwidth=\dimen103
+\LT@head=\box26
+\LT@firsthead=\box27
+\LT@foot=\box28
+\LT@lastfoot=\box29
+\LT@cols=\count97
+\LT@rows=\count98
+\c@LT@tables=\count99
+\c@LT@chunks=\count100
+\LT@p@ftn=\toks14
+) (./usage.aux)
+\openout1 = `usage.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 18.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 18.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 18.
+ (./usage.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 4.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 4.
+)
+\tf@toc=\write4
+\openout4 = `usage.toc'.
+
+ [1
+
+] [2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 414--415
+
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 558--559
+
+ []
+
+[5]
+Overfull \hbox (99.76129pt too wide) in paragraph at lines 706--715
+[]\OT1/cmr/m/n/10 Output files ap-pear in sub-di-rec-to-ries un-der the soot ou
+t-put di-rec-tory, with names like \OT1/cmr/m/it/10 className\OT1/cmr/m/n/10 /\
+OT1/cmr/m/it/10 methodSignature\OT1/cmr/m/n/10 /\OT1/cmr/m/it/10 phasename\OT1/
+cmr/m/n/10 -
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 841--842
+
+ []
+
+[7] [8] [9] (./usage.aux) ) 
+Here is how much of TeX's memory you used:
+ 572 strings out of 493634
+ 6615 string characters out of 3143400
+ 63198 words of memory out of 3000000
+ 3929 multiletter control sequences out of 15000+200000
+ 8710 words of font info for 31 fonts, out of 3000000 for 9000
+ 831 hyphenation exceptions out of 8191
+ 23i,7n,18p,193b,303s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on usage.dvi (9 pages, 34516 bytes).

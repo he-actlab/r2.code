@@ -14,7 +14,7 @@ public class commandline
 
 	public static void main(String args[])
 	{
-		double min_time = Constants.RESOLUTION_DEFAULT;
+		double min_time = Constants.RESOLUTION_DEFAULT;	// st: 1: MOVE_D R1, DConst: 2.0
 
 		String benchSel = null;
 		String seed = null;
@@ -40,7 +40,7 @@ public class commandline
 		}
 
 		// run the benchmark
-		Random R = new Random(Integer.parseInt(seed));
+		Random R = new Random(Integer.parseInt(seed));	// op: 25: NEW T36, jnt.scimark2.Random
 		if (benchSel == null || benchSel.equals("mc"))
 			kernel.measureMonteCarlo(min_time, R, seed);
 	}

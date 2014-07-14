@@ -1,0 +1,48 @@
+Compiled from "TextFile.java"
+public final class Sobel.TextFile$Mode extends java.lang.Enum<Sobel.TextFile$Mode> {
+  public static final Sobel.TextFile$Mode WRITE;
+
+  public static final Sobel.TextFile$Mode READ;
+
+  public static Sobel.TextFile$Mode[] values();
+    Code:
+       0: getstatic     #1                  // Field $VALUES:[LSobel/TextFile$Mode;
+       3: invokevirtual #2                  // Method "[LSobel/TextFile$Mode;".clone:()Ljava/lang/Object;
+       6: checkcast     #3                  // class "[LSobel/TextFile$Mode;"
+       9: areturn       
+
+  public static Sobel.TextFile$Mode valueOf(java.lang.String);
+    Code:
+       0: ldc_w         #4                  // class Sobel/TextFile$Mode
+       3: aload_0       
+       4: invokestatic  #5                  // Method java/lang/Enum.valueOf:(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+       7: checkcast     #4                  // class Sobel/TextFile$Mode
+      10: areturn       
+
+  static {};
+    Code:
+       0: new           #4                  // class Sobel/TextFile$Mode
+       3: dup           
+       4: ldc           #7                  // String WRITE
+       6: iconst_0      
+       7: invokespecial #8                  // Method "<init>":(Ljava/lang/String;I)V
+      10: putstatic     #9                  // Field WRITE:LSobel/TextFile$Mode;
+      13: new           #4                  // class Sobel/TextFile$Mode
+      16: dup           
+      17: ldc           #10                 // String READ
+      19: iconst_1      
+      20: invokespecial #8                  // Method "<init>":(Ljava/lang/String;I)V
+      23: putstatic     #11                 // Field READ:LSobel/TextFile$Mode;
+      26: iconst_2      
+      27: anewarray     #4                  // class Sobel/TextFile$Mode
+      30: dup           
+      31: iconst_0      
+      32: getstatic     #9                  // Field WRITE:LSobel/TextFile$Mode;
+      35: aastore       
+      36: dup           
+      37: iconst_1      
+      38: getstatic     #11                 // Field READ:LSobel/TextFile$Mode;
+      41: aastore       
+      42: putstatic     #1                  // Field $VALUES:[LSobel/TextFile$Mode;
+      45: return        
+}

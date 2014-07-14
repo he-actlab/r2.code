@@ -1,0 +1,72 @@
+63
+jnt.scimark2.LU#solve(double[][],int[],double[])#void#105#47: ASTORE_D R44, R2, R24
+jnt.scimark2.LU#solve(double[][],int[],double[])#void#71#51: ALOAD_D T36, T35, R33
+jnt.scimark2.kernel#CopyMatrix(double[][],double[][])#void#107#30: ASTORE_D T36, R8, T34
+jnt.scimark2.LU#solve(double[][],int[],double[])#void#30#34: ALOAD_D T27, R2, R16
+jnt.scimark2.kernel#matvec(double[][],double[],double[])#void#47#18: ALOAD_D T13, R1, R23
+jnt.scimark2.kernel#CopyMatrix(double[][],double[][])#void#92#25: ALOAD_D T33, R9, T32
+jnt.scimark2.kernel#CopyMatrix(double[][],double[][])#void#121#34: ASTORE_D T39, R8, T37
+jnt.scimark2.kernel#matvec(double[][],double[],double[])#void#19#9: MOVE_D R20, DConst: 0.0
+jnt.scimark2.LU#factor(double[][],int[])#int#269#66: ASTORE_D T89, T87, T86
+jnt.scimark2.LU#solve(double[][],int[],double[])#void#155#27: MUL_D T59, T57, T58
+jnt.scimark2.kernel#CopyMatrix(double[][],double[][])#void#53#38: ASTORE_D T26, R8, R25
+jnt.scimark2.Random#<init>(int)#void#6#2: PUTFIELD_I R0, .seed, IConst: 0
+jnt.scimark2.LU#factor(double[][],int[])#int#259#62: ALOAD_D T88, R18, R85
+jnt.scimark2.LU#solve(double[][],int[],double[])#void#76#53: MUL_D T38, T36, T37
+jnt.scimark2.LU#factor(double[][],int[])#int#191#72: ALOAD_D T73, T70, R33
+jnt.scimark2.LU#solve(double[][],int[],double[])#void#31#35: MOVE_D R28, T27
+jnt.scimark2.kernel#CopyMatrix(double[][],double[][])#void#106#29: ALOAD_D T36, R9, T35
+jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#22#10: ASTORE_D T6, R4, R9
+jnt.scimark2.LU#solve(double[][],int[],double[])#void#46#39: ASTORE_D T31, T30, R16
+jnt.scimark2.LU#solve(double[][],int[],double[])#void#177#20: DIV_D T64, R55, T63
+jnt.scimark2.kernel#CopyMatrix(double[][],double[][])#void#78#21: ALOAD_D T30, R9, R29
+jnt.scimark2.LU#solve(double[][],int[],double[])#void#157#29: MOVE_D R61, T60
+jnt.scimark2.kernel#matvec(double[][],double[],double[])#void#49#20: ADD_D T14, R24, T26
+jnt.scimark2.LU#absolute(double)#double#9#3: MOVE_D R2, T4
+jnt.scimark2.LU#factor(double[][],int[])#int#59#79: ALOAD_D T45, T44, R33
+jnt.scimark2.LU#solve(double[][],int[],double[])#void#75#52: ALOAD_D T37, R2, R33
+jnt.scimark2.kernel#matvec(double[][],double[],double[])#void#50#21: MOVE_D R27, T14
+jnt.scimark2.LU#solve(double[][],int[],double[])#void#176#19: ALOAD_D T63, T12, R49
+jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#21#9: ALOAD_D T6, R0, R9
+jnt.scimark2.LU#factor(double[][],int[])#int#267#64: MUL_D T26, R21, T25
+jnt.scimark2.LU#solve(double[][],int[],double[])#void#154#26: ALOAD_D T58, R2, R54
+jnt.scimark2.kernel#matvec(double[][],double[],double[])#void#63#14: ASTORE_D R24, R2, R19
+jnt.scimark2.kernel#CopyMatrix(double[][],double[][])#void#52#37: ALOAD_D T26, R9, R25
+jnt.scimark2.LU#factor(double[][],int[])#int#170#38: MOVE_D R16, T66
+jnt.scimark2.commandline#main(java.lang.String[])#void#3#1: MOVE_D R1, DConst: 2.0
+jnt.scimark2.LU#solve(double[][],int[],double[])#void#156#28: SUB_D T60, R55, T59
+jnt.scimark2.LU#factor(double[][],int[])#int#240#54: MOVE_D R21, T82
+jnt.scimark2.kernel#CopyMatrix(double[][],double[][])#void#93#26: ASTORE_D T33, R8, T31
+jnt.scimark2.kernel#matvec(double[][],double[],double[])#void#43#17: ALOAD_D T25, R9, R23
+jnt.scimark2.LU#factor(double[][],int[])#int#268#65: SUB_D T89, T88, T26
+jnt.scimark2.LU#factor(double[][],int[])#int#79#85: MOVE_D R49, R27
+jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#17#7: ASTORE_D T5, R3, R8
+jnt.scimark2.kernel#matvec(double[][],double[],double[])#void#48#19: MUL_D T26, T25, T13
+jnt.scimark2.LU#factor(double[][],int[])#int#194#73: MUL_D T74, T73, R16
+jnt.scimark2.LU#factor(double[][],int[])#int#168#36: ALOAD_D T65, T64, R33
+jnt.scimark2.Random#initialize(int)#void#2#1: PUTFIELD_I R0, .seed, R1
+jnt.scimark2.LU#solve(double[][],int[],double[])#void#127#14: MOVE_D R51, T50
+jnt.scimark2.LU#solve(double[][],int[],double[])#void#45#38: ALOAD_D T31, R2, R24
+jnt.scimark2.LU#solve(double[][],int[],double[])#void#126#13: ALOAD_D T50, R2, R49
+jnt.scimark2.LU#factor(double[][],int[])#int#239#53: ALOAD_D T82, R18, R33
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#55#14: ASTORE_D T8, T18, R17
+jnt.scimark2.LU#solve(double[][],int[],double[])#void#78#55: MOVE_D R40, T39
+jnt.scimark2.kernel#CopyMatrix(double[][],double[][])#void#79#22: ASTORE_D T30, R8, R29
+jnt.scimark2.LU#factor(double[][],int[])#int#266#63: ALOAD_D T25, R19, R85
+jnt.scimark2.LU#solve(double[][],int[],double[])#void#77#54: SUB_D T39, R34, T38
+jnt.scimark2.LU#solve(double[][],int[],double[])#void#178#21: ASTORE_D T64, R2, R49
+jnt.scimark2.kernel#CopyMatrix(double[][],double[][])#void#120#33: ALOAD_D T39, R9, T38
+jnt.scimark2.LU#factor(double[][],int[])#int#195#74: ASTORE_D T74, T72, T71
+jnt.scimark2.kernel#measureLU(int,double,jnt.scimark2.Random)#double#155#35: ALOAD_D T17, R12, R38
+jnt.scimark2.LU#factor(double[][],int[])#int#35#13: ALOAD_D T36, T35, R33
+jnt.scimark2.LU#solve(double[][],int[],double[])#void#150#25: ALOAD_D T57, T56, R54
+jnt.scimark2.LU#factor(double[][],int[])#int#169#37: DIV_D T66, DConst: 1.0, T65
+jnt.scimark2.Random#<init>(int)#void#101#33: PUTFIELD_D R0, .right, DConst: 1.0
+7
+jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#7#4: NEWARRAY T3, R2, double[]#ARRAY#double[]#ARRAY
+jnt.scimark2.commandline#main(java.lang.String[])#void#31#8: NEW T16, jnt.scimark2.Random#right#D#jnt.scimark2.Random
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#18#17: NEWARRAY T9, R1, double[]#ARRAY#double[]#ARRAY
+jnt.scimark2.kernel#measureLU(int,double,jnt.scimark2.Random)#double#31#49: NEWARRAY T23, R0, double[]#ARRAY#double[]#ARRAY
+jnt.scimark2.commandline#main(java.lang.String[])#void#31#8: NEW T16, jnt.scimark2.Random#seed#I#jnt.scimark2.Random
+jnt.scimark2.kernel#matvec(double[][],double[])#double[]#7#4: NEWARRAY T4, R3, double[]#ARRAY#double[]#ARRAY
+jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#1#1: NEWARRAY T2, R0, double[]#ARRAY#double[]#ARRAY

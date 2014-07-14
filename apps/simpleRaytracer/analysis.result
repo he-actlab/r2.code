@@ -1,0 +1,108 @@
+102
+Plane#init(java.lang.String[])#void#358#173: MOVE_F R129, T128
+Plane#init(java.lang.String[])#void#221#130: DIV_F T94, R84, R30
+Plane#init(java.lang.String[])#void#105#37: DIV_I T62, T61, IConst: 2
+Plane#init(java.lang.String[])#void#215#129: MOVE_F R93, T92
+Plane#init(java.lang.String[])#void#364#174: SUB_F T130, R125, R34
+Plane#init(java.lang.String[])#void#344#169: MOVE_F R125, FConst: 0.0
+Plane#texture(float,float,float)#int#98#31: MOVE_I R34, T33
+Plane#texture(float,float,float)#int#54#33: MOVE_I R24, IConst: -65536
+Plane#init(java.lang.String[])#void#194#122: ADD_F T87, T85, T86
+Plane#init(java.lang.String[])#void#75#26: INT_2FLOAT T56, T55
+Plane#init(java.lang.String[])#void#84#30: INT_2FLOAT T59, T58
+Plane#init(java.lang.String[])#void#106#38: INT_2FLOAT T63, T62
+Plane#init(java.lang.String[])#void#127#46: PUTFIELD_F R0, .k, FConst: -1.0
+Plane#init(java.lang.String[])#void#378#178: ADD_F T134, T132, T133
+Plane#texture(float,float,float)#int#25#8: FLOAT_2INT T17, T16
+Plane#init(java.lang.String[])#void#414#191: ADD_F T145, T143, T144
+Plane#init(java.lang.String[])#void#101#36: GETFIELD_I T61, R0, .w
+Plane#init(java.lang.String[])#void#119#44: MOVE_F R19, FConst: 0.0
+Plane#texture(float,float,float)#int#3#1: MOVE_I R12, IConst: 255
+Plane#init(java.lang.String[])#void#94#34: MOVE_F R15, FConst: 0.0
+Plane#init(java.lang.String[])#void#357#172: SUB_F T128, R124, R33
+Plane#init(java.lang.String[])#void#116#43: MOVE_F R18, T66
+Plane#texture(float,float,float)#int#21#6: GETFIELD_F T8, R0, .lcoff
+Plane#init(java.lang.String[])#void#182#119: MOVE_F R84, FConst: -1.0
+Plane#init(java.lang.String[])#void#199#123: MUL_F T88, R84, R84
+Plane#init(java.lang.String[])#void#399#187: DIV_F T142, FConst: 1.0, T141
+Plane#texture(float,float,float)#int#30#10: MOVE_I R20, R19
+Plane#texture(float,float,float)#int#26#9: MOVE_I R18, T17
+Plane#init(java.lang.String[])#void#91#33: MOVE_F R14, FConst: 1.0
+Plane#init(java.lang.String[])#void#341#168: MOVE_F R124, R11
+Plane#init(java.lang.String[])#void#384#180: ADD_F T136, T134, T135
+Plane#init(java.lang.String[])#void#383#179: MUL_F T135, R131, R131
+Plane#init(java.lang.String[])#void#313#159: ADD_F T118, R19, T117
+Plane#init(java.lang.String[])#void#322#161: MUL_F T119, R112, R97
+Plane#init(java.lang.String[])#void#351#171: MOVE_F R127, T126
+Plane#texture(float,float,float)#int#9#3: MOVE_I R14, IConst: 0
+Plane#init(java.lang.String[])#void#413#190: MUL_F T144, R129, R14
+Plane#texture(float,float,float)#int#111#29: MOVE_I R37, T36
+Plane#init(java.lang.String[])#void#377#177: MUL_F T133, R129, R129
+Plane#init(java.lang.String[])#void#408#189: MUL_F T143, R127, R13
+Plane#init(java.lang.String[])#void#208#127: MOVE_F R91, T90
+Plane#init(java.lang.String[])#void#323#162: ADD_F T120, R99, T119
+Plane#texture(float,float,float)#int#77#22: REM_I T29, T28, IConst: 2
+Plane#init(java.lang.String[])#void#177#117: DIV_F T82, T81, R18
+Plane#init(java.lang.String[])#void#420#193: ADD_F T147, T145, T146
+Plane#init(java.lang.String[])#void#160#111: INT_2FLOAT T76, R72
+Plane#init(java.lang.String[])#void#85#31: MOVE_F R60, T59
+Plane#init(java.lang.String[])#void#396#186: GETFIELD_F T141, R0, .sng
+Plane#texture(float,float,float)#int#109#27: SHL_I T35, R19, IConst: 16
+Plane#init(java.lang.String[])#void#188#120: MUL_F T85, R79, R79
+Plane#init(java.lang.String[])#void#332#164: MUL_F T121, R112, R95
+Plane#init(java.lang.String[])#void#98#35: MOVE_I R16, IConst: -16777216
+Plane#init(java.lang.String[])#void#337#167: MOVE_F R123, FConst: 0.0
+Plane#init(java.lang.String[])#void#278#145: MOVE_F R109, T108
+Plane#init(java.lang.String[])#void#200#124: ADD_F T89, T87, T88
+Plane#init(java.lang.String[])#void#214#128: DIV_F T92, R83, R30
+Plane#init(java.lang.String[])#void#425#196: MUL_F T150, T147, T149
+Plane#init(java.lang.String[])#void#163#112: SUB_F T77, T76, R17
+Plane#init(java.lang.String[])#void#263#146: MOVE_F R105, FConst: -1.0
+Plane#init(java.lang.String[])#void#333#165: ADD_F T122, R20, T121
+Plane#init(java.lang.String[])#void#174#116: SUB_F T81, R18, T80
+Plane#init(java.lang.String[])#void#173#115: INT_2FLOAT T80, R68
+Plane#init(java.lang.String[])#void#122#45: MOVE_F R20, FConst: 0.0
+Plane#texture(float,float,float)#int#110#28: OR_I T36, IConst: -16777216, T35
+Plane#init(java.lang.String[])#void#390#184: PUTFIELD_F R0, .sng, T139
+Plane#init(java.lang.String[])#void#277#144: DIV_F T108, T107, R97
+Plane#init(java.lang.String[])#void#178#118: MOVE_F R83, T82
+Plane#init(java.lang.String[])#void#400#188: PUTFIELD_F T140, .sng, T142
+Plane#init(java.lang.String[])#void#314#160: MOVE_F R32, T118
+Plane#init(java.lang.String[])#void#372#176: MUL_F T132, R127, R127
+Plane#init(java.lang.String[])#void#419#192: MUL_F T146, R131, R15
+Plane#texture(float,float,float)#int#75#21: ADD_I T28, T26, T27
+Plane#init(java.lang.String[])#void#110#40: GETFIELD_I T64, R0, .h
+Plane#init(java.lang.String[])#void#422#195: GETFIELD_F T149, R0, .sng
+Plane#init(java.lang.String[])#void#114#41: DIV_I T65, T64, IConst: 2
+Plane#init(java.lang.String[])#void#324#163: MOVE_F R33, T120
+Plane#init(java.lang.String[])#void#455#157: ASTORE_I R16, T153, R31
+Plane#init(java.lang.String[])#void#365#175: MOVE_F R131, T130
+Plane#init(java.lang.String[])#void#201#125: MOVE_F R30, T89
+Plane#init(java.lang.String[])#void#350#170: SUB_F T126, R123, R32
+Plane#init(java.lang.String[])#void#88#32: MOVE_F R13, FConst: 0.0
+Plane#init(java.lang.String[])#void#167#114: MOVE_F R79, T78
+Plane#init(java.lang.String[])#void#334#166: MOVE_F R34, T122
+Plane#init(java.lang.String[])#void#389#183: DOUBLE_2FLOAT T139, T138
+Plane#init(java.lang.String[])#void#269#142: GETFIELD_F T106, R0, .k
+Plane#init(java.lang.String[])#void#222#131: MOVE_F R95, T94
+Plane#init(java.lang.String[])#void#76#27: MOVE_F R11, T56
+Plane#texture(float,float,float)#int#24#7: MUL_F T16, FConst: 255.0, T8
+Plane#init(java.lang.String[])#void#156#110: MOVE_F R75, FConst: -1.0
+Plane#init(java.lang.String[])#void#107#39: MOVE_F R17, T63
+Plane#init(java.lang.String[])#void#426#197: PUTFIELD_F T148, .lcoff, T150
+Plane#texture(float,float,float)#int#6#2: MOVE_I R13, IConst: 0
+Plane#texture(float,float,float)#int#78#23: MOVE_I R30, T29
+Plane#init(java.lang.String[])#void#444#200: ASTORE_I T152, T151, R31
+Plane#init(java.lang.String[])#void#193#121: MUL_F T86, R83, R83
+Plane#init(java.lang.String[])#void#207#126: DIV_F T90, R79, R30
+Plane#init(java.lang.String[])#void#166#113: DIV_F T78, T77, R17
+Plane#init(java.lang.String[])#void#312#158: MUL_F T117, R112, R91
+Plane#texture(float,float,float)#int#97#30: OR_I T33, IConst: -16777216, R20
+Plane#init(java.lang.String[])#void#274#143: SUB_F T107, T106, R99
+Plane#init(java.lang.String[])#void#115#42: INT_2FLOAT T66, T65
+Plane#init(java.lang.String[])#void#385#181: FLOAT_2DOUBLE T137, T136
+4
+Plane#init(java.lang.String[])#void#64#22: NEWARRAY T53, T52, int[]#ARRAY#int[]#ARRAY
+Plane#main(java.lang.String[])#void#3#2: NEW T1, Plane#k#F#Plane
+Plane#main(java.lang.String[])#void#3#2: NEW T1, Plane#lcoff#F#Plane
+Plane#main(java.lang.String[])#void#3#2: NEW T1, Plane#sng#F#Plane

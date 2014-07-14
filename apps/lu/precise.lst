@@ -1,0 +1,3 @@
+1 write:(I)V@java.io.Writer
+1 print:(Ljava/lang/String;)V@java.io.PrintStream
+1 println:(Ljava/lang/String;)V@java.io.PrintStream

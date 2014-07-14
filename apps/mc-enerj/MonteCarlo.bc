@@ -1,0 +1,275 @@
+Compiled from "MonteCarlo.java"
+public class jnt.scimark2.MonteCarlo {
+  public jnt.scimark2.MonteCarlo();
+    Code:
+       0: aload_0       
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: getstatic     #2                  // Field enerj/rt/PrecisionRuntimeRoot.impl:Lenerj/rt/PrecisionRuntime;
+       7: aload_0       
+       8: invokeinterface #3,  2            // InterfaceMethod enerj/rt/PrecisionRuntime.enterConstructor:(Ljava/lang/Object;)Z
+      13: pop           
+      14: return        
+
+  public static final double integrate(int, int);
+    Code:
+       0: new           #4                  // class enerj/rt/Reference
+       3: dup           
+       4: iload_1       
+       5: invokestatic  #5                  // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+       8: iconst_0      
+       9: iconst_1      
+      10: invokespecial #6                  // Method enerj/rt/Reference."<init>":(Ljava/lang/Object;ZZ)V
+      13: astore_2      
+      14: new           #4                  // class enerj/rt/Reference
+      17: dup           
+      18: iload_0       
+      19: invokestatic  #5                  // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+      22: iconst_0      
+      23: iconst_1      
+      24: invokespecial #6                  // Method enerj/rt/Reference."<init>":(Ljava/lang/Object;ZZ)V
+      27: astore_3      
+      28: getstatic     #2                  // Field enerj/rt/PrecisionRuntimeRoot.impl:Lenerj/rt/PrecisionRuntime;
+      31: getstatic     #2                  // Field enerj/rt/PrecisionRuntimeRoot.impl:Lenerj/rt/PrecisionRuntime;
+      34: getstatic     #2                  // Field enerj/rt/PrecisionRuntimeRoot.impl:Lenerj/rt/PrecisionRuntime;
+      37: invokestatic  #7                  // Method java/lang/Thread.currentThread:()Ljava/lang/Thread;
+      40: iconst_0      
+      41: bipush        69
+      43: iconst_0      
+      44: invokeinterface #8,  5            // InterfaceMethod enerj/rt/PrecisionRuntime.beforeCreation:(Ljava/lang/Object;ZII)Z
+      49: new           #9                  // class jnt/scimark2/Random
+      52: dup           
+      53: getstatic     #2                  // Field enerj/rt/PrecisionRuntimeRoot.impl:Lenerj/rt/PrecisionRuntime;
+      56: aload_2       
+      57: iconst_0      
+      58: invokeinterface #10,  3           // InterfaceMethod enerj/rt/PrecisionRuntime.loadLocal:(Lenerj/rt/Reference;Z)Ljava/lang/Object;
+      63: checkcast     #11                 // class java/lang/Integer
+      66: invokevirtual #12                 // Method java/lang/Integer.intValue:()I
+      69: invokespecial #13                 // Method jnt/scimark2/Random."<init>":(I)V
+      72: invokestatic  #7                  // Method java/lang/Thread.currentThread:()Ljava/lang/Thread;
+      75: invokeinterface #14,  4           // InterfaceMethod enerj/rt/PrecisionRuntime.wrappedNew:(ZLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+      80: iconst_0      
+      81: getstatic     #15                 // Field enerj/rt/PrecisionRuntime$MemKind.VARIABLE:Lenerj/rt/PrecisionRuntime$MemKind;
+      84: invokeinterface #16,  4           // InterfaceMethod enerj/rt/PrecisionRuntime.storeValue:(Ljava/lang/Object;ZLenerj/rt/PrecisionRuntime$MemKind;)Ljava/lang/Object;
+      89: checkcast     #9                  // class jnt/scimark2/Random
+      92: astore        4
+      94: new           #4                  // class enerj/rt/Reference
+      97: dup           
+      98: aload         4
+     100: iconst_0      
+     101: iconst_0      
+     102: invokespecial #6                  // Method enerj/rt/Reference."<init>":(Ljava/lang/Object;ZZ)V
+     105: astore        5
+     107: getstatic     #2                  // Field enerj/rt/PrecisionRuntimeRoot.impl:Lenerj/rt/PrecisionRuntime;
+     110: iconst_0      
+     111: invokestatic  #5                  // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+     114: iconst_0      
+     115: getstatic     #15                 // Field enerj/rt/PrecisionRuntime$MemKind.VARIABLE:Lenerj/rt/PrecisionRuntime$MemKind;
+     118: invokeinterface #16,  4           // InterfaceMethod enerj/rt/PrecisionRuntime.storeValue:(Ljava/lang/Object;ZLenerj/rt/PrecisionRuntime$MemKind;)Ljava/lang/Object;
+     123: checkcast     #11                 // class java/lang/Integer
+     126: invokevirtual #12                 // Method java/lang/Integer.intValue:()I
+     129: istore        6
+     131: new           #4                  // class enerj/rt/Reference
+     134: dup           
+     135: iload         6
+     137: invokestatic  #5                  // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+     140: iconst_0      
+     141: iconst_1      
+     142: invokespecial #6                  // Method enerj/rt/Reference."<init>":(Ljava/lang/Object;ZZ)V
+     145: astore        7
+     147: getstatic     #2                  // Field enerj/rt/PrecisionRuntimeRoot.impl:Lenerj/rt/PrecisionRuntime;
+     150: iconst_0      
+     151: invokestatic  #5                  // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+     154: iconst_0      
+     155: getstatic     #15                 // Field enerj/rt/PrecisionRuntime$MemKind.VARIABLE:Lenerj/rt/PrecisionRuntime$MemKind;
+     158: invokeinterface #16,  4           // InterfaceMethod enerj/rt/PrecisionRuntime.storeValue:(Ljava/lang/Object;ZLenerj/rt/PrecisionRuntime$MemKind;)Ljava/lang/Object;
+     163: checkcast     #11                 // class java/lang/Integer
+     166: invokevirtual #12                 // Method java/lang/Integer.intValue:()I
+     169: istore        8
+     171: new           #4                  // class enerj/rt/Reference
+     174: dup           
+     175: iload         8
+     177: invokestatic  #5                  // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+     180: iconst_0      
+     181: iconst_1      
+     182: invokespecial #6                  // Method enerj/rt/Reference."<init>":(Ljava/lang/Object;ZZ)V
+     185: astore        9
+     187: getstatic     #2                  // Field enerj/rt/PrecisionRuntimeRoot.impl:Lenerj/rt/PrecisionRuntime;
+     190: getstatic     #2                  // Field enerj/rt/PrecisionRuntimeRoot.impl:Lenerj/rt/PrecisionRuntime;
+     193: aload         9
+     195: iconst_0      
+     196: invokeinterface #10,  3           // InterfaceMethod enerj/rt/PrecisionRuntime.loadLocal:(Lenerj/rt/Reference;Z)Ljava/lang/Object;
+     201: checkcast     #11                 // class java/lang/Integer
+     204: invokevirtual #12                 // Method java/lang/Integer.intValue:()I
+     207: getstatic     #2                  // Field enerj/rt/PrecisionRuntimeRoot.impl:Lenerj/rt/PrecisionRuntime;
+     210: aload_3       
+     211: iconst_0      
+     212: invokeinterface #10,  3           // InterfaceMethod enerj/rt/PrecisionRuntime.loadLocal:(Lenerj/rt/Reference;Z)Ljava/lang/Object;
+     217: checkcast     #11                 // class java/lang/Integer
+     220: invokevirtual #12                 // Method java/lang/Integer.intValue:()I
+     223: if_icmpge     230
+     226: iconst_1      
+     227: goto          231
+     230: iconst_0      
+     231: invokestatic  #17                 // Method java/lang/Boolean.valueOf:(Z)Ljava/lang/Boolean;
+     234: invokeinterface #18,  2           // InterfaceMethod enerj/rt/PrecisionRuntime.countLogicalOp:(Ljava/lang/Object;)Ljava/lang/Object;
+     239: checkcast     #19                 // class java/lang/Boolean
+     242: invokevirtual #20                 // Method java/lang/Boolean.booleanValue:()Z
+     245: ifeq          582
+     248: getstatic     #2                  // Field enerj/rt/PrecisionRuntimeRoot.impl:Lenerj/rt/PrecisionRuntime;
+     251: getstatic     #2                  // Field enerj/rt/PrecisionRuntimeRoot.impl:Lenerj/rt/PrecisionRuntime;
+     254: aload         5
+     256: iconst_0      
+     257: invokeinterface #10,  3           // InterfaceMethod enerj/rt/PrecisionRuntime.loadLocal:(Lenerj/rt/Reference;Z)Ljava/lang/Object;
+     262: checkcast     #9                  // class jnt/scimark2/Random
+     265: invokevirtual #21                 // Method jnt/scimark2/Random.nextDouble:()D
+     268: invokestatic  #22                 // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+     271: iconst_1      
+     272: getstatic     #15                 // Field enerj/rt/PrecisionRuntime$MemKind.VARIABLE:Lenerj/rt/PrecisionRuntime$MemKind;
+     275: invokeinterface #16,  4           // InterfaceMethod enerj/rt/PrecisionRuntime.storeValue:(Ljava/lang/Object;ZLenerj/rt/PrecisionRuntime$MemKind;)Ljava/lang/Object;
+     280: checkcast     #23                 // class java/lang/Double
+     283: invokevirtual #24                 // Method java/lang/Double.doubleValue:()D
+     286: dstore        10
+     288: new           #4                  // class enerj/rt/Reference
+     291: dup           
+     292: dload         10
+     294: invokestatic  #22                 // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+     297: iconst_1      
+     298: iconst_1      
+     299: invokespecial #6                  // Method enerj/rt/Reference."<init>":(Ljava/lang/Object;ZZ)V
+     302: astore        12
+     304: getstatic     #2                  // Field enerj/rt/PrecisionRuntimeRoot.impl:Lenerj/rt/PrecisionRuntime;
+     307: getstatic     #2                  // Field enerj/rt/PrecisionRuntimeRoot.impl:Lenerj/rt/PrecisionRuntime;
+     310: aload         5
+     312: iconst_0      
+     313: invokeinterface #10,  3           // InterfaceMethod enerj/rt/PrecisionRuntime.loadLocal:(Lenerj/rt/Reference;Z)Ljava/lang/Object;
+     318: checkcast     #9                  // class jnt/scimark2/Random
+     321: invokevirtual #21                 // Method jnt/scimark2/Random.nextDouble:()D
+     324: invokestatic  #22                 // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+     327: iconst_1      
+     328: getstatic     #15                 // Field enerj/rt/PrecisionRuntime$MemKind.VARIABLE:Lenerj/rt/PrecisionRuntime$MemKind;
+     331: invokeinterface #16,  4           // InterfaceMethod enerj/rt/PrecisionRuntime.storeValue:(Ljava/lang/Object;ZLenerj/rt/PrecisionRuntime$MemKind;)Ljava/lang/Object;
+     336: checkcast     #23                 // class java/lang/Double
+     339: invokevirtual #24                 // Method java/lang/Double.doubleValue:()D
+     342: dstore        13
+     344: new           #4                  // class enerj/rt/Reference
+     347: dup           
+     348: dload         13
+     350: invokestatic  #22                 // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+     353: iconst_1      
+     354: iconst_1      
+     355: invokespecial #6                  // Method enerj/rt/Reference."<init>":(Ljava/lang/Object;ZZ)V
+     358: astore        15
+     360: getstatic     #2                  // Field enerj/rt/PrecisionRuntimeRoot.impl:Lenerj/rt/PrecisionRuntime;
+     363: getstatic     #2                  // Field enerj/rt/PrecisionRuntimeRoot.impl:Lenerj/rt/PrecisionRuntime;
+     366: getstatic     #2                  // Field enerj/rt/PrecisionRuntimeRoot.impl:Lenerj/rt/PrecisionRuntime;
+     369: getstatic     #2                  // Field enerj/rt/PrecisionRuntimeRoot.impl:Lenerj/rt/PrecisionRuntime;
+     372: aload         12
+     374: iconst_1      
+     375: invokeinterface #10,  3           // InterfaceMethod enerj/rt/PrecisionRuntime.loadLocal:(Lenerj/rt/Reference;Z)Ljava/lang/Object;
+     380: checkcast     #23                 // class java/lang/Double
+     383: invokevirtual #24                 // Method java/lang/Double.doubleValue:()D
+     386: invokestatic  #22                 // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+     389: getstatic     #2                  // Field enerj/rt/PrecisionRuntimeRoot.impl:Lenerj/rt/PrecisionRuntime;
+     392: aload         12
+     394: iconst_1      
+     395: invokeinterface #10,  3           // InterfaceMethod enerj/rt/PrecisionRuntime.loadLocal:(Lenerj/rt/Reference;Z)Ljava/lang/Object;
+     400: checkcast     #23                 // class java/lang/Double
+     403: invokevirtual #24                 // Method java/lang/Double.doubleValue:()D
+     406: invokestatic  #22                 // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+     409: getstatic     #25                 // Field enerj/rt/PrecisionRuntime$ArithOperator.MULTIPLY:Lenerj/rt/PrecisionRuntime$ArithOperator;
+     412: getstatic     #26                 // Field enerj/rt/PrecisionRuntime$NumberKind.DOUBLE:Lenerj/rt/PrecisionRuntime$NumberKind;
+     415: iconst_1      
+     416: invokeinterface #27,  6           // InterfaceMethod enerj/rt/PrecisionRuntime.binaryOp:(Ljava/lang/Number;Ljava/lang/Number;Lenerj/rt/PrecisionRuntime$ArithOperator;Lenerj/rt/PrecisionRuntime$NumberKind;Z)Ljava/lang/Number;
+     421: invokevirtual #28                 // Method java/lang/Number.doubleValue:()D
+     424: invokestatic  #22                 // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+     427: getstatic     #2                  // Field enerj/rt/PrecisionRuntimeRoot.impl:Lenerj/rt/PrecisionRuntime;
+     430: getstatic     #2                  // Field enerj/rt/PrecisionRuntimeRoot.impl:Lenerj/rt/PrecisionRuntime;
+     433: aload         15
+     435: iconst_1      
+     436: invokeinterface #10,  3           // InterfaceMethod enerj/rt/PrecisionRuntime.loadLocal:(Lenerj/rt/Reference;Z)Ljava/lang/Object;
+     441: checkcast     #23                 // class java/lang/Double
+     444: invokevirtual #24                 // Method java/lang/Double.doubleValue:()D
+     447: invokestatic  #22                 // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+     450: getstatic     #2                  // Field enerj/rt/PrecisionRuntimeRoot.impl:Lenerj/rt/PrecisionRuntime;
+     453: aload         15
+     455: iconst_1      
+     456: invokeinterface #10,  3           // InterfaceMethod enerj/rt/PrecisionRuntime.loadLocal:(Lenerj/rt/Reference;Z)Ljava/lang/Object;
+     461: checkcast     #23                 // class java/lang/Double
+     464: invokevirtual #24                 // Method java/lang/Double.doubleValue:()D
+     467: invokestatic  #22                 // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+     470: getstatic     #25                 // Field enerj/rt/PrecisionRuntime$ArithOperator.MULTIPLY:Lenerj/rt/PrecisionRuntime$ArithOperator;
+     473: getstatic     #26                 // Field enerj/rt/PrecisionRuntime$NumberKind.DOUBLE:Lenerj/rt/PrecisionRuntime$NumberKind;
+     476: iconst_1      
+     477: invokeinterface #27,  6           // InterfaceMethod enerj/rt/PrecisionRuntime.binaryOp:(Ljava/lang/Number;Ljava/lang/Number;Lenerj/rt/PrecisionRuntime$ArithOperator;Lenerj/rt/PrecisionRuntime$NumberKind;Z)Ljava/lang/Number;
+     482: invokevirtual #28                 // Method java/lang/Number.doubleValue:()D
+     485: invokestatic  #22                 // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+     488: getstatic     #29                 // Field enerj/rt/PrecisionRuntime$ArithOperator.PLUS:Lenerj/rt/PrecisionRuntime$ArithOperator;
+     491: getstatic     #26                 // Field enerj/rt/PrecisionRuntime$NumberKind.DOUBLE:Lenerj/rt/PrecisionRuntime$NumberKind;
+     494: iconst_1      
+     495: invokeinterface #27,  6           // InterfaceMethod enerj/rt/PrecisionRuntime.binaryOp:(Ljava/lang/Number;Ljava/lang/Number;Lenerj/rt/PrecisionRuntime$ArithOperator;Lenerj/rt/PrecisionRuntime$NumberKind;Z)Ljava/lang/Number;
+     500: invokevirtual #28                 // Method java/lang/Number.doubleValue:()D
+     503: dconst_1      
+     504: dcmpg         
+     505: ifgt          512
+     508: iconst_1      
+     509: goto          513
+     512: iconst_0      
+     513: invokestatic  #17                 // Method java/lang/Boolean.valueOf:(Z)Ljava/lang/Boolean;
+     516: invokeinterface #18,  2           // InterfaceMethod enerj/rt/PrecisionRuntime.countLogicalOp:(Ljava/lang/Object;)Ljava/lang/Object;
+     521: checkcast     #19                 // class java/lang/Boolean
+     524: invokevirtual #20                 // Method java/lang/Boolean.booleanValue:()Z
+     527: invokestatic  #30                 // Method enerj/lang/Endorsements.endorse:(Z)Z
+     530: ifeq          556
+     533: getstatic     #2                  // Field enerj/rt/PrecisionRuntimeRoot.impl:Lenerj/rt/PrecisionRuntime;
+     536: aload         7
+     538: getstatic     #29                 // Field enerj/rt/PrecisionRuntime$ArithOperator.PLUS:Lenerj/rt/PrecisionRuntime$ArithOperator;
+     541: iconst_1      
+     542: invokestatic  #5                  // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+     545: iconst_1      
+     546: getstatic     #31                 // Field enerj/rt/PrecisionRuntime$NumberKind.INT:Lenerj/rt/PrecisionRuntime$NumberKind;
+     549: iconst_0      
+     550: invokeinterface #32,  7           // InterfaceMethod enerj/rt/PrecisionRuntime.assignopLocal:(Lenerj/rt/Reference;Lenerj/rt/PrecisionRuntime$ArithOperator;Ljava/lang/Number;ZLenerj/rt/PrecisionRuntime$NumberKind;Z)Ljava/lang/Number;
+     555: pop           
+     556: getstatic     #2                  // Field enerj/rt/PrecisionRuntimeRoot.impl:Lenerj/rt/PrecisionRuntime;
+     559: aload         9
+     561: getstatic     #29                 // Field enerj/rt/PrecisionRuntime$ArithOperator.PLUS:Lenerj/rt/PrecisionRuntime$ArithOperator;
+     564: iconst_1      
+     565: invokestatic  #5                  // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+     568: iconst_1      
+     569: getstatic     #31                 // Field enerj/rt/PrecisionRuntime$NumberKind.INT:Lenerj/rt/PrecisionRuntime$NumberKind;
+     572: iconst_0      
+     573: invokeinterface #32,  7           // InterfaceMethod enerj/rt/PrecisionRuntime.assignopLocal:(Lenerj/rt/Reference;Lenerj/rt/PrecisionRuntime$ArithOperator;Ljava/lang/Number;ZLenerj/rt/PrecisionRuntime$NumberKind;Z)Ljava/lang/Number;
+     578: pop           
+     579: goto          187
+     582: getstatic     #2                  // Field enerj/rt/PrecisionRuntimeRoot.impl:Lenerj/rt/PrecisionRuntime;
+     585: getstatic     #2                  // Field enerj/rt/PrecisionRuntimeRoot.impl:Lenerj/rt/PrecisionRuntime;
+     588: getstatic     #2                  // Field enerj/rt/PrecisionRuntimeRoot.impl:Lenerj/rt/PrecisionRuntime;
+     591: aload         7
+     593: iconst_0      
+     594: invokeinterface #10,  3           // InterfaceMethod enerj/rt/PrecisionRuntime.loadLocal:(Lenerj/rt/Reference;Z)Ljava/lang/Object;
+     599: checkcast     #11                 // class java/lang/Integer
+     602: invokevirtual #12                 // Method java/lang/Integer.intValue:()I
+     605: i2d           
+     606: invokestatic  #22                 // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+     609: getstatic     #2                  // Field enerj/rt/PrecisionRuntimeRoot.impl:Lenerj/rt/PrecisionRuntime;
+     612: aload_3       
+     613: iconst_0      
+     614: invokeinterface #10,  3           // InterfaceMethod enerj/rt/PrecisionRuntime.loadLocal:(Lenerj/rt/Reference;Z)Ljava/lang/Object;
+     619: checkcast     #11                 // class java/lang/Integer
+     622: invokevirtual #12                 // Method java/lang/Integer.intValue:()I
+     625: invokestatic  #5                  // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+     628: getstatic     #33                 // Field enerj/rt/PrecisionRuntime$ArithOperator.DIVIDE:Lenerj/rt/PrecisionRuntime$ArithOperator;
+     631: getstatic     #26                 // Field enerj/rt/PrecisionRuntime$NumberKind.DOUBLE:Lenerj/rt/PrecisionRuntime$NumberKind;
+     634: iconst_0      
+     635: invokeinterface #27,  6           // InterfaceMethod enerj/rt/PrecisionRuntime.binaryOp:(Ljava/lang/Number;Ljava/lang/Number;Lenerj/rt/PrecisionRuntime$ArithOperator;Lenerj/rt/PrecisionRuntime$NumberKind;Z)Ljava/lang/Number;
+     640: invokevirtual #28                 // Method java/lang/Number.doubleValue:()D
+     643: invokestatic  #22                 // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+     646: ldc2_w        #34                 // double 4.0d
+     649: invokestatic  #22                 // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+     652: getstatic     #25                 // Field enerj/rt/PrecisionRuntime$ArithOperator.MULTIPLY:Lenerj/rt/PrecisionRuntime$ArithOperator;
+     655: getstatic     #26                 // Field enerj/rt/PrecisionRuntime$NumberKind.DOUBLE:Lenerj/rt/PrecisionRuntime$NumberKind;
+     658: iconst_0      
+     659: invokeinterface #27,  6           // InterfaceMethod enerj/rt/PrecisionRuntime.binaryOp:(Ljava/lang/Number;Ljava/lang/Number;Lenerj/rt/PrecisionRuntime$ArithOperator;Lenerj/rt/PrecisionRuntime$NumberKind;Z)Ljava/lang/Number;
+     664: invokevirtual #28                 // Method java/lang/Number.doubleValue:()D
+     667: dreturn       
+}

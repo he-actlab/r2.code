@@ -1,0 +1,279 @@
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2012.1.16)  22 JAN 2012 14:19
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**phase
+(./phase.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2009-06-19, ngerman-x-2009-06-19, afrikaans, ancientgreek, ibycus, arabi
+c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
+h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
+h, french, galician, german, ngerman, swissgerman, monogreek, greek, hungarian,
+ icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, marathi, or
+iya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, kurmanji,
+ lao, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk, pol
+ish, portuguese, romanian, russian, sanskrit, serbian, serbianc, slovak, sloven
+ian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, welsh, loaded
+.
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/preprint/fullpage.sty
+Package: fullpage 1999/02/23 1.1 (PWD)
+\FP@margin=\skip43
+)
+(/Users/eric/Library/texmf/tex/latex/html/html.sty
+Package: html 1996/12/22 v1.1 hypertext commands for latex2html (nd, hws, rrm)
+\c@lpart=\count87
+\c@lchapter=\count88
+\c@lsection=\count89
+\c@lsubsection=\count90
+\c@lsubsubsection=\count91
+\c@lparagraph=\count92
+\c@lsubparagraph=\count93
+\c@lequation=\count94
+\c@lsubsubparagraph=\count95
+\ptrfile=\write3
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip44
+\LTright=\skip45
+\LTpre=\skip46
+\LTpost=\skip47
+\LTchunksize=\count96
+\LTcapwidth=\dimen103
+\LT@head=\box26
+\LT@firsthead=\box27
+\LT@foot=\box28
+\LT@lastfoot=\box29
+\LT@cols=\count97
+\LT@rows=\count98
+\c@LT@tables=\count99
+\c@LT@chunks=\count100
+\LT@p@ftn=\toks14
+) (./phase.aux)
+\openout1 = `phase.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 16.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 16.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 16.
+ [1
+
+] (./phase.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 4.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 4.
+ [2] [3])
+\tf@toc=\write4
+\openout4 = `phase.toc'.
+
+ [4] [5] [6] [7] [8] [9] [10] [11] [12] [13]
+Overfull \hbox (5.74576pt too wide) in paragraph at lines 1358--1360
+[]\OT1/cmr/m/n/10 When this op-tion is set to true, Spark treats ref-er-ences t
+o EMP-TY-SET, EMP-TYMAP, and EMPTYLIST
+ []
+
+
+Overfull \hbox (68.6348pt too wide) in paragraph at lines 1358--1360
+\OT1/cmr/m/n/10 as al-lo-ca-tion sites for Hash-Set, HashMap and LinkedList ob-
+jects re-spec-tively, and ref-er-ences to Hashtable.emptyIterator
+ []
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 1457--1458
+
+ []
+
+
+Overfull \vbox (5.47264pt too high) has occurred while \output is active []
+
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 1515--1516
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1588--1589
+
+ []
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 1650--1651
+
+ []
+
+[17]
+Overfull \hbox (2.88301pt too wide) in paragraph at lines 1835--1836
+[]\OT1/cmr/m/n/10 (default value:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1915--1916
+
+ []
+
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 1950--1951
+
+ []
+
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 2086--2087
+
+ []
+
+
+Overfull \hbox (6.47932pt too wide) in paragraph at lines 2116--2117
+[]|\OT1/cmtt/m/n/10 cha-context-aot
+ []
+
+
+Overfull \hbox (11.72928pt too wide) in paragraph at lines 2124--2125
+[]|\OT1/cmtt/m/n/10 ofcg-context-aot
+ []
+
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 2213--2214
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2269--2270
+
+ []
+
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 2369--2370
+
+ []
+
+
+Overfull \hbox (1.22937pt too wide) in paragraph at lines 2411--2412
+[]|\OT1/cmtt/m/n/10 threadkobjsens
+ []
+
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 2599--2600
+
+ []
+
+[23] [24]
+Underfull \hbox (badness 10000) in paragraph at lines 2657--2658
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2724--2725
+
+ []
+
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 2780--2781
+
+ []
+
+[26] [27]
+Underfull \hbox (badness 10000) in paragraph at lines 3024--3025
+
+ []
+
+
+Overfull \hbox (1.22937pt too wide) in paragraph at lines 3027--3028
+[]|\OT1/cmtt/m/n/10 medium-grained
+ []
+
+
+Overfull \hbox (1.22937pt too wide) in paragraph at lines 3035--3036
+[]|\OT1/cmtt/m/n/10 coarse-grained
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3043--3044
+[]|\OT1/cmtt/m/n/10 single-static
+ []
+
+
+Overfull \hbox (1.22937pt too wide) in paragraph at lines 3050--3051
+[]|\OT1/cmtt/m/n/10 leave-original
+ []
+
+[28]
+Overfull \hbox (8.4669pt too wide) in paragraph at lines 3188--3192
+[]\OT1/cmr/m/n/10 Insert a check that, be-fore in-vok-ing the static copy of th
+e tar-get method, throws a \OT1/cmtt/m/n/10 NullPointerException
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3240--3241
+
+ []
+
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 3356--3357
+
+ []
+
+[30] [31]
+Overfull \hbox (4.75244pt too wide) in paragraph at lines 3592--3593
+[]\OT1/cmr/m/n/10 (default value: \OT1/cmtt/m/n/10 false\OT1/cmr/m/n/10 ) 
+ []
+
+
+Overfull \hbox (20.39122pt too wide) in paragraph at lines 3600--3601
+[]\OT1/cmr/m/n/10 (default value: \OT1/cmtt/m/n/10 false\OT1/cmr/m/n/10 ) 
+ []
+
+[32] [33] [34]
+Underfull \hbox (badness 10000) in paragraph at lines 4031--4032
+
+ []
+
+[35] [36] [37] [38] [39] [40]
+Underfull \hbox (badness 10000) in paragraph at lines 4950--4951
+
+ []
+
+[41] [42] [43] [44] [45] [46] [47] (./phase.aux) ) 
+Here is how much of TeX's memory you used:
+ 589 strings out of 493634
+ 6723 string characters out of 3143400
+ 61528 words of memory out of 3000000
+ 3946 multiletter control sequences out of 15000+200000
+ 8747 words of font info for 32 fonts, out of 3000000 for 9000
+ 831 hyphenation exceptions out of 8191
+ 23i,7n,19p,646b,305s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on phase.dvi (47 pages, 174856 bytes).

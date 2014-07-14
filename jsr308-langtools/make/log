@@ -1,0 +1,104 @@
+Buildfile: /Users/jspark/projects/expax.code/jsr308-langtools/make/build.xml
+
+clean:
+   [delete] Deleting directory /Users/jspark/projects/expax.code/jsr308-langtools/build
+   [delete] Deleting directory /Users/jspark/projects/expax.code/jsr308-langtools/dist
+
+-def-pcompile:
+    [mkdir] Created dir: /Users/jspark/projects/expax.code/jsr308-langtools/build/toolclasses
+    [javac] Compiling 2 source files to /Users/jspark/projects/expax.code/jsr308-langtools/build/toolclasses
+
+-def-build-classes:
+
+-def-build-bootstrap-classes:
+
+-def-build-jar:
+
+-def-build-bootstrap-jar:
+
+-def-check:
+
+-check-boot.java.home:
+
+-def-build-tool:
+
+-def-build-bootstrap-tool:
+
+build-bootstrap-javac:
+    [mkdir] Created dir: /Users/jspark/projects/expax.code/jsr308-langtools/build/bootstrap/gensrc
+    [mkdir] Created dir: /Users/jspark/projects/expax.code/jsr308-langtools/build/bootstrap/classes
+ [pcompile] Generating 7 resource files to /Users/jspark/projects/expax.code/jsr308-langtools/build/bootstrap/gensrc
+     [copy] Copying 1 file to /Users/jspark/projects/expax.code/jsr308-langtools/build/bootstrap/gensrc
+ [pcompile] Generating 1 resource files to /Users/jspark/projects/expax.code/jsr308-langtools/build/bootstrap/gensrc
+    [javac] Compiling 334 source files to /Users/jspark/projects/expax.code/jsr308-langtools/build/bootstrap/classes
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+     [copy] Copying 1 file to /Users/jspark/projects/expax.code/jsr308-langtools/build/bootstrap/classes
+    [mkdir] Created dir: /Users/jspark/projects/expax.code/jsr308-langtools/build/bootstrap/lib
+      [jar] Building jar: /Users/jspark/projects/expax.code/jsr308-langtools/build/bootstrap/lib/javac.jar
+    [mkdir] Created dir: /Users/jspark/projects/expax.code/jsr308-langtools/build/bootstrap/bin
+     [copy] Copying 1 file to /Users/jspark/projects/expax.code/jsr308-langtools/build/bootstrap/bin
+
+-def-genstubs:
+
+-create-import-jdk-stubs:
+
+build-classes-javac:
+    [mkdir] Created dir: /Users/jspark/projects/expax.code/jsr308-langtools/build/gensrc
+    [mkdir] Created dir: /Users/jspark/projects/expax.code/jsr308-langtools/build/classes
+ [pcompile] Generating 7 resource files to /Users/jspark/projects/expax.code/jsr308-langtools/build/gensrc
+     [copy] Copying 1 file to /Users/jspark/projects/expax.code/jsr308-langtools/build/gensrc
+ [pcompile] Generating 1 resource files to /Users/jspark/projects/expax.code/jsr308-langtools/build/gensrc
+    [javac] Compiling 334 source files to /Users/jspark/projects/expax.code/jsr308-langtools/build/classes
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+     [copy] Copying 1 file to /Users/jspark/projects/expax.code/jsr308-langtools/build/classes
+
+build-javac:
+    [mkdir] Created dir: /Users/jspark/projects/expax.code/jsr308-langtools/dist/lib
+      [jar] Building jar: /Users/jspark/projects/expax.code/jsr308-langtools/dist/lib/javac.jar
+    [mkdir] Created dir: /Users/jspark/projects/expax.code/jsr308-langtools/dist/bin
+     [copy] Copying 1 file to /Users/jspark/projects/expax.code/jsr308-langtools/dist/bin
+
+build-classes-javadoc:
+ [pcompile] Generating 3 resource files to /Users/jspark/projects/expax.code/jsr308-langtools/build/gensrc
+    [javac] Compiling 74 source files to /Users/jspark/projects/expax.code/jsr308-langtools/build/classes
+
+build-javadoc:
+      [jar] Building jar: /Users/jspark/projects/expax.code/jsr308-langtools/dist/lib/javadoc.jar
+     [copy] Copying 1 file to /Users/jspark/projects/expax.code/jsr308-langtools/dist/bin
+
+build-classes-doclets:
+ [pcompile] Generating 6 resource files to /Users/jspark/projects/expax.code/jsr308-langtools/build/gensrc
+    [javac] Compiling 142 source files to /Users/jspark/projects/expax.code/jsr308-langtools/build/classes
+     [copy] Copying 6 files to /Users/jspark/projects/expax.code/jsr308-langtools/build/classes
+
+build-doclets:
+      [jar] Building jar: /Users/jspark/projects/expax.code/jsr308-langtools/dist/lib/doclets.jar
+
+build-classes-javah:
+ [pcompile] Generating 3 resource files to /Users/jspark/projects/expax.code/jsr308-langtools/build/gensrc
+     [copy] Copying 1 file to /Users/jspark/projects/expax.code/jsr308-langtools/build/gensrc
+ [pcompile] Generating 1 resource files to /Users/jspark/projects/expax.code/jsr308-langtools/build/gensrc
+    [javac] Compiling 16 source files to /Users/jspark/projects/expax.code/jsr308-langtools/build/classes
+
+build-javah:
+      [jar] Building jar: /Users/jspark/projects/expax.code/jsr308-langtools/dist/lib/javah.jar
+     [copy] Copying 1 file to /Users/jspark/projects/expax.code/jsr308-langtools/dist/bin
+
+build-classes-javap:
+ [pcompile] Generating 1 resource files to /Users/jspark/projects/expax.code/jsr308-langtools/build/gensrc
+     [copy] Copying 1 file to /Users/jspark/projects/expax.code/jsr308-langtools/build/gensrc
+ [pcompile] Generating 1 resource files to /Users/jspark/projects/expax.code/jsr308-langtools/build/gensrc
+    [javac] Compiling 75 source files to /Users/jspark/projects/expax.code/jsr308-langtools/build/classes
+
+build-javap:
+      [jar] Building jar: /Users/jspark/projects/expax.code/jsr308-langtools/dist/lib/javap.jar
+     [copy] Copying 1 file to /Users/jspark/projects/expax.code/jsr308-langtools/dist/bin
+
+build-all-tools:
+
+clean-and-build-all-tools:
+
+BUILD SUCCESSFUL
+Total time: 24 seconds

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="jmeint">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/apps/jmeint/jmeint.jar!/" />
+      <root url="jar://$PROJECT_DIR$/apps/jmeint/new.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

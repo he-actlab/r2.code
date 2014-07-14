@@ -1,0 +1,18 @@
+#!/bin/sh
+
+if [ $JAVA_HOME ]
+then
+    javac=$JAVA_HOME/bin/javac
+else
+    javac=javac
+fi
+jsr308c="$javac -J-Xbootclasspath/p:$JSR308/checkers/binary/jsr308-all.jar"
+
+cfrtdir=`dirname $0`/..
+cfrtjar=$cfrtdir/build/cfrt.jar
+
+jxjar=$cfrtdir/build/jillexample.jar
+jxchecker=checkers.runtime.jillexample.ExampleChecker
+
+command="$jsr308c -Xbootclasspath/a:$cfrtjar:$jxjar -processorpath $cfrtjar:$jxjar -processor $jxchecker $*"
+exec $command
