@@ -1,0 +1,204 @@
+   [enerjc] *** ENERJ_APPROX(visitBinary): x * vec.x
+   [enerjc] *** ENERJ_APPROX(visitBinary): y * vec.y
+   [enerjc] *** ENERJ_APPROX(visitBinary): x * vec.x + y * vec.y
+   [enerjc] *** ENERJ_APPROX(visitBinary): z * vec.z
+   [enerjc] *** ENERJ_APPROX(visitBinary): x * vec.x + y * vec.y + z * vec.z
+   [enerjc] *** ENERJ_APPROX(visitBinary): y * otherZ
+   [enerjc] *** ENERJ_APPROX(visitBinary): z * otherY
+   [enerjc] *** ENERJ_APPROX(visitBinary): (y * otherZ) - (z * otherY)
+   [enerjc] *** ENERJ_APPROX(visitBinary): z * otherX
+   [enerjc] *** ENERJ_APPROX(visitBinary): x * otherZ
+   [enerjc] *** ENERJ_APPROX(visitBinary): (z * otherX) - (x * otherZ)
+   [enerjc] *** ENERJ_APPROX(visitBinary): x * otherY
+   [enerjc] *** ENERJ_APPROX(visitBinary): y * otherX
+   [enerjc] *** ENERJ_APPROX(visitBinary): (x * otherY) - (y * otherX)
+   [enerjc] *** ENERJ_APPROX(visitBinary): x * x
+   [enerjc] *** ENERJ_APPROX(visitBinary): y * y
+   [enerjc] *** ENERJ_APPROX(visitBinary): x * x + y * y
+   [enerjc] *** ENERJ_APPROX(visitBinary): z * z
+   [enerjc] *** ENERJ_APPROX(visitBinary): x * x + y * y + z * z
+   [enerjc] *** ENERJ_APPROX(visitBinary): x - v.x
+   [enerjc] *** ENERJ_APPROX(visitBinary): y - v.y
+   [enerjc] *** ENERJ_APPROX(visitBinary): z - v.z
+   [enerjc] *** ENERJ_APPROX(visitBinary): dx * dx
+   [enerjc] *** ENERJ_APPROX(visitBinary): dy * dy
+   [enerjc] *** ENERJ_APPROX(visitBinary): dx * dx + dy * dy
+   [enerjc] *** ENERJ_APPROX(visitBinary): dz * dz
+   [enerjc] *** ENERJ_APPROX(visitBinary): dx * dx + dy * dy + dz * dz
+   [enerjc] *** ENERJ_APPROX(visitBinary): x * scalar
+   [enerjc] *** ENERJ_APPROX(visitBinary): y * scalar
+   [enerjc] *** ENERJ_APPROX(visitBinary): z * scalar
+   [enerjc] *** ENERJ_APPROX(visitBinary): x * scalar
+   [enerjc] *** ENERJ_APPROX(visitBinary): y * scalar
+   [enerjc] *** ENERJ_APPROX(visitBinary): z * scalar
+   [enerjc] *** ENERJ_APPROX(visitBinary): 1.0F / scalar
+   [enerjc] *** ENERJ_APPROX(visitBinary): x * scalar
+   [enerjc] *** ENERJ_APPROX(visitBinary): y * scalar
+   [enerjc] *** ENERJ_APPROX(visitBinary): z * scalar
+   [enerjc] *** ENERJ_APPROX(visitBinary): 1.0F / scalar
+   [enerjc] *** ENERJ_APPROX(visitBinary): x / scalar.x
+   [enerjc] *** ENERJ_APPROX(visitBinary): y / scalar.y
+   [enerjc] *** ENERJ_APPROX(visitBinary): z / scalar.z
+   [enerjc] *** ENERJ_APPROX(visitBinary): x - vec.x
+   [enerjc] *** ENERJ_APPROX(visitBinary): y - vec.y
+   [enerjc] *** ENERJ_APPROX(visitBinary): z - vec.z
+   [enerjc] *** ENERJ_APPROX(visitBinary): x - vec.x
+   [enerjc] *** ENERJ_APPROX(visitBinary): y - vec.y
+   [enerjc] *** ENERJ_APPROX(visitBinary): z - vec.z
+   [enerjc] *** ENERJ_APPROX(visitBinary): n1.dot(u0) + d1
+   [enerjc] *** ENERJ_APPROX(visitBinary): n1.dot(u1) + d1
+   [enerjc] *** ENERJ_APPROX(visitBinary): n1.dot(u2) + d1
+   [enerjc] *** ENERJ_APPROX(visitBinary): du0 * du1
+   [enerjc] *** ENERJ_APPROX(visitBinary): du0 * du2
+   [enerjc] *** ENERJ_APPROX(visitBinary): n2.dot(v0) + d2
+   [enerjc] *** ENERJ_APPROX(visitBinary): n2.dot(v1) + d2
+   [enerjc] *** ENERJ_APPROX(visitBinary): n2.dot(v2) + d2
+   [enerjc] *** ENERJ_APPROX(visitBinary): dv0 * dv1
+   [enerjc] *** ENERJ_APPROX(visitBinary): dv0 * dv2
+   [enerjc] *** ENERJ_APPROX(visitBinary): x0x1.x * x0x1.y
+   [enerjc] *** ENERJ_APPROX(visitBinary): y0y1.x * y0y1.y
+   [enerjc] *** ENERJ_APPROX(visitBinary): xx * yy
+   [enerjc] *** ENERJ_APPROX(visitBinary): abc.x * xxyy
+   [enerjc] *** ENERJ_APPROX(visitBinary): abc.y * x0x1.y
+   [enerjc] *** ENERJ_APPROX(visitBinary): abc.y * x0x1.y * yy
+   [enerjc] *** ENERJ_APPROX(visitBinary): tmp + abc.y * x0x1.y * yy
+   [enerjc] *** ENERJ_APPROX(visitBinary): abc.z * x0x1.x
+   [enerjc] *** ENERJ_APPROX(visitBinary): abc.z * x0x1.x * yy
+   [enerjc] *** ENERJ_APPROX(visitBinary): tmp + abc.z * x0x1.x * yy
+   [enerjc] *** ENERJ_APPROX(visitBinary): def.x * xxyy
+   [enerjc] *** ENERJ_APPROX(visitBinary): def.y * xx
+   [enerjc] *** ENERJ_APPROX(visitBinary): def.y * xx * y0y1.y
+   [enerjc] *** ENERJ_APPROX(visitBinary): tmp + def.y * xx * y0y1.y
+   [enerjc] *** ENERJ_APPROX(visitBinary): def.z * xx
+   [enerjc] *** ENERJ_APPROX(visitBinary): def.z * xx * y0y1.x
+   [enerjc] *** ENERJ_APPROX(visitBinary): tmp + def.z * xx * y0y1.x
+   [enerjc] *** ENERJ_APPROX(visitBinary): vv0 - vv2
+   [enerjc] *** ENERJ_APPROX(visitBinary): (vv0 - vv2) * d2
+   [enerjc] *** ENERJ_APPROX(visitBinary): vv1 - vv2
+   [enerjc] *** ENERJ_APPROX(visitBinary): (vv1 - vv2) * d2
+   [enerjc] *** ENERJ_APPROX(visitBinary): d2 - d0
+   [enerjc] *** ENERJ_APPROX(visitBinary): d2 - d1
+   [enerjc] *** ENERJ_APPROX(visitBinary): vv0 - vv1
+   [enerjc] *** ENERJ_APPROX(visitBinary): (vv0 - vv1) * d1
+   [enerjc] *** ENERJ_APPROX(visitBinary): vv2 - vv1
+   [enerjc] *** ENERJ_APPROX(visitBinary): (vv2 - vv1) * d1
+   [enerjc] *** ENERJ_APPROX(visitBinary): d1 - d0
+   [enerjc] *** ENERJ_APPROX(visitBinary): d1 - d2
+   [enerjc] *** ENERJ_APPROX(visitBinary): d1 * d2
+   [enerjc] *** ENERJ_APPROX(visitBinary): vv1 - vv0
+   [enerjc] *** ENERJ_APPROX(visitBinary): (vv1 - vv0) * d0
+   [enerjc] *** ENERJ_APPROX(visitBinary): vv2 - vv0
+   [enerjc] *** ENERJ_APPROX(visitBinary): (vv2 - vv0) * d0
+   [enerjc] *** ENERJ_APPROX(visitBinary): d0 - d1
+   [enerjc] *** ENERJ_APPROX(visitBinary): d0 - d2
+   [enerjc] *** ENERJ_APPROX(visitBinary): vv0 - vv1
+   [enerjc] *** ENERJ_APPROX(visitBinary): (vv0 - vv1) * d1
+   [enerjc] *** ENERJ_APPROX(visitBinary): vv2 - vv1
+   [enerjc] *** ENERJ_APPROX(visitBinary): (vv2 - vv1) * d1
+   [enerjc] *** ENERJ_APPROX(visitBinary): d1 - d0
+   [enerjc] *** ENERJ_APPROX(visitBinary): d1 - d2
+   [enerjc] *** ENERJ_APPROX(visitBinary): vv0 - vv2
+   [enerjc] *** ENERJ_APPROX(visitBinary): (vv0 - vv2) * d2
+   [enerjc] *** ENERJ_APPROX(visitBinary): vv1 - vv2
+   [enerjc] *** ENERJ_APPROX(visitBinary): (vv1 - vv2) * d2
+   [enerjc] *** ENERJ_APPROX(visitBinary): d2 - d0
+   [enerjc] *** ENERJ_APPROX(visitBinary): d2 - d1
+   [enerjc] *** ENERJ_APPROX(visitBinary): U1[i1] - U0[i1]
+   [enerjc] *** ENERJ_APPROX(visitBinary): U1[i0] - U0[i0]
+   [enerjc] *** ENERJ_APPROX(visitBinary): -a * U0[i0]
+   [enerjc] *** ENERJ_APPROX(visitBinary): b * U0[i1]
+   [enerjc] *** ENERJ_APPROX(visitBinary): -a * U0[i0] - b * U0[i1]
+   [enerjc] *** ENERJ_APPROX(visitBinary): a * V0[i0]
+   [enerjc] *** ENERJ_APPROX(visitBinary): b * V0[i1]
+   [enerjc] *** ENERJ_APPROX(visitBinary): a * V0[i0] + b * V0[i1]
+   [enerjc] *** ENERJ_APPROX(visitBinary): a * V0[i0] + b * V0[i1] + c
+   [enerjc] *** ENERJ_APPROX(visitBinary): U2[i1] - U1[i1]
+   [enerjc] *** ENERJ_APPROX(visitBinary): U2[i0] - U1[i0]
+   [enerjc] *** ENERJ_APPROX(visitBinary): -a * U1[i0]
+   [enerjc] *** ENERJ_APPROX(visitBinary): b * U1[i1]
+   [enerjc] *** ENERJ_APPROX(visitBinary): -a * U1[i0] - b * U1[i1]
+   [enerjc] *** ENERJ_APPROX(visitBinary): a * V0[i0]
+   [enerjc] *** ENERJ_APPROX(visitBinary): b * V0[i1]
+   [enerjc] *** ENERJ_APPROX(visitBinary): a * V0[i0] + b * V0[i1]
+   [enerjc] *** ENERJ_APPROX(visitBinary): a * V0[i0] + b * V0[i1] + c
+   [enerjc] *** ENERJ_APPROX(visitBinary): U0[i1] - U2[i1]
+   [enerjc] *** ENERJ_APPROX(visitBinary): U0[i0] - U2[i0]
+   [enerjc] *** ENERJ_APPROX(visitBinary): -a * U2[i0]
+   [enerjc] *** ENERJ_APPROX(visitBinary): b * U2[i1]
+   [enerjc] *** ENERJ_APPROX(visitBinary): -a * U2[i0] - b * U2[i1]
+   [enerjc] *** ENERJ_APPROX(visitBinary): a * V0[i0]
+   [enerjc] *** ENERJ_APPROX(visitBinary): b * V0[i1]
+   [enerjc] *** ENERJ_APPROX(visitBinary): a * V0[i0] + b * V0[i1]
+   [enerjc] *** ENERJ_APPROX(visitBinary): a * V0[i0] + b * V0[i1] + c
+   [enerjc] *** ENERJ_APPROX(visitBinary): d0 * d1
+   [enerjc] *** ENERJ_APPROX(visitBinary): d0 * d2
+   [enerjc] *** ENERJ_APPROX(visitBinary): v1[i0] - v0[i0]
+   [enerjc] *** ENERJ_APPROX(visitBinary): v1[i1] - v0[i1]
+   [enerjc] *** ENERJ_APPROX(visitBinary): u0[i0] - u1[i0]
+   [enerjc] *** ENERJ_APPROX(visitBinary): u0[i1] - u1[i1]
+   [enerjc] *** ENERJ_APPROX(visitBinary): v0[i0] - u0[i0]
+   [enerjc] *** ENERJ_APPROX(visitBinary): v0[i1] - u0[i1]
+   [enerjc] *** ENERJ_APPROX(visitBinary): Ay * Bx
+   [enerjc] *** ENERJ_APPROX(visitBinary): aX * By
+   [enerjc] *** ENERJ_APPROX(visitBinary): Ay * Bx - aX * By
+   [enerjc] *** ENERJ_APPROX(visitBinary): By * Cx
+   [enerjc] *** ENERJ_APPROX(visitBinary): Bx * Cy
+   [enerjc] *** ENERJ_APPROX(visitBinary): By * Cx - Bx * Cy
+   [enerjc] *** ENERJ_APPROX(visitBinary): aX * Cy
+   [enerjc] *** ENERJ_APPROX(visitBinary): Ay * Cx
+   [enerjc] *** ENERJ_APPROX(visitBinary): aX * Cy - Ay * Cx
+   [enerjc] *** ENERJ_APPROX(visitBinary): x + vec.x
+   [enerjc] *** ENERJ_APPROX(visitBinary): y + vec.y
+   [enerjc] *** ENERJ_APPROX(visitBinary): x + vec.x
+   [enerjc] *** ENERJ_APPROX(visitBinary): y + vec.y
+   [enerjc] *** ENERJ_APPROX(visitBinary): x * vec.x
+   [enerjc] *** ENERJ_APPROX(visitBinary): y * vec.y
+   [enerjc] *** ENERJ_APPROX(visitBinary): x * vec.x + y * vec.y
+   [enerjc] *** ENERJ_APPROX(visitBinary): x * v.y
+   [enerjc] *** ENERJ_APPROX(visitBinary): y * v.x
+   [enerjc] *** ENERJ_APPROX(visitBinary): (x * v.y) - (y * v.x)
+   [enerjc] *** ENERJ_APPROX(visitBinary): 1 - changeAmnt
+   [enerjc] *** ENERJ_APPROX(visitBinary): (1 - changeAmnt) * this.x
+   [enerjc] *** ENERJ_APPROX(visitBinary): changeAmnt * finalVec.x
+   [enerjc] *** ENERJ_APPROX(visitBinary): (1 - changeAmnt) * this.x + changeAmnt * finalVec.x
+   [enerjc] *** ENERJ_APPROX(visitBinary): 1 - changeAmnt
+   [enerjc] *** ENERJ_APPROX(visitBinary): (1 - changeAmnt) * this.y
+   [enerjc] *** ENERJ_APPROX(visitBinary): changeAmnt * finalVec.y
+   [enerjc] *** ENERJ_APPROX(visitBinary): (1 - changeAmnt) * this.y + changeAmnt * finalVec.y
+   [enerjc] *** ENERJ_APPROX(visitBinary): 1 - changeAmnt
+   [enerjc] *** ENERJ_APPROX(visitBinary): (1 - changeAmnt) * beginVec.x
+   [enerjc] *** ENERJ_APPROX(visitBinary): changeAmnt * finalVec.x
+   [enerjc] *** ENERJ_APPROX(visitBinary): (1 - changeAmnt) * beginVec.x + changeAmnt * finalVec.x
+   [enerjc] *** ENERJ_APPROX(visitBinary): 1 - changeAmnt
+   [enerjc] *** ENERJ_APPROX(visitBinary): (1 - changeAmnt) * beginVec.y
+   [enerjc] *** ENERJ_APPROX(visitBinary): changeAmnt * finalVec.y
+   [enerjc] *** ENERJ_APPROX(visitBinary): (1 - changeAmnt) * beginVec.y + changeAmnt * finalVec.y
+   [enerjc] *** ENERJ_APPROX(visitBinary): x * x
+   [enerjc] *** ENERJ_APPROX(visitBinary): y * y
+   [enerjc] *** ENERJ_APPROX(visitBinary): x * x + y * y
+   [enerjc] *** ENERJ_APPROX(visitBinary): x - v.x
+   [enerjc] *** ENERJ_APPROX(visitBinary): y - v.y
+   [enerjc] *** ENERJ_APPROX(visitBinary): dx * dx
+   [enerjc] *** ENERJ_APPROX(visitBinary): dy * dy
+   [enerjc] *** ENERJ_APPROX(visitBinary): dx * dx + dy * dy
+   [enerjc] *** ENERJ_APPROX(visitBinary): x - otherX
+   [enerjc] *** ENERJ_APPROX(visitBinary): y - otherY
+   [enerjc] *** ENERJ_APPROX(visitBinary): dx * dx
+   [enerjc] *** ENERJ_APPROX(visitBinary): dy * dy
+   [enerjc] *** ENERJ_APPROX(visitBinary): dx * dx + dy * dy
+   [enerjc] *** ENERJ_APPROX(visitBinary): x * scalar
+   [enerjc] *** ENERJ_APPROX(visitBinary): y * scalar
+   [enerjc] *** ENERJ_APPROX(visitBinary): x * scalar
+   [enerjc] *** ENERJ_APPROX(visitBinary): y * scalar
+   [enerjc] *** ENERJ_APPROX(visitBinary): x / scalar
+   [enerjc] *** ENERJ_APPROX(visitBinary): y / scalar
+   [enerjc] *** ENERJ_APPROX(visitBinary): x - vec.x
+   [enerjc] *** ENERJ_APPROX(visitBinary): y - vec.y
+   [enerjc] *** ENERJ_APPROX(visitBinary): x - valX
+   [enerjc] *** ENERJ_APPROX(visitBinary): y - valY
+   [enerjc] *** ENERJ_APPROX(visitBinary): FastMath.cos(Endorsements.endorse(angle)) * x
+   [enerjc] *** ENERJ_APPROX(visitBinary): FastMath.sin(Endorsements.endorse(angle)) * y
+   [enerjc] *** ENERJ_APPROX(visitBinary): FastMath.cos(Endorsements.endorse(angle)) * x - FastMath.sin(Endorsements.endorse(angle)) * y
+   [enerjc] *** ENERJ_APPROX(visitBinary): FastMath.sin(Endorsements.endorse(angle)) * x
+   [enerjc] *** ENERJ_APPROX(visitBinary): FastMath.cos(Endorsements.endorse(angle)) * y
+   [enerjc] *** ENERJ_APPROX(visitBinary): FastMath.sin(Endorsements.endorse(angle)) * x + FastMath.cos(Endorsements.endorse(angle)) * y

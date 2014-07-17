@@ -23,7 +23,7 @@
     <property name="expaxanal.flag" value="${user.dir}/analysis.flag" />
     <property name="expaxanal.result" value="${user.dir}/analysis.result" />
 
-    <condition property="enerjc.args" value="-Alint=mbstatic,expax,${expaxanal.flag},${expaxbc.info},${expaxanal.result}" else="-Alint=mbstatic,simulation,expax,${expaxanal.flag},${expaxbc.info},${expaxanal.result}"> 
+    <condition property="enerjc.args" value="-Alint=mbstatic,expax,expaxdebug,${expaxanal.flag},${expaxbc.info},${expaxanal.result}" else="-Alint=mbstatic,simulation,expax,expaxdebug,${expaxanal.flag},${expaxbc.info},${expaxanal.result}"> 
         <isset property="env.EnerJNoSim" />
     </condition>
     <condition property="enerjc.verbose" value="false" else="true">
@@ -35,7 +35,7 @@
             <compilerarg line="${enerjc.args}" />
             <compilerarg line="-expaxanalflag ${expaxanal.flag}" />
             <compilerarg line="-expaxbcinfo ${expaxbc.info}" />
-						<compilerarg line="-expaxgen true" />
+						<compilerarg line="-expaxgen false" />
 						<compilerarg line="-expaxast false" />
         </jsr308.javac>
     </presetdef>

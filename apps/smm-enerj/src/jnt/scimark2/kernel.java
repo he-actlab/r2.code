@@ -7,7 +7,7 @@ public class kernel
 	public static double measureSparseMatmult(int N, int nz, double min_time, Random R)
 	{
 		@Approx double x[] = RandomVector(N, R);
-		@Approx double y[] = new  double[N];
+		@Approx double y[] = new @Approx double[N];
 
 		int nr = nz/N; 		// average number of nonzeros per row
 		int anz = nr *N;   // _actual_ number of nonzeros
@@ -44,7 +44,7 @@ public class kernel
 	}
 
 	private static @Approx double[] RandomVector(int N, Random R) {
-		@Approx double A[] = new  double[N];
+		@Approx double A[] = new @Approx double[N];
 
 		for (int i=0; i<N; i++)
 			A[i] = R.nextDouble(); 

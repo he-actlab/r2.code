@@ -77,7 +77,6 @@ class PrecisionRuntimeDefault implements PrecisionRuntime {
 	private Map<String, Long> preciseFootprint = new HashMap<String, Long>();
 
 	private static boolean debug = "true".equals(System.getenv("EnerJDebug"));
-//	private static boolean debug = true;
 	
 	@Override
 	public PhantomReference<Object> setApproximate(

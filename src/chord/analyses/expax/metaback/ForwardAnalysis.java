@@ -9,9 +9,6 @@ import java.util.StringTokenizer;
 
 import joeq.Class.jq_Class;
 import joeq.Class.jq_Field;
-import joeq.Class.jq_Initializer;
-import joeq.Class.jq_InstanceField;
-import joeq.Class.jq_InstanceMethod;
 import joeq.Class.jq_Method;
 import joeq.Class.jq_Type;
 import joeq.Compiler.Quad.BasicBlock;
@@ -293,7 +290,6 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 				newtvs.add(fridx);
 				if(!excludeClass)
 					SharedData.approxParams.get(m).add(i);
-//				System.out.println(i + "th parameter of " + m.toString() + " is approximated");
 			}
 		}
 		AbstractState newAbs = new AbstractState(newtgs, newtvs, newtfs, false, abs.isErr);
@@ -401,16 +397,18 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 	 * for debug
 	 * @author jspark
 	 */
-	public void printApproxListAfterSize() {
-		System.out.println("*** EXPAX_COUNT - Finished! approxList AFTER analysis: " + abs.approxStatements.size());
+	public void printApproxAfterSize() {
+		System.out.println("*** EXPAX_COUNT - Finished! size of approxStatements AFTER analysis: " + abs.approxStatements.size());
+		System.out.println("*** EXPAX_COUNT - Finished! size of approxStorage AFTER analysis: " + abs.approxStorage.size());
 	}
 	
 	/**
 	 * for debug
 	 * @author jspark
 	 */
-	public void printApproxListSize() {
-		System.out.println("*** EXPAX_COUNT - approxList size: " + abs.approxStatements.size());
+	public void printApproxSize() {
+		System.out.println("*** EXPAX_COUNT - approxStatements size: " + abs.approxStatements.size());
+		System.out.println("*** EXPAX_COUNT - approxStorage size: " + abs.approxStorage.size());
 	}
 	
 	
@@ -468,6 +466,7 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 			// classname + methodname + return type + bytecode offset + quad
 			File resultFile = new File(resultFileName);
 			PrintWriter resultWriter = new PrintWriter(resultFile);
+			/** approximate operations **/
 			resultWriter.write(writeSet.size() + "\n");
 			for(Quad q : writeSet){
 				jq_Method method = q.getBasicBlock().getMethod();
@@ -475,6 +474,7 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 				resultWriter.write(q.getBCI() + EXPAXSEP);
 				resultWriter.write(q.toString() + "\n");
 			}
+			/** approximate storage **/
 			resultWriter.write(abs.approxStorage.size() + "\n");
 			for (Pair<Integer,Integer> pair : abs.approxStorage) {
 				Quad q = SharedData.idxFieldMap.get(pair).val0;
@@ -502,9 +502,15 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 				resultWriter.write(descStr + EXPAXSEP);
 				resultWriter.write(declClassStr + '\n');
 			}
+			/** approximate parameters **/
 			Set<jq_Method> keyset = SharedData.approxParams.keySet();
 			int size = 0;
 			for (jq_Method method : keyset) {
+				if(SharedData.isAcceptMethod(method) ||
+						   SharedData.isAcceptMethod(method) ||
+						   SharedData.isPreciseMethod(method) ||
+						   SharedData.isPreciseAllMethod(method))
+					continue;
 				Set<Integer> indexSet = SharedData.approxParams.get(method);
 				if(indexSet.isEmpty())
 					continue;
@@ -512,6 +518,11 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 			}
 			resultWriter.write(size + "\n");
 			for (jq_Method method : keyset) {
+				if(SharedData.isAcceptMethod(method) ||
+						   SharedData.isAcceptMethod(method) ||
+						   SharedData.isPreciseMethod(method) ||
+						   SharedData.isPreciseAllMethod(method))
+							continue;
 				Set<Integer> indexSet = SharedData.approxParams.get(method);
 				if(indexSet.isEmpty())
 					continue;

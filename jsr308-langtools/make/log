@@ -1,9 +1,0 @@
-Buildfile: /Users/jspark/projects/expax/jsr308-langtools/make/build.xml
-
-clean:
-   [delete] Deleting directory /Users/jspark/projects/expax/jsr308-langtools/build
-   [delete] Deleting directory /Users/jspark/projects/expax/jsr308-langtools/dist
-
--def-pcompile:
-    [mkdir] Created dir: /Users/jspark/projects/expax/jsr308-langtools/build/toolclasses
-    [javac] Compiling 2 source files to /Users/jspark/projects/expax/jsr308-langtools/build/toolclasses

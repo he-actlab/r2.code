@@ -35,7 +35,7 @@
             <compilerarg line="${enerjc.args}" />
             <compilerarg line="-expaxanalflag ${expaxanal.flag}" />
             <compilerarg line="-expaxbcinfo ${expaxbc.info}" />
-						<compilerarg line="-expaxgen true" />
+						<compilerarg line="-expaxgen false" />
 						<compilerarg line="-expaxast false" />
         </jsr308.javac>
     </presetdef>

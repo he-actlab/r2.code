@@ -17,7 +17,6 @@ import com.sun.tools.javac.code.Flags;
 import com.sun.tools.javac.code.Symbol;
 import com.sun.tools.javac.code.TypeTags;
 import com.sun.tools.javac.code.Symbol.MethodSymbol;
-import com.sun.tools.javac.jvm.expax.ExpaxASTNodeInfo;
 import com.sun.tools.javac.jvm.expax.ExpaxASTNodeInfo.ExpaxASTNodeInfoEntry;
 import com.sun.tools.javac.tree.*;
 import com.sun.tools.javac.tree.JCTree.JCExpression;
@@ -28,15 +27,12 @@ import com.sun.tools.javac.tree.JCTree.JCStatement;
 import com.sun.tools.javac.util.List;
 
 import enerj.PrecisionChecker;
-import enerj.jchord.result.ExpaxJchordResult;
-import enerj.jchord.result.ExpaxJchordResult.ExpaxJchordResultOpEntry;
 import enerj.jchord.result.ExpaxJchordResult.ExpaxJchordResultStorageEntry;
 
 // Adds calls to the runtime system to keep track of the dynamic precision
 // state of each object as it is instantiated.
 public class RuntimePrecisionTranslator extends HelpfulTreeTranslator<PrecisionChecker> {
 	
-	private static final boolean EXPAX_RPT = true;
 	private boolean ENERJ;
 	
 	public int count = 0;
@@ -54,8 +50,8 @@ public class RuntimePrecisionTranslator extends HelpfulTreeTranslator<PrecisionC
 
     @Override
     public void visitNewClass(JCNewClass tree) {
-    	if (EXPAX_RPT)
-    		System.out.println("*** EXPAX_RPT: visitNewClass = " + tree.toString());
+    	if (PrecisionChecker.EXPAX_DEBUG)
+    		System.out.println("*** EXPAX_DEBUG[RuntimePrecisionTranslator]: <visitNewClass> " + tree.toString());
     	super.visitNewClass(tree);
     	if (tree.clazz instanceof JCTree.JCIdent) {
     		Symbol sym = ((JCTree.JCIdent)tree.clazz).sym;
@@ -108,8 +104,8 @@ public class RuntimePrecisionTranslator extends HelpfulTreeTranslator<PrecisionC
     	if (ENERJ) {
 	        if ( type.hasEffectiveAnnotation(checker.APPROX) ) {
 	        	isApprox = maker.Literal(TypeTags.BOOLEAN, 1);
-	        	if(EXPAX_RPT)
-    				System.out.println("*** ENERJ_APPROX: " + tree.toString());
+	        	if(PrecisionChecker.EXPAX_DEBUG)
+    				System.out.println("*** EXPAX_DEBUG[RuntimePrecisionTranslator]: <visitNewClass> " + tree.toString());
 	        } else if ( type.hasEffectiveAnnotation(checker.CONTEXT) ) {
 	        	JCTree.JCExpression curIsApproxMeth = dotsExp("enerj.rt.PrecisionRuntimeRoot.impl.isApproximate");
 	        	isApprox = maker.Apply(null, curIsApproxMeth, List.of(thisExp()));
@@ -118,19 +114,13 @@ public class RuntimePrecisionTranslator extends HelpfulTreeTranslator<PrecisionC
 	        }
 	        sizes = PrecisionChecker.objectSizes(type, atypeFactory, typeutils, checker, false, tree);
     	} else {
-    		   
-    		// TODO it approximates class itself, and my intention was to approximate only fields
-    		// TODO it is unclear to do this at this point, invalidate all of this part
-    		boolean approx;
-    		// approx = expaxIsApprox(tree);
-    		approx = false;
-    		if (approx) {
-	        	isApprox = maker.Literal(TypeTags.BOOLEAN, 1);
-    			if(EXPAX_RPT)
-    				System.out.println("*** EXPAX_APPROX: " + tree.toString());
-    		} else
-	        	isApprox = maker.Literal(TypeTags.BOOLEAN, 0);
-    		sizes = PrecisionChecker.objectSizes(type, atypeFactory, typeutils, checker, approx, tree);
+    		boolean approxClass;
+    		approxClass = isApproxStorage(tree);	// see if 'tree' is an approximate storage or not
+    		if (approxClass)
+    			isApprox = maker.Literal(TypeTags.BOOLEAN, 1);
+    		else
+    			isApprox = maker.Literal(TypeTags.BOOLEAN, 0);
+    		sizes = PrecisionChecker.objectSizes(type, atypeFactory, typeutils, checker, approxClass, tree);
     	}
 
     	JCTree.JCExpression preciseSizeExp = maker.Literal(sizes[0]);
@@ -193,8 +183,8 @@ public class RuntimePrecisionTranslator extends HelpfulTreeTranslator<PrecisionC
 
     @Override
     public void visitNewArray(JCNewArray tree) {
-    	if (EXPAX_RPT)
-    		System.out.println("*** EXPAX_RPT: visitNewArray = " + tree.toString());
+    	if (PrecisionChecker.EXPAX_DEBUG)
+    		System.out.println("*** EXPAX_DEBUG[RuntimePrecisionTranslator]: <visitNewArray> " + tree.toString());
         // Don't instrument array initializations inside of array
         // initialization literals.
         if (subInits.contains(tree)) {
@@ -244,8 +234,8 @@ public class RuntimePrecisionTranslator extends HelpfulTreeTranslator<PrecisionC
                 );
 	        if ( elType.hasEffectiveAnnotation(checker.APPROX) ) {
 	        	isApprox = boolExp(true);
-    			if(EXPAX_RPT)
-    				System.out.println("*** ENERJ_APPROX: " + tree.toString());
+    			if(PrecisionChecker.EXPAX_DEBUG)
+    				System.out.println("*** ENERJ_APPROX[RuntimePrecisionTranslator]: <visitNewArray>" + tree.toString());
 	        } else if ( elType.hasEffectiveAnnotation(checker.CONTEXT) ) {
 	        	isApprox = maker.Apply(null,
 	        	    dotsExp("enerj.rt.PrecisionRuntimeRoot.impl.isApproximate"),
@@ -256,7 +246,7 @@ public class RuntimePrecisionTranslator extends HelpfulTreeTranslator<PrecisionC
 	        }
 	        
         } else {
-        	boolean approx = expaxIsApprox(tree);
+        	boolean approx = isApproxStorage(tree);
         	sizes = PrecisionChecker.typeSizes(
                     elType,
                     true,
@@ -267,9 +257,9 @@ public class RuntimePrecisionTranslator extends HelpfulTreeTranslator<PrecisionC
                 );
         	if (approx) {
 	        	isApprox = boolExp(true);
-    			if(EXPAX_RPT){
-    				System.out.println("*** EXPAX_APPROX: " + tree.toString());
-    				System.out.println("*** EXPAX_APPROX: size = " + sizes[0] + "," + sizes[1]);
+    			if(PrecisionChecker.EXPAX_DEBUG){
+    				System.out.println("*** EXPAX_APPROX[RuntimePrecisionTranslator]: <visitNewArray>" + tree.toString());
+    				System.out.println("*** EXPAX_APPROX[RuntimePrecisionTranslator]: <visitNewArray> preciseSize(" + sizes[0] + ") approxSize(" + sizes[1] + ")");
     			}
         	} else 
 	        	isApprox = boolExp(false);
@@ -293,20 +283,18 @@ public class RuntimePrecisionTranslator extends HelpfulTreeTranslator<PrecisionC
     public void visitClassDef(JCTree.JCClassDecl node) {
     	if (node.getKind().toString().equalsIgnoreCase("CLASS")) {
     		curClassName = node.sym.toString();
-    		if(EXPAX_RPT)
-    			System.out.println("*** EXPAX_RPT: class name is changed to = " + curClassName);
+    		if(PrecisionChecker.EXPAX_DEBUG)
+    			System.out.println("*** EXPAX_DEBUG[RuntimePrecisionTranslator]: <visitClassDef> class name is changed to = " + curClassName);
     	}
     	curMethName = " ";
-		if(EXPAX_RPT)
-			System.out.println("*** EXPAX_RPT: method name is changed to = " + curMethName);
+		if(PrecisionChecker.EXPAX_DEBUG)
+			System.out.println("*** EXPAX_DEBUG[RuntimePrecisionTranslator]: <visitClassDef> method name is changed to = " + curMethName);
     	curRetTypeName = "void";
     	super.visitClassDef(node);
     }
     
     @Override
     public void visitMethodDef(JCMethodDecl tree) {
-    	if(EXPAX_RPT)
-    		System.out.println("*** EXPAX_RPT: tree = " + tree.toString());
     	MethodSymbol meth = tree.sym;
         curMethName = tree.getName().toString();
         if(!(curMethName.equalsIgnoreCase("<init>") || curMethName.equalsIgnoreCase("<clinit>"))){
@@ -319,7 +307,7 @@ public class RuntimePrecisionTranslator extends HelpfulTreeTranslator<PrecisionC
         	String params = tree.sym.toString().substring(index);
         	curMethName += params;
         }
-        if(EXPAX_RPT) System.out.println("*** EXPAX_RPT: method name is changed to " + curMethName);
+        if(PrecisionChecker.EXPAX_DEBUG) System.out.println("*** EXPAX_DEBUG[RuntimePrecisionTranslator]: <visitMethodDef> method name is changed to " + curMethName);
         if(meth.getReturnType() != null)
         	curRetTypeName = meth.getReturnType().toString();
         else
@@ -345,9 +333,9 @@ public class RuntimePrecisionTranslator extends HelpfulTreeTranslator<PrecisionC
     }
     
     /** expaxIsApprox */
-    public boolean expaxIsApprox(JCTree tree) {
-    	if (EXPAX_RPT)
-    		System.out.println("*** EXPAX_RPT: expaxIsApprox - tree = " + tree.toString());
+    public boolean isApproxStorage(JCTree tree) {
+    	if (PrecisionChecker.EXPAX_DEBUG)
+    		System.out.println("*** EXPAX_DEBUG[RuntimePrecisionTranslator]: <isApproxStorage> start - tree = " + tree.toString());
     	if(PrecisionChecker.expaxBcInfo == null)
     		throw new RuntimeException("Error! expaxBcInfo is null");
     	if(PrecisionChecker.expaxJchordResult == null)
@@ -357,18 +345,20 @@ public class RuntimePrecisionTranslator extends HelpfulTreeTranslator<PrecisionC
     	Set<ExpaxJchordResultStorageEntry> jResultSet = PrecisionChecker.expaxJchordResult.getResultStorageSet();
     	
     	// find a bc info generated in 1st phase compilation
+    	boolean astFound = false;
     	for (ExpaxASTNodeInfoEntry info : bcInfoSet) {    		
     		if (info.compareWithTree(tree, curClassName, curMethName, curRetTypeName)) {
-    			if (EXPAX_RPT)
-    				System.out.println("*** EXPAX_RPT: AST info matched");
+    			astFound = true;
+    			if (PrecisionChecker.EXPAX_DEBUG)
+    				System.out.println("*** EXPAX_DEBUG[RuntimePrecisionTranslator]: <isApproxStorage> [MATCHED] AST info b/w 1st and 2nd compilation paths");
     			// found a same tree node, now match an analysis result with this node
     			for(ExpaxJchordResultStorageEntry result : jResultSet) {
 					//found a matched node
     				if (result.compareWithASTInfo(info)){
-    					if (EXPAX_RPT) {
+    					if (PrecisionChecker.EXPAX_DEBUG) {
 	    					count ++;
-	    					System.out.println("*** EXPAX_RPT: expaxIsApprox return true = " + count);
-	    					System.out.println("*** EXPAX_RPT: jchord result = " + result.toString());
+    						System.out.println("*** EXPAX_DEBUG[RuntimePrecisionTranslator]: <isApproxStorage> [MATCHED] jchord entry with AST info");
+    						System.out.println("*** EXPAX_DEBUG[RuntimePrecisionTranslator]: <isApproxStorage> return true! count[" + count + "]");
     					}
     					PrecisionChecker.treeToJchordStorageResult.put(tree, result);
     					return true;
@@ -376,8 +366,13 @@ public class RuntimePrecisionTranslator extends HelpfulTreeTranslator<PrecisionC
     			}
     		}
     	}
-    	if (EXPAX_RPT)
-    		System.out.println("*** EXPAX_RPT: expaxIsApprox return false!");
+    	if(PrecisionChecker.EXPAX_DEBUG){
+	    	if(!astFound)
+	    		System.out.println("*** EXPAX_DEBUG[PrecisionReferencingTranslator]: <expaxIsApprox> [NOT MATCHED] any AST info NOT matched b/w 1st and 2nd compilation paths");
+	    	else
+	    		System.out.println("*** EXPAX_DEBUG[PrecisionReferencingTranslator]: <expaxIsApprox> [NOT MATCHED] any jchord entry NOT matched with AST info");
+	    	System.out.println("*** EXPAX_DEBUG[PrecisionReferencingTranslator]: <expaxIsApprox> return false!");
+    	}
     	return false;
     }
 }

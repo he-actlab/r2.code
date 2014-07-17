@@ -317,9 +317,9 @@ public class PrecisionRuntimeNoisy extends PrecisionRuntimeDefault {
 		
 		if (kind == MemKind.VARIABLE && approx &&
 				INVPROB_SRAM_WRITE_FAILURE != DISABLED) {
-			if(PrecisionRuntimeDefault.EXPAX_APPROX_COUNT) {
-				if(approx) System.out.println("*** EXPAX_APPROX_COUNT: sLN");
-			}
+//			if(EXPAX_APPROX_COUNT) {
+//				if(approx) System.out.println("*** EXPAX_APPROX_COUNT: sLN");
+//			}
 			// Approximate access to local variable. Inject SRAM write
 			// failures.
 			value = bitError(value, INVPROB_SRAM_WRITE_FAILURE);
@@ -334,9 +334,9 @@ public class PrecisionRuntimeNoisy extends PrecisionRuntimeDefault {
 	// SRAM read upsets.
 	@Override
 	public <T> T loadLocal(Reference<T> ref, boolean approx) {
-		if(EXPAX_APPROX_COUNT) {
-			if(approx) System.out.println("*** EXPAX_APPROX_COUNT: lLN");
-		}
+//		if(EXPAX_APPROX_COUNT) {
+//			if(approx) System.out.println("*** EXPAX_APPROX_COUNT: lLN");
+//		}
 		T res = super.loadLocal(ref, approx);
 		if (approx && INVPROB_SRAM_READ_UPSET != DISABLED) {
 			// Approximate read from local variable. Inject SRAM read upsets.
@@ -349,9 +349,9 @@ public class PrecisionRuntimeNoisy extends PrecisionRuntimeDefault {
 	// DRAM decay.
 	@Override
 	public <T> T loadArray(Object array, int index, boolean approx) {
-		if(EXPAX_APPROX_COUNT) {
-			if(approx) System.out.println("*** EXPAX_APPROX_COUNT: lAN");
-		}
+//		if(EXPAX_APPROX_COUNT) {
+//			if(approx) System.out.println("*** EXPAX_APPROX_COUNT: lAN");
+//		}
 		T res = super.loadArray(array, index, approx);
 		if (approx) {
 			T aged = dramAgedRead(dramKey(array, index), res);
@@ -366,9 +366,9 @@ public class PrecisionRuntimeNoisy extends PrecisionRuntimeDefault {
 
 	@Override
 	public <T> T loadField(Object obj, String fieldname, boolean approx) {
-		if(EXPAX_APPROX_COUNT) {
-			if(approx) System.out.println("*** EXPAX_APPROX_COUNT: lFN");
-		}
+//		if(EXPAX_APPROX_COUNT) {
+//			if(approx) System.out.println("*** EXPAX_APPROX_COUNT: lFN");
+//		}
 		T res = super.loadField(obj, fieldname, approx);
 		if (approx) {
 			T aged = dramAgedRead(dramKey(obj, fieldname), res);
@@ -400,9 +400,9 @@ public class PrecisionRuntimeNoisy extends PrecisionRuntimeDefault {
 
 	@Override
 	public <T> T storeArray(Object array, int index, boolean approx, T rhs) {
-		if(EXPAX_APPROX_COUNT) {
-			if(approx) System.out.println("*** EXPAX_APPROX_COUNT: sAN");
-		}
+//		if(EXPAX_APPROX_COUNT) {
+//			if(approx) System.out.println("*** EXPAX_APPROX_COUNT: sAN");
+//		}
 		T res = super.storeArray(array, index, approx, rhs);
 		dramRefresh(dramKey(array, index), res);
 		return res;
@@ -410,9 +410,9 @@ public class PrecisionRuntimeNoisy extends PrecisionRuntimeDefault {
 
 	@Override
 	public <T> T storeField(Object obj, String fieldname, boolean approx, T rhs) {
-		if(EXPAX_APPROX_COUNT) {
-			if(approx) System.out.println("*** EXPAX_APPROX_COUNT: sFN");
-		}
+//		if(EXPAX_APPROX_COUNT) {
+//			if(approx) System.out.println("*** EXPAX_APPROX_COUNT: sFN");
+//		}
 		T res = super.storeField(obj, fieldname, approx, rhs);
 		dramRefresh(dramKey(obj, fieldname), res);
 		return res;

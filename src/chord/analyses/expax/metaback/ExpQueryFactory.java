@@ -19,7 +19,6 @@ public class ExpQueryFactory implements QueryFactory {
 		int result = Integer.parseInt(segs[1]);
 		DNF nc = null;
 		if(segs.length > 2){
-			System.out.println("*** EXPAX_EQF: segs[2] = " + segs[2]);
 			nc = new DNF(new ApproxNumCMP(),ExpDNFFactory.singleton,segs[2]);
 			assert(result == QueryResult.REFINE);
 		}

@@ -98,6 +98,7 @@ public class IterAnalysis extends ParallelAnalysis {
 							if (top.getType().isClassType()) {
 								StringTokenizer st = new StringTokenizer(SharedData.formatClsName(top.toString())," ");
 								jq_Class clazz = (jq_Class)jq_Type.read(st);
+								/* all approximable instance fields */ 
 								jq_Field[] insFields = clazz.getDeclaredInstanceFields();
 								INNEROUT1: for (jq_Field f : insFields) {
 									String desc = SharedData.convertClassName(f.getDesc().toString());
@@ -115,6 +116,7 @@ public class IterAnalysis extends ParallelAnalysis {
 										}
 									}
 								}
+								/* all approximable static fields */
 								jq_Field[] stFields = clazz.getDeclaredStaticFields();
 								INNEROUT2: for (jq_Field f : stFields) {
 									String desc = SharedData.convertClassName(f.getDesc().toString());
@@ -139,6 +141,7 @@ public class IterAnalysis extends ParallelAnalysis {
 				if(((Quad) o).getOperator() instanceof NEWARRAY) {
 					TypeOperand top = NewArray.getType((Quad)o);
 					jq_Type type = ((jq_Array)top.getType()).getElementType();
+					/* all approximable (primitive-type elements) arrays */
 					if(type.isPrimitiveType()){
 						Pair<Integer,Integer> pair = new Pair<Integer,Integer>(SharedData.domH.indexOf(o),-1);
 						SharedData.allApproxStorage.add(pair);
@@ -149,7 +152,8 @@ public class IterAnalysis extends ParallelAnalysis {
 			}
 		}
 		
-		System.out.println("*** EXPAX_COUNT - approxList BEFORE analysis: " + SharedData.allApproxStatements.size());
+		System.out.println("*** EXPAX_COUNT - size of allApproxStatements BEFORE analysis: " + SharedData.allApproxStatements.size());
+		System.out.println("*** EXPAX_COUNT - size of allApproxStorage BEFORE analysis: " + SharedData.allApproxStorage.size());
 		
 		SharedData.readPreciseLst(); // jspark: read a file, precise.lst, which has a list of system functions such as println and print
 		SharedData.readFieldTextFile(); // jspark: read field.txt and store the infomration into hfFieldMap and gFieldMap
@@ -180,13 +184,13 @@ public class IterAnalysis extends ParallelAnalysis {
 		assert(qStrs.length == 1);
 		ExpQuery query = (ExpQuery) ExpQueryFactory.singleton.getQueryFromStr(qStrs[0]);
 		ForwardAnalysis forward = new ForwardAnalysis(abs);
-		forward.printApproxListSize();
+		forward.printApproxSize();
 		forward.run();
 		IWrappedPE<Edge,Edge> errEdge = forward.getErrEdge(query);
 		ExpQueryResult eqr = null;
 		if(errEdge == null){
 			eqr = new ExpQueryResult(query,QueryResult.PROVEN,null);
-			forward.printApproxListAfterSize(); // jspark: when it's proven, print the number of approximate quads
+			forward.printApproxAfterSize(); // jspark: when it's proven, print the number of approximate quads
 			forward.writeResultFile(); // jspark: write the analysis result into a file so that compiler can read it
 		}else{
 			BackTraceIterator<Edge,Edge> backIter = forward.getBackTraceIterator(errEdge);

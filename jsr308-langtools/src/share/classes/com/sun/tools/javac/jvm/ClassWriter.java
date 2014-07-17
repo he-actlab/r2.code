@@ -59,8 +59,6 @@ import static javax.tools.StandardLocation.CLASS_OUTPUT;
  */
 public class ClassWriter extends ClassFile {
 	
-	private static final boolean EXPAX_TEST_CW = false;
-	
     protected static final Context.Key<ClassWriter> classWriterKey =
         new Context.Key<ClassWriter>();
 
@@ -668,8 +666,6 @@ public class ClassWriter extends ClassFile {
      *  return number of attributes written.
      */
     int writeMemberAttrs(Symbol sym) {
-    	if(EXPAX_TEST_CW)
-    		System.out.println("*** EXPAX_TEXT_CW: writeMemberAttrs - sym = " + sym.toString());
         int acount = writeFlagAttrs(sym.flags());
         long flags = sym.flags();
         if (source.allowGenerics() &&
@@ -1082,8 +1078,6 @@ public class ClassWriter extends ClassFile {
     /** Write method symbol, entering all references into constant pool.
      */
     void writeMethod(MethodSymbol m) {
-    	if(EXPAX_TEST_CW)
-    		System.out.println("*** EXPAX_TEST_CW: writeMethod - m.toString() = " + m.toString());
         int flags = adjustFlags(m.flags());
         databuf.appendChar(flags);
         if (dumpMethodModifiers) {
@@ -1592,11 +1586,6 @@ public class ClassWriter extends ClassFile {
     public JavaFileObject writeClass(ClassSymbol c)
         throws IOException, PoolOverflow, StringOverflow
     {
-    	if(EXPAX_TEST_CW) {
-	    	System.out.println("*** EXPAX_TEST_CW: writeClass ***");
-	    	System.out.println("*** EXPAX_TEST_CW: c.flatname.toString() = " + c.flatname.toString());
-	    	System.out.println("*** EXPAX_TEST_CW: c.sourcefile.toString() = " + c.sourcefile.toString());
-    	}
         JavaFileObject outFile
             = fileManager.getJavaFileForOutput(CLASS_OUTPUT,
                                                c.flatname.toString(),
@@ -1740,9 +1729,7 @@ public class ClassWriter extends ClassFile {
         endAttrs(acountIdx, acount);
 
         poolbuf.appendBytes(databuf.elems, 0, databuf.length);
-        out.write(poolbuf.elems, 0, poolbuf.length);
-        
-        //TODO EXPAX: read output file? 
+        out.write(poolbuf.elems, 0, poolbuf.length); 
 
         pool = c.pool = null; // to conserve space
      }

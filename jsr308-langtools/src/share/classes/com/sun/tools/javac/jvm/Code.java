@@ -46,7 +46,9 @@ import static com.sun.tools.javac.jvm.ClassWriter.StackMapTableFrame;
  */
 public class Code {
 
-	private static final boolean EXPAX_CODE = false;
+	// FIXME these debugging lines were used to investigate how the compiler generates bytecode
+	// they are now useless, but just in case, I'll keep it
+	private static final boolean EXPAX_CODE = false; 
 	
 	public int bytecodeOffset = 0;
 	

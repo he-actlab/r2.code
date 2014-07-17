@@ -34,7 +34,6 @@ import enerj.rt.PrecisionRuntime.MemKind;
 public class SimulationTranslator extends PrecisionReferencingTranslator {
 	
 	private static boolean ENERJ = true;
-	private static final boolean EXPAX_ST = true;
 	public ExpaxASTNodeInfo expaxBcInfo;
 	public ExpaxJchordResult expaxJchordResult;
 
@@ -94,8 +93,6 @@ public class SimulationTranslator extends PrecisionReferencingTranslator {
 
     @Override
     public void visitCase(JCTree.JCCase node) {
-    	if (EXPAX_ST)
-        	System.out.println("*** EXPAX_ST: visitCase: tree = " + node.toString());
         // This is a little bit hacky, but mark "case" patterns as lvalues.
         // They are not, of course, actually lvalues, but they should not be
         // instrumented as loads because they must be constants at the source
@@ -112,12 +109,9 @@ public class SimulationTranslator extends PrecisionReferencingTranslator {
     @Override
     public void visitBinary(JCTree.JCBinary tree) {
     	boolean approximate = false;
-    	if (EXPAX_ST) {
-        	System.out.println("*** EXPAX_ST: visitBinary: tree = " + tree.toString());
-    		System.out.println("*** EXPAX_ST: call isApprox - visitBinary");
-    		System.out.println("*** EXPAX_ST: tag = " + tree.getTag().toString()	);
-    		System.out.println("*** EXPAX_ST: kind = " + tree.getKind().toString()	);
-    	}
+    	String orgTreeStr = tree.toString();
+    	if (PrecisionChecker.EXPAX_DEBUG) 
+        	System.out.println("*** EXPAX_DEBUG[SimulationTranslator]: <visitBinary> " + tree.toString());
     	
     	if(ENERJ) {
     		approximate = isApprox(tree);
@@ -130,8 +124,6 @@ public class SimulationTranslator extends PrecisionReferencingTranslator {
     	
         super.visitBinary(tree);
         
-        if(EXPAX_ST)
-        	System.out.println("*** EXPAX_ST: ident end?");
         // Avoid instrumenting string concatenation.
         if (tree.type.toString().equals("java.lang.String")) {
             return;
@@ -174,7 +166,7 @@ public class SimulationTranslator extends PrecisionReferencingTranslator {
         // will be optimized away by the compiler anyway.
         if (tree.lhs instanceof JCTree.JCLiteral &&
         		tree.rhs instanceof JCTree.JCLiteral) {
-        	if(EXPAX_ST) System.out.println("*** EXPAX_ST: both sides are literal - return");
+        	if(PrecisionChecker.EXPAX_DEBUG) System.out.println("*** EXPAX_DEBUG[SimulationTranslator]: <visitBinary> both sides are literal - return");
         	return;
         }
 
@@ -188,11 +180,11 @@ public class SimulationTranslator extends PrecisionReferencingTranslator {
         
     	if (approximate) {
     		if(ENERJ) {
-    			if(EXPAX_ST)
-    				System.out.println("*** ENERJ_APPROX(visitBinary): " + tree.toString());
+    			if(PrecisionChecker.EXPAX_DEBUG)
+    				System.out.println("*** ENERJ_APPROX(visitBinary): " + orgTreeStr);
     		} else {
-    			if(EXPAX_ST)
-    				System.out.println("*** EXPAX_APPROX(visitBinary): " + tree.toString());
+    			if(PrecisionChecker.EXPAX_DEBUG)
+    				System.out.println("*** EXPAX_APPROX(visitBinary): " + orgTreeStr);
     		}
     	}
         JCTree.JCMethodInvocation call = maker.Apply(null, meth,
@@ -212,11 +204,9 @@ public class SimulationTranslator extends PrecisionReferencingTranslator {
 
     @Override
     public void visitUnary(JCTree.JCUnary node) {
-    	if (EXPAX_ST){
-        	System.out.println("*** EXPAX_ST: visitUnary: tree = " + node.toString());
-        	System.out.println("*** EXPAX_ST: visitUnary: tag = " + node.getTag().toString());
-        	System.out.println("*** EXPAX_ST: visitUnary: kind = " + node.getKind().toString());
-    	}
+    	if (PrecisionChecker.EXPAX_DEBUG)
+        	System.out.println("*** EXPAX_DEBUG[SimulationTranslator]: <visitUnary> " + node.toString());
+
         String kind = null;
         boolean returnOld = false;
         switch (node.getKind()) {
@@ -246,10 +236,7 @@ public class SimulationTranslator extends PrecisionReferencingTranslator {
         // as a load.
         lvalues.add(node.arg);
         JCTree.JCExpression oldArg = node.arg;
-        if(EXPAX_ST)
-        	System.out.println("*** EXPAX_ST: call isApprox - visitUnary");
-        if (ENERJ)
-        	isApprox(oldArg);
+
         super.visitUnary(node);
 
         // Instrumented assignop call.
@@ -273,8 +260,6 @@ public class SimulationTranslator extends PrecisionReferencingTranslator {
         // Create a call that transfroms the RHS and logs the store.
         JCTree.JCExpression meth =
             dotsExp("enerj.rt.PrecisionRuntimeRoot.impl.storeValue");
-        if(EXPAX_ST)
-        	System.out.println("*** EXPAX_ST: call isApprox  - storeCall");
         boolean approximate;
         if(ENERJ) {
         	approximate = isApprox(typedTree);
@@ -284,8 +269,8 @@ public class SimulationTranslator extends PrecisionReferencingTranslator {
         			approxNameSet.containsKey(curMethName) && 
         			approxNameSet.get(curMethName).contains(((JCTree.JCIdent)typedTree).getName()) && 
         			arrayAccessFlag == 0) {
-				if(EXPAX_ST)
-    				System.out.println("*** EXPAX_ST: approxNameSet contains " + ((JCTree.JCIdent)typedTree).toString());
+				if(PrecisionChecker.EXPAX_DEBUG)
+    				System.out.println("*** EXPAX_DEBUG[SimulationTranslator]: <storeCall> approxNameSet contains " + ((JCTree.JCIdent)typedTree).toString());
 				approximate = true;
 			} else {
 	        	if(arrayAccessFlag == 0)
@@ -297,10 +282,10 @@ public class SimulationTranslator extends PrecisionReferencingTranslator {
         
         if (approximate) {
 			if(ENERJ) {
-    			if(EXPAX_ST)
+    			if(PrecisionChecker.EXPAX_DEBUG)
     				System.out.println("*** ENERJ_APPROX(storeCall): " + typedTree.toString());
     		} else {
-    			if(EXPAX_ST)
+    			if(PrecisionChecker.EXPAX_DEBUG)
     				System.out.println("*** EXPAX_APPROX(storeCall): " + typedTree.toString());
     		}
     	} 
@@ -430,8 +415,8 @@ public class SimulationTranslator extends PrecisionReferencingTranslator {
 
     @Override
     public void visitIdent(JCTree.JCIdent node) {
-    	if (EXPAX_ST)
-        	System.out.println("*** EXPAX_ST: visitIdent: tree = " + node.toString());
+    	if (PrecisionChecker.EXPAX_DEBUG)
+        	System.out.println("*** EXPAX_DEBUG[SimulationTranslator]: <visitIdent> " + node.toString());
         super.visitIdent(node);
         
         // If this identifier is a variable name that's being used as an rvalue,
@@ -443,15 +428,13 @@ public class SimulationTranslator extends PrecisionReferencingTranslator {
 
         		JCTree.JCExpression meth =
                     dotsExp("enerj.rt.PrecisionRuntimeRoot.impl.loadField");
-        		if(EXPAX_ST)
-        			System.out.println("*** EXPAX_ST: call isApprox or expaxIsApprox - visitIdent #1");
         		boolean approximate;
         		if (ENERJ) {
         			approximate = isApprox(node);
         		} else {
         			if(approxNameSet.containsKey(curMethName) && approxNameSet.get(curMethName).contains(node.getName()) && arrayAccessFlag == 0) {
-        				if(EXPAX_ST)
-            				System.out.println("*** EXPAX_ST: approxNameSet contains " + node.toString());
+        				if(PrecisionChecker.EXPAX_DEBUG)
+            				System.out.println("*** EXPAX_DEBUG[SimulationTranslator]: <visitIdent> approxNameSet contains " + node.toString());
         				approximate = true;
         			} else {
 	        			if(arrayAccessFlag == 0)
@@ -462,10 +445,10 @@ public class SimulationTranslator extends PrecisionReferencingTranslator {
         		}
         		if (approximate) {
         			if(ENERJ) {
-            			if(EXPAX_ST)
+            			if(PrecisionChecker.EXPAX_DEBUG)
             				System.out.println("*** ENERJ_APPROX(loadField): " + node.toString());
             		} else {
-            			if(EXPAX_ST)
+            			if(PrecisionChecker.EXPAX_DEBUG)
             				System.out.println("*** EXPAX_APPROX(loadField): " + node.toString());
             		}
             	} 
@@ -494,15 +477,13 @@ public class SimulationTranslator extends PrecisionReferencingTranslator {
             // Ignore the replacement created by the referencing translator.
             JCTree.JCExpression meth =
                 dotsExp("enerj.rt.PrecisionRuntimeRoot.impl.loadLocal");
-            if(EXPAX_ST)
-            	System.out.println("*** EXPAX_ST: call isApprox or expaxIsApprox - visitIdent #2");
     		boolean approximate;
     		if (ENERJ) {
     			approximate = isApprox(node);
     		} else {
     			if(approxNameSet.containsKey(curMethName) && approxNameSet.get(curMethName).contains(node.getName()) && arrayAccessFlag == 0) {
-        			if(EXPAX_ST)
-        				System.out.println("*** EXPAX_ST: approxNameSet contains " + node.toString());    				
+        			if(PrecisionChecker.EXPAX_DEBUG)
+        				System.out.println("*** EXPAX_DEBUG[SimulationTranslator]: <visitIdent> approxNameSet contains " + node.toString());    				
     				approximate = true;
     			} else {
 	    			if(arrayAccessFlag == 0)
@@ -513,10 +494,10 @@ public class SimulationTranslator extends PrecisionReferencingTranslator {
     		}
             if (approximate) {
             	if(ENERJ) {
-        			if(EXPAX_ST)
+        			if(PrecisionChecker.EXPAX_DEBUG)
         				System.out.println("*** ENERJ_APPROX(loadlocal): " + node.toString());
         		} else {
-        			if(EXPAX_ST)
+        			if(PrecisionChecker.EXPAX_DEBUG)
         				System.out.println("*** EXPAX_APPROX(loadlocal): " + node.toString());
         		}
         	} 
@@ -530,16 +511,13 @@ public class SimulationTranslator extends PrecisionReferencingTranslator {
             expr = unbox(expr, node.type);
             attribute(expr, node, node.type);
             result = expr;
-        } else {
-			if(EXPAX_ST)
-				System.out.println("*** EXPAX_ST: lvalues contains " + node.toString());
-        }
+        } 
     } 
 
     @Override
     public void visitSelect(JCTree.JCFieldAccess node) {
-    	if (EXPAX_ST)
-        	System.out.println("*** EXPAX_ST: visitSelect: tree = " + node.toString());
+    	if (PrecisionChecker.EXPAX_DEBUG)
+        	System.out.println("*** EXPAX_DEBUG[SimulationTranslator]: <visitSelect> " + node.toString());
     	
         super.visitSelect(node);
 
@@ -561,8 +539,6 @@ public class SimulationTranslator extends PrecisionReferencingTranslator {
             	obj = maker.Select(obj, names.fromString("class"));
             }
 
-            if(EXPAX_ST)
-            	System.out.println("*** EXPAX_ST: call isApprox - visitSelect");
             boolean approximate;
             if (ENERJ) {
             	approximate = isApprox(node);
@@ -574,10 +550,10 @@ public class SimulationTranslator extends PrecisionReferencingTranslator {
             }
             if (approximate) {
             	if(ENERJ) {
-        			if(EXPAX_ST)
+        			if(PrecisionChecker.EXPAX_DEBUG)
         				System.out.println("*** ENERJ_APPROX(loadField): " + node.toString());
         		} else {
-        			if(EXPAX_ST)
+        			if(PrecisionChecker.EXPAX_DEBUG)
         				System.out.println("*** EXPAX_APPROX(loadField): " + node.toString());
         		}
         	}
@@ -593,28 +569,23 @@ public class SimulationTranslator extends PrecisionReferencingTranslator {
             expr = unbox(expr, node.type);
             attribute(expr, node, node.type);
             result = expr;
-        } else {
-        	if(EXPAX_ST)
-        		System.out.println("*** EXPAX_ST: lvalues contains = " + node.toString());
-        }
+        } 
     }
     
     @Override
     public void visitIndexed(JCTree.JCArrayAccess node) {
-    	if (EXPAX_ST) 
-        	System.out.println("*** EXPAX_ST: visitIndexed: tree = " + node.toString());
+    	if (PrecisionChecker.EXPAX_DEBUG) 
+        	System.out.println("*** EXPAX_DEBUG[SimulationTranslator]: <visitIndexed> " + node.toString());
     	
     	arrayAccessFlag++;
-		System.out.println("*** EXPAX_ST: (visitIndexed) arrayAccessFlag INCREASE = " + arrayAccessFlag + "(node=" + node.toString() + ")");
+    	if (PrecisionChecker.EXPAX_DEBUG) System.out.println("*** EXPAX_DEBUG[SimulationTranslator]: <visitIndexed> arrayAccessFlag INCREASE = " + arrayAccessFlag + "(node=" + node.toString() + ")");
         super.visitIndexed(node);
         arrayAccessFlag--;
-        System.out.println("*** EXPAX_ST: (visitIndexed) arrayAccessFlag DECREASE = " + arrayAccessFlag + "(node=" + node.toString() + ")");
+        if (PrecisionChecker.EXPAX_DEBUG) System.out.println("*** EXPAX_DEBUG[SimulationTranslator]: <visitIndexed> arrayAccessFlag DECREASE = " + arrayAccessFlag + "(node=" + node.toString() + ")");
         
         if (!lvalues.contains(node)) {
             JCTree.JCExpression meth =
                 dotsExp("enerj.rt.PrecisionRuntimeRoot.impl.loadArray");
-            if(EXPAX_ST)
-            	System.out.println("*** EXPAX_ST: call isApprox - visitIndexed");
             boolean approximate;
             if (ENERJ) {
             	approximate = isApprox(node);
@@ -626,10 +597,10 @@ public class SimulationTranslator extends PrecisionReferencingTranslator {
             }
             if (approximate) {
             	if(ENERJ) {
-        			if(EXPAX_ST)
+        			if(PrecisionChecker.EXPAX_DEBUG)
         				System.out.println("*** ENERJ_APPROX(loadArray): " + node.toString());
         		} else {
-        			if(EXPAX_ST)
+        			if(PrecisionChecker.EXPAX_DEBUG)
         				System.out.println("*** EXPAX_APPROX(loadArray): " + node.toString());
         		}
         	}
@@ -645,15 +616,13 @@ public class SimulationTranslator extends PrecisionReferencingTranslator {
             expr = unbox(expr, node.type);
             attribute(expr, node, node.type);
             result = expr;
-        } else 
-        	if(EXPAX_ST)
-        		System.out.println("*** EXPAX_ST: lvalues contains " + node);
+        } 
     }
 
     @Override
     public void visitAssign(JCTree.JCAssign node) {
-    	if (EXPAX_ST)
-        	System.out.println("*** EXPAX_ST: visitAssign: tree = " + node.toString());
+    	if (PrecisionChecker.EXPAX_DEBUG)
+        	System.out.println("*** EXPAX_DEBUG[SimulationTranslator]: <visitIndexed> visitAssign: tree = " + node.toString());
         JCTree.JCExpression oldLhs = node.lhs;
         
         boolean approximate = false;
@@ -708,10 +677,10 @@ public class SimulationTranslator extends PrecisionReferencingTranslator {
         	
         	if (approximate) {
             	if(ENERJ) {
-        			if(EXPAX_ST)
+        			if(PrecisionChecker.EXPAX_DEBUG)
         				System.out.println("*** ENERJ_APPROX(storeField): " + node.toString());
         		} else {
-        			if(EXPAX_ST)
+        			if(PrecisionChecker.EXPAX_DEBUG)
         				System.out.println("*** EXPAX_APPROX(storeField): " + node.toString());
         		}
         	}
@@ -735,7 +704,6 @@ public class SimulationTranslator extends PrecisionReferencingTranslator {
             result = expr;
 
         } else if (oldLhs instanceof JCTree.JCIdent) {
-        	System.out.println("*** EXPAX_ST: check oldLhs = " + oldLhs.toString());
         	// Replaced with a reference?
             JCTree.JCExpression ref;
             if (!instrumented.contains(node.lhs))
@@ -748,10 +716,10 @@ public class SimulationTranslator extends PrecisionReferencingTranslator {
             
             if (approximate) {
             	if(ENERJ) {
-        			if(EXPAX_ST)
+        			if(PrecisionChecker.EXPAX_DEBUG)
         				System.out.println("*** ENERJ_APPROX(storeLocal): " + node.toString());
         		} else {
-        			if(EXPAX_ST)
+        			if(PrecisionChecker.EXPAX_DEBUG)
         				System.out.println("*** EXPAX_APPROX(storeLocal): " + node.toString());
         		}
         	}
@@ -770,7 +738,6 @@ public class SimulationTranslator extends PrecisionReferencingTranslator {
             result = expr;
 
         } else if (oldLhs instanceof JCTree.JCArrayAccess) {
-        	System.out.println("*** EXPAX_ST: check oldLhs = " + oldLhs.toString());
         	JCTree.JCArrayAccess aa = (JCTree.JCArrayAccess)oldLhs;
 
         	// Call into runtime to execute store.
@@ -779,10 +746,10 @@ public class SimulationTranslator extends PrecisionReferencingTranslator {
             
             if (approximate) {
             	if(ENERJ) {
-        			if(EXPAX_ST)
+        			if(PrecisionChecker.EXPAX_DEBUG)
         				System.out.println("*** ENERJ_APPROX(storeArray): " + node.toString());
         		} else {
-        			if(EXPAX_ST)
+        			if(PrecisionChecker.EXPAX_DEBUG)
         				System.out.println("*** EXPAX_APPROX(storeArray): " + node.toString());
         		}
         	}
@@ -815,8 +782,8 @@ public class SimulationTranslator extends PrecisionReferencingTranslator {
         JCTree.JCExpression repl,
         boolean returnOld
     ) {
-    	if(EXPAX_ST)
-        	System.out.println("*** EXPAX_ST: assignopCall start");
+    	if(PrecisionChecker.EXPAX_DEBUG)
+        	System.out.println("*** EXPAX_DEBUG[SimulationTranslator]: <assignopCall> " + repl.toString());
         // Operation kind.
         String opExp = "enerj.rt.PrecisionRuntime.ArithOperator." + opName;
 
@@ -828,8 +795,6 @@ public class SimulationTranslator extends PrecisionReferencingTranslator {
         {
             JCTree.JCExpression ref =
                 ((JCTree.JCFieldAccess)arg).selected;
-            if(EXPAX_ST)
-            	System.out.println("*** EXPAX_ST: call isApprox - assignopCall #1");
     		boolean approximate;
     		if (ENERJ) {
     			approximate = isApprox(oldArg);
@@ -841,10 +806,10 @@ public class SimulationTranslator extends PrecisionReferencingTranslator {
     		}
     		if (approximate) {
     			if(ENERJ) {
-        			if(EXPAX_ST)
+        			if(PrecisionChecker.EXPAX_DEBUG)
         				System.out.println("*** ENERJ_APPROX(assignopLocal=JCIdent): " + repl.toString());
         		} else {
-        			if(EXPAX_ST)
+        			if(PrecisionChecker.EXPAX_DEBUG)
         				System.out.println("*** EXPAX_APPROX(assignopLocal=JCIdent): " + repl.toString());
         		}
         	}
@@ -866,8 +831,6 @@ public class SimulationTranslator extends PrecisionReferencingTranslator {
         } else if (arg instanceof JCTree.JCArrayAccess) {
             JCTree.JCArrayAccess access =
                 (JCTree.JCArrayAccess)arg;
-            if(EXPAX_ST)
-            	System.out.println("*** EXPAX_ST: call isApprox - assignopCall #2");
     		boolean approximate;
     		if (ENERJ){
     			approximate = isApprox(oldArg);
@@ -879,10 +842,10 @@ public class SimulationTranslator extends PrecisionReferencingTranslator {
     		}
     		if (approximate) {
         		if(ENERJ) {
-        			if(EXPAX_ST)
+        			if(PrecisionChecker.EXPAX_DEBUG)
         				System.out.println("*** ENERJ_APPROX(assignopLocal=JCArrayAccess): " + repl.toString());
         		} else {
-        			if(EXPAX_ST)
+        			if(PrecisionChecker.EXPAX_DEBUG)
         				System.out.println("*** EXPAX_APPROX(assignopLocal=JCArrayAccess): " + repl.toString());
         		}
         	}
@@ -920,8 +883,6 @@ public class SimulationTranslator extends PrecisionReferencingTranslator {
                 name = ident.name.toString();
                 selected = sneakySelected(ident);
             }
-            if(EXPAX_ST)
-            	System.out.println("*** EXPAX_ST: call isApprox - assignopCall #3");
     		boolean approximate;
     		if (ENERJ)
     			approximate = isApprox(oldArg);
@@ -933,10 +894,10 @@ public class SimulationTranslator extends PrecisionReferencingTranslator {
     		}
     		if (approximate) {
         		if(ENERJ) {
-        			if(EXPAX_ST)
+        			if(PrecisionChecker.EXPAX_DEBUG)
         				System.out.println("*** ENERJ_APPROX(assignopLocal=JCFieldAccess): " + repl.toString());
         		} else {
-        			if(EXPAX_ST)
+        			if(PrecisionChecker.EXPAX_DEBUG)
         				System.out.println("*** EXPAX_APPROX(assignopLocal=JCFieldAccess): " + repl.toString());
         		}
         	}
@@ -962,8 +923,8 @@ public class SimulationTranslator extends PrecisionReferencingTranslator {
 
     @Override
     public void visitAssignop(JCTree.JCAssignOp node) {
-    	if (EXPAX_ST)
-        	System.out.println("*** EXPAX_ST: visitAssignop: tree = " + node.toString());
+    	if (PrecisionChecker.EXPAX_DEBUG)
+        	System.out.println("*** EXPAX_DEBUG[SimulationTranslator]: <visitAssignop> " + node.toString());
         lvalues.add(node.lhs);
         JCTree.JCExpression oldLhs = node.lhs;
 
@@ -1017,8 +978,8 @@ public class SimulationTranslator extends PrecisionReferencingTranslator {
     // Variable definitions: initial values instrumented as stores.
     @Override
     public void visitVarDef(JCTree.JCVariableDecl node) {
-    	if (EXPAX_ST) {
-        	System.out.println("*** EXPAX_ST: visitVarDef: tree = " + node.toString());
+    	if (PrecisionChecker.EXPAX_DEBUG) {
+        	System.out.println("*** EXPAX_DEBUG[SimulationTranslator]: <visitAssignop> " + node.toString());
     	}
     	
         super.visitVarDef(node);
@@ -1027,7 +988,6 @@ public class SimulationTranslator extends PrecisionReferencingTranslator {
 
         // Don't instrument statements inserted by ReferencingTranslator.
         if (replDecls.contains(node)) {
-        	if(EXPAX_ST) System.out.println("*** EXPAX_ST: Don't instrument statements inserted by ReferencingTranslator.");
             return;
         }
         

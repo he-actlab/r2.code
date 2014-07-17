@@ -14,16 +14,17 @@ public class ExpaxJchordResult {
 	
 	public static Set<String> approxClasses = new HashSet<String>();
 	
-	private static final boolean EXPAX_JCHORD = false;
+	private boolean EXPAX_DEBUG = false;
 	private static final String EXPAXSEP = "#";
 	private Set<ExpaxJchordResultOpEntry> resultOpSet;
 	private Set<ExpaxJchordResultStorageEntry> resultStorageSet;
 	private Set<ExpaxJchordResultParamsEntry> resultParamSet;
 	
-	public ExpaxJchordResult (){
+	public ExpaxJchordResult (boolean DEBUG){
 		 resultOpSet = new HashSet<ExpaxJchordResultOpEntry>();
 		 resultStorageSet = new HashSet<ExpaxJchordResultStorageEntry>();
 		 resultParamSet = new HashSet<ExpaxJchordResultParamsEntry>();
+		 this.EXPAX_DEBUG = DEBUG;
 	}
 	
 	public Set<ExpaxJchordResultOpEntry> getResultOpSet(){
@@ -53,7 +54,7 @@ public class ExpaxJchordResult {
 			read(br);
 			br.close();
 			fr.close();
-			print();
+			if(EXPAX_DEBUG)	print();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -62,39 +63,39 @@ public class ExpaxJchordResult {
 	public void read(BufferedReader br) {
 		try {
 			String sizeStr = br.readLine();
-			if(EXPAX_JCHORD)
-				System.out.println("*** EXPAX_JCHORD: analysis result size (op)= " + sizeStr);
+			if(EXPAX_DEBUG)
+				System.out.println("*** EXPAX_DEBUG[ExpaxJchordResult]: <read> analysis result size (op)= " + sizeStr);
 			for (int i=0; i<Integer.parseInt(sizeStr); i++){
 				String resultLine = br.readLine();
 				ExpaxJchordResultOpEntry result = new ExpaxJchordResultOpEntry();
 				StringTokenizer st = new StringTokenizer(resultLine,EXPAXSEP);
 				result.readInfo(st);
-				if(EXPAX_JCHORD)
-					System.out.println("*** EXPAX_JCHORD: result (op) = " + result.toString());
+				if(EXPAX_DEBUG)
+					System.out.println("*** EXPAX_DEBUG[ExpaxJchordResult]: <read> result (op) = " + result.toString());
 				resultOpSet.add(result);
 			}
 			sizeStr = br.readLine();
-			if(EXPAX_JCHORD)
-				System.out.println("*** EXPAX_JCHORD: analysis result size (storage)= " + sizeStr);
+			if(EXPAX_DEBUG)
+				System.out.println("*** EXPAX_DEBUG[ExpaxJchordResult]: <read> analysis result size (storage)= " + sizeStr);
 			for (int i=0; i<Integer.parseInt(sizeStr); i++){
 				String resultLine = br.readLine();
 				ExpaxJchordResultStorageEntry result = new ExpaxJchordResultStorageEntry();
 				StringTokenizer st = new StringTokenizer(resultLine,EXPAXSEP);
 				result.readInfo(st);
-				if(EXPAX_JCHORD)
-					System.out.println("*** EXPAX_JCHORD_READER: result (storage) = " + result.toString());
+				if(EXPAX_DEBUG)
+					System.out.println("*** EXPAX_DEBUG[ExpaxJchordResult]: <read> result (storage) = " + result.toString());
 				resultStorageSet.add(result);
 			}
 			sizeStr = br.readLine();
-			if(EXPAX_JCHORD)
-				System.out.println("*** EXPAX_JCHORD: analysis result size (params)= " + sizeStr);
+			if(EXPAX_DEBUG)
+				System.out.println("*** EXPAX_DEBUG[ExpaxJchordResult]: <read> analysis result size (params)= " + sizeStr);
 			for (int i=0; i<Integer.parseInt(sizeStr); i++){
 				String resultLine = br.readLine();
 				ExpaxJchordResultParamsEntry result = new ExpaxJchordResultParamsEntry();
 				StringTokenizer st = new StringTokenizer(resultLine,EXPAXSEP);
 				result.readInfo(st);
-				if(EXPAX_JCHORD)
-					System.out.println("*** EXPAX_JCHORD_READER: result (params) = " + result.toString());
+				if(EXPAX_DEBUG)
+					System.out.println("*** EXPAX_DEBUG[ExpaxJchordResult]: <read> result (params) = " + result.toString());
 				resultParamSet.add(result);
 			}
 		} catch (Exception e) {
@@ -103,9 +104,9 @@ public class ExpaxJchordResult {
 	}
 	
 	public void print(){
-		System.out.println("*** EXPAX_JCHORD: all = ");
+		System.out.println("*** EXPAX_DEBUG[ExpaxJchordResult]: all = ");
 		for(ExpaxJchordResultOpEntry entry : resultOpSet){
-			System.out.println("*** EXPAX_JCHORD: " + entry.toString());
+			System.out.println("*** EXPAX_DEBUG[ExpaxJchordResult]: " + entry.toString());
 		}
 	}
 	
@@ -203,35 +204,19 @@ public class ExpaxJchordResult {
  		}
 		
 		public void print(){
-			System.out.println("*** EXPAX_JCHORD: " + toString());
+			System.out.println("*** EXPAX_DEBUG[ExpaxJchordResultOpEntry]: <print> " + toString());
 		}
 
 		public boolean compareWithASTInfo(ExpaxASTNodeInfoEntry info) {
-			if(EXPAX_JCHORD)
-				info.print();
 			if (info.getClassName().equalsIgnoreCase(className)) {	
 				if(info.getMethName().equalsIgnoreCase(methName)) {
 					if(info.getRetTypeName().equalsIgnoreCase(retType)) {
 						if(info.getBytecodeOffset() == bytecodeOffset) {
-							if(EXPAX_JCHORD){
-								System.out.println("*** EXPAX_JCHORD: tree matched = " + toString());
-								System.out.println("*** EXPAX_JCHORD: jresult's tree tag = " + treeTag);
-								System.out.println("*** EXPAX_JCHORD: info's tree tag = " + info.getTreeTagStr());
-								System.out.println("*** EXPAX_JCHORD: expax approximate success!");
-							}
 							return true;
-						} else 
-							if(EXPAX_JCHORD)
-								System.out.println("*** EXPAX_JCHORD: bytecode offset unmatched = (AST)[" + info.getBytecodeOffset() + "] (jchord)[" + bytecodeOffset + "]\n" + toString());
-					} else
-						if(EXPAX_JCHORD)
-							System.out.println("*** EXPAX_JCHORD: ret type matched = (AST)[" + info.getRetTypeName() + "] vs. (jchord)[" + retType + "]\n" + toString());
-				} else
-					if(EXPAX_JCHORD)
-						System.out.println("*** EXPAX_JCHORD: method unmatched = (AST)[" + info.getMethName() + "] vs. (jchord)[" + methName + "]\n" + toString());
-			} else 
-				if(EXPAX_JCHORD)
-					System.out.println("*** EXPAX_JCHORD: class unmatched = (AST)[" + info.getClassName() + "] vs. (jchord)[" + className + "]\n" + toString());
+						} 
+					}
+				} 
+			} 
 			return false;
 		}
 	}
@@ -254,7 +239,7 @@ public class ExpaxJchordResult {
 			this.declClass = st.nextToken();
 			if(!ExpaxJchordResult.approxClasses.contains(declClass) && !declClass.equalsIgnoreCase("ARRAY")) {
 				ExpaxJchordResult.approxClasses.add(declClass);
-				if(EXPAX_JCHORD) System.out.println("*** EXPAX_JCHORD: " + declClass + " is added to approxClass");
+				if(EXPAX_DEBUG) System.out.println("*** EXPAX_DEBUG[ExpaxJchordResultStorageEntry]: " + declClass + " is added to approxClass");
 			}
 		}
 		
@@ -300,10 +285,8 @@ public class ExpaxJchordResult {
 			for (int i=0; i<charArr.length; i++) {
 				if (charArr[i] == '1'){
 					bitVector[i] = true;
-					if(EXPAX_JCHORD) System.out.println("*** EXPAX_JCHORD: (" + i + ") true");
 				} else {
 					bitVector[i] = false;
-					if(EXPAX_JCHORD) System.out.println("*** EXPAX_JCHORD: (" + i + ") false");
 				}
 			}
 		}

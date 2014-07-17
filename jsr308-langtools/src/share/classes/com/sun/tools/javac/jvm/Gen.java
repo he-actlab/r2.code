@@ -58,6 +58,8 @@ import static com.sun.tools.javac.tree.JCTree.Tag.BLOCK;
  */
 public class Gen extends JCTree.Visitor {
 	
+	// FIXME these debugging lines were used to investigate how the compiler generates bytecode
+	// they are now useless, but just in case, I'll keep it
     private static boolean EXPAX_GEN = false;
 	
     protected static final Context.Key<Gen> genKey =

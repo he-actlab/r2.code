@@ -1,0 +1,114 @@
+   [enerjc] *** EXPAX_APPROX(visitBinary): x * vec.x
+   [enerjc] *** EXPAX_APPROX(visitBinary): y * vec.y
+   [enerjc] *** EXPAX_APPROX(visitBinary): x * vec.x + y * vec.y
+   [enerjc] *** EXPAX_APPROX(visitBinary): z * vec.z
+   [enerjc] *** EXPAX_APPROX(visitBinary): x * vec.x + y * vec.y + z * vec.z
+   [enerjc] *** EXPAX_APPROX(visitBinary): y * otherZ
+   [enerjc] *** EXPAX_APPROX(visitBinary): z * otherY
+   [enerjc] *** EXPAX_APPROX(visitBinary): (y * otherZ) - (z * otherY)
+   [enerjc] *** EXPAX_APPROX(visitBinary): z * otherX
+   [enerjc] *** EXPAX_APPROX(visitBinary): x * otherZ
+   [enerjc] *** EXPAX_APPROX(visitBinary): (z * otherX) - (x * otherZ)
+   [enerjc] *** EXPAX_APPROX(visitBinary): x * otherY
+   [enerjc] *** EXPAX_APPROX(visitBinary): y * otherX
+   [enerjc] *** EXPAX_APPROX(visitBinary): (x * otherY) - (y * otherX)
+   [enerjc] *** EXPAX_APPROX(visitBinary): x - vec.x
+   [enerjc] *** EXPAX_APPROX(visitBinary): y - vec.y
+   [enerjc] *** EXPAX_APPROX(visitBinary): z - vec.z
+   [enerjc] *** EXPAX_APPROX(visitBinary): 37 * hash
+   [enerjc] *** EXPAX_APPROX(visitBinary): 37 * hash + Float.floatToIntBits((x))
+   [enerjc] *** EXPAX_APPROX(visitBinary): 37 * hash
+   [enerjc] *** EXPAX_APPROX(visitBinary): 37 * hash + Float.floatToIntBits((y))
+   [enerjc] *** EXPAX_APPROX(visitBinary): 37 * hash
+   [enerjc] *** EXPAX_APPROX(visitBinary): 37 * hash + Float.floatToIntBits((z))
+   [enerjc] *** EXPAX_APPROX(visitBinary): n1.dot(u0) + d1
+   [enerjc] *** EXPAX_APPROX(visitBinary): n1.dot(u1) + d1
+   [enerjc] *** EXPAX_APPROX(visitBinary): n1.dot(u2) + d1
+   [enerjc] *** EXPAX_APPROX(visitBinary): du0 * du1
+   [enerjc] *** EXPAX_APPROX(visitBinary): du0 * du2
+   [enerjc] *** EXPAX_APPROX(visitBinary): n2.dot(v0) + d2
+   [enerjc] *** EXPAX_APPROX(visitBinary): n2.dot(v1) + d2
+   [enerjc] *** EXPAX_APPROX(visitBinary): n2.dot(v2) + d2
+   [enerjc] *** EXPAX_APPROX(visitBinary): dv0 * dv1
+   [enerjc] *** EXPAX_APPROX(visitBinary): dv0 * dv2
+   [enerjc] *** EXPAX_APPROX(visitBinary): x0x1.x * x0x1.y
+   [enerjc] *** EXPAX_APPROX(visitBinary): y0y1.x * y0y1.y
+   [enerjc] *** EXPAX_APPROX(visitBinary): xx * yy
+   [enerjc] *** EXPAX_APPROX(visitBinary): abc.x * xxyy
+   [enerjc] *** EXPAX_APPROX(visitBinary): abc.y * x0x1.y
+   [enerjc] *** EXPAX_APPROX(visitBinary): abc.y * x0x1.y * yy
+   [enerjc] *** EXPAX_APPROX(visitBinary): tmp + abc.y * x0x1.y * yy
+   [enerjc] *** EXPAX_APPROX(visitBinary): abc.z * x0x1.x
+   [enerjc] *** EXPAX_APPROX(visitBinary): abc.z * x0x1.x * yy
+   [enerjc] *** EXPAX_APPROX(visitBinary): tmp + abc.z * x0x1.x * yy
+   [enerjc] *** EXPAX_APPROX(visitBinary): def.x * xxyy
+   [enerjc] *** EXPAX_APPROX(visitBinary): def.y * xx
+   [enerjc] *** EXPAX_APPROX(visitBinary): def.y * xx * y0y1.y
+   [enerjc] *** EXPAX_APPROX(visitBinary): tmp + def.y * xx * y0y1.y
+   [enerjc] *** EXPAX_APPROX(visitBinary): def.z * xx
+   [enerjc] *** EXPAX_APPROX(visitBinary): def.z * xx * y0y1.x
+   [enerjc] *** EXPAX_APPROX(visitBinary): tmp + def.z * xx * y0y1.x
+   [enerjc] *** EXPAX_APPROX(visitBinary): vv0 - vv2
+   [enerjc] *** EXPAX_APPROX(visitBinary): (vv0 - vv2) * d2
+   [enerjc] *** EXPAX_APPROX(visitBinary): vv1 - vv2
+   [enerjc] *** EXPAX_APPROX(visitBinary): (vv1 - vv2) * d2
+   [enerjc] *** EXPAX_APPROX(visitBinary): d2 - d0
+   [enerjc] *** EXPAX_APPROX(visitBinary): d2 - d1
+   [enerjc] *** EXPAX_APPROX(visitBinary): vv0 - vv1
+   [enerjc] *** EXPAX_APPROX(visitBinary): (vv0 - vv1) * d1
+   [enerjc] *** EXPAX_APPROX(visitBinary): vv2 - vv1
+   [enerjc] *** EXPAX_APPROX(visitBinary): (vv2 - vv1) * d1
+   [enerjc] *** EXPAX_APPROX(visitBinary): d1 - d0
+   [enerjc] *** EXPAX_APPROX(visitBinary): d1 - d2
+   [enerjc] *** EXPAX_APPROX(visitBinary): vv1 - vv0
+   [enerjc] *** EXPAX_APPROX(visitBinary): (vv1 - vv0) * d0
+   [enerjc] *** EXPAX_APPROX(visitBinary): vv2 - vv0
+   [enerjc] *** EXPAX_APPROX(visitBinary): (vv2 - vv0) * d0
+   [enerjc] *** EXPAX_APPROX(visitBinary): d0 - d1
+   [enerjc] *** EXPAX_APPROX(visitBinary): d0 - d2
+   [enerjc] *** EXPAX_APPROX(visitBinary): vv0 - vv1
+   [enerjc] *** EXPAX_APPROX(visitBinary): (vv0 - vv1) * d1
+   [enerjc] *** EXPAX_APPROX(visitBinary): vv2 - vv1
+   [enerjc] *** EXPAX_APPROX(visitBinary): (vv2 - vv1) * d1
+   [enerjc] *** EXPAX_APPROX(visitBinary): d1 - d0
+   [enerjc] *** EXPAX_APPROX(visitBinary): d1 - d2
+   [enerjc] *** EXPAX_APPROX(visitBinary): vv0 - vv2
+   [enerjc] *** EXPAX_APPROX(visitBinary): (vv0 - vv2) * d2
+   [enerjc] *** EXPAX_APPROX(visitBinary): vv1 - vv2
+   [enerjc] *** EXPAX_APPROX(visitBinary): (vv1 - vv2) * d2
+   [enerjc] *** EXPAX_APPROX(visitBinary): d2 - d0
+   [enerjc] *** EXPAX_APPROX(visitBinary): d2 - d1
+   [enerjc] *** EXPAX_APPROX(visitBinary): U1[i1] - U0[i1]
+   [enerjc] *** EXPAX_APPROX(visitBinary): U1[i0] - U0[i0]
+   [enerjc] *** EXPAX_APPROX(visitBinary): -a * U0[i0]
+   [enerjc] *** EXPAX_APPROX(visitBinary): b * U0[i1]
+   [enerjc] *** EXPAX_APPROX(visitBinary): -a * U0[i0] - b * U0[i1]
+   [enerjc] *** EXPAX_APPROX(visitBinary): a * V0[i0]
+   [enerjc] *** EXPAX_APPROX(visitBinary): b * V0[i1]
+   [enerjc] *** EXPAX_APPROX(visitBinary): a * V0[i0] + b * V0[i1]
+   [enerjc] *** EXPAX_APPROX(visitBinary): a * V0[i0] + b * V0[i1] + c
+   [enerjc] *** EXPAX_APPROX(visitBinary): U2[i1] - U1[i1]
+   [enerjc] *** EXPAX_APPROX(visitBinary): U2[i0] - U1[i0]
+   [enerjc] *** EXPAX_APPROX(visitBinary): -a * U1[i0]
+   [enerjc] *** EXPAX_APPROX(visitBinary): b * U1[i1]
+   [enerjc] *** EXPAX_APPROX(visitBinary): -a * U1[i0] - b * U1[i1]
+   [enerjc] *** EXPAX_APPROX(visitBinary): a * V0[i0]
+   [enerjc] *** EXPAX_APPROX(visitBinary): b * V0[i1]
+   [enerjc] *** EXPAX_APPROX(visitBinary): a * V0[i0] + b * V0[i1]
+   [enerjc] *** EXPAX_APPROX(visitBinary): a * V0[i0] + b * V0[i1] + c
+   [enerjc] *** EXPAX_APPROX(visitBinary): U0[i1] - U2[i1]
+   [enerjc] *** EXPAX_APPROX(visitBinary): U0[i0] - U2[i0]
+   [enerjc] *** EXPAX_APPROX(visitBinary): -a * U2[i0]
+   [enerjc] *** EXPAX_APPROX(visitBinary): b * U2[i1]
+   [enerjc] *** EXPAX_APPROX(visitBinary): -a * U2[i0] - b * U2[i1]
+   [enerjc] *** EXPAX_APPROX(visitBinary): a * V0[i0]
+   [enerjc] *** EXPAX_APPROX(visitBinary): b * V0[i1]
+   [enerjc] *** EXPAX_APPROX(visitBinary): a * V0[i0] + b * V0[i1]
+   [enerjc] *** EXPAX_APPROX(visitBinary): a * V0[i0] + b * V0[i1] + c
+   [enerjc] *** EXPAX_APPROX(visitBinary): Ay * Bx
+   [enerjc] *** EXPAX_APPROX(visitBinary): aX * By
+   [enerjc] *** EXPAX_APPROX(visitBinary): Ay * Bx - aX * By
+   [enerjc] *** EXPAX_APPROX(visitBinary): 37 * hash
+   [enerjc] *** EXPAX_APPROX(visitBinary): 37 * hash + Float.floatToIntBits((x))
+   [enerjc] *** EXPAX_APPROX(visitBinary): 37 * hash
+   [enerjc] *** EXPAX_APPROX(visitBinary): 37 * hash + Float.floatToIntBits((y))

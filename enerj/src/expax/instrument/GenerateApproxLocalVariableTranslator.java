@@ -22,8 +22,6 @@ import enerj.jchord.result.ExpaxJchordResult;
 import enerj.jchord.result.ExpaxJchordResult.ExpaxJchordResultOpEntry;
 
 public class GenerateApproxLocalVariableTranslator extends HelpfulTreeTranslator<PrecisionChecker>{
-
-	private static final boolean EXPAX_GALVT = true;
 	
 	public int count = 0;
 	public String curClassName = " ";
@@ -37,7 +35,7 @@ public class GenerateApproxLocalVariableTranslator extends HelpfulTreeTranslator
 	}
 	
 	public void visitUnary(JCTree.JCUnary node) {
-		if(EXPAX_GALVT) System.out.println("*** EXPAX_GALVT: visitUnary");
+		if(PrecisionChecker.EXPAX_DEBUG) System.out.println("*** EXPAX_DEBUG[GenerateApproxLocalVariableTranslator]: <visitUnary> start");
 		boolean approx = expaxIsApprox(node);
 		if(approx) {
 			if(node.arg instanceof JCTree.JCIdent) {
@@ -47,14 +45,14 @@ public class GenerateApproxLocalVariableTranslator extends HelpfulTreeTranslator
 					approxNameSet.put(curMethName, newSet);
 				}
 				(approxNameSet.get(curMethName)).add(ident.getName());
-				if(EXPAX_GALVT) System.out.println("*** EXPAX_GALVT: (visitUnary) " + ident.getName().toString() + " is added to approxNameSet (method=" + curMethName + ")");
+				if(PrecisionChecker.EXPAX_DEBUG) System.out.println("*** EXPAX_DEBUG[GenerateApproxLocalVariableTranslator]: <visitUnary> add to approxNameSet = " + ident.getName().toString() + " is added to approxNameSet (method=" + curMethName + ")");
 			}
 		}
 		super.visitUnary(node);
 	}
 	
 	public void visitAssign(JCTree.JCAssign node) {
-		if(EXPAX_GALVT) System.out.println("*** EXPAX_GALVT: visitAssign");
+		if(PrecisionChecker.EXPAX_DEBUG) System.out.println("*** EXPAX_DEBUG[GenerateApproxLocalVariableTranslator]: <visitAssign> start");
 		boolean approx = expaxIsApprox(node);
 		if(approx){
 			JCTree.JCExpression lhs = node.lhs;
@@ -65,14 +63,14 @@ public class GenerateApproxLocalVariableTranslator extends HelpfulTreeTranslator
 					approxNameSet.put(curMethName, newSet);
 				}
 				(approxNameSet.get(curMethName)).add(ident.getName());
-				if(EXPAX_GALVT) System.out.println("*** EXPAX_GALVT: (visitAssign) " + ident.getName().toString() + " is added to approxNameSet (method=" + curMethName + ")");
+				if(PrecisionChecker.EXPAX_DEBUG) System.out.println("*** EXPAX_DEBUG[GenerateApproxLocalVariableTranslator]: <visitAssign> add to approxNameSet = " + ident.getName().toString() + " is added to approxNameSet (method=" + curMethName + ")");
 			}
 		}
 		super.visitAssign(node);
 	}
 	
 	public void visitAssignop(JCTree.JCAssignOp node) {
-		if(EXPAX_GALVT) System.out.println("*** EXPAX_GALVT: visitAssignop");
+		if(PrecisionChecker.EXPAX_DEBUG) System.out.println("*** EXPAX_DEBUG[GenerateApproxLocalVariableTranslator]: <visitAssignop> start");
 		boolean approx = expaxIsApprox(node);
 		if(approx){
 			JCTree.JCExpression lhs = node.lhs;
@@ -83,10 +81,24 @@ public class GenerateApproxLocalVariableTranslator extends HelpfulTreeTranslator
 					approxNameSet.put(curMethName, newSet);
 				}
 				(approxNameSet.get(curMethName)).add(ident.getName());
-				if(EXPAX_GALVT) System.out.println("*** EXPAX_GALVT: (visitAssignop) " + ident.getName().toString() + " is added to approxNameSet (method=" + curMethName + ")");
+				if(PrecisionChecker.EXPAX_DEBUG) System.out.println("*** EXPAX_DEBUG[GenerateApproxLocalVariableTranslator]: <visitAssignop> add to approxNameSet = " + ident.getName().toString() + " is added to approxNameSet (method=" + curMethName + ")");
 			}
 		}
 		super.visitAssignop(node);
+	}
+	
+	public void visitVarDef(JCTree.JCVariableDecl node) {
+		if(PrecisionChecker.EXPAX_DEBUG) System.out.println("*** EXPAX_DEBUG[GenerateApproxLocalVariableTranslator]: <visitVarDef> start");
+		boolean approx = expaxIsApprox(node);
+		if(approx){
+			if (!approxNameSet.containsKey(curMethName)) {
+				Set<Name> newSet = new HashSet<Name>();
+				approxNameSet.put(curMethName, newSet);
+			}
+			(approxNameSet.get(curMethName)).add(node.getName());
+			if(PrecisionChecker.EXPAX_DEBUG) System.out.println("*** EXPAX_DEBUG[GenerateApproxLocalVariableTranslator]: <visitVarDef> add to approxNameSet = " + node.getName().toString() + " is added to approxNameSet (method=" + curMethName + ")");
+		}
+		super.visitVarDef(node);
 	}
 	
 	/** 
@@ -95,44 +107,43 @@ public class GenerateApproxLocalVariableTranslator extends HelpfulTreeTranslator
      * (3) If there is the node, return true, otherwise return false
      */
     public boolean expaxIsApprox(JCTree tree) {
-    	if (EXPAX_GALVT)
-    		System.out.println("*** EXPAX_GALVT: expaxIsApprox - tree = " + tree.toString());
+    	if (PrecisionChecker.EXPAX_DEBUG)
+    		System.out.println("*** EXPAX_DEBUG[GenerateApproxLocalVariableTranslator]: <expaxIsApprox> start - tree = " + tree.toString());
     	if(PrecisionChecker.expaxBcInfo == null)
     		throw new RuntimeException("Error! expaxBcInfo is null");
     	if(PrecisionChecker.expaxJchordResult == null)
     		throw new RuntimeException("Error! expaxJchordResult is null");
-    	
-    	if(tree instanceof JCTree.JCIdent){
-    		String typeStr = ((JCTree.JCIdent)tree).type.toString();
-    		if(ExpaxJchordResult.approxClasses.contains(typeStr)){
-    			System.out.println("*** EXPAX_GALVT: " + typeStr + " is one of approx classes");
-    			return true;
-    		}
-    	}
+   
     	Set<ExpaxASTNodeInfoEntry> bcInfoSet = PrecisionChecker.expaxBcInfo.getInfoSet();
     	Set<ExpaxJchordResultOpEntry> jResultSet = PrecisionChecker.expaxJchordResult.getResultOpSet();
     	// find a bc info generated in 1st phase compilation
+    	boolean astFound = false;
     	for (ExpaxASTNodeInfoEntry info : bcInfoSet) {    		
     		if (info.compareWithTree(tree, curClassName, curMethName, curRetTypeName)) {
-    			if (EXPAX_GALVT)
-    				System.out.println("*** EXPAX_GALVT: AST info matched = " + info.toString());
+    			astFound = true;
+    			if (PrecisionChecker.EXPAX_DEBUG)
+    				System.out.println("*** EXPAX_DEBUG[PrecisionReferencingTranslator]: <expaxIsApprox> [MATCHED] AST info b/w 1st and 2nd compilation paths");
     			// found a same tree node, now match an analysis result with this node
     			for(ExpaxJchordResultOpEntry result : jResultSet) {
 					//found a matched node
     				if (result.compareWithASTInfo(info)){
-    					if (EXPAX_GALVT) {
+    					if (PrecisionChecker.EXPAX_DEBUG) {
 	    					count ++;
-	    					System.out.println("*** EXPAX_GALVT: expaxIsApprox return true = " + count);
-	    					System.out.println("*** EXPAX_GALVT: info = " + info.toString());
-	    					System.out.println("*** EXPAX_GALVT: jchord result = " + result.toString() + " ");
+    						System.out.println("*** EXPAX_DEBUG[PrecisionReferencingTranslator]: <expaxIsApprox> [MATCHED] jchord entry with AST info");
+    						System.out.println("*** EXPAX_DEBUG[PrecisionReferencingTranslator]: <expaxIsApprox> return true! count[" + count + "]");
     					}
     					return true;
     				}
     			}
     		}
     	}
-    	if (EXPAX_GALVT)
-    		System.out.println("*** EXPAX_GALVT: expaxIsApprox return false!");
+    	if(PrecisionChecker.EXPAX_DEBUG){
+	    	if(!astFound)
+	    		System.out.println("*** EXPAX_DEBUG[PrecisionReferencingTranslator]: <expaxIsApprox> [NOT MATCHED] any AST info NOT matched b/w 1st and 2nd compilation paths");
+	    	else
+	    		System.out.println("*** EXPAX_DEBUG[PrecisionReferencingTranslator]: <expaxIsApprox> [NOT MATCHED] any jchord entry NOT matched with AST info");
+	    	System.out.println("*** EXPAX_DEBUG[PrecisionReferencingTranslator]: <expaxIsApprox> return false!");
+    	}
     	return false;
     }
     
@@ -140,20 +151,18 @@ public class GenerateApproxLocalVariableTranslator extends HelpfulTreeTranslator
     public void visitClassDef(JCTree.JCClassDecl node) {
     	if (node.getKind().toString().equalsIgnoreCase("CLASS")) {
     		curClassName = node.sym.toString();
-    		if (EXPAX_GALVT)
-    			System.out.println("*** EXPAX_PRT: class name is changed to = " + curClassName);
+    		if (PrecisionChecker.EXPAX_DEBUG)
+    			System.out.println("*** EXPAX_DEBUG[GenerateApproxLocalVariableTranslator]: <visitClassDef> class name is changed to = " + curClassName);
     	}
     	curMethName = " ";
-		if(EXPAX_GALVT)
-			System.out.println("*** EXPAX_RPT: method name is changed to = " + curMethName);
+		if(PrecisionChecker.EXPAX_DEBUG)
+			System.out.println("*** EXPAX_DEBUG[GenerateApproxLocalVariableTranslator]: <visitClassDef> method name is changed to = " + curMethName);
     	curRetTypeName = "void";
     	super.visitClassDef(node);
     }
 
     /** get curMethName and curRetTypeName */
     public void visitMethodDef(JCTree.JCMethodDecl node) {
-    	if(EXPAX_GALVT)
-    		System.out.println("*** EXPAX_PRT method = " + node.toString());
     	MethodSymbol meth = node.sym;
         curMethName = node.getName().toString();
         if(!(curMethName.equalsIgnoreCase("<init>") || curMethName.equalsIgnoreCase("<clinit>"))){
@@ -166,7 +175,7 @@ public class GenerateApproxLocalVariableTranslator extends HelpfulTreeTranslator
         	String params = node.sym.toString().substring(index);
         	curMethName += params;
         }
-        if(EXPAX_GALVT) System.out.println("*** EXPAX_PRT: method name is changed to " + curMethName);
+        if(PrecisionChecker.EXPAX_DEBUG) System.out.println("*** EXPAX_DEBUG[GenerateApproxLocalVariableTranslator]: <visitMethodDef>: method name is changed to " + curMethName);
         if(meth.getReturnType() != null)
         	curRetTypeName = meth.getReturnType().toString();
         else

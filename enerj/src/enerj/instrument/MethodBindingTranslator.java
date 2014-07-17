@@ -44,8 +44,6 @@ import enerj.lang.Approx;
 // return-type overloading (bidirectional typing).
 public class MethodBindingTranslator extends HelpfulTreeTranslator<PrecisionChecker> {
 	
-	private static final boolean EXPAX_MT = false;
-	
     public MethodBindingTranslator(PrecisionChecker checker,
                                    ProcessingEnvironment env,
                                    TreePath p,
@@ -74,24 +72,22 @@ public class MethodBindingTranslator extends HelpfulTreeTranslator<PrecisionChec
     public void visitClassDef(JCTree.JCClassDecl node) {
     	if (node.getKind().toString().equalsIgnoreCase("CLASS")) {
     		curClassName = node.sym.toString();
-    		if(EXPAX_MT)
-    			System.out.println("*** EXPAX_MT: class name is changed to = " + curClassName);
+    		if(PrecisionChecker.EXPAX_DEBUG)
+    			System.out.println("*** EXPAX_DEBUG[MethodBindingTranslator]: <visitClassDef> class name is changed to = " + curClassName);
     	}
     	curMethName = " ";
-		if(EXPAX_MT)
-			System.out.println("*** EXPAX_RPT: method name is changed to = " + curMethName);
+		if(PrecisionChecker.EXPAX_DEBUG)
+			System.out.println("*** EXPAX_DEBUG[MethodBindingTranslator]: <visitClassDef> method name is changed to = " + curMethName);
     	curRetTypeName = "void";
     	super.visitClassDef(node);
     }
     
-    /** 
-     * (1) Find a bytecode info by matching {expaxBcInfo} and the current tree node
-     * (2) Find an analysis result corressponding to the tree node. 
-     * (3) If there is the node, return true, otherwise return false
+    /**
+     * It'll be only needed for visitAssign in this translator
      */
-    public boolean expaxIsApprox(JCTree tree) {
-    	if(EXPAX_MT)
-    		System.out.println("*** EXPAX_MT: expaxIsApprox - tree = " + tree.toString());
+    public boolean isApprox(JCTree tree) {
+    	if(PrecisionChecker.EXPAX_DEBUG)
+    		System.out.println("*** EXPAX_DEBUG[MethodBindingTranslator]: <isApprox> start - tree = " + tree.toString());
     	if(PrecisionChecker.expaxBcInfo == null)
     		throw new RuntimeException("Error! expaxBcInfo is null");
     	if(PrecisionChecker.expaxJchordResult == null)
@@ -101,25 +97,33 @@ public class MethodBindingTranslator extends HelpfulTreeTranslator<PrecisionChec
     	Set<ExpaxJchordResultOpEntry> jResultSet = PrecisionChecker.expaxJchordResult.getResultOpSet();
     	
     	// find a bc info generated in 1st phase compilation
+    	boolean astFound = false;
     	for (ExpaxASTNodeInfoEntry info : bcInfoSet) {    		
     		if (info.compareWithTree(tree, curClassName, curMethName, curRetTypeName)) {
-    			if(EXPAX_MT)
-    				System.out.println("*** EXPAX_MT: AST info matched");
+    			astFound = true;
+    			if(PrecisionChecker.EXPAX_DEBUG)
+    				System.out.println("*** EXPAX_DEBUG[MethodBindingTranslator]: <isApprox> [MATCHED] AST info b/w 1st and 2nd compilation paths");
     			// found a same tree node, now match an analysis result with this node
     			for(ExpaxJchordResultOpEntry result : jResultSet) {
 					//found a matched node
     				if (result.compareWithASTInfo(info)){
     					count ++;
-    					if(EXPAX_MT){
-	    					System.out.println("*** EXPAX_MT: expaxIsApprox return true = " + count);
-	    					System.out.println("*** EXPAX_MT: jchord result = " + result.toString());
+    					if(PrecisionChecker.EXPAX_DEBUG){
+    						System.out.println("*** EXPAX_DEBUG[MethodBindingTranslator]: <isApprox> [MATCHED] jchord entry with AST info");
+    						System.out.println("*** EXPAX_DEBUG[MethodBindingTranslator]: <isApprox> return true! count[" + count + "]");
     					}
     					return true;
     				}
     			}
     		}
     	}
-    	System.out.println("*** EXPAX_MT: expaxIsApprox return false!");
+    	if(PrecisionChecker.EXPAX_DEBUG){
+	    	if(!astFound)
+	    		System.out.println("*** EXPAX_DEBUG[MethodBindingTranslator]: <isApprox> [NOT MATCHED] any AST info NOT matched b/w 1st and 2nd compilation paths");
+	    	else
+	    		System.out.println("*** EXPAX_DEBUG[MethodBindingTranslator]: <isApprox> [NOT MATCHED] any jchord entry NOT matched with AST info");
+	    	System.out.println("*** EXPAX_DEBUG[MethodBindingTranslator]: <isApprox> return false!");
+    	}
     	return false;
     }
     
@@ -139,7 +143,8 @@ public class MethodBindingTranslator extends HelpfulTreeTranslator<PrecisionChec
 					ctxApprox = true;
 				}
 			} else {
-				ctxApprox = expaxIsApprox(tree);
+				// TODO do we need this?
+				ctxApprox = isApprox(tree);
 			}
 
 			tree.rhs = translate(tree.rhs);
@@ -168,20 +173,17 @@ public class MethodBindingTranslator extends HelpfulTreeTranslator<PrecisionChec
 
 		// check whether the lhs is approximate
 		if(ENERJ) {
-			if(EXPAX_MT)
-				System.out.println("*** EXPAX_MT: ENERJ");
 			if (lhs.hasAnnotation(Approx.class)) {
 				ctxApprox = true;
-				if(EXPAX_MT)
-    				System.out.println("*** ENERJ_APPROX: " + tree.toString());
+				if(PrecisionChecker.EXPAX_DEBUG)
+					System.out.println("*** EXPAX_DEBUG[MethodBindingTranslator]: <visitVarDef> " + tree.toString());
 			}
 		} else {
-			if(EXPAX_MT)
-				System.out.println("*** EXPAX_MT: EXPAX");
-			ctxApprox = expaxIsApprox(tree);
+			// FIXME Do we need this part? ExpAX doesn't take care of @Context of EnerJ anyway.. 
+			ctxApprox = isApprox(tree);
 			if(ctxApprox) {
-				if(EXPAX_MT)
-    				System.out.println("*** EXPAX_APPROX: " + tree.toString());
+				if(PrecisionChecker.EXPAX_DEBUG)
+					System.out.println("*** EXPAX_DEBUG[MethodBindingTranslator]: <visitVarDef> " + tree.toString());
 			}
 		}
 
@@ -338,8 +340,8 @@ public class MethodBindingTranslator extends HelpfulTreeTranslator<PrecisionChec
 
     @Override
     public void visitMethodDef(JCTree.JCMethodDecl tree) {
-    	if(EXPAX_MT)
-    		System.out.println("*** EXPAX_MT: tree = " + tree.toString());
+    	if(PrecisionChecker.EXPAX_DEBUG)
+    		System.out.println("*** EXPAX_DEBUG[MethodBindingTranslator]: <visitMethodDef> tree = " + tree.toString());
     	MethodSymbol meth = tree.sym;
         curMethName = tree.getName().toString();
         if(!(curMethName.equalsIgnoreCase("<init>") || curMethName.equalsIgnoreCase("<clinit>"))){
@@ -352,7 +354,7 @@ public class MethodBindingTranslator extends HelpfulTreeTranslator<PrecisionChec
         	String params = tree.sym.toString().substring(index);
         	curMethName += params;
         }
-        if(EXPAX_MT) System.out.println("*** EXPAX_MT: method name is changed to " + curMethName);
+        if(PrecisionChecker.EXPAX_DEBUG) System.out.println("*** EXPAX_DEBUG[MethodBindingTranslator]: <visitMethodDef> method name is changed to " + curMethName);
         if(meth.getReturnType() != null)
         	curRetTypeName = meth.getReturnType().toString();
         else

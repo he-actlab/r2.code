@@ -29,7 +29,6 @@ import com.sun.tools.javac.code.*;
 import com.sun.tools.javac.code.Symbol.*;
 import com.sun.tools.javac.code.Type.*;
 import com.sun.tools.javac.jvm.Code.*;
-import com.sun.tools.javac.jvm.expax.ExpaxASTNodeInfo;
 import com.sun.tools.javac.tree.JCTree;
 import com.sun.tools.javac.util.Assert;
 
@@ -285,17 +284,14 @@ public class Items {
         }
 
         void duplicate() {
-//        	System.out.println("*** EXPAX_TEST_GEN: StackItem.duplicate()");
             code.emitop0(width() == 2 ? dup2 : dup);
         }
 
         void drop() {
-//        	System.out.println("*** EXPAX_TEST_GEN: StackItem.drop()");
             code.emitop0(width() == 2 ? pop2 : pop);
         }
 
         void stash(int toscode) {
-//        	System.out.println("*** EXPAX_TEST_GEN: StackItem.drop()");
             code.emitop0(
                 (width() == 2 ? dup_x2 : dup_x1) + 3 * (Code.width(toscode) - 1));
         }
@@ -318,28 +314,23 @@ public class Items {
         }
 
         Item load() {
-//        	System.out.println("*** EXPAX_TEST_GEN: IndexedItem.load()");
             code.emitop0(iaload + typecode);
             return stackItem[typecode];
         }
 
         void store() {
-//        	System.out.println("*** EXPAX_TEST_GEN: IndexedItem.store()");
             code.emitop0(iastore + typecode);
         }
 
         void duplicate() {
-//        	System.out.println("*** EXPAX_TEST_GEN: IndexedItem.duplicate()");
             code.emitop0(dup2);
         }
 
         void drop() {
-//        	System.out.println("*** EXPAX_TEST_GEN: IndexedItem.drop()");
             code.emitop0(pop2);
         }
 
         void stash(int toscode) {
-//        	System.out.println("*** EXPAX_TEST_GEN: IndexedItem.stash()");
             code.emitop0(dup_x2 + 3 * (Code.width(toscode) - 1));
         }
 
@@ -366,7 +357,6 @@ public class Items {
         }
 
         Item load() {
-//        	System.out.println("*** EXPAX_TEST_GEN: SelfItem.load()");
             code.emitop0(aload_0);
             return stackItem[typecode];
         }
@@ -396,7 +386,6 @@ public class Items {
         }
 
         Item load() {
-//        	System.out.println("*** EXPAX_TEST_GEN: LocalItem.load()");
             if (reg <= 3)
                 code.emitop0(iload_0 + Code.truncate(typecode) * 4 + reg);
             else
@@ -405,7 +394,6 @@ public class Items {
         }
 
         void store() {
-//        	System.out.println("*** EXPAX_TEST_GEN: LocalItem.store()");
             if (reg <= 3)
                 code.emitop0(istore_0 + Code.truncate(typecode) * 4 + reg);
             else
@@ -555,7 +543,6 @@ public class Items {
         }
 
         Item load() {
-//        	System.out.println("*** EXPAX_TEST_GEN: ImmediateItem.load()");
             switch (typecode) {
             case INTcode: case BYTEcode: case SHORTcode: case CHARcode:
                 int ival = ((Number)value).intValue();
@@ -734,7 +721,6 @@ public class Items {
         }
 
         Item load() {
-//        	System.out.println("*** EXPAX_TEST_GEN: CondItem.load() - tree.toString() = " + tree.toString());
             Chain trueChain = null;
             Chain falseChain = jumpFalse();
             if (!isFalse()) {
