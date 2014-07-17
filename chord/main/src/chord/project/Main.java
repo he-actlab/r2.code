@@ -70,8 +70,9 @@ public class Main {
             program.printAllClasses();
         String[] printClasses = Utils.toArray(Config.printClasses);
         if (printClasses.length > 0) {
-            for (String className : printClasses)
+            for (String className : printClasses){
                 program.printClass(className);
+            }
         }
         String[] analysisNames = Utils.toArray(Config.runAnalyses);
         if (analysisNames.length > 0) {

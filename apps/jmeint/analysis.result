@@ -1,451 +1,578 @@
-416
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#605#148: MOVE_F R218, T217
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#29#11: ALOAD_F T27, R1, R4
-com.jme.math.Vector3f#toString()#java.lang.String#13#6: GETFIELD_F T8, R0, .x
-com.jme.math.Vector2f#hashCode()#int#15#5: ADD_I T10, T7, T9
-com.jme.math.Vector3f#cross()#com.jme.math.Vector3f#6#2: GETFIELD_F T4, R1, .y
-com.jme.math.Vector3f#<clinit>()#void#32#16: MOVE_F T16, FConst: 0.0
-com.jme.math.Vector3f#cross(float,float,float,)#com.jme.math.Vector3f#40#15: MUL_F T21, T20, R3
-com.jme.math.Vector3f#<init>()#void#8#2: MOVE_F T1, FConst: 0.0
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#852#229: MUL_F T269, T267, T268
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#161#62: MOVE_F R78, T77
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#46#17: ALOAD_F T33, R0, R4
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#168#63: ALOAD_F T79, R0, R4
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#797#213: MUL_F T255, T253, T254
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#870#234: GETFIELD_F T273, R45, .x
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#8#3: SUB_F T19, T17, T18
-com.jme.math.Vector3f#toArray(float[])#float[]#18#6: GETFIELD_F T5, R0, .y
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#307#32: SUB_F T47, R5, R3
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#204#59: PUTFIELD_F R9, .y, T54
-com.jme.math.Vector3f#cross()#com.jme.math.Vector3f#2#1: GETFIELD_F T3, R1, .x
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#141#53: SUB_F T69, T67, T68
-com.jme.math.Vector3f#dot()#float#16#2: GETFIELD_F T7, R0, .x
-com.jme.math.Vector3f#<init>()#void#12#8: MOVE_F T6, T4
-com.jme.intersection.Intersection#edgeEdgeTest(float[],float[],float[],int,int,float,float)#boolean#25#10: ALOAD_F T24, R1, R3
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#299#31: PUTFIELD_F R8, .z, T46
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#801#215: ADD_F T257, R252, T256
-com.jme.math.Vector3f#subtract()#com.jme.math.Vector3f#40#14: GETFIELD_F T13, R0, .z
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#118#65: SUB_F T28, R2, R1
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#176#66: MUL_F T82, R71, T81
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#849#228: GETFIELD_F T268, R45, .y
-com.jme.math.Vector3f#<init>(float,float,float)#void#6#2: PUTFIELD_F R0, .x, R1
-com.jme.intersection.Intersection#edgeEdgeTest(float[],float[],float[],int,int,float,float)#boolean#57#21: MUL_F T33, R10, R11
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#602#147: GETFIELD_F T217, R0, .x
-com.jme.math.Vector3f#subtract()#com.jme.math.Vector3f#18#7: GETFIELD_F T8, R1, .x
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#770#207: MOVE_F R51, T249
-com.jme.math.Vector2f#<init>()#void#8#5: PUTFIELD_F T2, .y, T1
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#116#44: ADD_F T60, T57, T59
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#564#160: MOVE_F R206, T205
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#175#51: MUL_F T50, T49, R3
-com.jme.intersection.Intersection#coplanarTriTri(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#48#17: PUTFIELD_F R23, .y, T33
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#54#76: PUTFIELD_F R8, .y, T20
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#617#152: MOVE_F R222, T221
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#107#40: ALOAD_F T56, R0, R4
-com.jme.math.Vector2f#equals(java.lang.Object)#boolean#42#11: GETFIELD_F T13, R4, .y
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#131#50: MOVE_F R66, T65
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#779#209: MUL_F T251, T250, R51
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#115#43: MUL_F T59, R48, T58
-com.jme.intersection.Intersection#edgeEdgeTest(float[],float[],float[],int,int,float,float)#boolean#36#14: ALOAD_F T27, R1, R4
-com.jme.math.Vector3f#hashCode()#int#47#19: MOVE_I R24, T23
-com.jme.intersection.Intersection#edgeEdgeTest(float[],float[],float[],int,int,float,float)#boolean#18#8: MOVE_F R10, T22
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#238#41: SUB_F T38, R2, R1
-com.jme.intersection.Intersection#edgeEdgeTest(float[],float[],float[],int,int,float,float)#boolean#26#11: SUB_F T25, T23, T24
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#826#223: GETFIELD_F T263, R44, .x
-com.jme.math.Vector2f#<init>()#void#7#2: MOVE_F T1, FConst: 0.0
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#125#47: ALOAD_F T63, R1, R5
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#754#202: GETFIELD_F T246, R45, .x
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#203#58: SUB_F T54, R3, R5
-com.jme.math.Vector3f#<init>(float,float,float)#void#11#3: PUTFIELD_F R0, .y, R2
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#593#169: GETFIELD_F T215, R5, .y
-com.jme.intersection.Intersection#edgeEdgeTest(float[],float[],float[],int,int,float,float)#boolean#44#17: MUL_F T29, R6, R9
-com.jme.intersection.Intersection#edgeEdgeTest(float[],float[],float[],int,int,float,float)#boolean#62#22: MUL_F T34, R9, R12
-com.jme.math.Vector3f#cross(float,float,float,)#com.jme.math.Vector3f#27#11: MOVE_F R9, T17
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#570#162: MOVE_F R208, T207
-com.jme.intersection.Intersection#edgeEdgeTest(float[],float[],float[],int,int,float,float)#boolean#134#43: SUB_F T49, T47, T48
-com.jme.math.Vector2f#hashCode()#int#31#12: ADD_I T17, R12, T16
-com.jme.math.Vector2f#hashCode()#int#22#8: MUL_I T13, IConst: 37, R12
-com.jme.math.Vector3f#cross(float,float,float,)#com.jme.math.Vector3f#42#17: MOVE_F R10, T22
-com.jme.math.Vector2f#<init>()#void#7#4: MOVE_F T3, T1
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#185#54: MUL_F T52, T51, R3
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#160#61: SUB_F T77, T74, T76
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#823#222: ASTORE_F T262, R12, IConst: 1
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#81#31: NEG_F T47, T46
-com.jme.math.Vector2f#hashCode()#int#16#6: ADD_I T11, R6, T10
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#293#82: MOVE_F R130, T129
-com.jme.math.Vector3f#dot()#float#32#7: MUL_F T12, T10, T11
-com.jme.math.Vector2f#equals(java.lang.Object)#boolean#26#7: GETFIELD_F T10, R4, .x
-com.jme.math.Vector3f#dot()#float#23#4: MUL_F T9, T7, T8
-com.jme.math.Vector3f#equals(java.lang.Object)#boolean#22#6: GETFIELD_F T9, R0, .x
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#38#15: SUB_F T31, T28, T30
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#815#218: GETFIELD_F T259, R43, .x
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#61#77: SUB_F T21, R1, R2
-com.jme.intersection.Intersection#edgeAgainstTriEdges(float[],float[],float[],float[],float[],int,int)#boolean#19#7: SUB_F T17, T15, T16
-com.jme.intersection.Intersection#<clinit>()#void#3#1: PUTSTATIC_D DConst: 1.0E-12, .EPSILON
-com.jme.math.Vector3f#equals(java.lang.Object)#boolean#58#15: GETFIELD_F T16, R4, .z
-com.jme.intersection.Intersection#edgeEdgeTest(float[],float[],float[],int,int,float,float)#boolean#6#3: SUB_F T19, T17, T18
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#100#61: PUTFIELD_F R8, .x, R1
-com.jme.intersection.Intersection#edgeEdgeTest(float[],float[],float[],int,int,float,float)#boolean#64#24: MOVE_F R36, T35
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#107#62: SUB_F T26, R0, R1
-com.jme.math.Vector3f#<clinit>()#void#45#22: MOVE_F T20, FConst: 0.0
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#529#178: MOVE_F R198, T197
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#142#54: NEG_F T70, T69
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#98#37: MUL_F T53, R48, T52
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#3#1: ALOAD_F T17, R2, R5
-com.jme.intersection.Intersection#edgeEdgeTest(float[],float[],float[],int,int,float,float)#boolean#16#6: ALOAD_F T21, R2, R4
-com.jme.math.Vector3f#cross(float,float,float,)#com.jme.math.Vector3f#36#14: GETFIELD_F T20, R0, .x
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#821#220: MUL_F T261, T260, R50
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#73#80: SUB_F T23, R5, R3
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#611#150: MOVE_F R220, T219
-com.jme.math.Vector3f#<clinit>()#void#19#10: MOVE_F T12, FConst: 0.0
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#457#131: GETFIELD_F T177, R169, .z
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#822#221: ADD_F T262, R252, T261
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#546#183: GETFIELD_F T203, R5, .z
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#596#170: MOVE_F R216, T215
-com.jme.math.Vector3f#toString()#java.lang.String#25#10: GETFIELD_F T12, R0, .y
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#130#68: SUB_F T30, R4, R3
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#434#124: GETFIELD_F T170, R169, .x
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#158#59: ALOAD_F T75, R3, R5
-com.jme.intersection.Intersection#edgeAgainstTriEdges(float[],float[],float[],float[],float[],int,int)#boolean#7#2: ALOAD_F T13, R0, R5
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#573#163: GETFIELD_F T209, R2, .y
-com.jme.math.Vector3f#hashCode()#int#7#2: MUL_I T7, IConst: 37, R6
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#567#161: GETFIELD_F T207, R1, .y
-com.jme.intersection.Intersection#coplanarTriTri(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#36#14: PUTFIELD_F R23, .x, T31
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#802#216: ASTORE_F T257, R12, IConst: 0
-com.jme.math.Vector3f#hashCode()#int#16#6: ADD_I T11, R6, T10
-com.jme.intersection.Intersection#sort(float[])#void#18#8: MOVE_F R5, T10
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#576#164: MOVE_F R210, T209
-com.jme.math.Vector3f#hashCode()#int#9#3: GETFIELD_F T8, R0, .x
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#307#86: MOVE_F R134, T133
-com.jme.math.Vector3f#<init>()#void#16#10: PUTFIELD_F R0, .x, T6
-com.jme.intersection.Intersection#edgeEdgeTest(float[],float[],float[],int,int,float,float)#boolean#7#4: MOVE_F R9, T19
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#741#198: GETFIELD_F T243, R43, .x
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#339#98: MOVE_F R145, FConst: 0.0
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#122#67: PUTFIELD_F R8, .z, T29
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#317#34: SUB_F T48, R5, R4
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#368#107: MUL_F T155, R140, R152
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#140#41: MOVE_F R91, FConst: 0.0
-com.jme.intersection.Intersection#edgeEdgeTest(float[],float[],float[],int,int,float,float)#boolean#63#23: SUB_F T35, T33, T34
-com.jme.math.Vector3f#<clinit>()#void#71#38: MOVE_F T32, FConst: 1.0
-com.jme.math.Vector3f#dot()#float#42#11: MUL_F T16, T14, T15
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#634#157: GETFIELD_F T227, R5, .x
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#241#42: MUL_F T39, T38, R4
-com.jme.math.Vector2f#hashCode()#int#2#1: MOVE_I R6, IConst: 37
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#794#212: GETFIELD_F T254, R43, .y
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#67#19: NEG_F T71, T70
-com.jme.math.Vector3f#hashCode()#int#15#5: ADD_I T10, T7, T9
-com.jme.intersection.Intersection#edgeEdgeTest(float[],float[],float[],int,int,float,float)#boolean#38#16: MOVE_F R12, T28
-com.jme.intersection.Intersection#edgeEdgeTest(float[],float[],float[],int,int,float,float)#boolean#5#2: ALOAD_F T18, R2, R3
-com.jme.math.Vector3f#hashCode()#int#32#13: MOVE_I R18, T17
-com.jme.intersection.Intersection#edgeAgainstTriEdges(float[],float[],float[],float[],float[],int,int)#boolean#9#4: MOVE_F R9, T14
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#20#8: NEG_F T24, T23
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#140#70: SUB_F T31, R4, R5
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#75#28: ALOAD_F T44, R3, R4
-com.jme.math.Vector3f#subtract()#com.jme.math.Vector3f#22#9: PUTFIELD_F R2, .x, T9
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#185#56: MUL_F T107, R92, R104
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#242#43: PUTFIELD_F R8, .z, T39
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#846#227: MUL_F T267, T266, R48
-com.jme.intersection.Intersection#edgeEdgeTest(float[],float[],float[],int,int,float,float)#boolean#12#5: ALOAD_F T20, R1, R4
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#627#155: GETFIELD_F T225, R4, .x
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#179#55: MOVE_F R106, T105
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#70#27: MOVE_F R43, T42
-com.jme.math.Vector3f#subtract()#com.jme.math.Vector3f#21#8: SUB_F T9, T7, T8
-com.jme.intersection.Intersection#edgeEdgeTest(float[],float[],float[],int,int,float,float)#boolean#32#13: ALOAD_F T26, R0, R4
-com.jme.math.Vector3f#<init>()#void#8#4: MOVE_F T3, T1
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#453#130: MOVE_F R176, T175
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#323#92: MOVE_F R139, FConst: 0.0
-com.jme.intersection.Intersection#coplanarTriTri(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#60#20: PUTFIELD_F R23, .z, T35
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#369#108: MOVE_F R156, T155
-com.jme.math.Vector3f#dot()#float#43#12: ADD_F T17, T13, T16
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#50#74: SUB_F T19, R0, R2
-com.jme.math.Vector3f#equals(java.lang.Object)#boolean#26#7: GETFIELD_F T10, R4, .x
-com.jme.intersection.Intersection#edgeAgainstTriEdges(float[],float[],float[],float[],float[],int,int)#boolean#14#5: ALOAD_F T15, R1, R6
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#539#181: GETFIELD_F T201, R4, .z
-com.jme.math.Vector3f#<clinit>()#void#45#24: MOVE_F T22, FConst: 0.0
-com.jme.math.Vector3f#hashCode()#int#45#17: ADD_I T22, T19, T21
-com.jme.intersection.Intersection#edgeEdgeTest(float[],float[],float[],int,int,float,float)#boolean#133#42: MUL_F T48, R6, R11
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#831#224: MUL_F T264, T263, R51
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#637#158: MOVE_F R228, T227
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#53#19: ALOAD_F T35, R0, R5
-com.jme.intersection.Intersection#sort(float[])#void#17#7: ALOAD_F T10, R8, IConst: 0
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#110#31: MOVE_F R82, T81
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#18#6: ALOAD_F T22, R1, R4
-com.jme.math.Vector3f#hashCode()#int#46#18: ADD_I T23, R18, T22
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#53#75: MUL_F T20, T19, R5
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#746#199: GETFIELD_F T244, R43, .y
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#780#210: MOVE_F R252, T251
-JMEIntTest#main(java.lang.String[])#void#46#21: MOVE_I R21, T20
-com.jme.math.Vector3f#hashCode()#int#2#1: MOVE_I R6, IConst: 37
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#298#30: MUL_F T46, T45, R5
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#447#128: GETFIELD_F T174, R169, .y
-com.jme.intersection.Intersection#edgeAgainstTriEdges(float[],float[],float[],float[],float[],int,int)#boolean#8#3: SUB_F T14, T12, T13
-com.jme.math.Vector2f#hashCode()#int#24#9: GETFIELD_F T14, R0, .y
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#102#28: ADD_F T79, T78, R15
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#25#10: NEG_F T26, R20
-com.jme.math.Vector3f#dot()#float#29#6: GETFIELD_F T11, R1, .y
-com.jme.math.Vector3f#equals(java.lang.Object)#boolean#42#11: GETFIELD_F T13, R4, .y
-com.jme.math.Vector3f#cross(float,float,float,)#com.jme.math.Vector3f#41#16: SUB_F T22, T19, T21
-com.jme.math.Vector3f#equals(java.lang.Object)#boolean#54#14: GETFIELD_F T15, R0, .z
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#172#53: MOVE_F R103, FConst: 0.0
-com.jme.math.Vector3f#subtract()#com.jme.math.Vector3f#48#17: PUTFIELD_F R2, .z, T15
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#220#37: PUTFIELD_F R8, .x, R1
-com.jme.intersection.Intersection#sort(float[])#void#23#10: ALOAD_F T6, R8, IConst: 1
-com.jme.math.Vector3f#dot()#float#33#8: ADD_F T13, T9, T12
-com.jme.intersection.Intersection#edgeEdgeTest(float[],float[],float[],int,int,float,float)#boolean#37#15: SUB_F T28, T26, T27
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#79#29: ALOAD_F T45, R2, R4
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#549#184: MOVE_F R204, T203
-com.jme.math.Vector3f#subtract()#com.jme.math.Vector3f#34#12: SUB_F T12, T10, T11
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#763#205: MOVE_F R50, T248
-com.jme.math.Vector3f#cross(float,float,float,)#com.jme.math.Vector3f#51#20: GETFIELD_F T25, R0, .y
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#862#232: GETFIELD_F T271, R44, .z
-com.jme.math.Vector2f#toString()#java.lang.String#25#10: GETFIELD_F T12, R0, .y
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#175#65: ALOAD_F T81, R0, R5
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#99#38: SUB_F T54, T51, T53
-com.jme.math.Vector3f#<init>()#void#13#9: PUTFIELD_F T5, .y, T4
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#176#52: PUTFIELD_F R8, .y, T50
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#630#156: MOVE_F R226, T225
-com.jme.math.Vector3f#<clinit>()#void#19#9: MOVE_F T11, FConst: 0.0
-com.jme.math.Vector3f#toArray(float[])#float[]#11#4: GETFIELD_F T4, R0, .x
-com.jme.intersection.Intersection#edgeAgainstTriEdges(float[],float[],float[],float[],float[],int,int)#boolean#18#6: ALOAD_F T16, R0, R6
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#186#55: PUTFIELD_F R8, .z, T52
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#542#182: MOVE_F R202, T201
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#253#71: MOVE_F R25, T119
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#180#68: ADD_F T84, T83, R78
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#97#36: ALOAD_F T52, R2, R5
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#141#71: PUTFIELD_F R9, .y, T31
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#178#54: MUL_F T105, R92, R98
-com.jme.math.Vector2f#hashCode()#int#9#3: GETFIELD_F T8, R0, .x
-com.jme.intersection.Intersection#edgeAgainstTriEdges(float[],float[],float[],float[],float[],int,int)#boolean#3#1: ALOAD_F T12, R1, R5
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#110#63: MUL_F T27, T26, R4
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#39#16: MOVE_F R32, T31
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#526#177: GETFIELD_F T197, R2, .z
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#82#32: MOVE_F R48, T47
-com.jme.math.Vector3f#subtract()#com.jme.math.Vector3f#27#10: GETFIELD_F T10, R0, .y
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#173#50: SUB_F T49, R1, R0
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#177#67: ADD_F T83, T80, T82
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#295#29: SUB_F T45, R1, R2
-com.jme.math.Vector2f#equals(java.lang.Object)#boolean#22#6: GETFIELD_F T9, R0, .x
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#9#4: MOVE_F R20, T19
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#156#47: MOVE_F R97, FConst: 0.0
-JMEIntTest#main(java.lang.String[])#void#79#33: MOVE_I R29, T28
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#287#27: MUL_F T44, T43, R5
-com.jme.math.Vector2f#equals(java.lang.Object)#boolean#38#10: GETFIELD_F T12, R0, .y
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#818#219: MUL_F T260, T258, T259
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#300#84: MOVE_F R132, T131
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#120#46: MOVE_F R62, T61
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#37#14: MUL_F T30, R25, T29
+549
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#90#27: ADD_F T79, T77, R78
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#272#94: MOVE_F R145, R141
 com.jme.math.Vector3f#<clinit>()#void#32#17: MOVE_F T17, FConst: 1.0
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#250#44: SUB_F T40, R4, R3
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#117#33: MOVE_F R84, T83
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#514#173: GETFIELD_F T193, R0, .z
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#78#22: ADD_F T73, T72, R15
-com.jme.math.Vector3f#subtract()#com.jme.math.Vector3f#31#11: GETFIELD_F T11, R1, .y
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#286#80: MOVE_F R128, T127
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#582#166: MOVE_F R212, T211
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#285#79: ADD_F T127, T126, R25
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#68#20: MOVE_F R15, T71
-com.jme.math.Vector3f#equals(java.lang.Object)#boolean#38#10: GETFIELD_F T12, R0, .y
-com.jme.math.Vector3f#hashCode()#int#22#8: MUL_I T13, IConst: 37, R12
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#121#66: MUL_F T29, T28, R4
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#750#201: MOVE_F R48, T245
-com.jme.intersection.Intersection#edgeEdgeTest(float[],float[],float[],int,int,float,float)#boolean#128#41: MUL_F T47, R5, R12
-com.jme.intersection.Intersection#edgeEdgeTest(float[],float[],float[],int,int,float,float)#boolean#49#18: MUL_F T30, R5, R10
-com.jme.math.Vector3f#cross(float,float,float,)#com.jme.math.Vector3f#45#18: GETFIELD_F T23, R0, .x
-com.jme.intersection.Intersection#edgeAgainstTriEdges(float[],float[],float[],float[],float[],int,int)#boolean#20#8: MOVE_F R10, T17
-com.jme.math.Vector3f#cross(float,float,float,)#com.jme.math.Vector3f#55#21: MUL_F T26, T25, R1
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#147#56: NEG_F T72, R66
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#789#211: GETFIELD_F T253, R42, .y
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#873#235: MUL_F T274, T272, T273
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#7#2: ALOAD_F T18, R1, R5
-com.jme.intersection.Intersection#edgeEdgeTest(float[],float[],float[],int,int,float,float)#boolean#27#12: MOVE_F R11, T25
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#159#60: MUL_F T76, R71, T75
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#620#153: GETFIELD_F T223, R3, .x
-com.jme.math.Vector3f#<init>(float,float,float)#void#16#4: PUTFIELD_F R0, .z, R3
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#260#46: SUB_F T41, R4, R5
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#19#7: SUB_F T23, T21, T22
-com.jme.intersection.Intersection#edgeEdgeTest(float[],float[],float[],int,int,float,float)#boolean#17#7: SUB_F T22, T20, T21
-com.jme.math.ApproxMath#abs(float)#float#9#3: MOVE_F R2, T4
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#80#30: SUB_F T46, T44, T45
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#318#35: PUTFIELD_F R9, .y, T48
-com.jme.math.Vector3f#toString()#java.lang.String#37#14: GETFIELD_F T16, R0, .z
-com.jme.intersection.Intersection#edgeEdgeTest(float[],float[],float[],int,int,float,float)#boolean#50#19: SUB_F T31, T29, T30
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#759#203: GETFIELD_F T247, R45, .y
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#284#26: SUB_F T43, R0, R2
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#589#168: MOVE_F R214, T213
-com.jme.math.Vector2f#hashCode()#int#7#2: MUL_I T7, IConst: 37, R6
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#774#208: GETFIELD_F T250, R42, .x
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#140#52: ALOAD_F T68, R3, R4
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#36#13: ALOAD_F T29, R1, R5
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#361#105: MUL_F T153, R140, R146
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#520#219: GETFIELD_F T242, R1, .z
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#81#148: MOVE_F R45, R24
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#567#204: GETFIELD_F T255, R1, .y
 com.jme.math.Vector3f#<clinit>()#void#58#29: MOVE_F T25, FConst: 1.0
-com.jme.intersection.Intersection#edgeEdgeTest(float[],float[],float[],int,int,float,float)#boolean#22#9: ALOAD_F T23, R0, R3
-com.jme.math.Vector3f#toArray(float[])#float[]#25#8: GETFIELD_F T6, R0, .z
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#58#22: ADD_F T38, T37, R32
-com.jme.math.Vector3f#<clinit>()#void#32#15: MOVE_F T15, FConst: 0.0
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#68#25: ALOAD_F T41, R2, R5
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#463#133: MOVE_F R179, T178
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#853#230: ADD_F T270, R265, T269
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#186#57: MOVE_F R108, T107
-com.jme.math.Vector3f#<clinit>()#void#45#23: MOVE_F T21, FConst: 1.0
-com.jme.math.Vector3f#cross(float,float,float,)#com.jme.math.Vector3f#30#12: GETFIELD_F T18, R0, .z
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#108#41: MUL_F T57, R43, T56
-com.jme.math.Vector3f#hashCode()#int#37#14: MUL_I T19, IConst: 37, R18
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#100#39: MOVE_F R55, T54
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#867#233: MUL_F T272, T271, R48
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#535#180: MOVE_F R200, T199
-com.jme.intersection.Intersection#sort(float[])#void#24#11: ASTORE_F T6, T11, IConst: 0
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#90#25: ADD_F T76, T75, R15
-com.jme.math.Vector3f#dot()#float#20#3: GETFIELD_F T8, R1, .x
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#564#203: MOVE_F R254, T253
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#8#5: SUB_F T21, T18, T20
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#21#13: MOVE_F R29, T28
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#181#91: MOVE_F R117, R2
+com.jme.math.Vector3f#hashCode()#int#24#11: GETFIELD_F T16, R0, .y
+com.jme.math.ApproxMath#abs(float)#float#0#1: MOVE_F R3, R0
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#65#142: PUTFIELD_F R8, .z, T40
 com.jme.math.Vector2f#<init>()#void#11#6: PUTFIELD_F R0, .x, T3
-com.jme.intersection.Intersection#coplanarTriTri(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#42#15: GETFIELD_F T32, R29, .y
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#181#69: MOVE_F R85, T84
-com.jme.math.Vector3f#dot()#float#25#5: GETFIELD_F T10, R0, .y
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#274#76: ADD_F T124, T123, R25
-com.jme.math.Vector3f#set(float,float,float)#com.jme.math.Vector3f#2#1: PUTFIELD_F R0, .x, R1
-com.jme.math.Vector3f#hashCode()#int#17#7: MOVE_I R12, T11
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#586#167: GETFIELD_F T213, R4, .y
-com.jme.intersection.Intersection#coplanarTriTri(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#54#18: GETFIELD_F T34, R29, .z
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#749#200: MUL_F T245, T243, T244
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#194#56: SUB_F T53, R3, R4
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#183#53: SUB_F T51, R2, R0
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#64#78: MUL_F T22, T21, R5
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#69#26: SUB_F T42, T40, T41
-com.jme.intersection.Intersection#edgeEdgeTest(float[],float[],float[],int,int,float,float)#boolean#51#20: MOVE_F R32, T31
-com.jme.math.Vector3f#hashCode()#int#30#11: ADD_I T16, T13, T15
-com.jme.math.Vector3f#hashCode()#int#24#9: GETFIELD_F T14, R0, .y
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#131#69: PUTFIELD_F R9, .x, T30
-com.jme.math.Vector2f#hashCode()#int#17#7: MOVE_I R12, T11
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#114#42: ALOAD_F T58, R0, R5
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#152#58: MUL_F T74, T72, T73
-com.jme.math.Vector3f#toArray(float[])#float[]#21#7: ASTORE_F T5, R1, IConst: 1
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#124#35: MOVE_F R86, T85
-com.jme.math.Vector3f#<clinit>()#void#58#31: MOVE_F T27, FConst: 0.0
-com.jme.intersection.Intersection#edgeEdgeTest(float[],float[],float[],int,int,float,float)#boolean#2#1: ALOAD_F T17, R1, R3
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#263#73: ADD_F T121, T120, R25
-com.jme.math.Vector3f#<clinit>()#void#71#36: MOVE_F T30, FConst: 1.0
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#532#179: GETFIELD_F T199, R3, .z
-com.jme.math.Vector2f#hashCode()#int#30#11: ADD_I T16, T13, T15
-com.jme.math.Vector3f#set(float,float,float)#com.jme.math.Vector3f#12#3: PUTFIELD_F R0, .z, R3
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#86#33: NEG_F T49, R43
-com.jme.math.Vector3f#<clinit>()#void#58#30: MOVE_F T26, FConst: 0.0
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#43#73: PUTFIELD_F R8, .x, R2
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#84#83: PUTFIELD_F R9, .y, T24
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#810#217: GETFIELD_F T258, R42, .z
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#169#64: MUL_F T80, R66, T79
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#111#64: PUTFIELD_F R8, .y, T27
-com.jme.math.Vector3f#cross()#com.jme.math.Vector3f#10#3: GETFIELD_F T5, R1, .z
-com.jme.math.Vector3f#hashCode()#int#39#15: GETFIELD_F T20, R0, .z
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#614#151: GETFIELD_F T221, R2, .x
-com.jme.math.Vector3f#cross(float,float,float,)#com.jme.math.Vector3f#21#8: GETFIELD_F T15, R0, .z
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#166#49: PUTFIELD_F R8, .x, R0
-com.jme.math.Vector3f#subtract()#com.jme.math.Vector3f#47#16: SUB_F T15, T13, T14
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#288#28: PUTFIELD_F R8, .y, T44
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#275#77: MOVE_F R125, T124
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#608#149: GETFIELD_F T219, R1, .x
-com.jme.math.Vector3f#cross(float,float,float,)#com.jme.math.Vector3f#57#23: MOVE_F R11, T27
-com.jme.intersection.Intersection#sort(float[])#void#28#12: ASTORE_F R5, R8, IConst: 1
-com.jme.math.Vector3f#<clinit>()#void#71#37: MOVE_F T31, FConst: 1.0
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#47#18: MUL_F T34, R20, T33
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#261#47: PUTFIELD_F R9, .y, T41
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#264#74: MOVE_F R122, T121
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#119#45: ADD_F T61, T60, R55
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#308#33: PUTFIELD_F R9, .x, T47
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#520#175: GETFIELD_F T195, R1, .z
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#762#204: MUL_F T248, T246, T247
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#362#106: MOVE_F R154, T153
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#129#48: ALOAD_F T64, R3, R5
-com.jme.math.Vector3f#hashCode()#int#31#12: ADD_I T17, R12, T16
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#800#214: MUL_F T256, T255, R50
-com.jme.math.Vector3f#subtract()#com.jme.math.Vector3f#14#6: GETFIELD_F T7, R0, .x
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#252#70: NEG_F T119, T118
-com.jme.math.Vector3f#cross(float,float,float,)#com.jme.math.Vector3f#56#22: SUB_F T27, T24, T26
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#769#206: MUL_F T249, R48, R50
-com.jme.intersection.Intersection#edgeEdgeTest(float[],float[],float[],int,int,float,float)#boolean#135#44: MOVE_F R50, T49
-com.jme.math.Vector3f#set(float,float,float)#com.jme.math.Vector3f#7#2: PUTFIELD_F R0, .y, R2
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#21#9: MOVE_F R25, T24
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#875#237: ASTORE_F T275, R13, IConst: 1
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#277#25: PUTFIELD_F R8, .x, R2
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#841#226: GETFIELD_F T266, R44, .y
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#832#225: MOVE_F R265, T264
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#623#154: MOVE_F R224, T223
-com.jme.math.Vector2f#hashCode()#int#32#13: MOVE_I R18, T17
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#230#39: MUL_F T37, T36, R4
-com.jme.intersection.Intersection#coplanarTriTri(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#30#12: GETFIELD_F T30, R29, .x
-com.jme.math.Vector3f#cross(float,float,float,)#com.jme.math.Vector3f#26#10: SUB_F T17, T14, T16
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#91#35: MUL_F T51, T49, T50
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#91#26: MOVE_F R77, T76
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#523#176: MOVE_F R196, T195
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#143#55: MOVE_F R71, T70
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#14#5: ALOAD_F T21, R2, R4
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#195#57: PUTFIELD_F R9, .x, T53
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#517#174: MOVE_F R194, T193
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#227#38: SUB_F T36, R0, R1
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#130#49: SUB_F T65, T63, T64
-com.jme.math.Vector3f#cross(float,float,float,)#com.jme.math.Vector3f#49#19: MUL_F T24, T23, R2
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#136#51: ALOAD_F T67, R1, R4
+com.jme.math.Vector3f#cross(float,float,float,com.jme.math.Vector3f)#com.jme.math.Vector3f#34#16: MUL_F T23, T21, R22
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#114#67: ALOAD_F T83, R0, R82
 com.jme.math.Vector2f#toString()#java.lang.String#13#6: GETFIELD_F T8, R0, .x
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#54#20: MUL_F T36, R25, T35
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#561#159: GETFIELD_F T205, R0, .y
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#83#82: SUB_F T24, R5, R4
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#30#12: MUL_F T28, T26, T27
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#131#123: PUTFIELD_F R9, .x, T62
+com.jme.math.Vector3f#<clinit>()#void#45#23: MOVE_F T21, FConst: 1.0
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#100#60: MOVE_F R76, T75
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#637#201: MOVE_F R276, T275
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#118#116: SUB_F T57, R55, R56
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#514#217: GETFIELD_F T240, R0, .z
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#200#101: MOVE_F R125, R122
+com.jme.math.Vector3f#dot(com.jme.math.Vector3f)#float#25#5: GETFIELD_F T10, R0, .y
+com.jme.math.Vector3f#<clinit>()#void#32#15: MOVE_F T15, FConst: 0.0
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#98#58: MUL_F T74, R71, T73
+com.jme.math.Vector3f#hashCode()#int#33#16: MOVE_I R21, R20
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#120#72: MOVE_F R88, T87
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#239#71: MOVE_F R83, R78
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#173#87: SUB_F T114, R112, R113
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#91#28: MOVE_F R80, T79
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#62#140: MOVE_F R39, R34
+com.jme.math.Vector3f#hashCode()#int#18#8: MOVE_I R13, R12
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#777#271: MOVE_F R320, R318
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#226#63: MOVE_F R76, R74
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#194#99: SUB_F T124, R122, R123
+JMEIntTest#main(java.lang.String[])#void#46#48: MOVE_I R22, T21
+com.jme.math.Vector3f#equals(java.lang.Object)#boolean#42#11: GETFIELD_F T13, R4, .y
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#36#21: ALOAD_F T37, R1, R36
+com.jme.math.Vector3f#<clinit>()#void#58#31: MOVE_F T27, FConst: 0.0
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#165#83: MOVE_F R111, R0
+com.jme.math.Vector3f#<init>()#void#13#9: PUTFIELD_F T5, .y, T4
+com.jme.intersection.Intersection#edgeEdgeTest(float[],float[],float[],int,int,float,float)#boolean#49#30: MUL_F T46, R44, R45
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#511#216: MOVE_F R239, R238
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#237#69: MOVE_F R81, R76
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#854#301: ASTORE_F T347, R13, IConst: 0
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#158#93: ALOAD_F T109, R3, R108
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#174#63: MOVE_F R115, R100
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#296#48: MOVE_F R102, R97
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#30#18: MUL_F T34, T31, T33
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#46#27: ALOAD_F T43, R0, R42
+com.jme.math.Vector3f#<clinit>()#void#19#9: MOVE_F T11, FConst: 0.0
+com.jme.intersection.Intersection#coplanarTriTri(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#60#20: PUTFIELD_F R23, .z, T35
+com.jme.math.Vector3f#hashCode()#int#47#23: MOVE_I R28, T27
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#617#195: MOVE_F R270, T269
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#117#115: MOVE_F R56, R51
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#175#89: MUL_F T116, T114, R115
+com.jme.math.Vector2f#hashCode()#int#31#14: ADD_I T19, R14, T18
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#709#253: MOVE_F R302, R120
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#801#280: ADD_F T329, R323, T328
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#99#59: SUB_F T75, T70, T74
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#192#98: MOVE_F R123, R66
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#117#70: MOVE_F R86, R76
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#50#133: SUB_F T33, R31, R32
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#251#77: PUTFIELD_F R9, .x, T87
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#112#36: MOVE_F R88, R80
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#653#236: MOVE_F R287, R280
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#143#85: MOVE_F R101, T100
+com.jme.math.Vector3f#hashCode()#int#21#9: MOVE_I R14, R13
+com.jme.math.Vector3f#hashCode()#int#15#5: ADD_I T10, T7, T9
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#596#213: MOVE_F R264, T263
+com.jme.math.Vector3f#<init>(float,float,float)#void#5#2: MOVE_F R1, R1
+com.jme.math.Vector3f#subtract(com.jme.math.Vector3f,com.jme.math.Vector3f)#com.jme.math.Vector3f#22#9: PUTFIELD_F R2, .x, T9
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#749#260: MUL_F T309, T307, T308
+com.jme.intersection.Intersection#edgeEdgeTest(float[],float[],float[],int,int,float,float)#boolean#51#32: MOVE_F R48, T47
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#549#228: MOVE_F R251, T250
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#440#160: MOVE_F R210, T209
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#798#278: MOVE_F R327, R316
+com.jme.math.Vector3f#hashCode()#int#48#24: MOVE_I R29, R28
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#630#199: MOVE_F R274, T273
+JMEIntTest#main(java.lang.String[])#void#79#67: MOVE_I R33, T32
+com.jme.math.Vector2f#equals(java.lang.Object)#boolean#38#10: GETFIELD_F T12, R0, .y
+com.jme.math.Vector2f#hashCode()#int#7#2: MUL_I T7, IConst: 37, IConst: 37
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#99#106: MOVE_F R49, R1
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#195#100: PUTFIELD_F R9, .x, T124
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#294#46: MOVE_F R100, R95
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#19#11: SUB_F T27, T24, T26
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#126#42: MOVE_F R94, R87
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#841#295: GETFIELD_F T342, R44, .y
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#64#38: ALOAD_F T54, R3, R53
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#79#46: ALOAD_F T62, R2, R61
+com.jme.math.Vector3f#cross(float,float,float,com.jme.math.Vector3f)#com.jme.math.Vector3f#63#31: MOVE_F R38, R28
+com.jme.intersection.Intersection#edgeEdgeTest(float[],float[],float[],int,int,float,float)#boolean#66#41: MOVE_F R57, R48
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#171#85: MOVE_F R112, R1
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#874#308: ADD_F T354, R348, T353
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#579#208: GETFIELD_F T259, R3, .y
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#97#57: ALOAD_F T73, R2, R72
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#295#47: SUB_F T101, R99, R100
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#81#48: NEG_F T64, T63
+com.jme.math.Vector2f#hashCode()#int#9#3: GETFIELD_F T8, R0, .x
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#142#49: MOVE_F R101, R90
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#457#165: GETFIELD_F T215, R207, .z
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#542#226: MOVE_F R249, T248
+com.jme.math.Vector3f#dot(com.jme.math.Vector3f)#float#23#4: MUL_F T9, T7, T8
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#136#80: ALOAD_F T96, R1, R95
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#186#96: PUTFIELD_F R8, .z, T121
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#186#70: MOVE_F R122, T121
+com.jme.math.Vector3f#cross(com.jme.math.Vector3f,com.jme.math.Vector3f)#com.jme.math.Vector3f#10#3: GETFIELD_F T5, R1, .z
+com.jme.math.Vector3f#hashCode()#int#22#10: MUL_I T15, IConst: 37, R14
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#759#263: GETFIELD_F T312, R45, .y
+com.jme.math.Vector3f#cross(float,float,float,com.jme.math.Vector3f)#com.jme.math.Vector3f#56#28: SUB_F T35, T31, T34
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#183#68: MOVE_F R120, R114
+com.jme.math.Vector3f#subtract(com.jme.math.Vector3f,com.jme.math.Vector3f)#com.jme.math.Vector3f#48#17: PUTFIELD_F R2, .z, T15
+com.jme.math.Vector3f#hashCode()#int#37#18: MUL_I T23, IConst: 37, R22
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#41#25: MOVE_F R41, R30
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#701#249: MOVE_F R298, R278
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#361#133: MUL_F T184, R182, R183
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#227#64: SUB_F T77, R75, R76
+com.jme.math.Vector3f#cross(float,float,float,com.jme.math.Vector3f)#com.jme.math.Vector3f#51#25: GETFIELD_F T32, R0, .y
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#368#137: MUL_F T188, R186, R187
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#64#141: MUL_F T40, T38, R39
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#529#222: MOVE_F R245, T244
+com.jme.math.Vector3f#cross(com.jme.math.Vector3f,com.jme.math.Vector3f)#com.jme.math.Vector3f#2#1: GETFIELD_F T3, R1, .x
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#465#168: MOVE_F R218, R214
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#663#241: MOVE_F R292, R200
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#806#282: MOVE_F R330, R323
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#780#273: MOVE_F R322, T321
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#23#14: MOVE_F R30, R22
+com.jme.math.Vector3f#<init>()#void#16#10: PUTFIELD_F R0, .x, T6
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#815#284: GETFIELD_F T332, R43, .x
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#19#10: MOVE_F R22, R4
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#317#57: SUB_F T109, R107, R108
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#140#48: MOVE_F R99, FConst: 0.0
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#298#49: MUL_F T103, T101, R102
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#288#101: MOVE_F R152, R143
+com.jme.math.Vector3f#<clinit>()#void#71#38: MOVE_F T32, FConst: 1.0
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#238#70: SUB_F T82, R80, R81
+com.jme.math.Vector3f#subtract(com.jme.math.Vector3f,com.jme.math.Vector3f)#com.jme.math.Vector3f#40#14: GETFIELD_F T13, R0, .z
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#247#74: MOVE_F R85, R83
+com.jme.math.Vector3f#hashCode()#int#16#6: ADD_I T11, IConst: 37, T10
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#472#171: MOVE_F R221, R217
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#774#270: GETFIELD_F T319, R42, .x
+com.jme.math.Vector3f#cross(float,float,float,com.jme.math.Vector3f)#com.jme.math.Vector3f#49#24: MUL_F T31, T29, R30
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#362#134: MOVE_F R185, T184
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#195#74: MOVE_F R126, R122
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#867#305: MUL_F T351, T349, R350
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#293#103: MOVE_F R154, T153
+com.jme.math.Vector3f#cross(float,float,float,com.jme.math.Vector3f)#com.jme.math.Vector3f#57#29: MOVE_F R36, T35
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#826#290: GETFIELD_F T337, R44, .x
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#573#206: GETFIELD_F T257, R2, .y
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#378#142: MOVE_F R193, R189
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#9#6: MOVE_F R22, T21
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#318#58: PUTFIELD_F R9, .y, T109
+com.jme.math.Vector3f#<init>()#void#12#8: MOVE_F T6, T4
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#110#35: MOVE_F R87, T86
+com.jme.math.Vector3f#cross(float,float,float,com.jme.math.Vector3f)#com.jme.math.Vector3f#33#15: MOVE_F R22, R1
+com.jme.math.Vector3f#cross(float,float,float,com.jme.math.Vector3f)#com.jme.math.Vector3f#19#8: MUL_F T15, T13, R14
+com.jme.math.Vector3f#<init>()#void#8#4: MOVE_F T3, T1
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#158#56: MOVE_F R108, R93
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#779#272: MUL_F T321, T319, R320
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#29#17: ALOAD_F T33, R1, R32
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#84#50: MOVE_F R66, R58
+com.jme.math.Vector3f#equals(java.lang.Object)#boolean#26#7: GETFIELD_F T10, R4, .x
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#819#286: MOVE_F R334, R327
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#75#44: ALOAD_F T60, R3, R59
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#140#82: ALOAD_F T98, R3, R97
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#76#22: MOVE_F R74, R72
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#117#38: MOVE_F R90, T89
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#121#118: MUL_F T59, T57, R58
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#70#143: MOVE_F R41, R39
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#649#234: MOVE_F R285, R282
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#252#87: NEG_F T138, T137
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#169#100: MUL_F T116, R113, T115
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#286#100: MOVE_F R151, T150
+com.jme.math.Vector3f#set(float,float,float)#com.jme.math.Vector3f#1#1: MOVE_F R1, R1
+com.jme.math.Vector3f#dot(com.jme.math.Vector3f)#float#20#3: GETFIELD_F T8, R1, .x
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#821#287: MUL_F T335, T333, R334
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#264#92: MOVE_F R143, T142
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#250#76: SUB_F T87, R85, R86
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#810#283: GETFIELD_F T331, R42, .z
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#306#52: MOVE_F R105, R70
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#105#108: MOVE_F R50, R0
+com.jme.math.Vector3f#cross(float,float,float,com.jme.math.Vector3f)#com.jme.math.Vector3f#39#18: MOVE_F R25, R14
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#287#43: MUL_F T98, T96, R97
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#130#122: SUB_F T62, R60, R61
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#18#10: ALOAD_F T26, R1, R25
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#125#74: ALOAD_F T90, R1, R89
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#141#127: PUTFIELD_F R9, .y, T65
+com.jme.math.Vector3f#<clinit>()#void#19#10: MOVE_F T12, FConst: 0.0
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#58#35: ADD_F T51, T49, R50
+com.jme.math.Vector2f#hashCode()#int#2#1: MOVE_I R6, IConst: 37
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#159#94: MUL_F T110, R107, T109
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#160#95: SUB_F T111, T106, T110
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#258#79: MOVE_F R89, R67
+com.jme.math.Vector3f#<init>(float,float,float)#void#10#4: MOVE_F R2, R2
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#703#250: MOVE_F R299, R277
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#140#126: SUB_F T65, R63, R64
+com.jme.math.Vector3f#cross(float,float,float,com.jme.math.Vector3f)#com.jme.math.Vector3f#61#30: MOVE_F R37, R20
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#172#86: MOVE_F R113, R111
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#168#99: ALOAD_F T115, R0, R114
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#51#134: MOVE_F R34, R27
+com.jme.intersection.Intersection#coplanarTriTri(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#48#17: PUTFIELD_F R23, .y, T33
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#172#62: MOVE_F R113, FConst: 0.0
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#55#33: ADD_F T49, T44, T48
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#147#87: NEG_F T103, R102
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#315#56: MOVE_F R108, R72
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#339#123: MOVE_F R173, FConst: 0.0
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#858#302: MOVE_F R348, R341
+com.jme.math.Vector3f#<clinit>()#void#58#30: MOVE_F T26, FConst: 0.0
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#131#78: MOVE_F R94, T93
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#103#32: MOVE_F R84, T83
+com.jme.math.Vector3f#dot(com.jme.math.Vector3f)#float#33#8: ADD_F T13, T9, T12
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#73#145: SUB_F T43, R41, R42
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#191#97: MOVE_F R122, R120
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#119#117: MOVE_F R58, R53
+com.jme.math.Vector2f#hashCode()#int#21#9: MOVE_I R14, R13
+com.jme.math.Vector3f#cross(float,float,float,com.jme.math.Vector3f)#com.jme.math.Vector3f#40#19: MUL_F T26, T24, R25
+com.jme.math.Vector3f#cross(float,float,float,com.jme.math.Vector3f)#com.jme.math.Vector3f#21#9: GETFIELD_F T16, R0, .z
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#145#86: MOVE_F R102, R94
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#79#147: MOVE_F R44, R41
+com.jme.math.Vector3f#cross(float,float,float,com.jme.math.Vector3f)#com.jme.math.Vector3f#30#14: GETFIELD_F T21, R0, .z
+com.jme.math.Vector3f#equals(java.lang.Object)#boolean#58#15: GETFIELD_F T16, R4, .z
+com.jme.math.Vector3f#cross(float,float,float,com.jme.math.Vector3f)#com.jme.math.Vector3f#36#17: GETFIELD_F T24, R0, .x
+com.jme.math.Vector3f#set(float,float,float)#com.jme.math.Vector3f#7#4: PUTFIELD_F R0, .y, R2
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#797#277: MUL_F T326, T324, T325
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#785#274: MOVE_F R323, R322
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#602#190: GETFIELD_F T265, R0, .x
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#253#88: MOVE_F R139, T138
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#623#197: MOVE_F R272, T271
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#178#106: MOVE_F R122, R112
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#241#72: MUL_F T84, T82, R83
+com.jme.math.Vector3f#toString()#java.lang.String#13#6: GETFIELD_F T8, R0, .x
+com.jme.intersection.Intersection#sort(float[])#void#18#8: MOVE_F R11, T10
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#313#55: MOVE_F R107, R104
+com.jme.math.Vector3f#<init>(float,float,float)#void#15#6: MOVE_F R3, R3
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#116#69: ADD_F T85, T80, T84
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#124#41: MOVE_F R93, T92
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#69#41: SUB_F T57, T54, T56
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#831#292: MUL_F T339, T337, R338
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#179#66: MOVE_F R118, T117
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#261#90: MOVE_F R141, R139
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#185#69: MUL_F T121, R119, R120
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#870#306: GETFIELD_F T352, R45, .x
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#762#264: MUL_F T313, T311, T312
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#7#4: ALOAD_F T20, R1, R19
+com.jme.math.Vector3f#dot(com.jme.math.Vector3f)#float#39#10: GETFIELD_F T15, R1, .z
+com.jme.math.Vector3f#hashCode()#int#2#1: MOVE_I R6, IConst: 37
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#90#53: ALOAD_F T69, R2, R68
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#174#88: MOVE_F R115, R110
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#181#67: MOVE_F R119, R115
+com.jme.math.Vector2f#hashCode()#int#16#6: ADD_I T11, IConst: 37, T10
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#68#40: ALOAD_F T56, R2, R55
+com.jme.math.Vector2f#equals(java.lang.Object)#boolean#26#7: GETFIELD_F T10, R4, .x
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#823#289: ASTORE_F T336, R12, IConst: 1
+com.jme.math.Vector3f#cross(float,float,float,com.jme.math.Vector3f)#com.jme.math.Vector3f#41#20: SUB_F T27, T23, T26
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#156#55: MOVE_F R106, FConst: 0.0
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#794#276: GETFIELD_F T325, R43, .y
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#20#12: NEG_F T28, T27
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#231#67: PUTFIELD_F R8, .y, T79
+com.jme.math.Vector3f#subtract(com.jme.math.Vector3f,com.jme.math.Vector3f)#com.jme.math.Vector3f#35#13: PUTFIELD_F R2, .y, T12
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#181#108: MOVE_F R124, T123
 com.jme.math.Vector3f#<init>()#void#9#5: PUTFIELD_F T2, .z, T1
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#231#40: PUTFIELD_F R8, .y, T37
-com.jme.math.Vector3f#dot()#float#39#10: GETFIELD_F T15, R1, .z
-com.jme.math.Vector3f#toArray(float[])#float[]#14#5: ASTORE_F T4, R1, IConst: 0
-com.jme.math.Vector3f#cross(float,float,float,)#com.jme.math.Vector3f#25#9: MUL_F T16, T15, R2
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#90#34: ALOAD_F T50, R2, R4
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#103#29: MOVE_F R80, T79
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#65#79: PUTFIELD_F R8, .z, T22
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#854#231: ASTORE_F T270, R13, IConst: 0
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#64#24: ALOAD_F T40, R3, R5
-com.jme.math.Vector3f#cross(float,float,float,)#com.jme.math.Vector3f#34#13: MUL_F T19, T18, R1
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#74#81: PUTFIELD_F R9, .x, T23
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#440#126: MOVE_F R172, T171
-com.jme.math.Vector3f#dot()#float#35#9: GETFIELD_F T14, R0, .z
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#302#107: MOVE_F R158, R151
+com.jme.intersection.Intersection#sort(float[])#void#27#12: MOVE_F R13, R11
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#657#238: MOVE_F R289, R183
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#800#279: MUL_F T328, T326, R327
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#517#218: MOVE_F R241, T240
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#249#75: MOVE_F R86, R70
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#463#167: MOVE_F R217, T216
+com.jme.math.Vector2f#<init>()#void#8#5: PUTFIELD_F T2, .y, T1
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#299#50: PUTFIELD_F R8, .z, T103
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#236#68: MOVE_F R80, R2
+com.jme.math.Vector3f#equals(java.lang.Object)#boolean#22#6: GETFIELD_F T9, R0, .x
+com.jme.math.Vector3f#cross(float,float,float,com.jme.math.Vector3f)#com.jme.math.Vector3f#27#13: MOVE_F R20, T19
 com.jme.math.Vector3f#<init>()#void#12#6: MOVE_F T4, T3
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#874#236: ADD_F T275, R265, T274
-com.jme.math.Vector3f#cross(float,float,float,)#com.jme.math.Vector3f#19#7: MUL_F T14, T13, R3
-com.jme.math.Vector3f#subtract()#com.jme.math.Vector3f#35#13: PUTFIELD_F R2, .y, T12
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#59#23: MOVE_F R39, T38
-com.jme.math.Vector3f#subtract()#com.jme.math.Vector3f#44#15: GETFIELD_F T14, R1, .z
-com.jme.math.Vector3f#cross(float,float,float,)#com.jme.math.Vector3f#15#6: GETFIELD_F T13, R0, .y
-com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#251#45: PUTFIELD_F R9, .x, T40
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#511#172: MOVE_F R192, R183
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#55#21: ADD_F T37, T34, T36
+com.jme.math.Vector3f#cross(float,float,float,com.jme.math.Vector3f)#com.jme.math.Vector3f#42#21: MOVE_F R28, T27
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#754#262: GETFIELD_F T311, R45, .x
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#611#193: MOVE_F R268, T267
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#204#104: PUTFIELD_F R9, .y, T127
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#0#1: MOVE_F R13, R6
+com.jme.math.Vector2f#hashCode()#int#22#10: MUL_I T15, IConst: 37, R14
+com.jme.math.Vector3f#toString()#java.lang.String#25#10: GETFIELD_F T12, R0, .y
+com.jme.math.Vector3f#subtract(com.jme.math.Vector3f,com.jme.math.Vector3f)#com.jme.math.Vector3f#44#15: GETFIELD_F T14, R1, .z
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#261#81: PUTFIELD_F R9, .y, T90
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#178#65: MUL_F T117, R115, R116
+com.jme.math.Vector3f#cross(float,float,float,com.jme.math.Vector3f)#com.jme.math.Vector3f#26#12: SUB_F T19, T15, T18
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#535#224: MOVE_F R247, T246
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#526#221: GETFIELD_F T244, R2, .z
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#48#131: MOVE_F R31, R0
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#285#42: MOVE_F R97, R91
+com.jme.intersection.Intersection#edgeAgainstTriEdges(float[],float[],float[],float[],float[],int,int)#boolean#51#22: MOVE_F R32, R27
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#283#98: MOVE_F R149, R145
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#153#91: MOVE_F R107, R101
+com.jme.math.Vector3f#hashCode()#int#30#13: ADD_I T18, T15, T17
+com.jme.math.Vector3f#cross(float,float,float,com.jme.math.Vector3f)#com.jme.math.Vector3f#25#11: MUL_F T18, T16, R17
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#357#131: MOVE_F R182, R167
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#865#304: MOVE_F R350, R343
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#47#28: MUL_F T44, R41, T43
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#818#285: MUL_F T333, T331, T332
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#183#109: MOVE_F R125, R52
+com.jme.intersection.Intersection#edgeEdgeTest(float[],float[],float[],int,int,float,float)#boolean#44#27: MUL_F T43, R41, R42
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#750#261: MOVE_F R310, T309
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#72#144: MOVE_F R42, R21
+com.jme.math.ApproxMath#abs(float)#float#10#6: MOVE_F R8, R7
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#119#39: MOVE_F R91, R84
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#54#32: MUL_F T48, R45, T47
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#42#129: MOVE_F R30, R2
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#767#267: MOVE_F R316, R314
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#56#34: MOVE_F R50, R40
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#80#47: SUB_F T63, T60, T62
+com.jme.math.Vector3f#dot(com.jme.math.Vector3f)#float#43#12: ADD_F T17, T13, T16
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#852#299: MUL_F T346, T344, T345
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#873#307: MUL_F T353, T351, T352
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#300#106: MOVE_F R157, T156
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#67#19: NEG_F T71, T70
+com.jme.math.Vector2f#<init>()#void#7#2: MOVE_F T1, FConst: 0.0
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#151#89: ALOAD_F T105, R3, R104
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#53#31: ALOAD_F T47, R0, R46
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#219#60: MOVE_F R74, R1
+com.jme.math.Vector3f#set(float,float,float)#com.jme.math.Vector3f#2#2: PUTFIELD_F R0, .x, R1
+com.jme.math.Vector3f#<clinit>()#void#71#37: MOVE_F T31, FConst: 1.0
+com.jme.math.Vector3f#cross(float,float,float,com.jme.math.Vector3f)#com.jme.math.Vector3f#55#27: MUL_F T34, T32, R33
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#91#54: MUL_F T70, T67, T69
+com.jme.math.Vector3f#<clinit>()#void#32#16: MOVE_F T16, FConst: 0.0
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#763#265: MOVE_F R314, T313
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#115#68: MUL_F T84, R81, T83
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#108#111: MOVE_F R53, R24
+com.jme.math.Vector3f#hashCode()#int#39#19: GETFIELD_F T24, R0, .z
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#225#62: MOVE_F R75, R0
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#242#73: PUTFIELD_F R8, .z, T84
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#170#101: MOVE_F R117, R107
+com.jme.math.Vector3f#equals(java.lang.Object)#boolean#54#14: GETFIELD_F T15, R0, .z
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#109#65: MOVE_F R81, R71
+com.jme.intersection.Intersection#sort(float[])#void#24#11: ASTORE_F T6, T12, IConst: 0
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#844#296: MOVE_F R343, R315
+com.jme.math.Vector3f#set(float,float,float)#com.jme.math.Vector3f#6#3: MOVE_F R2, R2
+com.jme.math.Vector3f#dot(com.jme.math.Vector3f)#float#16#2: GETFIELD_F T7, R0, .x
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#274#95: ADD_F T146, T144, R145
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#661#240: MOVE_F R291, R196
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#197#115: MOVE_F R131, R124
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#88#26: MOVE_F R78, R74
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#54#136: PUTFIELD_F R8, .y, T35
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#49#132: MOVE_F R32, R30
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#434#158: GETFIELD_F T208, R207, .x
+com.jme.math.Vector3f#hashCode()#int#36#17: MOVE_I R22, R21
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#130#77: SUB_F T93, T90, T92
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#180#107: ADD_F T123, T121, R122
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#711#254: MOVE_F R303, R129
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#593#212: GETFIELD_F T263, R5, .y
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#769#268: MUL_F T317, R315, R316
+com.jme.math.Vector3f#hashCode()#int#45#21: ADD_I T26, T23, T25
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#138#125: MOVE_F R64, R27
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#25#15: NEG_F T31, R30
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#7#4: MOVE_F R16, R7
+com.jme.intersection.Intersection#edgeAgainstTriEdges(float[],float[],float[],float[],float[],int,int)#boolean#71#28: MOVE_F R37, R32
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#79#24: MOVE_F R76, T75
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#308#54: PUTFIELD_F R9, .x, T106
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#176#104: MUL_F T120, R117, T119
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#293#45: MOVE_F R99, R1
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#61#139: SUB_F T38, R36, R37
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#822#288: ADD_F T336, R330, T335
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#129#76: ALOAD_F T92, R3, R91
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#539#225: GETFIELD_F T248, R4, .z
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#184#94: MOVE_F R120, R115
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#110#112: MUL_F T54, T52, R53
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#651#235: MOVE_F R286, R281
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#371#139: MOVE_F R190, R185
+com.jme.math.Vector3f#<init>(float,float,float)#void#11#5: PUTFIELD_F R0, .y, R2
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#188#71: MOVE_F R123, R118
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#38#23: SUB_F T39, T34, T38
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#634#200: GETFIELD_F T275, R5, .x
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#203#103: SUB_F T127, R125, R126
+com.jme.math.Vector3f#<clinit>()#void#71#36: MOVE_F T30, FConst: 1.0
+com.jme.intersection.Intersection#sort(float[])#void#17#7: ALOAD_F T10, R8, IConst: 0
+com.jme.math.Vector3f#cross(float,float,float,com.jme.math.Vector3f)#com.jme.math.Vector3f#54#26: MOVE_F R33, R22
+com.jme.math.Vector3f#hashCode()#int#31#14: ADD_I T19, R14, T18
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#3#2: ALOAD_F T18, R2, R17
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#152#90: MUL_F T106, T103, T105
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#364#135: MOVE_F R186, R182
+com.jme.math.Vector3f#<clinit>()#void#45#22: MOVE_F T20, FConst: 0.0
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#853#300: ADD_F T347, R341, T346
+com.jme.math.Vector3f#subtract(com.jme.math.Vector3f,com.jme.math.Vector3f)#com.jme.math.Vector3f#34#12: SUB_F T12, T10, T11
+com.jme.math.Vector3f#cross(float,float,float,com.jme.math.Vector3f)#com.jme.math.Vector3f#24#10: MOVE_F R17, R2
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#605#191: MOVE_F R266, T265
+com.jme.math.Vector3f#subtract(com.jme.math.Vector3f,com.jme.math.Vector3f)#com.jme.math.Vector3f#31#11: GETFIELD_F T11, R1, .y
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#295#104: MOVE_F R155, R147
+com.jme.intersection.Intersection#<clinit>()#void#3#1: PUTSTATIC_D DConst: 1.0E-12, .EPSILON
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#183#93: SUB_F T119, R117, R118
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#707#252: MOVE_F R301, R116
+com.jme.intersection.Intersection#coplanarTriTri(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#30#12: GETFIELD_F T30, R29, .x
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#53#135: MUL_F T35, T33, R34
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#546#227: GETFIELD_F T250, R5, .z
+com.jme.math.Vector3f#dot(com.jme.math.Vector3f)#float#29#6: GETFIELD_F T11, R1, .y
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#37#22: MUL_F T38, R35, T37
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#74#146: PUTFIELD_F R9, .x, T43
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#176#64: MOVE_F R116, R107
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#111#113: PUTFIELD_F R8, .y, T54
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#770#269: MOVE_F R318, T317
+com.jme.math.Vector3f#dot(com.jme.math.Vector3f)#float#42#11: MUL_F T16, T14, T15
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#129#121: MOVE_F R61, R21
+com.jme.math.Vector3f#hashCode()#int#7#2: MUL_I T7, IConst: 37, IConst: 37
+com.jme.math.Vector3f#cross(float,float,float,com.jme.math.Vector3f)#com.jme.math.Vector3f#65#32: MOVE_F R39, R36
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#230#66: MUL_F T79, T77, R78
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#78#23: ADD_F T75, T73, R74
+com.jme.math.Vector3f#cross(com.jme.math.Vector3f,com.jme.math.Vector3f)#com.jme.math.Vector3f#6#2: GETFIELD_F T4, R1, .y
+com.jme.intersection.Intersection#edgeAgainstTriEdges(float[],float[],float[],float[],float[],int,int)#boolean#49#21: MOVE_F R31, R26
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#705#251: MOVE_F R300, R119
+com.jme.math.Vector3f#hashCode()#int#46#22: ADD_I T27, R22, T26
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#163#97: MOVE_F R113, R102
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#586#210: GETFIELD_F T261, R4, .y
+com.jme.math.Vector2f#equals(java.lang.Object)#boolean#22#6: GETFIELD_F T9, R0, .x
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#177#105: ADD_F T121, T116, T120
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#102#31: ADD_F T83, T81, R82
+com.jme.math.Vector3f#subtract(com.jme.math.Vector3f,com.jme.math.Vector3f)#com.jme.math.Vector3f#21#8: SUB_F T9, T7, T8
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#288#44: PUTFIELD_F R8, .y, T98
+JMEIntTest#main(java.lang.String[])#void#47#49: MOVE_I R23, R22
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#846#297: MUL_F T344, T342, R343
+com.jme.math.Vector3f#dot(com.jme.math.Vector3f)#float#35#9: GETFIELD_F T14, R0, .z
+JMEIntTest#accept(boolean)#boolean#0#1: MOVE_I R0, R0
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#39#24: MOVE_F R40, T39
+com.jme.math.Vector3f#cross(float,float,float,com.jme.math.Vector3f)#com.jme.math.Vector3f#48#23: MOVE_F R30, R17
+com.jme.intersection.Intersection#edgeEdgeTest(float[],float[],float[],int,int,float,float)#boolean#50#31: SUB_F T47, T43, T46
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#107#110: SUB_F T52, R50, R51
+com.jme.math.Vector3f#subtract(com.jme.math.Vector3f,com.jme.math.Vector3f)#com.jme.math.Vector3f#18#7: GETFIELD_F T8, R1, .x
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#48#29: MOVE_F R45, R35
+com.jme.math.Vector3f#equals(java.lang.Object)#boolean#38#10: GETFIELD_F T12, R0, .y
+com.jme.math.Vector3f#<clinit>()#void#45#24: MOVE_F T22, FConst: 0.0
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#849#298: GETFIELD_F T345, R45, .y
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#107#63: ALOAD_F T79, R0, R78
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#100#107: PUTFIELD_F R8, .x, R49
+com.jme.math.Vector2f#<init>()#void#7#4: MOVE_F T3, T1
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#119#71: ADD_F T87, T85, R86
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#309#110: MOVE_F R161, R154
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#263#91: ADD_F T142, T140, R141
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#102#61: MOVE_F R77, R66
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#136#124: MOVE_F R63, R60
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#276#37: MOVE_F R93, R2
+com.jme.intersection.Intersection#sort(float[])#void#23#10: ALOAD_F T6, R8, IConst: 1
+com.jme.intersection.Intersection#coplanarTriTri(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#54#18: GETFIELD_F T34, R29, .z
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#166#84: PUTFIELD_F R8, .x, R111
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#82#49: MOVE_F R65, T64
+com.jme.intersection.Intersection#coplanarTriTri(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#42#15: GETFIELD_F T32, R29, .y
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#127#120: MOVE_F R60, R58
+com.jme.math.Vector2f#hashCode()#int#30#13: ADD_I T18, T15, T17
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#741#258: GETFIELD_F T307, R43, .x
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#570#205: MOVE_F R256, T255
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#182#92: MOVE_F R118, R113
+JMEIntTest#precise(boolean)#boolean#0#1: MOVE_I R0, R0
+com.jme.math.Vector3f#<init>()#void#8#2: MOVE_F T1, FConst: 0.0
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#369#138: MOVE_F R189, T188
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#84#150: PUTFIELD_F R9, .y, T46
+com.jme.math.Vector3f#<init>(float,float,float)#void#16#7: PUTFIELD_F R0, .z, R3
+com.jme.intersection.Intersection#sort(float[])#void#28#13: ASTORE_F R13, R8, IConst: 1
+com.jme.math.Vector3f#cross(float,float,float,com.jme.math.Vector3f)#com.jme.math.Vector3f#18#7: MOVE_F R14, R3
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#307#53: SUB_F T106, R104, R105
+com.jme.intersection.Intersection#edgeAgainstTriEdges(float[],float[],float[],float[],float[],int,int)#boolean#69#27: MOVE_F R36, R31
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#608#192: GETFIELD_F T267, R1, .x
+com.jme.math.Vector2f#hashCode()#int#24#11: GETFIELD_F T16, R0, .y
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#875#309: ASTORE_F T354, R13, IConst: 1
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#105#33: MOVE_F R85, R76
+com.jme.math.ApproxMath#accept(float)#float#0#1: MOVE_F R0, R0
+com.jme.intersection.Intersection#coplanarTriTri(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#36#14: PUTFIELD_F R23, .x, T31
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#453#164: MOVE_F R214, T213
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#582#209: MOVE_F R260, T259
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#304#51: MOVE_F R104, R102
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#532#223: GETFIELD_F T246, R3, .z
+com.jme.math.Vector2f#hashCode()#int#18#8: MOVE_I R13, R12
+com.jme.math.Vector2f#hashCode()#int#32#15: MOVE_I R20, T19
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#70#42: MOVE_F R58, T57
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#832#293: MOVE_F R340, T339
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#277#38: PUTFIELD_F R8, .x, R93
+com.jme.math.Vector3f#toString()#java.lang.String#37#14: GETFIELD_F T16, R0, .z
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#83#149: SUB_F T46, R44, R45
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#108#64: MUL_F T80, R77, T79
+com.jme.math.Vector3f#hashCode()#int#17#7: MOVE_I R12, T11
+com.jme.math.Vector3f#<init>(float,float,float)#void#6#3: PUTFIELD_F R0, .x, R1
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#765#266: MOVE_F R315, R310
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#68#20: MOVE_F R72, T71
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#100#30: MOVE_F R82, R78
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#284#41: SUB_F T96, R94, R95
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#589#211: MOVE_F R262, T261
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#699#248: MOVE_F R297, R279
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#713#255: MOVE_F R304, R133
+com.jme.math.Vector3f#subtract(com.jme.math.Vector3f,com.jme.math.Vector3f)#com.jme.math.Vector3f#47#16: SUB_F T15, T13, T14
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#190#112: MOVE_F R128, R88
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#201#102: MOVE_F R126, R67
+com.jme.math.Vector3f#subtract(com.jme.math.Vector3f,com.jme.math.Vector3f)#com.jme.math.Vector3f#27#10: GETFIELD_F T10, R0, .y
+com.jme.math.Vector3f#hashCode()#int#32#15: MOVE_I R20, T19
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#175#103: ALOAD_F T119, R0, R118
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#447#162: GETFIELD_F T212, R207, .y
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#14#8: ALOAD_F T24, R2, R23
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#614#194: GETFIELD_F T269, R2, .x
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#283#40: MOVE_F R95, R93
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#106#109: MOVE_F R51, R49
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#509#215: MOVE_F R238, R235
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#862#303: GETFIELD_F T349, R44, .z
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#141#83: SUB_F T99, T96, T98
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#561#202: GETFIELD_F T253, R0, .y
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#523#220: MOVE_F R243, T242
+com.jme.math.ApproxMath#abs(float)#float#9#5: MOVE_F R7, T6
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#837#294: MOVE_F R341, R340
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#576#207: MOVE_F R258, T257
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#59#36: MOVE_F R52, T51
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#116#114: MOVE_F R55, R2
+com.jme.math.Vector3f#dot(com.jme.math.Vector3f)#float#32#7: MUL_F T12, T10, T11
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#220#61: PUTFIELD_F R8, .x, R74
+com.jme.math.Vector2f#hashCode()#int#33#16: MOVE_I R21, R20
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#43#130: PUTFIELD_F R8, .x, R30
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#282#39: MOVE_F R94, R0
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#122#119: PUTFIELD_F R8, .z, T59
+com.jme.math.Vector2f#hashCode()#int#15#5: ADD_I T10, T7, T9
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#285#99: ADD_F T150, T148, R149
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#627#198: GETFIELD_F T273, R4, .x
+com.jme.math.Vector2f#hashCode()#int#17#7: MOVE_I R12, T11
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#228#65: MOVE_F R78, R72
+com.jme.math.Vector3f#cross(float,float,float,com.jme.math.Vector3f)#com.jme.math.Vector3f#45#22: GETFIELD_F T29, R0, .x
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#86#51: NEG_F T67, R66
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#31#19: MOVE_F R35, R29
+com.jme.math.Vector3f#set(float,float,float)#com.jme.math.Vector3f#11#5: MOVE_F R3, R3
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#479#174: MOVE_F R224, R210
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#142#84: NEG_F T100, T99
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#60#138: MOVE_F R37, R32
+com.jme.math.Vector3f#set(float,float,float)#com.jme.math.Vector3f#12#6: PUTFIELD_F R0, .z, R3
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#176#90: PUTFIELD_F R8, .y, T116
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#620#196: GETFIELD_F T271, R3, .x
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#92#55: MOVE_F R71, R65
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#59#137: MOVE_F R36, R1
+com.jme.math.Vector3f#cross(float,float,float,com.jme.math.Vector3f)#com.jme.math.Vector3f#15#6: GETFIELD_F T13, R0, .y
+com.jme.math.Vector2f#toString()#java.lang.String#25#10: GETFIELD_F T12, R0, .y
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#256#78: MOVE_F R88, R85
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#325#117: MOVE_F R168, R157
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#185#95: MUL_F T121, T119, R120
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#323#116: MOVE_F R166, FConst: 0.0
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#746#259: GETFIELD_F T308, R43, .y
+com.jme.math.Vector2f#equals(java.lang.Object)#boolean#42#11: GETFIELD_F T13, R4, .y
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#789#275: GETFIELD_F T324, R42, .y
 com.jme.math.Vector3f#<clinit>()#void#19#8: MOVE_F T10, FConst: 0.0
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#579#165: GETFIELD_F T211, R3, .y
-com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#151#57: ALOAD_F T73, R3, R4
-com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#79#23: MOVE_F R74, T73
-71
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#161#96: MOVE_F R112, T111
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#14#7: MOVE_F R19, R3
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#275#96: MOVE_F R147, T146
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#260#80: SUB_F T90, R88, R89
+com.jme.math.Vector3f#subtract(com.jme.math.Vector3f,com.jme.math.Vector3f)#com.jme.math.Vector3f#14#6: GETFIELD_F T7, R0, .x
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#802#281: ASTORE_F T329, R12, IConst: 0
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#655#237: MOVE_F R288, R186
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#829#291: MOVE_F R338, R320
+com.jme.math.Vector3f#hashCode()#int#9#3: GETFIELD_F T8, R0, .x
+com.jme.intersection.Intersection#intersection(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#359#132: MOVE_F R183, R174
+65
 com.jme.intersection.Intersection#<clinit>()#void#89#34: NEWARRAY T16, IConst: 2, float[]#ARRAY#float[]#ARRAY
 com.jme.intersection.Intersection#<clinit>()#void#98#37: NEWARRAY T17, IConst: 2, float[]#ARRAY#float[]#ARRAY
-com.jme.intersection.Intersection#coplanarTriTri(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#160#50: NEWARRAY T61, IConst: 3, float[]#ARRAY#float[]#ARRAY
-com.jme.intersection.Intersection#coplanarTriTri(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#172#53: NEWARRAY T63, IConst: 3, float[]#ARRAY#float[]#ARRAY
-com.jme.intersection.Intersection#coplanarTriTri(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#184#56: NEWARRAY T65, IConst: 3, float[]#ARRAY#float[]#ARRAY
-com.jme.intersection.Intersection#coplanarTriTri(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#196#59: NEWARRAY T67, IConst: 3, float[]#ARRAY#float[]#ARRAY
-com.jme.intersection.Intersection#coplanarTriTri(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#222#65: NEWARRAY T71, IConst: 3, float[]#ARRAY#float[]#ARRAY
-com.jme.intersection.Intersection#coplanarTriTri(com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f,com.jme.math.Vector3f)#boolean#209#62: NEWARRAY T69, IConst: 3, float[]#ARRAY#float[]#ARRAY
 com.jme.intersection.Intersection#<clinit>()#void#26#10: NEW T6, com.jme.math.Vector2f#x#F#com.jme.math.Vector2f
 com.jme.intersection.Intersection#<clinit>()#void#36#14: NEW T8, com.jme.math.Vector2f#serialVersionUID#J#com.jme.math.Vector2f
 com.jme.intersection.Intersection#<clinit>()#void#26#10: NEW T6, com.jme.math.Vector2f#serialVersionUID#J#com.jme.math.Vector2f
 com.jme.intersection.Intersection#<clinit>()#void#36#14: NEW T8, com.jme.math.Vector2f#y#F#com.jme.math.Vector2f
-com.jme.intersection.Intersection#<clinit>()#void#36#14: NEW T8, com.jme.math.Vector2f#x#F#com.jme.math.Vector2f
 com.jme.intersection.Intersection#<clinit>()#void#26#10: NEW T6, com.jme.math.Vector2f#y#F#com.jme.math.Vector2f
-JMEIntTest#randvec()#com.jme.math.Vector3f#0#1: NEW T0, com.jme.math.Vector3f#x#F#com.jme.math.Vector3f
+com.jme.intersection.Intersection#<clinit>()#void#36#14: NEW T8, com.jme.math.Vector2f#x#F#com.jme.math.Vector2f
 com.jme.intersection.Intersection#<clinit>()#void#6#2: NEW T2, com.jme.math.Vector3f#serialVersionUID#J#com.jme.math.Vector3f
-JMEIntTest#randvec()#com.jme.math.Vector3f#0#1: NEW T0, com.jme.math.Vector3f#serialVersionUID#J#com.jme.math.Vector3f
-JMEIntTest#randvec()#com.jme.math.Vector3f#0#1: NEW T0, com.jme.math.Vector3f#z#F#com.jme.math.Vector3f
+JMEIntTest#randvec()#com.jme.math.Vector3f#3#2: NEW T0, com.jme.math.Vector3f#x#F#com.jme.math.Vector3f
+JMEIntTest#randvec()#com.jme.math.Vector3f#3#2: NEW T0, com.jme.math.Vector3f#serialVersionUID#J#com.jme.math.Vector3f
+JMEIntTest#randvec()#com.jme.math.Vector3f#3#2: NEW T0, com.jme.math.Vector3f#z#F#com.jme.math.Vector3f
 com.jme.intersection.Intersection#<clinit>()#void#6#2: NEW T2, com.jme.math.Vector3f#y#F#com.jme.math.Vector3f
 com.jme.intersection.Intersection#<clinit>()#void#16#6: NEW T4, com.jme.math.Vector3f#x#F#com.jme.math.Vector3f
 com.jme.math.Vector3f#toArray(float[])#float[]#5#2: NEWARRAY T2, IConst: 3, float[]#ARRAY#float[]#ARRAY
-JMEIntTest#randvec()#com.jme.math.Vector3f#0#1: NEW T0, com.jme.math.Vector3f#y#F#com.jme.math.Vector3f
+JMEIntTest#randvec()#com.jme.math.Vector3f#3#2: NEW T0, com.jme.math.Vector3f#y#F#com.jme.math.Vector3f
 com.jme.intersection.Intersection#<clinit>()#void#6#2: NEW T2, com.jme.math.Vector3f#x#F#com.jme.math.Vector3f
 com.jme.intersection.Intersection#<clinit>()#void#16#6: NEW T4, com.jme.math.Vector3f#serialVersionUID#J#com.jme.math.Vector3f
-com.jme.intersection.Intersection#<clinit>()#void#16#6: NEW T4, com.jme.math.Vector3f#z#F#com.jme.math.Vector3f
 com.jme.intersection.Intersection#<clinit>()#void#49#19: NEW T10, com.jme.math.Vector3f#serialVersionUID#J#com.jme.math.Vector3f
-com.jme.intersection.Intersection#<clinit>()#void#16#6: NEW T4, com.jme.math.Vector3f#y#F#com.jme.math.Vector3f
+com.jme.intersection.Intersection#<clinit>()#void#16#6: NEW T4, com.jme.math.Vector3f#z#F#com.jme.math.Vector3f
 com.jme.intersection.Intersection#<clinit>()#void#6#2: NEW T2, com.jme.math.Vector3f#z#F#com.jme.math.Vector3f
-com.jme.intersection.Intersection#<clinit>()#void#75#29: NEW T14, com.jme.math.Vector3f#serialVersionUID#J#com.jme.math.Vector3f
+com.jme.intersection.Intersection#<clinit>()#void#16#6: NEW T4, com.jme.math.Vector3f#y#F#com.jme.math.Vector3f
 com.jme.intersection.Intersection#<clinit>()#void#49#19: NEW T10, com.jme.math.Vector3f#y#F#com.jme.math.Vector3f
+com.jme.intersection.Intersection#<clinit>()#void#75#29: NEW T14, com.jme.math.Vector3f#serialVersionUID#J#com.jme.math.Vector3f
 com.jme.intersection.Intersection#<clinit>()#void#62#24: NEW T12, com.jme.math.Vector3f#x#F#com.jme.math.Vector3f
 com.jme.intersection.Intersection#<clinit>()#void#62#24: NEW T12, com.jme.math.Vector3f#serialVersionUID#J#com.jme.math.Vector3f
 com.jme.intersection.Intersection#<clinit>()#void#49#19: NEW T10, com.jme.math.Vector3f#x#F#com.jme.math.Vector3f
@@ -462,14 +589,14 @@ com.jme.intersection.Intersection#coplanarTriTri(com.jme.math.Vector3f,com.jme.m
 com.jme.math.Vector3f#<clinit>()#void#12#5: NEW T8, com.jme.math.Vector3f#serialVersionUID#J#com.jme.math.Vector3f
 com.jme.math.Vector3f#<clinit>()#void#12#5: NEW T8, com.jme.math.Vector3f#x#F#com.jme.math.Vector3f
 com.jme.math.Vector3f#<clinit>()#void#25#12: NEW T13, com.jme.math.Vector3f#serialVersionUID#J#com.jme.math.Vector3f
-com.jme.math.Vector3f#<clinit>()#void#64#33: NEW T28, com.jme.math.Vector3f#serialVersionUID#J#com.jme.math.Vector3f
-com.jme.math.Vector3f#<clinit>()#void#51#26: NEW T23, com.jme.math.Vector3f#x#F#com.jme.math.Vector3f
 com.jme.math.Vector3f#<clinit>()#void#25#12: NEW T13, com.jme.math.Vector3f#z#F#com.jme.math.Vector3f
 com.jme.math.Vector3f#<clinit>()#void#38#19: NEW T18, com.jme.math.Vector3f#y#F#com.jme.math.Vector3f
-com.jme.math.Vector3f#cross(float,float,float,)#com.jme.math.Vector3f#5#2: NEW T12, com.jme.math.Vector3f#serialVersionUID#J#com.jme.math.Vector3f
-com.jme.math.Vector3f#<clinit>()#void#64#33: NEW T28, com.jme.math.Vector3f#x#F#com.jme.math.Vector3f
-com.jme.math.Vector3f#<clinit>()#void#51#26: NEW T23, com.jme.math.Vector3f#y#F#com.jme.math.Vector3f
+com.jme.math.Vector3f#<clinit>()#void#51#26: NEW T23, com.jme.math.Vector3f#x#F#com.jme.math.Vector3f
+com.jme.math.Vector3f#<clinit>()#void#64#33: NEW T28, com.jme.math.Vector3f#serialVersionUID#J#com.jme.math.Vector3f
 com.jme.math.Vector3f#<clinit>()#void#38#19: NEW T18, com.jme.math.Vector3f#z#F#com.jme.math.Vector3f
+com.jme.math.Vector3f#<clinit>()#void#51#26: NEW T23, com.jme.math.Vector3f#y#F#com.jme.math.Vector3f
+com.jme.math.Vector3f#<clinit>()#void#64#33: NEW T28, com.jme.math.Vector3f#x#F#com.jme.math.Vector3f
+com.jme.math.Vector3f#cross(float,float,float,com.jme.math.Vector3f)#com.jme.math.Vector3f#5#2: NEW T12, com.jme.math.Vector3f#serialVersionUID#J#com.jme.math.Vector3f
 com.jme.math.Vector3f#<clinit>()#void#38#19: NEW T18, com.jme.math.Vector3f#serialVersionUID#J#com.jme.math.Vector3f
 com.jme.math.Vector3f#<clinit>()#void#12#5: NEW T8, com.jme.math.Vector3f#y#F#com.jme.math.Vector3f
 com.jme.math.Vector3f#<clinit>()#void#25#12: NEW T13, com.jme.math.Vector3f#x#F#com.jme.math.Vector3f
@@ -477,13 +604,25 @@ com.jme.math.Vector3f#<clinit>()#void#51#26: NEW T23, com.jme.math.Vector3f#seri
 com.jme.math.Vector3f#<clinit>()#void#38#19: NEW T18, com.jme.math.Vector3f#x#F#com.jme.math.Vector3f
 com.jme.math.Vector3f#<clinit>()#void#12#5: NEW T8, com.jme.math.Vector3f#z#F#com.jme.math.Vector3f
 com.jme.math.Vector3f#<clinit>()#void#25#12: NEW T13, com.jme.math.Vector3f#y#F#com.jme.math.Vector3f
-com.jme.math.Vector3f#subtract()#com.jme.math.Vector3f#4#2: NEW T3, com.jme.math.Vector3f#z#F#com.jme.math.Vector3f
-com.jme.math.Vector3f#subtract()#com.jme.math.Vector3f#4#2: NEW T3, com.jme.math.Vector3f#y#F#com.jme.math.Vector3f
-com.jme.math.Vector3f#cross(float,float,float,)#com.jme.math.Vector3f#5#2: NEW T12, com.jme.math.Vector3f#z#F#com.jme.math.Vector3f
-com.jme.math.Vector3f#subtract()#com.jme.math.Vector3f#4#2: NEW T3, com.jme.math.Vector3f#x#F#com.jme.math.Vector3f
-com.jme.math.Vector3f#cross(float,float,float,)#com.jme.math.Vector3f#5#2: NEW T12, com.jme.math.Vector3f#y#F#com.jme.math.Vector3f
+com.jme.math.Vector3f#subtract(com.jme.math.Vector3f,com.jme.math.Vector3f)#com.jme.math.Vector3f#4#2: NEW T3, com.jme.math.Vector3f#z#F#com.jme.math.Vector3f
+com.jme.math.Vector3f#subtract(com.jme.math.Vector3f,com.jme.math.Vector3f)#com.jme.math.Vector3f#4#2: NEW T3, com.jme.math.Vector3f#y#F#com.jme.math.Vector3f
+com.jme.math.Vector3f#cross(float,float,float,com.jme.math.Vector3f)#com.jme.math.Vector3f#5#2: NEW T12, com.jme.math.Vector3f#z#F#com.jme.math.Vector3f
+com.jme.math.Vector3f#subtract(com.jme.math.Vector3f,com.jme.math.Vector3f)#com.jme.math.Vector3f#4#2: NEW T3, com.jme.math.Vector3f#x#F#com.jme.math.Vector3f
+com.jme.math.Vector3f#cross(float,float,float,com.jme.math.Vector3f)#com.jme.math.Vector3f#5#2: NEW T12, com.jme.math.Vector3f#y#F#com.jme.math.Vector3f
 com.jme.math.Vector3f#<clinit>()#void#64#33: NEW T28, com.jme.math.Vector3f#z#F#com.jme.math.Vector3f
-com.jme.math.Vector3f#subtract()#com.jme.math.Vector3f#4#2: NEW T3, com.jme.math.Vector3f#serialVersionUID#J#com.jme.math.Vector3f
-com.jme.math.Vector3f#cross(float,float,float,)#com.jme.math.Vector3f#5#2: NEW T12, com.jme.math.Vector3f#x#F#com.jme.math.Vector3f
+com.jme.math.Vector3f#subtract(com.jme.math.Vector3f,com.jme.math.Vector3f)#com.jme.math.Vector3f#4#2: NEW T3, com.jme.math.Vector3f#serialVersionUID#J#com.jme.math.Vector3f
+com.jme.math.Vector3f#cross(float,float,float,com.jme.math.Vector3f)#com.jme.math.Vector3f#5#2: NEW T12, com.jme.math.Vector3f#x#F#com.jme.math.Vector3f
 com.jme.math.Vector3f#<clinit>()#void#64#33: NEW T28, com.jme.math.Vector3f#y#F#com.jme.math.Vector3f
 com.jme.math.Vector3f#<clinit>()#void#51#26: NEW T23, com.jme.math.Vector3f#z#F#com.jme.math.Vector3f
+34
+com.jme.math.Vector3f#set(float,float,float)#com.jme.math.Vector3f#011
+com.jme.intersection.Intersection#edgeEdgeTest(float[],float[],float[],int,int,float,float)#boolean#0001111
+JMEIntTest#accept(boolean)#boolean#1
+com.jme.intersection.Intersection#accept(float)#float#1
+com.jme.intersection.Intersection#edgeAgainstTriEdges(float[],float[],float[],float[],float[],int,int)#boolean#0000011
+com.jme.math.ApproxMath#accept(float)#float#1
+com.jme.math.Vector3f#<init>(float,float,float)#void#011
+com.jme.math.ApproxMath#abs(float)#float#1
+com.jme.math.Vector3f#cross(float,float,float,com.jme.math.Vector3f)#com.jme.math.Vector3f#0111
+com.jme.intersection.Intersection#pointInTri(float[],float[],float[],float[],int,int)#boolean#000011
+com.jme.intersection.Intersection#newComputeIntervals(float,float,float,float,float,float,float,float,com.jme.math.Vector3f,com.jme.math.Vector2f)#boolean#1111111100

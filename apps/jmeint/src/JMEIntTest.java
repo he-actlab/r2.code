@@ -7,17 +7,26 @@ import java.util.Random;
 public class JMEIntTest {
 	public static Random rand;
 	public static  Vector3f randvec() {
-		return new  Vector3f(
+		alloc_TAG5();
+		Vector3f vec = new Vector3f(
 				rand.nextFloat(), rand.nextFloat(), rand.nextFloat()
 				);
+		accept_all_FIELD1_TAG5(vec);
+		accept_all_FIELD2_TAG5(vec);
+		accept_all_FIELD3_TAG5(vec);
+		return vec;
 	}
+	private static void alloc_TAG5() {}
+	private static void accept_all_FIELD1_TAG5(Vector3f vec){}
+	private static void accept_all_FIELD2_TAG5(Vector3f vec){}
+	private static void accept_all_FIELD3_TAG5(Vector3f vec){}
 	public static void main(String[] argv) {
 
 		// Use a constant seed so we operate deterministically.
 		rand = new Random(Integer.parseInt(argv[0])); 
 
 		for (int i = 0; i <= 100; ++i) {
-			boolean isec = Intersection.intersection(	// approx: 21: MOVE_I R21, T20
+			boolean isec = Intersection.intersection(
 					randvec(), randvec(), randvec(),
 					randvec(), randvec(), randvec()
 					);
@@ -27,7 +36,7 @@ public class JMEIntTest {
 			} else {
 				System.out.print("0 ");
 			}
-			isec = precise(isec);	// approx: 33: MOVE_I R29, T28
+			isec = precise(isec);
 		}
 
 		System.out.println("");

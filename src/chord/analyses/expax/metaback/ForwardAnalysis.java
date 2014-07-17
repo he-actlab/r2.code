@@ -9,6 +9,9 @@ import java.util.StringTokenizer;
 
 import joeq.Class.jq_Class;
 import joeq.Class.jq_Field;
+import joeq.Class.jq_Initializer;
+import joeq.Class.jq_InstanceField;
+import joeq.Class.jq_InstanceMethod;
 import joeq.Class.jq_Method;
 import joeq.Class.jq_Type;
 import joeq.Compiler.Quad.BasicBlock;
@@ -265,6 +268,22 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 	    	SharedData.parseAllocTag(m);
 	    }
 	    
+	    // jspark: store approximate parameters
+	    String excludeStr = System.getProperty("chord.check.exclude","java.,com.,sun.,sunw.,javax.,launchrer.,org.");
+		String[] excludes = excludeStr.split(",");
+		boolean excludeClass = false;
+		for (String exclude : excludes) {
+			if (m.getDeclaringClass().toString().startsWith(exclude)) {
+				excludeClass = true;
+				break;
+			}
+		}
+		if(!excludeClass) {
+		    if (!SharedData.approxParams.keySet().contains(m) && args.length() != 0) {
+		    	Set<Integer> newSet = new HashSet<Integer>();
+		    	SharedData.approxParams.put(m, newSet);
+		    }
+		}
 		for (int i = 0; i < args.length(); i++) {
 			Register actualReg = args.get(i).getRegister();
 			Register formalReg = rf.get(i);
@@ -272,6 +291,9 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 			if(oldtvs.contains(aridx)){
 				Integer fridx = SharedData.domU.indexOf(formalReg);
 				newtvs.add(fridx);
+				if(!excludeClass)
+					SharedData.approxParams.get(m).add(i);
+//				System.out.println(i + "th parameter of " + m.toString() + " is approximated");
 			}
 		}
 		AbstractState newAbs = new AbstractState(newtgs, newtvs, newtfs, false, abs.isErr);
@@ -391,6 +413,8 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 		System.out.println("*** EXPAX_COUNT - approxList size: " + abs.approxStatements.size());
 	}
 	
+	
+	
 	/**
 	 * Write three files: after, analysis.result, analysis flag
 	 * (1) after: a list of approximate quads and markJava.py will use it to attach comments on Java source code
@@ -401,6 +425,7 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 	 * 
 	 *  @author jspark
 	 */
+	final String EXPAXSEP = "#";
 	public void writeResultFile(){
 		
 		// *******
@@ -414,6 +439,11 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 				Inst inst = SharedData.domP.get(i);
 				afterWriter.write(inst.toVerboseStr() + "\n");
 			}
+			for(Pair<Integer,Integer> pair : abs.approxStorage){
+				Pair<Quad,jq_Field> pair2 = SharedData.idxFieldMap.get(pair);
+				Quad q = pair2.val0;
+				afterWriter.write(q.toVerboseStr() + "\n");
+			}
 			afterWriter.close();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -422,7 +452,6 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 		// *****************
 		// "analysis.result"
 		// *****************
-		final String EXPAXSEP = "#";
 		
 		String resultFileName = Config.analysisResultFileName;
 		if (resultFileName.equalsIgnoreCase(""))
@@ -441,34 +470,15 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 			PrintWriter resultWriter = new PrintWriter(resultFile);
 			resultWriter.write(writeSet.size() + "\n");
 			for(Quad q : writeSet){
-				String className = q.getBasicBlock().getMethod().getDeclaringClass().toString();
-				className = SharedData.convertClassName(className);
-				resultWriter.write(className + EXPAXSEP);
-				String methName = q.getBasicBlock().getMethod().getName().toString();
-				resultWriter.write(methName + "(");
-				jq_Type[] types = q.getBasicBlock().getMethod().getParamTypes();
-				if (types.length != 0){
-					int i;
-					for (i=0; i<types.length-1; i++){
-						jq_Type type = types[i];
-						if (type.toString().equalsIgnoreCase(className))
-							continue;
-						resultWriter.write(type.toString() + ",");
-					}
-					if (!types[i].toString().equalsIgnoreCase(className))
-						resultWriter.write(types[i] + ")" + EXPAXSEP);
-					else 
-						resultWriter.write(")" + EXPAXSEP);
-				} else{
-					resultWriter.write(")" + EXPAXSEP);
-				}
-				resultWriter.write(q.getBasicBlock().getMethod().getReturnType().toString() + EXPAXSEP);
+				jq_Method method = q.getBasicBlock().getMethod();
+				writeMethod(method, resultWriter);
 				resultWriter.write(q.getBCI() + EXPAXSEP);
 				resultWriter.write(q.toString() + "\n");
 			}
 			resultWriter.write(abs.approxStorage.size() + "\n");
 			for (Pair<Integer,Integer> pair : abs.approxStorage) {
 				Quad q = SharedData.idxFieldMap.get(pair).val0;
+				jq_Method method = q.getBasicBlock().getMethod();
 				jq_Field field = SharedData.idxFieldMap.get(pair).val1;
 				String fieldStr = null;
 				String descStr = null;
@@ -485,33 +495,39 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 					descStr = to.toString();
 					declClassStr = "ARRAY";
 				}
-				String className = q.getBasicBlock().getMethod().getDeclaringClass().toString();
-				className = SharedData.convertClassName(className);
-				resultWriter.write(className + EXPAXSEP);
-				String methName = q.getBasicBlock().getMethod().getName().toString();
-				resultWriter.write(methName + "(");
-				jq_Type[] types = q.getBasicBlock().getMethod().getParamTypes();
-				if (types.length != 0){
-					int i;
-					for (i=0; i<types.length-1; i++){
-						jq_Type type = types[i];
-						if (type.toString().equalsIgnoreCase(className))
-							continue;
-						resultWriter.write(type.toString() + ",");
-					}
-					if (!types[i].toString().equalsIgnoreCase(className))
-						resultWriter.write(types[i] + ")" + EXPAXSEP);
-					else 
-						resultWriter.write(")" + EXPAXSEP);
-				} else{
-					resultWriter.write(")" + EXPAXSEP);
-				}
-				resultWriter.write(q.getBasicBlock().getMethod().getReturnType().toString() + EXPAXSEP);
+				writeMethod(method, resultWriter);
 				resultWriter.write(q.getBCI() + EXPAXSEP);
 				resultWriter.write(q.toString() + EXPAXSEP);
 				resultWriter.write(fieldStr + EXPAXSEP);
 				resultWriter.write(descStr + EXPAXSEP);
 				resultWriter.write(declClassStr + '\n');
+			}
+			Set<jq_Method> keyset = SharedData.approxParams.keySet();
+			int size = 0;
+			for (jq_Method method : keyset) {
+				Set<Integer> indexSet = SharedData.approxParams.get(method);
+				if(indexSet.isEmpty())
+					continue;
+				size++;
+			}
+			resultWriter.write(size + "\n");
+			for (jq_Method method : keyset) {
+				Set<Integer> indexSet = SharedData.approxParams.get(method);
+				if(indexSet.isEmpty())
+					continue;
+				writeMethod(method, resultWriter);
+				jq_Type[] types = method.getParamTypes();
+				int paramSize = types.length;
+				int initialIndex = 1;
+				if(method.isStatic())
+					initialIndex = 0;
+				for (int i = initialIndex; i < paramSize; i++){
+					if (indexSet.contains(i))
+						resultWriter.write('1');
+					else
+						resultWriter.write('0');
+				}
+				resultWriter.write('\n');
 			}
 			resultWriter.close();
 		} catch (Exception e) {
@@ -532,6 +548,29 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 		}
 	}
 
+	public void writeMethod(jq_Method method, PrintWriter resultWriter) {
+		String className = method.getDeclaringClass().toString();
+		className = SharedData.convertClassName(className);
+		resultWriter.write(className + EXPAXSEP);
+		String methName = method.getName().toString();
+		resultWriter.write(methName + "(");
+		jq_Type[] types = method.getParamTypes();
+		int initialIndex = 1;
+		if(method.isStatic())
+			initialIndex = 0;
+		if (types.length-initialIndex != 0){
+			int i;
+			for (i=initialIndex; i<types.length-1; i++){
+				jq_Type type = types[i];
+				resultWriter.write(type.toString() + ",");
+			}
+			resultWriter.write(types[i] + ")" + EXPAXSEP);
+		} else{
+			resultWriter.write(")" + EXPAXSEP);
+		}
+		resultWriter.write(method.getReturnType().toString() + EXPAXSEP);
+	}
+	
 	public String getQuadType(Quad q){
 		/*Operator o = q.getOperator();
 		if(o instanceof Move)

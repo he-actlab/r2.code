@@ -135,14 +135,10 @@ public class MethodBindingTranslator extends HelpfulTreeTranslator<PrecisionChec
 
 			// check whether the lhs is approximate
 			if(ENERJ) {
-				if(EXPAX_MT)
-					System.out.println("*** EXPAX_MT: ENERJ");
 				if (lhs.hasAnnotation(Approx.class)) {
 					ctxApprox = true;
 				}
 			} else {
-				if(EXPAX_MT)
-					System.out.println("*** EXPAX_MT: EXPAX");
 				ctxApprox = expaxIsApprox(tree);
 			}
 
@@ -176,11 +172,17 @@ public class MethodBindingTranslator extends HelpfulTreeTranslator<PrecisionChec
 				System.out.println("*** EXPAX_MT: ENERJ");
 			if (lhs.hasAnnotation(Approx.class)) {
 				ctxApprox = true;
+				if(EXPAX_MT)
+    				System.out.println("*** ENERJ_APPROX: " + tree.toString());
 			}
 		} else {
 			if(EXPAX_MT)
 				System.out.println("*** EXPAX_MT: EXPAX");
 			ctxApprox = expaxIsApprox(tree);
+			if(ctxApprox) {
+				if(EXPAX_MT)
+    				System.out.println("*** EXPAX_APPROX: " + tree.toString());
+			}
 		}
 
         tree.init = translate(tree.init);
@@ -341,7 +343,10 @@ public class MethodBindingTranslator extends HelpfulTreeTranslator<PrecisionChec
     	MethodSymbol meth = tree.sym;
         curMethName = tree.getName().toString();
         if(!(curMethName.equalsIgnoreCase("<init>") || curMethName.equalsIgnoreCase("<clinit>"))){
-        	curMethName = tree.sym.toString();
+        	if (curMethName.equalsIgnoreCase("__htt_staticInitializerMethod")) 
+            	curMethName = "<clinit>()";
+        	else
+        		curMethName = tree.sym.toString();
         } else {
         	int index = tree.sym.toString().indexOf((int)'(');
         	String params = tree.sym.toString().substring(index);

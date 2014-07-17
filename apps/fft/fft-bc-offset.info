@@ -1,698 +1,711 @@
-697
-jnt.scimark2.Random#<init>(double,double)#void#51#1155#IDENT#haveRange
-jnt.scimark2.FFT#transform_internal(double[],int)#void#235#4312#IDENT#tmp_imag
-jnt.scimark2.Random#<init>(double,double)#void#76#2237#IDENT#this
-jnt.scimark2.FFT#transform_internal(double[],int)#void#301#4917#IDENT#w_imag
-jnt.scimark2.FFT#transform_internal(double[],int)#void#103#2838#IDENT#b
-jnt.scimark2.Random#<init>(int)#void#47#1048#ASSIGN#dm1 = 1.0 / (double)m1
-jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#10#880#IDENT#N
-jnt.scimark2.Random#<init>()#void#6#440#ASSIGN#seed = 0
-jnt.scimark2.Random#<init>(double,double)#void#17#540#ASSIGN#j = 16
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#114#505#ASSIGN#x = precise_all_FIELD1_TAG1(x)
-jnt.scimark2.Random#<init>()#void#28#639#ASSIGN#one = 1
-jnt.scimark2.FFT#bitreverse(double[])#void#116#6690#PLUS_ASG#j += k
-jnt.scimark2.Random#<init>(double,double)#void#78#2247#ASSIGN#this.left = left
-jnt.scimark2.FFT#transform_internal(double[],int)#void#64#2476#IDENT#theta
-jnt.scimark2.Random#initialize(int)#void#13#4907#IDENT#seed
-jnt.scimark2.Random#nextDouble()#double#40#3897#IDENT#j
-jnt.scimark2.FFT#transform_internal(double[],int)#void#206#3812#MINUS#w_real - s * w_imag
-jnt.scimark2.FFT#inverse(double[])#void#10#941#DIV#nd / 2
-jnt.scimark2.Random#<init>()#void#11#520#ASSIGN#i = 4
+710
+jnt.scimark2.Random#<init>(double,double)#void#10#520#IDENT#i
+jnt.scimark2.FFT#transform_internal(double[],int)#void#221#4046#MUL#s * w_real
+jnt.scimark2.FFT#transform_internal(double[],int)#void#283#4692#IDENT#w_real
+jnt.scimark2.Random#<init>(double,double)#void#34#712#ASSIGN#m1 = (one << mdig - 2) + ((one << mdig - 2) - one)
 jnt.scimark2.FFT#transform_internal(double[],int)#void#85#2648#IDENT#t
-jnt.scimark2.FFT#bitreverse(double[])#void#0#5822#IDENT#data
-jnt.scimark2.Random#initialize(int)#void#119#5990#IDENT#j
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#109#507#IDENT#precise_all_FIELD1_TAG1
-jnt.scimark2.Random#<init>(int,double,double)#void#21#562#IDENT#mdig
-jnt.scimark2.FFT#bitreverse(double[])#void#88#6530#ASSIGN#data[jj + 1] = tmp_imag
-jnt.scimark2.FFT#transform_internal(double[],int)#void#315#5104#INDEXED#data[i]
+jnt.scimark2.Random#<init>(int)#void#6#440#ASSIGN#seed = 0
+jnt.scimark2.FFT#inverse(double[])#void#17#1076#DIV#1.0 / aprN
+jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#8#673#VARDEF#int i = 0
+jnt.scimark2.commandline#main(java.lang.String[])#void#28#629#INDEXED#args[0]
+jnt.scimark2.Random#<init>()#void#56#1191#IDENT#left
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#52#343#SELECT#System.out.print
 jnt.scimark2.Random#initialize(int)#void#106#5841#ASSIGN#m[iloop] = j0 + m2 * j1
-jnt.scimark2.FFT#transform_internal(double[],int)#void#155#3250#MINUS#data[i + 1] - wd_imag
-jnt.scimark2.FFT#transform_internal(double[],int)#void#293#4709#MINUS#w_real * z1_real - w_imag * z1_imag
-jnt.scimark2.Random#initialize(int)#void#89#5747#MOD#jseed % m2
-jnt.scimark2.FFT#bitreverse(double[])#void#42#6070#IDENT#ii
-jnt.scimark2.Random#nextDouble()#double#21#3781#IDENT#k
-jnt.scimark2.Random#<init>(int)#void#66#1348#IDENT#width
-jnt.scimark2.FFT#transform_internal(double[],int)#void#258#4444#IDENT#b
-jnt.scimark2.commandline#main(java.lang.String[])#void#45#715#SELECT#kernel.measureFFT
-jnt.scimark2.Random#<init>(int,double,double)#void#17#540#ASSIGN#j = 16
-jnt.scimark2.FFT#inverse(double[])#void#5#917#IDENT#data
-jnt.scimark2.FFT#log2(int)#int#1#1388#VARDEF#int log = 0
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#36#201#PREINC#++i
-jnt.scimark2.FFT#bitreverse(double[])#void#69#6369#IDENT#jj
-jnt.scimark2.Random#<init>(int,double,double)#void#52#1155#ASSIGN#haveRange = false
-jnt.scimark2.Random#<init>(int,double,double)#void#10#520#IDENT#i
-jnt.scimark2.Random#<init>(double,double)#void#83#2268#ASSIGN#this.right = right
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#49#339#SELECT#System.out
-jnt.scimark2.FFT#transform_internal(double[],int)#void#199#3805#IDENT#w_real
-jnt.scimark2.FFT#log2(int)#int#23#1443#NE#n != (1 << log)
-jnt.scimark2.Random#initialize(int)#void#86#5741#IDENT#jseed
-jnt.scimark2.Random#nextDouble()#double#130#4425#IDENT#k
-jnt.scimark2.Random#<init>(double,double)#void#21#562#IDENT#mdig
-jnt.scimark2.FFT#inverse(double[])#void#30#1221#IDENT#i
-jnt.scimark2.FFT#bitreverse(double[])#void#27#5976#SL#j << 1
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#66#408#SELECT#System.out
-jnt.scimark2.FFT#transform_internal(double[],int)#void#331#5269#IDENT#wd_imag
-jnt.scimark2.FFT#transform_internal(double[],int)#void#229#4024#VARDEF#double tmp_imag = w_imag + s * w_real - s2 * w_imag
-jnt.scimark2.Random#nextDouble()#double#132#4423#MUL#dm1 * k
-jnt.scimark2.FFT#transform_internal(double[],int)#void#164#3387#PLUS_ASG#data[i] += wd_real
-jnt.scimark2.FFT#bitreverse(double[])#void#100#6635#MINUS_ASG#j -= k
-jnt.scimark2.Random#<init>(double,double)#void#5#440#IDENT#seed
-jnt.scimark2.FFT#inverse(double[])#void#29#1216#IDENT#data
-jnt.scimark2.FFT#transform_internal(double[],int)#void#141#3088#ASSIGN#data[j] = data[i] - wd_real
-jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#26#748#IDENT#y
-jnt.scimark2.Random#nextDouble()#double#50#4002#IDENT#i
-jnt.scimark2.FFT#transform_internal(double[],int)#void#192#3702#IDENT#a
-jnt.scimark2.FFT#bitreverse(double[])#void#119#5896#PREINC#++i
-jnt.scimark2.Random#nextDouble()#double#59#4016#ASSIGN#i = 16
-jnt.scimark2.FFT#inverse(double[])#void#13#1020#VARDEF#int aprN = n
-jnt.scimark2.FFT#transform_internal(double[],int)#void#305#4924#MUL#w_imag * z1_real
-jnt.scimark2.FFT#transform_internal(double[],int)#void#348#5555#PLUS#i + 1
-jnt.scimark2.Random#initialize(int)#void#51#5299#IDENT#iloop
-jnt.scimark2.FFT#transform_internal(double[],int)#void#138#3102#IDENT#wd_real
-jnt.scimark2.FFT#transform_internal(double[],int)#void#182#2814#MUL#2 * dual
-jnt.scimark2.FFT#inverse(double[])#void#18#1068#VARDEF#double norm = 1.0 / aprN
-jnt.scimark2.FFT#bitreverse(double[])#void#85#6526#PLUS#jj + 1
-jnt.scimark2.Random#<init>(int,double,double)#void#76#3163#SELECT#this.left
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#63#387#LT#i < N
-jnt.scimark2.Random#nextDouble()#double#19#3594#ASSIGN#k = m[i] - m[j]
+jnt.scimark2.Random#initialize(int)#void#119#5990#IDENT#j
+jnt.scimark2.FFT#bitreverse(double[])#void#86#6523#INDEXED#data[jj + 1]
+jnt.scimark2.FFT#log2(int)#int#11#1421#MUL_ASG#k *= 2
 jnt.scimark2.FFT#transform_internal(double[],int)#void#49#2126#MUL#2.0 * direction
-jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#19#696#ASSIGN#y[i] = x[i]
-jnt.scimark2.FFT#<init>()#void#0#504#IDENT#super
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#95#394#IDENT#i
-jnt.scimark2.FFT#transform_internal(double[],int)#void#237#4310#ASSIGN#w_imag = tmp_imag
-jnt.scimark2.FFT#bitreverse(double[])#void#7#5850#MINUS#n - 1
-jnt.scimark2.Random#<init>(int)#void#21#562#IDENT#mdig
-jnt.scimark2.Random#<init>(double,double)#void#38#830#IDENT#m2
+jnt.scimark2.Random#<init>(double,double)#void#44#1048#IDENT#dm1
+jnt.scimark2.Random#nextDouble()#double#124#4117#PLUS#left + dm1 * k * width
+jnt.scimark2.Random#nextDouble()#double#14#3605#IDENT#j
+jnt.scimark2.FFT#transform_internal(double[],int)#void#183#2809#PLUS_ASG#b += 2 * dual
 jnt.scimark2.FFT#transform_internal(double[],int)#void#64#2471#SELECT#Math.sin
-jnt.scimark2.Random#initialize(int)#void#107#5324#IDENT#iloop
-jnt.scimark2.FFT#transform_internal(double[],int)#void#160#3382#INDEXED#data[i]
-jnt.scimark2.FFT#bitreverse(double[])#void#103#6667#IDENT#k
-jnt.scimark2.FFT#bitreverse(double[])#void#119#5895#IDENT#i
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#109#531#IDENT#x
-jnt.scimark2.Random#<init>()#void#23#562#ASSIGN#mdig = 32
-jnt.scimark2.FFT#bitreverse(double[])#void#36#6035#IDENT#j
+jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#21#883#IDENT#i
+jnt.scimark2.FFT#transform_internal(double[],int)#void#353#5558#PLUS_ASG#data[i + 1] += wd_imag
+jnt.scimark2.Random#initialize(int)#void#84#5427#ASSIGN#j1 = (jseed / m2 + j0 * k1 + j1 * k0) % (m2 / 2)
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#49#339#SELECT#System.out
+jnt.scimark2.Random#<init>(int)#void#61#1269#IDENT#right
+jnt.scimark2.FFT#bitreverse(double[])#void#72#6371#PLUS#jj + 1
+jnt.scimark2.FFT#transform_internal(double[],int)#void#300#4905#MUL#w_real * z1_imag
+jnt.scimark2.Random#initialize(int)#void#76#5453#IDENT#j1
+jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#21#884#PREINC#++i
+jnt.scimark2.FFT#transform_internal(double[],int)#void#142#3228#IDENT#data
+jnt.scimark2.FFT#transform_internal(double[],int)#void#275#4585#IDENT#data
+jnt.scimark2.Random#initialize(int)#void#64#5350#MUL#j0 * k0
+jnt.scimark2.FFT#bitreverse(double[])#void#19#5934#IDENT#i
+jnt.scimark2.Random#<init>(int,double,double)#void#91#3207#ASSIGN#width = right - left
+jnt.scimark2.Random#<init>(int)#void#27#639#IDENT#one
+jnt.scimark2.FFT#transform_internal(double[],int)#void#235#4312#IDENT#tmp_imag
+jnt.scimark2.commandline#<init>()#void#0#265#IDENT#super
+jnt.scimark2.Random#<init>(int)#void#57#1191#ASSIGN#left = 0.0
+jnt.scimark2.kernel#<init>()#void#0#30#IDENT#super
+jnt.scimark2.FFT#bitreverse(double[])#void#53#6153#VARDEF#double tmp_imag = data[ii + 1]
+jnt.scimark2.Random#<init>(int,double,double)#void#11#520#ASSIGN#i = 4
+jnt.scimark2.Random#<init>(int)#void#51#1155#IDENT#haveRange
+jnt.scimark2.Random#<init>(double,double)#void#56#1191#IDENT#left
+jnt.scimark2.FFT#bitreverse(double[])#void#91#6599#IDENT#j
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#7#124#VARDEF#double[] x = RandomVector(2 * N, R)
+jnt.scimark2.FFT#transform_internal(double[],int)#void#175#3525#PLUS_ASG#data[i + 1] += wd_imag
+jnt.scimark2.FFT#log2(int)#int#6#1414#LT#k < n
+jnt.scimark2.Random#initialize(int)#void#63#5352#IDENT#k0
+jnt.scimark2.Random#nextDouble()#double#76#4045#IDENT#j
+jnt.scimark2.Random#<init>()#void#57#1191#ASSIGN#left = 0.0
 jnt.scimark2.commandline#main(java.lang.String[])#void#45#715#SELECT#kernel.measureFFT
-jnt.scimark2.FFT#bitreverse(double[])#void#67#6358#PLUS#ii + 1
-jnt.scimark2.Random#initialize(int)#void#6#4861#IDENT#m
-jnt.scimark2.Random#initialize(int)#void#83#5462#MOD#(jseed / m2 + j0 * k1 + j1 * k0) % (m2 / 2)
-jnt.scimark2.FFT#transform_internal(double[],int)#void#266#4442#MUL#2 * (b + a + dual)
-jnt.scimark2.FFT#transform_internal(double[],int)#void#281#4575#VARDEF#double z1_imag = data[j + 1]
-jnt.scimark2.FFT#transform_internal(double[],int)#void#117#2890#IDENT#data
-jnt.scimark2.commandline#main(java.lang.String[])#void#29#623#ASSIGN#seed = args[0]
-jnt.scimark2.FFT#transform_internal(double[],int)#void#325#5249#INDEXED#data[j + 1]
-jnt.scimark2.FFT#inverse(double[])#void#34#1227#IDENT#norm
-jnt.scimark2.FFT#bitreverse(double[])#void#5#5849#IDENT#n
-jnt.scimark2.Random#<init>(int,double,double)#void#75#3159#IDENT#this
-jnt.scimark2.commandline#main(java.lang.String[])#void#11#521#SELECT#args.length
 jnt.scimark2.FFT#bitreverse(double[])#void#96#6633#IDENT#j
-jnt.scimark2.Constants#<init>()#void#0#30#IDENT#super
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#31#257#SELECT#FFT.inverse
-jnt.scimark2.Random#initialize(int)#void#78#5458#IDENT#k0
-jnt.scimark2.Random#initialize(int)#void#10#4863#ASSIGN#m = new int[17]
-jnt.scimark2.FFT#transform_internal(double[],int)#void#60#2155#MUL#2.0 * (double)dual
-jnt.scimark2.FFT#transform_internal(double[],int)#void#39#1985#VARDEF#double w_real = 1.0
-jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#3#857#IDENT#N
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#42#304#IDENT#accept_all_FIELD1_TAG1
-jnt.scimark2.Random#<init>(double,double)#void#90#2285#ASSIGN#width = right - left
-jnt.scimark2.FFT#transform_internal(double[],int)#void#309#5088#IDENT#data
-jnt.scimark2.FFT#bitreverse(double[])#void#22#5929#VARDEF#int ii = i << 1
-jnt.scimark2.FFT#transform(double[])#void#0#653#IDENT#data
-jnt.scimark2.Random#initialize(int)#void#52#5305#ASSIGN#iloop = 0
-jnt.scimark2.Random#<init>(int)#void#32#712#IDENT#m1
-jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#6#839#VARDEF#double[] A = new double[N]
+jnt.scimark2.FFT#inverse(double[])#void#26#1203#LT#i < nd
+jnt.scimark2.FFT#bitreverse(double[])#void#4#5820#VARDEF#int n = data.length / 2
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#26#226#IDENT#x
+jnt.scimark2.FFT#transform_internal(double[],int)#void#316#5112#IDENT#wd_real
+jnt.scimark2.FFT#transform_internal(double[],int)#void#211#3830#MUL#s2 * w_real
+jnt.scimark2.Random#nextDouble()#double#79#4047#EQ#j == 0
+jnt.scimark2.FFT#transform_internal(double[],int)#void#151#3246#PLUS#i + 1
+jnt.scimark2.FFT#bitreverse(double[])#void#78#6468#IDENT#tmp_real
+jnt.scimark2.Random#<init>()#void#44#1048#IDENT#dm1
+jnt.scimark2.FFT#inverse(double[])#void#25#1204#IDENT#nd
+jnt.scimark2.FFT#transform_internal(double[],int)#void#129#2981#VARDEF#double wd_imag = data[j + 1]
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#114#505#ASSIGN#x = precise_all_FIELD1_TAG1(x)
+jnt.scimark2.Random#initialize(int)#void#114#5981#IDENT#i
+jnt.scimark2.Random#nextDouble()#double#21#3774#IDENT#accept
+jnt.scimark2.FFT#transform_internal(double[],int)#void#170#3522#PLUS#i + 1
+jnt.scimark2.FFT#bitreverse(double[])#void#86#6532#IDENT#tmp_imag
+jnt.scimark2.Random#nextDouble()#double#26#3791#IDENT#k
+jnt.scimark2.FFT#inverse(double[])#void#5#917#IDENT#data
+jnt.scimark2.FFT#transform_internal(double[],int)#void#287#4699#MUL#w_real * z1_real
+jnt.scimark2.FFT#bitreverse(double[])#void#106#6669#SR_ASG#k >>= 1
+jnt.scimark2.FFT#transform_internal(double[],int)#void#330#5261#INDEXED#data[i + 1]
+jnt.scimark2.Random#initialize(int)#void#25#4930#MOD#jseed % 2
+jnt.scimark2.FFT#transform_internal(double[],int)#void#127#2997#PLUS#j + 1
+jnt.scimark2.FFT#transform_internal(double[],int)#void#164#3387#PLUS_ASG#data[i] += wd_real
+jnt.scimark2.FFT#inverse(double[])#void#8#939#IDENT#nd
+jnt.scimark2.FFT#bitreverse(double[])#void#68#6355#INDEXED#data[ii + 1]
+jnt.scimark2.Random#<init>(int,double,double)#void#40#830#ASSIGN#m2 = one << mdig / 2
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#26#215#SELECT#FFT.transform
+jnt.scimark2.Random#<init>(int,double,double)#void#87#3209#IDENT#right
+jnt.scimark2.FFT#transform_internal(double[],int)#void#22#1835#IDENT#data
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#109#503#IDENT#x
+jnt.scimark2.FFT#log2(int)#int#13#1430#PREINC#++log
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#42#300#IDENT#x
+jnt.scimark2.FFT#bitreverse(double[])#void#100#6635#MINUS_ASG#j -= k
+jnt.scimark2.FFT#transform_internal(double[],int)#void#222#4042#PLUS#w_imag + s * w_real
+jnt.scimark2.FFT#transform_internal(double[],int)#void#367#3713#PREINC#++a
+jnt.scimark2.Random#<init>(double,double)#void#87#2287#IDENT#right
+jnt.scimark2.Random#<init>(double,double)#void#0#2209#IDENT#super
+jnt.scimark2.FFT#transform_internal(double[],int)#void#42#2049#VARDEF#double w_imag = 0.0
+jnt.scimark2.Random#initialize(int)#void#79#5456#MUL#j1 * k0
+jnt.scimark2.FFT#transform_internal(double[],int)#void#147#3240#IDENT#data
+jnt.scimark2.FFT#bitreverse(double[])#void#80#6466#ASSIGN#data[jj] = tmp_real
+jnt.scimark2.commandline#main(java.lang.String[])#void#31#671#NEWCLASS#new Random(Integer.parseInt(seed))
+jnt.scimark2.FFT#bitreverse(double[])#void#88#6530#ASSIGN#data[jj + 1] = tmp_imag
+jnt.scimark2.FFT#bitreverse(double[])#void#14#5886#IDENT#i
+jnt.scimark2.commandline#<init>()#void#1#265#IDENT#super
+jnt.scimark2.FFT#bitreverse(double[])#void#48#6172#IDENT#ii
+jnt.scimark2.Random#nextDouble()#double#97#4078#PREDEC#--j
+jnt.scimark2.Random#initialize(int)#void#58#5316#LT#iloop < 17
+jnt.scimark2.FFT#transform_internal(double[],int)#void#245#4382#LT#b < n
+jnt.scimark2.FFT#transform_internal(double[],int)#void#265#4450#PLUS#b + a + dual
+jnt.scimark2.FFT#transform_internal(double[],int)#void#99#2802#LT#b < n
+jnt.scimark2.Random#initialize(int)#void#104#5851#MUL#m2 * j1
+jnt.scimark2.FFT#transform_internal(double[],int)#void#310#5093#IDENT#j
+jnt.scimark2.commandline#main(java.lang.String[])#void#46#738#IDENT#min_time
+jnt.scimark2.FFT#transform_internal(double[],int)#void#361#4389#PLUS_ASG#b += 2 * dual
 jnt.scimark2.Random#<init>(int,double,double)#void#38#830#IDENT#m2
 jnt.scimark2.FFT#bitreverse(double[])#void#76#6460#IDENT#jj
-jnt.scimark2.Random#initialize(int)#void#104#5851#MUL#m2 * j1
+jnt.scimark2.Random#initialize(int)#void#51#5299#IDENT#iloop
+jnt.scimark2.Random#nextDouble()#double#109#4112#IDENT#left
+jnt.scimark2.FFT#transform_internal(double[],int)#void#34#1949#IDENT#logn
+jnt.scimark2.FFT#transform_internal(double[],int)#void#17#1749#IDENT#n
+jnt.scimark2.Constants#<init>()#void#1#30#IDENT#super
+jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#1#621#SELECT#x.length
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#1#145#IDENT#N
+jnt.scimark2.Random#<init>(double,double)#void#67#1348#ASSIGN#width = 1.0
+jnt.scimark2.FFT#transform_internal(double[],int)#void#292#4718#MUL#w_imag * z1_imag
+jnt.scimark2.Random#initialize(int)#void#90#5739#ASSIGN#j0 = jseed % m2
+jnt.scimark2.FFT#bitreverse(double[])#void#1#5826#SELECT#data.length
+jnt.scimark2.Random#initialize(int)#void#26#4934#EQ#jseed % 2 == 0
+jnt.scimark2.Random#<init>(double,double)#void#94#2303#IDENT#haveRange
+jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#3#658#IDENT#N
+jnt.scimark2.Random#<init>(int,double,double)#void#0#3134#IDENT#super
+jnt.scimark2.FFT#bitreverse(double[])#void#59#6269#IDENT#jj
+jnt.scimark2.Random#initialize(int)#void#74#5446#MUL#j0 * k1
+jnt.scimark2.FFT#transform_internal(double[],int)#void#319#5098#ASSIGN#data[j] = data[i] - wd_real
+jnt.scimark2.commandline#main(java.lang.String[])#void#35#699#IDENT#seed
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#62#389#IDENT#N
+jnt.scimark2.Random#initialize(int)#void#1#4805#SELECT#this.seed
+jnt.scimark2.Random#<init>(int,double,double)#void#71#3150#IDENT#seed
+jnt.scimark2.FFT#transform_internal(double[],int)#void#251#4424#IDENT#a
+jnt.scimark2.FFT#transform_internal(double[],int)#void#345#5554#IDENT#i
+jnt.scimark2.Random#accept(int)#int#0#6048#IDENT#i
+jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#4#646#NEWARRAY#new double[N]
+jnt.scimark2.FFT#transform_internal(double[],int)#void#242#4380#IDENT#b
+jnt.scimark2.FFT#inverse(double[])#void#12#1027#IDENT#n
+jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#15#693#IDENT#i
+jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#10#880#IDENT#N
+jnt.scimark2.Random#initialize(int)#void#54#5310#IDENT#iloop
+jnt.scimark2.FFT#transform_internal(double[],int)#void#157#3378#IDENT#data
+jnt.scimark2.Random#<init>(int)#void#34#712#ASSIGN#m1 = (one << mdig - 2) + ((one << mdig - 2) - one)
+jnt.scimark2.FFT#transform_internal(double[],int)#void#105#2837#MUL#2 * b
+jnt.scimark2.FFT#bitreverse(double[])#void#119#5895#IDENT#i
+jnt.scimark2.FFT#transform_internal(double[],int)#void#1#1627#SELECT#data.length
+jnt.scimark2.commandline#main(java.lang.String[])#void#47#748#IDENT#R
+jnt.scimark2.Random#nextDouble()#double#53#4004#EQ#i == 0
+jnt.scimark2.FFT#bitreverse(double[])#void#82#6524#IDENT#jj
+jnt.scimark2.Random#<init>(double,double)#void#51#1155#IDENT#haveRange
+jnt.scimark2.Random#<init>(double,double)#void#83#2268#ASSIGN#this.right = right
+jnt.scimark2.FFT#transform_internal(double[],int)#void#233#4254#ASSIGN#w_real = tmp_real
+jnt.scimark2.FFT#log2(int)#int#9#1419#IDENT#k
+jnt.scimark2.FFT#transform_internal(double[],int)#void#182#2814#MUL#2 * dual
+jnt.scimark2.FFT#transform_internal(double[],int)#void#111#2861#IDENT#dual
+jnt.scimark2.FFT#bitreverse(double[])#void#41#6065#IDENT#data
+jnt.scimark2.FFT#transform_internal(double[],int)#void#253#4422#PLUS#b + a
+jnt.scimark2.FFT#bitreverse(double[])#void#28#5969#VARDEF#int jj = j << 1
+jnt.scimark2.Random#<init>(double,double)#void#1#2209#IDENT#super
+jnt.scimark2.FFT#transform_internal(double[],int)#void#312#5100#IDENT#data
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#58#378#VARDEF#int i = 0
+jnt.scimark2.Random#<init>(double,double)#void#27#639#IDENT#one
+jnt.scimark2.Random#nextDouble()#double#1#3596#IDENT#m
+jnt.scimark2.FFT#bitreverse(double[])#void#15#5890#IDENT#nm1
+jnt.scimark2.FFT#transform_internal(double[],int)#void#158#3383#IDENT#i
+jnt.scimark2.FFT#transform_internal(double[],int)#void#69#2463#VARDEF#double s = Math.sin(theta)
+jnt.scimark2.FFT#log2(int)#int#42#1519#IDENT#n
+jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#6#640#VARDEF#double[] y = new double[N]
+jnt.scimark2.Random#nextDouble()#double#57#4014#IDENT#i
+jnt.scimark2.Random#<init>(int,double,double)#void#1#3134#IDENT#super
+jnt.scimark2.Random#nextDouble()#double#8#3597#INDEXED#m[i]
+jnt.scimark2.FFT#transform_internal(double[],int)#void#207#3827#IDENT#s2
+jnt.scimark2.FFT#transform_internal(double[],int)#void#88#2652#IDENT#t
+jnt.scimark2.FFT#transform_internal(double[],int)#void#96#2800#IDENT#b
+jnt.scimark2.FFT#transform_internal(double[],int)#void#98#2804#IDENT#n
+jnt.scimark2.FFT#transform_internal(double[],int)#void#237#4310#ASSIGN#w_imag = tmp_imag
+jnt.scimark2.FFT#inverse(double[])#void#30#1221#IDENT#i
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#101#483#SELECT#System.out
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#36#201#PREINC#++i
+jnt.scimark2.FFT#bitreverse(double[])#void#58#6255#INDEXED#data[ii]
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#109#531#IDENT#x
+jnt.scimark2.Random#nextDouble()#double#25#3772#ASSIGN#k = accept(k)
+jnt.scimark2.FFT#transform_internal(double[],int)#void#266#4442#MUL#2 * (b + a + dual)
+jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#9#678#IDENT#i
+jnt.scimark2.commandline#main(java.lang.String[])#void#35#689#SELECT#Integer.parseInt
+jnt.scimark2.FFT#transform_internal(double[],int)#void#312#5092#INDEXED#data[j]
+jnt.scimark2.Random#<init>()#void#28#639#ASSIGN#one = 1
+jnt.scimark2.Random#<init>(double,double)#void#11#520#ASSIGN#i = 4
+jnt.scimark2.Random#nextDouble()#double#0#3592#IDENT#k
+jnt.scimark2.FFT#bitreverse(double[])#void#0#5822#IDENT#data
+jnt.scimark2.FFT#transform_internal(double[],int)#void#71#2538#IDENT#theta
+jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#8#873#VARDEF#int i = 0
+jnt.scimark2.FFT#transform_internal(double[],int)#void#134#3090#IDENT#data
+jnt.scimark2.FFT#transform_internal(double[],int)#void#333#5267#MINUS#data[i + 1] - wd_imag
+jnt.scimark2.Random#nextDouble()#double#19#3594#ASSIGN#k = m[i] - m[j]
 jnt.scimark2.FFT#transform_internal(double[],int)#void#334#5255#ASSIGN#data[j + 1] = data[i + 1] - wd_imag
 jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#2#616#VARDEF#int N = x.length
-jnt.scimark2.Random#initialize(int)#void#29#4940#PREDEC#--jseed
-jnt.scimark2.Random#<init>(int,double,double)#void#95#3225#IDENT#haveRange
-jnt.scimark2.FFT#transform_internal(double[],int)#void#269#4482#IDENT#data
-jnt.scimark2.FFT#transform_internal(double[],int)#void#373#1958#PREINC#++bit
-jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#8#873#VARDEF#int i = 0
-jnt.scimark2.FFT#transform_internal(double[],int)#void#263#4452#IDENT#dual
-jnt.scimark2.FFT#inverse(double[])#void#32#1220#INDEXED#data[i]
-jnt.scimark2.FFT#inverse(double[])#void#25#1204#IDENT#nd
-jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#16#898#IDENT#R
-jnt.scimark2.Random#initialize(int)#void#80#5451#PLUS#jseed / m2 + j0 * k1 + j1 * k0
-jnt.scimark2.FFT#transform_internal(double[],int)#void#173#3528#IDENT#wd_imag
-jnt.scimark2.Random#<init>(int)#void#71#2600#IDENT#seed
-jnt.scimark2.FFT#transform_internal(double[],int)#void#120#2894#INDEXED#data[j]
-jnt.scimark2.FFT#transform_internal(double[],int)#void#221#4046#MUL#s * w_real
-jnt.scimark2.FFT#transform_internal(double[],int)#void#17#1749#IDENT#n
-jnt.scimark2.Random#nextDouble()#double#116#4126#IDENT#k
-jnt.scimark2.FFT#bitreverse(double[])#void#112#6688#IDENT#j
-jnt.scimark2.Random#<init>(double,double)#void#82#2261#SELECT#this.right
-jnt.scimark2.Random#<init>()#void#1#1753#IDENT#super
-jnt.scimark2.Random#<init>(int)#void#15#540#IDENT#j
-jnt.scimark2.FFT#transform_internal(double[],int)#void#254#4418#MUL#2 * (b + a)
-jnt.scimark2.FFT#log2(int)#int#26#1467#NEWCLASS#new Error("FFT: Data length is not a power of 2!: " + n)
-jnt.scimark2.FFT#transform_internal(double[],int)#void#205#3816#MUL#s * w_imag
-jnt.scimark2.FFT#transform_internal(double[],int)#void#124#2996#IDENT#j
-jnt.scimark2.FFT#bitreverse(double[])#void#59#6269#IDENT#jj
-jnt.scimark2.FFT#transform_internal(double[],int)#void#9#1674#DIV#data.length / 2
-jnt.scimark2.FFT#transform_internal(double[],int)#void#270#4487#IDENT#j
-jnt.scimark2.FFT#bitreverse(double[])#void#51#6174#PLUS#ii + 1
-jnt.scimark2.Random#<init>(double,double)#void#40#830#ASSIGN#m2 = one << mdig / 2
-jnt.scimark2.commandline#main(java.lang.String[])#void#35#699#IDENT#seed
-jnt.scimark2.FFT#transform_internal(double[],int)#void#326#5262#IDENT#i
-jnt.scimark2.FFT#inverse(double[])#void#0#827#IDENT#transform_internal
-jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#0#620#IDENT#x
-jnt.scimark2.Random#<init>(double,double)#void#66#1348#IDENT#width
-jnt.scimark2.Random#nextDouble()#double#30#3802#IDENT#k
-jnt.scimark2.FFT#bitreverse(double[])#void#38#6033#LT#i < j
-jnt.scimark2.FFT#transform_internal(double[],int)#void#175#3525#PLUS_ASG#data[i + 1] += wd_imag
-jnt.scimark2.FFT#transform_internal(double[],int)#void#90#2650#MUL#2.0 * t * t
-jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#9#878#IDENT#i
-jnt.scimark2.Random#nextDouble()#double#118#4124#MUL#dm1 * k
-jnt.scimark2.Random#<init>(int,double,double)#void#40#830#ASSIGN#m2 = one << mdig / 2
 jnt.scimark2.Random#nextDouble()#double#36#3804#PLUS_ASG#k += m1
-jnt.scimark2.FFT#transform_internal(double[],int)#void#227#4060#MUL#s2 * w_imag
-jnt.scimark2.FFT#transform_internal(double[],int)#void#115#2850#VARDEF#int j = 2 * (b + dual)
-jnt.scimark2.FFT#transform_internal(double[],int)#void#114#2855#MUL#2 * (b + dual)
-jnt.scimark2.FFT#transform_internal(double[],int)#void#106#2832#VARDEF#int i = 2 * b
-jnt.scimark2.FFT#transform_internal(double[],int)#void#260#4448#IDENT#a
-jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#16#698#IDENT#x
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#78#422#IDENT#i
-jnt.scimark2.FFT#bitreverse(double[])#void#74#6362#ASSIGN#data[ii + 1] = data[jj + 1]
-jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#20#683#IDENT#i
-jnt.scimark2.Random#nextDouble()#double#57#4014#IDENT#i
-jnt.scimark2.FFT#transform_internal(double[],int)#void#283#4692#IDENT#w_real
-jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#11#879#LT#i < N
-jnt.scimark2.FFT#transform_internal(double[],int)#void#325#5257#IDENT#data
-jnt.scimark2.Random#<init>()#void#66#1348#IDENT#width
-jnt.scimark2.Random#<init>(double,double)#void#52#1155#ASSIGN#haveRange = false
-jnt.scimark2.Random#nextDouble()#double#27#3793#LT#k < 0
-jnt.scimark2.FFT#bitreverse(double[])#void#21#5936#SL#i << 1
-jnt.scimark2.FFT#transform_internal(double[],int)#void#96#2800#IDENT#b
-jnt.scimark2.FFT#transform_internal(double[],int)#void#147#3232#INDEXED#data[j + 1]
-jnt.scimark2.FFT#transform_internal(double[],int)#void#351#5561#IDENT#wd_imag
-jnt.scimark2.Random#nextDouble()#double#44#3900#ASSIGN#m[j] = k
-jnt.scimark2.FFT#transform_internal(double[],int)#void#353#5558#PLUS_ASG#data[i + 1] += wd_imag
-jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#4#845#NEWARRAY#new double[N]
-jnt.scimark2.FFT#log2(int)#int#42#1519#IDENT#n
-jnt.scimark2.Random#nextDouble()#double#79#4047#EQ#j == 0
-jnt.scimark2.FFT#inverse(double[])#void#26#1203#LT#i < nd
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#31#257#SELECT#FFT.inverse
-jnt.scimark2.Random#<init>()#void#0#1753#IDENT#super
-jnt.scimark2.FFT#transform_internal(double[],int)#void#376#1962#IDENT#dual
-jnt.scimark2.Random#<init>(int)#void#11#520#ASSIGN#i = 4
-jnt.scimark2.FFT#bitreverse(double[])#void#41#6065#IDENT#data
-jnt.scimark2.FFT#inverse(double[])#void#38#1209#PREINC#++i
-jnt.scimark2.kernel#precise_all_FIELD1_TAG1(double[])#double[]#0#1107#IDENT#d
-jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#11#679#LT#i < N
-jnt.scimark2.Random#initialize(int)#void#65#5345#ASSIGN#jseed = j0 * k0
+jnt.scimark2.FFT#inverse(double[])#void#13#1020#VARDEF#int aprN = n
 jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#15#893#IDENT#i
-jnt.scimark2.Random#<init>(int,double,double)#void#87#3209#IDENT#right
-jnt.scimark2.Random#<init>(int,double,double)#void#77#3169#ASSIGN#this.left = left
-jnt.scimark2.FFT#inverse(double[])#void#38#1208#IDENT#i
-jnt.scimark2.FFT#transform_internal(double[],int)#void#294#4682#VARDEF#double wd_real = w_real * z1_real - w_imag * z1_imag
-jnt.scimark2.Random#<init>(double,double)#void#10#520#IDENT#i
-jnt.scimark2.commandline#main(java.lang.String[])#void#35#689#SELECT#Integer.parseInt
-jnt.scimark2.Random#<init>(int,double,double)#void#28#639#ASSIGN#one = 1
-jnt.scimark2.Random#<init>(double,double)#void#67#1348#ASSIGN#width = 1.0
-jnt.scimark2.Random#<init>(double,double)#void#95#2313#ASSIGN#haveRange = true
-jnt.scimark2.FFT#transform_internal(double[],int)#void#140#3100#MINUS#data[i] - wd_real
-jnt.scimark2.Random#<init>(int,double,double)#void#81#3183#SELECT#this.right
-jnt.scimark2.FFT#transform_internal(double[],int)#void#99#2802#LT#b < n
-jnt.scimark2.Random#nextDouble()#double#65#4034#PREDEC#--i
-jnt.scimark2.Random#<init>(double,double)#void#62#1269#ASSIGN#right = 1.0
-jnt.scimark2.Random#nextDouble()#double#14#3605#IDENT#j
-jnt.scimark2.Random#<init>(double,double)#void#0#2209#IDENT#super
-jnt.scimark2.Random#initialize(int)#void#54#5310#IDENT#iloop
-jnt.scimark2.FFT#inverse(double[])#void#23#1202#IDENT#i
-jnt.scimark2.FFT#transform_internal(double[],int)#void#340#5415#IDENT#wd_real
-jnt.scimark2.Random#initialize(int)#void#79#5456#MUL#j1 * k0
-jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#20#896#ASSIGN#A[i] = R.nextDouble()
-jnt.scimark2.FFT#bitreverse(double[])#void#24#5974#IDENT#j
-jnt.scimark2.Random#initialize(int)#void#8#4865#NEWARRAY#new int[17]
-jnt.scimark2.Random#<init>(int,double,double)#void#90#3215#MINUS#right - left
-jnt.scimark2.FFT#transform_internal(double[],int)#void#109#2857#IDENT#b
-jnt.scimark2.Random#<init>()#void#34#712#ASSIGN#m1 = (one << mdig - 2) + ((one << mdig - 2) - one)
-jnt.scimark2.commandline#main(java.lang.String[])#void#16#544#NEWCLASS#new RuntimeException("Error! Seed should be provided as an argument")
-jnt.scimark2.FFT#transform_internal(double[],int)#void#32#1943#IDENT#bit
-jnt.scimark2.FFT#transform_internal(double[],int)#void#306#4915#PLUS#w_real * z1_imag + w_imag * z1_real
-jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#18#699#INDEXED#x[i]
-jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#3#658#IDENT#N
-jnt.scimark2.FFT#transform_internal(double[],int)#void#280#4589#INDEXED#data[j + 1]
-jnt.scimark2.FFT#log2(int)#int#21#1452#IDENT#log
-jnt.scimark2.Random#<init>(double,double)#void#87#2287#IDENT#right
-jnt.scimark2.FFT#transform_internal(double[],int)#void#235#4303#IDENT#w_imag
-jnt.scimark2.commandline#main(java.lang.String[])#void#47#748#IDENT#R
-jnt.scimark2.Random#initialize(int)#void#13#4902#SELECT#Math.abs
-jnt.scimark2.FFT#transform_internal(double[],int)#void#320#5245#IDENT#data
-jnt.scimark2.Random#<init>(int,double,double)#void#1#3134#IDENT#super
-jnt.scimark2.FFT#bitreverse(double[])#void#19#5934#IDENT#i
-jnt.scimark2.FFT#transform_internal(double[],int)#void#225#4062#IDENT#w_imag
-jnt.scimark2.FFT#transform_internal(double[],int)#void#292#4718#MUL#w_imag * z1_imag
-jnt.scimark2.Random#nextDouble()#double#17#3604#INDEXED#m[j]
-jnt.scimark2.FFT#bitreverse(double[])#void#15#5890#IDENT#nm1
-jnt.scimark2.Random#<init>(int)#void#34#712#ASSIGN#m1 = (one << mdig - 2) + ((one << mdig - 2) - one)
-jnt.scimark2.FFT#bitreverse(double[])#void#48#6172#IDENT#ii
-jnt.scimark2.FFT#bitreverse(double[])#void#98#6638#IDENT#k
-jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#16#692#INDEXED#y[i]
-jnt.scimark2.Random#<init>()#void#47#1048#ASSIGN#dm1 = 1.0 / (double)m1
-jnt.scimark2.FFT#transform_internal(double[],int)#void#128#2995#INDEXED#data[j + 1]
-jnt.scimark2.FFT#transform_internal(double[],int)#void#71#2533#SELECT#Math.sin
-jnt.scimark2.FFT#transform_internal(double[],int)#void#288#4711#IDENT#w_imag
-jnt.scimark2.FFT#transform_internal(double[],int)#void#34#1949#IDENT#logn
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#15#185#VARDEF#int i = 0
-jnt.scimark2.commandline#main(java.lang.String[])#void#26#625#IDENT#args
-jnt.scimark2.FFT#transform_internal(double[],int)#void#244#4384#IDENT#n
-jnt.scimark2.FFT#transform_internal(double[],int)#void#300#4905#MUL#w_real * z1_imag
-jnt.scimark2.FFT#bitreverse(double[])#void#56#6256#IDENT#ii
-jnt.scimark2.Random#<init>(int)#void#28#639#ASSIGN#one = 1
-jnt.scimark2.FFT#transform_internal(double[],int)#void#183#2809#PLUS_ASG#b += 2 * dual
-jnt.scimark2.Random#initialize(int)#void#93#5832#IDENT#m
-jnt.scimark2.FFT#transform_internal(double[],int)#void#153#3252#IDENT#wd_imag
-jnt.scimark2.FFT#transform_internal(double[],int)#void#367#3713#PREINC#++a
-jnt.scimark2.FFT#log2(int)#int#3#1407#VARDEF#int k = 1
-jnt.scimark2.Random#<init>()#void#5#440#IDENT#seed
-jnt.scimark2.Random#initialize(int)#void#76#5453#IDENT#j1
-jnt.scimark2.Random#<init>()#void#27#639#IDENT#one
-jnt.scimark2.Random#initialize(int)#void#45#5199#IDENT#j1
-jnt.scimark2.Random#nextDouble()#double#66#4033#IDENT#i
-jnt.scimark2.FFT#transform_internal(double[],int)#void#113#2859#PLUS#b + dual
-jnt.scimark2.Random#<init>(int,double,double)#void#61#1269#IDENT#right
-jnt.scimark2.FFT#transform_internal(double[],int)#void#57#2166#IDENT#dual
-jnt.scimark2.kernel#accept_all_FIELD1_TAG1(double[])#double[]#0#1035#IDENT#d
-jnt.scimark2.Random#nextDouble()#double#18#3601#MINUS#m[i] - m[j]
-jnt.scimark2.FFT#bitreverse(double[])#void#61#6268#INDEXED#data[jj]
-jnt.scimark2.FFT#transform_internal(double[],int)#void#167#3521#IDENT#i
-jnt.scimark2.Random#<init>()#void#71#1757#IDENT#initialize
-jnt.scimark2.commandline#main(java.lang.String[])#void#45#728#IDENT#FFT_size
-jnt.scimark2.Random#<init>(double,double)#void#71#2213#IDENT#initialize
-jnt.scimark2.FFT#transform_internal(double[],int)#void#156#3238#ASSIGN#data[j + 1] = data[i + 1] - wd_imag
-jnt.scimark2.FFT#transform_internal(double[],int)#void#47#2128#IDENT#direction
-jnt.scimark2.Random#<init>(int)#void#67#1348#ASSIGN#width = 1.0
-jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#10#680#IDENT#N
-jnt.scimark2.FFT#transform_internal(double[],int)#void#180#2816#IDENT#dual
-jnt.scimark2.Random#<init>()#void#61#1269#IDENT#right
-jnt.scimark2.Random#<init>(double,double)#void#1#2209#IDENT#super
-jnt.scimark2.FFT#transform_internal(double[],int)#void#358#4396#IDENT#dual
-jnt.scimark2.FFT#transform_internal(double[],int)#void#69#2463#VARDEF#double s = Math.sin(theta)
-jnt.scimark2.FFT#transform_internal(double[],int)#void#42#2049#VARDEF#double w_imag = 0.0
-jnt.scimark2.Random#<init>()#void#17#540#ASSIGN#j = 16
-jnt.scimark2.Random#<init>()#void#67#1348#ASSIGN#width = 1.0
-jnt.scimark2.Random#<init>(double,double)#void#27#639#IDENT#one
-jnt.scimark2.Random#nextDouble()#double#25#3772#ASSIGN#k = accept(k)
-jnt.scimark2.FFT#bitreverse(double[])#void#8#5843#VARDEF#int nm1 = n - 1
-jnt.scimark2.FFT#bitreverse(double[])#void#68#6364#IDENT#data
-jnt.scimark2.Random#<init>(int)#void#44#1048#IDENT#dm1
-jnt.scimark2.FFT#transform_internal(double[],int)#void#273#4472#VARDEF#double z1_real = data[j]
-jnt.scimark2.Random#<init>(double,double)#void#56#1191#IDENT#left
-jnt.scimark2.Random#initialize(int)#void#0#4801#IDENT#this
-jnt.scimark2.commandline#<init>()#void#1#265#IDENT#super
-jnt.scimark2.Random#<init>(int)#void#51#1155#IDENT#haveRange
-jnt.scimark2.commandline#main(java.lang.String[])#void#3#338#VARDEF#double min_time = Constants.RESOLUTION_DEFAULT
-jnt.scimark2.FFT#transform_internal(double[],int)#void#131#3078#IDENT#data
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#60#385#IDENT#i
-jnt.scimark2.commandline#main(java.lang.String[])#void#6#451#VARDEF#int FFT_size = Constants.TINY_FFT_SIZE
-jnt.scimark2.FFT#transform_internal(double[],int)#void#335#5403#IDENT#data
-jnt.scimark2.FFT#transform_internal(double[],int)#void#57#2157#TYPECAST#(double)dual
-jnt.scimark2.FFT#transform_internal(double[],int)#void#134#3090#IDENT#data
-jnt.scimark2.Random#nextDouble()#double#21#3774#IDENT#accept
-jnt.scimark2.FFT#transform_internal(double[],int)#void#143#3233#IDENT#j
-jnt.scimark2.FFT#transform_internal(double[],int)#void#287#4699#MUL#w_real * z1_real
-jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#6#640#VARDEF#double[] y = new double[N]
-jnt.scimark2.FFT#transform_internal(double[],int)#void#345#5554#IDENT#i
-jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#14#891#IDENT#A
-jnt.scimark2.FFT#transform_internal(double[],int)#void#231#4256#IDENT#tmp_real
-jnt.scimark2.commandline#main(java.lang.String[])#void#8#497#VARDEF#String seed = null
-jnt.scimark2.FFT#transform_internal(double[],int)#void#94#2793#VARDEF#int b = 0
-jnt.scimark2.Random#initialize(int)#void#84#5427#ASSIGN#j1 = (jseed / m2 + j0 * k1 + j1 * k0) % (m2 / 2)
-jnt.scimark2.FFT#transform_internal(double[],int)#void#262#4446#PLUS#b + a
-jnt.scimark2.Random#nextDouble()#double#26#3791#IDENT#k
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#31#266#IDENT#x
-jnt.scimark2.FFT#bitreverse(double[])#void#3#5833#DIV#data.length / 2
-jnt.scimark2.FFT#transform_internal(double[],int)#void#316#5112#IDENT#wd_real
-jnt.scimark2.FFT#transform_internal(double[],int)#void#255#4413#VARDEF#int i = 2 * (b + a)
-jnt.scimark2.Random#<init>(int,double,double)#void#89#3217#IDENT#left
-jnt.scimark2.FFT#transform_internal(double[],int)#void#219#4048#IDENT#w_real
-jnt.scimark2.FFT#transform_internal(double[],int)#void#249#4420#IDENT#b
-jnt.scimark2.FFT#inverse(double[])#void#0#846#IDENT#data
-jnt.scimark2.FFT#transform_internal(double[],int)#void#342#5412#PLUS_ASG#data[i] += wd_real
-jnt.scimark2.commandline#<init>()#void#0#265#IDENT#super
-jnt.scimark2.FFT#transform_internal(double[],int)#void#253#4422#PLUS#b + a
-jnt.scimark2.FFT#transform_internal(double[],int)#void#21#1737#VARDEF#int logn = log2(n)
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#7#124#VARDEF#double[] x = RandomVector(2 * N, R)
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#2#144#MUL#2 * N
-jnt.scimark2.Random#<init>(double,double)#void#87#2279#IDENT#width
-jnt.scimark2.Random#<init>(int)#void#38#830#IDENT#m2
-jnt.scimark2.Random#initialize(int)#void#39#5104#IDENT#j0
-jnt.scimark2.FFT#bitreverse(double[])#void#4#5820#VARDEF#int n = data.length / 2
-jnt.scimark2.Random#<init>(double,double)#void#89#2293#MINUS#right - left
-jnt.scimark2.FFT#bitreverse(double[])#void#86#6532#IDENT#tmp_imag
-jnt.scimark2.Random#initialize(int)#void#96#5834#IDENT#iloop
-jnt.scimark2.FFT#transform_internal(double[],int)#void#148#3245#IDENT#i
-jnt.scimark2.FFT#transform_internal(double[],int)#void#338#5407#INDEXED#data[i]
-jnt.scimark2.Random#initialize(int)#void#114#5981#IDENT#i
-jnt.scimark2.FFT#bitreverse(double[])#void#1#5826#SELECT#data.length
-jnt.scimark2.Random#<init>(int,double,double)#void#5#440#IDENT#seed
-jnt.scimark2.FFT#transform_internal(double[],int)#void#7#1667#SELECT#data.length
-jnt.scimark2.commandline#main(java.lang.String[])#void#35#689#SELECT#Integer.parseInt
-jnt.scimark2.Random#<init>(int,double,double)#void#15#540#IDENT#j
-jnt.scimark2.Random#<init>(double,double)#void#81#2257#IDENT#this
-jnt.scimark2.FFT#log2(int)#int#13#1427#IDENT#log
-jnt.scimark2.Random#<init>(int)#void#52#1155#ASSIGN#haveRange = false
-jnt.scimark2.Random#nextDouble()#double#113#4120#IDENT#dm1
-jnt.scimark2.FFT#transform_internal(double[],int)#void#233#4254#ASSIGN#w_real = tmp_real
-jnt.scimark2.FFT#transform_internal(double[],int)#void#111#2861#IDENT#dual
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#101#483#SELECT#System.out
-jnt.scimark2.Random#initialize(int)#void#1#4813#IDENT#seed
-jnt.scimark2.FFT#<init>()#void#1#504#IDENT#super
-jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#14#691#IDENT#y
-jnt.scimark2.Random#initialize(int)#void#121#5992#ASSIGN#j = 16
-jnt.scimark2.FFT#transform_internal(double[],int)#void#0#1623#IDENT#data
-jnt.scimark2.Random#nextDouble()#double#10#3603#IDENT#m
-jnt.scimark2.Random#<init>(int,double,double)#void#66#1348#IDENT#width
-jnt.scimark2.FFT#transform_internal(double[],int)#void#321#5250#IDENT#j
-jnt.scimark2.Random#<init>()#void#32#712#IDENT#m1
-jnt.scimark2.Random#<init>(int,double,double)#void#83#3190#ASSIGN#this.right = right
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#52#343#SELECT#System.out.print
-jnt.scimark2.Random#<init>(int)#void#17#540#ASSIGN#j = 16
-jnt.scimark2.Random#initialize(int)#void#64#5350#MUL#j0 * k0
-jnt.scimark2.FFT#transform_internal(double[],int)#void#127#2997#PLUS#j + 1
-jnt.scimark2.Random#<init>(int,double,double)#void#34#712#ASSIGN#m1 = (one << mdig - 2) + ((one << mdig - 2) - one)
-jnt.scimark2.FFT#inverse(double[])#void#11#936#VARDEF#int n = nd / 2
-jnt.scimark2.FFT#transform_internal(double[],int)#void#313#5105#IDENT#i
-jnt.scimark2.Random#initialize(int)#void#39#5109#IDENT#jseed
-jnt.scimark2.Random#nextDouble()#double#76#4045#IDENT#j
-jnt.scimark2.Random#nextDouble()#double#43#3896#INDEXED#m[j]
-jnt.scimark2.FFT#bitreverse(double[])#void#73#6368#INDEXED#data[jj + 1]
-jnt.scimark2.FFT#transform_internal(double[],int)#void#6#1663#IDENT#data
-jnt.scimark2.FFT#transform_internal(double[],int)#void#22#1835#IDENT#data
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#104#487#SELECT#System.out.println
-jnt.scimark2.FFT#bitreverse(double[])#void#52#6171#INDEXED#data[ii + 1]
-jnt.scimark2.Random#initialize(int)#void#13#4881#IDENT#jseed
-jnt.scimark2.Random#initialize(int)#void#29#4942#IDENT#jseed
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#36#200#IDENT#i
-jnt.scimark2.FFT#bitreverse(double[])#void#44#6069#INDEXED#data[ii]
-jnt.scimark2.Random#nextDouble()#double#92#4077#IDENT#j
-jnt.scimark2.Random#<init>(int,double,double)#void#0#3134#IDENT#super
-jnt.scimark2.Random#<init>(int)#void#56#1191#IDENT#left
-jnt.scimark2.Random#nextDouble()#double#20#3770#IDENT#k
-jnt.scimark2.FFT#log2(int)#int#19#1441#IDENT#n
-jnt.scimark2.FFT#transform_internal(double[],int)#void#312#5100#IDENT#data
-jnt.scimark2.Random#<init>(int)#void#6#440#ASSIGN#seed = 0
-jnt.scimark2.Random#<init>()#void#52#1155#ASSIGN#haveRange = false
-jnt.scimark2.FFT#transform_internal(double[],int)#void#190#3695#VARDEF#int a = 1
-jnt.scimark2.FFT#transform_internal(double[],int)#void#123#2991#IDENT#data
-jnt.scimark2.FFT#transform_internal(double[],int)#void#367#3712#IDENT#a
-jnt.scimark2.FFT#transform_internal(double[],int)#void#146#3234#PLUS#j + 1
-jnt.scimark2.kernel#<init>()#void#1#30#IDENT#super
-jnt.scimark2.FFT#inverse(double[])#void#21#1197#VARDEF#int i = 0
-jnt.scimark2.FFT#bitreverse(double[])#void#114#6693#IDENT#k
-jnt.scimark2.FFT#transform_internal(double[],int)#void#361#4389#PLUS_ASG#b += 2 * dual
-jnt.scimark2.FFT#transform_internal(double[],int)#void#71#2538#IDENT#theta
-jnt.scimark2.FFT#transform_internal(double[],int)#void#373#1955#IDENT#bit
-jnt.scimark2.FFT#transform_internal(double[],int)#void#333#5267#MINUS#data[i + 1] - wd_imag
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#23#191#LT#i < cycles
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#12#159#VARDEF#long cycles = 100
-jnt.scimark2.Random#initialize(int)#void#45#5204#IDENT#jseed
-jnt.scimark2.FFT#transform_internal(double[],int)#void#242#4380#IDENT#b
-jnt.scimark2.Random#<init>()#void#21#562#IDENT#mdig
-jnt.scimark2.FFT#transform_internal(double[],int)#void#147#3240#IDENT#data
-jnt.scimark2.Random#initialize(int)#void#115#5983#ASSIGN#i = 4
-jnt.scimark2.FFT#transform_internal(double[],int)#void#1#1627#SELECT#data.length
-jnt.scimark2.Random#<init>()#void#44#1048#IDENT#dm1
-jnt.scimark2.Random#initialize(int)#void#26#4934#EQ#jseed % 2 == 0
-jnt.scimark2.FFT#transform_internal(double[],int)#void#171#3520#INDEXED#data[i + 1]
-jnt.scimark2.FFT#transform_internal(double[],int)#void#336#5408#IDENT#i
-jnt.scimark2.Random#<init>(double,double)#void#47#1048#ASSIGN#dm1 = 1.0 / (double)m1
-jnt.scimark2.FFT#transform_internal(double[],int)#void#211#3830#MUL#s2 * w_real
-jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#20#684#PREINC#++i
-jnt.scimark2.FFT#transform_internal(double[],int)#void#142#3228#IDENT#data
-jnt.scimark2.FFT#transform_internal(double[],int)#void#13#1686#EQ#n == 1
-jnt.scimark2.Random#<init>(double,double)#void#11#520#ASSIGN#i = 4
-jnt.scimark2.FFT#bitreverse(double[])#void#53#6153#VARDEF#double tmp_imag = data[ii + 1]
-jnt.scimark2.Random#nextDouble()#double#83#4057#IDENT#j
-jnt.scimark2.Random#initialize(int)#void#98#5843#IDENT#j0
-jnt.scimark2.FFT#transform_internal(double[],int)#void#62#2114#VARDEF#double theta = 2.0 * direction * Math.PI / (2.0 * (double)dual)
-jnt.scimark2.FFT#bitreverse(double[])#void#64#6356#IDENT#ii
-jnt.scimark2.FFT#transform_internal(double[],int)#void#194#3706#IDENT#dual
-jnt.scimark2.Random#initialize(int)#void#75#5441#PLUS#jseed / m2 + j0 * k1
-jnt.scimark2.Random#<init>(int,double,double)#void#32#712#IDENT#m1
-jnt.scimark2.FFT#log2(int)#int#11#1421#MUL_ASG#k *= 2
-jnt.scimark2.Random#<init>()#void#10#520#IDENT#i
-jnt.scimark2.Random#nextDouble()#double#124#4117#PLUS#left + dm1 * k * width
-jnt.scimark2.Random#<init>(double,double)#void#44#1048#IDENT#dm1
-jnt.scimark2.commandline#main(java.lang.String[])#void#43#667#VARDEF#Random R = new Random(Integer.parseInt(seed))
-jnt.scimark2.Random#initialize(int)#void#13#4893#SELECT#Math.min
-jnt.scimark2.FFT#transform(double[])#void#0#634#IDENT#transform_internal
-jnt.scimark2.FFT#transform_internal(double[],int)#void#267#4437#VARDEF#int j = 2 * (b + a + dual)
-jnt.scimark2.Random#<init>(int,double,double)#void#96#3235#ASSIGN#haveRange = true
-jnt.scimark2.Random#nextDouble()#double#109#4112#IDENT#left
-jnt.scimark2.Random#initialize(int)#void#2#4811#ASSIGN#this.seed = seed
-jnt.scimark2.FFT#log2(int)#int#5#1416#IDENT#n
-jnt.scimark2.Random#<init>(int)#void#1#2584#IDENT#super
-jnt.scimark2.FFT#bitreverse(double[])#void#63#6351#IDENT#data
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#95#392#PREINC#++i
-jnt.scimark2.FFT#transform_internal(double[],int)#void#152#3244#INDEXED#data[i + 1]
-jnt.scimark2.Random#nextDouble()#double#46#3970#IDENT#accept_all_FIELD2_TAG
-jnt.scimark2.Random#<init>(int)#void#10#520#IDENT#i
-jnt.scimark2.FFT#transform_internal(double[],int)#void#245#4382#LT#b < n
-jnt.scimark2.Random#nextDouble()#double#120#4130#IDENT#width
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#3#148#IDENT#R
-jnt.scimark2.Random#<init>(int,double,double)#void#71#3138#IDENT#initialize
-jnt.scimark2.Random#<init>(int,double,double)#void#44#1048#IDENT#dm1
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#47#302#ASSIGN#x = accept_all_FIELD1_TAG1(x)
-jnt.scimark2.FFT#transform_internal(double[],int)#void#209#3832#IDENT#w_real
-jnt.scimark2.FFT#log2(int)#int#6#1414#LT#k < n
-jnt.scimark2.FFT#inverse(double[])#void#36#1224#MUL_ASG#data[i] *= norm
-jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#17#700#IDENT#i
-jnt.scimark2.Random#initialize(int)#void#25#4930#MOD#jseed % 2
-jnt.scimark2.FFT#transform_internal(double[],int)#void#279#4591#PLUS#j + 1
-jnt.scimark2.FFT#transform_internal(double[],int)#void#11#1684#IDENT#n
-jnt.scimark2.FFT#bitreverse(double[])#void#47#6167#IDENT#data
-jnt.scimark2.Random#nextDouble()#double#123#4128#MUL#dm1 * k * width
-jnt.scimark2.FFT#bitreverse(double[])#void#45#6051#VARDEF#double tmp_real = data[ii]
-jnt.scimark2.Random#<init>(double,double)#void#77#2241#SELECT#this.left
-jnt.scimark2.FFT#transform_internal(double[],int)#void#212#3825#MINUS#w_real - s * w_imag - s2 * w_real
-jnt.scimark2.FFT#transform_internal(double[],int)#void#217#4044#IDENT#s
-jnt.scimark2.Random#nextDouble()#double#5#3598#IDENT#i
-jnt.scimark2.FFT#transform_internal(double[],int)#void#98#2804#IDENT#n
-jnt.scimark2.FFT#bitreverse(double[])#void#68#6355#INDEXED#data[ii + 1]
-jnt.scimark2.Random#nextDouble()#double#35#3804#PLUS_ASG#k += m1
-jnt.scimark2.FFT#transform_internal(double[],int)#void#330#5261#INDEXED#data[i + 1]
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#42#327#IDENT#x
-jnt.scimark2.FFT#inverse(double[])#void#15#1077#IDENT#aprN
-jnt.scimark2.FFT#transform_internal(double[],int)#void#272#4486#INDEXED#data[j]
-jnt.scimark2.Random#accept(int)#int#0#6048#IDENT#i
-jnt.scimark2.FFT#transform_internal(double[],int)#void#87#2646#MUL#2.0 * t
-jnt.scimark2.Random#<init>(double,double)#void#34#712#ASSIGN#m1 = (one << mdig - 2) + ((one << mdig - 2) - one)
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#101#483#SELECT#System.out
-jnt.scimark2.Random#nextDouble()#double#91#4078#PREDEC#--j
-jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#0#816#IDENT#alloc_TAG1
-jnt.scimark2.Random#<init>(int,double,double)#void#11#520#ASSIGN#i = 4
-jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#1#621#SELECT#x.length
-jnt.scimark2.Random#nextDouble()#double#53#4004#EQ#i == 0
-jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#8#673#VARDEF#int i = 0
-jnt.scimark2.FFT#bitreverse(double[])#void#86#6523#INDEXED#data[jj + 1]
-jnt.scimark2.FFT#transform_internal(double[],int)#void#251#4424#IDENT#a
-jnt.scimark2.FFT#transform_internal(double[],int)#void#137#3094#INDEXED#data[i]
-jnt.scimark2.FFT#transform_internal(double[],int)#void#310#5093#IDENT#j
-jnt.scimark2.Random#<init>(double,double)#void#32#712#IDENT#m1
-jnt.scimark2.FFT#log2(int)#int#4#1412#IDENT#k
-jnt.scimark2.FFT#transform_internal(double[],int)#void#151#3246#PLUS#i + 1
-jnt.scimark2.FFT#log2(int)#int#53#1532#IDENT#log
-jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#4#646#NEWARRAY#new double[N]
-jnt.scimark2.FFT#transform_internal(double[],int)#void#134#3082#INDEXED#data[j]
-jnt.scimark2.FFT#transform_internal(double[],int)#void#64#2471#SELECT#Math.sin
-jnt.scimark2.FFT#bitreverse(double[])#void#16#5888#LT#i < nm1
-jnt.scimark2.FFT#transform_internal(double[],int)#void#265#4450#PLUS#b + a + dual
-jnt.scimark2.FFT#transform_internal(double[],int)#void#2#1635#EQ#data.length == 0
-jnt.scimark2.FFT#transform_internal(double[],int)#void#158#3383#IDENT#i
-jnt.scimark2.Random#<init>(int)#void#27#639#IDENT#one
-jnt.scimark2.Random#<init>()#void#38#830#IDENT#m2
-jnt.scimark2.FFT#bitreverse(double[])#void#106#6669#SR_ASG#k >>= 1
-jnt.scimark2.Random#<init>(int,double,double)#void#71#3150#IDENT#seed
-jnt.scimark2.FFT#transform_internal(double[],int)#void#129#2981#VARDEF#double wd_imag = data[j + 1]
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#62#389#IDENT#N
-jnt.scimark2.Random#initialize(int)#void#42#5115#MOD#jseed % m2
-jnt.scimark2.FFT#bitreverse(double[])#void#14#5886#IDENT#i
-jnt.scimark2.FFT#bitreverse(double[])#void#33#6011#VARDEF#int k = n >> 1
-jnt.scimark2.FFT#transform_internal(double[],int)#void#228#4055#MINUS#w_imag + s * w_real - s2 * w_imag
-jnt.scimark2.FFT#bitreverse(double[])#void#78#6459#INDEXED#data[jj]
-jnt.scimark2.Random#<init>(int,double,double)#void#81#3192#IDENT#right
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#0#130#IDENT#RandomVector
-jnt.scimark2.Random#<init>(int,double,double)#void#47#1048#ASSIGN#dm1 = 1.0 / (double)m1
-jnt.scimark2.Random#initialize(int)#void#107#5322#PREINC#++iloop
-jnt.scimark2.FFT#transform_internal(double[],int)#void#231#4247#IDENT#w_real
-jnt.scimark2.Random#initialize(int)#void#69#5436#DIV#jseed / m2
-jnt.scimark2.Random#initialize(int)#void#35#4993#IDENT#k0
-jnt.scimark2.FFT#transform_internal(double[],int)#void#105#2837#MUL#2 * b
-jnt.scimark2.FFT#inverse(double[])#void#6#921#SELECT#data.length
-jnt.scimark2.FFT#bitreverse(double[])#void#10#5860#VARDEF#int i = 0
-jnt.scimark2.Random#<init>(int)#void#0#2584#IDENT#super
-jnt.scimark2.Random#<init>(int,double,double)#void#6#440#ASSIGN#seed = 0
-jnt.scimark2.FFT#bitreverse(double[])#void#30#6015#IDENT#n
-jnt.scimark2.Random#<init>(int)#void#62#1269#ASSIGN#right = 1.0
-jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#21#884#PREINC#++i
-jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#21#883#IDENT#i
-jnt.scimark2.Random#<init>(double,double)#void#82#2270#IDENT#right
-jnt.scimark2.FFT#transform_internal(double[],int)#void#71#2533#SELECT#Math.sin
-jnt.scimark2.Random#initialize(int)#void#35#4996#ASSIGN#k0 = 9069 % m2
-jnt.scimark2.FFT#transform_internal(double[],int)#void#118#2895#IDENT#j
-jnt.scimark2.Random#initialize(int)#void#61#5339#IDENT#jseed
-jnt.scimark2.Random#initialize(int)#void#86#5736#IDENT#j0
-jnt.scimark2.FFT#transform_internal(double[],int)#void#166#3516#IDENT#data
-jnt.scimark2.Random#<init>(double,double)#void#57#1191#ASSIGN#left = 0.0
-jnt.scimark2.Random#<init>(int,double,double)#void#57#1191#ASSIGN#left = 0.0
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#109#503#IDENT#x
-jnt.scimark2.Random#initialize(int)#void#105#5846#PLUS#j0 + m2 * j1
-jnt.scimark2.Random#<init>(int,double,double)#void#76#3171#IDENT#left
-jnt.scimark2.Random#<init>()#void#56#1191#IDENT#left
-jnt.scimark2.FFT#transform_internal(double[],int)#void#157#3378#IDENT#data
-jnt.scimark2.FFT#transform_internal(double[],int)#void#17#1744#IDENT#log2
-jnt.scimark2.FFT#transform_internal(double[],int)#void#91#2637#VARDEF#double s2 = 2.0 * t * t
-jnt.scimark2.FFT#transform_internal(double[],int)#void#344#5549#IDENT#data
-jnt.scimark2.Random#nextDouble()#double#127#4419#IDENT#dm1
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#26#215#SELECT#FFT.transform
-jnt.scimark2.Random#<init>()#void#51#1155#IDENT#haveRange
-jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#27#924#IDENT#A
-jnt.scimark2.Random#<init>(int,double,double)#void#51#1155#IDENT#haveRange
-jnt.scimark2.FFT#transform_internal(double[],int)#void#132#3083#IDENT#j
-jnt.scimark2.Random#<init>(int,double,double)#void#91#3207#ASSIGN#width = right - left
-jnt.scimark2.FFT#transform_internal(double[],int)#void#80#2525#VARDEF#double t = Math.sin(theta / 2.0)
-jnt.scimark2.FFT#transform_internal(double[],int)#void#35#1947#LT#bit < logn
-jnt.scimark2.Random#<init>(double,double)#void#23#562#ASSIGN#mdig = 32
-jnt.scimark2.FFT#transform_internal(double[],int)#void#88#2652#IDENT#t
-jnt.scimark2.Random#initialize(int)#void#98#5833#INDEXED#m[iloop]
-jnt.scimark2.kernel#<init>()#void#0#30#IDENT#super
-jnt.scimark2.Random#<init>(int)#void#23#562#ASSIGN#mdig = 32
-jnt.scimark2.FFT#bitreverse(double[])#void#81#6519#IDENT#data
-jnt.scimark2.FFT#transform_internal(double[],int)#void#312#5092#INDEXED#data[j]
-jnt.scimark2.FFT#bitreverse(double[])#void#62#6262#ASSIGN#data[ii] = data[jj]
-jnt.scimark2.FFT#transform_internal(double[],int)#void#275#4585#IDENT#data
-jnt.scimark2.FFT#transform_internal(double[],int)#void#318#5110#MINUS#data[i] - wd_real
-jnt.scimark2.FFT#transform_internal(double[],int)#void#196#3704#LT#a < dual
-jnt.scimark2.Random#<init>(double,double)#void#15#540#IDENT#j
-jnt.scimark2.commandline#main(java.lang.String[])#void#10#517#IDENT#args
-jnt.scimark2.Random#<init>(int)#void#40#830#ASSIGN#m2 = one << mdig / 2
-jnt.scimark2.FFT#transform_internal(double[],int)#void#61#2148#DIV#2.0 * direction * Math.PI / (2.0 * (double)dual)
-jnt.scimark2.FFT#transform_internal(double[],int)#void#285#4701#IDENT#z1_real
-jnt.scimark2.FFT#inverse(double[])#void#8#939#IDENT#nd
-jnt.scimark2.FFT#transform_internal(double[],int)#void#319#5098#ASSIGN#data[j] = data[i] - wd_real
-jnt.scimark2.FFT#bitreverse(double[])#void#91#6599#IDENT#j
-jnt.scimark2.Random#initialize(int)#void#36#5050#IDENT#k1
-jnt.scimark2.FFT#transform_internal(double[],int)#void#201#3814#IDENT#s
-jnt.scimark2.FFT#bitreverse(double[])#void#32#6017#SR#n >> 1
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#17#190#IDENT#i
-jnt.scimark2.FFT#transform_internal(double[],int)#void#324#5251#PLUS#j + 1
-jnt.scimark2.commandline#main(java.lang.String[])#void#31#671#NEWCLASS#new Random(Integer.parseInt(seed))
-jnt.scimark2.Random#initialize(int)#void#72#5448#IDENT#k1
-jnt.scimark2.Random#<init>(int)#void#71#2588#IDENT#initialize
-jnt.scimark2.FFT#inverse(double[])#void#17#1076#DIV#1.0 / aprN
-jnt.scimark2.Random#initialize(int)#void#37#5053#ASSIGN#k1 = 9069 / m2
-jnt.scimark2.Random#initialize(int)#void#90#5739#ASSIGN#j0 = jseed % m2
-jnt.scimark2.FFT#bitreverse(double[])#void#55#6251#IDENT#data
-jnt.scimark2.Random#<init>(double,double)#void#61#1269#IDENT#right
-jnt.scimark2.FFT#transform_internal(double[],int)#void#203#3818#IDENT#w_imag
-jnt.scimark2.FFT#bitreverse(double[])#void#28#5969#VARDEF#int jj = j << 1
-jnt.scimark2.Random#<init>(int,double,double)#void#62#1269#ASSIGN#right = 1.0
-jnt.scimark2.FFT#transform_internal(double[],int)#void#298#4907#IDENT#z1_imag
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#66#408#SELECT#System.out
-jnt.scimark2.FFT#transform_internal(double[],int)#void#349#5553#INDEXED#data[i + 1]
-jnt.scimark2.FFT#bitreverse(double[])#void#58#6255#INDEXED#data[ii]
-jnt.scimark2.FFT#bitreverse(double[])#void#58#6264#IDENT#data
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#58#378#VARDEF#int i = 0
-jnt.scimark2.Random#initialize(int)#void#102#5853#IDENT#j1
-jnt.scimark2.FFT#transform_internal(double[],int)#void#307#4888#VARDEF#double wd_imag = w_real * z1_imag + w_imag * z1_real
-jnt.scimark2.FFT#transform_internal(double[],int)#void#177#2807#IDENT#b
-jnt.scimark2.Constants#<init>()#void#1#30#IDENT#super
-jnt.scimark2.FFT#transform_internal(double[],int)#void#222#4042#PLUS#w_imag + s * w_real
 jnt.scimark2.FFT#log2(int)#int#22#1449#SL#1 << log
-jnt.scimark2.Random#initialize(int)#void#22#4887#ASSIGN#jseed = Math.min(Math.abs(seed), m1)
-jnt.scimark2.commandline#main(java.lang.String[])#void#13#529#NE#args.length != 1
-jnt.scimark2.FFT#inverse(double[])#void#7#914#VARDEF#int nd = data.length
-jnt.scimark2.FFT#transform_internal(double[],int)#void#162#3390#IDENT#wd_real
-jnt.scimark2.FFT#bitreverse(double[])#void#12#5872#VARDEF#int j = 0
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#1#145#IDENT#N
-jnt.scimark2.Random#<init>()#void#40#830#ASSIGN#m2 = one << mdig / 2
-jnt.scimark2.FFT#transform_internal(double[],int)#void#30#1933#VARDEF#int dual = 1
-jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#17#899#SELECT#R.nextDouble
-jnt.scimark2.FFT#transform_internal(double[],int)#void#240#4373#VARDEF#int b = 0
+jnt.scimark2.FFT#transform_internal(double[],int)#void#349#5553#INDEXED#data[i + 1]
+jnt.scimark2.Random#<init>(double,double)#void#82#2270#IDENT#right
+jnt.scimark2.FFT#bitreverse(double[])#void#16#5888#LT#i < nm1
+jnt.scimark2.FFT#inverse(double[])#void#32#1220#INDEXED#data[i]
+jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#20#683#IDENT#i
+jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#4#845#NEWARRAY#new double[N]
 jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#80#421#INDEXED#x[i]
-jnt.scimark2.FFT#transform_internal(double[],int)#void#215#4035#IDENT#w_imag
+jnt.scimark2.Random#initialize(int)#void#37#5053#ASSIGN#k1 = 9069 / m2
+jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#11#679#LT#i < N
+jnt.scimark2.Random#<init>(int,double,double)#void#62#1269#ASSIGN#right = 1.0
+jnt.scimark2.Random#<init>(int,double,double)#void#47#1048#ASSIGN#dm1 = 1.0 / (double)m1
 jnt.scimark2.FFT#transform_internal(double[],int)#void#276#4590#IDENT#j
-jnt.scimark2.Random#initialize(int)#void#13#4893#SELECT#Math.min
-jnt.scimark2.Random#initialize(int)#void#1#4805#SELECT#this.seed
-jnt.scimark2.Random#nextDouble()#double#8#3597#INDEXED#m[i]
-jnt.scimark2.commandline#main(java.lang.String[])#void#46#738#IDENT#min_time
-jnt.scimark2.FFT#transform_internal(double[],int)#void#207#3827#IDENT#s2
-jnt.scimark2.FFT#bitreverse(double[])#void#35#6031#IDENT#i
-jnt.scimark2.Random#<init>()#void#57#1191#ASSIGN#left = 0.0
-jnt.scimark2.FFT#transform_internal(double[],int)#void#360#4394#MUL#2 * dual
-jnt.scimark2.Random#initialize(int)#void#48#5210#DIV#jseed / m2
-jnt.scimark2.Random#initialize(int)#void#61#5347#IDENT#j0
-jnt.scimark2.Random#nextDouble()#double#0#3592#IDENT#k
-jnt.scimark2.Random#<init>(int)#void#5#440#IDENT#seed
-jnt.scimark2.FFT#transform_internal(double[],int)#void#290#4720#IDENT#z1_imag
-jnt.scimark2.Random#initialize(int)#void#63#5352#IDENT#k0
-jnt.scimark2.Random#initialize(int)#void#66#5424#IDENT#j1
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#20#192#IDENT#cycles
-jnt.scimark2.Random#nextDouble()#double#43#3902#IDENT#k
-jnt.scimark2.Random#<init>(int,double,double)#void#27#639#IDENT#one
-jnt.scimark2.Random#<init>(int)#void#61#1269#IDENT#right
-jnt.scimark2.Random#<init>(int)#void#57#1191#ASSIGN#left = 0.0
-jnt.scimark2.FFT#log2(int)#int#9#1419#IDENT#k
-jnt.scimark2.FFT#transform_internal(double[],int)#void#121#2880#VARDEF#double wd_real = data[j]
-jnt.scimark2.FFT#bitreverse(double[])#void#93#6596#LE#k <= j
-jnt.scimark2.FFT#transform_internal(double[],int)#void#213#3794#VARDEF#double tmp_real = w_real - s * w_imag - s2 * w_real
-jnt.scimark2.Random#initialize(int)#void#74#5446#MUL#j0 * k1
-jnt.scimark2.Random#initialize(int)#void#70#5443#IDENT#j0
-jnt.scimark2.Random#nextDouble()#double#85#4059#ASSIGN#j = 16
-jnt.scimark2.Random#<init>(int,double,double)#void#67#1348#ASSIGN#width = 1.0
-jnt.scimark2.FFT#bitreverse(double[])#void#82#6524#IDENT#jj
-jnt.scimark2.FFT#transform_internal(double[],int)#void#22#1824#IDENT#bitreverse
-jnt.scimark2.FFT#log2(int)#int#13#1430#PREINC#++log
-jnt.scimark2.Random#<init>(double,double)#void#6#440#ASSIGN#seed = 0
-jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#15#693#IDENT#i
-jnt.scimark2.Random#initialize(int)#void#49#5202#ASSIGN#j1 = jseed / m2
-jnt.scimark2.Random#<init>(int,double,double)#void#23#562#ASSIGN#mdig = 32
-jnt.scimark2.FFT#transform_internal(double[],int)#void#27#1924#VARDEF#int bit = 0
-jnt.scimark2.FFT#bitreverse(double[])#void#89#6594#IDENT#k
-jnt.scimark2.FFT#transform_internal(double[],int)#void#76#2544#DIV#theta / 2.0
-jnt.scimark2.FFT#transform_internal(double[],int)#void#329#5263#PLUS#i + 1
-jnt.scimark2.FFT#bitreverse(double[])#void#78#6468#IDENT#tmp_real
-jnt.scimark2.Random#<init>()#void#62#1269#ASSIGN#right = 1.0
-jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#9#678#IDENT#i
-jnt.scimark2.FFT#bitreverse(double[])#void#72#6371#PLUS#jj + 1
-jnt.scimark2.Random#<init>(double,double)#void#88#2295#IDENT#left
-jnt.scimark2.FFT#inverse(double[])#void#12#1027#IDENT#n
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#42#300#IDENT#x
-jnt.scimark2.Random#initialize(int)#void#66#5430#IDENT#jseed
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#26#215#SELECT#FFT.transform
-jnt.scimark2.FFT#bitreverse(double[])#void#75#6455#IDENT#data
-jnt.scimark2.Random#initialize(int)#void#43#5107#ASSIGN#j0 = jseed % m2
-jnt.scimark2.FFT#transform_internal(double[],int)#void#53#2138#MUL#2.0 * direction * Math.PI
-jnt.scimark2.FFT#transform_internal(double[],int)#void#296#4898#IDENT#w_real
-jnt.scimark2.Random#nextDouble()#double#36#3895#IDENT#m
-jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#16#892#INDEXED#A[i]
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#76#420#IDENT#x
-jnt.scimark2.Random#initialize(int)#void#58#5316#LT#iloop < 17
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#69#412#SELECT#System.out.print
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#26#226#IDENT#x
-jnt.scimark2.FFT#bitreverse(double[])#void#80#6466#ASSIGN#data[jj] = tmp_real
-jnt.scimark2.commandline#main(java.lang.String[])#void#26#618#IDENT#seed
-jnt.scimark2.FFT#transform_internal(double[],int)#void#303#4926#IDENT#z1_real
-jnt.scimark2.FFT#transform_internal(double[],int)#void#135#3095#IDENT#i
-jnt.scimark2.FFT#transform_internal(double[],int)#void#223#4057#IDENT#s2
-jnt.scimark2.Random#<init>(double,double)#void#77#2249#IDENT#left
+jnt.scimark2.Random#<init>()#void#51#1155#IDENT#haveRange
+jnt.scimark2.Random#<init>(int)#void#67#1348#ASSIGN#width = 1.0
 jnt.scimark2.Random#<init>(double,double)#void#28#639#ASSIGN#one = 1
-jnt.scimark2.Random#<init>(int,double,double)#void#87#3201#IDENT#width
-jnt.scimark2.commandline#main(java.lang.String[])#void#28#629#INDEXED#args[0]
-jnt.scimark2.Random#initialize(int)#void#13#4902#SELECT#Math.abs
-jnt.scimark2.Random#nextDouble()#double#1#3596#IDENT#m
-jnt.scimark2.FFT#transform_internal(double[],int)#void#170#3522#PLUS#i + 1
-jnt.scimark2.Random#initialize(int)#void#23#4924#IDENT#jseed
-jnt.scimark2.Random#<init>(int,double,double)#void#80#3179#IDENT#this
-jnt.scimark2.Random#<init>()#void#15#540#IDENT#j
-jnt.scimark2.Random#<init>(double,double)#void#94#2303#IDENT#haveRange
-jnt.scimark2.FFT#transform_internal(double[],int)#void#379#1967#MUL_ASG#dual *= 2
-jnt.scimark2.FFT#transform_internal(double[],int)#void#10#1659#VARDEF#int n = data.length / 2
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#49#339#SELECT#System.out
-jnt.scimark2.Random#<init>(int,double,double)#void#56#1191#IDENT#left
-jnt.scimark2.FFT#transform_internal(double[],int)#void#355#4387#IDENT#b
+jnt.scimark2.Random#<init>(double,double)#void#76#2237#IDENT#this
+jnt.scimark2.FFT#transform_internal(double[],int)#void#128#2995#INDEXED#data[j + 1]
+jnt.scimark2.Random#<init>(int,double,double)#void#52#1155#ASSIGN#haveRange = false
+jnt.scimark2.commandline#main(java.lang.String[])#void#13#529#NE#args.length != 1
+jnt.scimark2.FFT#transform_internal(double[],int)#void#80#2525#VARDEF#double t = Math.sin(theta / 2.0)
+jnt.scimark2.Random#nextDouble()#double#27#3793#LT#k < 0
+jnt.scimark2.Random#<init>(double,double)#void#23#562#ASSIGN#mdig = 32
+jnt.scimark2.Random#<init>(int,double,double)#void#81#3192#IDENT#right
+jnt.scimark2.Random#<init>()#void#38#830#IDENT#m2
+jnt.scimark2.Random#initialize(int)#void#98#5833#INDEXED#m[iloop]
+jnt.scimark2.Random#initialize(int)#void#29#4940#PREDEC#--jseed
+jnt.scimark2.Random#initialize(int)#void#102#5853#IDENT#j1
+jnt.scimark2.FFT#inverse(double[])#void#11#936#VARDEF#int n = nd / 2
+jnt.scimark2.FFT#transform_internal(double[],int)#void#325#5249#INDEXED#data[j + 1]
+jnt.scimark2.Random#initialize(int)#void#52#5305#ASSIGN#iloop = 0
+jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#16#698#IDENT#x
+jnt.scimark2.FFT#bitreverse(double[])#void#3#5833#DIV#data.length / 2
 jnt.scimark2.Random#nextDouble()#double#102#4089#IDENT#haveRange
+jnt.scimark2.Random#<init>(int,double,double)#void#67#1348#ASSIGN#width = 1.0
+jnt.scimark2.FFT#transform_internal(double[],int)#void#90#2650#MUL#2.0 * t * t
+jnt.scimark2.FFT#transform_internal(double[],int)#void#11#1684#IDENT#n
+jnt.scimark2.FFT#transform_internal(double[],int)#void#288#4711#IDENT#w_imag
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#104#487#SELECT#System.out.println
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#63#387#LT#i < N
+jnt.scimark2.FFT#transform_internal(double[],int)#void#263#4452#IDENT#dual
+jnt.scimark2.FFT#log2(int)#int#4#1412#IDENT#k
+jnt.scimark2.Random#<init>(double,double)#void#61#1269#IDENT#right
+jnt.scimark2.FFT#transform_internal(double[],int)#void#219#4048#IDENT#w_real
+jnt.scimark2.commandline#main(java.lang.String[])#void#8#497#VARDEF#String seed = null
+jnt.scimark2.Random#nextDouble()#double#120#4130#IDENT#width
+jnt.scimark2.FFT#transform_internal(double[],int)#void#306#4915#PLUS#w_real * z1_imag + w_imag * z1_real
+jnt.scimark2.FFT#log2(int)#int#21#1452#IDENT#log
+jnt.scimark2.Random#<init>(int)#void#40#830#ASSIGN#m2 = one << mdig / 2
+jnt.scimark2.FFT#transform_internal(double[],int)#void#379#1967#MUL_ASG#dual *= 2
+jnt.scimark2.FFT#transform_internal(double[],int)#void#206#3812#MINUS#w_real - s * w_imag
+jnt.scimark2.FFT#transform_internal(double[],int)#void#273#4472#VARDEF#double z1_real = data[j]
+jnt.scimark2.Random#<init>(int,double,double)#void#83#3190#ASSIGN#this.right = right
+jnt.scimark2.FFT#transform_internal(double[],int)#void#373#1958#PREINC#++bit
+jnt.scimark2.Random#<init>(double,double)#void#95#2313#ASSIGN#haveRange = true
+jnt.scimark2.FFT#bitreverse(double[])#void#27#5976#SL#j << 1
+jnt.scimark2.FFT#bitreverse(double[])#void#78#6459#INDEXED#data[jj]
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#95#392#PREINC#++i
+jnt.scimark2.Random#<init>()#void#6#440#ASSIGN#seed = 0
+jnt.scimark2.FFT#transform_internal(double[],int)#void#114#2855#MUL#2 * (b + dual)
+jnt.scimark2.FFT#transform_internal(double[],int)#void#57#2157#TYPECAST#(double)dual
+jnt.scimark2.commandline#main(java.lang.String[])#void#45#728#IDENT#FFT_size
+jnt.scimark2.FFT#transform_internal(double[],int)#void#270#4487#IDENT#j
+jnt.scimark2.FFT#transform_internal(double[],int)#void#13#1686#EQ#n == 1
+jnt.scimark2.FFT#transform_internal(double[],int)#void#227#4060#MUL#s2 * w_imag
+jnt.scimark2.FFT#transform_internal(double[],int)#void#281#4575#VARDEF#double z1_imag = data[j + 1]
+jnt.scimark2.FFT#bitreverse(double[])#void#35#6031#IDENT#i
+jnt.scimark2.commandline#main(java.lang.String[])#void#16#544#NEWCLASS#new RuntimeException("Error! Seed should be provided as an argument")
+jnt.scimark2.Random#<init>(double,double)#void#90#2285#ASSIGN#width = right - left
+jnt.scimark2.FFT#transform_internal(double[],int)#void#166#3516#IDENT#data
+jnt.scimark2.Random#initialize(int)#void#66#5424#IDENT#j1
+jnt.scimark2.FFT#transform_internal(double[],int)#void#141#3088#ASSIGN#data[j] = data[i] - wd_real
+jnt.scimark2.FFT#transform_internal(double[],int)#void#342#5412#PLUS_ASG#data[i] += wd_real
+jnt.scimark2.FFT#inverse(double[])#void#15#1077#IDENT#aprN
+jnt.scimark2.FFT#inverse(double[])#void#34#1227#IDENT#norm
+jnt.scimark2.Random#initialize(int)#void#49#5202#ASSIGN#j1 = jseed / m2
+jnt.scimark2.Random#initialize(int)#void#13#4902#SELECT#Math.abs
+jnt.scimark2.Random#nextDouble()#double#30#3802#IDENT#k
+jnt.scimark2.FFT#transform_internal(double[],int)#void#94#2793#VARDEF#int b = 0
+jnt.scimark2.Random#<init>(int,double,double)#void#21#562#IDENT#mdig
+jnt.scimark2.FFT#transform_internal(double[],int)#void#32#1943#IDENT#bit
+jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#20#684#PREINC#++i
+jnt.scimark2.Random#<init>(int,double,double)#void#87#3201#IDENT#width
+jnt.scimark2.FFT#bitreverse(double[])#void#42#6070#IDENT#ii
+jnt.scimark2.FFT#transform_internal(double[],int)#void#153#3252#IDENT#wd_imag
+jnt.scimark2.Random#<init>()#void#34#712#ASSIGN#m1 = (one << mdig - 2) + ((one << mdig - 2) - one)
+jnt.scimark2.commandline#main(java.lang.String[])#void#3#338#VARDEF#double min_time = Constants.RESOLUTION_DEFAULT
+jnt.scimark2.Random#<init>(double,double)#void#32#712#IDENT#m1
+jnt.scimark2.FFT#transform_internal(double[],int)#void#143#3233#IDENT#j
+jnt.scimark2.FFT#transform_internal(double[],int)#void#22#1824#IDENT#bitreverse
+jnt.scimark2.Random#<init>(int)#void#28#639#ASSIGN#one = 1
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#78#422#IDENT#i
+jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#21#884#PREINC#++i
+jnt.scimark2.FFT#transform_internal(double[],int)#void#162#3390#IDENT#wd_real
+jnt.scimark2.Random#<init>()#void#23#562#ASSIGN#mdig = 32
+jnt.scimark2.Random#<init>()#void#40#830#ASSIGN#m2 = one << mdig / 2
+jnt.scimark2.FFT#transform_internal(double[],int)#void#336#5408#IDENT#i
+jnt.scimark2.FFT#transform_internal(double[],int)#void#53#2138#MUL#2.0 * direction * Math.PI
+jnt.scimark2.FFT#transform_internal(double[],int)#void#21#1737#VARDEF#int logn = log2(n)
+jnt.scimark2.Random#<init>()#void#32#712#IDENT#m1
+jnt.scimark2.FFT#bitreverse(double[])#void#114#6693#IDENT#k
+jnt.scimark2.Random#<init>()#void#62#1269#ASSIGN#right = 1.0
+jnt.scimark2.Random#initialize(int)#void#107#5322#PREINC#++iloop
+jnt.scimark2.Random#initialize(int)#void#115#5983#ASSIGN#i = 4
+jnt.scimark2.commandline#main(java.lang.String[])#void#29#623#ASSIGN#seed = args[0]
+jnt.scimark2.Random#<init>(int,double,double)#void#95#3225#IDENT#haveRange
+jnt.scimark2.FFT#transform_internal(double[],int)#void#367#3712#IDENT#a
+jnt.scimark2.FFT#bitreverse(double[])#void#52#6171#INDEXED#data[ii + 1]
+jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#17#899#SELECT#R.nextDouble
+jnt.scimark2.commandline#main(java.lang.String[])#void#26#625#IDENT#args
+jnt.scimark2.Random#<init>(int)#void#5#440#IDENT#seed
+jnt.scimark2.FFT#bitreverse(double[])#void#98#6638#IDENT#k
+jnt.scimark2.FFT#transform_internal(double[],int)#void#255#4413#VARDEF#int i = 2 * (b + a)
+jnt.scimark2.Random#<init>(double,double)#void#15#540#IDENT#j
+jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#6#839#VARDEF#double[] A = new double[N]
+jnt.scimark2.Random#nextDouble()#double#83#4057#IDENT#j
+jnt.scimark2.Random#<init>(int)#void#10#520#IDENT#i
+jnt.scimark2.FFT#transform(double[])#void#0#634#IDENT#transform_internal
+jnt.scimark2.FFT#transform_internal(double[],int)#void#117#2890#IDENT#data
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#23#191#LT#i < cycles
+jnt.scimark2.FFT#transform_internal(double[],int)#void#320#5245#IDENT#data
+jnt.scimark2.FFT#transform_internal(double[],int)#void#30#1933#VARDEF#int dual = 1
+jnt.scimark2.FFT#transform_internal(double[],int)#void#121#2880#VARDEF#double wd_real = data[j]
+jnt.scimark2.Random#<init>(int,double,double)#void#90#3215#MINUS#right - left
+jnt.scimark2.FFT#transform_internal(double[],int)#void#132#3083#IDENT#j
+jnt.scimark2.FFT#transform_internal(double[],int)#void#269#4482#IDENT#data
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#66#408#SELECT#System.out
+jnt.scimark2.FFT#transform_internal(double[],int)#void#329#5263#PLUS#i + 1
+jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#10#680#IDENT#N
+jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#20#684#PREINC#++i
+jnt.scimark2.FFT#inverse(double[])#void#18#1068#VARDEF#double norm = 1.0 / aprN
+jnt.scimark2.FFT#transform_internal(double[],int)#void#213#3794#VARDEF#double tmp_real = w_real - s * w_imag - s2 * w_real
+jnt.scimark2.FFT#transform_internal(double[],int)#void#71#2533#SELECT#Math.sin
+jnt.scimark2.Random#initialize(int)#void#61#5339#IDENT#jseed
+jnt.scimark2.FFT#transform_internal(double[],int)#void#240#4373#VARDEF#int b = 0
+jnt.scimark2.Random#<init>(int,double,double)#void#96#3235#ASSIGN#haveRange = true
+jnt.scimark2.FFT#bitreverse(double[])#void#119#5896#PREINC#++i
+jnt.scimark2.FFT#transform_internal(double[],int)#void#358#4396#IDENT#dual
+jnt.scimark2.FFT#transform_internal(double[],int)#void#301#4917#IDENT#w_imag
+jnt.scimark2.FFT#transform_internal(double[],int)#void#235#4303#IDENT#w_imag
+jnt.scimark2.Random#<init>(int,double,double)#void#66#1348#IDENT#width
+jnt.scimark2.FFT#transform_internal(double[],int)#void#205#3816#MUL#s * w_imag
+jnt.scimark2.FFT#transform_internal(double[],int)#void#229#4024#VARDEF#double tmp_imag = w_imag + s * w_real - s2 * w_imag
+jnt.scimark2.FFT#transform_internal(double[],int)#void#325#5257#IDENT#data
+jnt.scimark2.FFT#transform_internal(double[],int)#void#231#4256#IDENT#tmp_real
+jnt.scimark2.FFT#bitreverse(double[])#void#103#6667#IDENT#k
+jnt.scimark2.FFT#transform_internal(double[],int)#void#2#1635#EQ#data.length == 0
+jnt.scimark2.Random#<init>(double,double)#void#57#1191#ASSIGN#left = 0.0
+jnt.scimark2.Random#<init>(int)#void#0#2584#IDENT#super
+jnt.scimark2.Random#initialize(int)#void#13#4881#IDENT#jseed
+jnt.scimark2.FFT#transform_internal(double[],int)#void#360#4394#MUL#2 * dual
+jnt.scimark2.Random#<init>(double,double)#void#66#1348#IDENT#width
+jnt.scimark2.FFT#bitreverse(double[])#void#69#6369#IDENT#jj
+jnt.scimark2.Random#initialize(int)#void#66#5430#IDENT#jseed
+jnt.scimark2.FFT#transform_internal(double[],int)#void#137#3094#INDEXED#data[i]
+jnt.scimark2.FFT#transform_internal(double[],int)#void#324#5251#PLUS#j + 1
+jnt.scimark2.Random#initialize(int)#void#80#5451#PLUS#jseed / m2 + j0 * k1 + j1 * k0
+jnt.scimark2.FFT#transform_internal(double[],int)#void#355#4387#IDENT#b
+jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#0#816#IDENT#alloc_TAG1
+jnt.scimark2.Random#<init>(int)#void#44#1048#IDENT#dm1
+jnt.scimark2.Random#<init>(int)#void#56#1191#IDENT#left
+jnt.scimark2.Random#<init>(double,double)#void#47#1048#ASSIGN#dm1 = 1.0 / (double)m1
+jnt.scimark2.FFT#log2(int)#int#1#1388#VARDEF#int log = 0
+jnt.scimark2.Random#initialize(int)#void#96#5834#IDENT#iloop
+jnt.scimark2.Random#<init>(int)#void#11#520#ASSIGN#i = 4
+jnt.scimark2.Random#nextDouble()#double#50#4002#IDENT#i
+jnt.scimark2.FFT#transform_internal(double[],int)#void#215#4035#IDENT#w_imag
+jnt.scimark2.FFT#transform_internal(double[],int)#void#91#2637#VARDEF#double s2 = 2.0 * t * t
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#42#304#IDENT#accept_all_FIELD1_TAG1
+jnt.scimark2.Random#nextDouble()#double#91#4078#PREDEC#--j
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#95#392#PREINC#++i
+jnt.scimark2.Random#initialize(int)#void#86#5736#IDENT#j0
+jnt.scimark2.FFT#inverse(double[])#void#29#1216#IDENT#data
+jnt.scimark2.Random#<init>(int,double,double)#void#81#3183#SELECT#this.right
+jnt.scimark2.Random#<init>(int,double,double)#void#27#639#IDENT#one
+jnt.scimark2.Random#initialize(int)#void#98#5843#IDENT#j0
+jnt.scimark2.FFT#transform_internal(double[],int)#void#307#4888#VARDEF#double wd_imag = w_real * z1_imag + w_imag * z1_real
+jnt.scimark2.Constants#<init>()#void#0#30#IDENT#super
+jnt.scimark2.Random#<init>(int,double,double)#void#57#1191#ASSIGN#left = 0.0
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#17#190#IDENT#i
+jnt.scimark2.Random#<init>(double,double)#void#87#2279#IDENT#width
+jnt.scimark2.Random#initialize(int)#void#36#5050#IDENT#k1
+jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#26#748#IDENT#y
+jnt.scimark2.FFT#transform_internal(double[],int)#void#113#2859#PLUS#b + dual
+jnt.scimark2.Random#<init>(int)#void#71#2600#IDENT#seed
+jnt.scimark2.FFT#inverse(double[])#void#0#827#IDENT#transform_internal
+jnt.scimark2.FFT#transform_internal(double[],int)#void#298#4907#IDENT#z1_imag
+jnt.scimark2.Random#initialize(int)#void#13#4893#SELECT#Math.min
+jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#27#924#IDENT#A
+jnt.scimark2.Random#nextDouble()#double#35#3804#PLUS_ASG#k += m1
+jnt.scimark2.Random#nextDouble()#double#17#3604#INDEXED#m[j]
+jnt.scimark2.FFT#bitreverse(double[])#void#56#6256#IDENT#ii
+jnt.scimark2.FFT#transform_internal(double[],int)#void#7#1667#SELECT#data.length
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#47#302#ASSIGN#x = accept_all_FIELD1_TAG1(x)
+jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#16#892#INDEXED#A[i]
+jnt.scimark2.FFT#bitreverse(double[])#void#30#6015#IDENT#n
+jnt.scimark2.Random#nextDouble()#double#113#4120#IDENT#dm1
+jnt.scimark2.Random#initialize(int)#void#1#4813#IDENT#seed
+jnt.scimark2.kernel#<init>()#void#1#30#IDENT#super
+jnt.scimark2.FFT#bitreverse(double[])#void#21#5936#SL#i << 1
+jnt.scimark2.Random#nextDouble()#double#43#3902#IDENT#k
+jnt.scimark2.Random#<init>(int)#void#38#830#IDENT#m2
+jnt.scimark2.Random#<init>(int)#void#15#540#IDENT#j
+jnt.scimark2.Random#<init>(int,double,double)#void#89#3217#IDENT#left
+jnt.scimark2.FFT#log2(int)#int#3#1407#VARDEF#int k = 1
+jnt.scimark2.FFT#transform_internal(double[],int)#void#296#4898#IDENT#w_real
+jnt.scimark2.Random#<init>(double,double)#void#81#2257#IDENT#this
+jnt.scimark2.Random#<init>()#void#11#520#ASSIGN#i = 4
+jnt.scimark2.FFT#inverse(double[])#void#21#1197#VARDEF#int i = 0
+jnt.scimark2.FFT#transform_internal(double[],int)#void#167#3521#IDENT#i
+jnt.scimark2.FFT#transform_internal(double[],int)#void#109#2857#IDENT#b
+jnt.scimark2.FFT#transform_internal(double[],int)#void#344#5549#IDENT#data
+jnt.scimark2.FFT#transform_internal(double[],int)#void#134#3082#INDEXED#data[j]
+jnt.scimark2.FFT#log2(int)#int#23#1443#NE#n != (1 << log)
+jnt.scimark2.FFT#inverse(double[])#void#10#941#DIV#nd / 2
+jnt.scimark2.FFT#bitreverse(double[])#void#85#6526#PLUS#jj + 1
+jnt.scimark2.FFT#transform_internal(double[],int)#void#340#5415#IDENT#wd_real
+jnt.scimark2.FFT#transform_internal(double[],int)#void#60#2155#MUL#2.0 * (double)dual
+jnt.scimark2.FFT#transform_internal(double[],int)#void#348#5555#PLUS#i + 1
+jnt.scimark2.FFT#transform_internal(double[],int)#void#318#5110#MINUS#data[i] - wd_real
+jnt.scimark2.commandline#main(java.lang.String[])#void#26#618#IDENT#seed
+jnt.scimark2.Random#initialize(int)#void#13#4907#IDENT#seed
+jnt.scimark2.FFT#transform_internal(double[],int)#void#225#4062#IDENT#w_imag
+jnt.scimark2.FFT#transform_internal(double[],int)#void#135#3095#IDENT#i
+jnt.scimark2.Random#initialize(int)#void#83#5462#MOD#(jseed / m2 + j0 * k1 + j1 * k0) % (m2 / 2)
+jnt.scimark2.Random#<init>()#void#5#440#IDENT#seed
+jnt.scimark2.Random#initialize(int)#void#0#4801#IDENT#this
+jnt.scimark2.FFT#transform_internal(double[],int)#void#156#3238#ASSIGN#data[j + 1] = data[i + 1] - wd_imag
+jnt.scimark2.FFT#transform_internal(double[],int)#void#321#5250#IDENT#j
+jnt.scimark2.Random#<init>(double,double)#void#6#440#ASSIGN#seed = 0
+jnt.scimark2.FFT#transform_internal(double[],int)#void#194#3706#IDENT#dual
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#109#507#IDENT#precise_all_FIELD1_TAG1
+jnt.scimark2.FFT#transform_internal(double[],int)#void#131#3078#IDENT#data
+jnt.scimark2.FFT#log2(int)#int#53#1532#IDENT#log
+jnt.scimark2.Random#<init>()#void#52#1155#ASSIGN#haveRange = false
+jnt.scimark2.FFT#bitreverse(double[])#void#89#6594#IDENT#k
+jnt.scimark2.FFT#bitreverse(double[])#void#32#6017#SR#n >> 1
+jnt.scimark2.Random#nextDouble()#double#36#3895#IDENT#m
+jnt.scimark2.Random#initialize(int)#void#70#5443#IDENT#j0
+jnt.scimark2.FFT#transform_internal(double[],int)#void#39#1985#VARDEF#double w_real = 1.0
+jnt.scimark2.FFT#bitreverse(double[])#void#47#6167#IDENT#data
+jnt.scimark2.FFT#transform_internal(double[],int)#void#171#3520#INDEXED#data[i + 1]
+jnt.scimark2.Random#initialize(int)#void#48#5210#DIV#jseed / m2
+jnt.scimark2.Random#<init>(int)#void#71#2588#IDENT#initialize
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#15#185#VARDEF#int i = 0
+jnt.scimark2.FFT#inverse(double[])#void#38#1208#IDENT#i
+jnt.scimark2.Random#nextDouble()#double#66#4033#IDENT#i
+jnt.scimark2.Random#<init>(double,double)#void#5#440#IDENT#seed
+jnt.scimark2.Random#nextDouble()#double#118#4124#MUL#dm1 * k
+jnt.scimark2.commandline#main(java.lang.String[])#void#43#667#VARDEF#Random R = new Random(Integer.parseInt(seed))
+jnt.scimark2.FFT#transform_internal(double[],int)#void#249#4420#IDENT#b
+jnt.scimark2.Random#<init>(int,double,double)#void#75#3159#IDENT#this
+jnt.scimark2.Random#nextDouble()#double#46#3970#IDENT#accept_all_FIELD2_TAG
+jnt.scimark2.Random#nextDouble()#double#92#4077#IDENT#j
+jnt.scimark2.Random#<init>(double,double)#void#77#2249#IDENT#left
+jnt.scimark2.FFT#transform_internal(double[],int)#void#217#4044#IDENT#s
+jnt.scimark2.FFT#bitreverse(double[])#void#45#6051#VARDEF#double tmp_real = data[ii]
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#36#201#PREINC#++i
+jnt.scimark2.FFT#transform_internal(double[],int)#void#140#3100#MINUS#data[i] - wd_real
+jnt.scimark2.Random#nextDouble()#double#20#3770#IDENT#k
+jnt.scimark2.Random#<init>(double,double)#void#82#2261#SELECT#this.right
+jnt.scimark2.FFT#transform_internal(double[],int)#void#228#4055#MINUS#w_imag + s * w_real - s2 * w_imag
+jnt.scimark2.Random#nextDouble()#double#59#4016#ASSIGN#i = 16
+jnt.scimark2.Random#<init>(int,double,double)#void#32#712#IDENT#m1
+jnt.scimark2.Random#<init>(int,double,double)#void#5#440#IDENT#seed
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#3#148#IDENT#R
+jnt.scimark2.FFT#transform_internal(double[],int)#void#192#3702#IDENT#a
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#101#483#SELECT#System.out
+jnt.scimark2.Random#nextDouble()#double#132#4423#MUL#dm1 * k
+jnt.scimark2.FFT#transform_internal(double[],int)#void#262#4446#PLUS#b + a
+jnt.scimark2.FFT#bitreverse(double[])#void#24#5974#IDENT#j
+jnt.scimark2.Random#<init>()#void#15#540#IDENT#j
+jnt.scimark2.Random#nextDouble()#double#65#4034#PREDEC#--i
+jnt.scimark2.FFT#bitreverse(double[])#void#22#5929#VARDEF#int ii = i << 1
+jnt.scimark2.FFT#bitreverse(double[])#void#93#6596#LE#k <= j
+jnt.scimark2.FFT#transform_internal(double[],int)#void#196#3704#LT#a < dual
+jnt.scimark2.Random#<init>(double,double)#void#38#830#IDENT#m2
+jnt.scimark2.FFT#transform_internal(double[],int)#void#203#3818#IDENT#w_imag
+jnt.scimark2.Random#<init>(int,double,double)#void#77#3169#ASSIGN#this.left = left
+jnt.scimark2.FFT#transform_internal(double[],int)#void#76#2544#DIV#theta / 2.0
+jnt.scimark2.FFT#bitreverse(double[])#void#51#6174#PLUS#ii + 1
+jnt.scimark2.Random#nextDouble()#double#5#3598#IDENT#i
+jnt.scimark2.FFT#transform_internal(double[],int)#void#315#5104#INDEXED#data[i]
+jnt.scimark2.Random#initialize(int)#void#89#5747#MOD#jseed % m2
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#2#144#MUL#2 * N
+jnt.scimark2.FFT#inverse(double[])#void#6#921#SELECT#data.length
+jnt.scimark2.FFT#transform_internal(double[],int)#void#254#4418#MUL#2 * (b + a)
+jnt.scimark2.Random#initialize(int)#void#86#5741#IDENT#jseed
+jnt.scimark2.FFT#transform_internal(double[],int)#void#64#2471#SELECT#Math.sin
+jnt.scimark2.Random#<init>()#void#71#1757#IDENT#initialize
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#42#327#IDENT#x
+jnt.scimark2.Random#nextDouble()#double#43#3896#INDEXED#m[j]
+jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#0#620#IDENT#x
+jnt.scimark2.Random#<init>(int)#void#52#1155#ASSIGN#haveRange = false
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#60#385#IDENT#i
+jnt.scimark2.Random#nextDouble()#double#21#3781#IDENT#k
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#69#412#SELECT#System.out.print
+jnt.scimark2.FFT#bitreverse(double[])#void#68#6364#IDENT#data
+jnt.scimark2.kernel#precise_all_FIELD1_TAG1(double[])#double[]#0#1107#IDENT#d
+jnt.scimark2.FFT#transform_internal(double[],int)#void#231#4247#IDENT#w_real
+jnt.scimark2.FFT#transform_internal(double[],int)#void#124#2996#IDENT#j
+jnt.scimark2.FFT#transform_internal(double[],int)#void#293#4709#MINUS#w_real * z1_real - w_imag * z1_imag
+jnt.scimark2.Random#<init>()#void#67#1348#ASSIGN#width = 1.0
+jnt.scimark2.FFT#inverse(double[])#void#36#1224#MUL_ASG#data[i] *= norm
+jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#9#878#IDENT#i
+jnt.scimark2.FFT#transform_internal(double[],int)#void#138#3102#IDENT#wd_real
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#66#408#SELECT#System.out
+jnt.scimark2.FFT#transform_internal(double[],int)#void#120#2894#INDEXED#data[j]
+jnt.scimark2.FFT#transform_internal(double[],int)#void#47#2128#IDENT#direction
+jnt.scimark2.FFT#transform_internal(double[],int)#void#376#1962#IDENT#dual
+jnt.scimark2.FFT#transform_internal(double[],int)#void#244#4384#IDENT#n
+jnt.scimark2.FFT#transform_internal(double[],int)#void#147#3232#INDEXED#data[j + 1]
+jnt.scimark2.Random#<init>(double,double)#void#89#2293#MINUS#right - left
+jnt.scimark2.Random#<init>()#void#0#1753#IDENT#super
+jnt.scimark2.FFT#bitreverse(double[])#void#81#6519#IDENT#data
+jnt.scimark2.Random#<init>(int,double,double)#void#34#712#ASSIGN#m1 = (one << mdig - 2) + ((one << mdig - 2) - one)
+jnt.scimark2.FFT#transform_internal(double[],int)#void#115#2850#VARDEF#int j = 2 * (b + dual)
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#26#215#SELECT#FFT.transform
+jnt.scimark2.Random#initialize(int)#void#13#4893#SELECT#Math.min
+jnt.scimark2.FFT#transform_internal(double[],int)#void#373#1955#IDENT#bit
+jnt.scimark2.FFT#bitreverse(double[])#void#10#5860#VARDEF#int i = 0
+jnt.scimark2.FFT#transform_internal(double[],int)#void#209#3832#IDENT#w_real
+jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#14#891#IDENT#A
+jnt.scimark2.FFT#bitreverse(double[])#void#61#6268#INDEXED#data[jj]
+jnt.scimark2.Random#<init>(int,double,double)#void#56#1191#IDENT#left
+jnt.scimark2.Random#<init>(int,double,double)#void#6#440#ASSIGN#seed = 0
+jnt.scimark2.Random#initialize(int)#void#78#5458#IDENT#k0
+jnt.scimark2.commandline#main(java.lang.String[])#void#45#715#SELECT#kernel.measureFFT
+jnt.scimark2.FFT#transform_internal(double[],int)#void#212#3825#MINUS#w_real - s * w_imag - s2 * w_real
+jnt.scimark2.Random#initialize(int)#void#42#5115#MOD#jseed % m2
+jnt.scimark2.Random#initialize(int)#void#2#4811#ASSIGN#this.seed = seed
+jnt.scimark2.FFT#transform_internal(double[],int)#void#87#2646#MUL#2.0 * t
+jnt.scimark2.commandline#main(java.lang.String[])#void#11#521#SELECT#args.length
+jnt.scimark2.Random#initialize(int)#void#107#5324#IDENT#iloop
+jnt.scimark2.FFT#transform_internal(double[],int)#void#367#3713#PREINC#++a
+jnt.scimark2.Random#<init>(double,double)#void#77#2241#SELECT#this.left
+jnt.scimark2.Random#<init>(int)#void#47#1048#ASSIGN#dm1 = 1.0 / (double)m1
+jnt.scimark2.FFT#bitreverse(double[])#void#7#5850#MINUS#n - 1
+jnt.scimark2.Random#<init>(int)#void#23#562#ASSIGN#mdig = 32
+jnt.scimark2.FFT#log2(int)#int#26#1467#NEWCLASS#new Error("FFT: Data length is not a power of 2!: " + n)
+jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#17#700#IDENT#i
+jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#18#699#INDEXED#x[i]
+jnt.scimark2.FFT#transform_internal(double[],int)#void#57#2166#IDENT#dual
+jnt.scimark2.Random#<init>(double,double)#void#52#1155#ASSIGN#haveRange = false
+jnt.scimark2.Random#initialize(int)#void#6#4861#IDENT#m
+jnt.scimark2.FFT#transform_internal(double[],int)#void#103#2838#IDENT#b
+jnt.scimark2.Random#initialize(int)#void#29#4940#PREDEC#--jseed
+jnt.scimark2.Random#initialize(int)#void#61#5347#IDENT#j0
+jnt.scimark2.FFT#transform_internal(double[],int)#void#152#3244#INDEXED#data[i + 1]
+jnt.scimark2.FFT#log2(int)#int#13#1427#IDENT#log
+jnt.scimark2.Random#<init>(double,double)#void#17#540#ASSIGN#j = 16
+jnt.scimark2.Random#<init>(int,double,double)#void#17#540#ASSIGN#j = 16
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#49#339#SELECT#System.out
+jnt.scimark2.Random#initialize(int)#void#75#5441#PLUS#jseed / m2 + j0 * k1
+jnt.scimark2.commandline#main(java.lang.String[])#void#10#517#IDENT#args
+jnt.scimark2.Random#<init>(int,double,double)#void#44#1048#IDENT#dm1
+jnt.scimark2.Random#<init>()#void#17#540#ASSIGN#j = 16
+jnt.scimark2.FFT#transform_internal(double[],int)#void#146#3234#PLUS#j + 1
+jnt.scimark2.FFT#transform_internal(double[],int)#void#0#1623#IDENT#data
+jnt.scimark2.FFT#transform_internal(double[],int)#void#71#2533#SELECT#Math.sin
+jnt.scimark2.FFT#<init>()#void#1#504#IDENT#super
+jnt.scimark2.FFT#transform_internal(double[],int)#void#326#5262#IDENT#i
+jnt.scimark2.Random#nextDouble()#double#71#4034#PREDEC#--i
+jnt.scimark2.Random#<init>()#void#10#520#IDENT#i
+jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#19#696#ASSIGN#y[i] = x[i]
+jnt.scimark2.Random#<init>(int,double,double)#void#10#520#IDENT#i
+jnt.scimark2.FFT#transform_internal(double[],int)#void#118#2895#IDENT#j
+jnt.scimark2.Random#<init>(int,double,double)#void#71#3138#IDENT#initialize
+jnt.scimark2.FFT#transform_internal(double[],int)#void#62#2114#VARDEF#double theta = 2.0 * direction * Math.PI / (2.0 * (double)dual)
+jnt.scimark2.FFT#transform_internal(double[],int)#void#17#1744#IDENT#log2
+jnt.scimark2.Random#<init>()#void#61#1269#IDENT#right
+jnt.scimark2.FFT#transform_internal(double[],int)#void#64#2476#IDENT#theta
+jnt.scimark2.FFT#log2(int)#int#19#1441#IDENT#n
+jnt.scimark2.Random#initialize(int)#void#69#5436#DIV#jseed / m2
+jnt.scimark2.Random#<init>(double,double)#void#88#2295#IDENT#left
+jnt.scimark2.FFT#bitreverse(double[])#void#64#6356#IDENT#ii
+jnt.scimark2.FFT#transform_internal(double[],int)#void#294#4682#VARDEF#double wd_real = w_real * z1_real - w_imag * z1_imag
+jnt.scimark2.FFT#bitreverse(double[])#void#44#6069#INDEXED#data[ii]
+jnt.scimark2.FFT#transform_internal(double[],int)#void#258#4444#IDENT#b
+jnt.scimark2.FFT#inverse(double[])#void#23#1202#IDENT#i
+jnt.scimark2.FFT#transform_internal(double[],int)#void#303#4926#IDENT#z1_real
+jnt.scimark2.FFT#transform_internal(double[],int)#void#173#3528#IDENT#wd_imag
+jnt.scimark2.commandline#main(java.lang.String[])#void#35#689#SELECT#Integer.parseInt
+jnt.scimark2.Random#<init>(int)#void#1#2584#IDENT#super
+jnt.scimark2.FFT#transform_internal(double[],int)#void#35#1947#LT#bit < logn
+jnt.scimark2.FFT#transform_internal(double[],int)#void#267#4437#VARDEF#int j = 2 * (b + a + dual)
+jnt.scimark2.FFT#transform_internal(double[],int)#void#305#4924#MUL#w_imag * z1_real
+jnt.scimark2.FFT#bitreverse(double[])#void#74#6362#ASSIGN#data[ii + 1] = data[jj + 1]
+jnt.scimark2.Random#initialize(int)#void#8#4865#NEWARRAY#new int[17]
+jnt.scimark2.FFT#transform_internal(double[],int)#void#177#2807#IDENT#b
+jnt.scimark2.FFT#bitreverse(double[])#void#8#5843#VARDEF#int nm1 = n - 1
+jnt.scimark2.FFT#transform_internal(double[],int)#void#309#5088#IDENT#data
+jnt.scimark2.Random#initialize(int)#void#45#5199#IDENT#j1
+jnt.scimark2.Random#<init>(int)#void#32#712#IDENT#m1
+jnt.scimark2.FFT#inverse(double[])#void#7#914#VARDEF#int nd = data.length
+jnt.scimark2.Random#initialize(int)#void#10#4863#ASSIGN#m = new int[17]
+jnt.scimark2.Random#initialize(int)#void#65#5345#ASSIGN#jseed = j0 * k0
+jnt.scimark2.FFT#bitreverse(double[])#void#33#6011#VARDEF#int k = n >> 1
+jnt.scimark2.Random#<init>(double,double)#void#21#562#IDENT#mdig
+jnt.scimark2.FFT#transform_internal(double[],int)#void#180#2816#IDENT#dual
+jnt.scimark2.FFT#bitreverse(double[])#void#5#5849#IDENT#n
+jnt.scimark2.Random#<init>(int,double,double)#void#23#562#ASSIGN#mdig = 32
+jnt.scimark2.FFT#transform_internal(double[],int)#void#280#4589#INDEXED#data[j + 1]
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#31#257#SELECT#FFT.inverse
+jnt.scimark2.FFT#transform_internal(double[],int)#void#331#5269#IDENT#wd_imag
+jnt.scimark2.FFT#bitreverse(double[])#void#36#6035#IDENT#j
+jnt.scimark2.FFT#bitreverse(double[])#void#38#6033#LT#i < j
+jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#20#896#ASSIGN#A[i] = R.nextDouble()
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#20#192#IDENT#cycles
+jnt.scimark2.Random#initialize(int)#void#72#5448#IDENT#k1
+jnt.scimark2.FFT#transform_internal(double[],int)#void#290#4720#IDENT#z1_imag
+jnt.scimark2.FFT#transform_internal(double[],int)#void#160#3382#INDEXED#data[i]
+jnt.scimark2.Random#initialize(int)#void#107#5322#PREINC#++iloop
+jnt.scimark2.FFT#log2(int)#int#5#1416#IDENT#n
+jnt.scimark2.Random#nextDouble()#double#127#4419#IDENT#dm1
+jnt.scimark2.FFT#transform_internal(double[],int)#void#148#3245#IDENT#i
+jnt.scimark2.FFT#transform_internal(double[],int)#void#373#1958#PREINC#++bit
+jnt.scimark2.Random#<init>()#void#1#1753#IDENT#super
+jnt.scimark2.FFT#transform_internal(double[],int)#void#10#1659#VARDEF#int n = data.length / 2
+jnt.scimark2.kernel#accept_all_FIELD1_TAG1(double[])#double[]#0#1035#IDENT#d
+jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#16#692#INDEXED#y[i]
+jnt.scimark2.FFT#transform_internal(double[],int)#void#223#4057#IDENT#s2
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#36#200#IDENT#i
+jnt.scimark2.FFT#transform_internal(double[],int)#void#201#3814#IDENT#s
+jnt.scimark2.FFT#transform_internal(double[],int)#void#260#4448#IDENT#a
+jnt.scimark2.Random#nextDouble()#double#116#4126#IDENT#k
+jnt.scimark2.Random#nextDouble()#double#85#4059#ASSIGN#j = 16
+jnt.scimark2.Random#<init>(int,double,double)#void#80#3179#IDENT#this
+jnt.scimark2.commandline#main(java.lang.String[])#void#6#451#VARDEF#int FFT_size = Constants.TINY_FFT_SIZE
+jnt.scimark2.FFT#transform_internal(double[],int)#void#190#3695#VARDEF#int a = 1
+jnt.scimark2.FFT#bitreverse(double[])#void#12#5872#VARDEF#int j = 0
+jnt.scimark2.Random#<init>()#void#21#562#IDENT#mdig
+jnt.scimark2.FFT#transform_internal(double[],int)#void#338#5407#INDEXED#data[i]
+jnt.scimark2.Random#initialize(int)#void#22#4887#ASSIGN#jseed = Math.min(Math.abs(seed), m1)
+jnt.scimark2.Random#initialize(int)#void#35#4993#IDENT#k0
+jnt.scimark2.Random#<init>(int,double,double)#void#76#3163#SELECT#this.left
+jnt.scimark2.Random#<init>(double,double)#void#78#2247#ASSIGN#this.left = left
+jnt.scimark2.FFT#transform_internal(double[],int)#void#272#4486#INDEXED#data[j]
+jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#11#879#LT#i < N
+jnt.scimark2.Random#initialize(int)#void#105#5846#PLUS#j0 + m2 * j1
+jnt.scimark2.FFT#log2(int)#int#13#1430#PREINC#++log
+jnt.scimark2.Random#initialize(int)#void#35#4996#ASSIGN#k0 = 9069 % m2
+jnt.scimark2.Random#initialize(int)#void#39#5104#IDENT#j0
+jnt.scimark2.Random#nextDouble()#double#18#3601#MINUS#m[i] - m[j]
+jnt.scimark2.FFT#<init>()#void#0#504#IDENT#super
+jnt.scimark2.Random#<init>(int)#void#66#1348#IDENT#width
+jnt.scimark2.Random#<init>(int)#void#21#562#IDENT#mdig
+jnt.scimark2.Random#<init>(int)#void#17#540#ASSIGN#j = 16
+jnt.scimark2.FFT#inverse(double[])#void#38#1209#PREINC#++i
+jnt.scimark2.FFT#transform_internal(double[],int)#void#106#2832#VARDEF#int i = 2 * b
+jnt.scimark2.FFT#bitreverse(double[])#void#75#6455#IDENT#data
+jnt.scimark2.FFT#transform_internal(double[],int)#void#199#3805#IDENT#w_real
+jnt.scimark2.Random#initialize(int)#void#45#5204#IDENT#jseed
+jnt.scimark2.Random#initialize(int)#void#121#5992#ASSIGN#j = 16
+jnt.scimark2.Random#initialize(int)#void#43#5107#ASSIGN#j0 = jseed % m2
+jnt.scimark2.Random#nextDouble()#double#40#3897#IDENT#j
+jnt.scimark2.Random#<init>(int,double,double)#void#28#639#ASSIGN#one = 1
+jnt.scimark2.FFT#bitreverse(double[])#void#67#6358#PLUS#ii + 1
+jnt.scimark2.FFT#bitreverse(double[])#void#112#6688#IDENT#j
+jnt.scimark2.FFT#transform_internal(double[],int)#void#6#1663#IDENT#data
+jnt.scimark2.FFT#inverse(double[])#void#38#1209#PREINC#++i
+jnt.scimark2.Random#<init>()#void#47#1048#ASSIGN#dm1 = 1.0 / (double)m1
+jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#3#857#IDENT#N
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#95#394#IDENT#i
+jnt.scimark2.Random#initialize(int)#void#23#4924#IDENT#jseed
+jnt.scimark2.Random#<init>(int)#void#62#1269#ASSIGN#right = 1.0
+jnt.scimark2.FFT#bitreverse(double[])#void#119#5896#PREINC#++i
+jnt.scimark2.FFT#transform_internal(double[],int)#void#9#1674#DIV#data.length / 2
+jnt.scimark2.FFT#bitreverse(double[])#void#73#6368#INDEXED#data[jj + 1]
+jnt.scimark2.FFT#transform_internal(double[],int)#void#61#2148#DIV#2.0 * direction * Math.PI / (2.0 * (double)dual)
+jnt.scimark2.FFT#transform_internal(double[],int)#void#313#5105#IDENT#i
+jnt.scimark2.FFT#bitreverse(double[])#void#62#6262#ASSIGN#data[ii] = data[jj]
+jnt.scimark2.Random#<init>()#void#27#639#IDENT#one
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#76#420#IDENT#x
+jnt.scimark2.FFT#bitreverse(double[])#void#55#6251#IDENT#data
+jnt.scimark2.Random#<init>(double,double)#void#62#1269#ASSIGN#right = 1.0
+jnt.scimark2.FFT#inverse(double[])#void#0#846#IDENT#data
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#0#130#IDENT#RandomVector
+jnt.scimark2.Random#initialize(int)#void#39#5109#IDENT#jseed
+jnt.scimark2.FFT#bitreverse(double[])#void#58#6264#IDENT#data
+jnt.scimark2.Random#initialize(int)#void#13#4902#SELECT#Math.abs
+jnt.scimark2.FFT#transform_internal(double[],int)#void#27#1924#VARDEF#int bit = 0
+jnt.scimark2.FFT#transform_internal(double[],int)#void#279#4591#PLUS#j + 1
+jnt.scimark2.Random#nextDouble()#double#10#3603#IDENT#m
+jnt.scimark2.kernel#NewVectorCopy(double[])#double[]#14#691#IDENT#y
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#31#266#IDENT#x
+jnt.scimark2.Random#initialize(int)#void#29#4942#IDENT#jseed
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#31#257#SELECT#FFT.inverse
+jnt.scimark2.FFT#bitreverse(double[])#void#63#6351#IDENT#data
+jnt.scimark2.FFT#transform_internal(double[],int)#void#285#4701#IDENT#z1_real
+jnt.scimark2.FFT#transform_internal(double[],int)#void#123#2991#IDENT#data
+jnt.scimark2.Random#<init>(double,double)#void#40#830#ASSIGN#m2 = one << mdig / 2
+jnt.scimark2.Random#initialize(int)#void#93#5832#IDENT#m
+jnt.scimark2.Random#<init>()#void#66#1348#IDENT#width
+jnt.scimark2.Random#<init>(int,double,double)#void#61#1269#IDENT#right
+jnt.scimark2.Random#nextDouble()#double#123#4128#MUL#dm1 * k * width
+jnt.scimark2.FFT#transform(double[])#void#0#653#IDENT#data
+jnt.scimark2.Random#<init>(int,double,double)#void#76#3171#IDENT#left
+jnt.scimark2.FFT#transform_internal(double[],int)#void#155#3250#MINUS#data[i + 1] - wd_imag
+jnt.scimark2.Random#nextDouble()#double#130#4425#IDENT#k
+jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#16#898#IDENT#R
+jnt.scimark2.Random#<init>(int,double,double)#void#51#1155#IDENT#haveRange
+jnt.scimark2.FFT#bitreverse(double[])#void#116#6690#PLUS_ASG#j += k
+jnt.scimark2.Random#<init>(double,double)#void#71#2213#IDENT#initialize
+jnt.scimark2.FFT#transform_internal(double[],int)#void#351#5561#IDENT#wd_imag
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#12#159#VARDEF#long cycles = 100
+jnt.scimark2.Random#<init>(int,double,double)#void#15#540#IDENT#j
+jnt.scimark2.FFT#transform_internal(double[],int)#void#335#5403#IDENT#data
+jnt.scimark2.Random#nextDouble()#double#44#3900#ASSIGN#m[j] = k

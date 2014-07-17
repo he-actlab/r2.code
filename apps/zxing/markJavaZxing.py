@@ -72,9 +72,13 @@ for line in lines:
 			else:
 				temp += ch
 	content = temp
+	if "NEW" in quad or "NEW_ARRAY" in quad:
+		newcontent = content + '\t\/\/ st: ' + quad
+	else:
+		newcontent = content + '\t\/\/ op: ' + quad
 
 	# replace the original line of source code with a comment of quad 
-	newcontent = content + '\t\/\/ approx: ' + quad
+	  
 	os.system('sed \"' + lineNum + 's/' + content + '/' + newcontent + '/\" ' + loc + ' > ' + loc + '.tmp')
 
 	logfile.write(str(cnt) + '\n')

@@ -32,7 +32,6 @@ import joeq.Compiler.Quad.Operator.Putstatic;
 import joeq.Compiler.Quad.Operator.Invoke.InvokeInterface;
 import joeq.Compiler.Quad.Operator.Invoke.InvokeVirtual;
 import joeq.Main.HostedVM;
-
 import chord.project.Messages;
 import chord.project.Config;
 import chord.program.reflect.CastBasedStaticReflect;
@@ -198,7 +197,7 @@ public class RTA implements ScopeBuilder {
             Messages.fatal(MAIN_METHOD_NOT_FOUND, mainClassName);
         
         prepAdditionalEntrypoints(); //called for subclasses
-        
+
         for (int i = 0; repeat; i++) {
             if (Config.verbose >= 1) System.out.println("Iteration: " + i);
             repeat = false;

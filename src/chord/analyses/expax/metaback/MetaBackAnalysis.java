@@ -199,11 +199,13 @@ public class MetaBackAnalysis {
 				}
 				if(vv != null){
 					jq_Method m = Invoke.getMethod(invoke).getMethod();
-					// jspark: put APVariable for accept and precise so that the analysis ignores their return values
+					// jspark: put APVariable for precise so that the analysis ignores their return values
 					if (SharedData.isAcceptMethod(m) ||
 						SharedData.isAcceptAllMethod(m) ||
 						SharedData.isPreciseMethod(m) ||
 						SharedData.isPreciseAllMethod(m))
+//					if (SharedData.isPreciseMethod(m) ||
+//							SharedData.isPreciseAllMethod(m))
 						nc.addLiteral(APVariable.singleton, d);
 					else
 						nc.addLiteral(RVariable.singleton, d);
@@ -667,7 +669,7 @@ public class MetaBackAnalysis {
 		Set<Integer> relG = new HashSet<Integer>();
 		Set<Integer> relO = new HashSet<Integer>();
 		boolean isRetRel = false;
-		boolean isAccept = false; // jspark: for APVariable
+		boolean isAccept = false; // jspark: for PVariable
 		Set<Pair<Integer,Integer>> relHF = new HashSet<Pair<Integer,Integer>>();
 		Set<Pair<Integer,Integer>> relST = new HashSet<Pair<Integer,Integer>>();
 		for (Clause c : dnf.getClauses())
@@ -903,7 +905,7 @@ public class MetaBackAnalysis {
 								Domain d = predicate.getValue(); 
 								if(v instanceof RVariable){
 									nc.addLiteral(new VVariable(retIdx), d);
-								}else if (v instanceof APVariable){ // jspark: adding false to oDNF means ignoring APVariable 
+								}else if (v instanceof APVariable){ // jspark: adding false to oDNF means ignoring PVariable 
 									nc = new Clause(false);
 								}else
 									nc.addLiteral(v, d);

@@ -1,8 +1,8 @@
 package chord.program;
 
 import java.util.List;
+
 import chord.util.IndexSet;
- 
 import joeq.Main.HostedVM;
 import joeq.Class.*;
 

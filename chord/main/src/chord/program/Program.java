@@ -471,8 +471,9 @@ public class Program {
      * @return The quadcode representation of the given class, if it is deemed reachable, and null otherwise.
      */
     public jq_Reference getClass(String name) {
-        if (nameToClassMap == null)
+        if (nameToClassMap == null){
             buildClasses();
+        }
         return nameToClassMap.get(name);
     }
 
@@ -801,8 +802,9 @@ public class Program {
      */
     public void printClass(String className) {
         jq_Reference c = getClass(className);
-        if (c == null)
+        if (c == null){
             Messages.fatal(CLASS_NOT_FOUND, className);
+        }
         printClass(c);
     }
 

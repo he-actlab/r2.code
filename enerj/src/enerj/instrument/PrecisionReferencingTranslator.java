@@ -1,7 +1,9 @@
 package enerj.instrument;
 
 import enerj.PrecisionChecker;
+import enerj.jchord.result.ExpaxJchordResult;
 import enerj.jchord.result.ExpaxJchordResult.ExpaxJchordResultOpEntry;
+import enerj.jchord.result.ExpaxJchordResult.ExpaxJchordResultParamsEntry;
 import enerj.lang.Approx;
 import enerj.lang.Context;
 
@@ -18,6 +20,8 @@ import com.sun.tools.javac.tree.JCTree.JCVariableDecl;
 import com.sun.tools.javac.util.List;
 import com.sun.tools.javac.util.Name;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 import java.util.HashSet;
 import java.util.Stack;
@@ -33,15 +37,14 @@ public class PrecisionReferencingTranslator extends ReferencingTranslator<Precis
 	
 	public static final boolean EXPAX_PRT = true;
 	
-	public Stack<JCTree> globalParent = new Stack<JCTree>();
 	public int arrayAccessFlag = 0;
-	public int fieldAccessFlag = 0;
 	
 	public int count = 0;
 	public String curClassName = " ";
 	public String curMethName = " ";
 	public String curRetTypeName = " ";
-	public Set<Name> approxNameSet;
+	public Map<String,Set<Name>> approxNameSet;
+	public List<JCVariableDecl> nodeParams;
 	
     public PrecisionReferencingTranslator(PrecisionChecker checker,
                                  ProcessingEnvironment env,
@@ -49,9 +52,8 @@ public class PrecisionReferencingTranslator extends ReferencingTranslator<Precis
         super(checker, env, p);
 
         // Use our references (which include an "approx" flag) instead of the
-        // provided reference class. Should change this eventually (FIXME).
+        // provided reference class. Should change this eventually .
         REFERENCE_CLASS = enerj.rt.Reference.class.getName();
-        this.approxNameSet = new HashSet<Name>();
     }
 
     // An *extremely hacky* way to make a few more trees behave approximately
@@ -64,7 +66,7 @@ public class PrecisionReferencingTranslator extends ReferencingTranslator<Precis
         if (treeType.hasAnnotation(Approx.class)) {
         	ret = true;
         } else if (treeType.hasAnnotation(Context.class)) {
-        	ret = true; // TODO! Look up precision from runtime index.
+        	ret = true;
         } else if (approxTrees.contains(tree)) {
         	ret = true;
         } else {
@@ -108,7 +110,10 @@ public class PrecisionReferencingTranslator extends ReferencingTranslator<Precis
     	MethodSymbol meth = node.sym;
         curMethName = node.getName().toString();
         if(!(curMethName.equalsIgnoreCase("<init>") || curMethName.equalsIgnoreCase("<clinit>"))){
-        	curMethName = node.sym.toString();
+        	if (curMethName.equalsIgnoreCase("__htt_staticInitializerMethod")) 
+            	curMethName = "<clinit>()";
+            else
+            	curMethName = node.sym.toString();
         } else {
         	int index = node.sym.toString().indexOf((int)'(');
         	String params = node.sym.toString().substring(index);
@@ -119,9 +124,7 @@ public class PrecisionReferencingTranslator extends ReferencingTranslator<Precis
         	curRetTypeName = meth.getReturnType().toString();
         else
         	curRetTypeName = "void";
-        
-        approxNameSet.clear();
-        
+        nodeParams = node.getParameters();
     	super.visitMethodDef(node);
     }
     
@@ -137,10 +140,16 @@ public class PrecisionReferencingTranslator extends ReferencingTranslator<Precis
     		throw new RuntimeException("Error! expaxBcInfo is null");
     	if(PrecisionChecker.expaxJchordResult == null)
     		throw new RuntimeException("Error! expaxJchordResult is null");
-		
+    	
+    	if(tree instanceof JCTree.JCIdent){
+    		String typeStr = ((JCTree.JCIdent)tree).type.toString();
+    		if(ExpaxJchordResult.approxClasses.contains(typeStr)){
+    			System.out.println("*** EXPAX_PRT: " + typeStr + " is one of approx classes");
+    			return true;
+    		}
+    	}
     	Set<ExpaxASTNodeInfoEntry> bcInfoSet = PrecisionChecker.expaxBcInfo.getInfoSet();
     	Set<ExpaxJchordResultOpEntry> jResultSet = PrecisionChecker.expaxJchordResult.getResultOpSet();
-    	
     	// find a bc info generated in 1st phase compilation
     	for (ExpaxASTNodeInfoEntry info : bcInfoSet) {    		
     		if (info.compareWithTree(tree, curClassName, curMethName, curRetTypeName)) {
@@ -154,7 +163,7 @@ public class PrecisionReferencingTranslator extends ReferencingTranslator<Precis
 	    					count ++;
 	    					System.out.println("*** EXPAX_PRT: expaxIsApprox return true = " + count);
 	    					System.out.println("*** EXPAX_PRT: info = " + info.toString());
-	    					System.out.print("*** EXPAX_PRT: jchord result = " + result.toString());
+	    					System.out.print("*** EXPAX_PRT: jchord result = " + result.toString() + " ");
     					}
     					return true;
     				}
@@ -178,15 +187,38 @@ public class PrecisionReferencingTranslator extends ReferencingTranslator<Precis
         } else {
         	if (EXPAX_PRT)
         		System.out.println("*** EXPAX_PRT: createNewInitializer = " + tree.toString());
-        	if(arrayAccessFlag == 0 && fieldAccessFlag == 0)
-        		approx = expaxIsApprox(tree);
-        	else 
-        		approx = false;
+        	if (nodeParams.contains(tree) && arrayAccessFlag == 0){
+        		int index = nodeParams.indexOf(tree);
+        		Set<ExpaxJchordResultParamsEntry> pResultSet = PrecisionChecker.expaxJchordResult.getResultParamsSet();
+        		boolean find = false;
+        		for (ExpaxJchordResultParamsEntry entry : pResultSet) {
+        			if (entry.compare(curClassName, curMethName, curRetTypeName)) {
+        				find = entry.isApproxParam(index);
+        				break;
+        			}
+        		}
+        		if(find) 
+        			approx = true;
+        		else 
+        			approx = false;
+        	} else if(approxNameSet.containsKey(curMethName) && approxNameSet.get(curMethName).contains(tree.getName()) && arrayAccessFlag == 0) {
+				if(EXPAX_PRT)
+    				System.out.println("*** EXPAX_ST: approxNameSet contains " + tree.toString());
+				approx = true;
+			} else {
+	        	if(arrayAccessFlag == 0)
+	        		approx = expaxIsApprox(tree);
+	        	else 
+	        		approx = false;
+			}
         }
 
-        if(!PrecisionChecker.ENERJ && approx){
-        	if(EXPAX_PRT) System.out.println("*** EXPAX_PRT: add to approxNameSet = " + tree.getName().toString());
-        	approxNameSet.add(tree.getName());
+        if(approx){
+        	if(PrecisionChecker.ENERJ){
+        		if(EXPAX_PRT) System.out.println("*** ENERJ_APPROX(createNewInitializer): approx createNew = " + tree.toString());
+        	} else {
+        		if(EXPAX_PRT) System.out.println("*** EXPAX_APPROX(createNewInitializer): approx createNew = " + tree.toString());
+        	}
         }
         
         JCTree.JCExpression newInit = maker.NewClass(

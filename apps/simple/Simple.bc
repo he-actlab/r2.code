@@ -10,11 +10,9 @@ public class Simple {
     Code:
        0: iconst_1      
        1: istore_1      
-       2: iload_1       
-       3: iload_1       
-       4: imul          
-       5: istore_2      
-       6: return        
+       2: bipush        12
+       4: istore_2      
+       5: return        
 
   public static void alloc_TAG1();
     Code:

@@ -22,3 +22,5 @@
 *.info filter=lfs diff=lfs merge=lfs -text
 /apps/zxing/log filter=lfs diff=lfs merge=lfs -text
 *.expax filter=lfs diff=lfs merge=lfs -text
+/apps/jmeint-enerj/log filter=lfs diff=lfs merge=lfs -text
+/apps/sobel/log filter=lfs diff=lfs merge=lfs -text

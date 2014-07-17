@@ -1,7 +1,7 @@
 #!/bin/sh
 enerjdir=../../enerj
 #classpath=sobel.jar
-classpath=sobel.jar
+classpath=new.jar
 mainclass=Sobel.RgbImage
 
 enerjargs=-noisy

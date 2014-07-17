@@ -72,6 +72,8 @@ public class SharedData {
 	static Map<String,Pair<String,Pair<String,String>>> gFieldMap = new HashMap<String,Pair<String,Pair<String,String>>>();
 	// jspark: map from field index to jq_Field
 	static Map<Pair<Integer,Integer>,Pair<Quad,jq_Field>> idxFieldMap = new HashMap<Pair<Integer,Integer>,Pair<Quad,jq_Field>>();
+	// jspark: approx parameters' set
+	static Map<jq_Method,Set<Integer>> approxParams = new HashMap<jq_Method,Set<Integer>>();
 	
 	// jspark: DEBUG - stores the mapping between a quad and an index corresponding to it
 	static Map<Integer,Quad> indexQuadMap = new HashMap<Integer,Quad>();
@@ -306,10 +308,13 @@ public class SharedData {
 			preciseLstFile = null;
 		else 
 			preciseLstFile = new File(preciseLstFileName);
-		if(!preciseLstFile.exists())
+		if(!preciseLstFile.exists()){
+			System.out.println("*** EXPAX_SHARED_DATA: NO precise.lst");
 			return;
+		}
 		InputStream is;
 		try {
+			System.out.println("*** EXPAX_SHARED_DATA: read precise.lst");
 			is = new FileInputStream(preciseLstFile);
 			reader = new BufferedReader(new InputStreamReader(is));
 			

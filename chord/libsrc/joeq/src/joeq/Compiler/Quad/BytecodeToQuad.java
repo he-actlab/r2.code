@@ -418,21 +418,45 @@ public class BytecodeToQuad extends BytecodeVisitor {
         super.visitDCONST(c);
         current_state.push_D(new DConstOperand(c));
     }
+    /**
+     * @author jspark
+     * @param i
+     * @param type
+     * @param op
+     */
+    private void LOADHelper(int i, jq_Type type, Operand op){
+        if(op instanceof RegisterOperand) {
+        	Operand local_value;
+        	RegisterOperand rop;
+        	if (op instanceof RegisterOperand) {
+                local_value = rop = makeLocal(i, (RegisterOperand)op); 
+            } else {
+                throw new RuntimeException("op should be a register");
+            }
+        	current_state.setLocal(i, local_value);
+        	Quad q = Move.create(quad_cfg.getNewQuadID(), quad_bb, Move.getMoveOp(type), rop, op);
+        	appendQuad(q);
+        }
+    }
     public void visitILOAD(int i) {
         super.visitILOAD(i);
         current_state.push_I(current_state.getLocal_I(i));
+        LOADHelper(i, jq_Primitive.INT, current_state.getLocal_I(i));
     }
     public void visitLLOAD(int i) {
         super.visitLLOAD(i);
         current_state.push_L(current_state.getLocal_L(i));
+        LOADHelper(i, jq_Primitive.LONG, current_state.getLocal_L(i));
     }
     public void visitFLOAD(int i) {
         super.visitFLOAD(i);
         current_state.push_F(current_state.getLocal_F(i));
+        LOADHelper(i, jq_Primitive.FLOAT, current_state.getLocal_F(i));
     }
     public void visitDLOAD(int i) {
         super.visitDLOAD(i);
         current_state.push_D(current_state.getLocal_D(i));
+        LOADHelper(i, jq_Primitive.DOUBLE, current_state.getLocal_D(i));
     }
     public void visitALOAD(int i) {
         super.visitALOAD(i);
@@ -452,12 +476,8 @@ public class BytecodeToQuad extends BytecodeVisitor {
             local_value = op1;
             op0 = makeLocal(i, type);
         }
-        /* jspark */
-//        if (type.getReferenceSize() == 8) current_state.setLocalDual(i, local_value);
-//        else current_state.setLocal(i, local_value);
-        if (type.getReferenceSize() == 8) current_state.setLocalDual(i, op0);
-        else current_state.setLocal(i, op0);
-        /* krapsj */
+        if (type.getReferenceSize() == 8) current_state.setLocalDual(i, local_value);
+        else current_state.setLocal(i, local_value);
         Quad q = Move.create(quad_cfg.getNewQuadID(), quad_bb, Move.getMoveOp(type), op0, op1);
         appendQuad(q);
     }

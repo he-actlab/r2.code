@@ -50,6 +50,7 @@ import enerj.jchord.result.ExpaxJchordResult.ExpaxJchordResultOpEntry;
 import enerj.jchord.result.ExpaxJchordResult.ExpaxJchordResultStorageEntry;
 import enerj.lang.*;
 import enerj.rt.Reference;
+import expax.instrument.GenerateApproxLocalVariableTranslator;
 
 /**
  * The precision type checker.
@@ -202,10 +203,15 @@ public class PrecisionChecker extends InstrumentingChecker {
     			if (getLintOption(PrecisionChecker.MBSTATIC, PrecisionChecker.MBSTATIC_DEFAULT)
     				|| getLintOption(PrecisionChecker.MBDYNAMIC, PrecisionChecker.MBDYNAMIC_DEFAULT)) {
     				if (ENERJ) {
+    					if(EXPAX_PC) System.out.println("*** EXPAX_PC: MethodBindingTranslator start!");
     					tree.accept(new MethodBindingTranslator(this, processingEnv, p, null, null));
+    					if(EXPAX_PC) System.out.println("*** EXPAX_PC: MethodBindingTranslator end!");
     				} else {
-    					if (analysisFlag)
+    					if (analysisFlag){
+    						if(EXPAX_PC) System.out.println("*** EXPAX_PC: MethodBindingTranslator start!");
     						tree.accept(new MethodBindingTranslator(this, processingEnv, p, expaxBcInfo, expaxJchordResult));
+    						if(EXPAX_PC) System.out.println("*** EXPAX_PC: MethodBindingTranslator end!");
+    					}
     				}
     			}
 
@@ -216,18 +222,32 @@ public class PrecisionChecker extends InstrumentingChecker {
     					|| getLintOption(PrecisionChecker.MBDYNAMIC, PrecisionChecker.MBDYNAMIC_DEFAULT)
     					|| getLintOption(PrecisionChecker.SIMULATION, PrecisionChecker.SIMULATION_DEFAULT)) {
     				if (ENERJ) {
+    					if(EXPAX_PC) System.out.println("*** EXPAX_PC: RuntimePrecisionTranslator start!");
     					tree.accept(new RuntimePrecisionTranslator(this, processingEnv, p, true));
+    					if(EXPAX_PC) System.out.println("*** EXPAX_PC: RuntimePrecisionTranslator end!");
     				} else {
-    					if (analysisFlag)
+    					if (analysisFlag){
+    						if(EXPAX_PC) System.out.println("*** EXPAX_PC: RuntimePrecisionTranslator start!");
     						tree.accept(new RuntimePrecisionTranslator(this, processingEnv, p, false));
+    						if(EXPAX_PC) System.out.println("*** EXPAX_PC: RuntimePrecisionTranslator end!");
+    					}
     				}
 
     				if (getLintOption(PrecisionChecker.SIMULATION, PrecisionChecker.SIMULATION_DEFAULT)) {
 						if (ENERJ) {
-							tree.accept(new SimulationTranslator(this, processingEnv, p, null, null));
+							if(EXPAX_PC) System.out.println("*** EXPAX_PC: SimulationTranslator start!");
+							tree.accept(new SimulationTranslator(this, processingEnv, p, null, null, null));
+							if(EXPAX_PC) System.out.println("*** EXPAX_PC: SimulationTranslator end!");
 						} else {
-							if (analysisFlag)
-								tree.accept(new SimulationTranslator(this, processingEnv, p, expaxBcInfo, expaxJchordResult));
+							if (analysisFlag) {
+								if(EXPAX_PC) System.out.println("*** EXPAX_PC: GenerateApproxLocalVariableTranslator start!");
+								GenerateApproxLocalVariableTranslator gTranslator = new GenerateApproxLocalVariableTranslator(this, processingEnv, p);
+								tree.accept(gTranslator);
+								if(EXPAX_PC) System.out.println("*** EXPAX_PC: GenerateApproxLocalVariableTranslator end!");
+								if(EXPAX_PC) System.out.println("*** EXPAX_PC: SimulationTranslator start!");
+								tree.accept(new SimulationTranslator(this, processingEnv, p, expaxBcInfo, expaxJchordResult, gTranslator.approxNameSet));
+								if(EXPAX_PC) System.out.println("*** EXPAX_PC: SimulationTranslator end");
+							}
 						}
     				}
     			}
@@ -417,7 +437,7 @@ public class PrecisionChecker extends InstrumentingChecker {
 
 	// Get the size of a Reference (local variable) at runtime.
 	public static <T> int[] referenceSizes(Reference<T> ref) {
-//		if(EXPAX_PC) System.out.println("*** EXPAX_PC: referenceSizes called");
+//		System.out.println("*** EXPAX_PC: referenceSizes called");
 	    int preciseSize = 0;
 	    int approxSize = 0;
 
@@ -433,7 +453,7 @@ public class PrecisionChecker extends InstrumentingChecker {
     	    else if (ref.value instanceof Boolean) size = 1; // not defined
     	    else assert false;
             
-    	    if (ref.approx)
+    	    if (ref.approx) 
                 approxSize = size;
             else
                 preciseSize = size;
@@ -442,6 +462,7 @@ public class PrecisionChecker extends InstrumentingChecker {
             preciseSize = POINTER_SIZE;
         }
 
+//        System.out.println("*** precise(" + preciseSize + ") approxSize(" + approxSize + ")");
 	    return new int[] {preciseSize, approxSize};
 	}
 
@@ -488,17 +509,17 @@ public class PrecisionChecker extends InstrumentingChecker {
             		if(EXPAX_PC){
             			System.out.println("*** EXPAX_PC: AST node type = " + type.toString());
             			System.out.println("*** EXPAX_PC: AST node field = " + field.toString());
-            			for (Map.Entry<JCTree, ExpaxJchordResultStorageEntry> entry : treeToJchordStorageResult.entrySet()){
-            				JCTree entryTree = entry.getKey();
-            				if(entryTree.toString().equalsIgnoreCase(tree.toString())) {
-            					ExpaxJchordResultStorageEntry jResult = entry.getValue();
-            					if(field.toString().equalsIgnoreCase(jResult.getField())) {
-            						if(EXPAX_PC) System.out.println("*** EXPAX_PC: approximate field = " + field.toString());
-            						approx = true;
-            					}
-            				}
-            			}
             		}
+        			for (Map.Entry<JCTree, ExpaxJchordResultStorageEntry> entry : treeToJchordStorageResult.entrySet()){
+        				JCTree entryTree = entry.getKey();
+        				if(entryTree.toString().equalsIgnoreCase(tree.toString())) {
+        					ExpaxJchordResultStorageEntry jResult = entry.getValue();
+        					if(field.toString().equalsIgnoreCase(jResult.getField())) {
+        						if(EXPAX_PC) System.out.println("*** EXPAX_PC: approximate field = " + field.toString());
+        						approx = true;
+        					}
+        				}
+        			}
             	}
             	if (approx){
             		if(EXPAX_PC)

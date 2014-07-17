@@ -5,7 +5,7 @@ import os, sys
 homedir = os.environ['EXPAX']
 
 if len(sys.argv) != 2:
-	print 'Usage: ./runExpax.py [bench]'
+	print 'Usage: ./printQuadcode.py [bench]'
 	sys.exit(0)
 
 bench = sys.argv[1]
@@ -34,12 +34,13 @@ for app in appList:
 		if classes == '':
 			print 'Error! ' + classesFilePath + ' does not include an entry for ' + bench
 			sys.exit(0)
-		outfileName = bench + "txt"
+		outfileName = bench + ".txt"
 		cmd = "ant -Dchord.work.dir=" + homedir + "/apps/" \
 				+ bench + " -Dchord.ssa.kind=nophi " + \
 				"-Dchord.print.classes=" + \
 				classes + \
-				" -Dchord.verbose=1 -Dchord.out.file=" + \
+				" -Dchord.check.exclude=java.,com.,sun.,sunw.,javax.,launcher.,org. " + \
+				" -Dchord.verbose=0 -Dchord.out.file=" + \
 				outfileName + " run"
 		print cmd
 		os.system(cmd)

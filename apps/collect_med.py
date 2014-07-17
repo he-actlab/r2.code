@@ -46,6 +46,10 @@ BMARKS = {
     'simpleRaytracer': [
         Bmark('Plane', '' , 255, None)
     ],
+		'simpleRaytracer-enerj': [
+        Bmark('Plane', '' , 255, None)
+    ],
+
 		'sobel': [
         Bmark('Sobel', '' , 255, None)
     ]

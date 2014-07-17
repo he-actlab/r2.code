@@ -12,14 +12,18 @@ import com.sun.tools.javac.jvm.expax.ExpaxASTNodeInfo.ExpaxASTNodeInfoEntry;
 
 public class ExpaxJchordResult {
 	
+	public static Set<String> approxClasses = new HashSet<String>();
+	
 	private static final boolean EXPAX_JCHORD = false;
 	private static final String EXPAXSEP = "#";
 	private Set<ExpaxJchordResultOpEntry> resultOpSet;
 	private Set<ExpaxJchordResultStorageEntry> resultStorageSet;
+	private Set<ExpaxJchordResultParamsEntry> resultParamSet;
 	
 	public ExpaxJchordResult (){
 		 resultOpSet = new HashSet<ExpaxJchordResultOpEntry>();
 		 resultStorageSet = new HashSet<ExpaxJchordResultStorageEntry>();
+		 resultParamSet = new HashSet<ExpaxJchordResultParamsEntry>();
 	}
 	
 	public Set<ExpaxJchordResultOpEntry> getResultOpSet(){
@@ -30,12 +34,14 @@ public class ExpaxJchordResult {
 		return resultStorageSet;
 	}
 	
+	public Set<ExpaxJchordResultParamsEntry> getResultParamsSet(){
+		return resultParamSet;
+	}
+	
 	public void read(String resultFilePath){
 		if (resultFilePath == "")
 			throw new RuntimeException("Error! analysis result filename has not been specified!");
-		if (resultOpSet.size() != 0)
-			throw new RuntimeException("Error! When read analysis result information, resultSet should be an empty set. ");
-		if (resultStorageSet.size() != 0)
+		if (resultOpSet.size() != 0 || resultStorageSet.size() != 0 || resultParamSet.size() != 0)
 			throw new RuntimeException("Error! When read analysis result information, resultSet should be an empty set. ");
 		try {
 			File file = new File(resultFilePath);
@@ -78,6 +84,18 @@ public class ExpaxJchordResult {
 				if(EXPAX_JCHORD)
 					System.out.println("*** EXPAX_JCHORD_READER: result (storage) = " + result.toString());
 				resultStorageSet.add(result);
+			}
+			sizeStr = br.readLine();
+			if(EXPAX_JCHORD)
+				System.out.println("*** EXPAX_JCHORD: analysis result size (params)= " + sizeStr);
+			for (int i=0; i<Integer.parseInt(sizeStr); i++){
+				String resultLine = br.readLine();
+				ExpaxJchordResultParamsEntry result = new ExpaxJchordResultParamsEntry();
+				StringTokenizer st = new StringTokenizer(resultLine,EXPAXSEP);
+				result.readInfo(st);
+				if(EXPAX_JCHORD)
+					System.out.println("*** EXPAX_JCHORD_READER: result (params) = " + result.toString());
+				resultParamSet.add(result);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -234,7 +252,10 @@ public class ExpaxJchordResult {
 			this.fieldName = st.nextToken();
 			this.desc = st.nextToken();
 			this.declClass = st.nextToken();
-			
+			if(!ExpaxJchordResult.approxClasses.contains(declClass) && !declClass.equalsIgnoreCase("ARRAY")) {
+				ExpaxJchordResult.approxClasses.add(declClass);
+				if(EXPAX_JCHORD) System.out.println("*** EXPAX_JCHORD: " + declClass + " is added to approxClass");
+			}
 		}
 		
 		public String getField(){
@@ -247,6 +268,63 @@ public class ExpaxJchordResult {
 		
 		public String getDeclClass(){
 			return declClass;
+		}
+		
+	}
+	
+	public class ExpaxJchordResultParamsEntry{
+		private String className;
+		private String methName;
+		private String retType;
+		private boolean[] bitVector;
+		private String bitVecStr;
+		
+		public ExpaxJchordResultParamsEntry() {}
+		
+		public void readInfo(StringTokenizer st) {
+			try {
+				this.className = st.nextToken(); 
+				this.methName = st.nextToken();
+				this.retType = st.nextToken();
+				bitVecStr = st.nextToken();
+				generateBitVector();
+			} catch (NoSuchElementException e) {
+				System.out.println("Error! NoSuchElementException!");
+				e.printStackTrace();
+			}
+		}
+		
+		private void generateBitVector(){
+			char[] charArr = bitVecStr.toCharArray();
+			bitVector = new boolean[charArr.length];
+			for (int i=0; i<charArr.length; i++) {
+				if (charArr[i] == '1'){
+					bitVector[i] = true;
+					if(EXPAX_JCHORD) System.out.println("*** EXPAX_JCHORD: (" + i + ") true");
+				} else {
+					bitVector[i] = false;
+					if(EXPAX_JCHORD) System.out.println("*** EXPAX_JCHORD: (" + i + ") false");
+				}
+			}
+		}
+		
+		public String toString(){
+			return className + " " + methName + " " + retType + " " + bitVecStr;
+ 		}
+		
+		public boolean compare(String className, String methName, String retType) {
+			if (this.className.equalsIgnoreCase(className)) {
+				if(this.methName.equalsIgnoreCase(methName)) {
+					if(this.retType.equalsIgnoreCase(retType)) {
+						return true;
+					}
+				}
+			}
+			return false;
+		}
+		
+		public boolean isApproxParam(int index) {
+			return bitVector[index];
 		}
 		
 	}

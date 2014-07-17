@@ -576,9 +576,6 @@ public abstract class jq_Method extends jq_Member {
 		} else {
 			try {
 				cfg = CodeCache.getCode(this);
-				//jspark
-//				ssaKind = SSAKind.NONE;
-				//krapsj
 				switch (ssaKind) {
 				case NONE:
 					break;
@@ -587,17 +584,6 @@ public abstract class jq_Method extends jq_Member {
 					break;
 				case NO_PHI:
 					(new EnterSSA()).visitCFG(cfg);
-					/*
-					System.out.println("Print quads");
-					for (BasicBlock bb : cfg.reversePostOrder()) {
-						int n = bb.size();
-						for (int j = 0; j < n; j++) {
-							Quad q = bb.getQuad(j);
-							String qStr = q.toString();
-							System.out.println(qStr);
-						}
-					}
-					*/
 					removePhis();
 					break;
 				case NO_MOVE:

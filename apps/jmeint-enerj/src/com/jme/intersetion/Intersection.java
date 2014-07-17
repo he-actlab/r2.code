@@ -34,8 +34,6 @@ package com.jme.intersection;
 
 import java.nio.IntBuffer;
 
-import com.jme.math.FastMath;
-import com.jme.math.TransformMatrix;
 import com.jme.math.Vector2f;
 import com.jme.math.Vector3f;
 

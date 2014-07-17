@@ -179,7 +179,6 @@ public class EnterSSA implements ControlFlowGraphVisitor {
             System.out.println("Before renaming...");
         if (DEBUG)
             System.out.println(ir.fullDump());
-        System.out.println(ir.fullDump());
         if (DEBUG)
             System.out.println("Renaming...");
         renameSymbolicRegisters();

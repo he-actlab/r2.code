@@ -28,7 +28,6 @@ import joeq.Compiler.Quad.Operator.Invoke.InvokeInterface;
 import joeq.Compiler.Quad.Operator.Invoke.InvokeStatic;
 import joeq.Compiler.Quad.Operator.Invoke.InvokeVirtual;
 import joeq.Main.HostedVM;
-
 import chord.project.Config;
 import chord.project.Messages;
 import chord.util.IndexSet;

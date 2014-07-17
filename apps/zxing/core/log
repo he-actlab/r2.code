@@ -1,359 +1,358 @@
-Buildfile: /Users/jspark/projects/expax/apps/zxing/core/build.xml
+Buildfile: /Users/jspark/projects/expax.code/apps/zxing/core/build.xml
 
 clean:
-   [delete] Deleting directory /Users/jspark/projects/expax/apps/zxing/core/build
-   [delete] Deleting: /Users/jspark/projects/expax/apps/zxing/core/core.jar
+   [delete] Deleting directory /Users/jspark/projects/expax.code/apps/zxing/core/build
 
 build:
 
 init:
 
 compile:
-    [mkdir] Created dir: /Users/jspark/projects/expax/apps/zxing/core/build
-   [enerjc] /Users/jspark/projects/expax/apps/zxing/core/build.xml:64: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
-   [enerjc] Compiling 170 source files to /Users/jspark/projects/expax/apps/zxing/core/build
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/BarcodeFormat.java]]
-   [enerjc] [parsing completed 19ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/Binarizer.java]]
-   [enerjc] [parsing completed 9ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/BinaryBitmap.java]]
-   [enerjc] [parsing completed 10ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/ChecksumException.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/DecodeHintType.java]]
-   [enerjc] [parsing completed 4ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/EncodeHintType.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/FormatException.java]]
-   [enerjc] [parsing completed 2ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/LuminanceSource.java]]
-   [enerjc] [parsing completed 6ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/MultiFormatReader.java]]
-   [enerjc] [parsing completed 7ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/MultiFormatWriter.java]]
-   [enerjc] [parsing completed 2ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/NotFoundException.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/Reader.java]]
-   [enerjc] [parsing completed 2ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/ReaderException.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/Result.java]]
-   [enerjc] [parsing completed 5ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/ResultMetadataType.java]]
-   [enerjc] [parsing completed 3ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/ResultPoint.java]]
-   [enerjc] [parsing completed 6ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/ResultPointCallback.java]]
-   [enerjc] [parsing completed 0ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/Writer.java]]
-   [enerjc] [parsing completed 2ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/WriterException.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/client/result/AbstractDoCoMoResultParser.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/client/result/AddressBookAUResultParser.java]]
-   [enerjc] [parsing completed 5ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/client/result/AddressBookDoCoMoResultParser.java]]
-   [enerjc] [parsing completed 3ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/client/result/AddressBookParsedResult.java]]
-   [enerjc] [parsing completed 4ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/client/result/BizcardResultParser.java]]
-   [enerjc] [parsing completed 5ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/client/result/BookmarkDoCoMoResultParser.java]]
-   [enerjc] [parsing completed 2ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/client/result/CalendarParsedResult.java]]
-   [enerjc] [parsing completed 5ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/client/result/EmailAddressParsedResult.java]]
-   [enerjc] [parsing completed 2ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/client/result/EmailAddressResultParser.java]]
-   [enerjc] [parsing completed 3ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/client/result/EmailDoCoMoResultParser.java]]
-   [enerjc] [parsing completed 4ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/client/result/ExpandedProductParsedResult.java]]
-   [enerjc] [parsing completed 6ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/client/result/ExpandedProductResultParser.java]]
-   [enerjc] [parsing completed 6ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/client/result/GeoParsedResult.java]]
-   [enerjc] [parsing completed 2ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/client/result/GeoResultParser.java]]
-   [enerjc] [parsing completed 2ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/client/result/ISBNParsedResult.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/client/result/ISBNResultParser.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/client/result/ParsedResult.java]]
-   [enerjc] [parsing completed 2ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/client/result/ParsedResultType.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/client/result/ProductParsedResult.java]]
-   [enerjc] [parsing completed 0ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/client/result/ProductResultParser.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/client/result/ResultParser.java]]
-   [enerjc] [parsing completed 10ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/client/result/SMSMMSResultParser.java]]
-   [enerjc] [parsing completed 2ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/client/result/SMSParsedResult.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/client/result/SMSTOMMSTOResultParser.java]]
-   [enerjc] [parsing completed 2ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/client/result/TelParsedResult.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/client/result/TelResultParser.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/client/result/TextParsedResult.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/client/result/URIParsedResult.java]]
-   [enerjc] [parsing completed 2ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/client/result/URIResultParser.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/client/result/URLTOResultParser.java]]
-   [enerjc] [parsing completed 0ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/client/result/VCardResultParser.java]]
-   [enerjc] [parsing completed 6ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/client/result/VEventResultParser.java]]
-   [enerjc] [parsing completed 0ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/client/result/WifiParsedResult.java]]
-   [enerjc] [parsing completed 0ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/client/result/WifiResultParser.java]]
-   [enerjc] [parsing completed 0ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/client/result/optional/AbstractNDEFResultParser.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/client/result/optional/NDEFRecord.java]]
-   [enerjc] [parsing completed 2ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/client/result/optional/NDEFSmartPosterParsedResult.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/client/result/optional/NDEFSmartPosterResultParser.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/client/result/optional/NDEFTextResultParser.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/client/result/optional/NDEFURIResultParser.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/common/BitArray.java]]
-   [enerjc] [parsing completed 5ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/common/BitMatrix.java]]
-   [enerjc] [parsing completed 4ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/common/BitSource.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/common/CharacterSetECI.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/common/Collections.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/common/Comparator.java]]
-   [enerjc] [parsing completed 0ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/common/DecoderResult.java]]
-   [enerjc] [parsing completed 0ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/common/DefaultGridSampler.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/common/DetectorResult.java]]
-   [enerjc] [parsing completed 0ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/common/ECI.java]]
-   [enerjc] [parsing completed 0ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/common/GlobalHistogramBinarizer.java]]
-   [enerjc] [parsing completed 2ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/common/GridSampler.java]]
-   [enerjc] [parsing completed 2ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/common/HybridBinarizer.java]]
-   [enerjc] [parsing completed 3ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/common/PerspectiveTransform.java]]
-   [enerjc] [parsing completed 3ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/common/StringUtils.java]]
-   [enerjc] [parsing completed 2ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/common/detector/MonochromeRectangleDetector.java]]
-   [enerjc] [parsing completed 3ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/common/reedsolomon/GF256.java]]
-   [enerjc] [parsing completed 2ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/common/reedsolomon/GF256Poly.java]]
-   [enerjc] [parsing completed 3ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/common/reedsolomon/ReedSolomonDecoder.java]]
-   [enerjc] [parsing completed 3ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/common/reedsolomon/ReedSolomonEncoder.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/common/reedsolomon/ReedSolomonException.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/datamatrix/DataMatrixReader.java]]
-   [enerjc] [parsing completed 2ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/datamatrix/decoder/BitMatrixParser.java]]
+    [mkdir] Created dir: /Users/jspark/projects/expax.code/apps/zxing/core/build
+   [enerjc] /Users/jspark/projects/expax.code/apps/zxing/core/build.xml:71: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+   [enerjc] Compiling 170 source files to /Users/jspark/projects/expax.code/apps/zxing/core/build
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/BarcodeFormat.java]]
+   [enerjc] [parsing completed 20ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/Binarizer.java]]
    [enerjc] [parsing completed 8ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/datamatrix/decoder/DataBlock.java]]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/BinaryBitmap.java]]
+   [enerjc] [parsing completed 6ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/ChecksumException.java]]
    [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/datamatrix/decoder/DecodedBitStreamParser.java]]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/DecodeHintType.java]]
+   [enerjc] [parsing completed 5ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/EncodeHintType.java]]
+   [enerjc] [parsing completed 2ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/FormatException.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/LuminanceSource.java]]
+   [enerjc] [parsing completed 6ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/MultiFormatReader.java]]
+   [enerjc] [parsing completed 9ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/MultiFormatWriter.java]]
+   [enerjc] [parsing completed 3ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/NotFoundException.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/Reader.java]]
+   [enerjc] [parsing completed 2ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/ReaderException.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/Result.java]]
+   [enerjc] [parsing completed 5ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/ResultMetadataType.java]]
+   [enerjc] [parsing completed 6ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/ResultPoint.java]]
+   [enerjc] [parsing completed 9ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/ResultPointCallback.java]]
+   [enerjc] [parsing completed 3ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/Writer.java]]
+   [enerjc] [parsing completed 2ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/WriterException.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/client/result/AbstractDoCoMoResultParser.java]]
+   [enerjc] [parsing completed 2ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/client/result/AddressBookAUResultParser.java]]
+   [enerjc] [parsing completed 6ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/client/result/AddressBookDoCoMoResultParser.java]]
+   [enerjc] [parsing completed 5ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/client/result/AddressBookParsedResult.java]]
+   [enerjc] [parsing completed 5ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/client/result/BizcardResultParser.java]]
+   [enerjc] [parsing completed 4ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/client/result/BookmarkDoCoMoResultParser.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/client/result/CalendarParsedResult.java]]
+   [enerjc] [parsing completed 6ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/client/result/EmailAddressParsedResult.java]]
+   [enerjc] [parsing completed 4ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/client/result/EmailAddressResultParser.java]]
+   [enerjc] [parsing completed 4ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/client/result/EmailDoCoMoResultParser.java]]
+   [enerjc] [parsing completed 8ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/client/result/ExpandedProductParsedResult.java]]
+   [enerjc] [parsing completed 17ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/client/result/ExpandedProductResultParser.java]]
+   [enerjc] [parsing completed 10ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/client/result/GeoParsedResult.java]]
+   [enerjc] [parsing completed 3ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/client/result/GeoResultParser.java]]
+   [enerjc] [parsing completed 3ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/client/result/ISBNParsedResult.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/client/result/ISBNResultParser.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/client/result/ParsedResult.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/client/result/ParsedResultType.java]]
+   [enerjc] [parsing completed 2ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/client/result/ProductParsedResult.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/client/result/ProductResultParser.java]]
+   [enerjc] [parsing completed 2ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/client/result/ResultParser.java]]
+   [enerjc] [parsing completed 33ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/client/result/SMSMMSResultParser.java]]
+   [enerjc] [parsing completed 4ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/client/result/SMSParsedResult.java]]
+   [enerjc] [parsing completed 2ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/client/result/SMSTOMMSTOResultParser.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/client/result/TelParsedResult.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/client/result/TelResultParser.java]]
+   [enerjc] [parsing completed 0ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/client/result/TextParsedResult.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/client/result/URIParsedResult.java]]
+   [enerjc] [parsing completed 2ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/client/result/URIResultParser.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/client/result/URLTOResultParser.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/client/result/VCardResultParser.java]]
    [enerjc] [parsing completed 7ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/datamatrix/decoder/Decoder.java]]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/client/result/VEventResultParser.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/client/result/WifiParsedResult.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/client/result/WifiResultParser.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/client/result/optional/AbstractNDEFResultParser.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/client/result/optional/NDEFRecord.java]]
+   [enerjc] [parsing completed 2ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/client/result/optional/NDEFSmartPosterParsedResult.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/client/result/optional/NDEFSmartPosterResultParser.java]]
+   [enerjc] [parsing completed 2ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/client/result/optional/NDEFTextResultParser.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/client/result/optional/NDEFURIResultParser.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/common/BitArray.java]]
+   [enerjc] [parsing completed 5ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/common/BitMatrix.java]]
+   [enerjc] [parsing completed 4ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/common/BitSource.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/common/CharacterSetECI.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/common/Collections.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/common/Comparator.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/common/DecoderResult.java]]
+   [enerjc] [parsing completed 0ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/common/DefaultGridSampler.java]]
+   [enerjc] [parsing completed 2ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/common/DetectorResult.java]]
+   [enerjc] [parsing completed 0ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/common/ECI.java]]
+   [enerjc] [parsing completed 0ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/common/GlobalHistogramBinarizer.java]]
+   [enerjc] [parsing completed 3ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/common/GridSampler.java]]
+   [enerjc] [parsing completed 2ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/common/HybridBinarizer.java]]
+   [enerjc] [parsing completed 2ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/common/PerspectiveTransform.java]]
+   [enerjc] [parsing completed 2ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/common/StringUtils.java]]
+   [enerjc] [parsing completed 2ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/common/detector/MonochromeRectangleDetector.java]]
+   [enerjc] [parsing completed 3ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/common/reedsolomon/GF256.java]]
+   [enerjc] [parsing completed 2ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/common/reedsolomon/GF256Poly.java]]
+   [enerjc] [parsing completed 3ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/common/reedsolomon/ReedSolomonDecoder.java]]
+   [enerjc] [parsing completed 2ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/common/reedsolomon/ReedSolomonEncoder.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/common/reedsolomon/ReedSolomonException.java]]
+   [enerjc] [parsing completed 0ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/datamatrix/DataMatrixReader.java]]
+   [enerjc] [parsing completed 2ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/datamatrix/decoder/BitMatrixParser.java]]
+   [enerjc] [parsing completed 7ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/datamatrix/decoder/DataBlock.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/datamatrix/decoder/DecodedBitStreamParser.java]]
+   [enerjc] [parsing completed 7ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/datamatrix/decoder/Decoder.java]]
    [enerjc] [parsing completed 67ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/datamatrix/decoder/Version.java]]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/datamatrix/decoder/Version.java]]
    [enerjc] [parsing completed 4ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/datamatrix/detector/Detector.java]]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/datamatrix/detector/Detector.java]]
    [enerjc] [parsing completed 4ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/multi/ByQuadrantReader.java]]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/multi/ByQuadrantReader.java]]
    [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/multi/GenericMultipleBarcodeReader.java]]
-   [enerjc] [parsing completed 2ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/multi/MultipleBarcodeReader.java]]
-   [enerjc] [parsing completed 0ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/multi/qrcode/QRCodeMultiReader.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/multi/qrcode/detector/MultiDetector.java]]
-   [enerjc] [parsing completed 0ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/multi/qrcode/detector/MultiFinderPatternFinder.java]]
-   [enerjc] [parsing completed 4ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/CodaBarReader.java]]
-   [enerjc] [parsing completed 4ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/Code128Reader.java]]
-   [enerjc] [parsing completed 9ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/Code128Writer.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/Code39Reader.java]]
-   [enerjc] [parsing completed 5ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/Code39Writer.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/Code93Reader.java]]
-   [enerjc] [parsing completed 4ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/EAN13Reader.java]]
-   [enerjc] [parsing completed 2ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/EAN13Writer.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/EAN8Reader.java]]
-   [enerjc] [parsing completed 0ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/EAN8Writer.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/EANManufacturerOrgSupport.java]]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/multi/GenericMultipleBarcodeReader.java]]
    [enerjc] [parsing completed 3ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/ITFReader.java]]
-   [enerjc] [parsing completed 3ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/ITFWriter.java]]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/multi/MultipleBarcodeReader.java]]
    [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/MultiFormatOneDReader.java]]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/multi/qrcode/QRCodeMultiReader.java]]
    [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/MultiFormatUPCEANReader.java]]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/multi/qrcode/detector/MultiDetector.java]]
    [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/OneDReader.java]]
-   [enerjc] [parsing completed 3ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/UPCAReader.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/UPCEANExtensionSupport.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/UPCEANReader.java]]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/multi/qrcode/detector/MultiFinderPatternFinder.java]]
    [enerjc] [parsing completed 4ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/UPCEANWriter.java]]
-   [enerjc] [parsing completed 2ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/UPCEReader.java]]
-   [enerjc] [parsing completed 2ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/rss/AbstractRSSReader.java]]
-   [enerjc] [parsing completed 2ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/rss/DataCharacter.java]]
-   [enerjc] [parsing completed 0ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/rss/FinderPattern.java]]
-   [enerjc] [parsing completed 0ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/rss/Pair.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/rss/RSS14Reader.java]]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/CodaBarReader.java]]
+   [enerjc] [parsing completed 3ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/Code128Reader.java]]
    [enerjc] [parsing completed 8ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/rss/RSSUtils.java]]
-   [enerjc] [parsing completed 2ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/BitArrayBuilder.java]]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/Code128Writer.java]]
    [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/ExpandedPair.java]]
-   [enerjc] [parsing completed 0ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/RSSExpandedReader.java]]
-   [enerjc] [parsing completed 0ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/decoders/AI013103decoder.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/decoders/AI01320xDecoder.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/decoders/AI01392xDecoder.java]]
-   [enerjc] [parsing completed 0ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/decoders/AI01393xDecoder.java]]
-   [enerjc] [parsing completed 0ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/decoders/AI013x0x1xDecoder.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/decoders/AI013x0xDecoder.java]]
-   [enerjc] [parsing completed 0ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/decoders/AI01AndOtherAIs.java]]
-   [enerjc] [parsing completed 0ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/decoders/AI01decoder.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/decoders/AI01weightDecoder.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/decoders/AbstractExpandedDecoder.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/decoders/AnyAIDecoder.java]]
-   [enerjc] [parsing completed 0ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/decoders/BlockParsedResult.java]]
-   [enerjc] [parsing completed 0ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/decoders/CurrentParsingState.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/decoders/DecodedChar.java]]
-   [enerjc] [parsing completed 0ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/decoders/DecodedInformation.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/decoders/DecodedNumeric.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/decoders/DecodedObject.java]]
-   [enerjc] [parsing completed 0ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/decoders/FieldParser.java]]
-   [enerjc] [parsing completed 2ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/decoders/GeneralAppIdDecoder.java]]
-   [enerjc] [parsing completed 3ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/pdf417/PDF417Reader.java]]
-   [enerjc] [parsing completed 0ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/pdf417/decoder/BitMatrixParser.java]]
-   [enerjc] [parsing completed 37ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/pdf417/decoder/DecodedBitStreamParser.java]]
-   [enerjc] [parsing completed 5ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/pdf417/decoder/Decoder.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/pdf417/detector/Detector.java]]
-   [enerjc] [parsing completed 5ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/qrcode/QRCodeReader.java]]
-   [enerjc] [parsing completed 2ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/qrcode/QRCodeWriter.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/qrcode/decoder/BitMatrixParser.java]]
-   [enerjc] [parsing completed 2ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/qrcode/decoder/DataBlock.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/qrcode/decoder/DataMask.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/qrcode/decoder/DecodedBitStreamParser.java]]
-   [enerjc] [parsing completed 7ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/qrcode/decoder/Decoder.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/qrcode/decoder/ErrorCorrectionLevel.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/qrcode/decoder/FormatInformation.java]]
-   [enerjc] [parsing completed 2ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/qrcode/decoder/Mode.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/qrcode/decoder/Version.java]]
-   [enerjc] [parsing completed 5ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/qrcode/detector/AlignmentPattern.java]]
-   [enerjc] [parsing completed 0ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/qrcode/detector/AlignmentPatternFinder.java]]
-   [enerjc] [parsing completed 2ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/qrcode/detector/Detector.java]]
-   [enerjc] [parsing completed 3ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/qrcode/detector/FinderPattern.java]]
-   [enerjc] [parsing completed 0ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/qrcode/detector/FinderPatternFinder.java]]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/Code39Reader.java]]
    [enerjc] [parsing completed 4ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/qrcode/detector/FinderPatternInfo.java]]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/Code39Writer.java]]
    [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/qrcode/encoder/BlockPair.java]]
-   [enerjc] [parsing completed 0ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/qrcode/encoder/ByteMatrix.java]]
-   [enerjc] [parsing completed 1ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/qrcode/encoder/Encoder.java]]
-   [enerjc] [parsing completed 4ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/qrcode/encoder/MaskUtil.java]]
-   [enerjc] [parsing completed 2ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/qrcode/encoder/MatrixUtil.java]]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/Code93Reader.java]]
    [enerjc] [parsing completed 5ms]
-   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/src/com/google/zxing/qrcode/encoder/QRCode.java]]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/EAN13Reader.java]]
+   [enerjc] [parsing completed 2ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/EAN13Writer.java]]
+   [enerjc] [parsing completed 2ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/EAN8Reader.java]]
+   [enerjc] [parsing completed 2ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/EAN8Writer.java]]
    [enerjc] [parsing completed 1ms]
-   [enerjc] [search path for source files: /Users/jspark/projects/expax/apps/zxing/core/src]
-   [enerjc] [search path for class files: /Users/jspark/projects/expax/checker-framework/checkers/binary/jsr308-all.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/resources.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/rt.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/sunrsasign.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/jsse.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/jce.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/charsets.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/jfr.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/JObjC.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/classes,../../../checker-runtime/build/cfrt.jar,../../../enerj/build/enerj.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/dnsns.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/localedata.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/sunec.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/zipfs.jar,/System/Library/Java/Extensions/MRJToolkit.jar,/System/Library/Java/Extensions/QTJava.zip,/Users/jspark/projects/expax/apps/zxing/core/build,/Users/jspark/projects/expax/ant/lib/ant-launcher.jar,/Users/jspark/projects/expax/ant/lib/ant-antlr.jar,/Users/jspark/projects/expax/ant/lib/ant-apache-bcel.jar,/Users/jspark/projects/expax/ant/lib/ant-apache-bsf.jar,/Users/jspark/projects/expax/ant/lib/ant-apache-log4j.jar,/Users/jspark/projects/expax/ant/lib/ant-apache-oro.jar,/Users/jspark/projects/expax/ant/lib/ant-apache-regexp.jar,/Users/jspark/projects/expax/ant/lib/ant-apache-resolver.jar,/Users/jspark/projects/expax/ant/lib/ant-apache-xalan2.jar,/Users/jspark/projects/expax/ant/lib/ant-commons-logging.jar,/Users/jspark/projects/expax/ant/lib/ant-commons-net.jar,/Users/jspark/projects/expax/ant/lib/ant-jai.jar,/Users/jspark/projects/expax/ant/lib/ant-javamail.jar,/Users/jspark/projects/expax/ant/lib/ant-jdepend.jar,/Users/jspark/projects/expax/ant/lib/ant-jmf.jar,/Users/jspark/projects/expax/ant/lib/ant-jsch.jar,/Users/jspark/projects/expax/ant/lib/ant-junit.jar,/Users/jspark/projects/expax/ant/lib/ant-junit4.jar,/Users/jspark/projects/expax/ant/lib/ant-netrexx.jar,/Users/jspark/projects/expax/ant/lib/ant-swing.jar,/Users/jspark/projects/expax/ant/lib/ant-testutil.jar,/Users/jspark/projects/expax/ant/lib/ant.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/tools.jar]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/EANManufacturerOrgSupport.java]]
+   [enerjc] [parsing completed 3ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/ITFReader.java]]
+   [enerjc] [parsing completed 5ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/ITFWriter.java]]
+   [enerjc] [parsing completed 2ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/MultiFormatOneDReader.java]]
+   [enerjc] [parsing completed 2ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/MultiFormatUPCEANReader.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/OneDReader.java]]
+   [enerjc] [parsing completed 5ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/UPCAReader.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/UPCEANExtensionSupport.java]]
+   [enerjc] [parsing completed 3ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/UPCEANReader.java]]
+   [enerjc] [parsing completed 6ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/UPCEANWriter.java]]
+   [enerjc] [parsing completed 2ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/UPCEReader.java]]
+   [enerjc] [parsing completed 2ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/rss/AbstractRSSReader.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/rss/DataCharacter.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/rss/FinderPattern.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/rss/Pair.java]]
+   [enerjc] [parsing completed 3ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/rss/RSS14Reader.java]]
+   [enerjc] [parsing completed 4ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/rss/RSSUtils.java]]
+   [enerjc] [parsing completed 3ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/BitArrayBuilder.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/ExpandedPair.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/RSSExpandedReader.java]]
+   [enerjc] [parsing completed 0ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/decoders/AI013103decoder.java]]
+   [enerjc] [parsing completed 0ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/decoders/AI01320xDecoder.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/decoders/AI01392xDecoder.java]]
+   [enerjc] [parsing completed 0ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/decoders/AI01393xDecoder.java]]
+   [enerjc] [parsing completed 0ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/decoders/AI013x0x1xDecoder.java]]
+   [enerjc] [parsing completed 0ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/decoders/AI013x0xDecoder.java]]
+   [enerjc] [parsing completed 0ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/decoders/AI01AndOtherAIs.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/decoders/AI01decoder.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/decoders/AI01weightDecoder.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/decoders/AbstractExpandedDecoder.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/decoders/AnyAIDecoder.java]]
+   [enerjc] [parsing completed 0ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/decoders/BlockParsedResult.java]]
+   [enerjc] [parsing completed 0ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/decoders/CurrentParsingState.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/decoders/DecodedChar.java]]
+   [enerjc] [parsing completed 0ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/decoders/DecodedInformation.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/decoders/DecodedNumeric.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/decoders/DecodedObject.java]]
+   [enerjc] [parsing completed 0ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/decoders/FieldParser.java]]
+   [enerjc] [parsing completed 3ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/oned/rss/expanded/decoders/GeneralAppIdDecoder.java]]
+   [enerjc] [parsing completed 3ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/pdf417/PDF417Reader.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/pdf417/decoder/BitMatrixParser.java]]
+   [enerjc] [parsing completed 34ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/pdf417/decoder/DecodedBitStreamParser.java]]
+   [enerjc] [parsing completed 5ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/pdf417/decoder/Decoder.java]]
+   [enerjc] [parsing completed 2ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/pdf417/detector/Detector.java]]
+   [enerjc] [parsing completed 5ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/qrcode/QRCodeReader.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/qrcode/QRCodeWriter.java]]
+   [enerjc] [parsing completed 2ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/qrcode/decoder/BitMatrixParser.java]]
+   [enerjc] [parsing completed 3ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/qrcode/decoder/DataBlock.java]]
+   [enerjc] [parsing completed 2ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/qrcode/decoder/DataMask.java]]
+   [enerjc] [parsing completed 2ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/qrcode/decoder/DecodedBitStreamParser.java]]
+   [enerjc] [parsing completed 3ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/qrcode/decoder/Decoder.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/qrcode/decoder/ErrorCorrectionLevel.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/qrcode/decoder/FormatInformation.java]]
+   [enerjc] [parsing completed 2ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/qrcode/decoder/Mode.java]]
+   [enerjc] [parsing completed 2ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/qrcode/decoder/Version.java]]
+   [enerjc] [parsing completed 93ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/qrcode/detector/AlignmentPattern.java]]
+   [enerjc] [parsing completed 0ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/qrcode/detector/AlignmentPatternFinder.java]]
+   [enerjc] [parsing completed 3ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/qrcode/detector/Detector.java]]
+   [enerjc] [parsing completed 2ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/qrcode/detector/FinderPattern.java]]
+   [enerjc] [parsing completed 0ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/qrcode/detector/FinderPatternFinder.java]]
+   [enerjc] [parsing completed 3ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/qrcode/detector/FinderPatternInfo.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/qrcode/encoder/BlockPair.java]]
+   [enerjc] [parsing completed 0ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/qrcode/encoder/ByteMatrix.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/qrcode/encoder/Encoder.java]]
+   [enerjc] [parsing completed 5ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/qrcode/encoder/MaskUtil.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/qrcode/encoder/MatrixUtil.java]]
+   [enerjc] [parsing completed 3ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/zxing/core/src/com/google/zxing/qrcode/encoder/QRCode.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [search path for source files: /Users/jspark/projects/expax.code/apps/zxing/core/src]
+   [enerjc] [search path for class files: /Users/jspark/projects/expax.code/checker-framework/checkers/binary/jsr308-all.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/resources.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/rt.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/sunrsasign.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/jsse.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/jce.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/charsets.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/jfr.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/JObjC.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/classes,../../../checker-runtime/build/cfrt.jar,../../../enerj/build/enerj.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/dnsns.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/localedata.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/sunec.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/zipfs.jar,/System/Library/Java/Extensions/MRJToolkit.jar,/System/Library/Java/Extensions/QTJava.zip,/Users/jspark/projects/expax.code/apps/zxing/core/build,/opt/local/share/java/apache-ant/lib/ant-launcher.jar,/opt/local/share/java/apache-ant/lib/ant-antlr.jar,/opt/local/share/java/apache-ant/lib/ant-apache-bcel.jar,/opt/local/share/java/apache-ant/lib/ant-apache-bsf.jar,/opt/local/share/java/apache-ant/lib/ant-apache-log4j.jar,/opt/local/share/java/apache-ant/lib/ant-apache-oro.jar,/opt/local/share/java/apache-ant/lib/ant-apache-regexp.jar,/opt/local/share/java/apache-ant/lib/ant-apache-resolver.jar,/opt/local/share/java/apache-ant/lib/ant-apache-xalan2.jar,/opt/local/share/java/apache-ant/lib/ant-commons-logging.jar,/opt/local/share/java/apache-ant/lib/ant-commons-net.jar,/opt/local/share/java/apache-ant/lib/ant-jai.jar,/opt/local/share/java/apache-ant/lib/ant-javamail.jar,/opt/local/share/java/apache-ant/lib/ant-jdepend.jar,/opt/local/share/java/apache-ant/lib/ant-jmf.jar,/opt/local/share/java/apache-ant/lib/ant-jsch.jar,/opt/local/share/java/apache-ant/lib/ant-junit.jar,/opt/local/share/java/apache-ant/lib/ant-junit4.jar,/opt/local/share/java/apache-ant/lib/ant-netrexx.jar,/opt/local/share/java/apache-ant/lib/ant-swing.jar,/opt/local/share/java/apache-ant/lib/ant-testutil.jar,/opt/local/share/java/apache-ant/lib/ant.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/tools.jar]
    [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/util/Hashtable.class)]]
    [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Object.class)]]
    [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/String.class)]]
@@ -372,15 +371,15 @@ compile:
    [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Retention.class)]]
    [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/annotation/RetentionPolicy.class)]]
    [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Target.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Users/jspark/projects/expax/checker-framework/checkers/binary/jsr308-all.jar(java/lang/annotation/ElementType.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Users/jspark/projects/expax/checker-framework/checkers/binary/jsr308-all.jar(checkers/quals/SubtypeOf.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Users/jspark/projects/expax.code/checker-framework/checkers/binary/jsr308-all.jar(java/lang/annotation/ElementType.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Users/jspark/projects/expax.code/checker-framework/checkers/binary/jsr308-all.jar(checkers/quals/SubtypeOf.class)]]
    [enerjc] Round 1:
    [enerjc] 	input files: {com.google.zxing.BarcodeFormat, com.google.zxing.Binarizer, com.google.zxing.BinaryBitmap, com.google.zxing.ChecksumException, com.google.zxing.DecodeHintType, com.google.zxing.EncodeHintType, com.google.zxing.FormatException, com.google.zxing.LuminanceSource, com.google.zxing.MultiFormatReader, com.google.zxing.MultiFormatWriter, com.google.zxing.NotFoundException, com.google.zxing.Reader, com.google.zxing.ReaderException, com.google.zxing.Result, com.google.zxing.ResultMetadataType, com.google.zxing.ResultPoint, com.google.zxing.ResultPointCallback, com.google.zxing.Writer, com.google.zxing.WriterException, com.google.zxing.client.result.AbstractDoCoMoResultParser, com.google.zxing.client.result.AddressBookAUResultParser, com.google.zxing.client.result.AddressBookDoCoMoResultParser, com.google.zxing.client.result.AddressBookParsedResult, com.google.zxing.client.result.BizcardResultParser, com.google.zxing.client.result.BookmarkDoCoMoResultParser, com.google.zxing.client.result.CalendarParsedResult, com.google.zxing.client.result.EmailAddressParsedResult, com.google.zxing.client.result.EmailAddressResultParser, com.google.zxing.client.result.EmailDoCoMoResultParser, com.google.zxing.client.result.ExpandedProductParsedResult, com.google.zxing.client.result.ExpandedProductResultParser, com.google.zxing.client.result.GeoParsedResult, com.google.zxing.client.result.GeoResultParser, com.google.zxing.client.result.ISBNParsedResult, com.google.zxing.client.result.ISBNResultParser, com.google.zxing.client.result.ParsedResult, com.google.zxing.client.result.ParsedResultType, com.google.zxing.client.result.ProductParsedResult, com.google.zxing.client.result.ProductResultParser, com.google.zxing.client.result.ResultParser, com.google.zxing.client.result.SMSMMSResultParser, com.google.zxing.client.result.SMSParsedResult, com.google.zxing.client.result.SMSTOMMSTOResultParser, com.google.zxing.client.result.TelParsedResult, com.google.zxing.client.result.TelResultParser, com.google.zxing.client.result.TextParsedResult, com.google.zxing.client.result.URIParsedResult, com.google.zxing.client.result.URIResultParser, com.google.zxing.client.result.URLTOResultParser, com.google.zxing.client.result.VCardResultParser, com.google.zxing.client.result.VEventResultParser, com.google.zxing.client.result.WifiParsedResult, com.google.zxing.client.result.WifiResultParser, com.google.zxing.client.result.optional.AbstractNDEFResultParser, com.google.zxing.client.result.optional.NDEFRecord, com.google.zxing.client.result.optional.NDEFSmartPosterParsedResult, com.google.zxing.client.result.optional.NDEFSmartPosterResultParser, com.google.zxing.client.result.optional.NDEFTextResultParser, com.google.zxing.client.result.optional.NDEFURIResultParser, com.google.zxing.common.BitArray, com.google.zxing.common.BitMatrix, com.google.zxing.common.BitSource, com.google.zxing.common.CharacterSetECI, com.google.zxing.common.Collections, com.google.zxing.common.Comparator, com.google.zxing.common.DecoderResult, com.google.zxing.common.DefaultGridSampler, com.google.zxing.common.DetectorResult, com.google.zxing.common.ECI, com.google.zxing.common.GlobalHistogramBinarizer, com.google.zxing.common.GridSampler, com.google.zxing.common.HybridBinarizer, com.google.zxing.common.PerspectiveTransform, com.google.zxing.common.StringUtils, com.google.zxing.common.detector.MonochromeRectangleDetector, com.google.zxing.common.reedsolomon.GF256, com.google.zxing.common.reedsolomon.GF256Poly, com.google.zxing.common.reedsolomon.ReedSolomonDecoder, com.google.zxing.common.reedsolomon.ReedSolomonEncoder, com.google.zxing.common.reedsolomon.ReedSolomonException, com.google.zxing.datamatrix.DataMatrixReader, com.google.zxing.datamatrix.decoder.BitMatrixParser, com.google.zxing.datamatrix.decoder.DataBlock, com.google.zxing.datamatrix.decoder.DecodedBitStreamParser, com.google.zxing.datamatrix.decoder.Decoder, com.google.zxing.datamatrix.decoder.Version, com.google.zxing.datamatrix.detector.Detector, com.google.zxing.multi.ByQuadrantReader, com.google.zxing.multi.GenericMultipleBarcodeReader, com.google.zxing.multi.MultipleBarcodeReader, com.google.zxing.multi.qrcode.QRCodeMultiReader, com.google.zxing.multi.qrcode.detector.MultiDetector, com.google.zxing.multi.qrcode.detector.MultiFinderPatternFinder, com.google.zxing.oned.CodaBarReader, com.google.zxing.oned.Code128Reader, com.google.zxing.oned.Code128Writer, com.google.zxing.oned.Code39Reader, com.google.zxing.oned.Code39Writer, com.google.zxing.oned.Code93Reader, com.google.zxing.oned.EAN13Reader, com.google.zxing.oned.EAN13Writer, com.google.zxing.oned.EAN8Reader, com.google.zxing.oned.EAN8Writer, com.google.zxing.oned.EANManufacturerOrgSupport, com.google.zxing.oned.ITFReader, com.google.zxing.oned.ITFWriter, com.google.zxing.oned.MultiFormatOneDReader, com.google.zxing.oned.MultiFormatUPCEANReader, com.google.zxing.oned.OneDReader, com.google.zxing.oned.UPCAReader, com.google.zxing.oned.UPCEANExtensionSupport, com.google.zxing.oned.UPCEANReader, com.google.zxing.oned.UPCEANWriter, com.google.zxing.oned.UPCEReader, com.google.zxing.oned.rss.AbstractRSSReader, com.google.zxing.oned.rss.DataCharacter, com.google.zxing.oned.rss.FinderPattern, com.google.zxing.oned.rss.Pair, com.google.zxing.oned.rss.RSS14Reader, com.google.zxing.oned.rss.RSSUtils, com.google.zxing.oned.rss.expanded.BitArrayBuilder, com.google.zxing.oned.rss.expanded.ExpandedPair, com.google.zxing.oned.rss.expanded.RSSExpandedReader, com.google.zxing.oned.rss.expanded.decoders.AI013103decoder, com.google.zxing.oned.rss.expanded.decoders.AI01320xDecoder, com.google.zxing.oned.rss.expanded.decoders.AI01392xDecoder, com.google.zxing.oned.rss.expanded.decoders.AI01393xDecoder, com.google.zxing.oned.rss.expanded.decoders.AI013x0x1xDecoder, com.google.zxing.oned.rss.expanded.decoders.AI013x0xDecoder, com.google.zxing.oned.rss.expanded.decoders.AI01AndOtherAIs, com.google.zxing.oned.rss.expanded.decoders.AI01decoder, com.google.zxing.oned.rss.expanded.decoders.AI01weightDecoder, com.google.zxing.oned.rss.expanded.decoders.AbstractExpandedDecoder, com.google.zxing.oned.rss.expanded.decoders.AnyAIDecoder, com.google.zxing.oned.rss.expanded.decoders.BlockParsedResult, com.google.zxing.oned.rss.expanded.decoders.CurrentParsingState, com.google.zxing.oned.rss.expanded.decoders.DecodedChar, com.google.zxing.oned.rss.expanded.decoders.DecodedInformation, com.google.zxing.oned.rss.expanded.decoders.DecodedNumeric, com.google.zxing.oned.rss.expanded.decoders.DecodedObject, com.google.zxing.oned.rss.expanded.decoders.FieldParser, com.google.zxing.oned.rss.expanded.decoders.GeneralAppIdDecoder, com.google.zxing.pdf417.PDF417Reader, com.google.zxing.pdf417.decoder.BitMatrixParser, com.google.zxing.pdf417.decoder.DecodedBitStreamParser, com.google.zxing.pdf417.decoder.Decoder, com.google.zxing.pdf417.detector.Detector, com.google.zxing.qrcode.QRCodeReader, com.google.zxing.qrcode.QRCodeWriter, com.google.zxing.qrcode.decoder.BitMatrixParser, com.google.zxing.qrcode.decoder.DataBlock, com.google.zxing.qrcode.decoder.DataMask, com.google.zxing.qrcode.decoder.DecodedBitStreamParser, com.google.zxing.qrcode.decoder.Decoder, com.google.zxing.qrcode.decoder.ErrorCorrectionLevel, com.google.zxing.qrcode.decoder.FormatInformation, com.google.zxing.qrcode.decoder.Mode, com.google.zxing.qrcode.decoder.Version, com.google.zxing.qrcode.detector.AlignmentPattern, com.google.zxing.qrcode.detector.AlignmentPatternFinder, com.google.zxing.qrcode.detector.Detector, com.google.zxing.qrcode.detector.FinderPattern, com.google.zxing.qrcode.detector.FinderPatternFinder, com.google.zxing.qrcode.detector.FinderPatternInfo, com.google.zxing.qrcode.encoder.BlockPair, com.google.zxing.qrcode.encoder.ByteMatrix, com.google.zxing.qrcode.encoder.Encoder, com.google.zxing.qrcode.encoder.MaskUtil, com.google.zxing.qrcode.encoder.MatrixUtil, com.google.zxing.qrcode.encoder.QRCode}
    [enerjc] 	annotations: []
    [enerjc] 	last round: false
    [enerjc] Processor enerj.PrecisionChecker matches [] and returns false.
-   [enerjc] [search path for source files: /Users/jspark/projects/expax/apps/zxing/core/src]
-   [enerjc] [search path for class files: /Users/jspark/projects/expax/checker-framework/checkers/binary/jsr308-all.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/resources.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/rt.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/sunrsasign.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/jsse.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/jce.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/charsets.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/jfr.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/JObjC.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/classes,../../../checker-runtime/build/cfrt.jar,../../../enerj/build/enerj.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/dnsns.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/localedata.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/sunec.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/zipfs.jar,/System/Library/Java/Extensions/MRJToolkit.jar,/System/Library/Java/Extensions/QTJava.zip,/Users/jspark/projects/expax/apps/zxing/core/build,/Users/jspark/projects/expax/ant/lib/ant-launcher.jar,/Users/jspark/projects/expax/ant/lib/ant-antlr.jar,/Users/jspark/projects/expax/ant/lib/ant-apache-bcel.jar,/Users/jspark/projects/expax/ant/lib/ant-apache-bsf.jar,/Users/jspark/projects/expax/ant/lib/ant-apache-log4j.jar,/Users/jspark/projects/expax/ant/lib/ant-apache-oro.jar,/Users/jspark/projects/expax/ant/lib/ant-apache-regexp.jar,/Users/jspark/projects/expax/ant/lib/ant-apache-resolver.jar,/Users/jspark/projects/expax/ant/lib/ant-apache-xalan2.jar,/Users/jspark/projects/expax/ant/lib/ant-commons-logging.jar,/Users/jspark/projects/expax/ant/lib/ant-commons-net.jar,/Users/jspark/projects/expax/ant/lib/ant-jai.jar,/Users/jspark/projects/expax/ant/lib/ant-javamail.jar,/Users/jspark/projects/expax/ant/lib/ant-jdepend.jar,/Users/jspark/projects/expax/ant/lib/ant-jmf.jar,/Users/jspark/projects/expax/ant/lib/ant-jsch.jar,/Users/jspark/projects/expax/ant/lib/ant-junit.jar,/Users/jspark/projects/expax/ant/lib/ant-junit4.jar,/Users/jspark/projects/expax/ant/lib/ant-netrexx.jar,/Users/jspark/projects/expax/ant/lib/ant-swing.jar,/Users/jspark/projects/expax/ant/lib/ant-testutil.jar,/Users/jspark/projects/expax/ant/lib/ant.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/tools.jar]
+   [enerjc] [search path for source files: /Users/jspark/projects/expax.code/apps/zxing/core/src]
+   [enerjc] [search path for class files: /Users/jspark/projects/expax.code/checker-framework/checkers/binary/jsr308-all.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/resources.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/rt.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/sunrsasign.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/jsse.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/jce.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/charsets.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/jfr.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/JObjC.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/classes,../../../checker-runtime/build/cfrt.jar,../../../enerj/build/enerj.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/dnsns.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/localedata.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/sunec.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/zipfs.jar,/System/Library/Java/Extensions/MRJToolkit.jar,/System/Library/Java/Extensions/QTJava.zip,/Users/jspark/projects/expax.code/apps/zxing/core/build,/opt/local/share/java/apache-ant/lib/ant-launcher.jar,/opt/local/share/java/apache-ant/lib/ant-antlr.jar,/opt/local/share/java/apache-ant/lib/ant-apache-bcel.jar,/opt/local/share/java/apache-ant/lib/ant-apache-bsf.jar,/opt/local/share/java/apache-ant/lib/ant-apache-log4j.jar,/opt/local/share/java/apache-ant/lib/ant-apache-oro.jar,/opt/local/share/java/apache-ant/lib/ant-apache-regexp.jar,/opt/local/share/java/apache-ant/lib/ant-apache-resolver.jar,/opt/local/share/java/apache-ant/lib/ant-apache-xalan2.jar,/opt/local/share/java/apache-ant/lib/ant-commons-logging.jar,/opt/local/share/java/apache-ant/lib/ant-commons-net.jar,/opt/local/share/java/apache-ant/lib/ant-jai.jar,/opt/local/share/java/apache-ant/lib/ant-javamail.jar,/opt/local/share/java/apache-ant/lib/ant-jdepend.jar,/opt/local/share/java/apache-ant/lib/ant-jmf.jar,/opt/local/share/java/apache-ant/lib/ant-jsch.jar,/opt/local/share/java/apache-ant/lib/ant-junit.jar,/opt/local/share/java/apache-ant/lib/ant-junit4.jar,/opt/local/share/java/apache-ant/lib/ant-netrexx.jar,/opt/local/share/java/apache-ant/lib/ant-swing.jar,/opt/local/share/java/apache-ant/lib/ant-testutil.jar,/opt/local/share/java/apache-ant/lib/ant.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/tools.jar]
    [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/util/Hashtable.class)]]
    [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Object.class)]]
    [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/String.class)]]
@@ -393,853 +392,3 @@ compile:
    [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/io/ByteArrayOutputStream.class)]]
    [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/io/UnsupportedEncodingException.class)]]
    [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Integer.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[../../../enerj/build/enerj.jar(enerj/lang/Approx.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Annotation.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[../../../enerj/build/enerj.jar(enerj/lang/Precise.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Retention.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/annotation/RetentionPolicy.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Target.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Users/jspark/projects/expax/checker-framework/checkers/binary/jsr308-all.jar(java/lang/annotation/ElementType.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Users/jspark/projects/expax/checker-framework/checkers/binary/jsr308-all.jar(checkers/quals/SubtypeOf.class)]]
-   [enerjc] Round 2:
-   [enerjc] 	input files: {}
-   [enerjc] 	annotations: []
-   [enerjc] 	last round: true
-   [enerjc] [search path for source files: /Users/jspark/projects/expax/apps/zxing/core/src]
-   [enerjc] [search path for class files: /Users/jspark/projects/expax/checker-framework/checkers/binary/jsr308-all.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/resources.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/rt.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/sunrsasign.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/jsse.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/jce.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/charsets.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/jfr.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/JObjC.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/classes,../../../checker-runtime/build/cfrt.jar,../../../enerj/build/enerj.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/dnsns.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/localedata.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/sunec.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/zipfs.jar,/System/Library/Java/Extensions/MRJToolkit.jar,/System/Library/Java/Extensions/QTJava.zip,/Users/jspark/projects/expax/apps/zxing/core/build,/Users/jspark/projects/expax/ant/lib/ant-launcher.jar,/Users/jspark/projects/expax/ant/lib/ant-antlr.jar,/Users/jspark/projects/expax/ant/lib/ant-apache-bcel.jar,/Users/jspark/projects/expax/ant/lib/ant-apache-bsf.jar,/Users/jspark/projects/expax/ant/lib/ant-apache-log4j.jar,/Users/jspark/projects/expax/ant/lib/ant-apache-oro.jar,/Users/jspark/projects/expax/ant/lib/ant-apache-regexp.jar,/Users/jspark/projects/expax/ant/lib/ant-apache-resolver.jar,/Users/jspark/projects/expax/ant/lib/ant-apache-xalan2.jar,/Users/jspark/projects/expax/ant/lib/ant-commons-logging.jar,/Users/jspark/projects/expax/ant/lib/ant-commons-net.jar,/Users/jspark/projects/expax/ant/lib/ant-jai.jar,/Users/jspark/projects/expax/ant/lib/ant-javamail.jar,/Users/jspark/projects/expax/ant/lib/ant-jdepend.jar,/Users/jspark/projects/expax/ant/lib/ant-jmf.jar,/Users/jspark/projects/expax/ant/lib/ant-jsch.jar,/Users/jspark/projects/expax/ant/lib/ant-junit.jar,/Users/jspark/projects/expax/ant/lib/ant-junit4.jar,/Users/jspark/projects/expax/ant/lib/ant-netrexx.jar,/Users/jspark/projects/expax/ant/lib/ant-swing.jar,/Users/jspark/projects/expax/ant/lib/ant-testutil.jar,/Users/jspark/projects/expax/ant/lib/ant.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/tools.jar]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/util/Hashtable.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Object.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/String.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Exception.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Throwable.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/io/Serializable.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/util/Vector.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/util/Enumeration.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/StringBuffer.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/io/ByteArrayOutputStream.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/io/UnsupportedEncodingException.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Integer.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[../../../enerj/build/enerj.jar(enerj/lang/Approx.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Annotation.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[../../../enerj/build/enerj.jar(enerj/lang/Precise.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Retention.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/annotation/RetentionPolicy.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Target.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Users/jspark/projects/expax/checker-framework/checkers/binary/jsr308-all.jar(java/lang/annotation/ElementType.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Users/jspark/projects/expax/checker-framework/checkers/binary/jsr308-all.jar(checkers/quals/SubtypeOf.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[../../../enerj/build/enerj.jar(enerj/lang/Top.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Users/jspark/projects/expax/checker-framework/checkers/binary/jsr308-all.jar(checkers/quals/ImplicitFor.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[../../../enerj/build/enerj.jar(enerj/lang/Context.class)]]
-   [enerjc] [checking com.google.zxing.BarcodeFormat]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/AutoCloseable.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/util/Dictionary.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/IllegalArgumentException.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/RuntimeException.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Error.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Users/jspark/projects/expax/checker-framework/checkers/binary/jsr308-all.jar(checkers/quals/PolyAll.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Users/jspark/projects/expax/checker-framework/checkers/binary/jsr308-all.jar(checkers/quals/Unqualified.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Comparable.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/CharSequence.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/util/Hashtable$Enumerator.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/util/Hashtable$Entry.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/util/Hashtable$ValueCollection.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/util/Hashtable$EntrySet.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/util/Hashtable$KeySet.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/util/Hashtable$Holder.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/util/Set.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/util/Map.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/util/Map$Entry.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/util/Collection.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Thread.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[../../../enerj/build/enerj.jar(enerj/rt/PrecisionRuntimeRoot.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[../../../enerj/build/enerj.jar(enerj/rt/PrecisionRuntime.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[../../../checker-runtime/build/cfrt.jar(checkers/runtime/rt/Runtime.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[../../../enerj/build/enerj.jar(enerj/rt/PrecisionRuntime$MemKind.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[../../../enerj/build/enerj.jar(enerj/rt/Reference.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Class.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Boolean.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Byte.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Character.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Short.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Long.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Float.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Double.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Void.class)]]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/BarcodeFormat.class]]
-   [enerjc] [checking com.google.zxing.Binarizer]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/Binarizer.class]]
-   [enerjc] [checking com.google.zxing.LuminanceSource]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Number.class)]]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/LuminanceSource.class]]
-   [enerjc] [checking com.google.zxing.common.BitArray]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/System.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[../../../enerj/build/enerj.jar(enerj/lang/Endorsements.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/AbstractStringBuilder.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Cloneable.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/io/ObjectStreamField.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[../../../enerj/build/enerj.jar(enerj/rt/PrecisionRuntime$ArithOperator.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[../../../enerj/build/enerj.jar(enerj/rt/PrecisionRuntime$NumberKind.class)]]
-   [enerjc] *** EXPAX_PRT: approx is true = NE
-   [enerjc] *** EXPAX_PRT: approx is true = BITAND
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = BITAND
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/common/BitArray.class]]
-   [enerjc] [checking com.google.zxing.NotFoundException]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Throwable$WrappedPrintWriter.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Throwable$WrappedPrintStream.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Throwable$PrintStreamOrWriter.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Throwable$SentinelHolder.class)]]
-   [enerjc] [checking com.google.zxing.ReaderException]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/NotFoundException.class]]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/ReaderException.class]]
-   [enerjc] [checking com.google.zxing.common.BitMatrix]
-   [enerjc] *** EXPAX_PRT: approx is true = NE
-   [enerjc] *** EXPAX_PRT: approx is true = BITAND
-   [enerjc] *** EXPAX_PRT: approx is true = USR
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = AND
-   [enerjc] *** EXPAX_PRT: approx is true = EQ
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = EQ
-   [enerjc] *** EXPAX_PRT: approx is true = SL
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = MINUS
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = NE
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/common/BitMatrix.class]]
-   [enerjc] [checking com.google.zxing.BinaryBitmap]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/BinaryBitmap.class]]
-   [enerjc] [checking com.google.zxing.ChecksumException]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/ChecksumException.class]]
-   [enerjc] [checking com.google.zxing.DecodeHintType]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/DecodeHintType.class]]
-   [enerjc] [checking com.google.zxing.EncodeHintType]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/EncodeHintType.class]]
-   [enerjc] [checking com.google.zxing.FormatException]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/FormatException.class]]
-   [enerjc] [checking com.google.zxing.MultiFormatReader]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/util/AbstractList.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/util/AbstractCollection.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/util/Vector$ListItr.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/util/Vector$Itr.class)]]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/MultiFormatReader.class]]
-   [enerjc] [checking com.google.zxing.Reader]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/Reader.class]]
-   [enerjc] [checking com.google.zxing.Result]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/StringBuilder.class)]]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/Result.class]]
-   [enerjc] [checking com.google.zxing.ResultPoint]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Math.class)]]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/ResultPoint.class]]
-   [enerjc] [checking com.google.zxing.ResultMetadataType]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/ResultMetadataType.class]]
-   [enerjc] [checking com.google.zxing.MultiFormatWriter]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/MultiFormatWriter.class]]
-   [enerjc] [checking com.google.zxing.Writer]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/Writer.class]]
-   [enerjc] [checking com.google.zxing.WriterException]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/WriterException.class]]
-   [enerjc] [checking com.google.zxing.ResultPointCallback]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/ResultPointCallback.class]]
-   [enerjc] [checking com.google.zxing.client.result.AbstractDoCoMoResultParser]
-   [enerjc] [checking com.google.zxing.client.result.ResultParser]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/client/result/AbstractDoCoMoResultParser.class]]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/client/result/ResultParser.class]]
-   [enerjc] [checking com.google.zxing.client.result.ParsedResult]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/client/result/ParsedResult.class]]
-   [enerjc] [checking com.google.zxing.client.result.ParsedResultType]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/client/result/ParsedResultType.class]]
-   [enerjc] [checking com.google.zxing.client.result.AddressBookAUResultParser]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/client/result/AddressBookAUResultParser.class]]
-   [enerjc] [checking com.google.zxing.client.result.AddressBookParsedResult]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/client/result/AddressBookParsedResult.class]]
-   [enerjc] [checking com.google.zxing.client.result.AddressBookDoCoMoResultParser]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/client/result/AddressBookDoCoMoResultParser.class]]
-   [enerjc] [checking com.google.zxing.client.result.BizcardResultParser]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/client/result/BizcardResultParser.class]]
-   [enerjc] [checking com.google.zxing.client.result.BookmarkDoCoMoResultParser]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/client/result/BookmarkDoCoMoResultParser.class]]
-   [enerjc] [checking com.google.zxing.client.result.URIParsedResult]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/client/result/URIParsedResult.class]]
-   [enerjc] [checking com.google.zxing.client.result.CalendarParsedResult]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/client/result/CalendarParsedResult.class]]
-   [enerjc] [checking com.google.zxing.client.result.EmailAddressParsedResult]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/client/result/EmailAddressParsedResult.class]]
-   [enerjc] [checking com.google.zxing.client.result.EmailAddressResultParser]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/client/result/EmailAddressResultParser.class]]
-   [enerjc] [checking com.google.zxing.client.result.EmailDoCoMoResultParser]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/client/result/EmailDoCoMoResultParser.class]]
-   [enerjc] [checking com.google.zxing.client.result.ExpandedProductParsedResult]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/client/result/ExpandedProductParsedResult.class]]
-   [enerjc] [checking com.google.zxing.client.result.ExpandedProductResultParser]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/client/result/ExpandedProductResultParser.class]]
-   [enerjc] [checking com.google.zxing.client.result.GeoParsedResult]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/client/result/GeoParsedResult.class]]
-   [enerjc] [checking com.google.zxing.client.result.GeoResultParser]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/NumberFormatException.class)]]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/client/result/GeoResultParser.class]]
-   [enerjc] [checking com.google.zxing.client.result.ISBNParsedResult]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/client/result/ISBNParsedResult.class]]
-   [enerjc] [checking com.google.zxing.client.result.ISBNResultParser]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/client/result/ISBNResultParser.class]]
-   [enerjc] [checking com.google.zxing.client.result.ProductParsedResult]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/client/result/ProductParsedResult.class]]
-   [enerjc] [checking com.google.zxing.client.result.ProductResultParser]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/client/result/ProductResultParser.class]]
-   [enerjc] [checking com.google.zxing.client.result.SMSMMSResultParser]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/client/result/SMSMMSResultParser.class]]
-   [enerjc] [checking com.google.zxing.client.result.SMSParsedResult]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/client/result/SMSParsedResult.class]]
-   [enerjc] [checking com.google.zxing.client.result.SMSTOMMSTOResultParser]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/client/result/SMSTOMMSTOResultParser.class]]
-   [enerjc] [checking com.google.zxing.client.result.TelParsedResult]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/client/result/TelParsedResult.class]]
-   [enerjc] [checking com.google.zxing.client.result.TelResultParser]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/client/result/TelResultParser.class]]
-   [enerjc] [checking com.google.zxing.client.result.TextParsedResult]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/client/result/TextParsedResult.class]]
-   [enerjc] [checking com.google.zxing.client.result.URIResultParser]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/client/result/URIResultParser.class]]
-   [enerjc] [checking com.google.zxing.client.result.URLTOResultParser]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/client/result/URLTOResultParser.class]]
-   [enerjc] [checking com.google.zxing.client.result.VCardResultParser]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/io/OutputStream.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/nio/charset/Charset.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/io/IOException.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/String$CaseInsensitiveComparator.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/util/Comparator.class)]]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/client/result/VCardResultParser.class]]
-   [enerjc] [checking com.google.zxing.client.result.VEventResultParser]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/client/result/VEventResultParser.class]]
-   [enerjc] [checking com.google.zxing.client.result.WifiParsedResult]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/client/result/WifiParsedResult.class]]
-   [enerjc] [checking com.google.zxing.client.result.WifiResultParser]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/client/result/WifiResultParser.class]]
-   [enerjc] [checking com.google.zxing.client.result.optional.AbstractNDEFResultParser]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/client/result/optional/AbstractNDEFResultParser.class]]
-   [enerjc] [checking com.google.zxing.client.result.optional.NDEFRecord]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/client/result/optional/NDEFRecord.class]]
-   [enerjc] [checking com.google.zxing.client.result.optional.NDEFSmartPosterParsedResult]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/client/result/optional/NDEFSmartPosterParsedResult.class]]
-   [enerjc] [checking com.google.zxing.client.result.optional.NDEFSmartPosterResultParser]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/client/result/optional/NDEFSmartPosterResultParser.class]]
-   [enerjc] [checking com.google.zxing.client.result.optional.NDEFTextResultParser]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/client/result/optional/NDEFTextResultParser.class]]
-   [enerjc] [checking com.google.zxing.client.result.optional.NDEFURIResultParser]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/client/result/optional/NDEFURIResultParser.class]]
-   [enerjc] [checking com.google.zxing.common.BitSource]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/common/BitSource.class]]
-   [enerjc] [checking com.google.zxing.common.CharacterSetECI]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Integer$IntegerCache.class)]]
-   [enerjc] [checking com.google.zxing.common.ECI]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/common/CharacterSetECI.class]]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/common/ECI.class]]
-   [enerjc] [checking com.google.zxing.common.Collections]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/common/Collections.class]]
-   [enerjc] [checking com.google.zxing.common.Comparator]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/common/Comparator.class]]
-   [enerjc] [checking com.google.zxing.common.DecoderResult]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/common/DecoderResult.class]]
-   [enerjc] [checking com.google.zxing.qrcode.decoder.ErrorCorrectionLevel]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/qrcode/decoder/ErrorCorrectionLevel.class]]
-   [enerjc] [checking com.google.zxing.common.DefaultGridSampler]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/IllegalStateException.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/ArrayIndexOutOfBoundsException.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/IndexOutOfBoundsException.class)]]
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = PLUS
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = PLUS
-   [enerjc] *** EXPAX_PRT: approx is true = SR
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] [checking com.google.zxing.common.GridSampler]
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = MINUS
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = MINUS
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = MINUS
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = MINUS
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/common/DefaultGridSampler.class]]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/common/GridSampler.class]]
-   [enerjc] [checking com.google.zxing.common.PerspectiveTransform]
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = PLUS
-   [enerjc] *** EXPAX_PRT: approx is true = PLUS
-   [enerjc] *** EXPAX_PRT: approx is true = MUL
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = MUL
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = DIV
-   [enerjc] *** EXPAX_PRT: approx is true = PLUS
-   [enerjc] *** EXPAX_PRT: approx is true = PLUS
-   [enerjc] *** EXPAX_PRT: approx is true = MUL
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = MUL
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = DIV
-   [enerjc] *** EXPAX_PRT: approx is true = PLUS
-   [enerjc] *** EXPAX_PRT: approx is true = PLUS
-   [enerjc] *** EXPAX_PRT: approx is true = MUL
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = MUL
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/common/PerspectiveTransform.class]]
-   [enerjc] [checking com.google.zxing.common.DetectorResult]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/common/DetectorResult.class]]
-   [enerjc] [checking com.google.zxing.common.GlobalHistogramBinarizer]
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = BITAND
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = BITAND
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = BITAND
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = BITAND
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = LT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = BITAND
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = BITAND
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = LT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = GT
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = GT
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = MINUS
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = MUL
-   [enerjc] *** EXPAX_PRT: approx is true = MUL
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = GT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = MUL
-   [enerjc] *** EXPAX_PRT: approx is true = MUL
-   [enerjc] *** EXPAX_PRT: approx is true = MUL
-   [enerjc] *** EXPAX_PRT: approx is true = MINUS
-   [enerjc] *** EXPAX_PRT: approx is true = MINUS
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = GT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/common/GlobalHistogramBinarizer.class]]
-   [enerjc] [checking com.google.zxing.common.HybridBinarizer]
-   [enerjc] *** EXPAX_PRT: approx is true = BITAND
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = BITAND
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/common/HybridBinarizer.class]]
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] [checking com.google.zxing.common.StringUtils]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/common/StringUtils.class]]
-   [enerjc] [checking com.google.zxing.common.detector.MonochromeRectangleDetector]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/common/detector/MonochromeRectangleDetector.class]]
-   [enerjc] [checking com.google.zxing.common.reedsolomon.GF256]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/ArithmeticException.class)]]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/common/reedsolomon/GF256.class]]
-   [enerjc] [checking com.google.zxing.common.reedsolomon.GF256Poly]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/common/reedsolomon/GF256Poly.class]]
-   [enerjc] [checking com.google.zxing.common.reedsolomon.ReedSolomonDecoder]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/common/reedsolomon/ReedSolomonDecoder.class]]
-   [enerjc] [checking com.google.zxing.common.reedsolomon.ReedSolomonException]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/common/reedsolomon/ReedSolomonException.class]]
-   [enerjc] [checking com.google.zxing.common.reedsolomon.ReedSolomonEncoder]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/common/reedsolomon/ReedSolomonEncoder.class]]
-   [enerjc] [checking com.google.zxing.datamatrix.DataMatrixReader]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/util/List.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/util/RandomAccess.class)]]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/datamatrix/DataMatrixReader.class]]
-   [enerjc] [checking com.google.zxing.datamatrix.decoder.Decoder]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/datamatrix/decoder/Decoder.class]]
-   [enerjc] [checking com.google.zxing.datamatrix.decoder.BitMatrixParser]
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = INDEXED
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/datamatrix/decoder/BitMatrixParser.class]]
-   [enerjc] [checking com.google.zxing.datamatrix.decoder.Version]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/datamatrix/decoder/Version$ECBlocks.class]]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/datamatrix/decoder/Version$ECB.class]]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/datamatrix/decoder/Version$1.class]]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/datamatrix/decoder/Version.class]]
-   [enerjc] [checking com.google.zxing.datamatrix.decoder.DataBlock]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/datamatrix/decoder/DataBlock.class]]
-   [enerjc] [checking com.google.zxing.datamatrix.decoder.DecodedBitStreamParser]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/datamatrix/decoder/DecodedBitStreamParser.class]]
-   [enerjc] [checking com.google.zxing.datamatrix.detector.Detector]
-   [enerjc] [loading ZipFileIndexFileObject[../../../enerj/build/enerj.jar(enerj/lang/ApproxMath.class)]]
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = GT
-   [enerjc] *** EXPAX_PRT: approx is true = MINUS
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = MINUS
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = SR
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = NE
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/datamatrix/detector/Detector$ResultPointsAndTransitions.class]]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/datamatrix/detector/Detector$ResultPointsAndTransitionsComparator.class]]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/datamatrix/detector/Detector$1.class]]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/datamatrix/detector/Detector.class]]
-   [enerjc] [checking com.google.zxing.multi.ByQuadrantReader]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/multi/ByQuadrantReader.class]]
-   [enerjc] [checking com.google.zxing.multi.GenericMultipleBarcodeReader]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/multi/GenericMultipleBarcodeReader.class]]
-   [enerjc] [checking com.google.zxing.multi.MultipleBarcodeReader]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/multi/MultipleBarcodeReader.class]]
-   [enerjc] [checking com.google.zxing.multi.qrcode.QRCodeMultiReader]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/io/PrintStream.class)]]
-   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/io/FilterOutputStream.class)]]
-   [enerjc] [checking com.google.zxing.qrcode.QRCodeReader]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/multi/qrcode/QRCodeMultiReader.class]]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/qrcode/QRCodeReader.class]]
-   [enerjc] [checking com.google.zxing.qrcode.decoder.Decoder]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/qrcode/decoder/Decoder.class]]
-   [enerjc] [checking com.google.zxing.multi.qrcode.detector.MultiDetector]
-   [enerjc] [checking com.google.zxing.qrcode.detector.Detector]
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = LT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = DIV
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = DIV
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = DIV
-   [enerjc] *** EXPAX_PRT: approx is true = PLUS
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = DIV
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = DIV
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = DIV
-   [enerjc] *** EXPAX_PRT: approx is true = PLUS
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = DIV
-   [enerjc] *** EXPAX_PRT: approx is true = MINUS
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = DIV
-   [enerjc] *** EXPAX_PRT: approx is true = MINUS
-   [enerjc] *** EXPAX_PRT: approx is true = MINUS
-   [enerjc] *** EXPAX_PRT: approx is true = MINUS
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = DIV
-   [enerjc] *** EXPAX_PRT: approx is true = MINUS
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = DIV
-   [enerjc] *** EXPAX_PRT: approx is true = MINUS
-   [enerjc] *** EXPAX_PRT: approx is true = MINUS
-   [enerjc] *** EXPAX_PRT: approx is true = MINUS
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = MINUS
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = MINUS
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = MINUS
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = PLUS
-   [enerjc] *** EXPAX_PRT: approx is true = MUL
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = MUL
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = MINUS
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = MINUS
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = PLUS
-   [enerjc] *** EXPAX_PRT: approx is true = MUL
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = MUL
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = MUL
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = MINUS
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = MINUS
-   [enerjc] *** EXPAX_PRT: approx is true = PLUS
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/multi/qrcode/detector/MultiDetector.class]]
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = LT
-   [enerjc] *** EXPAX_PRT: approx is true = MINUS
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = MUL
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = MINUS
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = MINUS
-   [enerjc] *** EXPAX_PRT: approx is true = PLUS
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = MINUS
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = MINUS
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/qrcode/detector/Detector.class]]
-   [enerjc] [checking com.google.zxing.qrcode.detector.FinderPatternInfo]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/qrcode/detector/FinderPatternInfo.class]]
-   [enerjc] [checking com.google.zxing.qrcode.detector.AlignmentPattern]
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/qrcode/detector/AlignmentPattern.class]]
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = SELECT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = AND
-   [enerjc] *** EXPAX_PRT: approx is true = LE
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = LE
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = MINUS
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = OR
-   [enerjc] *** EXPAX_PRT: approx is true = LE
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = LE
-   [enerjc] *** EXPAX_PRT: approx is true = DIV
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] [checking com.google.zxing.qrcode.detector.FinderPattern]
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = SELECT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = AND
-   [enerjc] *** EXPAX_PRT: approx is true = LE
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = LE
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = MINUS
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = OR
-   [enerjc] *** EXPAX_PRT: approx is true = LE
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = LE
-   [enerjc] *** EXPAX_PRT: approx is true = DIV
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax/apps/zxing/core/build/com/google/zxing/qrcode/detector/FinderPattern.class]]
-   [enerjc] [checking com.google.zxing.multi.qrcode.detector.MultiFinderPatternFinder]
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = MINUS
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = DIV
-   [enerjc] *** EXPAX_PRT: approx is true = MINUS
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = MINUS
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = AND
-   [enerjc] *** EXPAX_PRT: approx is true = GT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = GE
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = DIV
-   [enerjc] *** EXPAX_PRT: approx is true = MINUS
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = MINUS
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = AND
-   [enerjc] *** EXPAX_PRT: approx is true = GT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = GE
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = DIV
-   [enerjc] *** EXPAX_PRT: approx is true = DIV
-   [enerjc] *** EXPAX_PRT: approx is true = PLUS
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = OR
-   [enerjc] *** EXPAX_PRT: approx is true = GT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = LT
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = VARDEF
-   [enerjc] *** EXPAX_PRT: approx is true = IDENT

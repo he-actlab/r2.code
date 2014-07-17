@@ -77,7 +77,7 @@ public class Vector2f implements Externalizable, Cloneable {
      * Creates a Vector2f with x and y set to 0. Equivalent to Vector2f(0,0).
      */
     public Vector2f() {
-        x = y = 0;	// approx: 5: PUTFIELD_F T2, .y, T1	// approx: 4: MOVE_F T3, T1	// approx: 6: PUTFIELD_F R0, .x, T3	// approx: 2: MOVE_F T1, FConst: 0.0
+        x = y = 0;
     }
 
     /**
@@ -654,9 +654,9 @@ public class Vector2f implements Externalizable, Cloneable {
      * @return the hash code value of this vector.
      */
     public int hashCode() {
-        int hash = 37;	// approx: 1: MOVE_I R6, IConst: 37
-        hash += 37 * hash + Float.floatToIntBits((x));	// approx: 5: ADD_I T10, T7, T9	// approx: 3: GETFIELD_F T8, R0, .x	// approx: 2: MUL_I T7, IConst: 37, R6	// approx: 7: MOVE_I R12, T11	// approx: 6: ADD_I T11, R6, T10
-        hash += 37 * hash + Float.floatToIntBits((y));	// approx: 11: ADD_I T16, T13, T15	// approx: 12: ADD_I T17, R12, T16	// approx: 13: MOVE_I R18, T17	// approx: 9: GETFIELD_F T14, R0, .y	// approx: 8: MUL_I T13, IConst: 37, R12
+        int hash = 37;
+        hash += 37 * hash + Float.floatToIntBits((x));
+        hash += 37 * hash + Float.floatToIntBits((y));
         return hash;
     }
 
@@ -704,9 +704,9 @@ public class Vector2f implements Externalizable, Cloneable {
         }
 
         Vector2f comp = (Vector2f) o;
-        if (Float.compare((x), comp.x) != 0)	// approx: 6: GETFIELD_F T9, R0, .x	// approx: 7: GETFIELD_F T10, R4, .x
+        if (Float.compare((x), comp.x) != 0)
             return false;
-        if (Float.compare((y), comp.y) != 0)	// approx: 10: GETFIELD_F T12, R0, .y	// approx: 11: GETFIELD_F T13, R4, .y
+        if (Float.compare((y), comp.y) != 0)
             return false;
         return true;
     }
@@ -722,7 +722,7 @@ public class Vector2f implements Externalizable, Cloneable {
      * @return the string representation of this vector.
      */
     public String toString() {
-        return "(" + (x) + ", " + (y) + ")";	// approx: 10: GETFIELD_F T12, R0, .y	// approx: 6: GETFIELD_F T8, R0, .x
+        return "(" + (x) + ", " + (y) + ")";
     }
 
     public Class<? extends Vector2f> getClassTag() {

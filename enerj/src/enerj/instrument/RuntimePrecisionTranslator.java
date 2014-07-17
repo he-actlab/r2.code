@@ -50,13 +50,6 @@ public class RuntimePrecisionTranslator extends HelpfulTreeTranslator<PrecisionC
                                       boolean ENERJ) {
         super(checker, env, p);
         this.ENERJ = ENERJ;
-        if (EXPAX_RPT){
-        	if(this.ENERJ)
-        		System.out.println("*** EXPAX_RPT: ENERJ");
-        	else 
-        		System.out.println("*** EXPAX_RPT: EXPAX");
-        	System.out.println("*** EXPAX_RPT: RuntimePrecisionTranslator start!");
-        }
     }
 
     @Override
@@ -115,6 +108,8 @@ public class RuntimePrecisionTranslator extends HelpfulTreeTranslator<PrecisionC
     	if (ENERJ) {
 	        if ( type.hasEffectiveAnnotation(checker.APPROX) ) {
 	        	isApprox = maker.Literal(TypeTags.BOOLEAN, 1);
+	        	if(EXPAX_RPT)
+    				System.out.println("*** ENERJ_APPROX: " + tree.toString());
 	        } else if ( type.hasEffectiveAnnotation(checker.CONTEXT) ) {
 	        	JCTree.JCExpression curIsApproxMeth = dotsExp("enerj.rt.PrecisionRuntimeRoot.impl.isApproximate");
 	        	isApprox = maker.Apply(null, curIsApproxMeth, List.of(thisExp()));
@@ -123,10 +118,17 @@ public class RuntimePrecisionTranslator extends HelpfulTreeTranslator<PrecisionC
 	        }
 	        sizes = PrecisionChecker.objectSizes(type, atypeFactory, typeutils, checker, false, tree);
     	} else {
-    		boolean approx = expaxIsApprox(tree); // TODO call functions to determine if this is approximable  
-    		if (approx) 
+    		   
+    		// TODO it approximates class itself, and my intention was to approximate only fields
+    		// TODO it is unclear to do this at this point, invalidate all of this part
+    		boolean approx;
+    		// approx = expaxIsApprox(tree);
+    		approx = false;
+    		if (approx) {
 	        	isApprox = maker.Literal(TypeTags.BOOLEAN, 1);
-	        else
+    			if(EXPAX_RPT)
+    				System.out.println("*** EXPAX_APPROX: " + tree.toString());
+    		} else
 	        	isApprox = maker.Literal(TypeTags.BOOLEAN, 0);
     		sizes = PrecisionChecker.objectSizes(type, atypeFactory, typeutils, checker, approx, tree);
     	}
@@ -242,6 +244,8 @@ public class RuntimePrecisionTranslator extends HelpfulTreeTranslator<PrecisionC
                 );
 	        if ( elType.hasEffectiveAnnotation(checker.APPROX) ) {
 	        	isApprox = boolExp(true);
+    			if(EXPAX_RPT)
+    				System.out.println("*** ENERJ_APPROX: " + tree.toString());
 	        } else if ( elType.hasEffectiveAnnotation(checker.CONTEXT) ) {
 	        	isApprox = maker.Apply(null,
 	        	    dotsExp("enerj.rt.PrecisionRuntimeRoot.impl.isApproximate"),
@@ -250,6 +254,7 @@ public class RuntimePrecisionTranslator extends HelpfulTreeTranslator<PrecisionC
 	        } else {
 	        	isApprox = boolExp(false);
 	        }
+	        
         } else {
         	boolean approx = expaxIsApprox(tree);
         	sizes = PrecisionChecker.typeSizes(
@@ -260,12 +265,16 @@ public class RuntimePrecisionTranslator extends HelpfulTreeTranslator<PrecisionC
                     "ARRAY",
                     tree
                 );
-        	if (approx)
+        	if (approx) {
 	        	isApprox = boolExp(true);
-	        else 
+    			if(EXPAX_RPT){
+    				System.out.println("*** EXPAX_APPROX: " + tree.toString());
+    				System.out.println("*** EXPAX_APPROX: size = " + sizes[0] + "," + sizes[1]);
+    			}
+        	} else 
 	        	isApprox = boolExp(false);
         }
-
+        
     	JCTree.JCExpression call = maker.Apply(null,
     	    dotsExp("enerj.rt.PrecisionRuntimeRoot.impl.newArray"),
     	    List.of(
@@ -301,7 +310,10 @@ public class RuntimePrecisionTranslator extends HelpfulTreeTranslator<PrecisionC
     	MethodSymbol meth = tree.sym;
         curMethName = tree.getName().toString();
         if(!(curMethName.equalsIgnoreCase("<init>") || curMethName.equalsIgnoreCase("<clinit>"))){
-        	curMethName = tree.sym.toString();
+        	if (curMethName.equalsIgnoreCase("__htt_staticInitializerMethod")) 
+            	curMethName = "<clinit>()";
+            else
+            	curMethName = tree.sym.toString();
         } else {
         	int index = tree.sym.toString().indexOf((int)'(');
         	String params = tree.sym.toString().substring(index);

@@ -59,12 +59,12 @@ public class Vector3f implements Externalizable, Cloneable {
 
     private static final long serialVersionUID = 1L;
 
-	public final static Vector3f ZERO = new Vector3f(0, 0, 0);	// approx: 10: MOVE_F T12, FConst: 0.0	// approx: 9: MOVE_F T11, FConst: 0.0	// approx: 8: MOVE_F T10, FConst: 0.0
+	public final static Vector3f ZERO = new Vector3f(0, 0, 0);
 
-	public final static Vector3f UNIT_X = new Vector3f(1, 0, 0);	// approx: 17: MOVE_F T17, FConst: 1.0	// approx: 16: MOVE_F T16, FConst: 0.0	// approx: 15: MOVE_F T15, FConst: 0.0
-	public final static Vector3f UNIT_Y = new Vector3f(0, 1, 0);	// approx: 23: MOVE_F T21, FConst: 1.0	// approx: 24: MOVE_F T22, FConst: 0.0	// approx: 22: MOVE_F T20, FConst: 0.0
-    public final static Vector3f UNIT_Z = new Vector3f(0, 0, 1);	// approx: 31: MOVE_F T27, FConst: 0.0	// approx: 29: MOVE_F T25, FConst: 1.0	// approx: 30: MOVE_F T26, FConst: 0.0
-    public final static Vector3f UNIT_XYZ = new Vector3f(1, 1, 1);	// approx: 37: MOVE_F T31, FConst: 1.0	// approx: 38: MOVE_F T32, FConst: 1.0	// approx: 36: MOVE_F T30, FConst: 1.0
+	public final static Vector3f UNIT_X = new Vector3f(1, 0, 0);
+	public final static Vector3f UNIT_Y = new Vector3f(0, 1, 0);
+    public final static Vector3f UNIT_Z = new Vector3f(0, 0, 1);
+    public final static Vector3f UNIT_XYZ = new Vector3f(1, 1, 1);
     
 	/**
      * the x value of the vector.
@@ -87,7 +87,7 @@ public class Vector3f implements Externalizable, Cloneable {
      *
      */
     public Vector3f() {
-        x = y = z = 0;	// approx: 9: PUTFIELD_F T5, .y, T4	// approx: 8: MOVE_F T6, T4	// approx: 10: PUTFIELD_F R0, .x, T6	// approx: 5: PUTFIELD_F T2, .z, T1	// approx: 4: MOVE_F T3, T1	// approx: 6: MOVE_F T4, T3	// approx: 2: MOVE_F T1, FConst: 0.0
+        x = y = z = 0;
     }
 
     /**
@@ -102,9 +102,9 @@ public class Vector3f implements Externalizable, Cloneable {
      *            the z value of the vector.
      */
     public Vector3f( float x,  float y,  float z) {
-        this.x = x;	// approx: 2: PUTFIELD_F R0, .x, R1
-        this.y = y;	// approx: 3: PUTFIELD_F R0, .y, R2
-        this.z = z;	// approx: 4: PUTFIELD_F R0, .z, R3
+        this.x = x;
+        this.y = y;
+        this.z = z;
     }
     
     /**
@@ -120,9 +120,9 @@ public class Vector3f implements Externalizable, Cloneable {
      * @return this vector
      */
     public  Vector3f set( float x,  float y,  float z) {
-        this.x = x;	// approx: 1: PUTFIELD_F R0, .x, R1
-        this.y = y;	// approx: 2: PUTFIELD_F R0, .y, R2
-        this.z = z;	// approx: 3: PUTFIELD_F R0, .z, R3
+        this.x = x;
+        this.y = y;
+        this.z = z;
         return this;
     }
 
@@ -140,7 +140,7 @@ public class Vector3f implements Externalizable, Cloneable {
             logger.warning("Provided vector is null, 0 returned.");
             return 0;
         }
-        return x * vec.x + y * vec.y + z * vec.z;	// approx: 6: GETFIELD_F T11, R1, .y	// approx: 5: GETFIELD_F T10, R0, .y	// approx: 8: ADD_F T13, T9, T12	// approx: 7: MUL_F T12, T10, T11	// approx: 10: GETFIELD_F T15, R1, .z	// approx: 9: GETFIELD_F T14, R0, .z	// approx: 12: ADD_F T17, T13, T16	// approx: 11: MUL_F T16, T14, T15	// approx: 2: GETFIELD_F T7, R0, .x	// approx: 4: MUL_F T9, T7, T8	// approx: 3: GETFIELD_F T8, R1, .x
+        return x * vec.x + y * vec.y + z * vec.z;
     }
 
     /**
@@ -170,7 +170,7 @@ public class Vector3f implements Externalizable, Cloneable {
      * @return result, after recieving the cross product vector.
      */
     public  Vector3f cross( Vector3f v,  Vector3f result) {
-        return cross(v.x, v.y, v.z, result);	// approx: 2: GETFIELD_F T4, R1, .y	// approx: 3: GETFIELD_F T5, R1, .z	// approx: 1: GETFIELD_F T3, R1, .x
+        return cross(v.x, v.y, v.z, result);
     }
 
     /**
@@ -190,9 +190,9 @@ public class Vector3f implements Externalizable, Cloneable {
      */
     public  Vector3f cross( float otherX,  float otherY,  float otherZ,  Vector3f result) {
         if (result == null) result = new  Vector3f();
-         float resX = ((y * otherZ) - (z * otherY)); 	// approx: 10: SUB_F T17, T14, T16	// approx: 9: MUL_F T16, T15, R2	// approx: 8: GETFIELD_F T15, R0, .z	// approx: 7: MUL_F T14, T13, R3	// approx: 11: MOVE_F R9, T17	// approx: 6: GETFIELD_F T13, R0, .y
-         float resY = ((z * otherX) - (x * otherZ));	// approx: 17: MOVE_F R10, T22	// approx: 15: MUL_F T21, T20, R3	// approx: 16: SUB_F T22, T19, T21	// approx: 14: GETFIELD_F T20, R0, .x	// approx: 13: MUL_F T19, T18, R1	// approx: 12: GETFIELD_F T18, R0, .z
-         float resZ = ((x * otherY) - (y * otherX));	// approx: 23: MOVE_F R11, T27	// approx: 18: GETFIELD_F T23, R0, .x	// approx: 21: MUL_F T26, T25, R1	// approx: 22: SUB_F T27, T24, T26	// approx: 19: MUL_F T24, T23, R2	// approx: 20: GETFIELD_F T25, R0, .y
+         float resX = ((y * otherZ) - (z * otherY)); 
+         float resY = ((z * otherX) - (x * otherZ));
+         float resZ = ((x * otherY) - (y * otherX));
         result.set(resX, resY, resZ);
         return result;
     }
@@ -445,9 +445,9 @@ public class Vector3f implements Externalizable, Cloneable {
         if(result == null) {
             result = new  Vector3f();
         }
-        result.x = x - vec.x;	// approx: 9: PUTFIELD_F R2, .x, T9	// approx: 8: SUB_F T9, T7, T8	// approx: 7: GETFIELD_F T8, R1, .x	// approx: 6: GETFIELD_F T7, R0, .x
-        result.y = y - vec.y;	// approx: 13: PUTFIELD_F R2, .y, T12	// approx: 12: SUB_F T12, T10, T11	// approx: 11: GETFIELD_F T11, R1, .y	// approx: 10: GETFIELD_F T10, R0, .y
-        result.z = z - vec.z;	// approx: 17: PUTFIELD_F R2, .z, T15	// approx: 16: SUB_F T15, T13, T14	// approx: 15: GETFIELD_F T14, R1, .z	// approx: 14: GETFIELD_F T13, R0, .z
+        result.x = x - vec.x;
+        result.y = y - vec.y;
+        result.z = z - vec.z;
         return result;
     }
 
@@ -472,9 +472,9 @@ public class Vector3f implements Externalizable, Cloneable {
         if (floats == null) {
             floats = new  float[3];
         }
-        floats[0] = x;	// approx: 4: GETFIELD_F T4, R0, .x	// approx: 5: ASTORE_F T4, R1, IConst: 0
-        floats[1] = y;	// approx: 6: GETFIELD_F T5, R0, .y	// approx: 7: ASTORE_F T5, R1, IConst: 1
-        floats[2] = z;	// approx: 8: GETFIELD_F T6, R0, .z
+        floats[0] = x;
+        floats[1] = y;
+        floats[2] = z;
         return floats;
     }
 
@@ -492,9 +492,9 @@ public class Vector3f implements Externalizable, Cloneable {
         if (this == o) { return true; }
 
         Vector3f comp = (Vector3f) o;
-        if (Float.compare((x),comp.x) != 0) return false;	// approx: 6: GETFIELD_F T9, R0, .x	// approx: 7: GETFIELD_F T10, R4, .x
-        if (Float.compare((y),comp.y) != 0) return false;	// approx: 10: GETFIELD_F T12, R0, .y	// approx: 11: GETFIELD_F T13, R4, .y
-        if (Float.compare((z),comp.z) != 0) return false;	// approx: 14: GETFIELD_F T15, R0, .z	// approx: 15: GETFIELD_F T16, R4, .z
+        if (Float.compare((x),comp.x) != 0) return false;
+        if (Float.compare((y),comp.y) != 0) return false;
+        if (Float.compare((z),comp.z) != 0) return false;
         return true;
     }
 
@@ -505,10 +505,10 @@ public class Vector3f implements Externalizable, Cloneable {
      * @return the hash code value of this vector.
      */
     public int hashCode() {
-        int hash = 37;	// approx: 1: MOVE_I R6, IConst: 37
-        hash += 37 * hash + Float.floatToIntBits((x));	// approx: 2: MUL_I T7, IConst: 37, R6	// approx: 3: GETFIELD_F T8, R0, .x	// approx: 6: ADD_I T11, R6, T10	// approx: 5: ADD_I T10, T7, T9	// approx: 7: MOVE_I R12, T11
-        hash += 37 * hash + Float.floatToIntBits((y));	// approx: 9: GETFIELD_F T14, R0, .y	// approx: 12: ADD_I T17, R12, T16	// approx: 11: ADD_I T16, T13, T15	// approx: 13: MOVE_I R18, T17	// approx: 8: MUL_I T13, IConst: 37, R12
-        hash += 37 * hash + Float.floatToIntBits((z));	// approx: 14: MUL_I T19, IConst: 37, R18	// approx: 15: GETFIELD_F T20, R0, .z	// approx: 19: MOVE_I R24, T23	// approx: 17: ADD_I T22, T19, T21	// approx: 18: ADD_I T23, R18, T22
+        int hash = 37;
+        hash += 37 * hash + Float.floatToIntBits((x));
+        hash += 37 * hash + Float.floatToIntBits((y));
+        hash += 37 * hash + Float.floatToIntBits((z));
         return hash;
     }
 
@@ -523,7 +523,7 @@ public class Vector3f implements Externalizable, Cloneable {
      * @return the string representation of this vector.
      */
     public String toString() {
-        return "(" + (x) + ", " + (y) + ", " + (z) + ")";	// approx: 14: GETFIELD_F T16, R0, .z	// approx: 10: GETFIELD_F T12, R0, .y	// approx: 6: GETFIELD_F T8, R0, .x
+        return "(" + (x) + ", " + (y) + ", " + (z) + ")";
     }
 
     /**

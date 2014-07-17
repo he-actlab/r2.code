@@ -18,12 +18,7 @@
     <property name="cfrt.jar" value="../../checker-runtime/build/cfrt.jar" />
     <property name="enerj.checker" value="enerj.PrecisionChecker" />
 
-    <!-- Expax arguments -->
-    <property name="expaxbc.info" value="${user.dir}/simpleRaytracer-bc-offset.info" /> 
-    <property name="expaxanal.flag" value="${user.dir}/analysis.flag" />
-    <property name="expaxanal.result" value="${user.dir}/analysis.result" />
-
-    <condition property="enerjc.args" value="-Alint=mbstatic,expax,${expaxanal.flag},${expaxbc.info},${expaxanal.result}" else="-Alint=mbstatic,simulation,expax,${expaxanal.flag},${expaxbc.info},${expaxanal.result}"> 
+    <condition property="enerjc.args" value="-Alint=mbstatic" else="-Alint=mbstatic,simulation">
         <isset property="env.EnerJNoSim" />
     </condition>
     <condition property="enerjc.verbose" value="false" else="true">
@@ -33,11 +28,7 @@
         <jsr308.javac verbose="${enerjc.verbose}">
             <compilerarg line="-Xbootclasspath/a:${cfrt.jar}:${enerj.jar} -processorpath ${cfrt.jar}:${enerj.jar} -processor ${enerj.checker}" />
             <compilerarg line="${enerjc.args}" />
-            <compilerarg line="-expaxanalflag ${expaxanal.flag}" />
-            <compilerarg line="-expaxbcinfo ${expaxbc.info}" />
-						<compilerarg line="-expaxgen true" />
-						<compilerarg line="-expaxast true" />
-        </jsr308.javac>
+            </jsr308.javac>
     </presetdef>
 
   <target name="build" depends="clean">

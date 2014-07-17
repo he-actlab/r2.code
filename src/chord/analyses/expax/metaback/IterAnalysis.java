@@ -139,7 +139,6 @@ public class IterAnalysis extends ParallelAnalysis {
 				if(((Quad) o).getOperator() instanceof NEWARRAY) {
 					TypeOperand top = NewArray.getType((Quad)o);
 					jq_Type type = ((jq_Array)top.getType()).getElementType();
-					System.out.println("*** EXPAX_IA: top's type = " + type.toString());
 					if(type.isPrimitiveType()){
 						Pair<Integer,Integer> pair = new Pair<Integer,Integer>(SharedData.domH.indexOf(o),-1);
 						SharedData.allApproxStorage.add(pair);

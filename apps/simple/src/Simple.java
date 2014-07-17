@@ -4,7 +4,7 @@ public class Simple{
 
 	public static void main(String[] args) {
 		int x = 1;
-		int y = x * x;
+		int a = 10 + 2;
 	}
 
 	public static void alloc_TAG1(){}

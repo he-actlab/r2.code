@@ -53,7 +53,7 @@ class ApproximationInformation {
 
 class PrecisionRuntimeDefault implements PrecisionRuntime {
 
-	private static boolean EXPAX_APPROX_COUNT = false;
+	protected static boolean EXPAX_APPROX_COUNT = false;
 	
 	// This map *only* contains approximate objects. That is,
 	// info.get(???).approx == true
@@ -555,12 +555,18 @@ class PrecisionRuntimeDefault implements PrecisionRuntime {
 	// Simulated accesses.
 	@Override
     public <T> T storeValue(T value, boolean approx, MemKind kind) {
+		if(EXPAX_APPROX_COUNT) {
+			if(approx) System.out.println("*** EXPAX_APPROX_COUNT: sVD");
+		}
 	    countOperation("store" + kind, approx);
 	    return value;
 	}
 
 	@Override
     public <T> T loadValue(T value, boolean approx, MemKind kind) {
+		if(EXPAX_APPROX_COUNT) {
+			if(approx) System.out.println("*** EXPAX_APPROX_COUNT: lVD");
+		}
 	    countOperation("load" + kind, approx);
 	    return value;
 	}
@@ -568,24 +574,24 @@ class PrecisionRuntimeDefault implements PrecisionRuntime {
 	@Override
     public <T> T loadLocal(Reference<T> ref, boolean approx) {
 		if(EXPAX_APPROX_COUNT) {
-			if(approx) System.out.println("*** EXPAX_APPROX_COUNT: loadLocal");
+			if(approx) System.out.println("*** EXPAX_APPROX_COUNT: lLD");
 		}
 		return loadValue(ref.value, approx, MemKind.VARIABLE);
 	}
 
 	@Override
     public <T> T loadArray(Object array, int index, boolean approx) {
-//		if(EXPAX_APPROX_COUNT) {
-//			if(approx) System.out.println("*** EXPAX_APPROX_COUNT: loadArray");
-//		}
+		if(EXPAX_APPROX_COUNT) {
+			if(approx) System.out.println("*** EXPAX_APPROX_COUNT: lAD");
+		}
 		return loadValue((T) Array.get(array, index), approx, MemKind.ARRAYEL);
 	}
 
 	@Override
     public <T> T loadField(Object obj, String fieldname, boolean approx) {
-//		if(EXPAX_APPROX_COUNT) {
-//			if(approx) System.out.println("*** EXPAX_APPROX_COUNT: loadField");
-//		}
+		if(EXPAX_APPROX_COUNT) {
+			if(approx) System.out.println("*** EXPAX_APPROX_COUNT: lFD");
+		}
 		try {
 
 			// In static context, allow client to call this method with a Class
@@ -616,18 +622,18 @@ class PrecisionRuntimeDefault implements PrecisionRuntime {
 
 	@Override
     public <T> T storeLocal(Reference<T> ref, boolean approx, T rhs) {
-//		if(EXPAX_APPROX_COUNT) {
-//			if(approx) System.out.println("*** EXPAX_APPROX_COUNT: storeLocal");
-//		}
+		if(EXPAX_APPROX_COUNT) {
+			if(approx) System.out.println("*** EXPAX_APPROX_COUNT: sLD");
+		}
 		ref.value = storeValue(rhs, approx, MemKind.VARIABLE);
 		return ref.value;
 	}
 
 	@Override
     public <T> T storeArray(Object array, int index, boolean approx, T rhs) {
-//		if(EXPAX_APPROX_COUNT) {
-//			if(approx) System.out.println("*** EXPAX_APPROX_COUNT: storeArray");
-//		}
+		if(EXPAX_APPROX_COUNT) {
+			if(approx) System.out.println("*** EXPAX_APPROX_COUNT: sAD");
+		}
 		T val = storeValue(rhs, approx, MemKind.ARRAYEL);
 		Array.set(array, index, val);
 		return val;
@@ -635,9 +641,9 @@ class PrecisionRuntimeDefault implements PrecisionRuntime {
 
 	@Override
     public <T> T storeField(Object obj, String fieldname, boolean approx, T rhs) {
-//		if(EXPAX_APPROX_COUNT) {
-//			if(approx) System.out.println("*** EXPAX_APPROX_COUNT: storeField");
-//		}
+		if(EXPAX_APPROX_COUNT) {
+			if(approx) System.out.println("*** EXPAX_APPROX_COUNT: sFD");
+		}
 		T val = storeValue(rhs, approx, MemKind.FIELD);
 
 		try {

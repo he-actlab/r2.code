@@ -275,6 +275,7 @@ def collect_outputs(path, bmarks, apronly=False, colonly=False, benchArg=[]):
         result = Result(bmark)
         #print "precise run"
         result.precise_output = run(bmark, None, benchArg)
+#print 'precise_output = ' + repr(result.precise_output)
         logging.debug('output: ' + repr(result.precise_output))
         results[bmark] = result
         
@@ -372,6 +373,7 @@ def err(x, y, proportion, norm=None):
 def calc_error(bmark, precise_output, approx_outputs):
     errors = []
     for approx_output in approx_outputs:
+#print 'approx_output = ' + repr(approx_output)
         if bmark.output == 'string':
             # String matching on output.
             if approx_output == precise_output:
