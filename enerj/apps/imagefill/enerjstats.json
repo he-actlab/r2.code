@@ -1,1 +1,0 @@
-{"operations":{"INT-":[1792,532],"storeARRAYEL":[35,1604],"loadFIELD":[10750,0],"INT+":[2265,2618],"INTlogic":[27971,0],"storeVARIABLE":[7927,2481],"loadVARIABLE":[39858,8487],"storeFIELD":[76,1],"loadARRAYEL":[9273,0]},"footprint":{"stack-bytes":[4022418,244208],"heap-bytes":[23916,1588368],"heap-objects":[1533,0],"stack-objects":[1007077,61052]}}
