@@ -16,8 +16,6 @@
 
 package com.google.zxing.common;
 
-import enerj.lang.*;
-
 /**
  * <p>Represents a 2D matrix of bits. In function arguments below, and throughout the common
  * module, x is the column position, and y is the row position. The ordering is always x, y.
@@ -39,9 +37,9 @@ public final class BitMatrix {
   public final int width;
   public final int height;
   public final int rowSize;
-  public final @Approx int[] bits;
+  public final  int[] bits;
 
-  // A helper to construct a square matrix.
+// A helper to construct a square matrix.
   public BitMatrix(int dimension) {
     this(dimension, dimension);
   }
@@ -53,8 +51,12 @@ public final class BitMatrix {
     this.width = width;
     this.height = height;
     this.rowSize = (width + 31) >> 5;
-    bits = new @Approx int[rowSize * height];
+    alloc_TAG2();
+    bits = new  int[rowSize * height];
   }
+  
+  public void alloc_TAG2(){}
+  public static int accept(int b){return b;}
 
   /**
    * <p>Gets the requested bit, where true means black.</p>
@@ -63,9 +65,12 @@ public final class BitMatrix {
    * @param y The vertical component (i.e. which row)
    * @return value of given bit in matrix
    */
-  public @Approx boolean get(int x, int y) {
+  public  boolean get(int x, int y) {
     int offset = y * rowSize + (x >> 5);
-    return ((bits[offset] >>> (x & 0x1f)) & 1) != 0;
+    //additional accept
+    int b = bits[offset];
+    b = accept(b);
+    return ((b >>> (x & 0x1f)) & 1) != 0;
   }
 
   /**
@@ -154,7 +159,10 @@ public final class BitMatrix {
    */
   public int[] getTopLeftOnBit() {
     int bitsOffset = 0;
-    while (Endorsements.endorse(bitsOffset < bits.length && bits[bitsOffset] == 0)) {
+    //additional accept
+    int b = bits[bitsOffset];
+    b = accept(b);
+    while ((bitsOffset < bits.length && b == 0)) {
       bitsOffset++;
     }
     if (bitsOffset == bits.length) {
@@ -163,9 +171,12 @@ public final class BitMatrix {
     int y = bitsOffset / rowSize;
     int x = (bitsOffset % rowSize) << 5;
     
-    @Approx int theBits = bits[bitsOffset];
-    @Approx int bit = 0;
-    while (Endorsements.endorse((theBits << (31-bit)) == 0)) {
+     int theBits = bits[bitsOffset];
+     int bit = 0;
+     //additional accept
+     theBits = accept(theBits);
+     bit = accept(bit);
+    while (((theBits << (31-bit)) == 0)) {
       bit++;
     }
     x += bit;
@@ -196,7 +207,7 @@ public final class BitMatrix {
       return false;
     }
     for (int i = 0; i < bits.length; i++) {
-      if (Endorsements.endorse(bits[i] != other.bits[i])) {
+      if ((bits[i] != other.bits[i])) {
         return false;
       }
     }
@@ -209,7 +220,7 @@ public final class BitMatrix {
     hash = 31 * hash + height;
     hash = 31 * hash + rowSize;
     for (int i = 0; i < bits.length; i++) {
-      hash = 31 * hash + (int)Endorsements.endorse(bits[i]);
+      hash = 31 * hash + (int)(bits[i]);
     }
     return hash;
   }
@@ -218,11 +229,12 @@ public final class BitMatrix {
     StringBuffer result = new StringBuffer(height * (width + 1));
     for (int y = 0; y < height; y++) {
       for (int x = 0; x < width; x++) {
-        result.append(Endorsements.endorse(get(x, y)) ? "X " : "  ");
+        result.append((get(x, y)) ? "X " : "  ");
       }
       result.append('\n');
     }
     return result.toString();
   }
 
+  
 }

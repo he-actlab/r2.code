@@ -23,7 +23,7 @@ import com.google.zxing.common.BitMatrix;
 
 import java.util.Vector;
 
-import enerj.lang.*;
+
 
 /**
  * <p>This class attempts to find alignment patterns in a QR Code. Alignment patterns look like finder
@@ -109,7 +109,7 @@ final class AlignmentPatternFinder {
       }
       int currentState = 0;
       while (j < maxJ) {
-        if (Endorsements.endorse(image.get(j, i))) {
+        if ((image.get(j, i))) {
           // Black pixel
           if (currentState == 1) { // Counting black pixels
             stateCount[currentState]++;
@@ -203,7 +203,7 @@ final class AlignmentPatternFinder {
 
     // Start counting up from center
     int i = startI;
-    while (i >= 0 && Endorsements.endorse(image.get(centerJ, i)) && stateCount[1] <= maxCount) {
+    while (i >= 0 && (image.get(centerJ, i)) && stateCount[1] <= maxCount) {
       stateCount[1]++;
       i--;
     }
@@ -211,7 +211,7 @@ final class AlignmentPatternFinder {
     if (i < 0 || stateCount[1] > maxCount) {
       return Float.NaN;
     }
-    while (i >= 0 && !Endorsements.endorse(image.get(centerJ, i)) && stateCount[0] <= maxCount) {
+    while (i >= 0 && !(image.get(centerJ, i)) && stateCount[0] <= maxCount) {
       stateCount[0]++;
       i--;
     }
@@ -221,14 +221,14 @@ final class AlignmentPatternFinder {
 
     // Now also count down from center
     i = startI + 1;
-    while (i < maxI && Endorsements.endorse(image.get(centerJ, i)) && stateCount[1] <= maxCount) {
+    while (i < maxI && (image.get(centerJ, i)) && stateCount[1] <= maxCount) {
       stateCount[1]++;
       i++;
     }
     if (i == maxI || stateCount[1] > maxCount) {
       return Float.NaN;
     }
-    while (i < maxI && !Endorsements.endorse(image.get(centerJ, i)) && stateCount[2] <= maxCount) {
+    while (i < maxI && !(image.get(centerJ, i)) && stateCount[2] <= maxCount) {
       stateCount[2]++;
       i++;
     }
@@ -260,15 +260,17 @@ final class AlignmentPatternFinder {
     float centerJ = centerFromEnd(stateCount, j);
     float centerI = crossCheckVertical(i, (int) centerJ, 2 * stateCount[1], stateCountTotal);
     if (!Float.isNaN(centerI)) {
-      @Approx float estimatedModuleSize = (float) (stateCount[0] + stateCount[1] + stateCount[2]) / 3.0f;
+       float estimatedModuleSize = (float) (stateCount[0] + stateCount[1] + stateCount[2]) / 3.0f;
       int max = possibleCenters.size();
       for (int index = 0; index < max; index++) {
         AlignmentPattern center = (AlignmentPattern) possibleCenters.elementAt(index);
         // Look for about the same center and module size:
-        if (Endorsements.endorse(center.aboutEquals(estimatedModuleSize, centerI, centerJ))) {
+        if ((center.aboutEquals(estimatedModuleSize, centerI, centerJ))) {
+          alloc_TAG3(); //jspark
           return new AlignmentPattern(centerJ, centerI, estimatedModuleSize);
         }
       }
+      alloc_TAG3(); //jspark
       // Hadn't found this before; save it
       ResultPoint point = new AlignmentPattern(centerJ, centerI, estimatedModuleSize);
       possibleCenters.addElement(point);
@@ -278,5 +280,9 @@ final class AlignmentPatternFinder {
     }
     return null;
   }
+  
+  //jspark
+  public void alloc_TAG3(){}
+  //krapsj
 
 }

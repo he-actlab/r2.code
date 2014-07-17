@@ -17,7 +17,7 @@
 package com.google.zxing.qrcode.detector;
 
 import com.google.zxing.ResultPoint;
-import enerj.lang.*;
+
 
 /**
  * <p>Encapsulates an alignment pattern, which are the smaller square patterns found in
@@ -27,9 +27,9 @@ import enerj.lang.*;
  */
 public final class AlignmentPattern extends ResultPoint {
 
-  private final @Approx float estimatedModuleSize;
+  private final  float estimatedModuleSize;
 
-  AlignmentPattern(float posX, float posY, @Approx float estimatedModuleSize) {
+  AlignmentPattern(float posX, float posY,  float estimatedModuleSize) {
     super(posX, posY);
     this.estimatedModuleSize = estimatedModuleSize;
   }
@@ -38,12 +38,24 @@ public final class AlignmentPattern extends ResultPoint {
    * <p>Determines if this alignment pattern "about equals" an alignment pattern at the stated
    * position and size -- meaning, it is at nearly the same center with nearly the same size.</p>
    */
-  @Approx boolean aboutEquals(@Approx float moduleSize, float i, float j) {
-    if (Endorsements.endorse(Math.abs(i - getY()) <= moduleSize && Math.abs(j - getX()) <= moduleSize)) {
-      @Approx float moduleSizeDiff = ApproxMath.abs(moduleSize - estimatedModuleSize);
+   boolean aboutEquals( float moduleSize, float i, float j) {
+	//additional accept
+	float x = getX();
+	float y = getY();
+	x = accept(x);
+	y = accept(y);
+	moduleSize = accept(moduleSize);
+    if ((Math.abs(i - y) <= moduleSize && Math.abs(j - x) <= moduleSize)) {
+      //additional accept 
+      accept(estimatedModuleSize);
+      moduleSize = accept(moduleSize);
+      float moduleSizeDiff = Math.abs(moduleSize - estimatedModuleSize);
+      moduleSizeDiff = accept(moduleSizeDiff);
       return moduleSizeDiff <= 1.0f || moduleSizeDiff / estimatedModuleSize <= 1.0f;
     }
     return false;
   }
+   
+   public static float accept(float i){return i;}
 
 }

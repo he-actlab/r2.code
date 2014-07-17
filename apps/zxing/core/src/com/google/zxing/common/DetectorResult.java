@@ -27,8 +27,8 @@ import com.google.zxing.ResultPoint;
  */
 public final class DetectorResult {
 
-  private final BitMatrix bits;
-  private final ResultPoint[] points;
+  public final BitMatrix bits;
+  public final ResultPoint[] points;
 
   public DetectorResult(BitMatrix bits, ResultPoint[] points) {
     this.bits = bits;

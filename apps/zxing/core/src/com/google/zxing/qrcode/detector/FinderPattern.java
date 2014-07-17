@@ -18,7 +18,7 @@ package com.google.zxing.qrcode.detector;
 
 import com.google.zxing.ResultPoint;
 
-import enerj.lang.*;
+
 
 /**
  * <p>Encapsulates a finder pattern, which are the three square patterns found in
@@ -29,16 +29,16 @@ import enerj.lang.*;
  */
 public final class FinderPattern extends ResultPoint {
 
-  private final @Approx float estimatedModuleSize;
+  private final  float estimatedModuleSize;
   private int count;
 
-  FinderPattern(float posX, float posY, @Approx float estimatedModuleSize) {
+  FinderPattern(float posX, float posY,  float estimatedModuleSize) {
     super(posX, posY);
     this.estimatedModuleSize = estimatedModuleSize;
     this.count = 1;
   }
 
-  public @Approx float getEstimatedModuleSize() {
+  public  float getEstimatedModuleSize() {
     return estimatedModuleSize;
   }
 
@@ -54,12 +54,19 @@ public final class FinderPattern extends ResultPoint {
    * <p>Determines if this finder pattern "about equals" a finder pattern at the stated
    * position and size -- meaning, it is at nearly the same center with nearly the same size.</p>
    */
-  @Approx boolean aboutEquals(@Approx float moduleSize, float i, float j) {
-    if (Endorsements.endorse(ApproxMath.abs(i - getY()) <= moduleSize && ApproxMath.abs(j - getX()) <= moduleSize)) {
-      @Approx float moduleSizeDiff = ApproxMath.abs(moduleSize - estimatedModuleSize);
+   boolean aboutEquals( float moduleSize, float i, float j) {
+    if ((Math.abs(i - getY()) <= moduleSize && Math.abs(j - getX()) <= moduleSize)) {
+      //additional accept
+      moduleSize = accept(moduleSize);
+      accept(estimatedModuleSize);
+      float moduleSizeDiff = Math.abs(moduleSize - estimatedModuleSize);
+      //additional accept
+      moduleSizeDiff = accept(moduleSizeDiff);
       return moduleSizeDiff <= 1.0f || moduleSizeDiff / estimatedModuleSize <= 1.0f;
     }
     return false;
   }
-
+   
+  public static float accept(float f){return f;}
+   
 }

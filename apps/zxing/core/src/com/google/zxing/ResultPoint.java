@@ -24,8 +24,8 @@ package com.google.zxing;
  */
 public class ResultPoint {
 
-  private final float x;
-  private final float y;
+  public final float x;
+  public final float y;
 
   public ResultPoint(float x, float y) {
     this.x = x;

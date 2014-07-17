@@ -21,7 +21,7 @@ import com.google.zxing.common.BitMatrix;
 
 /**
  * This class is the core bitmap class used by ZXing to represent 1 bit data. Reader objects
- * accept a BinaryBitmap and attempt to decode it.
+ * a BinaryBitmap and attempt to decode it.
  *
  * @author dswitkin@google.com (Daniel Switkin)
  */

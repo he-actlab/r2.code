@@ -16,8 +16,6 @@
 
 package com.google.zxing.common;
 
-import enerj.lang.*;
-
 import com.google.zxing.NotFoundException;
 
 /**
@@ -47,10 +45,12 @@ public final class DefaultGridSampler extends GridSampler {
                               int dimension,
                               PerspectiveTransform transform) throws NotFoundException {
     BitMatrix bits = new BitMatrix(dimension);
-    @Approx float[] points = new @Approx float[dimension << 1];
+     // additional accept
+     alloc_TAG6();
+     float[] points = new  float[dimension << 1];
     for (int y = 0; y < dimension; y++) {
       int max = points.length;
-      @Approx float iValue = (float) y + 0.5f;
+       float iValue = (float) y + 0.5f;
       for (int x = 0; x < max; x += 2) {
         points[x] = (float) (x >> 1) + 0.5f;
         points[x + 1] = iValue;
@@ -61,7 +61,10 @@ public final class DefaultGridSampler extends GridSampler {
       checkAndNudgePoints(image, points);
       try {
         for (int x = 0; x < max; x += 2) {
-          if (Endorsements.endorse(image.get(Endorsements.endorse((@Approx int) points[x]), Endorsements.endorse((@Approx int) points[x + 1])))) {
+          //additional accept
+          boolean imageGet = image.get((( int) points[x]), (( int) points[x + 1]));
+          imageGet = accept(imageGet);
+          if (imageGet) {
             // Black(-ish) pixel
             bits.set(x >> 1, y);
           }
@@ -80,7 +83,12 @@ public final class DefaultGridSampler extends GridSampler {
         }
       }
     }
+    //additional accept
+    points = accept_all_FIELD1_TAG6(points);
     return bits;
   }
 
-}
+  public static void alloc_TAG6(){}
+  public static boolean accept(boolean b){return b;}
+  public static float[] accept_all_FIELD1_TAG6(float[] f){return f;}
+} 

@@ -16,8 +16,6 @@
 
 package com.google.zxing.common;
 
-import enerj.lang.*;
-
 import com.google.zxing.NotFoundException;
 
 /**
@@ -100,7 +98,8 @@ public abstract class GridSampler {
     throw new IllegalStateException(); // Can't use UnsupportedOperationException
   }
   
-
+  public static int accept(int i){return i;}
+  
   /**
    * <p>Checks a set of points that have been transformed to sample points on an image against
    * the image's dimensions to see if the point are even within the image.</p>
@@ -116,15 +115,18 @@ public abstract class GridSampler {
    * @param points actual points in x1,y1,...,xn,yn form
    * @throws NotFoundException if an endpoint is lies outside the image boundaries
    */
-  protected static void checkAndNudgePoints(BitMatrix image, @Approx float[] points)
+  protected static void checkAndNudgePoints(BitMatrix image,  float[] points)
       throws NotFoundException {
     int width = image.getWidth();
     int height = image.getHeight();
     // Check and nudge points from start until we see some that are OK:
     boolean nudged = true;
     for (int offset = 0; offset < points.length && nudged; offset += 2) {
-      int x = Endorsements.endorse((@Approx int) points[offset]);
-      int y = Endorsements.endorse((@Approx int) points[offset + 1]);
+      int x = (( int) points[offset]);
+      int y = (( int) points[offset + 1]);
+      //additional accept
+      x = accept(x);
+      y = accept(y);
       if (x < -1 || x > width || y < -1 || y > height) {
           if (false) {
               throw NotFoundException.getNotFoundInstance();
@@ -152,8 +154,11 @@ public abstract class GridSampler {
     // Check and nudge points from end:
     nudged = true;
     for (int offset = points.length - 2; offset >= 0 && nudged; offset -= 2) {
-      int x = Endorsements.endorse((@Approx int) points[offset]);
-      int y = Endorsements.endorse((@Approx int) points[offset + 1]);
+      int x = (( int) points[offset]);
+      int y = (( int) points[offset + 1]);
+      //additional accept
+      x = accept(x);
+      y = accept(y);
       if (x < -1 || x > width || y < -1 || y > height) {
           if (false) {
                 throw NotFoundException.getNotFoundInstance();

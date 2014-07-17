@@ -22,7 +22,7 @@ import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.awt.geom.AffineTransform;
 
-import enerj.lang.*;
+
 
 /**
  * This LuminanceSource implementation is meant for J2SE clients and our blackbox unit tests.
@@ -35,7 +35,7 @@ public final class BufferedImageLuminanceSource extends LuminanceSource {
   private final BufferedImage image;
   private final int left;
   private final int top;
-  private @Approx int[] rgbData;
+  private  int[] rgbData;
 
   public BufferedImageLuminanceSource(BufferedImage image) {
     this(image, 0, 0, image.getWidth(), image.getHeight());
@@ -59,47 +59,47 @@ public final class BufferedImageLuminanceSource extends LuminanceSource {
   // These methods use an integer calculation for luminance derived from:
   // <code>Y = 0.299R + 0.587G + 0.114B</code>
   @Override
-  public @Approx byte[] getRow(int y, @Approx byte[] row) {
+  public  byte[] getRow(int y,  byte[] row) {
     if (y < 0 || y >= getHeight()) {
       throw new IllegalArgumentException("Requested row is outside the image: " + y);
     }
     int width = getWidth();
     if (row == null || row.length < width) {
-      row = new @Approx byte[width];
+      row = new  byte[width];
     }
 
     if (rgbData == null || rgbData.length < width) {
-      rgbData = new @Approx int[width];
+      rgbData = new  int[width];
     }
     image.getRGB(left, top + y, width, 1, (int[])(Object)rgbData, 0, width); //EnerJ TODO
     for (int x = 0; x < width; x++) {
-      @Approx int pixel = rgbData[x];
-      @Approx int luminance = (306 * ((pixel >> 16) & 0xFF) +
+       int pixel = rgbData[x];
+       int luminance = (306 * ((pixel >> 16) & 0xFF) +
           601 * ((pixel >> 8) & 0xFF) +
           117 * (pixel & 0xFF)) >> 10;
-      row[x] = (@Approx byte) luminance;
+      row[x] = ( byte) luminance;
     }
     return row;
   }
 
-  @Override
-  public @Approx byte[] getMatrix() {
+@Override
+  public  byte[] getMatrix() {
     int width = getWidth();
     int height = getHeight();
     int area = width * height;
-    @Approx byte[] matrix = new @Approx byte[area];
+     byte[] matrix = new  byte[area];
 
-    @Approx int[] rgb = new @Approx int[area];
+     int[] rgb = new  int[area];
     image.getRGB(left, top, width, height, (int[])(Object)rgb, 0, width); // EnerJ TODO
     
     for (int y = 0; y < height; y++) {
       int offset = y * width;
       for (int x = 0; x < width; x++) {
-        @Approx int pixel = rgb[offset + x];
-        @Approx int luminance = (306 * ((pixel >> 16) & 0xFF) +
+         int pixel = rgb[offset + x];
+         int luminance = (306 * ((pixel >> 16) & 0xFF) +
             601 * ((pixel >> 8) & 0xFF) +
             117 * (pixel & 0xFF)) >> 10;
-        matrix[offset + x] = (@Approx byte) luminance;
+        matrix[offset + x] = ( byte) luminance;
       }
     }
     return matrix;

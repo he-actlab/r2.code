@@ -16,7 +16,7 @@
 
 package com.google.zxing;
 
-import enerj.lang.*;
+
 
 /**
  * The purpose of this class hierarchy is to abstract different bitmap implementations across
@@ -49,7 +49,7 @@ public abstract class LuminanceSource {
    *            Always use the returned object, and ignore the .length of the array.
    * @return An array containing the luminance data.
    */
-  public abstract @Approx byte[] getRow(int y, @Approx byte[] row);
+  public abstract  byte[] getRow(int y,  byte[] row);
 
   /**
    * Fetches luminance data for the underlying bitmap. Values should be fetched using:
@@ -59,7 +59,7 @@ public abstract class LuminanceSource {
    *         larger than width * height bytes on some platforms. Do not modify the contents
    *         of the result.
    */
-  public abstract @Approx byte[] getMatrix();
+  public abstract  byte[] getMatrix();
 
   /**
    * @return The width of the bitmap.

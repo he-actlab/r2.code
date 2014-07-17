@@ -28,7 +28,7 @@ public final class Result {
 
   private final String text;
   private final byte[] rawBytes;
-  private final ResultPoint[] resultPoints;
+  public final ResultPoint[] resultPoints;
   private final BarcodeFormat format;
   private Hashtable resultMetadata;
   private final long timestamp;

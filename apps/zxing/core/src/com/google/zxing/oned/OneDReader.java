@@ -31,7 +31,7 @@ import com.google.zxing.common.BitArray;
 import java.util.Enumeration;
 import java.util.Hashtable;
 
-import enerj.lang.*;
+
 
 /**
  * Encapsulates functionality and implementation that is common to all families
@@ -187,7 +187,7 @@ public abstract class OneDReader implements Reader {
    * @throws NotFoundException if counters cannot be filled entirely from row before running out
    *  of pixels
    */
-  protected static void recordPattern(BitArray row, int start, @Approx int[] counters) throws NotFoundException {
+  protected static void recordPattern(BitArray row, int start,  int[] counters) throws NotFoundException {
     int numCounters = counters.length;
     for (int i = 0; i < numCounters; i++) {
       counters[i] = 0;
@@ -196,12 +196,15 @@ public abstract class OneDReader implements Reader {
     if (start >= end) {
       throw NotFoundException.getNotFoundInstance();
     }
-    @Approx boolean isWhite = !row.get(start);
+     boolean isWhite = !row.get(start);
     int counterPosition = 0;
     int i = start;
     while (i < end) {
-      @Approx boolean pixel = row.get(i);
-      if (Endorsements.endorse(pixel ^ isWhite)) { // that is, exactly one is true
+       boolean pixel = row.get(i);
+      //additional accept
+      pixel = accept(pixel);
+      isWhite = accept(isWhite);
+      if ((pixel ^ isWhite)) { // that is, exactly one is true
         counters[counterPosition]++;
       } else {
         counterPosition++;
@@ -220,14 +223,20 @@ public abstract class OneDReader implements Reader {
       throw NotFoundException.getNotFoundInstance();
     }
   }
+  
+  public static boolean accept(boolean b){return b;}
 
-  protected static void recordPatternInReverse(BitArray row, int start, @Approx int[] counters)
+  protected static void recordPatternInReverse(BitArray row, int start,  int[] counters)
       throws NotFoundException {
     // This could be more efficient I guess
     int numTransitionsLeft = counters.length;
-    @Approx boolean last = Endorsements.endorse(row.get(start));
+     boolean last = (row.get(start));
     while (start > 0 && numTransitionsLeft >= 0) {
-      if (Endorsements.endorse(row.get(--start) != last)) {
+      //additional accept
+      boolean rowGet = row.get(--start);
+      rowGet = accept(rowGet);
+      last = accept(last);
+      if (rowGet != last) {
         numTransitionsLeft--;
         last = !last;
       }
@@ -251,15 +260,18 @@ public abstract class OneDReader implements Reader {
    *  the total variance between counters and patterns equals the pattern length, higher values mean
    *  even more variance
    */
-  protected static @Approx int patternMatchVariance(@Approx int[] counters, @Approx int[] pattern, @Approx int maxIndividualVariance) {
+  protected static  int patternMatchVariance( int[] counters,  int[] pattern,  int maxIndividualVariance) {
     int numCounters = counters.length;
-    @Approx int total = 0;
-    @Approx int patternLength = 0;
+     int total = 0;
+     int patternLength = 0;
     for (int i = 0; i < numCounters; i++) {
       total += counters[i];
       patternLength += pattern[i];
     }
-    if (Endorsements.endorse(total < patternLength)) {
+    //additional accept
+    total = accept(total);
+    patternLength = accept(patternLength);
+    if ((total < patternLength)) {
       // If we don't even have one pixel per unit of bar width, assume this is too small
       // to reliably match, so fail:
       return Integer.MAX_VALUE;
@@ -267,15 +279,21 @@ public abstract class OneDReader implements Reader {
     // We're going to fake floating-point math in integers. We just need to use more bits.
     // Scale up patternLength so that intermediate values below like scaledCounter will have
     // more "significant digits"
-    @Approx int unitBarWidth = (total << INTEGER_MATH_SHIFT) / patternLength;
+     int unitBarWidth = (total << INTEGER_MATH_SHIFT) / patternLength;
     maxIndividualVariance = (maxIndividualVariance * unitBarWidth) >> INTEGER_MATH_SHIFT;
 
-    @Approx int totalVariance = 0;
+     int totalVariance = 0;
     for (int x = 0; x < numCounters; x++) {
-      @Approx int counter = counters[x] << INTEGER_MATH_SHIFT;
-      @Approx int scaledPattern = pattern[x] * unitBarWidth;
-      @Approx int variance = Endorsements.endorse(counter > scaledPattern) ? counter - scaledPattern : scaledPattern - counter;
-      if (Endorsements.endorse(variance > maxIndividualVariance)) {
+       int counter = counters[x] << INTEGER_MATH_SHIFT;
+       int scaledPattern = pattern[x] * unitBarWidth;
+       //additional accept
+       counter = accept(counter);
+       scaledPattern = accept(scaledPattern);
+       int variance = (counter > scaledPattern) ? counter - scaledPattern : scaledPattern - counter;
+      // addtional accept
+      variance = accept(variance);
+      maxIndividualVariance = accept(maxIndividualVariance);
+      if ((variance > maxIndividualVariance)) {
         return Integer.MAX_VALUE;
       }
       totalVariance += variance;
@@ -283,6 +301,8 @@ public abstract class OneDReader implements Reader {
     return totalVariance / total;
   }
 
+  public static int accept(int i){return i;}
+  
   /**
    * <p>Attempts to decode a one-dimensional barcode format given a single row of
    * an image.</p>

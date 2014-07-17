@@ -27,7 +27,7 @@ import com.google.zxing.common.reedsolomon.ReedSolomonException;
 
 import java.util.Hashtable;
 
-import enerj.lang.*;
+
 
 /**
  * <p>The main class which implements QR Code decoding -- as opposed to locating and extracting
@@ -43,7 +43,7 @@ public final class Decoder {
     rsDecoder = new ReedSolomonDecoder(GF256.QR_CODE_FIELD);
   }
 
-  public DecoderResult decode(@Approx boolean[][] image)
+  public DecoderResult decode( boolean[][] image)
       throws ChecksumException, FormatException, NotFoundException {
     return decode(image, null);
   }
@@ -58,13 +58,15 @@ public final class Decoder {
    * @throws FormatException if the QR Code cannot be decoded
    * @throws ChecksumException if error correction fails
    */
-  public DecoderResult decode(@Approx boolean[][] image, Hashtable hints)
+  public DecoderResult decode( boolean[][] image, Hashtable hints)
       throws ChecksumException, FormatException, NotFoundException {
     int dimension = image.length;
     BitMatrix bits = new BitMatrix(dimension);
     for (int i = 0; i < dimension; i++) {
       for (int j = 0; j < dimension; j++) {
-        if (Endorsements.endorse(image[i][j])) {
+    	//additional accept 
+    	boolean b = (image[i][j]);
+        if (b) {
           bits.set(j, i);
         }
       }

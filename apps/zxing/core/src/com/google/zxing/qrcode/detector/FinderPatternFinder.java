@@ -27,7 +27,7 @@ import com.google.zxing.common.Comparator;
 import java.util.Hashtable;
 import java.util.Vector;
 
-import enerj.lang.*;
+
 
 /**
  * <p>This class attempts to find finder patterns in a QR Code. Finder patterns are the square
@@ -101,7 +101,7 @@ public class FinderPatternFinder {
       stateCount[4] = 0;
       int currentState = 0;
       for (int j = 0; j < maxJ; j++) {
-        if (Endorsements.endorse(image.get(j, i))) {
+        if ((image.get(j, i))) {
           // Black pixel
           if ((currentState & 1) == 1) { // Counting white pixels
             currentState++;
@@ -246,14 +246,14 @@ public class FinderPatternFinder {
 
     // Start counting up from center
     int i = startI;
-    while (i >= 0 && Endorsements.endorse(image.get(centerJ, i))) {
+    while (i >= 0 && (image.get(centerJ, i))) {
       stateCount[2]++;
       i--;
     }
     if (i < 0) {
       return Float.NaN;
     }
-    while (i >= 0 && !Endorsements.endorse(image.get(centerJ, i)) && stateCount[1] <= maxCount) {
+    while (i >= 0 && !(image.get(centerJ, i)) && stateCount[1] <= maxCount) {
       stateCount[1]++;
       i--;
     }
@@ -261,7 +261,7 @@ public class FinderPatternFinder {
     if (i < 0 || stateCount[1] > maxCount) {
       return Float.NaN;
     }
-    while (i >= 0 && Endorsements.endorse(image.get(centerJ, i)) && stateCount[0] <= maxCount) {
+    while (i >= 0 && (image.get(centerJ, i)) && stateCount[0] <= maxCount) {
       stateCount[0]++;
       i--;
     }
@@ -271,21 +271,21 @@ public class FinderPatternFinder {
 
     // Now also count down from center
     i = startI + 1;
-    while (i < maxI && Endorsements.endorse(image.get(centerJ, i))) {
+    while (i < maxI && (image.get(centerJ, i))) {
       stateCount[2]++;
       i++;
     }
     if (i == maxI) {
       return Float.NaN;
     }
-    while (i < maxI && !Endorsements.endorse(image.get(centerJ, i)) && stateCount[3] < maxCount) {
+    while (i < maxI && !(image.get(centerJ, i)) && stateCount[3] < maxCount) {
       stateCount[3]++;
       i++;
     }
     if (i == maxI || stateCount[3] >= maxCount) {
       return Float.NaN;
     }
-    while (i < maxI && Endorsements.endorse(image.get(centerJ, i)) && stateCount[4] < maxCount) {
+    while (i < maxI && (image.get(centerJ, i)) && stateCount[4] < maxCount) {
       stateCount[4]++;
       i++;
     }
@@ -318,21 +318,21 @@ public class FinderPatternFinder {
     int[] stateCount = getCrossCheckStateCount();
 
     int j = startJ;
-    while (j >= 0 && Endorsements.endorse(image.get(j, centerI))) {
+    while (j >= 0 && (image.get(j, centerI))) {
       stateCount[2]++;
       j--;
     }
     if (j < 0) {
       return Float.NaN;
     }
-    while (j >= 0 && !Endorsements.endorse(image.get(j, centerI)) && stateCount[1] <= maxCount) {
+    while (j >= 0 && !(image.get(j, centerI)) && stateCount[1] <= maxCount) {
       stateCount[1]++;
       j--;
     }
     if (j < 0 || stateCount[1] > maxCount) {
       return Float.NaN;
     }
-    while (j >= 0 && Endorsements.endorse(image.get(j, centerI)) && stateCount[0] <= maxCount) {
+    while (j >= 0 && (image.get(j, centerI)) && stateCount[0] <= maxCount) {
       stateCount[0]++;
       j--;
     }
@@ -341,21 +341,21 @@ public class FinderPatternFinder {
     }
 
     j = startJ + 1;
-    while (j < maxJ && Endorsements.endorse(image.get(j, centerI))) {
+    while (j < maxJ && (image.get(j, centerI))) {
       stateCount[2]++;
       j++;
     }
     if (j == maxJ) {
       return Float.NaN;
     }
-    while (j < maxJ && !Endorsements.endorse(image.get(j, centerI)) && stateCount[3] < maxCount) {
+    while (j < maxJ && !(image.get(j, centerI)) && stateCount[3] < maxCount) {
       stateCount[3]++;
       j++;
     }
     if (j == maxJ || stateCount[3] >= maxCount) {
       return Float.NaN;
     }
-    while (j < maxJ && Endorsements.endorse(image.get(j, centerI)) && stateCount[4] < maxCount) {
+    while (j < maxJ && (image.get(j, centerI)) && stateCount[4] < maxCount) {
       stateCount[4]++;
       j++;
     }
@@ -395,23 +395,26 @@ public class FinderPatternFinder {
         stateCount[4];
     float centerJ = centerFromEnd(stateCount, j);
     float centerI = crossCheckVertical(i, (int)centerJ, stateCount[2], stateCountTotal);
-    if (!ApproxMath.isNaN(centerI)) {
+    if (!Float.isNaN(centerI)) {
       // Re-cross check
       centerJ = crossCheckHorizontal((int)centerJ, (int)centerI, stateCount[2], stateCountTotal);
-      if (!ApproxMath.isNaN(centerJ)) {
+      if (!Float.isNaN(centerJ)) {
         float estimatedModuleSize = (float) stateCountTotal / 7.0f;
         boolean found = false;
         int max = possibleCenters.size();
         for (int index = 0; index < max; index++) {
           FinderPattern center = (FinderPattern) possibleCenters.elementAt(index);
           // Look for about the same center and module size:
-          if (Endorsements.endorse(center.aboutEquals(estimatedModuleSize, centerI, centerJ))) {
+          if ((center.aboutEquals(estimatedModuleSize, centerI, centerJ))) {
             center.incrementCount();
             found = true;
             break;
           }
         }
         if (!found) {
+          //jspark
+          alloc_TAG3();
+          //krapsj
           ResultPoint point = new FinderPattern(centerJ, centerI, estimatedModuleSize);
           possibleCenters.addElement(point);
           if (resultPointCallback != null) {
@@ -423,6 +426,10 @@ public class FinderPatternFinder {
     }
     return false;
   }
+  
+  //jspark
+  public void alloc_TAG3(){};
+  //krapsj
 
   /**
    * @return number of rows we could safely skip during scanning, based on the first
@@ -483,7 +490,7 @@ public class FinderPatternFinder {
     float totalDeviation = 0.0f;
     for (int i = 0; i < max; i++) {
       FinderPattern pattern = (FinderPattern) possibleCenters.elementAt(i);
-      totalDeviation += ApproxMath.abs(pattern.getEstimatedModuleSize() - average);
+      totalDeviation += Math.abs(pattern.getEstimatedModuleSize() - average);
     }
     return totalDeviation <= 0.05f * totalModuleSize;
   }
@@ -513,7 +520,7 @@ public class FinderPatternFinder {
       float average = totalModuleSize / (float) startSize;
       for (int i = 0; i < possibleCenters.size() && possibleCenters.size() > 3; i++) {
         FinderPattern pattern = (FinderPattern) possibleCenters.elementAt(i);
-        if (Endorsements.endorse(ApproxMath.abs(pattern.getEstimatedModuleSize() - average) > 0.2f * average)) {
+        if ((Math.abs(pattern.getEstimatedModuleSize() - average) > 0.2f * average)) {
           possibleCenters.removeElementAt(i);
           i--;
         }

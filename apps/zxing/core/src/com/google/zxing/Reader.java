@@ -42,7 +42,7 @@ public interface Reader {
   Result decode(BinaryBitmap image) throws NotFoundException, ChecksumException, FormatException;
 
   /**
-   * Locates and decodes a barcode in some format within an image. This method also accepts
+   * Locates and decodes a barcode in some format within an image. This method also s
    * hints, each possibly associated to some data, which may help the implementation decode.
    *
    * @param image image of barcode to decode

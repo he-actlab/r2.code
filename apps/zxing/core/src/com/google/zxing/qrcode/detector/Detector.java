@@ -29,7 +29,7 @@ import com.google.zxing.qrcode.decoder.Version;
 
 import java.util.Hashtable;
 
-import enerj.lang.*;
+
 
 /**
  * <p>Encapsulates logic that can detect a QR Code in an image, even if the QR Code
@@ -83,6 +83,8 @@ public class Detector {
     return processFinderPatternInfo(info);
   }
 
+  public static float accept(float f){return f;}
+  
   protected DetectorResult processFinderPatternInfo(FinderPatternInfo info)
       throws NotFoundException, FormatException {
 
@@ -90,9 +92,11 @@ public class Detector {
     FinderPattern topRight = info.getTopRight();
     FinderPattern bottomLeft = info.getBottomLeft();
 
-    @Approx float moduleSize = calculateModuleSize(topLeft, topRight, bottomLeft);
-    if (Endorsements.endorse(moduleSize < 1.0f)) {
-        System.err.println("module too small " + Endorsements.endorse(moduleSize));
+     float moduleSize = calculateModuleSize(topLeft, topRight, bottomLeft);
+    //additional accept
+    moduleSize = accept(moduleSize);
+    if ((moduleSize < 1.0f)) {
+        System.err.println("module too small " + (moduleSize));
       throw NotFoundException.getNotFoundInstance();
     }
     int dimension = computeDimension(topLeft, topRight, bottomLeft, moduleSize);
@@ -199,10 +203,12 @@ public class Detector {
   protected static int computeDimension(ResultPoint topLeft,
                                         ResultPoint topRight,
                                         ResultPoint bottomLeft,
-                                      @Approx float moduleSize) throws NotFoundException {
-    int tltrCentersDimension = round(Endorsements.endorse(ResultPoint.distance(topLeft, topRight) / moduleSize));
-    int tlblCentersDimension = round(Endorsements.endorse(ResultPoint.distance(topLeft, bottomLeft) / moduleSize));
+                                       float moduleSize) throws NotFoundException {
+    int tltrCentersDimension = round((ResultPoint.distance(topLeft, topRight) / moduleSize));
+    int tlblCentersDimension = round((ResultPoint.distance(topLeft, bottomLeft) / moduleSize));
     int dimension = ((tltrCentersDimension + tlblCentersDimension) >> 1) + 7;
+    //additional accept
+    dimension = accept(dimension);
     switch (dimension & 0x03) { // mod 4
       case 0:
         dimension++;
@@ -222,7 +228,7 @@ public class Detector {
    * <p>Computes an average estimated module size based on estimated derived from the positions
    * of the three finder patterns.</p>
    */
-  protected @Approx float calculateModuleSize(ResultPoint topLeft,
+  protected  float calculateModuleSize(ResultPoint topLeft,
                                       ResultPoint topRight,
                                       ResultPoint bottomLeft) {
     // Take the average
@@ -235,19 +241,23 @@ public class Detector {
    * {@link #sizeOfBlackWhiteBlackRunBothWays(int, int, int, int)} to figure the
    * width of each, measuring along the axis between their centers.</p>
    */
-  private @Approx float calculateModuleSizeOneWay(ResultPoint pattern, ResultPoint otherPattern) {
-    @Approx float moduleSizeEst1 = sizeOfBlackWhiteBlackRunBothWays((int) pattern.getX(),
+  private  float calculateModuleSizeOneWay(ResultPoint pattern, ResultPoint otherPattern) {
+     float moduleSizeEst1 = sizeOfBlackWhiteBlackRunBothWays((int) pattern.getX(),
         (int) pattern.getY(),
         (int) otherPattern.getX(),
         (int) otherPattern.getY());
-    @Approx float moduleSizeEst2 = sizeOfBlackWhiteBlackRunBothWays((int) otherPattern.getX(),
+     float moduleSizeEst2 = sizeOfBlackWhiteBlackRunBothWays((int) otherPattern.getX(),
         (int) otherPattern.getY(),
         (int) pattern.getX(),
         (int) pattern.getY());
-    if (Endorsements.endorse(ApproxMath.isNaN(moduleSizeEst1))) {
+     //additional accept
+     moduleSizeEst1 = accept(moduleSizeEst1);
+    if ((Float.isNaN(moduleSizeEst1))) {
       return moduleSizeEst2 / 7.0f;
     }
-    if (Endorsements.endorse(ApproxMath.isNaN(moduleSizeEst2))) {
+    //additional accept
+    moduleSizeEst2 = accept(moduleSizeEst2);
+    if ((Float.isNaN(moduleSizeEst2))) {
       return moduleSizeEst1 / 7.0f;
     }
     // Average them, and divide by 7 since we've counted the width of 3 black modules,
@@ -260,13 +270,15 @@ public class Detector {
    * a finder pattern by looking for a black-white-black run from the center in the direction
    * of another point (another finder pattern center), and in the opposite direction too.</p>
    */
-  private @Approx float sizeOfBlackWhiteBlackRunBothWays(int fromX, int fromY, int toX, int toY) {
+  private  float sizeOfBlackWhiteBlackRunBothWays(int fromX, int fromY, int toX, int toY) {
 
-   @Approx float result = sizeOfBlackWhiteBlackRun(fromX, fromY, toX, toY);
+    float result = sizeOfBlackWhiteBlackRun(fromX, fromY, toX, toY);
 
    // Now count other way -- don't run off image though of course
-   @Approx float scale = 1.0f;
+    float scale = 1.0f;
    int otherToX = fromX - (toX - fromX);
+   //additional accept
+   otherToX = accept(otherToX);
    if (otherToX < 0) {
      scale = (float) fromX / (float) (fromX - otherToX);
      otherToX = 0;
@@ -274,9 +286,11 @@ public class Detector {
      scale = (float) (image.getWidth() - 1 - fromX) / (float) (otherToX - fromX);
      otherToX = image.getWidth() - 1;
    }
-   int otherToY = (int) (fromY - (toY - fromY) * Endorsements.endorse(scale)); // EnerJ TODO
+   int otherToY = (int) (fromY - (toY - fromY) * (scale)); // EnerJ TODO
 
    scale = 1.0f;
+   //additional accept
+   otherToY = accept(otherToY);
    if (otherToY < 0) {
      scale = (float) fromY / (float) (fromY - otherToY);
      otherToY = 0;
@@ -284,7 +298,7 @@ public class Detector {
      scale = (float) (image.getHeight() - 1 - fromY) / (float) (otherToY - fromY);
      otherToY = image.getHeight() - 1;
    }
-   otherToX = (int) (fromX + (otherToX - fromX) * Endorsements.endorse(scale)); // EnerJ TODO
+   otherToX = (int) (fromX + (otherToX - fromX) * (scale)); // EnerJ TODO
 
    result += sizeOfBlackWhiteBlackRun(fromX, fromY, otherToX, otherToY);
    return result - 1.0f; // -1 because we counted the middle pixel twice
@@ -298,7 +312,7 @@ public class Detector {
    * <p>This is used when figuring out how wide a finder pattern is, when the finder pattern
    * may be skewed or rotated.</p>
    */
-  private @Approx float sizeOfBlackWhiteBlackRun(int fromX, int fromY, int toX, int toY) {
+  private  float sizeOfBlackWhiteBlackRun(int fromX, int fromY, int toX, int toY) {
     // Mild variant of Bresenham's algorithm;
     // see http://en.wikipedia.org/wiki/Bresenham's_line_algorithm
     boolean steep = Math.abs(toY - fromY) > Math.abs(toX - fromX);
@@ -322,19 +336,28 @@ public class Detector {
       int realX = steep ? y : x;
       int realY = steep ? x : y;
       if (state == 1) { // In white pixels, looking for black
-        if (Endorsements.endorse(image.get(realX, realY))) {
+    	//additional accept
+    	boolean imageGet = (image.get(realX, realY));
+    	imageGet = accept(imageGet);
+        if (imageGet) {
           state++;
         }
       } else {
-        if (!Endorsements.endorse(image.get(realX, realY))) {
+      	//additional accept
+      	boolean imageGet = (image.get(realX, realY));
+      	imageGet = accept(imageGet);
+        if (!imageGet) {
           state++;
         }
       }
 
       if (state == 3) { // Found black, white, black, and stumbled back onto white; done
-        @Approx int diffX = x - fromX;
-        @Approx int diffY = y - fromY;
-        return (@Approx float) ApproxMath.sqrt((@Approx double) (diffX * diffX + diffY * diffY));
+         int diffX = x - fromX;
+         int diffY = y - fromY;
+      	//additional accept
+         diffX = accept(diffX);
+         diffY = accept(diffY);
+        return ( float) Math.sqrt(( double) (diffX * diffX + diffY * diffY));
       }
       error += dy;
       if (error > 0) {
@@ -345,11 +368,16 @@ public class Detector {
         error -= dx;
       }
     }
-    @Approx int diffX = toX - fromX;
-    @Approx int diffY = toY - fromY;
-    return (@Approx float) ApproxMath.sqrt((@Approx double) (diffX * diffX + diffY * diffY));
+     int diffX = toX - fromX;
+     int diffY = toY - fromY;
+ 	//additional accept
+     diffX = accept(diffX);
+     diffY = accept(diffY);
+    return ( float) Math.sqrt(( double) (diffX * diffX + diffY * diffY));
   }
 
+  public static int accept(int i){return i;}
+  
   /**
    * <p>Attempts to locate an alignment pattern in a limited region of the image, which is
    * guessed to contain it. This method uses {@link AlignmentPattern}.</p>
@@ -361,32 +389,49 @@ public class Detector {
    * @return {@link AlignmentPattern} if found, or null otherwise
    * @throws NotFoundException if an unexpected error occurs during detection
    */
-  protected AlignmentPattern findAlignmentInRegion(@Approx float overallEstModuleSize,
-                                                   @Approx int estAlignmentX,
-                                                   @Approx int estAlignmentY,
-                                                   @Approx float allowanceFactor)
+  protected AlignmentPattern findAlignmentInRegion( float overallEstModuleSize,
+                                                    int estAlignmentX,
+                                                    int estAlignmentY,
+                                                    float allowanceFactor)
       throws NotFoundException {
     // Look for an alignment pattern (3 modules in size) around where it
     // should be
-    @Approx int allowance = (@Approx int) (allowanceFactor * overallEstModuleSize);
-    @Approx int alignmentAreaLeftX = ApproxMath.max(0, estAlignmentX - allowance);
-    @Approx int alignmentAreaRightX = ApproxMath.min(image.getWidth() - 1, estAlignmentX + allowance);
-    if (Endorsements.endorse(alignmentAreaRightX - alignmentAreaLeftX < overallEstModuleSize * 3)) {
+     int allowance = ( int) (allowanceFactor * overallEstModuleSize);
+     //additional accept
+     allowance = accept(allowance);
+     estAlignmentX = accept(estAlignmentX);
+     //additional accept
+     int width = image.getWidth();
+     width = accept(width);
+     int alignmentAreaLeftX = Math.max(0, estAlignmentX - allowance);
+     int alignmentAreaRightX = Math.min(width - 1, estAlignmentX + allowance);
+    //additional accept
+    alignmentAreaLeftX = accept(alignmentAreaLeftX);
+    alignmentAreaRightX = accept(alignmentAreaRightX);
+    overallEstModuleSize = accept(overallEstModuleSize);
+    if ((alignmentAreaRightX - alignmentAreaLeftX < overallEstModuleSize * 3)) {
         System.err.println("alignment vs module size");
       throw NotFoundException.getNotFoundInstance();
     }
 
-    @Approx int alignmentAreaTopY = ApproxMath.max(0, estAlignmentY - allowance);
-    @Approx int alignmentAreaBottomY = ApproxMath.min(image.getHeight() - 1, estAlignmentY + allowance);
+     //additional accept
+     estAlignmentY = accept(estAlignmentY);
+     allowance = accept(allowance);
+     int alignmentAreaTopY = Math.max(0, estAlignmentY - allowance);
+     int height = image.getHeight();
+     height = accept(height);
+     estAlignmentY = accept(estAlignmentY);
+     allowance = accept(allowance);
+     int alignmentAreaBottomY = Math.min(height - 1, estAlignmentY + allowance);
 
     AlignmentPatternFinder alignmentFinder =
         new AlignmentPatternFinder(
             image,
-            Endorsements.endorse(alignmentAreaLeftX),
-            Endorsements.endorse(alignmentAreaTopY),
-            Endorsements.endorse(alignmentAreaRightX - alignmentAreaLeftX),
-            Endorsements.endorse(alignmentAreaBottomY - alignmentAreaTopY),
-            Endorsements.endorse(overallEstModuleSize),
+            (alignmentAreaLeftX),
+            (alignmentAreaTopY),
+            (alignmentAreaRightX - alignmentAreaLeftX),
+            (alignmentAreaBottomY - alignmentAreaTopY),
+            (overallEstModuleSize),
             resultPointCallback);
     return alignmentFinder.find();
   }
@@ -398,4 +443,6 @@ public class Detector {
   private static int round(float d) {
     return (int) (d + 0.5f);
   }
+  
+  public static boolean accept(boolean b){return b;}
 }

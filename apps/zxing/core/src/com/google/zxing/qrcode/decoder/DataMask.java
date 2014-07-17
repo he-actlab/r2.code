@@ -18,7 +18,7 @@ package com.google.zxing.qrcode.decoder;
 
 import com.google.zxing.common.BitMatrix;
 
-import enerj.lang.*;
+
 
 /**
  * <p>Encapsulates data masks for the data bits in a QR code, per ISO 18004:2006 6.8. Implementations
@@ -60,7 +60,7 @@ abstract class DataMask {
   final void unmaskBitMatrix(BitMatrix bits, int dimension) {
     for (int i = 0; i < dimension; i++) {
       for (int j = 0; j < dimension; j++) {
-        if (Endorsements.endorse(isMasked(i, j))) {
+        if ((isMasked(i, j))) {
           bits.flip(j, i);
         }
       }

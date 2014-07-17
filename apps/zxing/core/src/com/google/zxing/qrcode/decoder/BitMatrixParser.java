@@ -19,7 +19,7 @@ package com.google.zxing.qrcode.decoder;
 import com.google.zxing.FormatException;
 import com.google.zxing.common.BitMatrix;
 
-import enerj.lang.*;
+
 
 /**
  * @author Sean Owen
@@ -137,7 +137,7 @@ final class BitMatrixParser {
   }
 
   private int copyBit(int i, int j, int versionBits) {
-    return Endorsements.endorse(bitMatrix.get(i, j)) ? (versionBits << 1) | 0x1 : versionBits << 1;
+    return (bitMatrix.get(i, j)) ? (versionBits << 1) | 0x1 : versionBits << 1;
   }
 
   /**
@@ -182,7 +182,7 @@ final class BitMatrixParser {
             // Read a bit
             bitsRead++;
             currentByte <<= 1;
-            if (Endorsements.endorse(bitMatrix.get(j - col, i))) {
+            if ((bitMatrix.get(j - col, i))) {
               currentByte |= 1;
             }
             // If we've made a whole byte, save it off

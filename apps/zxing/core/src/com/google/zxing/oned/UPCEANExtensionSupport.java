@@ -24,7 +24,7 @@ import com.google.zxing.Result;
 import com.google.zxing.ResultMetadataType;
 import com.google.zxing.common.BitArray;
 
-import enerj.lang.*;
+
 
 final class UPCEANExtensionSupport {
 
@@ -75,10 +75,10 @@ final class UPCEANExtensionSupport {
         lgPatternFound |= 1 << (4 - x);
       }
       // Read off separator
-      while (rowOffset < end && !Endorsements.endorse(row.get(rowOffset))) {
+      while (rowOffset < end && !(row.get(rowOffset))) {
         rowOffset++;
       }
-      while (rowOffset < end && Endorsements.endorse(row.get(rowOffset))) {
+      while (rowOffset < end && (row.get(rowOffset))) {
         rowOffset++;
       }
     }

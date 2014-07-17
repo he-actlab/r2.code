@@ -34,7 +34,7 @@ import com.google.zxing.qrcode.detector.Detector;
 
 import java.util.Hashtable;
 
-import enerj.lang.*;
+
 
 /**
  * This implementation can detect and decode QR Codes in an image.
@@ -70,13 +70,18 @@ public class QRCodeReader implements Reader {
     if (hints != null && hints.containsKey(DecodeHintType.PURE_BARCODE)) {
       BitMatrix bits = extractPureBits(image.getBlackMatrix());
       decoderResult = decoder.decode(bits, hints);
+      accept_all_FIELD1_TAG2(bits.bits);
       points = NO_POINTS;
     } else {
       DetectorResult detectorResult = new Detector(image.getBlackMatrix()).detect(hints);
       decoderResult = decoder.decode(detectorResult.getBits(), hints);
+      BitMatrix bitMatrix = detectorResult.getBits();
       points = detectorResult.getPoints();
+      accept_all_FIELD2_TAG3(points[0]);
+      accept_all_FIELD3_TAG3(points[0]);
+      accept_all_FIELD1_TAG2(bitMatrix.bits);
     }
-
+    
     Result result = new Result(decoderResult.getText(), decoderResult.getRawBytes(), points, BarcodeFormat.QR_CODE);
     if (decoderResult.getByteSegments() != null) {
       result.putMetadata(ResultMetadataType.BYTE_SEGMENTS, decoderResult.getByteSegments());
@@ -86,7 +91,14 @@ public class QRCodeReader implements Reader {
     }
     return result;
   }
-
+   
+  public static float accept(float x) {return x;}
+  public static float precise(float x) {return x;}
+  public static ResultPoint accept_all(ResultPoint x) {return x;}
+  public static void accept_all_FIELD1_TAG2(int[] i){}
+  public static void accept_all_FIELD2_TAG3(ResultPoint p){}
+  public static void accept_all_FIELD3_TAG3(ResultPoint p){}
+  
   public void reset() {
     // do nothing
   }
@@ -112,7 +124,7 @@ public class QRCodeReader implements Reader {
     }
     int x = leftTopBlack[0];
     int y = leftTopBlack[1];
-    while (x < minDimension && y < minDimension && Endorsements.endorse(image.get(x, y))) {
+    while (x < minDimension && y < minDimension && (image.get(x, y))) {
       x++;
       y++;
     }
@@ -162,12 +174,17 @@ public class QRCodeReader implements Reader {
     for (int i = 0; i < dimension; i++) {
       int iOffset = y + i * moduleSize;
       for (int j = 0; j < dimension; j++) {
-        if (Endorsements.endorse(image.get(x + j * moduleSize, iOffset))) {
+    	//additional accept
+    	boolean imageGet = image.get(x + j * moduleSize, iOffset);
+    	imageGet = accept(imageGet);
+        if (imageGet) {
           bits.set(j, i);
         }
       }
     }
     return bits;
   }
+
+  private static boolean accept(boolean imageGet) {return imageGet;}
 
 }

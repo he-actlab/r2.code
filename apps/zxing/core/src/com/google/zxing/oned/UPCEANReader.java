@@ -30,7 +30,7 @@ import com.google.zxing.common.BitArray;
 
 import java.util.Hashtable;
 
-import enerj.lang.*;
+
 
 /**
  * <p>Encapsulates functionality and implementation that is common to UPC and EAN families
@@ -104,19 +104,25 @@ public abstract class UPCEANReader extends OneDReader {
   }
 
   static int[] findStartGuardPattern(BitArray row) throws NotFoundException {
-    @Approx boolean foundStart = false;
+     boolean foundStart = false;
     int[] startRange = null;
     int nextStart = 0;
-    while (!Endorsements.endorse(foundStart)) {
+    //additional accept
+    foundStart = accept(foundStart);
+    while (!(foundStart)) {
       startRange = findGuardPattern(row, nextStart, false, START_END_PATTERN);
       int start = startRange[0];
       nextStart = startRange[1];
       // Make sure there is a quiet zone at least as big as the start pattern before the barcode.
-      // If this check would run off the left edge of the image, do not accept this barcode,
+      // If this check would run off the left edge of the image, do not  this barcode,
       // as it is very likely to be a false positive.
       int quietStart = start - (nextStart - start);
+      //additional accept
+      quietStart = accept(quietStart);
       if (quietStart >= 0) {
         foundStart = row.isRange(quietStart, start, false);
+        //additional accept
+        foundStart = accept(foundStart);
       }
     }
     return startRange;
@@ -257,29 +263,39 @@ public abstract class UPCEANReader extends OneDReader {
    * @return start/end horizontal offset of guard pattern, as an array of two ints
    * @throws NotFoundException if pattern is not found
    */
-  static int[] findGuardPattern(BitArray row, int rowOffset, boolean whiteFirst, @Approx int[] pattern)
+  static int[] findGuardPattern(BitArray row, int rowOffset, boolean whiteFirst,  int[] pattern)
       throws NotFoundException {
     int patternLength = pattern.length;
-    @Approx int[] counters = new @Approx int[patternLength];
+     int[] counters = new  int[patternLength];
     int width = row.getSize();
-    @Approx boolean isWhite = false;
+     boolean isWhite = false;
+    //additional accept
+    rowOffset = accept(rowOffset);
+    width = accept(width);
     while (rowOffset < width) {
       isWhite = !row.get(rowOffset);
-      if (Endorsements.endorse(whiteFirst == isWhite)) {
+      //additional accept
+      isWhite = accept(isWhite);
+      if ((whiteFirst == isWhite)) {
         break;
       }
       rowOffset++;
+      //additional accept
+      rowOffset = accept(rowOffset);
     }
 
     int counterPosition = 0;
     int patternStart = rowOffset;
     for (int x = rowOffset; x < width; x++) {
-      @Approx boolean pixel = row.get(x);
-      if (Endorsements.endorse(pixel ^ isWhite)) {
+       boolean pixel = row.get(x);
+      // additional accept
+      pixel = accept(pixel);
+      isWhite = accept(isWhite);
+      if ((pixel ^ isWhite)) {
         counters[counterPosition]++;
       } else {
         if (counterPosition == patternLength - 1) {
-          if (Endorsements.endorse(patternMatchVariance(counters, pattern, MAX_INDIVIDUAL_VARIANCE) < MAX_AVG_VARIANCE)) {
+          if ((patternMatchVariance(counters, pattern, MAX_INDIVIDUAL_VARIANCE) < MAX_AVG_VARIANCE)) {
             return new int[]{patternStart, x};
           }
           patternStart += counters[0] + counters[1];
@@ -311,20 +327,25 @@ public abstract class UPCEANReader extends OneDReader {
    * @return horizontal offset of first pixel beyond the decoded digit
    * @throws NotFoundException if digit cannot be decoded
    */
-  static @Approx int decodeDigit(BitArray row, @Approx int[] counters, int rowOffset, @Approx int[][] patterns)
+  static  int decodeDigit(BitArray row,  int[] counters, int rowOffset,  int[][] patterns)
       throws NotFoundException {
     recordPattern(row, rowOffset, counters);
-    @Approx int bestVariance = MAX_AVG_VARIANCE; // worst variance we'll accept
+     int bestVariance = MAX_AVG_VARIANCE; // worst variance we'll 
     int bestMatch = -1;
     int max = patterns.length;
     for (int i = 0; i < max; i++) {
-      @Approx int[] pattern = patterns[i];
-      @Approx int variance = patternMatchVariance(counters, pattern, MAX_INDIVIDUAL_VARIANCE);
-      if (Endorsements.endorse(variance < bestVariance)) {
+       int[] pattern = patterns[i];
+       int variance = patternMatchVariance(counters, pattern, MAX_INDIVIDUAL_VARIANCE);
+      //additional accept
+      variance = accept(variance);
+      bestVariance = accept(bestVariance);
+      if ((variance < bestVariance)) {
         bestVariance = variance;
         bestMatch = i;
       }
     }
+    //additional accept
+    bestMatch = accept(bestMatch);
     if (bestMatch >= 0) {
       return bestMatch;
     } else {

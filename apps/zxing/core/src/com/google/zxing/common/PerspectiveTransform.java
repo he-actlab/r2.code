@@ -16,8 +16,6 @@
 
 package com.google.zxing.common;
 
-import enerj.lang.*;
-
 /**
  * <p>This class implements a perspective transform in two dimensions. Given four source and four
  * destination points, it will compute the transformation implied between them. The code is based
@@ -57,21 +55,21 @@ public final class PerspectiveTransform {
     return sToQ.times(qToS);
   }
 
-  public void transformPoints(@Approx float[] points) {
+  public void transformPoints( float[] points) {
     int max = points.length;
-    @Approx float a11 = this.a11;
-    @Approx float a12 = this.a12;
-    @Approx float a13 = this.a13;
-    @Approx float a21 = this.a21;
-    @Approx float a22 = this.a22;
-    @Approx float a23 = this.a23;
-    @Approx float a31 = this.a31;
-    @Approx float a32 = this.a32;
-    @Approx float a33 = this.a33;
+     float a11 = this.a11;
+     float a12 = this.a12;
+     float a13 = this.a13;
+     float a21 = this.a21;
+     float a22 = this.a22;
+     float a23 = this.a23;
+     float a31 = this.a31;
+     float a32 = this.a32;
+     float a33 = this.a33;
     for (int i = 0; i < max; i += 2) {
-      @Approx float x = points[i];
-      @Approx float y = points[i + 1];
-      @Approx float denominator = a13 * x + a23 * y + a33;
+       float x = points[i];
+       float y = points[i + 1];
+       float denominator = a13 * x + a23 * y + a33;
       points[i] = (a11 * x + a21 * y + a31) / denominator;
       points[i + 1] = (a12 * x + a22 * y + a32) / denominator;
     }
@@ -89,12 +87,17 @@ public final class PerspectiveTransform {
     }
   }
 
+  public static float accept(float f){return f;}
+  
   public static PerspectiveTransform squareToQuadrilateral(float x0, float y0,
                                                            float x1, float y1,
                                                            float x2, float y2,
                                                            float x3, float y3) {
     float dy2 = y3 - y2;
     float dy3 = y0 - y1 + y2 - y3;
+    //additional accept
+    dy2 = accept(dy2);
+    dy3 = accept(dy3);
     if (dy2 == 0.0f && dy3 == 0.0f) {
       return new PerspectiveTransform(x1 - x0, x2 - x1, x0,
           y1 - y0, y2 - y1, y0,

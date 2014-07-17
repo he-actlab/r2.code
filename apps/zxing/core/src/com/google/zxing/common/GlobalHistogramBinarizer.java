@@ -20,8 +20,6 @@ import com.google.zxing.Binarizer;
 import com.google.zxing.LuminanceSource;
 import com.google.zxing.NotFoundException;
 
-import enerj.lang.*;
-
 /**
  * This Binarizer implementation uses the old ZXing global histogram approach. It is suitable
  * for low-end mobile devices which don't have enough CPU or memory to use a local thresholding
@@ -39,8 +37,8 @@ public class GlobalHistogramBinarizer extends Binarizer {
   private static final int LUMINANCE_SHIFT = 8 - LUMINANCE_BITS;
   private static final int LUMINANCE_BUCKETS = 1 << LUMINANCE_BITS;
 
-  private @Approx byte[] luminances = null;
-  private @Approx int[] buckets = null;
+  private  byte[] luminances = null;
+  private  int[] buckets = null;
 
   public GlobalHistogramBinarizer(LuminanceSource source) {
     super(source);
@@ -57,21 +55,26 @@ public class GlobalHistogramBinarizer extends Binarizer {
     }
 
     initArrays(width);
-    @Approx byte[] localLuminances = source.getRow(y, luminances);
-    @Approx int[] localBuckets = buckets;
+     byte[] localLuminances = source.getRow(y, luminances);
+     int[] localBuckets = buckets;
     for (int x = 0; x < width; x++) {
-      int pixel = Endorsements.endorse(localLuminances[x] & 0xff);
+      int pixel = (localLuminances[x] & 0xff);
+      //additional accept
+      pixel = accept(pixel);
       localBuckets[pixel >> LUMINANCE_SHIFT]++;
     }
-    @Approx int blackPoint = estimateBlackPoint(localBuckets);
+     int blackPoint = estimateBlackPoint(localBuckets);
 
-    int left = Endorsements.endorse(localLuminances[0] & 0xff);
-    int center = Endorsements.endorse(localLuminances[1] & 0xff);
+    int left = (localLuminances[0] & 0xff);
+    int center = (localLuminances[1] & 0xff);
     for (int x = 1; x < width - 1; x++) {
-      int right = Endorsements.endorse(localLuminances[x + 1] & 0xff);
+      int right = (localLuminances[x + 1] & 0xff);
       // A simple -1 4 -1 box filter with a weight of 2.
       int luminance = ((center << 2) - left - right) >> 1;
-      if (Endorsements.endorse(luminance < blackPoint)) {
+      // additional accept
+      luminance = accept(luminance);
+      blackPoint = accept(blackPoint);
+      if ((luminance < blackPoint)) {
         row.set(x);
       }
       left = center;
@@ -79,6 +82,8 @@ public class GlobalHistogramBinarizer extends Binarizer {
     }
     return row;
   }
+  
+  public static int accept(int i){return i;}
 
   // Does not sharpen the data, as this call is intended to only be used by 2D Readers.
   public BitMatrix getBlackMatrix() throws NotFoundException {
@@ -90,27 +95,32 @@ public class GlobalHistogramBinarizer extends Binarizer {
     // Quickly calculates the histogram by sampling four rows from the image. This proved to be
     // more robust on the blackbox tests than sampling a diagonal as we used to do.
     initArrays(width);
-    @Approx int[] localBuckets = buckets;
+     int[] localBuckets = buckets;
     for (int y = 1; y < 5; y++) {
       int row = height * y / 5;
-      @Approx byte[] localLuminances = source.getRow(row, luminances);
+       byte[] localLuminances = source.getRow(row, luminances);
       int right = (width << 2) / 5;
       for (int x = width / 5; x < right; x++) {
-        int pixel = Endorsements.endorse(localLuminances[x] & 0xff);
+        int pixel = (localLuminances[x] & 0xff);
+        //additional accept
+        pixel = accept(pixel);
         localBuckets[pixel >> LUMINANCE_SHIFT]++; // EnerJ TODO
       }
     }
-    @Approx int blackPoint = estimateBlackPoint(localBuckets);
+     int blackPoint = estimateBlackPoint(localBuckets);
 
     // We delay reading the entire image luminance until the black point estimation succeeds.
     // Although we end up reading four rows twice, it is consistent with our motto of
     // "fail quickly" which is necessary for continuous scanning.
-    @Approx byte[] localLuminances = source.getMatrix();
+     byte[] localLuminances = source.getMatrix();
     for (int y = 0; y < height; y++) {
       int offset = y * width;
       for (int x = 0; x< width; x++) {
-        int pixel = Endorsements.endorse(localLuminances[offset + x] & 0xff);
-        if (Endorsements.endorse(pixel < blackPoint)) {
+        int pixel = (localLuminances[offset + x] & 0xff);
+        //additional accept
+        pixel = accept(pixel);
+        blackPoint = accept(blackPoint);
+        if ((pixel < blackPoint)) {
           matrix.set(x, y);
         }
       }
@@ -123,43 +133,55 @@ public class GlobalHistogramBinarizer extends Binarizer {
     return new GlobalHistogramBinarizer(source);
   }
 
+  public static void alloc_TAG5(){}
+  
   private void initArrays(int luminanceSize) {
     if (luminances == null || luminances.length < luminanceSize) {
-      luminances = new @Approx byte[luminanceSize];
+      luminances = new  byte[luminanceSize];
     }
     if (buckets == null) {
-      buckets = new @Approx int[LUMINANCE_BUCKETS];
+      alloc_TAG5();
+      buckets = new  int[LUMINANCE_BUCKETS];
     } else {
       for (int x = 0; x < LUMINANCE_BUCKETS; x++) {
         buckets[x] = 0;
       }
     }
   }
-
-  private static @Approx int estimateBlackPoint(@Approx int[] buckets) throws NotFoundException {
+  
+  public static int[] accept_all_FIELD1_TAG5(int[] i){return i;}
+  
+  private static  int estimateBlackPoint( int[] buckets) throws NotFoundException {
     // Find the tallest peak in the histogram.
     int numBuckets = buckets.length;
-    @Approx int maxBucketCount = 0;
+     int maxBucketCount = 0;
     int firstPeak = 0;
-    @Approx int firstPeakSize = 0;
+     int firstPeakSize = 0;
     for (int x = 0; x < numBuckets; x++) {
-      if (Endorsements.endorse(buckets[x] > firstPeakSize)) {
+      // additional accept
+      maxBucketCount = accept(maxBucketCount);
+      firstPeakSize = accept(firstPeakSize);
+      accept_all_FIELD1_TAG5(buckets);
+      if ((buckets[x] > firstPeakSize)) {
         firstPeak = x;
         firstPeakSize = buckets[x];
       }
-      if (Endorsements.endorse(buckets[x] > maxBucketCount)) {
+      if ((buckets[x] > maxBucketCount)) {
         maxBucketCount = buckets[x];
       }
     }
 
     // Find the second-tallest peak which is somewhat far from the tallest peak.
     int secondPeak = 0;
-    @Approx int secondPeakScore = 0;
+     int secondPeakScore = 0;
     for (int x = 0; x < numBuckets; x++) {
-      @Approx int distanceToBiggest = x - firstPeak;
+       int distanceToBiggest = x - firstPeak;
       // Encourage more distant second peaks by multiplying by square of distance.
-      @Approx int score = buckets[x] * distanceToBiggest * distanceToBiggest;
-      if (Endorsements.endorse(score > secondPeakScore)) {
+       int score = buckets[x] * distanceToBiggest * distanceToBiggest;
+      // additional accept 
+      score = accept(score);
+      secondPeakScore = accept(secondPeakScore);
+      if ((score > secondPeakScore)) {
         secondPeak = x;
         secondPeakScore = score;
       }
@@ -182,11 +204,14 @@ public class GlobalHistogramBinarizer extends Binarizer {
 
     // Find a valley between them that is low and closer to the white peak.
     int bestValley = secondPeak - 1;
-    @Approx int bestValleyScore = -1;
+     int bestValleyScore = -1;
     for (int x = secondPeak - 1; x > firstPeak; x--) {
       int fromFirst = x - firstPeak;
-      @Approx int score = fromFirst * fromFirst * (secondPeak - x) * (maxBucketCount - buckets[x]);
-      if (Endorsements.endorse(score > bestValleyScore)) {
+       int score = fromFirst * fromFirst * (secondPeak - x) * (maxBucketCount - buckets[x]);
+      // additional accept
+      score = accept(score);
+      bestValleyScore = accept(bestValleyScore);
+      if ((score > bestValleyScore)) {
         bestValley = x;
         bestValleyScore = score;
       }

@@ -22,7 +22,7 @@ import com.google.zxing.FormatException;
 import com.google.zxing.NotFoundException;
 import com.google.zxing.common.BitArray;
 
-import enerj.lang.*;
+
 
 /**
  * <p>Implements decoding of the UPC-E format.</p>
@@ -50,15 +50,15 @@ public final class UPCEReader extends UPCEANReader {
       {0x07, 0x0B, 0x0D, 0x0E, 0x13, 0x19, 0x1C, 0x15, 0x16, 0x1A}
   };
 
-  private final @Approx int[] decodeMiddleCounters;
+  private final  int[] decodeMiddleCounters;
 
   public UPCEReader() {
-    decodeMiddleCounters = new @Approx int[4];
+    decodeMiddleCounters = new  int[4];
   }
 
   protected int decodeMiddle(BitArray row, int[] startRange, StringBuffer result)
       throws NotFoundException {
-    @Approx int[] counters = decodeMiddleCounters;
+     int[] counters = decodeMiddleCounters;
     counters[0] = 0;
     counters[1] = 0;
     counters[2] = 0;
@@ -69,12 +69,14 @@ public final class UPCEReader extends UPCEANReader {
     int lgPatternFound = 0;
 
     for (int x = 0; x < 6 && rowOffset < end; x++) {
-      @Approx int bestMatch = decodeDigit(row, counters, rowOffset, (@Approx int [] [])L_AND_G_PATTERNS);
-      result.append((char) Endorsements.endorse('0' + bestMatch % 10));
+       int bestMatch = decodeDigit(row, counters, rowOffset, ( int [] [])L_AND_G_PATTERNS);
+      result.append((char) ('0' + bestMatch % 10));
       for (int i = 0; i < counters.length; i++) {
         rowOffset += counters[i];
       }
-      if (Endorsements.endorse(bestMatch >= 10)) {
+      //additional accept
+      bestMatch = accept(bestMatch);
+      if ((bestMatch >= 10)) {
         lgPatternFound |= 1 << (5 - x);
       }
     }
