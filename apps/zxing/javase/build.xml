@@ -39,7 +39,7 @@
     <property name="expaxanal.flag" value="${user.dir}/../analysis.flag" />
     <property name="expaxanal.result" value="${user.dir}/../analysis.result" />
 
-		<condition property="enerjc.args" value="-Alint=mbstatic,${expaxanal.flag},${expaxbc.info},${expaxanal.result}" else="-Alint=simulation,mbstatic,${expaxanal.flag},${expaxbc.info},${expaxanal.result}">
+		<condition property="enerjc.args" value="-Alint=mbstatic,expax,${expaxanal.flag},${expaxbc.info},${expaxanal.result}" else="-Alint=simulation,mbstatic,expax,${expaxanal.flag},${expaxbc.info},${expaxanal.result}">
         <isset property="env.EnerJNoSim" />
     </condition>
     <condition property="enerjc.verbose" value="false" else="true">
