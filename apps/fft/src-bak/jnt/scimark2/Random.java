@@ -121,14 +121,9 @@ public class Random {
 		double nextValue;
 
 		k = m[i] - m[j]; 
-		// additional accept
-		k = accept(k);
 		if (k < 0) 
 			k += m1; 
 		m[j] = k; 
-
-		// additional accept
-		accept_all_FIELD2_TAG();
 
 		if (i == 0) 
 			i = 16;
@@ -176,10 +171,4 @@ public class Random {
 		j = 16;
 
 	}
-
-	//jspark
-	private int accept (int i){return i;}
-	private void accept_all_FIELD2_TAG(){}
-	//krapsj
-
 }

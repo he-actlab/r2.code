@@ -76,6 +76,7 @@ public class RgbImage {
 	}
 
 	public static double sqrt (double num) {
+		//additional accept
 		num = accept(num);
 		return Math.sqrt((num));
 	}
@@ -130,8 +131,8 @@ public class RgbImage {
 	}
 
 	public static int accept(int i){return i;}
-	public static double accept(double i){return i;}
 	public static int precise(int i){return i;}
+	public static double accept(double i){return i;}
 
 	public static void main(String[] args) throws IOException {
 		RgbImage rgbImage = new RgbImage();
@@ -151,12 +152,16 @@ public class RgbImage {
 			for (int x=0; x < rgbImage.width; x++) {
 				rgbImage.slideWindow(x,y, window);
 				l = rgbImage.sobel(window);	
-				int L = (int)(l);	
+				int L = (int)(l);
+				//additional accept
 				L = accept(L);
 				if (L >= 256)
 					L = 255;
+				//additional accept
+				L = accept(L);
 				if (L < 0)
 					L = 0;
+				L = accept(L);
 				System.out.println(L);
 				L = precise(L);	
 			}

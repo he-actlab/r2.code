@@ -52,29 +52,16 @@ public class Intersection {
 	/**
 	 * EPSILON represents the error buffer used to denote a hit.
 	 */
-	public static  double EPSILON = 1e-12;
-	private static  Vector3f tempVa = new Vector3f();
-	private static  Vector3f tempVb = new Vector3f();
-	private static  Vector3f tempVc;
-	private static  Vector3f tempVd;
-	private static  Vector3f tempVe;
-	private static  float[] tempFa; 
-	private static  float[] tempFb; 
-	private static  Vector2f tempV2a = new Vector2f();
-	private static  Vector2f tempV2b = new Vector2f();
-
-	static {
-		alloc_TAG3();
-		tempVc = new Vector3f();
-		alloc_TAG3();
-		tempVd = new Vector3f();
-		alloc_TAG1();
-		tempVe = new Vector3f();
-		alloc_TAG2();
-		tempFa = new float[2];
-		alloc_TAG2();
-		tempFb = new float[2];
-	}
+	public static double EPSILON = 1e-12;
+	private static Vector3f tempVa = new Vector3f();
+	private static Vector3f tempVb = new Vector3f();
+	private static Vector3f tempVc = new Vector3f();
+	private static Vector3f tempVd = new Vector3f();
+	private static Vector3f tempVe = new Vector3f();
+	private static float[] tempFa = new float[2];
+	private static float[] tempFb = new float[2];
+	private static Vector2f tempV2a = new Vector2f();
+	private static Vector2f tempV2b = new Vector2f();
 
 	public static boolean intersection(Vector3f v0, Vector3f v1, Vector3f v2,
 			Vector3f u0, Vector3f u1, Vector3f u2) {
@@ -103,25 +90,31 @@ public class Intersection {
 		du1 = n1.dot(u1) + d1;
 		du2 = n1.dot(u2) + d1;
 
-		// additional accept
-		du0 = accept(du0);
-		du1 = accept(du1);
-		du2 = accept(du2);
-
-		if ((ApproxMath.abs(du0) < EPSILON))
+		float absdu0 = ApproxMath.abs(du0);
+		//additional accept
+		absdu0 = accept(absdu0);
+		float absdu1 = ApproxMath.abs(du1);
+		//additional accept
+		absdu1 = accept(absdu1);
+		float absdu2 = ApproxMath.abs(du2);
+		//additional accept
+		absdu2 = accept(absdu2);
+		
+		if (absdu0 < EPSILON)
 			du0 = 0.0f;
-		if ((ApproxMath.abs(du1) < EPSILON))
+		if (absdu1 < EPSILON)
 			du1 = 0.0f;
-		if ((ApproxMath.abs(du2) < EPSILON))
+		if (absdu2 < EPSILON)
 			du2 = 0.0f;
 		du0du1 = du0 * du1;
 		du0du2 = du0 * du2;
 
-		// additional accept
-		du0du1 = accept(du0du1);
-		du0du2 = accept(du0du2);
-
-		if ((du0du1 > 0.0f && du0du2 > 0.0f)) {
+		boolean lhs = (du0du1 > 0.0f);
+		boolean rhs = (du0du2 > 0.0f);
+		boolean cond = lhs && rhs;
+		//additional accept
+		cond = accept(cond);
+		if (cond) {
 			return false;
 		}
 
@@ -134,16 +127,21 @@ public class Intersection {
 		dv1 = n2.dot(v1) + d2;
 		dv2 = n2.dot(v2) + d2;
 
-		// additional accept
-		dv0 = accept(dv0);
-		dv1 = accept(dv1);
-		dv2 = accept(dv2);
-
-		if ((ApproxMath.abs(dv0) < EPSILON))
+		float absdv0 = ApproxMath.abs(dv0);
+		//additional accept
+		absdv0 = accept(absdv0);
+		float absdv1 = ApproxMath.abs(dv1);
+		//additional accept
+		absdv1 = accept(absdv1);
+		float absdv2 = ApproxMath.abs(dv2);
+		//additional accept
+		absdv2 = accept(absdv2);
+		
+		if (absdv0 < EPSILON)
 			dv0 = 0.0f;
-		if ((ApproxMath.abs(dv1) < EPSILON))
+		if (absdv1 < EPSILON)
 			dv1 = 0.0f;
-		if ((ApproxMath.abs(dv2) < EPSILON))
+		if (absdv2 < EPSILON)
 			dv2 = 0.0f;
 
 		dv0dv1 = dv0 * dv1;
@@ -152,33 +150,36 @@ public class Intersection {
 		// additional accept
 		dv0dv1 = accept(dv0dv1);
 		dv0dv2 = accept(dv0dv2);
-
-		if ((dv0dv1 > 0.0f && dv0dv2 > 0.0f)) {
+		
+		lhs = (dv0dv1 > 0.0f);
+		rhs = (dv0dv2 > 0.0f);
+		cond = lhs && rhs;
+		//additional accept
+		cond = accept(cond);
+		
+		if (cond) {
 			return false;
 		}
 
 		n1.cross(n2, d);
-
-		// additional accept
-		d = accept_all_FIELD1_TAG1(d);
-		d = accept_all_FIELD2_TAG1(d);
-		d = accept_all_FIELD3_TAG1(d);
 
 		max = ApproxMath.abs(d.x);
 		index = 0;
 		bb = ApproxMath.abs(d.y);
 		cc = ApproxMath.abs(d.z);
 
+		cond = (bb > max);
 		// additional accept
-		bb = accept(bb);
-		cc = accept(cc);
-		max = accept(max);
-
-		if ((bb > max)) {
+		cond = accept(cond);
+		if (bb > max) {
 			max = bb;
 			index = 1;
 		}
-		if ((cc > max)) {
+		
+		cond = (cc > max);
+		// additional accept
+		cond = accept(cond);
+		if (cc > max) {
 			max = cc;
 			vp0 = v0.z;
 			vp1 = v1.z;
@@ -235,7 +236,10 @@ public class Intersection {
 		sort(isect1);
 		sort(isect2);
 
-		if ((isect1[1] < isect2[0] || isect2[1] < isect1[0])) {
+		cond = isect1[1] < isect2[0] || isect2[1] < isect1[0];
+		//additional accept
+		cond = accept(cond);
+		if (cond) {
 			return false;
 		}
 
@@ -244,23 +248,22 @@ public class Intersection {
 
 	private static void sort(float[] f) {
 
+		boolean cond = (f[0] > f[1]);
 		// additional accept
-		f = accept_all_FIELD4_TAG2(f);
-
-		if ((f[0] > f[1])) {
+		cond = accept(cond);
+		if (cond) {
 			float c = f[0];
 			f[0] = f[1];
 			f[1] = c;
 		}
-		
-		// additional accept
-		f = accept_all_FIELD4_TAG2(f);
 	}
 
 	private static boolean newComputeIntervals(float vv0, float vv1, float vv2,
 			float d0, float d1, float d2, float d0d1, float d0d2, Vector3f abc,
 			Vector2f x0x1) {
 
+		boolean cond1, cond2, cond3, cond4, cond5;
+		
 		// additional accept
 		d0d1 = accept(d0d1);
 		d0d2 = accept(d0d2);
@@ -268,31 +271,51 @@ public class Intersection {
 		d1 = accept(d1);
 		d2 = accept(d2);
 
-		if ((d0d1 > 0.0f)) {
+		cond1 = (d0d1 > 0.0f);
+		//additional accept
+		cond1 = accept(cond1);
+		
+		cond2 = (d0d2 > 0.0f);
+		//additional accept
+		cond1 = accept(cond1);
+		
+		cond3 = (d1 * d2 > 0.0f || d0 != 0.0f);
+		//additional accept
+		cond3 = accept(cond3);
+		
+		cond4 = (d1 != 0.0f);
+		//additional accept
+		cond4 = accept(cond4);
+		
+		cond5 = (d2 != 0.0f);
+		//additional accept
+		cond5 = accept(cond5);
+		
+		if (cond1) {
 			abc.x = vv2;
 			abc.y = (vv0 - vv2) * d2;
 			abc.z = (vv1 - vv2) * d2;
 			x0x1.x = d2 - d0;
 			x0x1.y = d2 - d1;
-		} else if ((d0d2 > 0.0f)) {
+		} else if (cond2) {
 			abc.x = vv1;
 			abc.y = (vv0 - vv1) * d1;
 			abc.z = (vv2 - vv1) * d1;
 			x0x1.x = d1 - d0;
 			x0x1.y = d1 - d2;
-		} else if ((d1 * d2 > 0.0f || d0 != 0.0f)) {
+		} else if (cond3) {
 			abc.x = vv0;
 			abc.y = (vv1 - vv0) * d0;
 			abc.z = (vv2 - vv0) * d0;
 			x0x1.x = d0 - d1;
 			x0x1.y = d0 - d2;
-		} else if ((d1 != 0.0f)) {
+		} else if (cond4) {
 			abc.x = vv1;
 			abc.y = (vv0 - vv1) * d1;
 			abc.z = (vv2 - vv1) * d1;
 			x0x1.x = d1 - d0;
 			x0x1.y = d1 - d2;
-		} else if ((d2 != 0.0f)) {
+		} else if (cond5) {
 			abc.x = vv2;
 			abc.y = (vv0 - vv2) * d2;
 			abc.z = (vv1 - vv2) * d2;
@@ -306,26 +329,29 @@ public class Intersection {
 
 	private static boolean coplanarTriTri(Vector3f n, Vector3f v0, Vector3f v1,
 			Vector3f v2, Vector3f u0, Vector3f u1, Vector3f u2) {
-		alloc_TAG4();
 		Vector3f a = new Vector3f();
 		short i0, i1;
-
-		// additional accept
-		n = accept_all_FIELD1_TAG3(n);
-		n = accept_all_FIELD2_TAG3(n);
-		n = accept_all_FIELD3_TAG3(n);
 
 		a.x = ApproxMath.abs(n.x);
 		a.y = ApproxMath.abs(n.y);
 		a.z = ApproxMath.abs(n.z);
 
-		// additional accept
-		a = accept_all_FIELD1_TAG4(a);
-		a = accept_all_FIELD2_TAG4(a);
-		a = accept_all_FIELD3_TAG4(a);
-
-		if ((a.x > a.y)) {
-			if ((a.x > a.z)) {
+		boolean cond1, cond2, cond3;
+		
+		cond1 = (a.x > a.y);
+		//additional accept
+		cond1 = accept(cond1);
+		
+		cond2 = (a.x > a.z);
+		//additional accept
+		cond2 = accept(cond2);
+		
+		cond3 = (a.z > a.y);
+		//additional accept
+		cond3 = accept(cond3);
+		
+		if (cond1) {
+			if (cond2) {
 				i0 = 1; 
 				i1 = 2;
 			} else {
@@ -333,7 +359,7 @@ public class Intersection {
 				i1 = 1;
 			}
 		} else {
-			if ((a.z > a.y)) {
+			if (cond3) {
 				i0 = 0; 
 				i1 = 1;
 			} else {
@@ -354,13 +380,25 @@ public class Intersection {
 		u1.toArray(u1f);
 		float[] u2f = new float[3];
 		u2.toArray(u2f);
-		if ((edgeAgainstTriEdges(v0f, v1f, u0f, u1f, u2f, i0, i1))) {
+		
+		cond1 = edgeAgainstTriEdges(v0f, v1f, u0f, u1f, u2f, i0, i1);
+		//additional accept
+		cond1 = accept(cond1);
+		if (cond1) {
 			return true;
 		}
-		if ((edgeAgainstTriEdges(v1f, v2f, u0f, u1f, u2f, i0, i1))) {
+		
+		cond2 = edgeAgainstTriEdges(v1f, v2f, u0f, u1f, u2f, i0, i1);
+		//additional accept
+		cond2 = accept(cond2);
+		if (cond2) {
 			return true;
 		}
-		if ((edgeAgainstTriEdges(v2f, v0f, u0f, u1f, u2f, i0, i1))) {
+		
+		cond3 = edgeAgainstTriEdges(v2f, v0f, u0f, u1f, u2f, i0, i1);
+		//additional accept
+		cond3 = accept(cond3);
+		if (cond3) {
 			return true;
 		}
 
@@ -386,13 +424,12 @@ public class Intersection {
 		b = -(U0[i0] - U2[i0]);
 		c = -a * U2[i0] - b * U2[i1];
 		d2 = a * V0[i0] + b * V0[i1] + c;
-		
-		// additional accept
-		d0 = accept(d0);
-		d1 = accept(d1);
-		d2 = accept(d2);
 
-		if ((d0 * d1 > 0.0 && d0 * d2 > 0.0))
+		boolean cond = (d0 * d1 > 0.0 && d0 * d2 > 0.0);
+		// additional accept
+		cond = accept(cond);
+		
+		if (cond)
 			return true;
 
 		return false;
@@ -425,39 +462,32 @@ public class Intersection {
 		float f = Ay * Bx - aX * By;
 		float d = By * Cx - Bx * Cy;
 		
+		boolean cond1, cond2, cond3;
+		cond1 = ((f > 0 && d >= 0 && d <= f) || (f < 0 && d <= 0 && d >= f)); 
 		// additional accept
-		f = accept(f);
-		d = accept(d);
-
-		if (((f > 0 && d >= 0 && d <= f) || (f < 0 && d <= 0 && d >= f))) {
+		cond1 = accept(cond1);
+		if (cond1) {
 			float e = aX * Cy - Ay * Cx;
+			cond2 = (f > 0);
 			// additional accept
-			e = accept(e);
-			if ((f > 0)) {
-				if ((e >= 0 && e <= f))
+			cond2 = accept(cond2);
+			if (cond2) {
+				cond3 = (e >= 0 && e <= f);
+				//additional accept
+				cond3 = accept(cond3);
+				if (cond3)
 					return true;
 			} else {
-				if ((e <= 0 && e >= f))
+				cond3 = (e <= 0 && e >= f);
+				//additional accept
+				cond3 = accept(cond3);
+				if (cond3)
 					return true;
 			}
 		}
 		return false;
 	}
 
-	public static void alloc_TAG1() {}
-	public static void alloc_TAG2() {}
-	public static void alloc_TAG3() {}
-	public static void alloc_TAG4() {}
 	public static boolean accept(boolean b) {return b;}
 	public static float accept(float f) {return f;}
-	public static Vector3f accept_all_FIELD1_TAG1(Vector3f d){return d;}
-	public static Vector3f accept_all_FIELD2_TAG1(Vector3f d){return d;}
-	public static Vector3f accept_all_FIELD3_TAG1(Vector3f d){return d;}
-	public static Vector3f accept_all_FIELD1_TAG3(Vector3f d){return d;}
-	public static Vector3f accept_all_FIELD2_TAG3(Vector3f d){return d;}
-	public static Vector3f accept_all_FIELD3_TAG3(Vector3f d){return d;}
-	public static Vector3f accept_all_FIELD1_TAG4(Vector3f d){return d;}
-	public static Vector3f accept_all_FIELD2_TAG4(Vector3f d){return d;}
-	public static Vector3f accept_all_FIELD3_TAG4(Vector3f d){return d;}
-	public static float[] accept_all_FIELD4_TAG2(float[] d){return d;}
 }

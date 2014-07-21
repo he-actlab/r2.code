@@ -446,7 +446,13 @@ public abstract class RHSAnalysis<PE extends IEdge, SE extends IEdge> extends Ja
     }
 
     private void processEntry(BasicBlock bb, PE pe) {
-        for (BasicBlock bb2 : bb.getSuccessors()) {
+    	// original 
+    	// for (BasicBlock bb2 : bb.getSuccessors()) {
+    	
+    	// expax
+    	int size = bb.getSuccessors().size();
+    	for (int i = size -1; i > -1; i--) {
+    		BasicBlock bb2 = bb.getSuccessors().get(i);
             Inst i2; int q2Idx;
             if (bb2.size() == 0) {
                 i2 = (BasicBlock) bb2;
@@ -622,7 +628,13 @@ public abstract class RHSAnalysis<PE extends IEdge, SE extends IEdge> extends Ja
             return;
         }
         boolean isFirst = true;
-        for (BasicBlock bb2 : bb.getSuccessors()) {
+        //original
+//        for (BasicBlock bb2 : bb.getSuccessors()) {
+        
+    	// expax
+    	int size = bb.getSuccessors().size();
+    	for (int j = size -1; j > -1; j--) {
+    		BasicBlock bb2 = bb.getSuccessors().get(j);
             Inst i2; int q2Idx;
             if (bb2.size() == 0) { 
                 i2 = (BasicBlock) bb2;

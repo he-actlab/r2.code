@@ -17,18 +17,18 @@ public class FFT {
 
 	/** Compute Fast Fourier Transform of (complex) data, in place.*/
 	public static void transform (double data[]) {
-		transform_internal(data, -1); } 	// approx: 2: MOVE_I T1, IConst: -1
+		transform_internal(data, -1); } 	// op: 2: MOVE_I T1, IConst: -1
 
 	/** Compute Inverse Fast Fourier Transform of (complex) data, in place.*/
 	public static void inverse (double data[]) {
-		transform_internal(data, +1); 	// approx: 2: MOVE_I T1, IConst: 1
+		transform_internal(data, +1); 	// op: 2: MOVE_I T1, IConst: 1
 		// Normalize
 		int nd=data.length;
-		int n =nd/2; 	// approx: 5: DIV_I T13, R3, IConst: 2	// approx: 6: MOVE_I R4, T13
-		int aprN = n; 	// approx: 7: MOVE_I R5, R4
-		double norm=1.0/aprN;	// approx: 8: INT_2DOUBLE T14, R5	// approx: 9: DIV_D T7, DConst: 1.0, T14	// approx: 10: MOVE_D R8, T7
+		int n =nd/2; 	// op: 6: DIV_I T15, R14, IConst: 2	// op: 7: MOVE_I R16, T15
+		int aprN = n; 	// op: 9: MOVE_I R18, R17	// op: 8: MOVE_I R17, R16
+		double norm=1.0/aprN;	// op: 10: MOVE_I R19, R18	// op: 11: INT_2DOUBLE T20, R19	// op: 12: DIV_D T7, DConst: 1.0, T20	// op: 13: MOVE_D R21, T7
 		for(int i=0; i<nd; i++)
-			data[i] *= norm; 	// approx: 18: ASTORE_D T18, T11, T10	// approx: 17: MUL_D T18, T17, R8	// approx: 16: ALOAD_D T17, R0, R16
+			data[i] *= norm; 	// op: 35: ASTORE_D T31, T11, T10	// op: 33: MOVE_D R30, R24	// op: 34: MUL_D T31, T29, R30	// op: 32: ALOAD_D T29, R0, R28
 	}
 
 	protected static int log2 (int n){
@@ -39,6 +39,8 @@ public class FFT {
 		return log; 
 	}
 
+	private static double accept(double d){return d;}	// op: 1: MOVE_D R0, R0
+	
 	protected static void transform_internal (double data[], int direction) {
 		if (data.length == 0) return;    
 		int n = data.length/2;
@@ -51,51 +53,54 @@ public class FFT {
 		/* apply fft recursion */
 		/* this loop executed log2(N) times */
 		for (int bit = 0, dual = 1; bit < logn; bit++, dual *= 2) {
-			double w_real = 1.0; 	// approx: 14: MOVE_D R39, DConst: 1.0
-			double w_imag = 0.0; 	// approx: 15: MOVE_D R40, DConst: 0.0
+			double w_real = 1.0; 	// op: 204: MOVE_D R48, DConst: 1.0
+			double w_imag = 0.0; 	// op: 205: MOVE_D R49, DConst: 0.0
 
-			double theta = 2.0 * direction * Math.PI / (2.0 * (double) dual);	// approx: 22: MOVE_D R12, T45	// approx: 21: DIV_D T45, T43, T44	// approx: 20: MUL_D T44, DConst: 2.0, T11	// approx: 19: INT_2DOUBLE T11, R37	// approx: 17: MUL_D T42, DConst: 2.0, T41	// approx: 18: MUL_D T43, T42, DConst: 3.141592653589793	// approx: 16: INT_2DOUBLE T41, R1
-			double s = Math.sin(theta);	// approx: 24: MOVE_D R13, T46
-			double t = Math.sin(theta / 2.0); 	// approx: 27: MOVE_D R14, T48	// approx: 25: DIV_D T47, R12, DConst: 2.0
-			double s2 = 2.0 * t * t; 	// approx: 30: MOVE_D R15, T50	// approx: 29: MUL_D T50, T49, R14	// approx: 28: MUL_D T49, DConst: 2.0, R14
+			double theta = 2.0 * direction * Math.PI / (2.0 * (double) dual);	// op: 206: MOVE_I R1, R1	// op: 214: MOVE_D R56, T55	// op: 213: DIV_D T55, T52, T54	// op: 212: MUL_D T54, DConst: 2.0, T11	// op: 211: INT_2DOUBLE T11, R53	// op: 209: MUL_D T52, T51, DConst: 3.141592653589793	// op: 208: MUL_D T51, DConst: 2.0, T50	// op: 207: INT_2DOUBLE T50, R1
+			theta = accept(theta);	// op: 217: MOVE_D R59, T58	// op: 215: MOVE_D R57, R56
+			double s = Math.sin(theta);	// op: 220: MOVE_D R62, T61	// op: 218: MOVE_D R60, R59
+			double param = theta / 2.0;	// op: 222: DIV_D T64, R63, DConst: 2.0	// op: 221: MOVE_D R63, R60	// op: 223: MOVE_D R65, T64
+			param = accept(param);	// op: 224: MOVE_D R66, R65	// op: 226: MOVE_D R68, T67
+			double t = Math.sin(param); 	// op: 227: MOVE_D R69, R68	// op: 229: MOVE_D R71, T70
+			double s2 = 2.0 * t * t; 	// op: 231: MUL_D T73, DConst: 2.0, R72	// op: 232: MOVE_D R74, R72	// op: 233: MUL_D T75, T73, R74	// op: 234: MOVE_D R76, T75	// op: 230: MOVE_D R72, R71
 
 			/* a = 0 */
 			for (int b = 0; b < n; b += 2 * dual) {
 				int i = 2*b ;
 				int j = 2*(b + dual);
 
-				double wd_real = data[j] ; 	// approx: 106: MOVE_D R59, T58	// approx: 105: ALOAD_D T58, R0, R57
-				double wd_imag = data[j+1] ; 	// approx: 109: MOVE_D R30, T61	// approx: 108: ALOAD_D T61, R0, T60
+				double wd_real = data[j] ; 	// op: 402: ALOAD_D T92, R0, R91	// op: 403: MOVE_D R93, T92
+				double wd_imag = data[j+1] ; 	// op: 406: ALOAD_D T96, R0, T95	// op: 407: MOVE_D R97, T96
 
-				data[j]   = data[i]   - wd_real; 	// approx: 113: ASTORE_D T64, T62, R57	// approx: 112: SUB_D T64, T63, R59	// approx: 111: ALOAD_D T63, R0, R54
-				data[j+1] = data[i+1] - wd_imag; 	// approx: 119: ASTORE_D T69, T67, T65	// approx: 118: SUB_D T69, T68, R30	// approx: 117: ALOAD_D T68, R0, T66
-				data[i]  += wd_real; 	// approx: 122: ALOAD_D T72, R0, R54	// approx: 123: ADD_D T73, T72, R59	// approx: 124: ASTORE_D T73, T71, T70
-				data[i+1]+= wd_imag; 	// approx: 128: ALOAD_D T77, R0, T74	// approx: 129: ADD_D T78, T77, R30	// approx: 130: ASTORE_D T78, T76, T75
+				data[j]   = data[i]   - wd_real; 	// op: 414: ASTORE_D T103, T100, R98	// op: 413: SUB_D T103, T101, R102	// op: 412: MOVE_D R102, R93	// op: 411: ALOAD_D T101, R0, R99
+				data[j+1] = data[i+1] - wd_imag; 	// op: 422: SUB_D T111, T109, R110	// op: 421: MOVE_D R110, R97	// op: 423: ASTORE_D T111, T108, T105	// op: 420: ALOAD_D T109, R0, T107
+				data[i]  += wd_real; 	// op: 429: ADD_D T117, T115, R116	// op: 430: ASTORE_D T117, T114, T113	// op: 427: ALOAD_D T115, R0, R112	// op: 428: MOVE_D R116, R102
+				data[i+1]+= wd_imag; 	// op: 437: ADD_D T124, T122, R123	// op: 438: ASTORE_D T124, T121, T120	// op: 435: ALOAD_D T122, R0, T119	// op: 436: MOVE_D R123, R110
 			}
 
 			/* a = 1 .. (dual-1) */
 			for (int a = 1; a < dual; a++) {
 				/* trignometric recurrence for w-> exp(i theta) w */
 				{
-					double tmp_real = w_real - s * w_imag - s2 * w_real; 	// approx: 43: MOVE_D R17, T89	// approx: 41: MUL_D T88, R15, R85	// approx: 42: SUB_D T89, T87, T88	// approx: 39: MUL_D T86, R13, R84	// approx: 40: SUB_D T87, R85, T86
-					double tmp_imag = w_imag + s * w_real - s2 * w_imag; 	// approx: 48: MOVE_D R94, T93	// approx: 47: SUB_D T93, T91, T92	// approx: 46: MUL_D T92, R15, R84	// approx: 45: ADD_D T91, R84, T90	// approx: 44: MUL_D T90, R13, R85
-					w_real = tmp_real; 	// approx: 49: MOVE_D R95, R17
-					w_imag = tmp_imag; 	// approx: 50: MOVE_D R96, R94
+					double tmp_real = w_real - s * w_imag - s2 * w_real; 	// op: 530: MOVE_D R149, T148	// op: 521: MOVE_D R140, R135	// op: 527: MOVE_D R146, R140	// op: 526: MOVE_D R145, R132	// op: 529: SUB_D T148, T144, T147	// op: 528: MUL_D T147, R145, R146	// op: 523: MOVE_D R142, R134	// op: 522: MOVE_D R141, R133	// op: 525: SUB_D T144, R140, T143	// op: 524: MUL_D T143, R141, R142
+					double tmp_imag = w_imag + s * w_real - s2 * w_imag; 	// op: 534: MUL_D T153, R151, R152	// op: 535: ADD_D T154, R150, T153	// op: 536: MOVE_D R155, R145	// op: 537: MOVE_D R156, R150	// op: 531: MOVE_D R150, R142	// op: 532: MOVE_D R151, R141	// op: 533: MOVE_D R152, R146	// op: 538: MUL_D T157, R155, R156	// op: 539: SUB_D T158, T154, T157	// op: 540: MOVE_D R159, T158
+					w_real = tmp_real; 	// op: 542: MOVE_D R161, R160	// op: 541: MOVE_D R160, R149
+					w_imag = tmp_imag; 	// op: 543: MOVE_D R162, R159	// op: 544: MOVE_D R163, R162
 				}
 				for (int b = 0; b < n; b += 2 * dual) {
 					int i = 2*(b + a);
 					int j = 2*(b + a + dual);
 
-					double z1_real = data[j]; 	// approx: 145: ALOAD_D T105, R0, R22	// approx: 146: MOVE_D R23, T105
-					double z1_imag = data[j+1]; 	// approx: 148: ALOAD_D T107, R0, T106	// approx: 149: MOVE_D R24, T107
+					double z1_real = data[j]; 	// op: 568: MOVE_D R187, T186	// op: 567: ALOAD_D T186, R0, R185
+					double z1_imag = data[j+1]; 	// op: 571: ALOAD_D T190, R0, T189	// op: 572: MOVE_D R191, T190
 
-					double wd_real = w_real * z1_real - w_imag * z1_imag; 	// approx: 152: SUB_D T110, T108, T109	// approx: 153: MOVE_D R25, T110	// approx: 150: MUL_D T108, R95, R23	// approx: 151: MUL_D T109, R96, R24
-					double wd_imag = w_real * z1_imag + w_imag * z1_real; 	// approx: 157: MOVE_D R26, T113	// approx: 156: ADD_D T113, T111, T112	// approx: 154: MUL_D T111, R95, R24	// approx: 155: MUL_D T112, R96, R23
+					double wd_real = w_real * z1_real - w_imag * z1_imag; 	// op: 573: MOVE_D R192, R168	// op: 575: MUL_D T194, R192, R193	// op: 574: MOVE_D R193, R187	// op: 577: MOVE_D R196, R191	// op: 576: MOVE_D R195, R167	// op: 579: SUB_D T198, T194, T197	// op: 578: MUL_D T197, R195, R196	// op: 580: MOVE_D R199, T198
+					double wd_imag = w_real * z1_imag + w_imag * z1_real; 	// op: 584: MOVE_D R203, R195	// op: 585: MOVE_D R204, R193	// op: 586: MUL_D T205, R203, R204	// op: 587: ADD_D T206, T202, T205	// op: 588: MOVE_D R207, T206	// op: 581: MOVE_D R200, R192	// op: 583: MUL_D T202, R200, R201	// op: 582: MOVE_D R201, R196
 
-					data[j]   = data[i]   - wd_real; 	// approx: 161: ASTORE_D T116, T114, R22	// approx: 160: SUB_D T116, T115, R25	// approx: 159: ALOAD_D T115, R0, R101
-					data[j+1] = data[i+1] - wd_imag; 	// approx: 165: ALOAD_D T120, R0, T118	// approx: 167: ASTORE_D T121, T119, T117	// approx: 166: SUB_D T121, T120, R26
-					data[i]  += wd_real; 	// approx: 172: ASTORE_D T125, T123, T122	// approx: 171: ADD_D T125, T124, R25	// approx: 170: ALOAD_D T124, R0, R101
-					data[i+1]+= wd_imag; 	// approx: 178: ASTORE_D T130, T128, T127	// approx: 176: ALOAD_D T129, R0, T126	// approx: 177: ADD_D T130, T129, R26
+					data[j]   = data[i]   - wd_real; 	// op: 592: ALOAD_D T211, R0, R209	// op: 593: MOVE_D R212, R199	// op: 594: SUB_D T213, T211, R212	// op: 595: ASTORE_D T213, T210, R208
+					data[j+1] = data[i+1] - wd_imag; 	// op: 603: SUB_D T221, T219, R220	// op: 602: MOVE_D R220, R207	// op: 601: ALOAD_D T219, R0, T217	// op: 604: ASTORE_D T221, T218, T215
+					data[i]  += wd_real; 	// op: 611: ASTORE_D T227, T224, T223	// op: 610: ADD_D T227, T225, R226	// op: 609: MOVE_D R226, R212	// op: 608: ALOAD_D T225, R0, R222
+					data[i+1]+= wd_imag; 	// op: 618: ADD_D T234, T232, R233	// op: 619: ASTORE_D T234, T231, T230	// op: 616: ALOAD_D T232, R0, T229	// op: 617: MOVE_D R233, R220
 				}
 			}
 		}
@@ -120,12 +125,12 @@ public class FFT {
 			int k = n >> 1;
 
 			if (i < j) {
-				double tmp_real    = data[ii]; 	// approx: 17: ALOAD_D T27, R0, R6	// approx: 18: MOVE_D R10, T27
-				double tmp_imag    = data[ii+1]; 	// approx: 20: ALOAD_D T29, R0, T28	// approx: 21: MOVE_D R12, T29
-				data[ii]   = data[jj]; 	// approx: 23: ALOAD_D T31, R0, R7	// approx: 24: ASTORE_D T31, T30, R6
-				data[ii+1] = data[jj+1]; 	// approx: 28: ALOAD_D T34, R0, T15	// approx: 29: ASTORE_D T34, T33, T32
-				data[jj]   = tmp_real; 	// approx: 30: ASTORE_D R10, R0, R7
-				data[jj+1] = tmp_imag; } 	// approx: 32: ASTORE_D R12, R0, T35
+				double tmp_real    = data[ii]; 	// op: 94: ALOAD_D T42, R0, R41	// op: 95: MOVE_D R43, T42
+				double tmp_imag    = data[ii+1]; 	// op: 98: ALOAD_D T46, R0, T45	// op: 99: MOVE_D R47, T46
+				data[ii]   = data[jj]; 	// op: 104: ASTORE_D T51, T50, R48	// op: 103: ALOAD_D T51, R0, R49
+				data[ii+1] = data[jj+1]; 	// op: 111: ASTORE_D T56, T55, T53	// op: 110: ALOAD_D T56, R0, T15
+				data[jj]   = tmp_real; 	// op: 114: ASTORE_D R58, R0, R57	// op: 113: MOVE_D R58, R43
+				data[jj+1] = tmp_imag; } 	// op: 117: MOVE_D R61, R47	// op: 118: ASTORE_D R61, R0, T60
 
 				while (k <= j) 
 				{

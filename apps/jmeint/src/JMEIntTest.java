@@ -7,13 +7,13 @@ import java.util.Random;
 public class JMEIntTest {
 	public static Random rand;
 	public static  Vector3f randvec() {
-		alloc_TAG5();
+//		alloc_TAG5();
 		Vector3f vec = new Vector3f(
 				rand.nextFloat(), rand.nextFloat(), rand.nextFloat()
 				);
-		accept_all_FIELD1_TAG5(vec);
-		accept_all_FIELD2_TAG5(vec);
-		accept_all_FIELD3_TAG5(vec);
+//		accept_all_FIELD1_TAG5(vec);
+//		accept_all_FIELD2_TAG5(vec);
+//		accept_all_FIELD3_TAG5(vec);
 		return vec;
 	}
 	private static void alloc_TAG5() {}
@@ -31,19 +31,15 @@ public class JMEIntTest {
 					randvec(), randvec(), randvec()
 					);
 			isec = accept(isec);
-			if ((isec)) {
+			if (isec) {
 				System.out.print("1 ");
 			} else {
 				System.out.print("0 ");
 			}
-			isec = precise(isec);
 		}
-
 		System.out.println("");
-
 	}
 
 	public static boolean accept(boolean i){return i;}
-	public static boolean precise(boolean i){return i;}
 
 }

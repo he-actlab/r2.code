@@ -39,6 +39,7 @@ import com.sun.source.tree.CompilationUnitTree;
 import com.sun.source.util.TreePath;
 import com.sun.tools.javac.jvm.expax.ExpaxASTNodeInfo;
 import com.sun.tools.javac.tree.JCTree;
+import com.sun.tools.javac.util.Name;
 
 import enerj.instrument.MethodBindingTranslator;
 import enerj.instrument.RuntimePrecisionTranslator;
@@ -235,11 +236,12 @@ public class PrecisionChecker extends InstrumentingChecker {
 				} else {
 					if (analysisFlag) {
 						if(EXPAX_DEBUG) System.out.println("*** EXPAX_DEBUG[PrecisionChecker]: <typeProcess> GenerateApproxLocalVariableTranslator start");
-						GenerateApproxLocalVariableTranslator gTranslator = new GenerateApproxLocalVariableTranslator(this, processingEnv, p);
-						tree.accept(gTranslator);
+//						GenerateApproxLocalVariableTranslator gTranslator = new GenerateApproxLocalVariableTranslator(this, processingEnv, p);
+//						tree.accept(gTranslator);
 						if(EXPAX_DEBUG) System.out.println("*** EXPAX_DEBUG[PrecisionChecker]: <typeProcess> GenerateApproxLocalVariableTranslator end");
 						if(EXPAX_DEBUG) System.out.println("*** EXPAX_DEBUG[PrecisionChecker]: <typeProcess> SimulationTranslator start");
-						tree.accept(new SimulationTranslator(this, processingEnv, p, expaxBcInfo, expaxJchordResult, gTranslator.approxNameSet));
+//						tree.accept(new SimulationTranslator(this, processingEnv, p, expaxBcInfo, expaxJchordResult, gTranslator.approxNameSet));
+						tree.accept(new SimulationTranslator(this, processingEnv, p, expaxBcInfo, expaxJchordResult, new HashMap<String,Set<Name>>()));
 						if(EXPAX_DEBUG) System.out.println("*** EXPAX_DEBUG[PrecisionChecker]: <typeProcess> SimulationTranslator end");
 					}
 				}

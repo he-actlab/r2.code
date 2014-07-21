@@ -38,20 +38,22 @@ public class LU
 			for (int i=j+1; i<M; i++)
 			{
 				double ab = absolute(A[i][j]);
-				if ((ab > t))
+				// additional accept
+				t = accept(t);
+				ab = accept(ab);
+				if (ab > t)
 				{
 					jp = i;
 					t = ab;
-					accept(t);
-					accept(ab);
 				}
 			}
 
 			pivot[j] = jp;
 
 			//additional accept
-			accept_all_FIELD4_TAG3(A[0]);
-			if (( A[jp][j] == 0 ))                 
+			double d = A[jp][j];
+			d = accept(d);
+			if (d == 0)                 
 				return 1;       
 
 			if (jp != j)
@@ -87,11 +89,9 @@ public class LU
 	}
 
 	public static  double absolute( double num) {
-//		double pnum = (num);
 		//additional accept
 		accept(num);
 		double ret = Math.abs(num);
-		accept(ret);
 		return ret;
 	}
 
@@ -118,9 +118,9 @@ public class LU
 			int ip = pvt[i];
 			double sum = b[ip];
 
+			b[ip] = b[i];
 			// additional accept
 			accept(sum);
-			b[ip] = b[i];
 			if (ii==0)
 				for (int j=ii; j<i; j++) {
 					sum -= LU[i][j] * b[j];
@@ -140,5 +140,4 @@ public class LU
 		}
 	}   
 	private static double accept(double d){return d;}
-	private static double[] accept_all_FIELD4_TAG3(double[] d){return d;}
 }

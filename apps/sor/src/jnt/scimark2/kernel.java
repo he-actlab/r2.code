@@ -10,17 +10,15 @@ public class kernel
 		int cycles=100;
 		SOR.execute(1.25, G, cycles); 
 
-		G[0] = accept_all_FIELD1_TAG1(G[0]);
-
 		System.out.print("SOR values: ");
 		for (int i = 0; i < N; ++i) {
 			for (int j = 0; j < N; ++j) {
+				G[0] = accept_all_FIELD1_TAG1(G[0]);
 				System.out.print((G[i][j]) + " ");
+				G[0] = precise_all_FIELD1_TAG1(G[0]);
 			}
 		}
 		System.out.println("");
-
-		G[0] = precise_all_FIELD1_TAG1(G[0]);
 
 		return 0.0;
 	}

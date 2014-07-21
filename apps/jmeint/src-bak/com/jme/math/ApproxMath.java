@@ -2,9 +2,9 @@ package com.jme.math;
 
 public class ApproxMath {
 	public static float abs(float f) {
+		//additional accept
 		accept(f);
 		float ret = Math.abs(f);
-		accept(ret);
 		return ret;
 	}
 	

@@ -1,6 +1,10 @@
-5
-Simple#main(java.lang.String[])#void#4#107#VARDEF#int a = 10 + 2
-Simple#<init>()#void#0#31#IDENT#super
-Simple#precise(int)#int#0#199#IDENT#x
+9
+Simple#main(java.lang.String[])#void#17#138#VARDEF#boolean c = (a && i)
+Simple#main(java.lang.String[])#void#4#145#AND#a && i
 Simple#<init>()#void#1#31#IDENT#super
-Simple#main(java.lang.String[])#void#1#94#VARDEF#int x = 1
+Simple#main(java.lang.String[])#void#1#98#VARDEF#boolean a = true
+Simple#main(java.lang.String[])#void#9#145#AND#a && i
+Simple#main(java.lang.String[])#void#4#143#IDENT#a
+Simple#<init>()#void#0#31#IDENT#super
+Simple#main(java.lang.String[])#void#3#118#VARDEF#boolean i = true
+Simple#main(java.lang.String[])#void#8#148#IDENT#i

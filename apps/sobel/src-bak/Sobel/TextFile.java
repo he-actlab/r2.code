@@ -10,7 +10,7 @@ public class TextFile {
 		WRITE, READ	
 	}
 
-    Mode mode;
+  Mode mode;
 
 	FileOutputStream outputStream;
 	PrintWriter streamWriter;

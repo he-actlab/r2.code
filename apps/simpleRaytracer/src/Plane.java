@@ -62,23 +62,20 @@ public class Plane {
 				yd/=l;	
 				zd/=l;	
 
-				// additional accept
-				yd = accept(yd);
-				ye = accept(ye);
-				accept_all_FIELD1_TAG2(this);
-
-				float cond = ((k-ye)*yd);
+				float cond = (k-ye)*yd;
+				//additional accept
 				cond = accept(cond);
 				if(cond<=0) {
 					t=-1;	
 				} else {
 					t=(k-ye)/yd;
 				}
-				// additional accept
-				t = accept(t);	
 
 				index=y*w+x;
-				if((t)>=0)
+				
+				// additional accept
+				t = accept(t);	
+				if(t >= 0)
 				{
 					ix=xe+t*xd;
 					iy=ye+t*yd;
@@ -90,6 +87,7 @@ public class Plane {
 					ly=ly-iy;	
 					lz=lz-iz;	
 					float param = (lx*lx+ly*ly+lz*lz);
+					//additional accept
 					param = accept(param);	
 					sng=(float)Math.sqrt(param);	
 					sng = accept(sng);
@@ -109,12 +107,11 @@ public class Plane {
 			System.out.println((pixels[i] & 0xff)+"\n");
 			System.out.println(((pixels[i] >> 8) & 0xff)+"\n");
 			System.out.println(((pixels[i] >> 16) & 0xff)+"\n");
+			pixels = precise_all_FIELD2_TAG1(pixels);
 		}
-
-		pixels = precise_all_FIELD2_TAG1(pixels);
 	}
 
-	public  int texture( float x, float y,  float z) {
+	public int texture( float x, float y,  float z) {
 		int v;
 		int col;
 		int r,g,b;
@@ -129,11 +126,14 @@ public class Plane {
 		if(texture==1) {
 			col=(255<<24)|(255<<16);
 		} else if(texture==2) {
+			//additional accept
 			x = accept(x);	
-			z = accept(z);	
-			v=(Math.round((x))+Math.round((z))) %2;	
-			// additional accept
-			v = accept(v);	
+			int mrx = Math.round(x);
+			//additional accept
+			z = accept(z);
+			int mrz = Math.round(z);
+			v = (mrx + mrz) %2;	
+	
 			if(v==0) {
 				col=(255<<24)|b;	
 			} else {

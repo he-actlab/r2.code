@@ -7,11 +7,10 @@ public class kernel
 	{
 		double x[] = RandomVector(N, R);
 		alloc_TAG1();
-		double y[] = new  double[N];
+		double y[] = new double[N];
 
-		int nr = nz/N; 		// average number of nonzeros per row
-		int anz = nr *N;   // _actual_ number of nonzeros
-
+		int nr = nz/N; 	
+		int anz = nr *N; 
 
 		double val[] = RandomVector(anz, R);
 		int col[] = new int[anz];
@@ -20,12 +19,11 @@ public class kernel
 		row[0] = 0;	
 		for (int r=0; r<N; r++)
 		{
-			// initialize elements for row r
 			int rowr = row[r];
 			row[r+1] = rowr + nr;
 			int step = r/ nr;
 			if (step < 1) 
-				step = 1;   // take at least unit steps
+				step = 1;   
 
 			for (int i=0; i<nr; i++)
 				col[rowr+i] = i*step;
@@ -34,21 +32,19 @@ public class kernel
 		int cycles=100;
 		SparseCompRow.matmult(y, val, row, col, x, cycles);
 
-		y = accept_all_FIELD1_TAG1(y);
-
 		System.out.print("SparseMatMult vector: ");
 		for (int i = 0; i < N; ++i) {
+			y = accept_all_FIELD1_TAG1(y);
 			System.out.print((y[i]) + " ");
+			y = precise_all_FIELD1_TAG1(y);
 		}
 		System.out.println("");
-
-		y = precise_all_FIELD1_TAG1(y);
 
 		return 0.0;
 	}
 
-	private static  double[] RandomVector(int N, Random R) {
-		double A[] = new  double[N];
+	private static double[] RandomVector(int N, Random R) {
+		double A[] = new double[N];
 
 		for (int i=0; i<N; i++)
 			A[i] = R.nextDouble(); 

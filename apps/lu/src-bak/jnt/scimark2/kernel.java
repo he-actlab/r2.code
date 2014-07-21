@@ -8,7 +8,6 @@ public class kernel
 		double A[][] = RandomMatrix(N, N,  R);
 		double lu[][] = new double[N][];
 		for (int i=0; i<N; i++){
-			alloc_TAG3();
 			lu[i] = new double[N];
 		}
 		int pivot[] = new int[N];
@@ -28,15 +27,12 @@ public class kernel
 
 		double[] y = matvec(A, x);
 
-		accept_all_FIELD1_TAG1(y);
-
 		System.out.print("LU vector: ");
 		for (int i = 0; i < N; ++i) {
+			accept_all_FIELD1_TAG1(y);
 			System.out.print((y[i]) + " ");
 		}
 		System.out.println("");
-
-		precise_all_FIELD1_TAG1(y);
 
 		return 0.0;
 	}
@@ -45,7 +41,6 @@ public class kernel
 	{
 		int N = x.length;
 
-		alloc_TAG2();
 		double y[] = new  double[N];
 		for (int i=0; i<N; i++)
 			y[i] = x[i];
@@ -58,7 +53,7 @@ public class kernel
 		int M = A.length;
 		int N = A[0].length;
 
-		int remainder = N & 3;		 // N mod 4;
+		int remainder = N & 3;		 
 
 		for (int i=0; i<M; i++)
 		{
@@ -91,7 +86,7 @@ public class kernel
 
 	private static  double[] RandomVector(int N, Random R)
 	{
-		double A[] = new  double[N];
+		double A[] = new double[N];
 
 		for (int i=0; i<N; i++)
 			A[i] = R.nextDouble(); 
@@ -128,10 +123,6 @@ public class kernel
 	}
 
 	private static void alloc_TAG1(){}
-	private static void alloc_TAG2(){}
-	private static void alloc_TAG3(){}
 	private static double[] accept_all_FIELD1_TAG1(double[] d){return d;}
-	private static double[] precise_all_FIELD1_TAG1(double[] d){return d;}
-
 
 }

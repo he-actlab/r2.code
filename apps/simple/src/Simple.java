@@ -3,12 +3,10 @@
 public class Simple{
 
 	public static void main(String[] args) {
-		int x = 1;
-		int a = 10 + 2;
-	}
+		boolean a = true;
+		boolean i = true;
+		boolean c = (a && i);	
 
-	public static void alloc_TAG1(){}
-	public static int precise(int x){return x;}
-	public static void accept_all_FIELD1_TAG1(int[] arr){}
+	}
 }
 

@@ -14,13 +14,12 @@ public class kernel
 			FFT.inverse(x);		// backward transform
 		}
 
-		x = accept_all_FIELD1_TAG1(x);
 		System.out.print("FFT vector: ");
 		for (int i = 0; i < N; ++i) {
+			x = accept_all_FIELD1_TAG1(x);
 			System.out.print((x[i]) + " ");
 		}
 		System.out.println("");
-		x = precise_all_FIELD1_TAG1(x);
 
 		return 0.0;
 	}

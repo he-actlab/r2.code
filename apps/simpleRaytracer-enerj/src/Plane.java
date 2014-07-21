@@ -99,7 +99,6 @@ public class Plane
 			System.out.println(Endorsements.endorse((pixels[i] >> 8) & 0xff)+"\n");
 			System.out.println(Endorsements.endorse((pixels[i] >> 16) & 0xff)+"\n");
 		}
-		//checkErrors(pixels);
 	}
 
 	public @Approx int texture(@Approx float x,@Approx float y, @Approx float z) {
@@ -135,40 +134,4 @@ public class Plane
 		Plane p = new Plane();
 		p.init(args);
 	} 
-
-	public void checkErrors(@Approx int[] pixels) {
-
-		// for kicks, so we can see what the result looked like, we serialize it to a file.
-		try{
-			ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("result.ser"));
-			out.writeObject(pixels);
-			out.flush();
-			out.close();
-		} catch (Exception e) {e.printStackTrace();}
-
-
-		int[] referenceImage = new int[0];
-		try{
-			// Deserialize the reference int[]
-			ObjectInputStream in = new ObjectInputStream(new FileInputStream("reference.ser"));
-			referenceImage = (int[]) in.readObject();
-			in.close();
-		} catch (Exception e) {
-			e.printStackTrace();
-			System.exit(1);
-		}
-
-		int diff = 0;
-		for (int i = 0; i < pixels.length; i++) {
-			// count absolute RGB differences
-			diff += Math.abs((Endorsements.endorse(pixels[i]) & 0xFF) - (referenceImage[i] & 0xFF));
-			diff += Math.abs(((Endorsements.endorse(pixels[i]) >> 8) & 0xFF) - ((referenceImage[i] >> 8) & 0xFF));
-			diff += Math.abs(((Endorsements.endorse(pixels[i]) >> 16) & 0xFF) - ((referenceImage[i] >> 16) & 0xFF));
-		}
-		if (diff > 0) {
-			System.err.println("Image check failed! - #errors: " + diff);
-		} else {
-			System.err.println("Image check passed!");
-		}
-	}
 }

@@ -1,88 +1,150 @@
-84
-Sobel.RgbImage#sobel(int[][][])#double#169#66: MOVE_D R17, T71
-Sobel.RgbImage#load(java.lang.String)#void#139#31: ASTORE_I T44, T43, IConst: 0
-Sobel.RgbImage#makeGrayscale()#void#81#34: MUL_D T44, R3, T43
-Sobel.RgbImage#luminance(int[])#int#12#3: MOVE_D R4, DConst: 0.11
-Sobel.TextFile.Mode#<clinit>()#void#7#4: MOVE_I T7, IConst: 0
-Sobel.RgbImage#sobel(int[][][])#double#148#58: ADD_D T65, R8, R8
-Sobel.RgbImage#luminance(int[])#int#39#15: ADD_D T21, T20, DConst: 0.5
-Sobel.RgbImage#makeGrayscale()#void#113#46: MUL_D T54, R15, DConst: 256.0
-Sobel.RgbImage#luminance(int[])#int#26#9: MUL_D T15, R3, T14
-Sobel.RgbImage#sobel(int[][][])#double#143#57: SUB_D T64, T63, R5
-Sobel.RgbImage#sobel(int[][][])#double#81#35: MOVE_D R11, T45
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#287#65: ASTORE_I T71, T67, IConst: 2
-Sobel.TextFile#loadChar()#char#67#19: GETFIELD_I T17, T16, .ttype
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#238#48: ALOAD_I T57, T56, IConst: 0
-Sobel.RgbImage#luminance(int[])#int#35#14: ADD_D T20, T16, T19
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#262#56: ALOAD_I T64, T63, IConst: 1
+142
+Sobel.RgbImage#luminance(int[])#int#33#12: INT_2DOUBLE T18, T17
+Sobel.RgbImage#makeGrayscale()#void#131#182: ASTORE_I T80, T77, IConst: 2
 Sobel.RgbImage#luminance(int[])#int#27#10: ADD_D T16, T12, T15
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#199#73: ASTORE_I IConst: 0, T77, IConst: 1
-Sobel.RgbImage#makeGrayscale()#void#83#36: MOVE_D R15, T45
-Sobel.RgbImage#makeGrayscale()#void#64#25: ALOAD_I T35, T34, IConst: 1
-Sobel.RgbImage#makeGrayscale()#void#131#54: ASTORE_I T60, T58, IConst: 2
-Sobel.RgbImage#makeGrayscale()#void#3#1: MOVE_D R1, DConst: 0.001171875
-Sobel.RgbImage#main(java.lang.String[])#void#152#35: MOVE_I R46, T45
-Sobel.RgbImage#luminance(int[])#int#24#7: ALOAD_I T13, R1, IConst: 1
-Sobel.RgbImage#sobel(int[][][])#double#128#52: SUB_D T60, T59, R13
-Sobel.RgbImage#sobel(int[][][])#double#159#62: MUL_D T68, R15, R15
-Sobel.RgbImage#makeGrayscale()#void#52#21: MUL_D T31, R1, T30
-Sobel.RgbImage#load(java.lang.String)#void#159#37: ASTORE_I T49, T48, IConst: 1
-Sobel.RgbImage#makeGrayscale()#void#8#2: MOVE_D R2, DConst: 0.0023046875
-Sobel.RgbImage#luminance(int[])#int#34#13: MUL_D T19, R4, T18
-Sobel.RgbImage#makeGrayscale()#void#129#52: MUL_D T59, R15, DConst: 256.0
-Sobel.RgbImage#sobel(int[][][])#double#112#46: ADD_D T54, R6, R6
-Sobel.RgbImage#luminance(int[])#int#19#6: MUL_D T12, R2, T11
-Sobel.RgbImage#sobel(int[][][])#double#152#60: SUB_D T67, T66, R11
-Sobel.RgbImage#sobel(int[][][])#double#45#20: MOVE_D R8, T33
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#126#94: ASTORE_I IConst: 0, T89, IConst: 1
-Sobel.RgbImage#sobel(int[][][])#double#141#56: ADD_D T63, T62, R13
-Sobel.RgbImage#makeGrayscale()#void#50#19: ALOAD_I T29, T28, IConst: 0
-Sobel.RgbImage#sobel(int[][][])#double#129#53: MOVE_D R15, T60
-Sobel.RgbImage#sobel(int[][][])#double#10#5: MOVE_D R5, T21
-Sobel.RgbImage#sobel(int[][][])#double#138#55: ADD_D T62, R7, T61
-Sobel.RgbImage#sobel(int[][][])#double#125#51: SUB_D T59, T57, T58
-Sobel.RgbImage#makeGrayscale()#void#97#40: MUL_D T49, R15, DConst: 256.0
-Sobel.RgbImage#sobel(int[][][])#double#113#47: ADD_D T55, R5, T54
-Sobel.RgbImage#makeGrayscale()#void#13#3: MOVE_D R3, DConst: 4.296875E-4
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#263#57: ASTORE_I T64, T60, IConst: 1
-Sobel.RgbImage#sobel(int[][][])#double#33#15: MOVE_D R7, T29
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#139#98: ASTORE_I IConst: 0, T92, IConst: 2
-Sobel.RgbImage#makeGrayscale()#void#82#35: ADD_D T45, T38, T44
-Sobel.RgbImage#sqrt(double)#double#4#2: MOVE_D R0, T2
-Sobel.RgbImage#sobel(int[][][])#double#153#61: MOVE_D R16, T67
-Sobel.RgbImage#makeGrayscale()#void#99#42: ASTORE_I T50, T48, IConst: 0
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#286#64: ALOAD_I T71, T70, IConst: 2
-Sobel.RgbImage#sobel(int[][][])#double#137#54: ADD_D T61, R10, R10
-Sobel.RgbImage#load(java.lang.String)#void#179#43: ASTORE_I T54, T53, IConst: 2
-Sobel.RgbImage#sobel(int[][][])#double#119#49: SUB_D T57, T56, R11
+Sobel.RgbImage#sobel(int[][][])#double#45#20: MOVE_D R37, T36
+Sobel.RgbImage#sobel(int[][][])#double#162#82: MOVE_D R98, R97
+Sobel.RgbImage#sobel(int[][][])#double#157#79: MOVE_D R95, R94
+Sobel.RgbImage#sobel(int[][][])#double#160#81: MOVE_D R97, R93
+Sobel.RgbImage#makeGrayscale()#void#81#153: MUL_D T54, DConst: 4.296875E-4, T53
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#199#210: ASTORE_I IConst: 0, T130, IConst: 1
+Sobel.RgbImage#sobel(int[][][])#double#116#52: ADD_D T68, T66, R67
+Sobel.RgbImage#makeGrayscale()#void#64#142: ALOAD_I T43, T42, IConst: 1
+Sobel.RgbImage#sobel(int[][][])#double#9#4: INT_2DOUBLE T21, T20
+Sobel.RgbImage#load(java.lang.String)#void#159#144: ASTORE_I T62, T61, IConst: 1
+Sobel.RgbImage#sobel(int[][][])#double#142#69: MOVE_D R85, R62
+Sobel.RgbImage#main(java.lang.String[])#void#131#156: MOVE_I R58, R57
 Sobel.RgbImage#luminance(int[])#int#7#2: MOVE_D R3, DConst: 0.59
-Sobel.RgbImage#sobel(int[][][])#double#69#30: MOVE_D R10, T41
-Sobel.RgbImage#sobel(int[][][])#double#116#48: ADD_D T56, T55, R7
-Sobel.RgbImage#sobel(int[][][])#double#105#45: MOVE_D R13, T53
-Sobel.RgbImage#main(java.lang.String[])#void#106#53: MOVE_D R11, T10
-Sobel.TextFile#loadChar()#char#71#21: MOVE_I R19, T18
-Sobel.TextFile.Mode#<clinit>()#void#20#10: MOVE_I T11, IConst: 1
-Sobel.RgbImage#sobel(int[][][])#double#124#50: ADD_D T58, R12, R12
-Sobel.RgbImage#sobel(int[][][])#double#164#63: MUL_D T69, R16, R16
-Sobel.RgbImage#makeGrayscale()#void#79#32: ALOAD_I T42, T41, IConst: 2
-Sobel.RgbImage#sobel(int[][][])#double#165#64: ADD_D T70, T68, T69
-Sobel.RgbImage#makeGrayscale()#void#115#48: ASTORE_I T55, T53, IConst: 1
-Sobel.RgbImage#makeGrayscale()#void#66#27: MUL_D T37, R2, T36
-Sobel.RgbImage#luminance(int[])#int#3#1: MOVE_D R2, DConst: 0.3
-Sobel.RgbImage#sobel(int[][][])#double#57#25: MOVE_D R9, T37
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#113#90: ASTORE_I IConst: 0, T86, IConst: 0
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#239#49: ASTORE_I T57, T53, IConst: 0
-Sobel.RgbImage#makeGrayscale()#void#67#28: ADD_D T38, T31, T37
-Sobel.RgbImage#sobel(int[][][])#double#149#59: SUB_D T66, T64, T65
-Sobel.RgbImage#luminance(int[])#int#32#11: ALOAD_I T17, R1, IConst: 2
-Sobel.RgbImage#luminance(int[])#int#44#17: REM_I T23, T22, IConst: 256
-Sobel.RgbImage#sobel(int[][][])#double#21#10: MOVE_D R6, T25
-Sobel.RgbImage#sobel(int[][][])#double#93#40: MOVE_D R12, T49
-Sobel.RgbImage#main(java.lang.String[])#void#109#55: MOVE_I R37, T36
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#186#69: ASTORE_I IConst: 0, T74, IConst: 0
+Sobel.RgbImage#makeGrayscale()#void#109#170: MOVE_D R70, R62
+Sobel.RgbImage#sobel(int[][][])#double#108#47: MOVE_D R63, R27
 Sobel.RgbImage#luminance(int[])#int#17#4: ALOAD_I T5, R1, IConst: 0
+Sobel.TextFile#loadChar()#char#72#22: MOVE_I R21, R20
+Sobel.RgbImage#makeGrayscale()#void#82#154: ADD_D T55, T46, T54
+Sobel.RgbImage#sobel(int[][][])#double#155#78: MOVE_D R94, R77
+Sobel.RgbImage#luminance(int[])#int#3#1: MOVE_D R2, DConst: 0.3
+Sobel.RgbImage#sobel(int[][][])#double#32#14: INT_2DOUBLE T31, T30
+Sobel.RgbImage#makeGrayscale()#void#52#136: MUL_D T37, DConst: 0.001171875, T36
+Sobel.RgbImage#precise(int)#int#0#1: MOVE_I R0, R0
+Sobel.RgbImage#main(java.lang.String[])#void#106#121: MOVE_D R48, T11
+Sobel.RgbImage#main(java.lang.String[])#void#166#170: MOVE_I R71, T70
+Sobel.TextFile#loadChar()#char#67#19: GETFIELD_I T17, T16, .ttype
+Sobel.RgbImage#sobel(int[][][])#double#33#15: MOVE_D R32, T31
+Sobel.RgbImage#sobel(int[][][])#double#44#19: INT_2DOUBLE T36, T35
+Sobel.RgbImage#makeGrayscale()#void#50#134: ALOAD_I T35, T34, IConst: 0
+Sobel.RgbImage#makeGrayscale()#void#83#155: MOVE_D R56, T55
+Sobel.RgbImage#sobel(int[][][])#double#80#34: INT_2DOUBLE T50, T49
+Sobel.RgbImage#main(java.lang.String[])#void#111#125: MOVE_I R52, R51
+Sobel.RgbImage#makeGrayscale()#void#8#2: MOVE_D R2, DConst: 0.0023046875
+Sobel.RgbImage#sobel(int[][][])#double#20#9: INT_2DOUBLE T26, T25
+Sobel.RgbImage#main(java.lang.String[])#void#109#124: MOVE_I R51, T50
+Sobel.RgbImage#makeGrayscale()#void#3#1: MOVE_D R1, DConst: 0.001171875
+Sobel.RgbImage#sobel(int[][][])#double#104#44: INT_2DOUBLE T60, T59
+Sobel.RgbImage#luminance(int[])#int#40#16: DOUBLE_2INT T22, T21
+Sobel.RgbImage#sobel(int[][][])#double#107#46: MOVE_D R62, R22
+Sobel.RgbImage#makeGrayscale()#void#67#145: ADD_D T46, T37, T45
+Sobel.RgbImage#sqrt(double)#double#0#1: MOVE_D R2, R0
+Sobel.RgbImage#luminance(int[])#int#12#3: MOVE_D R4, DConst: 0.11
+Sobel.RgbImage#sobel(int[][][])#double#69#30: MOVE_D R46, T45
+Sobel.TextFile.Mode#<init>(java.lang.String,int)#void#2#1: MOVE_I R2, R2
+Sobel.RgbImage#makeGrayscale()#void#113#171: MUL_D T71, R70, DConst: 256.0
+Sobel.RgbImage#sobel(int[][][])#double#117#53: MOVE_D R69, R51
+Sobel.RgbImage#sobel(int[][][])#double#152#76: SUB_D T92, T90, R91
+Sobel.RgbImage#main(java.lang.String[])#void#146#162: MOVE_I R64, R63
+Sobel.TextFile.Mode#<clinit>()#void#7#4: MOVE_I T7, IConst: 0
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#263#244: ASTORE_I T105, T99, IConst: 1
+Sobel.RgbImage#makeGrayscale()#void#125#179: MOVE_D R78, R70
+Sobel.RgbImage#sobel(int[][][])#double#68#29: INT_2DOUBLE T45, T44
+Sobel.RgbImage#makeGrayscale()#void#130#181: DOUBLE_2INT T80, T79
+Sobel.RgbImage#sobel(int[][][])#double#56#24: INT_2DOUBLE T41, T40
+Sobel.RgbImage#sobel(int[][][])#double#137#65: ADD_D T81, R80, R80
+Sobel.RgbImage#sobel(int[][][])#double#171#87: MOVE_D R103, R102
+Sobel.TextFile.Mode#<clinit>()#void#20#10: MOVE_I T11, IConst: 1
+Sobel.RgbImage#makeGrayscale()#void#97#162: MUL_D T63, R62, DConst: 256.0
+Sobel.RgbImage#sobel(int[][][])#double#122#56: MOVE_D R72, R71
+Sobel.RgbImage#sobel(int[][][])#double#129#61: MOVE_D R77, T76
+Sobel.RgbImage#sobel(int[][][])#double#169#86: MOVE_D R102, T101
+Sobel.RgbImage#sobel(int[][][])#double#112#49: ADD_D T65, R64, R64
+Sobel.RgbImage#sobel(int[][][])#double#149#74: SUB_D T90, T86, T89
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#186#203: ASTORE_I IConst: 0, T124, IConst: 0
+Sobel.RgbImage#sobel(int[][][])#double#93#40: MOVE_D R56, T55
+Sobel.RgbImage#makeGrayscale()#void#80#152: INT_2DOUBLE T53, T52
+Sobel.RgbImage#makeGrayscale()#void#65#143: INT_2DOUBLE T44, T43
+Sobel.RgbImage#sobel(int[][][])#double#143#70: SUB_D T86, T84, R85
+Sobel.RgbImage#sobel(int[][][])#double#146#72: MOVE_D R88, R87
+Sobel.RgbImage#sobel(int[][][])#double#10#5: MOVE_D R22, T21
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#212#217: ASTORE_I IConst: 0, T136, IConst: 2
+Sobel.RgbImage#makeGrayscale()#void#51#135: INT_2DOUBLE T36, T35
+Sobel.RgbImage#load(java.lang.String)#void#139#136: ASTORE_I T55, T54, IConst: 0
+Sobel.RgbImage#makeGrayscale()#void#79#151: ALOAD_I T52, T51, IConst: 2
+Sobel.RgbImage#sobel(int[][][])#double#144#71: MOVE_D R87, R37
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#239#231: ASTORE_I T93, T87, IConst: 0
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#238#230: ALOAD_I T93, T92, IConst: 0
+Sobel.RgbImage#main(java.lang.String[])#void#129#155: MOVE_I R56, IConst: 255
+Sobel.RgbImage#sobel(int[][][])#double#133#63: MOVE_D R79, R46
+Sobel.RgbImage#sobel(int[][][])#double#138#66: ADD_D T82, R78, T81
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#139#185: ASTORE_I IConst: 0, T168, IConst: 2
+Sobel.RgbImage#sobel(int[][][])#double#125#58: SUB_D T74, T70, T73
+Sobel.RgbImage#luminance(int[])#int#44#17: REM_I T23, T22, IConst: 256
+Sobel.RgbImage#luminance(int[])#int#32#11: ALOAD_I T17, R1, IConst: 2
+Sobel.RgbImage#sobel(int[][][])#double#128#60: SUB_D T76, T74, R75
+Sobel.RgbImage#sobel(int[][][])#double#164#83: MUL_D T99, R98, R98
+Sobel.TextFile#loadChar()#char#70#20: INT_2CHAR T18, T17
+Sobel.RgbImage#makeGrayscale()#void#99#164: ASTORE_I T64, T61, IConst: 0
+Sobel.RgbImage#sobel(int[][][])#double#126#59: MOVE_D R75, R61
+Sobel.RgbImage#sobel(int[][][])#double#119#54: SUB_D T70, T68, R69
 Sobel.TextFile#loadChar()#char#1#1: MOVE_I R5, IConst: 0
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#212#77: ASTORE_I IConst: 0, T80, IConst: 2
+Sobel.RgbImage#sobel(int[][][])#double#21#10: MOVE_D R27, T26
+Sobel.RgbImage#sobel(int[][][])#double#148#73: ADD_D T89, R88, R88
+Sobel.RgbImage#luminance(int[])#int#39#15: ADD_D T21, T20, DConst: 0.5
+Sobel.RgbImage#sqrt(double)#double#5#4: MOVE_D R5, R4
+Sobel.RgbImage#sobel(int[][][])#double#150#75: MOVE_D R91, R69
+Sobel.RgbImage#makeGrayscale()#void#115#173: ASTORE_I T72, T69, IConst: 1
+Sobel.RgbImage#sobel(int[][][])#double#165#84: ADD_D T100, T96, T99
+Sobel.RgbImage#luminance(int[])#int#35#14: ADD_D T20, T16, T19
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#286#256: ALOAD_I T117, T116, IConst: 2
+Sobel.RgbImage#accept(double)#double#0#1: MOVE_D R0, R0
+Sobel.RgbImage#luminance(int[])#int#26#9: MUL_D T15, DConst: 0.59, T14
+Sobel.RgbImage#sobel(int[][][])#double#124#57: ADD_D T73, R72, R72
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#126#178: ASTORE_I IConst: 0, T162, IConst: 1
+Sobel.TextFile#loadChar()#char#71#21: MOVE_I R19, T18
+Sobel.RgbImage#luminance(int[])#int#34#13: MUL_D T19, DConst: 0.11, T18
+Sobel.RgbImage#main(java.lang.String[])#void#144#161: MOVE_I R62, IConst: 0
+Sobel.RgbImage#sobel(int[][][])#double#113#50: ADD_D T66, R62, T65
+Sobel.RgbImage#sobel(int[][][])#double#135#64: MOVE_D R80, R79
+Sobel.RgbImage#luminance(int[])#int#19#6: MUL_D T12, DConst: 0.3, T11
+Sobel.RgbImage#sobel(int[][][])#double#105#45: MOVE_D R61, T60
+Sobel.RgbImage#makeGrayscale()#void#98#163: DOUBLE_2INT T64, T63
+Sobel.RgbImage#sobel(int[][][])#double#131#62: MOVE_D R78, R67
+Sobel.RgbImage#sobel(int[][][])#double#139#67: MOVE_D R83, R75
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#113#171: ASTORE_I IConst: 0, T156, IConst: 0
+Sobel.RgbImage#sobel(int[][][])#double#120#55: MOVE_D R71, R56
+Sobel.RgbImage#sobel(int[][][])#double#92#39: INT_2DOUBLE T55, T54
+Sobel.RgbImage#makeGrayscale()#void#66#144: MUL_D T45, DConst: 0.0023046875, T44
+Sobel.RgbImage#sobel(int[][][])#double#141#68: ADD_D T84, T82, R83
+Sobel.RgbImage#makeGrayscale()#void#114#172: DOUBLE_2INT T72, T71
+Sobel.RgbImage#sobel(int[][][])#double#159#80: MUL_D T96, R95, R95
+Sobel.RgbImage#makeGrayscale()#void#129#180: MUL_D T79, R78, DConst: 256.0
+Sobel.RgbImage#sobel(int[][][])#double#114#51: MOVE_D R67, R32
+Sobel.RgbImage#sobel(int[][][])#double#153#77: MOVE_D R93, T92
+Sobel.RgbImage#sqrt(double)#double#4#3: MOVE_D R4, T3
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#262#243: ALOAD_I T105, T104, IConst: 1
+Sobel.RgbImage#load(java.lang.String)#void#179#152: ASTORE_I T69, T68, IConst: 2
+Sobel.RgbImage#makeGrayscale()#void#13#3: MOVE_D R3, DConst: 4.296875E-4
+Sobel.RgbImage#luminance(int[])#int#24#7: ALOAD_I T13, R1, IConst: 1
+Sobel.RgbImage#main(java.lang.String[])#void#108#123: DOUBLE_2INT T50, R49
+Sobel.RgbImage#sobel(int[][][])#double#57#25: MOVE_D R9, T41
+Sobel.RgbImage#sobel(int[][][])#double#81#35: MOVE_D R51, T50
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#287#257: ASTORE_I T117, T111, IConst: 2
+Sobel.RgbImage#makeGrayscale()#void#93#161: MOVE_D R62, R56
+Sobel.RgbImage#sobel(int[][][])#double#110#48: MOVE_D R64, R63
+Sobel.RgbImage#accept(int)#int#0#1: MOVE_I R0, R0
+Sobel.RgbImage#luminance(int[])#int#18#5: INT_2DOUBLE T11, T5
+Sobel.RgbImage#main(java.lang.String[])#void#107#122: MOVE_D R49, R48
+Sobel.RgbImage#luminance(int[])#int#25#8: INT_2DOUBLE T14, T13
 2
-Sobel.RgbImage#main(java.lang.String[])#void#53#45: NEWARRAY T27, IConst: 3, int[]#ARRAY#int[]#ARRAY
-Sobel.RgbImage#load(java.lang.String)#void#88#61: NEWARRAY T32, IConst: 3, int[]#ARRAY#int[]#ARRAY
+Sobel.RgbImage#main(java.lang.String[])#void#53#149: NEWARRAY T34, IConst: 3, int[]#ARRAY#int[]#ARRAY
+Sobel.RgbImage#load(java.lang.String)#void#88#163: NEWARRAY T38, IConst: 3, int[]#ARRAY#int[]#ARRAY
+3
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#110
+Sobel.RgbImage#sqrt(double)#double#1
+Sobel.TextFile.Mode#<init>(java.lang.String,int)#void#01

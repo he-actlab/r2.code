@@ -13,7 +13,7 @@ public class Random {
 		 CLASS VARIABLES
 		 ------------------------------------------------------------------------------ */
 
-	int seed = 0;	// approx: 2: PUTFIELD_I R0, .seed, IConst: 0
+	int seed = 0;
 
 	public int m[];
 	public int i = 4;
@@ -32,7 +32,7 @@ public class Random {
 
 	public boolean haveRange = false;
 	public double left  = 0.0;
-	public double right = 1.0;	// approx: 33: PUTFIELD_D R0, .right, DConst: 1.0
+	public double right = 1.0;
 	public double width = 1.0;
 
 
@@ -118,7 +118,6 @@ public class Random {
 	public final synchronized double nextDouble () {
 
 		int k;
-		double nextValue;
 
 		k = m[i] - m[j]; 
 		if (k < 0) 
@@ -136,15 +135,9 @@ public class Random {
 			j--;
 
 		if (haveRange) 
-			nextValue = left +  dm1 * k * width; 
+			return left +  dm1 * k * width; 
 		else
-			nextValue = dm1 * k;
-		
-		precise(nextValue);
-		precise_all_FIELD1_TAG1(m);
-		precise(k);
-		
-		return nextValue;
+			return dm1 * k;
 
 	} 
 
@@ -156,9 +149,8 @@ public class Random {
 
 		int jseed, k0, k1, j0, j1, iloop;
 
-		this.seed = seed;	// approx: 1: PUTFIELD_I R0, .seed, R1
+		this.seed = seed;
 
-		alloc_TAG1();
 		m = new int[17];
 
 		jseed = Math.min(Math.abs(seed),m1);
@@ -176,17 +168,7 @@ public class Random {
 		}
 		i = 4;
 		j = 16;
-		
-		precise_all_FIELD1_TAG1(m);
-	}
 
-	//jspark
-	private void alloc_TAG1(){}
-	private int accept (int i){return i;}
-	private void accept_all_FIELD2_TAG(){}
-	private void precise_all_FIELD1_TAG1(int[] m){}
-	private double precise(double nextValue) {return nextValue;}
-	private int precise(int i){return i;}
-	//krapsj
+	}
 
 }

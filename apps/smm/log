@@ -1,3 +1,107 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0da9a222a1f03386e9b9241cb40a196cc3a0156c6cb549e7f738653d92d06c3e
-size 3669532
+Buildfile: /Users/jspark/projects/expax.code/apps/smm/build.xml
+
+clean:
+   [delete] Deleting directory /Users/jspark/projects/expax.code/apps/smm/build
+   [delete] Deleting: /Users/jspark/projects/expax.code/apps/smm/smm.jar
+
+build:
+    [mkdir] Created dir: /Users/jspark/projects/expax.code/apps/smm/build
+   [enerjc] /Users/jspark/projects/expax.code/apps/smm/build.xml:49: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+   [enerjc] Compiling 5 source files to /Users/jspark/projects/expax.code/apps/smm/build
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/smm/src/jnt/scimark2/Constants.java]]
+   [enerjc] [parsing completed 14ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/smm/src/jnt/scimark2/Random.java]]
+   [enerjc] [parsing completed 8ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/smm/src/jnt/scimark2/SparseCompRow.java]]
+   [enerjc] [parsing completed 2ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/smm/src/jnt/scimark2/commandline.java]]
+   [enerjc] [parsing completed 1ms]
+   [enerjc] [parsing started RegularFileObject[/Users/jspark/projects/expax.code/apps/smm/src/jnt/scimark2/kernel.java]]
+   [enerjc] [parsing completed 3ms]
+   [enerjc] [search path for source files: /Users/jspark/projects/expax.code/apps/smm/src]
+   [enerjc] [search path for class files: /Users/jspark/projects/expax.code/checker-framework/checkers/binary/jsr308-all.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/resources.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/rt.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/sunrsasign.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/jsse.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/jce.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/charsets.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/jfr.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/JObjC.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/classes,../../checker-runtime/build/cfrt.jar,../../enerj/build/enerj.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/dnsns.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/localedata.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/sunec.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/zipfs.jar,/System/Library/Java/Extensions/MRJToolkit.jar,/System/Library/Java/Extensions/QTJava.zip,/Users/jspark/projects/expax.code/apps/smm/build,/opt/local/share/java/apache-ant/lib/ant-launcher.jar,/opt/local/share/java/apache-ant/lib/ant-antlr.jar,/opt/local/share/java/apache-ant/lib/ant-apache-bcel.jar,/opt/local/share/java/apache-ant/lib/ant-apache-bsf.jar,/opt/local/share/java/apache-ant/lib/ant-apache-log4j.jar,/opt/local/share/java/apache-ant/lib/ant-apache-oro.jar,/opt/local/share/java/apache-ant/lib/ant-apache-regexp.jar,/opt/local/share/java/apache-ant/lib/ant-apache-resolver.jar,/opt/local/share/java/apache-ant/lib/ant-apache-xalan2.jar,/opt/local/share/java/apache-ant/lib/ant-commons-logging.jar,/opt/local/share/java/apache-ant/lib/ant-commons-net.jar,/opt/local/share/java/apache-ant/lib/ant-jai.jar,/opt/local/share/java/apache-ant/lib/ant-javamail.jar,/opt/local/share/java/apache-ant/lib/ant-jdepend.jar,/opt/local/share/java/apache-ant/lib/ant-jmf.jar,/opt/local/share/java/apache-ant/lib/ant-jsch.jar,/opt/local/share/java/apache-ant/lib/ant-junit.jar,/opt/local/share/java/apache-ant/lib/ant-junit4.jar,/opt/local/share/java/apache-ant/lib/ant-netrexx.jar,/opt/local/share/java/apache-ant/lib/ant-swing.jar,/opt/local/share/java/apache-ant/lib/ant-testutil.jar,/opt/local/share/java/apache-ant/lib/ant.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/tools.jar]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Object.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/String.class)]]
+   [enerjc] Round 1:
+   [enerjc] 	input files: {jnt.scimark2.Constants, jnt.scimark2.Random, jnt.scimark2.SparseCompRow, jnt.scimark2.commandline, jnt.scimark2.kernel}
+   [enerjc] 	annotations: []
+   [enerjc] 	last round: false
+   [enerjc] Processor enerj.PrecisionChecker matches [] and returns false.
+   [enerjc] [search path for source files: /Users/jspark/projects/expax.code/apps/smm/src]
+   [enerjc] [search path for class files: /Users/jspark/projects/expax.code/checker-framework/checkers/binary/jsr308-all.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/resources.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/rt.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/sunrsasign.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/jsse.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/jce.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/charsets.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/jfr.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/JObjC.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/classes,../../checker-runtime/build/cfrt.jar,../../enerj/build/enerj.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/dnsns.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/localedata.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/sunec.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/zipfs.jar,/System/Library/Java/Extensions/MRJToolkit.jar,/System/Library/Java/Extensions/QTJava.zip,/Users/jspark/projects/expax.code/apps/smm/build,/opt/local/share/java/apache-ant/lib/ant-launcher.jar,/opt/local/share/java/apache-ant/lib/ant-antlr.jar,/opt/local/share/java/apache-ant/lib/ant-apache-bcel.jar,/opt/local/share/java/apache-ant/lib/ant-apache-bsf.jar,/opt/local/share/java/apache-ant/lib/ant-apache-log4j.jar,/opt/local/share/java/apache-ant/lib/ant-apache-oro.jar,/opt/local/share/java/apache-ant/lib/ant-apache-regexp.jar,/opt/local/share/java/apache-ant/lib/ant-apache-resolver.jar,/opt/local/share/java/apache-ant/lib/ant-apache-xalan2.jar,/opt/local/share/java/apache-ant/lib/ant-commons-logging.jar,/opt/local/share/java/apache-ant/lib/ant-commons-net.jar,/opt/local/share/java/apache-ant/lib/ant-jai.jar,/opt/local/share/java/apache-ant/lib/ant-javamail.jar,/opt/local/share/java/apache-ant/lib/ant-jdepend.jar,/opt/local/share/java/apache-ant/lib/ant-jmf.jar,/opt/local/share/java/apache-ant/lib/ant-jsch.jar,/opt/local/share/java/apache-ant/lib/ant-junit.jar,/opt/local/share/java/apache-ant/lib/ant-junit4.jar,/opt/local/share/java/apache-ant/lib/ant-netrexx.jar,/opt/local/share/java/apache-ant/lib/ant-swing.jar,/opt/local/share/java/apache-ant/lib/ant-testutil.jar,/opt/local/share/java/apache-ant/lib/ant.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/tools.jar]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Object.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/String.class)]]
+   [enerjc] Round 2:
+   [enerjc] 	input files: {}
+   [enerjc] 	annotations: []
+   [enerjc] 	last round: true
+   [enerjc] [search path for source files: /Users/jspark/projects/expax.code/apps/smm/src]
+   [enerjc] [search path for class files: /Users/jspark/projects/expax.code/checker-framework/checkers/binary/jsr308-all.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/resources.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/rt.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/sunrsasign.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/jsse.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/jce.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/charsets.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/jfr.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/JObjC.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/classes,../../checker-runtime/build/cfrt.jar,../../enerj/build/enerj.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/dnsns.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/localedata.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/sunec.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext/zipfs.jar,/System/Library/Java/Extensions/MRJToolkit.jar,/System/Library/Java/Extensions/QTJava.zip,/Users/jspark/projects/expax.code/apps/smm/build,/opt/local/share/java/apache-ant/lib/ant-launcher.jar,/opt/local/share/java/apache-ant/lib/ant-antlr.jar,/opt/local/share/java/apache-ant/lib/ant-apache-bcel.jar,/opt/local/share/java/apache-ant/lib/ant-apache-bsf.jar,/opt/local/share/java/apache-ant/lib/ant-apache-log4j.jar,/opt/local/share/java/apache-ant/lib/ant-apache-oro.jar,/opt/local/share/java/apache-ant/lib/ant-apache-regexp.jar,/opt/local/share/java/apache-ant/lib/ant-apache-resolver.jar,/opt/local/share/java/apache-ant/lib/ant-apache-xalan2.jar,/opt/local/share/java/apache-ant/lib/ant-commons-logging.jar,/opt/local/share/java/apache-ant/lib/ant-commons-net.jar,/opt/local/share/java/apache-ant/lib/ant-jai.jar,/opt/local/share/java/apache-ant/lib/ant-javamail.jar,/opt/local/share/java/apache-ant/lib/ant-jdepend.jar,/opt/local/share/java/apache-ant/lib/ant-jmf.jar,/opt/local/share/java/apache-ant/lib/ant-jsch.jar,/opt/local/share/java/apache-ant/lib/ant-junit.jar,/opt/local/share/java/apache-ant/lib/ant-junit4.jar,/opt/local/share/java/apache-ant/lib/ant-netrexx.jar,/opt/local/share/java/apache-ant/lib/ant-swing.jar,/opt/local/share/java/apache-ant/lib/ant-testutil.jar,/opt/local/share/java/apache-ant/lib/ant.jar,/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/tools.jar]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Object.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/String.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[../../enerj/build/enerj.jar(enerj/lang/Approx.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Retention.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/annotation/RetentionPolicy.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Target.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Users/jspark/projects/expax.code/checker-framework/checkers/binary/jsr308-all.jar(java/lang/annotation/ElementType.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Users/jspark/projects/expax.code/checker-framework/checkers/binary/jsr308-all.jar(checkers/quals/SubtypeOf.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[../../enerj/build/enerj.jar(enerj/lang/Precise.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[../../enerj/build/enerj.jar(enerj/lang/Top.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Users/jspark/projects/expax.code/checker-framework/checkers/binary/jsr308-all.jar(checkers/quals/ImplicitFor.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[../../enerj/build/enerj.jar(enerj/lang/Context.class)]]
+   [enerjc] [checking jnt.scimark2.Constants]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/AutoCloseable.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Users/jspark/projects/expax.code/checker-framework/checkers/binary/jsr308-all.jar(checkers/quals/PolyAll.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Users/jspark/projects/expax.code/checker-framework/checkers/binary/jsr308-all.jar(checkers/quals/Unqualified.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/util/Vector.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[../../enerj/build/enerj.jar(enerj/rt/PrecisionRuntimeRoot.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[../../enerj/build/enerj.jar(enerj/rt/PrecisionRuntime.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[../../checker-runtime/build/cfrt.jar(checkers/runtime/rt/Runtime.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Double.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[../../enerj/build/enerj.jar(enerj/rt/PrecisionRuntime$MemKind.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Number.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Integer.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Byte.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Character.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Short.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Long.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Float.class)]]
+   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax.code/apps/smm/build/jnt/scimark2/Constants.class]]
+   [enerjc] [checking jnt.scimark2.Random]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Math.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[../../enerj/build/enerj.jar(enerj/rt/PrecisionRuntime$ArithOperator.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[../../enerj/build/enerj.jar(enerj/rt/PrecisionRuntime$NumberKind.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/io/Serializable.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Boolean.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[../../enerj/build/enerj.jar(enerj/rt/Reference.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Void.class)]]
+   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax.code/apps/smm/build/jnt/scimark2/Random.class]]
+   [enerjc] [checking jnt.scimark2.SparseCompRow]
+   [enerjc] 64 5; 3
+   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax.code/apps/smm/build/jnt/scimark2/SparseCompRow.class]]
+   [enerjc] [checking jnt.scimark2.commandline]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/RuntimeException.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Throwable.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Exception.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Error.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/NumberFormatException.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/IllegalArgumentException.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Thread.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Class.class)]]
+   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax.code/apps/smm/build/jnt/scimark2/commandline.class]]
+   [enerjc] [checking jnt.scimark2.kernel]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/System.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/io/PrintStream.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/io/FilterOutputStream.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/io/OutputStream.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/StringBuilder.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/AbstractStringBuilder.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/CharSequence.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/StringBuffer.class)]]
+   [enerjc] [loading ZipFileIndexFileObject[/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Comparable.class)]]
+   [enerjc] [wrote RegularFileObject[/Users/jspark/projects/expax.code/apps/smm/build/jnt/scimark2/kernel.class]]
+   [enerjc] [total 1949ms]
+      [jar] Building jar: /Users/jspark/projects/expax.code/apps/smm/smm.jar
+
+BUILD SUCCESSFUL
+Total time: 2 seconds

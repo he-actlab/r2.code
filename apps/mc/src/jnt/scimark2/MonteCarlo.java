@@ -32,17 +32,17 @@ package jnt.scimark2;
 public class MonteCarlo
 {
 
-	public static final  double integrate(int Num_samples, int SEED)
+	public static final double integrate(int Num_samples, int SEED)
 	{
 		Random R = new Random(SEED);
 
 		int under_curve = 0; 
 		for (int count=0; count<Num_samples; count++)
 		{
-			double x= R.nextDouble(); 	// approx: 25: MOVE_D R10, T18
-			double y= R.nextDouble();		// approx: 27: MOVE_D R11, T19
+			double x= R.nextDouble(); 
+			double y= R.nextDouble();	
 
-			double sum = x*x + y*y; 	// approx: 28: MUL_D T20, R10, R10	// approx: 29: MUL_D T21, R11, R11	// approx: 30: ADD_D T22, T20, T21	// approx: 31: MOVE_D R23, T22
+			double sum = x*x + y*y; 
 			
 			// additional accept
 			sum = accept(sum);
@@ -51,31 +51,8 @@ public class MonteCarlo
 				under_curve ++; 
 		}
 		
-		precise_all_FIELD2_TAG(R);
-		precise_all_FIELD3_TAG(R);
-		precise_all_FIELD4_TAG(R);
-		precise_all_FIELD1_TAG1(R);
-		precise_all_FIELD6_TAG(R);
-		precise_all_FIELD7_TAG(R);
-		precise_all_FIELD8_TAG(R);
-		precise_all_FIELD9_TAG(R);
-		precise_all_FIELD10_TAG(R);
-		precise_all_FIELD11_TAG(R);
-		precise_all_FIELD12_TAG(R);
-
 		return ((double) under_curve / Num_samples) * 4.0; 
 	}
 
-	public static void precise_all_FIELD2_TAG(Random R){}
-	public static void precise_all_FIELD3_TAG(Random R){}
-	public static void precise_all_FIELD4_TAG(Random R){}
-	public static void precise_all_FIELD1_TAG1(Random R){}
-	public static void precise_all_FIELD6_TAG(Random R){}
-	public static void precise_all_FIELD7_TAG(Random R){}
-	public static void precise_all_FIELD8_TAG(Random R){}
-	public static void precise_all_FIELD9_TAG(Random R){}
-	public static void precise_all_FIELD10_TAG(Random R){}
-	public static void precise_all_FIELD11_TAG(Random R){}
-	public static void precise_all_FIELD12_TAG(Random R){}
 	public static double accept(double i){return i;}
 }

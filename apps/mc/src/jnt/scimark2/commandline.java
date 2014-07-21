@@ -12,7 +12,7 @@ public class commandline
 
 	public static void main(String args[])
 	{
-		double min_time = Constants.RESOLUTION_DEFAULT;	// approx: 1: MOVE_D R1, DConst: 2.0
+		double min_time = Constants.RESOLUTION_DEFAULT;
 
 		String seed = null;
 

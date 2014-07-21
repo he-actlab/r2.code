@@ -1,570 +1,553 @@
-569
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#29#363#IDENT#R
-jnt.scimark2.Random#<init>(double,double)#void#37#582#IDENT#mdig
-jnt.scimark2.Random#nextDouble()#double#121#3320#IDENT#nextValue
-jnt.scimark2.commandline#main(java.lang.String[])#void#33#594#ASSIGN#seed = args[0]
-jnt.scimark2.Random#<init>(int,double,double)#void#100#883#IDENT#right
-jnt.scimark2.Random#<init>(int,double,double)#void#114#2672#IDENT#this
-jnt.scimark2.Constants#<init>()#void#1#30#IDENT#super
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#49#426#IDENT#row
-jnt.scimark2.Random#<init>(double,double)#void#80#805#TYPECAST#(double)m1
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#29#763#IDENT#row
-jnt.scimark2.Random#<init>(double,double)#void#121#1774#SELECT#this.right
-jnt.scimark2.Random#<init>(int,double,double)#void#129#2728#MINUS#right - left
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#110#672#IDENT#rowr
-jnt.scimark2.Random#initialize(int)#void#62#3869#MOD#jseed % m2
-jnt.scimark2.Random#<init>(int,double,double)#void#37#582#IDENT#mdig
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#14#194#VARDEF#double[] y = new double[N]
-jnt.scimark2.Random#<init>(int,double,double)#void#44#594#IDENT#one
-jnt.scimark2.Random#<init>(int)#void#81#814#IDENT#m1
-jnt.scimark2.Random#<init>()#void#105#912#IDENT#width
-jnt.scimark2.Random#<init>(double,double)#void#134#1826#ASSIGN#haveRange = true
-jnt.scimark2.Random#<init>(int)#void#52#605#MINUS#mdig - 2
-jnt.scimark2.Random#initialize(int)#void#147#4067#ASSIGN#i = 4
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#55#450#VARDEF#int r = 0
-jnt.scimark2.Random#initialize(int)#void#110#4005#DIV#m2 / 2
-jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#12#1120#IDENT#i
-jnt.scimark2.Random#initialize(int)#void#35#3811#PREDEC#--jseed
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#7#651#VARDEF#int reps = 0
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#141#745#IDENT#row
-jnt.scimark2.Random#<init>(int)#void#75#616#ASSIGN#m2 = one << mdig / 2
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#83#716#PREINC#++r
-jnt.scimark2.Random#initialize(int)#void#74#3907#ASSIGN#iloop = 0
-jnt.scimark2.Random#<init>(int,double,double)#void#28#537#ASSIGN#one = 1
-jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#0#1084#IDENT#N
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#120#680#ASSIGN#col[rowr + i] = i * step
-jnt.scimark2.Random#<init>(double,double)#void#52#605#MINUS#mdig - 2
-jnt.scimark2.commandline#main(java.lang.String[])#void#53#750#IDENT#R
-jnt.scimark2.Random#<init>(int,double,double)#void#81#814#IDENT#m1
-jnt.scimark2.Random#<init>(double,double)#void#74#636#SL#one << mdig / 2
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#139#740#IDENT#val
-jnt.scimark2.Random#<init>(double,double)#void#79#779#IDENT#dm1
-jnt.scimark2.Random#initialize(int)#void#31#3801#MOD#jseed % 2
-jnt.scimark2.Random#initialize(int)#void#87#3947#ASSIGN#jseed = j0 * k0
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#162#814#SELECT#System.out.print
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#137#728#SELECT#SparseCompRow.matmult
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#63#519#IDENT#row
-jnt.scimark2.Random#<init>(double,double)#void#96#855#ASSIGN#left = 0.0
-jnt.scimark2.Random#<init>()#void#41#586#MINUS#mdig - 2
-jnt.scimark2.Random#initialize(int)#void#104#3988#PLUS#jseed / m2 + j0 * k1 + j1 * k0
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#16#228#IDENT#nz
-jnt.scimark2.Random#initialize(int)#void#70#3888#DIV#jseed / m2
-jnt.scimark2.commandline#main(java.lang.String[])#void#17#500#NE#args.length != 1
-jnt.scimark2.Random#<init>(int)#void#100#883#IDENT#right
-jnt.scimark2.Random#<init>()#void#0#1266#IDENT#super
-jnt.scimark2.Random#nextDouble()#double#108#3298#IDENT#k
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#1#165#IDENT#R
-jnt.scimark2.Random#<init>(int,double,double)#void#60#558#ASSIGN#m1 = (one << mdig - 2) + ((one << mdig - 2) - one)
-jnt.scimark2.Random#initialize(int)#void#67#3890#IDENT#m2
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#71#830#PREINC#++i
-jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#18#1111#PREINC#++i
-jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#24#1151#IDENT#A
-jnt.scimark2.Random#nextDouble()#double#8#3110#INDEXED#m[i]
-jnt.scimark2.Random#initialize(int)#void#45#3832#MOD#9069 % m2
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#67#858#MUL#x[col[i]] * val[i]
-jnt.scimark2.Random#nextDouble()#double#127#3336#MUL#dm1 * k
-jnt.scimark2.Random#nextDouble()#double#125#3338#IDENT#k
-jnt.scimark2.Random#nextDouble()#double#63#3202#PREDEC#--i
-jnt.scimark2.Random#initialize(int)#void#51#3852#IDENT#m2
-jnt.scimark2.Random#nextDouble()#double#128#3330#ASSIGN#nextValue = dm1 * k
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#188#903#IDENT#i
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#219#952#IDENT#precise_all_FIELD1_TAG1
-jnt.scimark2.Random#<init>()#void#96#855#ASSIGN#left = 0.0
-jnt.scimark2.Random#<init>(double,double)#void#133#1816#IDENT#haveRange
-jnt.scimark2.Random#initialize(int)#void#17#3778#IDENT#seed
-jnt.scimark2.Random#initialize(int)#void#111#3999#MOD#(jseed / m2 + j0 * k1 + j1 * k0) % (m2 / 2)
-jnt.scimark2.Random#initialize(int)#void#1#3698#SELECT#this.seed
-jnt.scimark2.Random#<init>(double,double)#void#53#598#SL#one << mdig - 2
-jnt.scimark2.commandline#main(java.lang.String[])#void#35#642#NEWCLASS#new Random(Integer.parseInt(seed))
-jnt.scimark2.Random#<init>(double,double)#void#117#1760#ASSIGN#this.left = left
-jnt.scimark2.Random#<init>(int,double,double)#void#119#2692#IDENT#this
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#89#580#IDENT#step
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#24#289#MUL#nr * N
-jnt.scimark2.Random#nextDouble()#double#14#3118#IDENT#j
-jnt.scimark2.Random#<init>(double,double)#void#101#883#ASSIGN#right = 1.0
-jnt.scimark2.Random#<init>()#void#59#590#PLUS#(one << mdig - 2) + ((one << mdig - 2) - one)
-jnt.scimark2.Random#initialize(int)#void#136#4053#MUL#m2 * j1
-jnt.scimark2.Random#<init>()#void#64#616#IDENT#m2
-jnt.scimark2.Random#nextDouble()#double#71#3215#EQ#j == 0
-jnt.scimark2.Random#<init>(int)#void#80#805#TYPECAST#(double)m1
-jnt.scimark2.Random#nextDouble()#double#10#3116#IDENT#m
-jnt.scimark2.Random#<init>(int,double,double)#void#0#2647#IDENT#super
-jnt.scimark2.Random#<init>()#void#21#514#IDENT#mdig
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#41#779#VARDEF#int rowRp1 = row[r + 1]
-jnt.scimark2.Random#<init>(double,double)#void#126#1800#IDENT#right
-jnt.scimark2.Random#<init>(double,double)#void#115#1750#IDENT#this
-jnt.scimark2.Random#initialize(int)#void#10#3732#IDENT#m
-jnt.scimark2.Random#initialize(int)#void#76#3912#IDENT#iloop
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#186#901#IDENT#y
-jnt.scimark2.Random#nextDouble()#double#137#3392#IDENT#m
+552
+jnt.scimark2.kernel#<init>()#void#0#30#IDENT#super
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#212#706#IDENT#i
+jnt.scimark2.Random#<init>(int,double,double)#void#5#440#IDENT#seed
 jnt.scimark2.Random#<init>(double,double)#void#116#1754#SELECT#this.left
-jnt.scimark2.Random#<init>(int,double,double)#void#69#639#IDENT#mdig
-jnt.scimark2.Random#<init>()#void#95#855#IDENT#left
-jnt.scimark2.Random#nextDouble()#double#136#3368#IDENT#precise_all_FIELD1_TAG1
-jnt.scimark2.Random#<init>(int)#void#55#609#IDENT#one
-jnt.scimark2.Random#<init>()#void#10#474#IDENT#i
-jnt.scimark2.Random#<init>(double,double)#void#122#1781#ASSIGN#this.right = right
-jnt.scimark2.Random#<init>(int)#void#86#779#ASSIGN#dm1 = 1.0 / (double)m1
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#72#534#IDENT#r
+jnt.scimark2.Random#initialize(int)#void#38#3698#IDENT#m2
+jnt.scimark2.Random#initialize(int)#void#51#3707#ASSIGN#k1 = 9069 / m2
+jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#6#968#IDENT#i
+jnt.scimark2.Random#<init>(int,double,double)#void#53#598#SL#one << mdig - 2
+jnt.scimark2.Random#<init>(double,double)#void#6#440#ASSIGN#seed = 0
+jnt.scimark2.Random#<init>(int,double,double)#void#100#883#IDENT#right
+jnt.scimark2.Random#initialize(int)#void#69#3765#IDENT#iloop
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#40#301#VARDEF#int[] col = new int[anz]
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#27#736#VARDEF#double sum = 0.0
+jnt.scimark2.Random#<init>(int,double,double)#void#90#820#IDENT#haveRange
+jnt.scimark2.Random#nextDouble()#double#122#3308#IDENT#k
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#137#602#IDENT#y
+jnt.scimark2.Random#initialize(int)#void#1#3578#SELECT#this.seed
 jnt.scimark2.Random#<init>(int)#void#79#779#IDENT#dm1
-jnt.scimark2.Random#<init>(int,double,double)#void#52#605#MINUS#mdig - 2
-jnt.scimark2.Random#<init>(int)#void#105#912#IDENT#width
-jnt.scimark2.Random#<init>(double,double)#void#91#820#ASSIGN#haveRange = false
-jnt.scimark2.Random#initialize(int)#void#12#3736#NEWARRAY#new int[17]
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#99#648#VARDEF#int i = 0
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#152#797#IDENT#y
-jnt.scimark2.Random#nextDouble()#double#144#3398#IDENT#precise
-jnt.scimark2.Random#<init>()#void#81#814#IDENT#m1
-jnt.scimark2.Random#nextDouble()#double#51#3184#ASSIGN#i = 16
-jnt.scimark2.Random#<init>(double,double)#void#105#912#IDENT#width
-jnt.scimark2.Random#<init>(double,double)#void#81#814#IDENT#m1
-jnt.scimark2.Random#<init>(int,double,double)#void#32#558#IDENT#m1
-jnt.scimark2.Random#<init>(double,double)#void#42#579#SL#one << mdig - 2
-jnt.scimark2.Random#<init>(int,double,double)#void#11#474#ASSIGN#i = 4
+jnt.scimark2.Random#nextDouble()#double#36#3134#IDENT#j
+jnt.scimark2.Random#<init>(int,double,double)#void#116#2682#ASSIGN#this.left = left
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#127#389#PREINC#++r
+jnt.scimark2.Random#<init>()#void#100#883#IDENT#right
+jnt.scimark2.Random#nextDouble()#double#17#3097#INDEXED#m[j]
+jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#11#981#IDENT#A
+jnt.scimark2.commandline#main(java.lang.String[])#void#39#670#IDENT#seed
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#77#873#IDENT#y
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#72#426#IDENT#r
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#27#273#IDENT#RandomVector
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#141#610#IDENT#row
+jnt.scimark2.Random#<init>(double,double)#void#59#590#PLUS#(one << mdig - 2) + ((one << mdig - 2) - one)
+jnt.scimark2.commandline#main(java.lang.String[])#void#53#750#IDENT#R
+jnt.scimark2.Random#nextDouble()#double#26#3125#IDENT#m1
+jnt.scimark2.Random#<init>()#void#79#779#IDENT#dm1
+jnt.scimark2.Random#<init>(double,double)#void#44#594#IDENT#one
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#40#791#INDEXED#row[r + 1]
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#121#524#IDENT#i
+jnt.scimark2.Random#nextDouble()#double#115#3275#MUL#dm1 * k * width
+jnt.scimark2.Random#<init>(int,double,double)#void#17#493#ASSIGN#j = 16
 jnt.scimark2.Random#<init>()#void#15#493#IDENT#j
-jnt.scimark2.Random#nextDouble()#double#101#3284#IDENT#left
-jnt.scimark2.Random#<init>()#void#69#639#IDENT#mdig
-jnt.scimark2.Random#initialize(int)#void#71#3880#ASSIGN#j1 = jseed / m2
-jnt.scimark2.Random#initialize(int)#void#57#3858#IDENT#j0
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#1#165#IDENT#R
+jnt.scimark2.Random#initialize(int)#void#25#3659#IDENT#jseed
+jnt.scimark2.Random#<init>(int,double,double)#void#44#594#IDENT#one
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#127#389#PREINC#++r
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#6#143#VARDEF#double[] x = RandomVector(N, R)
+jnt.scimark2.Random#<init>(int,double,double)#void#52#605#MINUS#mdig - 2
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#54#839#IDENT#sum
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#57#383#IDENT#r
+jnt.scimark2.Random#<init>()#void#17#493#ASSIGN#j = 16
+jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#14#989#SELECT#R.nextDouble
+jnt.scimark2.Random#<init>(int,double,double)#void#69#639#IDENT#mdig
+jnt.scimark2.Random#<init>(int)#void#5#440#IDENT#seed
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#71#829#IDENT#i
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#35#788#IDENT#row
+jnt.scimark2.Random#nextDouble()#double#51#3164#ASSIGN#i = 16
+jnt.scimark2.Random#<init>(double,double)#void#100#883#IDENT#right
+jnt.scimark2.Random#initialize(int)#void#13#3628#SELECT#Math.min
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#33#756#VARDEF#int rowR = row[r]
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#105#519#LT#i < nr
+jnt.scimark2.Random#initialize(int)#void#82#3816#MUL#j0 * k0
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#4#619#VARDEF#int M = row.length - 1
+jnt.scimark2.Random#<init>(double,double)#void#48#601#IDENT#mdig
+jnt.scimark2.Random#<init>()#void#80#805#TYPECAST#(double)m1
+jnt.scimark2.Random#initialize(int)#void#132#3917#MUL#m2 * j1
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#11#664#IDENT#NUM_ITERATIONS
+jnt.scimark2.commandline#main(java.lang.String[])#void#20#515#NEWCLASS#new RuntimeException("Error! Seed should be provided as an argument")
+jnt.scimark2.Random#<init>(int)#void#73#643#DIV#mdig / 2
+jnt.scimark2.Random#initialize(int)#void#83#3811#ASSIGN#jseed = j0 * k0
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#78#875#IDENT#r
+jnt.scimark2.Random#<init>(int,double,double)#void#115#2684#IDENT#left
+jnt.scimark2.Random#<init>(double,double)#void#27#537#IDENT#one
+jnt.scimark2.Random#<init>(int,double,double)#void#21#514#IDENT#mdig
+jnt.scimark2.Random#<init>(int,double,double)#void#95#855#IDENT#left
+jnt.scimark2.Random#<init>(double,double)#void#11#474#ASSIGN#i = 4
+jnt.scimark2.Random#initialize(int)#void#58#3733#MOD#jseed % m2
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#205#787#IDENT#precise_all_FIELD1_TAG1
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#78#440#IDENT#nr
+jnt.scimark2.Random#initialize(int)#void#86#3839#IDENT#m2
+jnt.scimark2.commandline#main(java.lang.String[])#void#39#660#SELECT#Integer.parseInt
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#12#200#NEWARRAY#new double[N]
+jnt.scimark2.Random#<init>()#void#60#558#ASSIGN#m1 = (one << mdig - 2) + ((one << mdig - 2) - one)
+jnt.scimark2.Random#initialize(int)#void#102#3866#IDENT#m2
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#84#461#IDENT#nr
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#152#641#SELECT#System.out
+jnt.scimark2.Random#<init>(int,double,double)#void#74#636#SL#one << mdig / 2
+jnt.scimark2.Random#<init>()#void#23#514#ASSIGN#mdig = 32
+jnt.scimark2.Random#<init>()#void#32#558#IDENT#m1
+jnt.scimark2.Random#<init>(int)#void#27#537#IDENT#one
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#87#451#VARDEF#int step = r / nr
+jnt.scimark2.Random#<init>(int)#void#32#558#IDENT#m1
+jnt.scimark2.Random#initialize(int)#void#134#3907#ASSIGN#m[iloop] = j0 + m2 * j1
+jnt.scimark2.Random#nextDouble()#double#32#3132#IDENT#m
+jnt.scimark2.Random#initialize(int)#void#84#3831#IDENT#jseed
+jnt.scimark2.Random#nextDouble()#double#75#3205#IDENT#j
+jnt.scimark2.Random#<init>(double,double)#void#127#1808#IDENT#left
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#92#477#LT#step < 1
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#11#211#IDENT#N
+jnt.scimark2.Random#<init>(double,double)#void#33#575#IDENT#one
+jnt.scimark2.Random#<init>(int,double,double)#void#110#2651#IDENT#initialize
+jnt.scimark2.Random#<init>(int,double,double)#void#81#814#IDENT#m1
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#41#779#VARDEF#int rowRp1 = row[r + 1]
+jnt.scimark2.Random#<init>(int,double,double)#void#85#803#DIV#1.0 / (double)m1
+jnt.scimark2.Random#initialize(int)#void#100#3852#PLUS#jseed / m2 + j0 * k1 + j1 * k0
+jnt.scimark2.Random#<init>(int)#void#69#639#IDENT#mdig
+jnt.scimark2.commandline#main(java.lang.String[])#void#32#600#INDEXED#args[0]
+jnt.scimark2.commandline#main(java.lang.String[])#void#14#488#IDENT#args
+jnt.scimark2.Random#nextDouble()#double#19#3087#ASSIGN#k = m[i] - m[j]
+jnt.scimark2.Random#<init>(double,double)#void#121#1783#IDENT#right
+jnt.scimark2.Random#<init>(int,double,double)#void#105#912#IDENT#width
+jnt.scimark2.Random#<init>(double,double)#void#73#643#DIV#mdig / 2
+jnt.scimark2.Random#nextDouble()#double#39#3139#IDENT#k
+jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#24#1014#IDENT#A
+jnt.scimark2.Random#nextDouble()#double#29#3122#PLUS_ASG#k += m1
+jnt.scimark2.Random#initialize(int)#void#2#3584#ASSIGN#this.seed = seed
+jnt.scimark2.Random#nextDouble()#double#58#3181#IDENT#i
+jnt.scimark2.Random#<init>(int,double,double)#void#64#616#IDENT#m2
+jnt.scimark2.SparseCompRow#<init>()#void#0#30#IDENT#super
+jnt.scimark2.Random#<init>(double,double)#void#86#779#ASSIGN#dm1 = 1.0 / (double)m1
+jnt.scimark2.Random#<init>(int)#void#53#598#SL#one << mdig - 2
+jnt.scimark2.Random#initialize(int)#void#124#3909#IDENT#j0
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#63#411#IDENT#row
+jnt.scimark2.Random#<init>()#void#74#636#SL#one << mdig / 2
+jnt.scimark2.Random#<init>(int,double,double)#void#75#616#ASSIGN#m2 = one << mdig / 2
+jnt.scimark2.Random#<init>(int,double,double)#void#55#609#IDENT#one
+jnt.scimark2.Random#<init>(int,double,double)#void#10#474#IDENT#i
+jnt.scimark2.Random#nextDouble()#double#116#3264#PLUS#left + dm1 * k * width
+jnt.scimark2.Random#nextDouble()#double#94#3237#IDENT#haveRange
+jnt.scimark2.Random#<init>(double,double)#void#126#1792#IDENT#width
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#110#537#IDENT#rowr
+jnt.scimark2.Random#<init>(int)#void#37#582#IDENT#mdig
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#36#792#IDENT#r
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#25#241#VARDEF#int anz = nr * N
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#19#710#IDENT#r
+jnt.scimark2.Random#<init>(int,double,double)#void#33#575#IDENT#one
+jnt.scimark2.Random#initialize(int)#void#24#3622#ASSIGN#jseed = Math.min(Math.abs(seed), m1)
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#75#427#PLUS#r + 1
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#53#361#ASSIGN#row[0] = 0
+jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#13#982#INDEXED#A[i]
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#137#593#SELECT#SparseCompRow.matmult
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#68#404#VARDEF#int rowr = row[r]
+jnt.scimark2.Random#<init>(int,double,double)#void#128#2730#IDENT#left
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#71#830#PREINC#++i
+jnt.scimark2.Random#initialize(int)#void#106#3869#DIV#m2 / 2
+jnt.scimark2.Random#initialize(int)#void#79#3805#IDENT#jseed
+jnt.scimark2.Random#initialize(int)#void#18#3648#IDENT#m1
+jnt.scimark2.Random#<init>(double,double)#void#129#1798#ASSIGN#width = right - left
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#205#811#IDENT#y
+jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#1#936#NEWARRAY#new double[N]
+jnt.scimark2.Random#<init>(double,double)#void#117#1760#ASSIGN#this.left = left
+jnt.scimark2.Random#<init>(int)#void#106#912#ASSIGN#width = 1.0
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#89#680#IDENT#reps
+jnt.scimark2.Random#<init>(double,double)#void#79#779#IDENT#dm1
+jnt.scimark2.Random#<init>(int,double,double)#void#96#855#ASSIGN#left = 0.0
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#47#819#IDENT#i
+jnt.scimark2.Random#<init>()#void#28#537#ASSIGN#one = 1
+jnt.scimark2.Random#<init>(double,double)#void#55#609#IDENT#one
+jnt.scimark2.Random#<init>()#void#110#1270#IDENT#initialize
+jnt.scimark2.Random#initialize(int)#void#107#3863#MOD#(jseed / m2 + j0 * k1 + j1 * k0) % (m2 / 2)
+jnt.scimark2.Random#<init>(int)#void#58#608#MINUS#(one << mdig - 2) - one
+jnt.scimark2.Random#initialize(int)#void#42#3689#ASSIGN#k0 = 9069 % m2
+jnt.scimark2.Random#initialize(int)#void#135#3788#PREINC#++iloop
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#186#766#IDENT#y
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#212#704#PREINC#++i
+jnt.scimark2.Random#initialize(int)#void#122#3900#IDENT#iloop
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#121#525#PREINC#++i
+jnt.scimark2.Random#initialize(int)#void#53#3722#IDENT#j0
+jnt.scimark2.Random#initialize(int)#void#31#3675#PREDEC#--jseed
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#21#712#IDENT#M
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#135#566#VARDEF#int cycles = 100
+jnt.scimark2.Random#initialize(int)#void#13#3642#IDENT#seed
+jnt.scimark2.Random#<init>(double,double)#void#74#636#SL#one << mdig / 2
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#83#715#IDENT#r
+jnt.scimark2.Random#<init>(int,double,double)#void#23#514#ASSIGN#mdig = 32
+jnt.scimark2.Random#<init>(double,double)#void#106#912#ASSIGN#width = 1.0
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#49#821#IDENT#rowRp1
+jnt.scimark2.Random#<init>()#void#90#820#IDENT#haveRange
+jnt.scimark2.Random#<init>(int)#void#85#803#DIV#1.0 / (double)m1
+jnt.scimark2.Random#<init>(int)#void#96#855#ASSIGN#left = 0.0
+jnt.scimark2.Random#nextDouble()#double#84#3225#IDENT#j
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#51#820#LT#i < rowRp1
+jnt.scimark2.Random#<init>(double,double)#void#58#608#MINUS#(one << mdig - 2) - one
+jnt.scimark2.Random#initialize(int)#void#135#3790#IDENT#iloop
+jnt.scimark2.Random#initialize(int)#void#67#3744#ASSIGN#j1 = jseed / m2
+jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#3#930#VARDEF#double[] A = new double[N]
+jnt.scimark2.kernel#precise_all_FIELD1_TAG1(double[])#double[]#0#1196#IDENT#d
+jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#0#947#IDENT#N
+jnt.scimark2.Random#<init>(int,double,double)#void#60#558#ASSIGN#m1 = (one << mdig - 2) + ((one << mdig - 2) - one)
+jnt.scimark2.Constants#<init>()#void#0#30#IDENT#super
+jnt.scimark2.Random#initialize(int)#void#37#3686#IDENT#k0
+jnt.scimark2.Random#<init>(int)#void#59#590#PLUS#(one << mdig - 2) + ((one << mdig - 2) - one)
+jnt.scimark2.Random#initialize(int)#void#47#3716#IDENT#m2
+jnt.scimark2.Random#<init>()#void#101#883#ASSIGN#right = 1.0
+jnt.scimark2.Random#<init>(double,double)#void#90#820#IDENT#haveRange
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#115#536#INDEXED#col[rowr + i]
+jnt.scimark2.Random#initialize(int)#void#63#3754#IDENT#m2
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#44#346#PLUS#N + 1
+jnt.scimark2.Random#initialize(int)#void#61#3746#IDENT#jseed
+jnt.scimark2.SparseCompRow#<init>()#void#1#30#IDENT#super
+jnt.scimark2.Random#initialize(int)#void#13#3616#IDENT#jseed
+jnt.scimark2.Random#<init>(int,double,double)#void#120#2705#IDENT#right
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#17#705#VARDEF#int r = 0
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#161#690#VARDEF#int i = 0
+jnt.scimark2.commandline#main(java.lang.String[])#void#6#356#VARDEF#int Sparse_size_M = Constants.TINY_SPARSE_SIZE_M
+jnt.scimark2.Random#<init>()#void#0#1266#IDENT#super
+jnt.scimark2.Random#<init>(double,double)#void#85#803#DIV#1.0 / (double)m1
+jnt.scimark2.Random#initialize(int)#void#90#3844#IDENT#j0
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#68#843#PLUS_ASG#sum += x[col[i]] * val[i]
+jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#18#974#PREINC#++i
+jnt.scimark2.Random#initialize(int)#void#50#3714#DIV#9069 / m2
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#29#291#IDENT#R
+jnt.scimark2.Random#<init>(int,double,double)#void#1#2647#IDENT#super
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#108#533#IDENT#col
+jnt.scimark2.Random#nextDouble()#double#77#3207#ASSIGN#j = 16
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#83#716#PREINC#++r
+jnt.scimark2.Random#<init>(double,double)#void#81#814#IDENT#m1
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#59#385#IDENT#N
+jnt.scimark2.Random#<init>(double,double)#void#80#805#TYPECAST#(double)m1
+jnt.scimark2.Random#initialize(int)#void#98#3859#IDENT#k0
+jnt.scimark2.Random#<init>(int)#void#21#514#IDENT#mdig
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#14#194#VARDEF#double[] y = new double[N]
+jnt.scimark2.Random#<init>(int,double,double)#void#37#582#IDENT#mdig
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#169#714#IDENT#y
+jnt.scimark2.Random#<init>()#void#33#575#IDENT#one
+jnt.scimark2.Random#<init>(double,double)#void#115#1750#IDENT#this
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#16#227#IDENT#nz
+jnt.scimark2.Random#<init>(int,double,double)#void#65#632#IDENT#one
+jnt.scimark2.Random#nextDouble()#double#24#3120#IDENT#k
+jnt.scimark2.Random#<init>(int,double,double)#void#110#2663#IDENT#seed
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#120#545#ASSIGN#col[rowr + i] = i * step
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#8#171#IDENT#alloc_TAG1
+jnt.scimark2.commandline#main(java.lang.String[])#void#49#686#SELECT#kernel.measureSparseMatmult
+jnt.scimark2.Random#<init>(int,double,double)#void#79#779#IDENT#dm1
+jnt.scimark2.Random#<init>(int)#void#105#912#IDENT#width
+jnt.scimark2.commandline#main(java.lang.String[])#void#9#408#VARDEF#int Sparse_size_nz = Constants.TINY_SPARSE_SIZE_nz
+jnt.scimark2.Random#<init>(int,double,double)#void#114#2672#IDENT#this
+jnt.scimark2.Random#initialize(int)#void#124#3899#INDEXED#m[iloop]
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#18#229#DIV#nz / N
+jnt.scimark2.Random#<init>()#void#73#643#DIV#mdig / 2
+jnt.scimark2.Random#initialize(int)#void#119#3898#IDENT#m
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#23#711#LT#r < M
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#137#593#SELECT#SparseCompRow.matmult
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#56#846#IDENT#x
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#152#641#SELECT#System.out
+jnt.scimark2.commandline#main(java.lang.String[])#void#30#596#IDENT#args
+jnt.scimark2.Random#<init>(double,double)#void#17#493#ASSIGN#j = 16
+jnt.scimark2.Random#<init>(double,double)#void#52#605#MINUS#mdig - 2
+jnt.scimark2.Random#<init>(int,double,double)#void#134#2738#IDENT#haveRange
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#190#767#INDEXED#y[i]
+jnt.scimark2.Random#<init>(double,double)#void#42#579#SL#one << mdig - 2
+jnt.scimark2.Random#<init>(int,double,double)#void#15#493#IDENT#j
+jnt.scimark2.Constants#<init>()#void#1#30#IDENT#super
+jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#5#963#VARDEF#int i = 0
+jnt.scimark2.commandline#main(java.lang.String[])#void#17#500#NE#args.length != 1
+jnt.scimark2.Random#<init>(int,double,double)#void#130#2720#ASSIGN#width = right - left
+jnt.scimark2.Random#initialize(int)#void#89#3837#DIV#jseed / m2
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#179#758#SELECT#System.out.print
+jnt.scimark2.Random#<init>(int)#void#10#474#IDENT#i
+jnt.scimark2.Random#<init>(int,double,double)#void#48#601#IDENT#mdig
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#19#222#VARDEF#int nr = nz / N
+jnt.scimark2.Random#nextDouble()#double#119#3302#IDENT#dm1
+jnt.scimark2.commandline#main(java.lang.String[])#void#47#638#VARDEF#Random R = new Random(Integer.parseInt(seed))
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#188#768#IDENT#i
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#145#620#IDENT#x
+jnt.scimark2.commandline#main(java.lang.String[])#void#15#492#SELECT#args.length
+jnt.scimark2.Random#<init>()#void#27#537#IDENT#one
+jnt.scimark2.Random#<init>()#void#37#582#IDENT#mdig
+jnt.scimark2.Random#<init>(int,double,double)#void#126#2714#IDENT#width
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#218#827#SELECT#System.out
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#3#634#MINUS#row.length - 1
+jnt.scimark2.commandline#main(java.lang.String[])#void#30#589#IDENT#seed
+jnt.scimark2.Random#<init>(double,double)#void#95#855#IDENT#left
+jnt.scimark2.Random#<init>(double,double)#void#105#912#IDENT#width
+jnt.scimark2.Random#<init>(double,double)#void#75#616#ASSIGN#m2 = one << mdig / 2
+jnt.scimark2.Random#<init>(int)#void#44#594#IDENT#one
+jnt.scimark2.Random#initialize(int)#void#28#3669#EQ#jseed % 2 == 0
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#29#763#IDENT#row
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#17#230#IDENT#N
+jnt.scimark2.Random#<init>(int)#void#86#779#ASSIGN#dm1 = 1.0 / (double)m1
+jnt.scimark2.Random#<init>(int)#void#33#575#IDENT#one
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#70#422#IDENT#row
+jnt.scimark2.Random#<init>(double,double)#void#65#632#IDENT#one
+jnt.scimark2.Random#<init>(int)#void#42#579#SL#one << mdig - 2
+jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#17#986#ASSIGN#A[i] = R.nextDouble()
+jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#18#974#PREINC#++i
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#23#251#IDENT#N
+jnt.scimark2.Random#initialize(int)#void#1#3586#IDENT#seed
+jnt.scimark2.Random#initialize(int)#void#10#3598#ASSIGN#m = new int[17]
+jnt.scimark2.Random#initialize(int)#void#143#3931#ASSIGN#i = 4
+jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#12#983#IDENT#i
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#66#863#INDEXED#val[i]
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#60#384#LT#r < N
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#76#425#INDEXED#row[r + 1]
+jnt.scimark2.Random#<init>(int,double,double)#void#27#537#IDENT#one
+jnt.scimark2.Random#<init>(int)#void#1#2097#IDENT#super
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#45#811#VARDEF#int i = rowR
+jnt.scimark2.Random#<init>(int)#void#52#605#MINUS#mdig - 2
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#155#645#SELECT#System.out.print
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#86#459#DIV#r / nr
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#24#250#MUL#nr * N
+jnt.scimark2.Random#<init>(double,double)#void#126#1800#IDENT#right
+jnt.scimark2.Random#<init>(int,double,double)#void#101#883#ASSIGN#right = 1.0
+jnt.scimark2.Random#<init>()#void#59#590#PLUS#(one << mdig - 2) + ((one << mdig - 2) - one)
+jnt.scimark2.Random#<init>(double,double)#void#5#440#IDENT#seed
+jnt.scimark2.Random#initialize(int)#void#0#3574#IDENT#this
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#101#518#IDENT#i
+jnt.scimark2.Random#nextDouble()#double#40#3137#ASSIGN#m[j] = k
+jnt.scimark2.Random#<init>()#void#106#912#ASSIGN#width = 1.0
+jnt.scimark2.Random#<init>()#void#81#814#IDENT#m1
+jnt.scimark2.Random#<init>()#void#75#616#ASSIGN#m2 = one << mdig / 2
+jnt.scimark2.Random#<init>(double,double)#void#10#474#IDENT#i
 jnt.scimark2.Random#<init>(double,double)#void#64#616#IDENT#m2
 jnt.scimark2.Random#<init>(int,double,double)#void#80#805#TYPECAST#(double)m1
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#121#660#PREINC#++i
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#45#811#VARDEF#int i = rowR
-jnt.scimark2.commandline#main(java.lang.String[])#void#3#308#VARDEF#double min_time = Constants.RESOLUTION_DEFAULT
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#59#457#IDENT#N
-jnt.scimark2.Random#<init>(int)#void#15#493#IDENT#j
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#86#567#DIV#r / nr
-jnt.scimark2.commandline#main(java.lang.String[])#void#50#724#IDENT#Sparse_size_nz
-jnt.scimark2.Random#initialize(int)#void#106#4002#IDENT#m2
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#51#820#LT#i < rowRp1
-jnt.scimark2.Random#nextDouble()#double#24#3140#IDENT#k
-jnt.scimark2.Random#nextDouble()#double#0#3105#IDENT#k
-jnt.scimark2.Random#precise(int)#int#0#4383#IDENT#i
-jnt.scimark2.Random#<init>(int,double,double)#void#79#779#IDENT#dm1
-jnt.scimark2.Random#<init>()#void#27#537#IDENT#one
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#25#280#VARDEF#int anz = nr * N
-jnt.scimark2.Random#initialize(int)#void#28#3758#ASSIGN#jseed = Math.min(Math.abs(seed), m1)
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#44#418#PLUS#N + 1
-jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#6#1105#IDENT#i
-jnt.scimark2.Random#<init>(double,double)#void#23#514#ASSIGN#mdig = 32
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#13#663#LT#reps < NUM_ITERATIONS
-jnt.scimark2.Random#initialize(int)#void#126#4036#IDENT#iloop
-jnt.scimark2.Random#initialize(int)#void#146#4065#IDENT#i
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#157#772#ASSIGN#y = accept_all_FIELD1_TAG1(y)
-jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#8#1106#LT#i < N
-jnt.scimark2.commandline#main(java.lang.String[])#void#14#488#IDENT#args
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#32#766#INDEXED#row[r]
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#39#793#PLUS#r + 1
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#40#791#INDEXED#row[r + 1]
-jnt.scimark2.Random#<init>(double,double)#void#120#1770#IDENT#this
-jnt.scimark2.Random#initialize(int)#void#83#3949#IDENT#j0
-jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#18#1111#PREINC#++i
-jnt.scimark2.Random#nextDouble()#double#26#3145#IDENT#m1
-jnt.scimark2.Random#<init>()#void#86#779#ASSIGN#dm1 = 1.0 / (double)m1
-jnt.scimark2.Random#<init>(int,double,double)#void#105#912#IDENT#width
-jnt.scimark2.Random#nextDouble()#double#83#3246#PREDEC#--j
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#34#337#VARDEF#double[] val = RandomVector(anz, R)
-jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#5#1100#VARDEF#int i = 0
-jnt.scimark2.Random#nextDouble()#double#45#3172#EQ#i == 0
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#21#712#IDENT#M
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#78#875#IDENT#r
-jnt.scimark2.Random#<init>(int,double,double)#void#115#2676#SELECT#this.left
-jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#14#1126#SELECT#R.nextDouble
-jnt.scimark2.Random#initialize(int)#void#128#4045#IDENT#j0
-jnt.scimark2.Random#<init>(int,double,double)#void#90#820#IDENT#haveRange
-jnt.scimark2.Random#initialize(int)#void#57#3863#IDENT#jseed
-jnt.scimark2.Random#<init>(int,double,double)#void#75#616#ASSIGN#m2 = one << mdig / 2
-jnt.scimark2.Random#<init>(double,double)#void#55#609#IDENT#one
-jnt.scimark2.Random#initialize(int)#void#119#4025#MOD#jseed % m2
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#84#569#IDENT#nr
-jnt.scimark2.Random#initialize(int)#void#85#3954#IDENT#k0
-jnt.scimark2.Random#<init>(double,double)#void#0#1722#IDENT#super
-jnt.scimark2.Random#<init>(double,double)#void#11#474#ASSIGN#i = 4
-jnt.scimark2.Random#<init>(int,double,double)#void#6#440#ASSIGN#seed = 0
-jnt.scimark2.Random#initialize(int)#void#86#3952#MUL#j0 * k0
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#8#171#IDENT#alloc_TAG1
-jnt.scimark2.Random#nextDouble()#double#77#3227#ASSIGN#j = 16
-jnt.scimark2.Random#<init>(int,double,double)#void#128#2730#IDENT#left
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#147#758#IDENT#cycles
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#45#409#NEWARRAY#new int[N + 1]
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#76#533#INDEXED#row[r + 1]
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#68#843#PLUS_ASG#sum += x[col[i]] * val[i]
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#27#736#VARDEF#double sum = 0.0
-jnt.scimark2.kernel#accept_all_FIELD1_TAG1(double[])#double[]#0#1261#IDENT#d
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#42#417#IDENT#N
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#211#927#SELECT#System.out
-jnt.scimark2.Random#<init>(double,double)#void#90#820#IDENT#haveRange
-jnt.scimark2.Random#<init>(int,double,double)#void#96#855#ASSIGN#left = 0.0
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#0#149#IDENT#RandomVector
-jnt.scimark2.Random#<init>(int,double,double)#void#110#2651#IDENT#initialize
-jnt.scimark2.Random#<init>(int,double,double)#void#126#2714#IDENT#width
-jnt.scimark2.Random#<init>(int)#void#42#579#SL#one << mdig - 2
-jnt.scimark2.Random#<init>(int,double,double)#void#122#2703#ASSIGN#this.right = right
-jnt.scimark2.Random#initialize(int)#void#14#3734#ASSIGN#m = new int[17]
-jnt.scimark2.Random#<init>(int,double,double)#void#59#590#PLUS#(one << mdig - 2) + ((one << mdig - 2) - one)
-jnt.scimark2.Random#<init>(int)#void#5#440#IDENT#seed
-jnt.scimark2.Random#initialize(int)#void#55#3843#ASSIGN#k1 = 9069 / m2
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#33#756#VARDEF#int rowR = row[r]
-jnt.scimark2.Random#nextDouble()#double#18#3114#MINUS#m[i] - m[j]
-jnt.scimark2.Random#initialize(int)#void#102#3995#IDENT#k0
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#67#522#INDEXED#row[r]
-jnt.scimark2.commandline#main(java.lang.String[])#void#32#600#INDEXED#args[0]
-jnt.scimark2.Random#<init>(int,double,double)#void#110#2663#IDENT#seed
-jnt.scimark2.Random#<init>(double,double)#void#33#575#IDENT#one
-jnt.scimark2.Random#<init>(int,double,double)#void#1#2647#IDENT#super
-jnt.scimark2.Random#initialize(int)#void#116#4027#IDENT#m2
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#127#460#IDENT#r
-jnt.scimark2.commandline#main(java.lang.String[])#void#12#466#VARDEF#String seed = null
-jnt.scimark2.Random#<init>()#void#55#609#IDENT#one
-jnt.scimark2.Random#<init>(double,double)#void#65#632#IDENT#one
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#214#931#SELECT#System.out.println
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#101#653#IDENT#i
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#56#846#IDENT#x
-jnt.scimark2.Random#<init>(double,double)#void#95#855#IDENT#left
-jnt.scimark2.Random#<init>(int)#void#74#636#SL#one << mdig / 2
-jnt.scimark2.Random#<init>(double,double)#void#127#1808#IDENT#left
-jnt.scimark2.Random#<init>(double,double)#void#106#912#ASSIGN#width = 1.0
-jnt.scimark2.SparseCompRow#<init>()#void#1#30#IDENT#super
-jnt.scimark2.Random#<init>(double,double)#void#21#514#IDENT#mdig
-jnt.scimark2.Random#<init>(double,double)#void#128#1806#MINUS#right - left
-jnt.scimark2.commandline#main(java.lang.String[])#void#39#670#IDENT#seed
-jnt.scimark2.Random#nextDouble()#double#49#3182#IDENT#i
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#96#600#ASSIGN#step = 1
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#83#715#IDENT#r
-jnt.scimark2.Random#nextDouble()#double#42#3170#IDENT#i
-jnt.scimark2.Random#initialize(int)#void#59#3871#IDENT#m2
-jnt.scimark2.Random#initialize(int)#void#88#3961#IDENT#j1
-jnt.scimark2.Random#nextDouble()#double#122#3332#IDENT#dm1
-jnt.scimark2.kernel#precise_all_FIELD1_TAG1(double[])#double[]#0#1333#IDENT#d
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#36#792#IDENT#r
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#172#870#IDENT#N
-jnt.scimark2.Random#<init>(int)#void#60#558#ASSIGN#m1 = (one << mdig - 2) + ((one << mdig - 2) - one)
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#219#948#IDENT#y
-jnt.scimark2.Random#<init>(int)#void#23#514#ASSIGN#mdig = 32
-jnt.scimark2.kernel#<init>()#void#1#30#IDENT#super
-jnt.scimark2.Random#<init>(double,double)#void#48#601#IDENT#mdig
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#47#401#VARDEF#int[] row = new int[N + 1]
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#89#684#PREINC#++reps
-jnt.scimark2.Random#<init>(int)#void#21#514#IDENT#mdig
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#121#660#PREINC#++i
-jnt.scimark2.Random#nextDouble()#double#17#3117#INDEXED#m[j]
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#0#162#IDENT#N
-jnt.scimark2.Random#<init>()#void#44#594#IDENT#one
-jnt.scimark2.Random#<init>(double,double)#void#75#616#ASSIGN#m2 = one << mdig / 2
-jnt.scimark2.Random#<init>(int,double,double)#void#33#575#IDENT#one
-jnt.scimark2.SparseCompRow#<init>()#void#0#30#IDENT#super
-jnt.scimark2.kernel#<init>()#void#0#30#IDENT#super
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#18#230#DIV#nz / N
-jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#1#1072#NEWARRAY#new double[N]
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#108#668#IDENT#col
-jnt.scimark2.Random#<init>(int)#void#10#474#IDENT#i
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#36#389#IDENT#anz
-jnt.scimark2.Random#<init>(int)#void#73#643#DIV#mdig / 2
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#112#677#IDENT#i
-jnt.scimark2.Random#initialize(int)#void#17#3764#SELECT#Math.min
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#59#853#IDENT#i
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#63#860#IDENT#val
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#224#950#ASSIGN#y = precise_all_FIELD1_TAG1(y)
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#71#830#PREINC#++i
-jnt.scimark2.Random#<init>()#void#5#440#IDENT#seed
-jnt.scimark2.Random#<init>()#void#75#616#ASSIGN#m2 = one << mdig / 2
-jnt.scimark2.Random#<init>(int,double,double)#void#86#779#ASSIGN#dm1 = 1.0 / (double)m1
-jnt.scimark2.Random#initialize(int)#void#63#3861#ASSIGN#j0 = jseed % m2
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#19#710#IDENT#r
-jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#3#1066#VARDEF#double[] A = new double[N]
-jnt.scimark2.Random#<init>(double,double)#void#1#1722#IDENT#super
-jnt.scimark2.commandline#main(java.lang.String[])#void#52#740#IDENT#min_time
-jnt.scimark2.commandline#<init>()#void#1#235#IDENT#super
-jnt.scimark2.Random#<init>()#void#65#632#IDENT#one
-jnt.scimark2.commandline#main(java.lang.String[])#void#49#686#SELECT#kernel.measureSparseMatmult
-jnt.scimark2.Random#initialize(int)#void#29#3795#IDENT#jseed
-jnt.scimark2.commandline#main(java.lang.String[])#void#49#709#IDENT#Sparse_size_M
-jnt.scimark2.Random#<init>(int,double,double)#void#65#632#IDENT#one
-jnt.scimark2.Random#initialize(int)#void#139#3924#PREINC#++iloop
-jnt.scimark2.Random#<init>()#void#74#636#SL#one << mdig / 2
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#65#523#IDENT#r
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#103#655#IDENT#nr
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#70#530#IDENT#row
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#80#880#IDENT#sum
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#127#461#PREINC#++r
-jnt.scimark2.Random#precise(double)#double#0#4336#IDENT#nextValue
-jnt.scimark2.Random#<init>(int,double,double)#void#58#608#MINUS#(one << mdig - 2) - one
-jnt.scimark2.Random#<init>(int,double,double)#void#48#601#IDENT#mdig
-jnt.scimark2.Random#nextDouble()#double#89#3246#PREDEC#--j
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#137#737#IDENT#y
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#57#455#IDENT#r
-jnt.scimark2.Random#initialize(int)#void#99#3978#PLUS#jseed / m2 + j0 * k1
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#114#676#PLUS#rowr + i
-jnt.scimark2.commandline#main(java.lang.String[])#void#30#589#IDENT#seed
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#35#788#IDENT#row
-jnt.scimark2.Random#<init>(double,double)#void#58#608#MINUS#(one << mdig - 2) - one
-jnt.scimark2.Random#initialize(int)#void#1#3706#IDENT#seed
-jnt.scimark2.Random#initialize(int)#void#153#4076#ASSIGN#j = 16
-jnt.scimark2.Random#<init>()#void#37#582#IDENT#mdig
-jnt.scimark2.Random#initialize(int)#void#83#3941#IDENT#jseed
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#211#927#SELECT#System.out
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#176#889#SELECT#System.out
-jnt.scimark2.Random#<init>()#void#80#805#TYPECAST#(double)m1
-jnt.scimark2.Random#<init>(double,double)#void#121#1783#IDENT#right
-jnt.scimark2.Random#<init>()#void#17#493#ASSIGN#j = 16
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#87#559#VARDEF#int step = r / nr
-jnt.scimark2.Random#<init>(int)#void#64#616#IDENT#m2
-jnt.scimark2.Random#<init>(int,double,double)#void#42#579#SL#one << mdig - 2
-jnt.scimark2.Random#initialize(int)#void#138#4043#ASSIGN#m[iloop] = j0 + m2 * j1
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#54#839#IDENT#sum
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#152#774#IDENT#accept_all_FIELD1_TAG1
-jnt.scimark2.Random#<init>(int)#void#90#820#IDENT#haveRange
-jnt.scimark2.Random#initialize(int)#void#41#3822#IDENT#k0
-jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#13#1119#INDEXED#A[i]
-jnt.scimark2.Random#<init>(double,double)#void#110#1726#IDENT#initialize
-jnt.scimark2.Random#<init>(int,double,double)#void#116#2682#ASSIGN#this.left = left
-jnt.scimark2.Random#accept(int)#int#0#4193#IDENT#i
-jnt.scimark2.Random#<init>(double,double)#void#60#558#ASSIGN#m1 = (one << mdig - 2) + ((one << mdig - 2) - one)
-jnt.scimark2.Random#<init>(int,double,double)#void#101#883#ASSIGN#right = 1.0
-jnt.scimark2.Random#<init>(double,double)#void#73#643#DIV#mdig / 2
-jnt.scimark2.Random#<init>()#void#100#883#IDENT#right
-jnt.scimark2.Random#<init>(double,double)#void#27#537#IDENT#one
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#127#461#PREINC#++r
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#115#671#INDEXED#col[rowr + i]
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#219#976#IDENT#y
-jnt.scimark2.Random#initialize(int)#void#100#3990#IDENT#j1
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#81#539#ASSIGN#row[r + 1] = rowr + nr
-jnt.scimark2.Random#<init>()#void#1#1266#IDENT#super
-jnt.scimark2.Random#initialize(int)#void#65#3877#IDENT#j1
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#49#821#IDENT#rowRp1
-jnt.scimark2.Random#<init>(double,double)#void#85#803#DIV#1.0 / (double)m1
-jnt.scimark2.Random#nextDouble()#double#130#3354#IDENT#nextValue
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#77#873#IDENT#y
-jnt.scimark2.Random#nextDouble()#double#116#3289#PLUS#left + dm1 * k * width
-jnt.scimark2.Random#initialize(int)#void#120#4017#ASSIGN#j0 = jseed % m2
-jnt.scimark2.Random#initialize(int)#void#54#3850#DIV#9069 / m2
-jnt.scimark2.Random#<init>(int)#void#44#594#IDENT#one
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#1#626#SELECT#row.length
-jnt.scimark2.Random#nextDouble()#double#110#3296#MUL#dm1 * k
-jnt.scimark2.commandline#main(java.lang.String[])#void#39#660#SELECT#Integer.parseInt
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#80#874#INDEXED#y[r]
-jnt.scimark2.Random#<init>()#void#110#1270#IDENT#initialize
-jnt.scimark2.Random#<init>(double,double)#void#86#779#ASSIGN#dm1 = 1.0 / (double)m1
-jnt.scimark2.Random#initialize(int)#void#157#4087#IDENT#precise_all_FIELD1_TAG1
-jnt.scimark2.Random#<init>()#void#53#598#SL#one << mdig - 2
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#27#358#IDENT#anz
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#71#829#IDENT#i
-jnt.scimark2.Random#<init>(int,double,double)#void#73#643#DIV#mdig / 2
-jnt.scimark2.Random#<init>(int,double,double)#void#27#537#IDENT#one
-jnt.scimark2.Random#<init>(int,double,double)#void#130#2720#ASSIGN#width = right - left
-jnt.scimark2.Random#<init>(double,double)#void#69#639#IDENT#mdig
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#11#212#IDENT#N
-jnt.scimark2.Random#<init>()#void#85#803#DIV#1.0 / (double)m1
-jnt.scimark2.Random#nextDouble()#double#57#3202#PREDEC#--i
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#152#770#IDENT#y
-jnt.scimark2.Random#<init>(int)#void#27#537#IDENT#one
-jnt.scimark2.Random#initialize(int)#void#96#3985#IDENT#k1
-jnt.scimark2.Random#<init>(int)#void#33#575#IDENT#one
-jnt.scimark2.Random#initialize(int)#void#6#3716#IDENT#alloc_TAG1
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#27#345#IDENT#RandomVector
-jnt.scimark2.Random#initialize(int)#void#2#3704#ASSIGN#this.seed = seed
-jnt.scimark2.Random#initialize(int)#void#139#3924#PREINC#++iloop
-jnt.scimark2.Random#<init>(double,double)#void#32#558#IDENT#m1
-jnt.scimark2.Random#initialize(int)#void#90#3975#IDENT#m2
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#78#548#IDENT#nr
-jnt.scimark2.commandline#main(java.lang.String[])#void#30#596#IDENT#args
-jnt.scimark2.Random#<init>()#void#6#440#ASSIGN#seed = 0
-jnt.scimark2.Random#<init>()#void#91#820#ASSIGN#haveRange = false
-jnt.scimark2.Random#<init>(int,double,double)#void#21#514#IDENT#mdig
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#83#716#PREINC#++r
-jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#17#1123#ASSIGN#A[i] = R.nextDouble()
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#82#566#IDENT#r
-jnt.scimark2.Random#<init>(double,double)#void#17#493#ASSIGN#j = 16
-jnt.scimark2.commandline#main(java.lang.String[])#void#47#638#VARDEF#Random R = new Random(Integer.parseInt(seed))
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#179#893#SELECT#System.out.print
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#159#810#SELECT#System.out
-jnt.scimark2.Random#<init>(int,double,double)#void#91#820#ASSIGN#haveRange = false
-jnt.scimark2.Random#initialize(int)#void#80#3918#LT#iloop < 17
-jnt.scimark2.Random#initialize(int)#void#93#3973#DIV#jseed / m2
-jnt.scimark2.Random#<init>(int)#void#1#2097#IDENT#super
-jnt.scimark2.Random#<init>(int,double,double)#void#74#636#SL#one << mdig / 2
-jnt.scimark2.Random#<init>()#void#73#643#DIV#mdig / 2
-jnt.scimark2.Random#<init>(int,double,double)#void#41#586#MINUS#mdig - 2
-jnt.scimark2.Random#nextDouble()#double#75#3225#IDENT#j
-jnt.scimark2.Random#<init>(int,double,double)#void#10#474#IDENT#i
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#52#429#INDEXED#row[0]
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#36#317#IDENT#anz
+jnt.scimark2.Random#initialize(int)#void#55#3735#IDENT#m2
 jnt.scimark2.commandline#<init>()#void#0#235#IDENT#super
-jnt.scimark2.Random#<init>(int,double,double)#void#85#803#DIV#1.0 / (double)m1
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#205#875#IDENT#i
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#23#711#LT#r < M
-jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#7#1107#IDENT#N
-jnt.scimark2.Random#initialize(int)#void#46#3825#ASSIGN#k0 = 9069 % m2
-jnt.scimark2.Random#nextDouble()#double#40#3157#ASSIGN#m[j] = k
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#9#659#IDENT#reps
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#23#290#IDENT#N
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#137#728#SELECT#SparseCompRow.matmult
-jnt.scimark2.Random#<init>(int)#void#96#855#ASSIGN#left = 0.0
-jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#18#1110#IDENT#i
-jnt.scimark2.Random#<init>(int)#void#41#586#MINUS#mdig - 2
-jnt.scimark2.Random#<init>()#void#28#537#ASSIGN#one = 1
-jnt.scimark2.Random#<init>(int)#void#32#558#IDENT#m1
-jnt.scimark2.commandline#main(java.lang.String[])#void#49#686#SELECT#kernel.measureSparseMatmult
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#66#863#INDEXED#val[i]
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#21#286#IDENT#nr
-jnt.scimark2.Random#<init>(double,double)#void#41#586#MINUS#mdig - 2
-jnt.scimark2.Random#nextDouble()#double#84#3245#IDENT#j
-jnt.scimark2.Random#initialize(int)#void#88#3967#IDENT#jseed
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#82#878#ASSIGN#y[r] = sum
-jnt.scimark2.Random#initialize(int)#void#151#4074#IDENT#j
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#62#847#INDEXED#x[col[i]]
-jnt.scimark2.Random#<init>(int,double,double)#void#55#609#IDENT#one
-jnt.scimark2.Random#initialize(int)#void#139#3926#IDENT#iloop
-jnt.scimark2.Random#initialize(int)#void#128#4035#INDEXED#m[iloop]
-jnt.scimark2.Random#initialize(int)#void#158#4111#IDENT#m
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#89#684#PREINC#++reps
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#95#595#IDENT#step
-jnt.scimark2.Random#nextDouble()#double#21#3131#LT#k < 0
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#58#849#IDENT#col
-jnt.scimark2.Random#initialize(int)#void#22#3784#IDENT#m1
-jnt.scimark2.Random#<init>(int,double,double)#void#95#855#IDENT#left
-jnt.scimark2.Random#<init>(int,double,double)#void#135#2748#ASSIGN#haveRange = true
-jnt.scimark2.Random#<init>()#void#106#912#ASSIGN#width = 1.0
-jnt.scimark2.commandline#main(java.lang.String[])#void#15#492#SELECT#args.length
-jnt.scimark2.Random#nextDouble()#double#94#3257#IDENT#haveRange
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#159#810#SELECT#System.out
-jnt.scimark2.Random#nextDouble()#double#39#3159#IDENT#k
-jnt.scimark2.Random#<init>(double,double)#void#15#493#IDENT#j
-jnt.scimark2.Random#nextDouble()#double#149#3422#IDENT#nextValue
-jnt.scimark2.Random#<init>()#void#52#605#MINUS#mdig - 2
-jnt.scimark2.commandline#main(java.lang.String[])#void#20#515#NEWCLASS#new RuntimeException("Error! Seed should be provided as an argument")
-jnt.scimark2.Random#<init>(int)#void#11#474#ASSIGN#i = 4
-jnt.scimark2.Random#nextDouble()#double#105#3292#IDENT#dm1
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#30#767#IDENT#r
-jnt.scimark2.Random#initialize(int)#void#32#3805#EQ#jseed % 2 == 0
-jnt.scimark2.Random#<init>(double,double)#void#6#440#ASSIGN#seed = 0
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#76#541#IDENT#rowr
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#135#701#VARDEF#int cycles = 100
-jnt.scimark2.Random#<init>(int,double,double)#void#120#2696#SELECT#this.right
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#119#683#MUL#i * step
-jnt.scimark2.Random#initialize(int)#void#123#4034#IDENT#m
-jnt.scimark2.Random#<init>(int)#void#65#632#IDENT#one
-jnt.scimark2.Random#<init>(int)#void#17#493#ASSIGN#j = 16
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#60#456#LT#r < N
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#0#623#IDENT#row
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#43#813#IDENT#rowR
-jnt.scimark2.Random#<init>(int)#void#58#608#MINUS#(one << mdig - 2) - one
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#38#381#NEWARRAY#new int[anz]
-jnt.scimark2.Random#initialize(int)#void#112#3964#ASSIGN#j1 = (jseed / m2 + j0 * k1 + j1 * k0) % (m2 / 2)
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#170#866#IDENT#i
+jnt.scimark2.Random#<init>()#void#65#632#IDENT#one
+jnt.scimark2.Random#<init>(int,double,double)#void#32#558#IDENT#m1
+jnt.scimark2.Random#<init>()#void#69#639#IDENT#mdig
+jnt.scimark2.Random#initialize(int)#void#41#3696#MOD#9069 % m2
+jnt.scimark2.Random#<init>(int,double,double)#void#42#579#SL#one << mdig - 2
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#80#438#PLUS#rowr + nr
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#95#487#IDENT#step
+jnt.scimark2.Random#<init>(int)#void#74#636#SL#one << mdig / 2
 jnt.scimark2.Random#<init>(int)#void#110#2101#IDENT#initialize
-jnt.scimark2.Random#<init>(double,double)#void#10#474#IDENT#i
-jnt.scimark2.Random#<init>()#void#42#579#SL#one << mdig - 2
-jnt.scimark2.Random#initialize(int)#void#131#4050#IDENT#m2
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#190#902#INDEXED#y[i]
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#89#680#IDENT#reps
-jnt.scimark2.Random#<init>(int)#void#28#537#ASSIGN#one = 1
-jnt.scimark2.Random#nextDouble()#double#39#3153#INDEXED#m[j]
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#17#705#VARDEF#int r = 0
-jnt.scimark2.Random#initialize(int)#void#17#3764#SELECT#Math.min
-jnt.scimark2.Random#<init>(int,double,double)#void#53#598#SL#one << mdig - 2
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#61#852#INDEXED#col[i]
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#4#619#VARDEF#int M = row.length - 1
-jnt.scimark2.Random#<init>()#void#58#608#MINUS#(one << mdig - 2) - one
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#17#231#IDENT#N
-jnt.scimark2.Random#<init>(double,double)#void#100#883#IDENT#right
-jnt.scimark2.Random#nextDouble()#double#20#3129#IDENT#k
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#11#664#IDENT#NUM_ITERATIONS
-jnt.scimark2.Random#initialize(int)#void#114#4019#IDENT#jseed
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#92#585#LT#step < 1
-jnt.scimark2.Random#<init>(int)#void#48#601#IDENT#mdig
-jnt.scimark2.Random#<init>(int)#void#95#855#IDENT#left
-jnt.scimark2.Constants#<init>()#void#0#30#IDENT#super
-jnt.scimark2.Random#<init>()#void#60#558#ASSIGN#m1 = (one << mdig - 2) + ((one << mdig - 2) - one)
-jnt.scimark2.Random#initialize(int)#void#65#3882#IDENT#jseed
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#12#200#NEWARRAY#new double[N]
-jnt.scimark2.Random#initialize(int)#void#0#3694#IDENT#this
-jnt.scimark2.Random#<init>(int)#void#0#2097#IDENT#super
-jnt.scimark2.Random#<init>(int,double,double)#void#106#912#ASSIGN#width = 1.0
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#105#654#LT#i < nr
-jnt.scimark2.Random#initialize(int)#void#35#3813#IDENT#jseed
-jnt.scimark2.Random#<init>()#void#33#575#IDENT#one
-jnt.scimark2.Random#<init>(double,double)#void#28#537#ASSIGN#one = 1
-jnt.scimark2.Random#nextDouble()#double#19#3107#ASSIGN#k = m[i] - m[j]
-jnt.scimark2.Random#<init>(int,double,double)#void#15#493#IDENT#j
-jnt.scimark2.Random#<init>(int,double,double)#void#17#493#ASSIGN#j = 16
-jnt.scimark2.Random#<init>()#void#32#558#IDENT#m1
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#121#659#IDENT#i
-jnt.scimark2.Random#initialize(int)#void#47#3840#IDENT#k1
-jnt.scimark2.Random#nextDouble()#double#5#3111#IDENT#i
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#40#373#VARDEF#int[] col = new int[anz]
-jnt.scimark2.Random#initialize(int)#void#134#4055#IDENT#j1
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#173#868#LT#i < N
-jnt.scimark2.Random#<init>(int,double,double)#void#23#514#ASSIGN#mdig = 32
-jnt.scimark2.Random#<init>(double,double)#void#116#1762#IDENT#left
-jnt.scimark2.Random#<init>()#void#48#601#IDENT#mdig
-jnt.scimark2.commandline#main(java.lang.String[])#void#6#356#VARDEF#int Sparse_size_M = Constants.TINY_SPARSE_SIZE_M
-jnt.scimark2.Random#<init>(double,double)#void#129#1798#ASSIGN#width = right - left
-jnt.scimark2.Random#initialize(int)#void#103#3993#MUL#j1 * k0
-jnt.scimark2.Random#<init>(int)#void#91#820#ASSIGN#haveRange = false
-jnt.scimark2.Random#initialize(int)#void#35#3811#PREDEC#--jseed
-jnt.scimark2.Random#<init>(int)#void#37#582#IDENT#mdig
-jnt.scimark2.commandline#main(java.lang.String[])#void#39#660#SELECT#Integer.parseInt
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#67#858#MUL#x[col[i]] * val[i]
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#169#741#IDENT#y
+jnt.scimark2.Random#<init>(double,double)#void#101#883#ASSIGN#right = 1.0
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#30#767#IDENT#r
+jnt.scimark2.Random#<init>()#void#44#594#IDENT#one
+jnt.scimark2.Random#<init>(int,double,double)#void#58#608#MINUS#(one << mdig - 2) - one
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#83#716#PREINC#++r
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#13#663#LT#reps < NUM_ITERATIONS
+jnt.scimark2.Random#nextDouble()#double#10#3096#IDENT#m
+jnt.scimark2.commandline#main(java.lang.String[])#void#49#709#IDENT#Sparse_size_M
+jnt.scimark2.Random#<init>(double,double)#void#1#1722#IDENT#super
+jnt.scimark2.Random#<init>(double,double)#void#32#558#IDENT#m1
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#147#623#IDENT#cycles
+jnt.scimark2.Random#<init>(int)#void#81#814#IDENT#m1
+jnt.scimark2.Random#<init>(int,double,double)#void#59#590#PLUS#(one << mdig - 2) + ((one << mdig - 2) - one)
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#166#699#LT#i < N
+jnt.scimark2.Random#<init>(int)#void#17#493#ASSIGN#j = 16
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#212#704#PREINC#++i
+jnt.scimark2.Random#nextDouble()#double#112#3277#IDENT#width
+jnt.scimark2.Random#initialize(int)#void#13#3637#SELECT#Math.abs
+jnt.scimark2.Random#initialize(int)#void#70#3771#ASSIGN#iloop = 0
+jnt.scimark2.Random#<init>(int,double,double)#void#41#586#MINUS#mdig - 2
+jnt.scimark2.Random#<init>(int)#void#55#609#IDENT#one
+jnt.scimark2.Random#initialize(int)#void#127#3914#IDENT#m2
+jnt.scimark2.commandline#main(java.lang.String[])#void#35#642#NEWCLASS#new Random(Integer.parseInt(seed))
+jnt.scimark2.Random#<init>(int,double,double)#void#135#2748#ASSIGN#haveRange = true
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#139#605#IDENT#val
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#67#414#INDEXED#row[r]
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#63#860#IDENT#val
+jnt.scimark2.Random#nextDouble()#double#5#3091#IDENT#i
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#210#785#ASSIGN#y = precise_all_FIELD1_TAG1(y)
+jnt.scimark2.Random#<init>()#void#64#616#IDENT#m2
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#65#415#IDENT#r
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#38#309#NEWARRAY#new int[anz]
+jnt.scimark2.Random#<init>(int,double,double)#void#0#2647#IDENT#super
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#59#853#IDENT#i
+jnt.scimark2.Random#<init>(int)#void#64#616#IDENT#m2
+jnt.scimark2.Random#nextDouble()#double#108#3273#IDENT#k
+jnt.scimark2.Random#<init>()#void#105#912#IDENT#width
 jnt.scimark2.Random#<init>(int)#void#101#883#ASSIGN#right = 1.0
-jnt.scimark2.Random#<init>(int)#void#85#803#DIV#1.0 / (double)m1
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#205#873#PREINC#++i
-jnt.scimark2.Random#<init>(int)#void#6#440#ASSIGN#seed = 0
-jnt.scimark2.Random#<init>(double,double)#void#5#440#IDENT#seed
-jnt.scimark2.Random#nextDouble()#double#1#3109#IDENT#m
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#80#546#PLUS#rowr + nr
-jnt.scimark2.Random#<init>(double,double)#void#44#594#IDENT#one
-jnt.scimark2.Random#initialize(int)#void#114#4014#IDENT#j0
+jnt.scimark2.Random#<init>()#void#21#514#IDENT#mdig
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#47#329#VARDEF#int[] row = new int[N + 1]
+jnt.scimark2.Random#initialize(int)#void#31#3677#IDENT#jseed
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#43#813#IDENT#rowR
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#61#852#INDEXED#col[i]
+jnt.scimark2.Random#<init>(int,double,double)#void#120#2696#SELECT#this.right
+jnt.scimark2.Random#initialize(int)#void#13#3637#SELECT#Math.abs
+jnt.scimark2.Random#<init>(int)#void#41#586#MINUS#mdig - 2
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#174#716#ASSIGN#y = accept_all_FIELD1_TAG1(y)
+jnt.scimark2.Random#<init>()#void#95#855#IDENT#left
+jnt.scimark2.Random#nextDouble()#double#124#3306#MUL#dm1 * k
+jnt.scimark2.Random#initialize(int)#void#135#3788#PREINC#++iloop
+jnt.scimark2.Random#nextDouble()#double#89#3226#PREDEC#--j
+jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#7#970#IDENT#N
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#99#513#VARDEF#int i = 0
+jnt.scimark2.Random#initialize(int)#void#27#3665#MOD#jseed % 2
+jnt.scimark2.Random#<init>(double,double)#void#91#820#ASSIGN#haveRange = false
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#7#651#VARDEF#int reps = 0
+jnt.scimark2.Random#<init>(double,double)#void#37#582#IDENT#mdig
+jnt.scimark2.Random#initialize(int)#void#116#3881#ASSIGN#j0 = jseed % m2
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#205#783#IDENT#y
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#82#458#IDENT#r
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#76#433#IDENT#rowr
+jnt.scimark2.Random#<init>(double,double)#void#21#514#IDENT#mdig
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#21#247#IDENT#nr
+jnt.scimark2.Random#<init>()#void#96#855#ASSIGN#left = 0.0
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#121#525#PREINC#++i
+jnt.scimark2.Random#<init>(double,double)#void#121#1774#SELECT#this.right
+jnt.scimark2.Random#nextDouble()#double#49#3162#IDENT#i
+jnt.scimark2.Random#<init>(double,double)#void#133#1816#IDENT#haveRange
+jnt.scimark2.Random#nextDouble()#double#1#3089#IDENT#m
+jnt.scimark2.Random#<init>()#void#55#609#IDENT#one
+jnt.scimark2.Random#<init>(int,double,double)#void#6#440#ASSIGN#seed = 0
+jnt.scimark2.Random#initialize(int)#void#142#3929#IDENT#i
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#58#849#IDENT#col
+jnt.scimark2.Random#<init>(double,double)#void#28#537#ASSIGN#one = 1
+jnt.scimark2.commandline#main(java.lang.String[])#void#39#660#SELECT#Integer.parseInt
+jnt.scimark2.Random#initialize(int)#void#8#3600#NEWARRAY#new int[17]
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#89#684#PREINC#++reps
+jnt.scimark2.Random#<init>()#void#58#608#MINUS#(one << mdig - 2) - one
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#163#697#IDENT#i
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#0#149#IDENT#RandomVector
+jnt.scimark2.Random#initialize(int)#void#95#3842#PLUS#jseed / m2 + j0 * k1
+jnt.scimark2.Random#initialize(int)#void#31#3675#PREDEC#--jseed
+jnt.scimark2.Random#initialize(int)#void#76#3782#LT#iloop < 17
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#89#472#IDENT#step
+jnt.scimark2.Random#<init>(int)#void#80#805#TYPECAST#(double)m1
+jnt.scimark2.Random#<init>(double,double)#void#110#1726#IDENT#initialize
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#34#265#VARDEF#double[] val = RandomVector(anz, R)
+jnt.scimark2.Random#<init>(int)#void#65#632#IDENT#one
+jnt.scimark2.Random#initialize(int)#void#147#3938#IDENT#j
+jnt.scimark2.Random#<init>()#void#1#1266#IDENT#super
+jnt.scimark2.Random#initialize(int)#void#115#3889#MOD#jseed % m2
+jnt.scimark2.Random#<init>(int)#void#100#883#IDENT#right
+jnt.scimark2.Random#<init>(int)#void#15#493#IDENT#j
+jnt.scimark2.Random#<init>()#void#85#803#DIV#1.0 / (double)m1
 jnt.scimark2.Random#<init>(int,double,double)#void#126#2722#IDENT#right
-jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#13#1125#IDENT#R
-jnt.scimark2.Random#initialize(int)#void#17#3752#IDENT#jseed
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#145#755#IDENT#x
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#117#684#IDENT#step
-jnt.scimark2.Random#<init>(int,double,double)#void#134#2738#IDENT#haveRange
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#115#682#IDENT#i
-jnt.scimark2.Random#nextDouble()#double#144#3406#IDENT#k
-jnt.scimark2.Random#initialize(int)#void#17#3773#SELECT#Math.abs
-jnt.scimark2.Random#initialize(int)#void#94#3980#IDENT#j0
-jnt.scimark2.Random#nextDouble()#double#112#3302#IDENT#width
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#47#819#IDENT#i
-jnt.scimark2.Random#nextDouble()#double#32#3152#IDENT#m
-jnt.scimark2.Random#nextDouble()#double#100#3272#IDENT#nextValue
-jnt.scimark2.Random#nextDouble()#double#117#3282#ASSIGN#nextValue = left + dm1 * k * width
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#176#889#SELECT#System.out
-jnt.scimark2.Random#initialize(int)#void#73#3901#IDENT#iloop
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#6#143#VARDEF#double[] x = RandomVector(N, R)
-jnt.scimark2.Random#initialize(int)#void#98#3983#MUL#j0 * k1
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#143#750#IDENT#col
-jnt.scimark2.Random#<init>(int,double,double)#void#115#2684#IDENT#left
-jnt.scimark2.Random#nextDouble()#double#58#3201#IDENT#i
-jnt.scimark2.Random#nextDouble()#double#68#3213#IDENT#j
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#3#634#MINUS#row.length - 1
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#68#512#VARDEF#int rowr = row[r]
-jnt.scimark2.Random#initialize(int)#void#42#3834#IDENT#m2
+jnt.scimark2.Random#<init>(int)#void#91#820#ASSIGN#haveRange = false
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#45#337#NEWARRAY#new int[N + 1]
+jnt.scimark2.Random#initialize(int)#void#59#3725#ASSIGN#j0 = jseed % m2
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#89#684#PREINC#++reps
+jnt.scimark2.Random#<init>(int,double,double)#void#129#2728#MINUS#right - left
+jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#13#988#IDENT#R
+jnt.scimark2.commandline#main(java.lang.String[])#void#49#686#SELECT#kernel.measureSparseMatmult
+jnt.scimark2.Random#<init>()#void#42#579#SL#one << mdig - 2
+jnt.scimark2.Random#initialize(int)#void#96#3854#IDENT#j1
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#55#378#VARDEF#int r = 0
+jnt.scimark2.Random#nextDouble()#double#20#3109#IDENT#k
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#218#827#SELECT#System.out
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#80#874#INDEXED#y[r]
+jnt.scimark2.Random#<init>()#void#52#605#MINUS#mdig - 2
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#117#549#IDENT#step
+jnt.scimark2.Random#nextDouble()#double#68#3193#IDENT#j
+jnt.scimark2.Random#<init>(int)#void#95#855#IDENT#left
+jnt.scimark2.Random#<init>(int)#void#6#440#ASSIGN#seed = 0
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#176#754#SELECT#System.out
+jnt.scimark2.Random#<init>()#void#5#440#IDENT#seed
+jnt.scimark2.Random#nextDouble()#double#0#3085#IDENT#k
+jnt.scimark2.Random#initialize(int)#void#112#3891#IDENT#m2
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#42#345#IDENT#N
+jnt.scimark2.kernel#<init>()#void#1#30#IDENT#super
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#1#626#SELECT#row.length
+jnt.scimark2.Random#<init>(double,double)#void#96#855#ASSIGN#left = 0.0
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#169#718#IDENT#accept_all_FIELD1_TAG1
+jnt.scimark2.Random#initialize(int)#void#6#3596#IDENT#m
+jnt.scimark2.commandline#main(java.lang.String[])#void#52#740#IDENT#min_time
+jnt.scimark2.commandline#main(java.lang.String[])#void#12#466#VARDEF#String seed = null
+jnt.scimark2.Random#<init>(int)#void#23#514#ASSIGN#mdig = 32
+jnt.scimark2.Random#<init>(int,double,double)#void#73#643#DIV#mdig / 2
+jnt.scimark2.Random#initialize(int)#void#94#3847#MUL#j0 * k1
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#82#878#ASSIGN#y[r] = sum
+jnt.scimark2.Random#nextDouble()#double#14#3098#IDENT#j
+jnt.scimark2.Random#nextDouble()#double#45#3152#EQ#i == 0
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#127#388#IDENT#r
+jnt.scimark2.Random#<init>(int)#void#28#537#ASSIGN#one = 1
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#32#766#INDEXED#row[r]
+jnt.scimark2.Random#<init>(int,double,double)#void#119#2692#IDENT#this
+jnt.scimark2.Random#initialize(int)#void#43#3704#IDENT#k1
+jnt.scimark2.commandline#main(java.lang.String[])#void#33#594#ASSIGN#seed = args[0]
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#81#431#ASSIGN#row[r + 1] = rowr + nr
+jnt.scimark2.Random#<init>()#void#86#779#ASSIGN#dm1 = 1.0 / (double)m1
+jnt.scimark2.Random#<init>(int)#void#0#2097#IDENT#super
 jnt.scimark2.Random#<init>(int)#void#110#2113#IDENT#seed
-jnt.scimark2.Random#<init>()#void#23#514#ASSIGN#mdig = 32
-jnt.scimark2.Random#<init>(double,double)#void#59#590#PLUS#(one << mdig - 2) + ((one << mdig - 2) - one)
-jnt.scimark2.Random#<init>(int)#void#69#639#IDENT#mdig
-jnt.scimark2.Random#<init>(int,double,double)#void#64#616#IDENT#m2
-jnt.scimark2.Random#<init>(int)#void#59#590#PLUS#(one << mdig - 2) + ((one << mdig - 2) - one)
-jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#11#1118#IDENT#A
-jnt.scimark2.Random#<init>()#void#90#820#IDENT#haveRange
-jnt.scimark2.Random#<init>()#void#11#474#ASSIGN#i = 4
-jnt.scimark2.Random#<init>(int,double,double)#void#5#440#IDENT#seed
-jnt.scimark2.Random#<init>(int)#void#106#912#ASSIGN#width = 1.0
+jnt.scimark2.Random#initialize(int)#void#92#3849#IDENT#k1
+jnt.scimark2.Random#nextDouble()#double#101#3259#IDENT#left
+jnt.scimark2.Random#nextDouble()#double#105#3267#IDENT#dm1
+jnt.scimark2.Random#<init>(double,double)#void#134#1826#ASSIGN#haveRange = true
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#9#659#IDENT#reps
+jnt.scimark2.Random#initialize(int)#void#81#3818#IDENT#k0
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#52#357#INDEXED#row[0]
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#221#831#SELECT#System.out.println
+jnt.scimark2.Random#<init>()#void#6#440#ASSIGN#seed = 0
+jnt.scimark2.Random#<init>(int,double,double)#void#86#779#ASSIGN#dm1 = 1.0 / (double)m1
+jnt.scimark2.Random#nextDouble()#double#110#3271#MUL#dm1 * k
+jnt.scimark2.Random#<init>(int)#void#11#474#ASSIGN#i = 4
+jnt.scimark2.Random#<init>(int,double,double)#void#115#2676#SELECT#this.left
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#71#830#PREINC#++i
+jnt.scimark2.Random#nextDouble()#double#42#3150#IDENT#i
+jnt.scimark2.Random#nextDouble()#double#8#3090#INDEXED#m[i]
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#165#701#IDENT#N
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#115#547#IDENT#i
+jnt.scimark2.commandline#main(java.lang.String[])#void#3#308#VARDEF#double min_time = Constants.RESOLUTION_DEFAULT
+jnt.scimark2.Random#<init>(double,double)#void#60#558#ASSIGN#m1 = (one << mdig - 2) + ((one << mdig - 2) - one)
+jnt.scimark2.Random#nextDouble()#double#57#3182#PREDEC#--i
+jnt.scimark2.Random#nextDouble()#double#39#3133#INDEXED#m[j]
+jnt.scimark2.Random#<init>()#void#91#820#ASSIGN#haveRange = false
+jnt.scimark2.Random#<init>()#void#48#601#IDENT#mdig
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#96#492#ASSIGN#step = 1
+jnt.scimark2.Random#<init>(int,double,double)#void#122#2703#ASSIGN#this.right = right
+jnt.scimark2.Random#<init>(double,double)#void#0#1722#IDENT#super
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#176#754#SELECT#System.out
+jnt.scimark2.Random#initialize(int)#void#84#3825#IDENT#j1
+jnt.scimark2.Random#<init>(int)#void#90#820#IDENT#haveRange
+jnt.scimark2.Random#initialize(int)#void#79#3813#IDENT#j0
+jnt.scimark2.Random#<init>(double,double)#void#53#598#SL#one << mdig - 2
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#80#880#IDENT#sum
+jnt.scimark2.Random#<init>(int,double,double)#void#11#474#ASSIGN#i = 4
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#0#162#IDENT#N
+jnt.scimark2.Random#<init>()#void#10#474#IDENT#i
+jnt.scimark2.Random#<init>(double,double)#void#15#493#IDENT#j
+jnt.scimark2.Random#<init>(double,double)#void#23#514#ASSIGN#mdig = 32
+jnt.scimark2.Random#initialize(int)#void#66#3752#DIV#jseed / m2
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#0#623#IDENT#row
+jnt.scimark2.Random#initialize(int)#void#72#3776#IDENT#iloop
+jnt.scimark2.Random#<init>()#void#41#586#MINUS#mdig - 2
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#62#847#INDEXED#x[col[i]]
+jnt.scimark2.Random#initialize(int)#void#110#3878#IDENT#j0
+jnt.scimark2.Random#initialize(int)#void#149#3940#ASSIGN#j = 16
+jnt.scimark2.Random#<init>(int,double,double)#void#91#820#ASSIGN#haveRange = false
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#39#793#PLUS#r + 1
 jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#64#864#IDENT#i
-jnt.scimark2.Random#<init>(int,double,double)#void#120#2705#IDENT#right
-jnt.scimark2.Random#nextDouble()#double#36#3154#IDENT#j
-jnt.scimark2.commandline#main(java.lang.String[])#void#9#408#VARDEF#int Sparse_size_nz = Constants.TINY_SPARSE_SIZE_nz
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#53#433#ASSIGN#row[0] = 0
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#19#223#VARDEF#int nr = nz / N
-jnt.scimark2.Random#nextDouble()#double#130#3346#IDENT#precise
-jnt.scimark2.Random#<init>(double,double)#void#126#1792#IDENT#width
-jnt.scimark2.Random#initialize(int)#void#17#3773#SELECT#Math.abs
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#205#873#PREINC#++i
-jnt.scimark2.Random#<init>()#void#79#779#IDENT#dm1
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#75#535#PLUS#r + 1
-jnt.scimark2.Random#nextDouble()#double#29#3142#PLUS_ASG#k += m1
-jnt.scimark2.Random#initialize(int)#void#137#4048#PLUS#j0 + m2 * j1
-jnt.scimark2.Random#<init>()#void#101#883#ASSIGN#right = 1.0
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#168#859#VARDEF#int i = 0
-jnt.scimark2.Random#nextDouble()#double#115#3300#MUL#dm1 * k * width
-jnt.scimark2.Random#<init>(int)#void#53#598#SL#one << mdig - 2
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#119#548#MUL#i * step
+jnt.scimark2.Random#initialize(int)#void#53#3727#IDENT#jseed
+jnt.scimark2.commandline#<init>()#void#1#235#IDENT#super
+jnt.scimark2.Random#initialize(int)#void#130#3919#IDENT#j1
+jnt.scimark2.commandline#main(java.lang.String[])#void#50#724#IDENT#Sparse_size_nz
+jnt.scimark2.Random#initialize(int)#void#133#3912#PLUS#j0 + m2 * j1
+jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#18#973#IDENT#i
+jnt.scimark2.Random#nextDouble()#double#71#3195#EQ#j == 0
+jnt.scimark2.Random#<init>(int,double,double)#void#28#537#ASSIGN#one = 1
+jnt.scimark2.Random#<init>(double,double)#void#128#1806#MINUS#right - left
+jnt.scimark2.Random#initialize(int)#void#13#3628#SELECT#Math.min
+jnt.scimark2.Random#<init>(double,double)#void#116#1762#IDENT#left
+jnt.scimark2.Random#nextDouble()#double#21#3111#LT#k < 0
+jnt.scimark2.Random#<init>(int)#void#60#558#ASSIGN#m1 = (one << mdig - 2) + ((one << mdig - 2) - one)
+jnt.scimark2.Random#<init>(double,double)#void#122#1781#ASSIGN#this.right = right
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#103#520#IDENT#nr
+jnt.scimark2.Random#nextDouble()#double#83#3226#PREDEC#--j
+jnt.scimark2.Random#nextDouble()#double#63#3182#PREDEC#--i
+jnt.scimark2.Random#<init>(double,double)#void#69#639#IDENT#mdig
+jnt.scimark2.Random#<init>(double,double)#void#120#1770#IDENT#this
+jnt.scimark2.Random#initialize(int)#void#61#3741#IDENT#j1
+jnt.scimark2.Random#initialize(int)#void#110#3883#IDENT#jseed
+jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#8#969#LT#i < N
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#49#354#IDENT#row
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#112#542#IDENT#i
+jnt.scimark2.Random#<init>()#void#11#474#ASSIGN#i = 4
+jnt.scimark2.Random#<init>(double,double)#void#41#586#MINUS#mdig - 2
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#27#286#IDENT#anz
+jnt.scimark2.Random#<init>(int,double,double)#void#106#912#ASSIGN#width = 1.0
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#114#541#PLUS#rowr + i
+jnt.scimark2.Random#<init>()#void#53#598#SL#one << mdig - 2
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#143#615#IDENT#col
+jnt.scimark2.Random#<init>(int)#void#48#601#IDENT#mdig
+jnt.scimark2.kernel#accept_all_FIELD1_TAG1(double[])#double[]#0#1124#IDENT#d
+jnt.scimark2.Random#initialize(int)#void#108#3828#ASSIGN#j1 = (jseed / m2 + j0 * k1 + j1 * k0) % (m2 / 2)
+jnt.scimark2.Random#initialize(int)#void#99#3857#MUL#j1 * k0
+jnt.scimark2.Random#<init>(int)#void#75#616#ASSIGN#m2 = one << mdig / 2
+jnt.scimark2.Random#nextDouble()#double#18#3094#MINUS#m[i] - m[j]

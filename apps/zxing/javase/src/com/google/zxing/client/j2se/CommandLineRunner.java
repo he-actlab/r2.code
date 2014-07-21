@@ -48,8 +48,6 @@ import java.util.Vector;
 
 import javax.imageio.ImageIO;
 
-
-
 /**
  * <p>This simple command line utility decodes files, directories of files, or URIs which are passed
  * as arguments. By default it uses the normal decoding algorithms, but you can pass --try_harder to
@@ -163,40 +161,40 @@ public final class CommandLineRunner {
 					{
 
 						File inputFile = new File(argument);
-//						if (inputFile.exists()) {
-//							if (inputFile.isDirectory()) {
-//								int successful = 0;
-//								int total = 0;
-//								for (File input : inputFile.listFiles()) {
-//									String filename = input.getName().toLowerCase();
-//									// Skip hidden files and text files (the latter is found in the blackbox tests).
-//									if (filename.startsWith(".") || filename.endsWith(".txt")) {
-//										continue;
-//									}
-//									// Skip the results of dumping the black point.
-//									if (filename.contains(".mono.png")) {
-//										continue;
-//									}
-//									Result result = decode(input.toURI(), hints, dumpBlackPoint, crop);
-//									if (result != null) {
-//										successful++;
-//										if (dumpResults) {
-//											dumpResult(input, result);
-//										}
-//									}
-//									total++;
-//								}
-//								System.out.println("\nDecoded " + successful + " files out of " + total +
-//										" successfully (" + (successful * 100 / total) + "%)\n");
-//							} else {
+						if (inputFile.exists()) {
+							if (inputFile.isDirectory()) {
+								int successful = 0;
+								int total = 0;
+								for (File input : inputFile.listFiles()) {
+									String filename = input.getName().toLowerCase();
+									// Skip hidden files and text files (the latter is found in the blackbox tests).
+									if (filename.startsWith(".") || filename.endsWith(".txt")) {
+										continue;
+									}
+									// Skip the results of dumping the black point.
+									if (filename.contains(".mono.png")) {
+										continue;
+									}
+									Result result = decode(input.toURI(), hints, dumpBlackPoint, crop);
+									if (result != null) {
+										successful++;
+										if (dumpResults) {
+											dumpResult(input, result);
+										}
+									}
+									total++;
+								}
+								System.out.println("\nDecoded " + successful + " files out of " + total +
+										" successfully (" + (successful * 100 / total) + "%)\n");
+							} else {
 								Result result = decode(inputFile.toURI(), hints, dumpBlackPoint, crop);
-//								if (dumpResults) {
-//									dumpResult(inputFile, result);
-//								}
-//							}
-//						} else {
-//							decode(new URI(argument), hints, dumpBlackPoint, crop);
-//						}
+								if (dumpResults) {
+									dumpResult(inputFile, result);
+								}
+							}
+						} else {
+							decode(new URI(argument), hints, dumpBlackPoint, crop);
+						}
 					}
 
 	private static void dumpResult(File input, Result result) throws IOException {
@@ -280,15 +278,13 @@ public final class CommandLineRunner {
 		int width = bitmap.getWidth();
 		int height = bitmap.getHeight();
 		int stride = width * 3;
-		alloc_TAG1();
+		alloc_TAG11();
 		int[] pixels = new int[stride * height];
 
 		// The original image
-		int[] argb = new  int[width];
+		int[] argb = new int[width];
 		for (int y = 0; y < height; y++) {
 			image.getRGB(0, y, width, 1, (int[])(Object)argb, 0, width);
-			//additional accept
-			pixels = accept_all_FIELD1_TAG1(pixels);
 			System.arraycopy(argb, 0, pixels, y * stride, width);
 		}
 		
@@ -297,9 +293,6 @@ public final class CommandLineRunner {
 		for (int y = 0; y < height; y++) {
 			try {
 				row = bitmap.getBlackRow(y, row);
-				//jspark
-				row.bits = accept_all_FIELD1_TAG2(row.bits);
-				//krapsj
 			} catch (NotFoundException nfe) {
 				// If fetching the row failed, draw a red line and keep going.
 				int offset = y * stride + width;
@@ -311,10 +304,10 @@ public final class CommandLineRunner {
 
 			int offset = y * stride + width;
 			for (int x = 0; x < width; x++) {
-				boolean rowGetX = row.get(x);
+				boolean rowGet = row.get(x);
 				//additional accept
-				rowGetX = accept(rowGetX);
-				if (rowGetX) {
+				rowGet = accept(rowGet);
+				if (rowGet) {
 					pixels[offset + x] = 0xff000000;
 				} else {
 					pixels[offset + x] = 0xffffffff;
@@ -329,8 +322,8 @@ public final class CommandLineRunner {
 				int offset = y * stride + width * 2;
 				for (int x = 0; x < width; x++) {
 					boolean matrixGet = matrix.get(x, y);
-					// additional accept
-					matrixGet = accept(matrixGet);
+					//additional accept
+					matrixGet = accept(matrixGet); 
 					if (matrixGet) {
 						pixels[offset + x] = 0xff000000;
 					} else {
@@ -340,10 +333,8 @@ public final class CommandLineRunner {
 			}
 		} catch (NotFoundException nfe) {
 		}
-
-	    //jspark
-	    pixels = accept_all_FIELD1_TAG1(pixels);
-	    //krapsj
+		
+		accept_all_FIELD1_TAG11(pixels);
 		
 		// Write the result
 		BufferedImage result = new BufferedImage(stride, height, BufferedImage.TYPE_INT_ARGB);
@@ -380,13 +371,9 @@ public final class CommandLineRunner {
 			}
 		}
 	}
-
-	//jspark
-	public static void alloc_TAG1(){}
-	public static boolean accept(boolean b) {return b;}
-	public static int[] precise_all_FIELD1_TAG1(int[] pixels) {return pixels;}
-	public static int[] accept_all_FIELD1_TAG1(int[] pixels) {return pixels;}
-	public static int[] accept_all_FIELD1_TAG2(int[] bits) {return bits;}
-	//krapsj
+	
+	public static void alloc_TAG11(){}
+	public static boolean accept(boolean i){return i;}
+	public static void accept_all_FIELD1_TAG11(int[] arr){}
 
 }

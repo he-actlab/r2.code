@@ -1,6 +1,3 @@
-3
-Simple#main(java.lang.String[])#void#1#1: MOVE_I R1, IConst: 1
-Simple#main(java.lang.String[])#void#4#2: SHL_I T2, IConst: 1, IConst: 2
-Simple#main(java.lang.String[])#void#5#3: MOVE_I R3, T2
+0
 0
 0

@@ -58,66 +58,14 @@ public class Intersection {
 	public static final double EPSILON = 1e-12;
 
 	private static final @Approx Vector3f tempVa = new @Approx Vector3f();
-
 	private static final @Approx Vector3f tempVb = new @Approx Vector3f();
-
 	private static final @Approx Vector3f tempVc = new @Approx Vector3f();
-
 	private static final @Approx Vector3f tempVd = new @Approx Vector3f();
-
 	private static final @Approx Vector3f tempVe = new @Approx Vector3f();
-
 	private static final @Approx float[] tempFa = new @Approx float[2];
-
 	private static final @Approx float[] tempFb = new @Approx float[2];
-
 	private static final @Approx Vector2f tempV2a = new @Approx Vector2f();
-
 	private static final @Approx Vector2f tempV2b = new @Approx Vector2f();
-
-	/**
-	 * This is a <b>VERY </b> brute force method of detecting if two TriMesh
-	 * objects intersect.
-	 * 
-	 * @param mesh1
-	 *            The first TriMesh.
-	 * @param mesh2
-	 *            The second TriMesh.
-	 * @return True if they intersect, false otherwise.
-	 */
-	/* public static boolean meshIntersection(TriMesh mesh1, TriMesh mesh2) {
-
-		IntBuffer indexA = mesh1.getIndexBuffer();
-		IntBuffer indexB = mesh2.getIndexBuffer();
-		TransformMatrix aTransform = new TransformMatrix();
-		aTransform.setRotationQuaternion(mesh1.getWorldRotation());
-		aTransform.setTranslation(mesh1.getWorldTranslation());
-		aTransform.setScale(mesh1.getWorldScale());
-
-		TransformMatrix bTransform = new TransformMatrix();
-		bTransform.setRotationQuaternion(mesh2.getWorldRotation());
-		bTransform.setTranslation(mesh2.getWorldTranslation());
-		bTransform.setScale(mesh2.getWorldScale());
-
-		Vector3f[] vertA = BufferUtils.getVector3Array(mesh1.getVertexBuffer());
-		for (int i = 0; i < vertA.length; i++)
-			aTransform.multPoint(vertA[i]);
-
-		Vector3f[] vertB = BufferUtils.getVector3Array(mesh2.getVertexBuffer());
-		for (int i = 0; i < vertB.length; i++)
-			bTransform.multPoint(vertB[i]);
-
-		for (int i = 0; i < mesh1.getTriangleCount(); i++) {
-			for (int j = 0; j < mesh2.getTriangleCount(); j++) {
-				if (intersection(vertA[indexA.get(i * 3 + 0)],
-						vertA[indexA.get(i * 3 + 1)], vertA[indexA.get(i * 3 + 2)],
-						vertB[indexB.get(j * 3 + 0)], vertB[indexB.get(j * 3 + 1)],
-						vertB[indexB.get(j * 3 + 2)]))
-					return true;
-			}
-		}
-		return false;
-	} */
 
 	/**
 	 * This method tests for the intersection between two triangles defined by

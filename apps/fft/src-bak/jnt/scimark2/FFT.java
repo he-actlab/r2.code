@@ -39,6 +39,8 @@ public class FFT {
 		return log; 
 	}
 
+	private static double accept(double d){return d;}
+	
 	protected static void transform_internal (double data[], int direction) {
 		if (data.length == 0) return;    
 		int n = data.length/2;
@@ -55,8 +57,11 @@ public class FFT {
 			double w_imag = 0.0; 
 
 			double theta = 2.0 * direction * Math.PI / (2.0 * (double) dual);
+			theta = accept(theta);
 			double s = Math.sin(theta);
-			double t = Math.sin(theta / 2.0); 
+			double param = theta / 2.0;
+			param = accept(param);
+			double t = Math.sin(param); 
 			double s2 = 2.0 * t * t; 
 
 			/* a = 0 */

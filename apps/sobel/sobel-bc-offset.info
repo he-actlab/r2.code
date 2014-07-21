@@ -1,630 +1,1200 @@
-629
-Sobel.RgbImage#luminance(int[])#int#19#2570#MUL
-Sobel.TextFile#loadInt()#int#16#3841#EQ
-Sobel.TextFile#save(boolean[])#void#48#2085#SELECT
-Sobel.RgbImage#makeGrayscale()#void#115#3013#ASSIGN
-Sobel.TextFile#save(java.lang.Object)#void#14#1839#EQ
-Sobel.TextFile#main(java.lang.String[])#void#43#7814#EQ
-Sobel.RgbImage#makeGrayscale()#void#79#2940#INDEXED
-Sobel.TextFile#loadChar()#char#27#3636#AND
-Sobel.TextFile#loadDoubleArray()#double[]#11#6301#SELECT
-Sobel.TextFile#loadChar()#char#16#3462#EQ
-Sobel.RgbImage#makeGrayscale()#void#131#3060#ASSIGN
-Sobel.TextFile#save(boolean[])#void#0#1938#AND
-Sobel.RgbImage#load(java.lang.String)#void#66#461#ASSIGN
-Sobel.RgbImage#main(java.lang.String[])#void#109#3735#VARDEF
-Sobel.RgbImage#makeGrayscale()#void#105#3003#INDEXED
-Sobel.TextFile#save(long[])#void#0#2433#AND
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#92#1218#VARDEF
-Sobel.TextFile#main(java.lang.String[])#void#130#7977#SELECT
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#57#1119#DIV
-Sobel.TextFile#loadLongArray()#long[]#76#6161#ASSIGN
-Sobel.RgbImage#main(java.lang.String[])#void#89#3630#LT
-Sobel.TextFile#save(char[])#void#0#1625#AND
-Sobel.RgbImage#makeGrayscale()#void#62#2915#INDEXED
-Sobel.TextFile#loadChar()#char#2#3454#AND
-Sobel.TextFile#save(boolean[])#void#48#2071#SELECT
-Sobel.TextFile#main(java.lang.String[])#void#273#8419#SELECT
-Sobel.TextFile#loadCharArray()#char[]#45#4741#INDEXED
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#6#971#INDEXED
-Sobel.TextFile#main(java.lang.String[])#void#134#8048#SELECT
-Sobel.RgbImage#load(java.lang.String)#void#14#319#SELECT
-Sobel.RgbImage#makeGrayscale()#void#60#2912#INDEXED
-Sobel.TextFile#save(char[])#void#14#1633#EQ
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#31#1048#DIV
-Sobel.TextFile#main(java.lang.String[])#void#215#8325#ASSIGN
-Sobel.RgbImage#main(java.lang.String[])#void#62#3454#PREINC
-Sobel.TextFile#loadIntArray()#int[]#14#5489#EQ
-Sobel.TextFile#loadInt()#int#2#3833#AND
-Sobel.TextFile#loadChar()#char#60#3668#NE
-Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#14#607#EQ
-Sobel.TextFile#main(java.lang.String[])#void#150#8166#SELECT
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#60#1096#VARDEF
-Sobel.RgbImage#makeGrayscale()#void#52#2883#MUL
-Sobel.TextFile#loadIntArray()#int[]#44#5635#LT
-Sobel.TextFile#save(java.lang.Object[])#void#31#3015#SELECT
-Sobel.TextFile.Mode#<clinit>()#void#23#122#ASSIGN
-Sobel.TextFile#loadLongArray()#long[]#11#5894#SELECT
-Sobel.TextFile#save(long[])#void#48#2580#SELECT
-Sobel.TextFile#save(boolean[])#void#48#2085#SELECT
-Sobel.TextFile#loadChar()#char#16#3454#AND
-Sobel.RgbImage#makeGrayscale()#void#50#2896#INDEXED
-Sobel.RgbImage#sobel(int[][][])#double#57#2040#VARDEF
-Sobel.TextFile#save(char[])#void#11#1640#SELECT
-Sobel.RgbImage#sobel(int[][][])#double#98#2267#INDEXED
-Sobel.TextFile#main(java.lang.String[])#void#23#7741#NEWARRAY
-Sobel.RgbImage#makeGrayscale()#void#89#2956#INDEXED
-Sobel.RgbImage#main(java.lang.String[])#void#9#3350#SELECT
-Sobel.TextFile#save(double[])#void#39#2786#SELECT
-Sobel.RgbImage#main(java.lang.String[])#void#55#3532#ASSIGN
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#34#1025#VARDEF
-Sobel.TextFile#loadLongArray()#long[]#11#5894#SELECT
-Sobel.TextFile#main(java.lang.String[])#void#12#7645#VARDEF
-Sobel.TextFile#loadLongArray()#long[]#44#6034#LT
-Sobel.TextFile#loadDouble()#double#31#4300#SELECT
-Sobel.RgbImage#luminance(int[])#int#32#2603#INDEXED
-Sobel.TextFile#save(int[])#void#39#2288#SELECT
-Sobel.RgbImage#makeGrayscale()#void#34#2845#INDEXED
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#109#1258#MINUS
-Sobel.TextFile#main(java.lang.String[])#void#168#8230#SELECT
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#63#1132#VARDEF
-Sobel.RgbImage#sobel(int[][][])#double#165#2422#PLUS
-Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#6#582#SELECT
-Sobel.TextFile#loadDoubleArray()#double[]#0#6286#AND
-Sobel.TextFile#save(char)#void#21#1260#SELECT
-Sobel.RgbImage#luminance(int[])#int#7#2517#VARDEF
-Sobel.TextFile#loadChar()#char#27#3575#AND
-Sobel.TextFile#save(java.lang.Object)#void#11#1846#SELECT
-Sobel.RgbImage#load(java.lang.String)#void#156#721#SELECT
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#67#1150#VARDEF
-Sobel.TextFile#loadCharArray()#char[]#11#4618#SELECT
-Sobel.TextFile.Mode#<clinit>()#void#32#87#SELECT
-Sobel.RgbImage#makeGrayscale()#void#113#3032#MUL
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#8#961#VARDEF
-Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#30#693#NEWCLASS
-Sobel.TextFile#save(int[])#void#48#2318#SELECT
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#136#1318#INDEXED
-Sobel.RgbImage#makeGrayscale()#void#81#2927#MUL
-Sobel.TextFile#loadLong()#long#35#4085#ASSIGN
-Sobel.RgbImage#makeGrayscale()#void#8#2734#VARDEF
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#177#1433#INDEXED
-Sobel.RgbImage#makeGrayscale()#void#36#2838#LT
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#140#1235#PREINC
-Sobel.TextFile#loadIntArray()#int[]#0#5481#AND
-Sobel.RgbImage#load(java.lang.String)#void#155#707#INDEXED
-Sobel.RgbImage#makeGrayscale()#void#46#2890#INDEXED
-Sobel.TextFile#loadBoolean()#boolean#13#3245#SELECT
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#122#1289#MINUS
-Sobel.TextFile#save(int[])#void#21#2225#SELECT
-Sobel.TextFile#loadCharArray()#char[]#46#4745#ASSIGN
-Sobel.TextFile#main(java.lang.String[])#void#27#7770#VARDEF
-Sobel.TextFile#loadIntArray()#int[]#28#5545#ASSIGN
-Sobel.TextFile#save(long)#void#11#1436#SELECT
-Sobel.TextFile#save(char)#void#14#1230#EQ
-Sobel.TextFile#main(java.lang.String[])#void#33#7779#LT
-Sobel.RgbImage#main(java.lang.String[])#void#133#3811#LT
-Sobel.RgbImage#luminance(int[])#int#34#2598#MUL
-Sobel.RgbImage#luminance(int[])#int#44#2614#MOD
-Sobel.TextFile#save(long)#void#14#1429#EQ
-Sobel.TextFile#loadDoubleArray()#double[]#14#6286#AND
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#287#1644#ASSIGN
-Sobel.RgbImage#sobel(int[][][])#double#38#2021#INDEXED
-Sobel.RgbImage#makeGrayscale()#void#93#2962#INDEXED
-Sobel.TextFile#loadChar()#char#48#3607#NE
-Sobel.TextFile#save(double[])#void#48#2830#SELECT
-Sobel.TextFile#save(int[])#void#31#2263#SELECT
-Sobel.TextFile#loadLong()#long#13#4038#SELECT
-Sobel.TextFile.Mode#values()#Sobel.TextFile.Mode[]#3#87#SELECT
-Sobel.RgbImage#load(java.lang.String)#void#11#253#VARDEF
-Sobel.TextFile#main(java.lang.String[])#void#39#7802#INDEXED
-Sobel.TextFile#loadChar()#char#13#3469#SELECT
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#199#1478#ASSIGN
-Sobel.RgbImage#sobel(int[][][])#double#164#2426#MUL
-Sobel.TextFile.Mode#<clinit>()#void#38#87#SELECT
-Sobel.TextFile#main(java.lang.String[])#void#70#7880#VARDEF
-Sobel.TextFile#save(double)#void#14#1523#AND
-Sobel.TextFile#save(double[])#void#11#2698#SELECT
-Sobel.TextFile#save(long)#void#14#1421#AND
-Sobel.RgbImage#load(java.lang.String)#void#51#434#LT
-Sobel.TextFile.Mode#<clinit>()#void#32#87#SELECT
-Sobel.TextFile#loadString()#java.lang.String#38#4955#ASSIGN
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#160#1404#OR
-Sobel.RgbImage#load(java.lang.String)#void#159#711#ASSIGN
-Sobel.RgbImage#luminance(int[])#int#3#2496#VARDEF
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#249#1590#INDEXED
-Sobel.TextFile#save(int[])#void#11#2200#SELECT
-Sobel.TextFile#save(long[])#void#31#2511#SELECT
-Sobel.TextFile#save(char)#void#11#1237#SELECT
-Sobel.TextFile#loadDoubleArray()#double[]#11#6301#SELECT
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#190#1465#INDEXED
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#130#1315#INDEXED
-Sobel.TextFile#loadBoolean()#boolean#34#3314#SELECT
-Sobel.TextFile#save(int[])#void#48#2332#SELECT
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#257#1607#INDEXED
-Sobel.TextFile#loadChar()#char#55#3661#SELECT
-Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#2#568#ASSIGN
-Sobel.TextFile#main(java.lang.String[])#void#42#7810#MOD
-Sobel.TextFile#main(java.lang.String[])#void#0#7656#NEWCLASS
-Sobel.TextFile#loadLongArray()#long[]#28#5943#ASSIGN
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#44#1084#DIV
-Sobel.TextFile#main(java.lang.String[])#void#20#7706#VARDEF
-Sobel.TextFile#loadDouble()#double#13#4236#SELECT
-Sobel.TextFile#loadCharArray()#char[]#42#4722#ASSIGN
-Sobel.TextFile#main(java.lang.String[])#void#51#7806#ASSIGN
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#171#1409#GE
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#162#1400#LT
-Sobel.RgbImage#load(java.lang.String)#void#91#507#PREINC
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#7#974#SELECT
-Sobel.TextFile#loadBoolean()#boolean#43#3346#ASSIGN
-Sobel.RgbImage#makeGrayscale()#void#82#2922#PLUS
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#219#1542#INDEXED
-Sobel.RgbImage#sobel(int[][][])#double#52#2073#INDEXED
-Sobel.TextFile#main(java.lang.String[])#void#32#7782#SELECT
-Sobel.TextFile#close()#void#14#988#AND
-Sobel.TextFile#loadString()#java.lang.String#29#4930#SELECT
-Sobel.RgbImage#sobel(int[][][])#double#116#2307#PLUS
-Sobel.RgbImage#sobel(int[][][])#double#105#2237#VARDEF
-Sobel.RgbImage#sobel(int[][][])#double#93#2188#VARDEF
-Sobel.RgbImage#luminance(int[])#int#17#2575#INDEXED
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#198#1474#INDEXED
-Sobel.TextFile#loadIntArray()#int[]#11#5496#SELECT
-Sobel.RgbImage#load(java.lang.String)#void#97#444#PREINC
-Sobel.RgbImage#sobel(int[][][])#double#10#1843#VARDEF
-Sobel.TextFile#loadCharArray()#char[]#14#4611#EQ
-Sobel.RgbImage#load(java.lang.String)#void#136#655#SELECT
-Sobel.TextFile#main(java.lang.String[])#void#105#7928#MUL
-Sobel.TextFile#loadLong()#long#2#4023#AND
-Sobel.TextFile#loadDoubleArray()#double[]#53#6482#ASSIGN
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#185#1442#INDEXED
-Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#11#614#SELECT
-Sobel.TextFile#main(java.lang.String[])#void#59#7834#SELECT
-Sobel.TextFile#loadBoolean()#boolean#2#3230#AND
-Sobel.TextFile#save(long)#void#11#1436#SELECT
-Sobel.TextFile#save(boolean[])#void#31#2016#SELECT
-Sobel.TextFile#loadDouble()#double#2#4221#AND
-Sobel.RgbImage#main(java.lang.String[])#void#49#3525#INDEXED
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#20#997#MINUS
-Sobel.TextFile#save(double)#void#14#1531#EQ
-Sobel.TextFile#main(java.lang.String[])#void#212#8335#SELECT
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#21#990#VARDEF
-Sobel.TextFile#loadDouble()#double#34#4283#ASSIGN
-Sobel.TextFile#main(java.lang.String[])#void#150#8166#SELECT
-Sobel.RgbImage#main(java.lang.String[])#void#0#3324#NEWCLASS
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#209#1500#INDEXED
-Sobel.TextFile#save(double)#void#21#1561#SELECT
-Sobel.TextFile#loadInt()#int#35#3895#ASSIGN
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#195#1470#MINUS
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#113#1266#ASSIGN
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#112#1262#INDEXED
-Sobel.TextFile#main(java.lang.String[])#void#6#7688#SELECT
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#135#1320#MINUS
-Sobel.TextFile#loadDoubleArray()#double[]#26#6352#NEWARRAY
-Sobel.RgbImage#main(java.lang.String[])#void#7#3313#VARDEF
-Sobel.RgbImage#sobel(int[][][])#double#33#1941#VARDEF
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#186#1446#ASSIGN
-Sobel.RgbImage#load(java.lang.String)#void#175#773#INDEXED
-Sobel.TextFile#loadString()#java.lang.String#11#4866#SELECT
-Sobel.TextFile#main(java.lang.String[])#void#174#8259#SELECT
-Sobel.TextFile#save(boolean[])#void#39#2041#SELECT
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#236#1565#INDEXED
-Sobel.TextFile#save(boolean[])#void#14#1946#EQ
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#272#1636#MINUS
-Sobel.TextFile#loadString()#java.lang.String#21#4893#SELECT
-Sobel.RgbImage#load(java.lang.String)#void#141#679#SELECT
-Sobel.TextFile#save(int[])#void#30#2254#SELECT
-Sobel.RgbImage#load(java.lang.String)#void#27#373#SELECT
-Sobel.RgbImage#load(java.lang.String)#void#76#498#LT
-Sobel.RgbImage#sobel(int[][][])#double#3#1873#INDEXED
-Sobel.RgbImage#makeGrayscale()#void#22#2806#SELECT
-Sobel.TextFile#loadChar()#char#1#3428#VARDEF
-Sobel.TextFile#loadDoubleArray()#double[]#76#6572#ASSIGN
-Sobel.RgbImage#load(java.lang.String)#void#17#309#ASSIGN
-Sobel.RgbImage#sobel(int[][][])#double#50#2070#INDEXED
-Sobel.RgbImage#main(java.lang.String[])#void#102#3710#SELECT
-Sobel.TextFile#save(java.lang.Object[])#void#48#3070#SELECT
-Sobel.TextFile#loadCharArray()#char[]#29#4682#SELECT
-Sobel.TextFile.Mode#<clinit>()#void#27#87#NEWARRAY
-Sobel.TextFile#save(boolean)#void#11#1137#SELECT
-Sobel.TextFile#save(boolean)#void#21#1160#SELECT
-Sobel.TextFile#loadBooleanArray()#boolean[]#43#5235#SELECT
-Sobel.RgbImage#main(java.lang.String[])#void#37#3472#ASSIGN
-Sobel.RgbImage#main(java.lang.String[])#void#20#3417#NEWARRAY
-Sobel.TextFile#loadChar()#char#23#3496#SELECT
-Sobel.TextFile.Mode#<clinit>()#void#0#115#NEWCLASS
-Sobel.RgbImage#main(java.lang.String[])#void#93#3667#SELECT
-Sobel.TextFile#loadChar()#char#36#3548#NE
-Sobel.TextFile#close()#void#28#1054#SELECT
-Sobel.TextFile#save(java.lang.Object)#void#0#1831#AND
-Sobel.TextFile#save(int[])#void#0#2185#AND
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#171#1404#OR
-Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#48#755#NEWCLASS
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#248#1592#MINUS
-Sobel.TextFile#loadDoubleArray()#double[]#49#6478#INDEXED
-Sobel.RgbImage#load(java.lang.String)#void#187#818#MINUS
-Sobel.TextFile#main(java.lang.String[])#void#123#7896#PREINC
-Sobel.RgbImage#main(java.lang.String[])#void#28#3449#LT
-Sobel.TextFile#save(long[])#void#30#2502#SELECT
-Sobel.TextFile#save(java.lang.String)#void#0#1727#AND
-Sobel.RgbImage#main(java.lang.String[])#void#69#3578#VARDEF
-Sobel.RgbImage#load(java.lang.String)#void#87#524#INDEXED
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#286#1657#INDEXED
-Sobel.RgbImage#makeGrayscale()#void#125#3056#INDEXED
-Sobel.TextFile#save(java.lang.String)#void#21#1765#SELECT
-Sobel.TextFile#main(java.lang.String[])#void#117#7907#ASSIGN
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#87#1192#GE
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#267#1631#INDEXED
-Sobel.RgbImage#load(java.lang.String)#void#110#572#LT
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#76#1187#OR
-Sobel.TextFile#main(java.lang.String[])#void#248#8384#SELECT
-Sobel.TextFile.Mode#valueOf(java.lang.String)#Sobel.TextFile.Mode#0#87#SELECT
-Sobel.RgbImage#load(java.lang.String)#void#173#770#INDEXED
-Sobel.TextFile#loadIntArray()#int[]#76#5761#ASSIGN
-Sobel.TextFile.Mode#valueOf(java.lang.String)#Sobel.TextFile.Mode#0#87#SELECT
-Sobel.TextFile#save(boolean[])#void#11#1953#SELECT
-Sobel.TextFile#loadDoubleArray()#double[]#40#6434#VARDEF
-Sobel.TextFile#main(java.lang.String[])#void#52#7792#PREINC
-Sobel.TextFile#loadBoolean()#boolean#16#3230#AND
-Sobel.TextFile#save(char[])#void#14#1625#AND
-Sobel.TextFile#main(java.lang.String[])#void#147#8146#SELECT
-Sobel.TextFile.Mode#valueOf(java.lang.String)#Sobel.TextFile.Mode#3#87#SELECT
-Sobel.TextFile#loadDouble()#double#13#4236#SELECT
-Sobel.TextFile#loadIntArray()#int[]#11#5496#SELECT
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#2#936#VARDEF
-Sobel.RgbImage#load(java.lang.String)#void#179#777#ASSIGN
-Sobel.TextFile#save(int[])#void#14#2193#EQ
-Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#93#882#ASSIGN
-Sobel.TextFile#save(java.lang.Object[])#void#39#3040#SELECT
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#138#1324#INDEXED
-Sobel.TextFile#loadInt()#int#1#3808#VARDEF
-Sobel.RgbImage#sobel(int[][][])#double#113#2295#PLUS
-Sobel.TextFile#save(double[])#void#21#2723#SELECT
-Sobel.RgbImage#makeGrayscale()#void#66#2905#MUL
-Sobel.TextFile#save(java.lang.String)#void#14#1727#AND
-Sobel.TextFile#loadBooleanArray()#boolean[]#28#5138#ASSIGN
-Sobel.TextFile#loadBoolean()#boolean#31#3309#SELECT
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#196#1468#INDEXED
-Sobel.TextFile#save(double)#void#0#1523#AND
-Sobel.TextFile#loadBooleanArray()#boolean[]#14#5074#AND
-Sobel.TextFile#save(java.lang.Object[])#void#48#3084#SELECT
-Sobel.RgbImage#main(java.lang.String[])#void#160#3605#PREINC
-Sobel.RgbImage#load(java.lang.String)#void#30#363#ASSIGN
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#288#1382#PREINC
-Sobel.TextFile#loadCharArray()#char[]#32#4687#SELECT
-Sobel.RgbImage#load(java.lang.String)#void#104#563#VARDEF
-Sobel.RgbImage#makeGrayscale()#void#48#2893#INDEXED
-Sobel.TextFile#save(java.lang.String)#void#11#1742#SELECT
-Sobel.TextFile#loadCharArray()#char[]#21#4645#SELECT
-Sobel.RgbImage#load(java.lang.String)#void#5#292#SELECT
-Sobel.RgbImage#load(java.lang.String)#void#130#635#INDEXED
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#294#1685#PREINC
-Sobel.RgbImage#main(java.lang.String[])#void#16#3377#SELECT
-Sobel.TextFile#save(char)#void#14#1222#AND
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#59#1103#PLUS
-Sobel.TextFile#save(java.lang.Object[])#void#30#3004#SELECT
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#227#1551#INDEXED
-Sobel.RgbImage#luminance(int[])#int#35#2593#PLUS
-Sobel.TextFile#loadLongArray()#long[]#49#6069#INDEXED
-Sobel.RgbImage#sqrt(double)#double#4#1745#ASSIGN
-Sobel.TextFile#loadString()#java.lang.String#14#4851#AND
-Sobel.RgbImage#makeGrayscale()#void#97#2985#MUL
-Sobel.RgbImage#sobel(int[][][])#double#125#2317#MINUS
-Sobel.TextFile#loadDoubleArray()#double[]#59#6456#PREINC
-Sobel.TextFile#save(long[])#void#14#2433#AND
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#182#1438#MINUS
-Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#26#640#ASSIGN
-Sobel.RgbImage#sobel(int[][][])#double#81#2139#VARDEF
-Sobel.RgbImage#main(java.lang.String[])#void#106#3700#ASSIGN
-Sobel.TextFile#save(long[])#void#11#2448#SELECT
-Sobel.TextFile#loadIntArray()#int[]#59#5648#PREINC
-Sobel.RgbImage#sobel(int[][][])#double#138#2355#PLUS
-Sobel.TextFile#loadDouble()#double#16#4221#AND
-Sobel.TextFile#main(java.lang.String[])#void#136#8073#SELECT
-Sobel.RgbImage#sobel(int[][][])#double#86#2218#INDEXED
-Sobel.RgbImage#sobel(int[][][])#double#149#2377#MINUS
-Sobel.TextFile#save(int[])#void#14#2185#AND
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#281#1651#INDEXED
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#126#1297#ASSIGN
-Sobel.TextFile#loadLong()#long#31#4108#SELECT
-Sobel.RgbImage#sobel(int[][][])#double#64#2122#INDEXED
-Sobel.RgbImage#sobel(int[][][])#double#21#1892#VARDEF
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#260#1610#INDEXED
-Sobel.TextFile#save(java.lang.Object[])#void#11#2950#SELECT
-Sobel.RgbImage#sobel(int[][][])#double#128#2329#MINUS
-Sobel.TextFile#loadLongArray()#long[]#59#6047#PREINC
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#224#1547#MINUS
-Sobel.RgbImage#makeGrayscale()#void#13#2763#VARDEF
-Sobel.TextFile#loadIntArray()#int[]#14#5481#AND
-Sobel.TextFile#save(long[])#void#21#2473#SELECT
-Sobel.RgbImage#main(java.lang.String[])#void#74#3595#SELECT
-Sobel.RgbImage#main(java.lang.String[])#void#56#3510#PREINC
-Sobel.RgbImage#makeGrayscale()#void#123#3053#INDEXED
-Sobel.RgbImage#main(java.lang.String[])#void#137#3823#ASSIGN
-Sobel.TextFile#main(java.lang.String[])#void#158#8193#VARDEF
-Sobel.TextFile#save(java.lang.Object)#void#11#1846#SELECT
-Sobel.TextFile#save(int)#void#11#1336#SELECT
-Sobel.RgbImage#sobel(int[][][])#double#76#2172#INDEXED
-Sobel.TextFile#save(java.lang.Object)#void#14#1831#AND
-Sobel.TextFile#main(java.lang.String[])#void#150#8150#SELECT
-Sobel.TextFile#loadBooleanArray()#boolean[]#11#5089#SELECT
-Sobel.RgbImage#load(java.lang.String)#void#45#428#VARDEF
-Sobel.TextFile#loadBoolean()#boolean#16#3238#EQ
-Sobel.TextFile#save(double[])#void#14#2683#AND
-Sobel.RgbImage#makeGrayscale()#void#99#2966#ASSIGN
-Sobel.RgbImage#main(java.lang.String[])#void#53#3534#NEWARRAY
-Sobel.RgbImage#sobel(int[][][])#double#74#2169#INDEXED
-Sobel.RgbImage#load(java.lang.String)#void#161#745#SELECT
-Sobel.TextFile#loadBooleanArray()#boolean[]#53#5271#ASSIGN
-Sobel.TextFile#loadInt()#int#13#3848#SELECT
-Sobel.TextFile#loadBooleanArray()#boolean[]#40#5223#VARDEF
-Sobel.RgbImage#sobel(int[][][])#double#45#1991#VARDEF
-Sobel.RgbImage#sobel(int[][][])#double#119#2312#MINUS
-Sobel.RgbImage#main(java.lang.String[])#void#142#3838#SELECT
-Sobel.TextFile#save(double[])#void#48#2816#SELECT
-Sobel.TextFile#loadLong()#long#1#3998#VARDEF
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#297#1167#PREINC
-Sobel.TextFile#close()#void#14#996#EQ
-Sobel.TextFile#main(java.lang.String[])#void#164#8202#LT
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#251#1596#INDEXED
-Sobel.TextFile#save(char[])#void#11#1640#SELECT
-Sobel.TextFile#main(java.lang.String[])#void#13#7710#NEWCLASS
-Sobel.RgbImage#load(java.lang.String)#void#150#701#INDEXED
-Sobel.TextFile#save(long)#void#21#1459#SELECT
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#243#1587#INDEXED
-Sobel.TextFile#save(double[])#void#48#2830#SELECT
-Sobel.RgbImage#makeGrayscale()#void#91#2959#INDEXED
-Sobel.TextFile#save(double[])#void#11#2698#SELECT
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#208#1502#MINUS
-Sobel.RgbImage#load(java.lang.String)#void#88#530#NEWARRAY
-Sobel.TextFile#save(java.lang.Object[])#void#59#3117#SELECT
-Sobel.RgbImage#luminance(int[])#int#27#2579#PLUS
-Sobel.RgbImage#sobel(int[][][])#double#159#2418#MUL
-Sobel.RgbImage#sobel(int[][][])#double#137#2361#PLUS
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#18#1013#DIV
-Sobel.TextFile#loadIntArray()#int[]#53#5674#ASSIGN
-Sobel.RgbImage#sobel(int[][][])#double#100#2270#INDEXED
-Sobel.TextFile#main(java.lang.String[])#void#276#8423#SELECT
-Sobel.RgbImage#sobel(int[][][])#double#88#2221#INDEXED
-Sobel.RgbImage#makeGrayscale()#void#75#2934#INDEXED
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#47#1061#VARDEF
-Sobel.TextFile#save(int[])#void#48#2332#SELECT
-Sobel.RgbImage#sobel(int[][][])#double#14#1922#INDEXED
-Sobel.RgbImage#load(java.lang.String)#void#176#787#SELECT
-Sobel.TextFile#save(long[])#void#48#2566#SELECT
-Sobel.RgbImage#load(java.lang.String)#void#41#394#ASSIGN
-Sobel.TextFile#loadChar()#char#43#3600#SELECT
-Sobel.TextFile#save(double)#void#11#1538#SELECT
-Sobel.RgbImage#load(java.lang.String)#void#5#292#SELECT
-Sobel.TextFile#save(int)#void#14#1321#AND
-Sobel.TextFile#main(java.lang.String[])#void#146#8086#ASSIGN
-Sobel.TextFile#save(long[])#void#11#2448#SELECT
-Sobel.TextFile#loadLongArray()#long[]#43#6037#SELECT
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#125#1293#INDEXED
-Sobel.TextFile#main(java.lang.String[])#void#251#8374#ASSIGN
-Sobel.TextFile#loadBooleanArray()#boolean[]#26#5140#NEWARRAY
-Sobel.TextFile#loadString()#java.lang.String#0#4851#AND
-Sobel.TextFile#loadIntArray()#int[]#43#5638#SELECT
-Sobel.RgbImage#sobel(int[][][])#double#129#2287#VARDEF
-Sobel.TextFile#main(java.lang.String[])#void#6#7688#SELECT
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#139#1328#ASSIGN
-Sobel.RgbImage#load(java.lang.String)#void#63#463#NEWARRAY
-Sobel.TextFile#loadCharArray()#char[]#0#4603#AND
-Sobel.TextFile#save(double[])#void#0#2683#AND
-Sobel.TextFile#main(java.lang.String[])#void#209#8296#ASSIGN
-Sobel.RgbImage#load(java.lang.String)#void#38#396#NEWARRAY
-Sobel.TextFile#save(java.lang.Object[])#void#11#2950#SELECT
-Sobel.RgbImage#load(java.lang.String)#void#59#457#INDEXED
-Sobel.RgbImage#makeGrayscale()#void#83#2878#ASSIGN
-Sobel.RgbImage#load(java.lang.String)#void#135#641#INDEXED
-Sobel.TextFile#save(boolean[])#void#59#2116#SELECT
-Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#41#691#ASSIGN
-Sobel.TextFile#loadIntArray()#int[]#40#5626#VARDEF
-Sobel.TextFile#TextFile()#void#6#358#ASSIGN
-Sobel.RgbImage#makeGrayscale()#void#64#2918#INDEXED
-Sobel.RgbImage#makeGrayscale()#void#138#2816#PREINC
-Sobel.TextFile#loadLongArray()#long[]#53#6073#ASSIGN
-Sobel.TextFile#loadBoolean()#boolean#13#3245#SELECT
-Sobel.TextFile.Mode#<clinit>()#void#42#87#ASSIGN
-Sobel.TextFile#main(java.lang.String[])#void#25#7737#VARDEF
-Sobel.RgbImage#sobel(int[][][])#double#143#2372#MINUS
-Sobel.TextFile#close()#void#11#1003#SELECT
-Sobel.TextFile#loadChar()#char#67#3728#SELECT
-Sobel.TextFile#loadDoubleArray()#double[]#14#6294#EQ
-Sobel.TextFile#loadCharArray()#char[]#35#4665#ASSIGN
-Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#56#753#ASSIGN
-Sobel.TextFile#loadDoubleArray()#double[]#43#6446#SELECT
-Sobel.RgbImage#load(java.lang.String)#void#114#601#VARDEF
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#183#1436#INDEXED
-Sobel.TextFile#save(long[])#void#48#2580#SELECT
-Sobel.TextFile#loadInt()#int#23#3875#SELECT
-Sobel.TextFile#main(java.lang.String[])#void#143#8096#SELECT
-Sobel.RgbImage#makeGrayscale()#void#129#3079#MUL
-Sobel.TextFile#save(char)#void#0#1222#AND
-Sobel.TextFile#main(java.lang.String[])#void#273#8419#SELECT
-Sobel.RgbImage#sobel(int[][][])#double#16#1925#INDEXED
-Sobel.TextFile#loadLong()#long#16#4031#EQ
-Sobel.RgbImage#load(java.lang.String)#void#202#582#PREINC
-Sobel.TextFile#loadDoubleArray()#double[]#28#6350#ASSIGN
-Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#60#805#NEWCLASS
-Sobel.TextFile#save(double[])#void#59#2861#SELECT
-Sobel.TextFile#save(char[])#void#21#1663#SELECT
-Sobel.RgbImage#makeGrayscale()#void#23#2799#LT
-Sobel.RgbImage#sobel(int[][][])#double#169#2407#VARDEF
-Sobel.RgbImage#sobel(int[][][])#double#5#1876#INDEXED
-Sobel.TextFile#save(long[])#void#39#2536#SELECT
-Sobel.RgbImage#makeGrayscale()#void#27#2831#ASSIGN
-Sobel.TextFile#loadDouble()#double#23#4263#SELECT
-Sobel.TextFile#loadLongArray()#long[]#0#5879#AND
-Sobel.RgbImage#main(java.lang.String[])#void#81#3623#VARDEF
-Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#11#614#SELECT
-Sobel.TextFile#save(java.lang.Object)#void#21#1869#SELECT
-Sobel.TextFile#save(int[])#void#59#2363#SELECT
-Sobel.TextFile#save(long[])#void#14#2441#EQ
-Sobel.TextFile#save(boolean)#void#14#1130#EQ
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#273#1634#INDEXED
-Sobel.TextFile#save(boolean)#void#0#1122#AND
-Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#78#803#ASSIGN
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#104#1253#INDEXED
-Sobel.TextFile#close()#void#21#1028#SELECT
-Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#64#825#NEWCLASS
-Sobel.TextFile#loadBooleanArray()#boolean[]#11#5089#SELECT
-Sobel.RgbImage#load(java.lang.String)#void#192#839#SELECT
-Sobel.TextFile#loadInt()#int#13#3848#SELECT
-Sobel.TextFile#loadChar()#char#60#3636#AND
-Sobel.RgbImage#load(java.lang.String)#void#170#767#INDEXED
-Sobel.RgbImage#main(java.lang.String[])#void#11#3360#INDEXED
-Sobel.TextFile.Mode#<clinit>()#void#13#122#NEWCLASS
-Sobel.RgbImage#main(java.lang.String[])#void#116#3756#ASSIGN
-Sobel.TextFile#save(java.lang.Object[])#void#14#2935#AND
-Sobel.TextFile#save(double[])#void#14#2691#EQ
-Sobel.RgbImage#makeGrayscale()#void#77#2937#INDEXED
-Sobel.TextFile#loadInt()#int#16#3833#AND
-Sobel.TextFile#save(java.lang.Object[])#void#21#2975#SELECT
-Sobel.TextFile#close()#void#0#988#AND
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#225#1545#INDEXED
-Sobel.TextFile#loadBoolean()#boolean#1#3201#VARDEF
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#117#1284#INDEXED
-Sobel.RgbImage#makeGrayscale()#void#16#2792#ASSIGN
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#262#1613#INDEXED
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#73#1160#LE
-Sobel.RgbImage#main(java.lang.String[])#void#33#3468#INDEXED
-Sobel.RgbImage#main(java.lang.String[])#void#25#3443#VARDEF
-Sobel.RgbImage#makeGrayscale()#void#35#2848#SELECT
-Sobel.RgbImage#luminance(int[])#int#12#2538#VARDEF
-Sobel.TextFile#save(boolean[])#void#14#1938#AND
-Sobel.RgbImage#load(java.lang.String)#void#153#704#INDEXED
-Sobel.RgbImage#makeGrayscale()#void#109#3009#INDEXED
-Sobel.RgbImage#main(java.lang.String[])#void#23#3408#VARDEF
-Sobel.RgbImage#luminance(int[])#int#39#2607#PLUS
-Sobel.TextFile#loadCharArray()#char[]#11#4618#SELECT
-Sobel.TextFile#loadLongArray()#long[]#74#6163#NEWARRAY
-Sobel.TextFile#save(int)#void#21#1359#SELECT
-Sobel.RgbImage#load(java.lang.String)#void#0#264#NEWCLASS
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#203#1497#INDEXED
-Sobel.TextFile#loadString()#java.lang.String#11#4866#SELECT
-Sobel.TextFile#save(java.lang.Object[])#void#0#2935#AND
-Sobel.RgbImage#main(java.lang.String[])#void#142#3838#SELECT
-Sobel.TextFile#main(java.lang.String[])#void#171#8220#ASSIGN
-Sobel.RgbImage#luminance(int[])#int#24#2589#INDEXED
-Sobel.RgbImage#sobel(int[][][])#double#40#2024#INDEXED
-Sobel.TextFile#loadBooleanArray()#boolean[]#74#5364#NEWARRAY
-Sobel.RgbImage#main(java.lang.String[])#void#129#3794#ASSIGN
-Sobel.TextFile#loadLong()#long#23#4065#SELECT
-Sobel.TextFile#save(long[])#void#59#2611#SELECT
-Sobel.RgbImage#makeGrayscale()#void#3#2705#VARDEF
-Sobel.RgbImage#main(java.lang.String[])#void#34#3474#NEWARRAY
-Sobel.RgbImage#sobel(int[][][])#double#26#1971#INDEXED
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#78#1183#LT
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#239#1555#ASSIGN
-Sobel.TextFile#loadBooleanArray()#boolean[]#0#5074#AND
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#211#1506#INDEXED
-Sobel.RgbImage#main(java.lang.String[])#void#44#3505#LT
-Sobel.RgbImage#main(java.lang.String[])#void#152#3861#ASSIGN
-Sobel.TextFile#loadChar()#char#31#3541#SELECT
-Sobel.RgbImage#sobel(int[][][])#double#152#2389#MINUS
-Sobel.TextFile.Mode#<clinit>()#void#10#115#ASSIGN
-Sobel.RgbImage#load(java.lang.String)#void#133#638#INDEXED
-Sobel.TextFile#loadCharArray()#char[]#40#4724#NEWARRAY
-Sobel.RgbImage#main(java.lang.String[])#void#52#3528#INDEXED
-Sobel.RgbImage#makeGrayscale()#void#107#3006#INDEXED
-Sobel.TextFile#main(java.lang.String[])#void#177#8249#ASSIGN
-Sobel.TextFile#loadInt()#int#31#3917#SELECT
-Sobel.TextFile#loadBooleanArray()#boolean[]#44#5232#LT
-Sobel.TextFile#loadDouble()#double#16#4229#EQ
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#151#1365#VARDEF
-Sobel.RgbImage#sobel(int[][][])#double#153#2347#VARDEF
-Sobel.TextFile#loadLong()#long#13#4038#SELECT
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#238#1568#INDEXED
-Sobel.RgbImage#load(java.lang.String)#void#68#492#VARDEF
-Sobel.TextFile#save(boolean)#void#14#1122#AND
-Sobel.RgbImage#load(java.lang.String)#void#188#809#LT
-Sobel.TextFile#loadBoolean()#boolean#23#3272#SELECT
-Sobel.RgbImage#main(java.lang.String[])#void#39#3499#VARDEF
-Sobel.TextFile.Mode#<clinit>()#void#38#87#SELECT
-Sobel.RgbImage#sobel(int[][][])#double#62#2119#INDEXED
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#157#1375#LE
-Sobel.TextFile#loadLongArray()#long[]#14#5887#EQ
-Sobel.RgbImage#main(java.lang.String[])#void#77#3585#LT
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#212#1510#ASSIGN
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#233#1562#INDEXED
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#46#1068#MINUS
-Sobel.TextFile#main(java.lang.String[])#void#119#7952#SELECT
-Sobel.TextFile#loadIntArray()#int[]#74#5763#NEWARRAY
-Sobel.TextFile#loadBoolean()#boolean#39#3334#EQ
-Sobel.TextFile#save(double[])#void#31#2761#SELECT
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#33#1032#PLUS
-Sobel.TextFile#main(java.lang.String[])#void#147#8146#SELECT
-Sobel.TextFile#save(double[])#void#30#2752#SELECT
-Sobel.RgbImage#load(java.lang.String)#void#84#521#INDEXED
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#275#1640#INDEXED
-Sobel.TextFile#loadBooleanArray()#boolean[]#14#5082#EQ
-Sobel.RgbImage#load(java.lang.String)#void#90#528#ASSIGN
-Sobel.TextFile#main(java.lang.String[])#void#136#8073#SELECT
-Sobel.RgbImage#load(java.lang.String)#void#139#645#ASSIGN
-Sobel.TextFile#main(java.lang.String[])#void#76#7889#LT
-Sobel.TextFile#main(java.lang.String[])#void#204#8277#ASSIGN
-Sobel.TextFile#loadLongArray()#long[]#40#6025#VARDEF
-Sobel.TextFile#save(int[])#void#11#2200#SELECT
-Sobel.TextFile#save(boolean[])#void#11#1953#SELECT
-Sobel.RgbImage#main(java.lang.String[])#void#142#3842#SELECT
-Sobel.TextFile#save(char)#void#11#1237#SELECT
-Sobel.RgbImage#makeGrayscale()#void#67#2900#PLUS
-Sobel.RgbImage#sobel(int[][][])#double#28#1974#INDEXED
-Sobel.RgbImage#luminance(int[])#int#26#2584#MUL
-Sobel.TextFile#save(long)#void#0#1421#AND
-Sobel.TextFile#loadString()#java.lang.String#14#4859#EQ
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#123#1287#INDEXED
-Sobel.TextFile#loadString()#java.lang.String#32#4913#ASSIGN
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#263#1600#ASSIGN
-Sobel.RgbImage#main(java.lang.String[])#void#154#3649#PREINC
-Sobel.TextFile#save(java.lang.Object[])#void#48#3084#SELECT
-Sobel.TextFile#loadDouble()#double#1#4195#VARDEF
-Sobel.TextFile#loadBooleanArray()#boolean[]#49#5267#INDEXED
-Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#82#884#NEWCLASS
-Sobel.RgbImage#sqrt(double)#double#5#1773#SELECT
-Sobel.RgbImage#sobel(int[][][])#double#148#2383#PLUS
-Sobel.TextFile#save(java.lang.String)#void#14#1735#EQ
-Sobel.RgbImage#load(java.lang.String)#void#21#341#SELECT
-Sobel.TextFile#loadCharArray()#char[]#14#4603#AND
-Sobel.TextFile#main(java.lang.String[])#void#280#8208#PREINC
-Sobel.RgbImage#makeGrayscale()#void#121#3050#INDEXED
-Sobel.TextFile#loadDoubleArray()#double[]#74#6574#NEWARRAY
-Sobel.RgbImage#makeGrayscale()#void#132#2858#PREINC
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#110#1256#INDEXED
-Sobel.TextFile#save(int)#void#0#1321#AND
-Sobel.TextFile#loadDoubleArray()#double[]#44#6443#LT
-Sobel.TextFile#loadChar()#char#71#3705#ASSIGN
-Sobel.TextFile#save(boolean)#void#11#1137#SELECT
-Sobel.RgbImage#sobel(int[][][])#double#112#2301#PLUS
-Sobel.TextFile#loadIntArray()#int[]#26#5547#NEWARRAY
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#87#1187#OR
-Sobel.TextFile#save(boolean[])#void#30#2007#SELECT
-Sobel.RgbImage#load(java.lang.String)#void#199#620#PREINC
-Sobel.TextFile#loadBooleanArray()#boolean[]#59#5245#PREINC
-Sobel.RgbImage#main(java.lang.String[])#void#123#3779#GE
-Sobel.TextFile#loadChar()#char#13#3469#SELECT
-Sobel.TextFile#loadLong()#long#16#4023#AND
-Sobel.TextFile#loadLongArray()#long[]#26#5945#NEWARRAY
-Sobel.TextFile#main(java.lang.String[])#void#64#7855#SELECT
-Sobel.TextFile#save(double)#void#11#1538#SELECT
-Sobel.TextFile#loadBooleanArray()#boolean[]#76#5362#ASSIGN
-Sobel.TextFile#loadLongArray()#long[]#14#5879#AND
-Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#18#642#NEWCLASS
-Sobel.TextFile#save(int)#void#11#1336#SELECT
-Sobel.TextFile#save(int)#void#14#1329#EQ
-Sobel.RgbImage#sqrt(double)#double#5#1773#SELECT
-Sobel.TextFile#save(boolean[])#void#21#1978#SELECT
-Sobel.TextFile#main(java.lang.String[])#void#206#8306#SELECT
-Sobel.RgbImage#sobel(int[][][])#double#124#2323#PLUS
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#98#1228#LE
-Sobel.RgbImage#main(java.lang.String[])#void#86#3640#SELECT
-Sobel.TextFile#save(java.lang.Object[])#void#14#2943#EQ
-Sobel.RgbImage#sobel(int[][][])#double#141#2367#PLUS
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#1#946#SELECT
-Sobel.TextFile#loadIntArray()#int[]#49#5670#INDEXED
-Sobel.RgbImage#sobel(int[][][])#double#69#2089#VARDEF
-Sobel.RgbImage#load(java.lang.String)#void#122#610#LT
-Sobel.TextFile#loadChar()#char#48#3575#AND
-Sobel.TextFile#save(java.lang.String)#void#11#1742#SELECT
-Sobel.TextFile#close()#void#11#1003#SELECT
-Sobel.RgbImage#slideWindow(int,int,int[][][])#void#284#1654#INDEXED
-Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#7#588#ASSIGN
+1199
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#241#1588#IDENT#r
+Sobel.TextFile#loadDoubleArray()#double[]#49#6478#INDEXED#d[i]
+Sobel.RgbImage#main(java.lang.String[])#void#23#3430#VARDEF#int[][][] window = new int[3][][]
+Sobel.RgbImage#makeGrayscale()#void#123#3075#INDEXED#image[i][j]
+Sobel.RgbImage#main(java.lang.String[])#void#107#3767#IDENT#l
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#238#1568#INDEXED#image[j][i][0]
+Sobel.RgbImage#makeGrayscale()#void#75#2956#INDEXED#image[i]
+Sobel.TextFile#save(char)#void#1#1211#IDENT#openStatus
+Sobel.RgbImage#main(java.lang.String[])#void#25#3465#VARDEF#int i = 0
+Sobel.RgbImage#sobel(int[][][])#double#81#2161#VARDEF#double p7 = (double)luminance(window[2][0])
+Sobel.TextFile#loadLong()#long#23#4065#SELECT#streamTokenizer.nextToken
+Sobel.RgbImage#makeGrayscale()#void#122#3076#IDENT#j
+Sobel.TextFile#main(java.lang.String[])#void#142#8084#IDENT#b
+Sobel.RgbImage#load(java.lang.String)#void#199#620#PREINC#++j
+Sobel.TextFile#save(int[])#void#31#2263#SELECT#i.length
+Sobel.RgbImage#makeGrayscale()#void#129#3101#MUL#luminance * 256
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#211#1506#INDEXED#window[r][i - x0][2]
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#1#946#SELECT#window.length
+Sobel.RgbImage#luminance(int[])#int#34#2620#MUL#bC * rgb[2]
+Sobel.RgbImage#main(java.lang.String[])#void#74#3617#SELECT#rgbImage.height
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#140#1235#PREINC#++i
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#136#1318#INDEXED#window[r][i - x0]
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#231#1563#IDENT#j
+Sobel.TextFile#save(boolean)#void#21#1168#IDENT#b
+Sobel.TextFile#loadString()#java.lang.String#14#4851#AND#openStatus && mode == TextFile$Mode.READ
+Sobel.TextFile#main(java.lang.String[])#void#33#7779#LT#i < b.length
+Sobel.RgbImage#main(java.lang.String[])#void#97#3707#IDENT#window
+Sobel.TextFile#save(double[])#void#11#2698#SELECT#TextFile$Mode.WRITE
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#10#995#IDENT#x
+Sobel.RgbImage#main(java.lang.String[])#void#161#3970#IDENT#precise
+Sobel.TextFile#save(java.lang.String)#void#14#1727#AND#openStatus && mode == TextFile$Mode.WRITE
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#186#1446#ASSIGN#window[r][i - x0][0] = 0
+Sobel.TextFile#loadInt()#int#35#3895#ASSIGN#i = (int)streamTokenizer.nval
+Sobel.RgbImage#sobel(int[][][])#double#48#2076#IDENT#luminance
+Sobel.TextFile#loadBoolean()#boolean#31#3309#SELECT#streamTokenizer.sval
+Sobel.RgbImage#main(java.lang.String[])#void#153#3945#SELECT#System.out
+Sobel.TextFile#loadChar()#char#60#3636#AND#streamTokenizer.ttype != StreamTokenizer.TT_WORD && streamTokenizer.ttype != StreamTokenizer.TT_NUMBER && streamTokenizer.ttype != StreamTokenizer.TT_EOL
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#24#1040#TYPECAST#(float)w
+Sobel.RgbImage#main(java.lang.String[])#void#95#3704#IDENT#y
+Sobel.RgbImage#main(java.lang.String[])#void#107#3761#TYPECAST#(int)(l)
+Sobel.TextFile.Mode#<clinit>()#void#10#115#ASSIGN#WRITE = new TextFile$Mode("WRITE", 0)
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#165#1407#IDENT#i
+Sobel.TextFile#save(java.lang.Object)#void#14#1831#AND#openStatus && mode == TextFile$Mode.WRITE
+Sobel.TextFile#loadString()#java.lang.String#21#4893#SELECT#streamTokenizer.nextToken
+Sobel.RgbImage#luminance(int[])#int#7#2539#VARDEF#double gC = 0.59
+Sobel.TextFile.Mode#valueOf(java.lang.String)#Sobel.TextFile.Mode#0#87#SELECT#Enum.valueOf
+Sobel.TextFile#close()#void#21#1028#SELECT#streamWriter.close
+Sobel.RgbImage#sobel(int[][][])#double#157#2442#IDENT#x
+Sobel.RgbImage#luminance(int[])#int#20#2603#IDENT#gC
+Sobel.TextFile.Mode#<init>()#void#0#101#IDENT#super
+Sobel.TextFile#loadLongArray()#long[]#43#6037#SELECT#l.length
+Sobel.TextFile#loadLongArray()#long[]#59#6047#PREINC#++i
+Sobel.RgbImage#main(java.lang.String[])#void#134#3885#IDENT#L
+Sobel.TextFile#save(long)#void#0#1421#AND#openStatus && mode == TextFile$Mode.WRITE
+Sobel.RgbImage#load(java.lang.String)#void#90#528#ASSIGN#image[i][j] = new int[3]
+Sobel.RgbImage#load(java.lang.String)#void#35#404#IDENT#height
+Sobel.TextFile#main(java.lang.String[])#void#118#7944#IDENT#textFile
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#252#1602#IDENT#image
+Sobel.TextFile#loadString()#java.lang.String#8#4854#IDENT#mode
+Sobel.TextFile#close()#void#18#1016#IDENT#streamWriter
+Sobel.RgbImage#load(java.lang.String)#void#58#458#IDENT#i
+Sobel.TextFile#save(double[])#void#18#2711#IDENT#streamWriter
+Sobel.TextFile#save(int)#void#18#1347#IDENT#streamWriter
+Sobel.TextFile#main(java.lang.String[])#void#248#8384#SELECT#textFile.loadChar
+Sobel.TextFile#save(boolean)#void#11#1137#SELECT#TextFile$Mode.WRITE
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#272#1636#MINUS#i - x0
+Sobel.RgbImage#main(java.lang.String[])#void#111#3799#IDENT#L
+Sobel.TextFile#loadDoubleArray()#double[]#59#6456#PREINC#++i
+Sobel.TextFile#loadBooleanArray()#boolean[]#11#5089#SELECT#TextFile$Mode.READ
+Sobel.TextFile#save(long[])#void#48#2580#SELECT#Arrays.toString
+Sobel.RgbImage#sobel(int[][][])#double#112#2323#PLUS#p2 + p2
+Sobel.RgbImage#main(java.lang.String[])#void#15#3391#IDENT#rgbImage
+Sobel.TextFile#save(int[])#void#30#2254#SELECT#streamWriter.print
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#276#1646#IDENT#image
+Sobel.TextFile#loadString()#java.lang.String#25#4911#IDENT#s
+Sobel.TextFile#save(char)#void#0#1222#AND#openStatus && mode == TextFile$Mode.WRITE
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#175#1434#IDENT#r
+Sobel.RgbImage#makeGrayscale()#void#121#3072#INDEXED#image[i]
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#113#1266#ASSIGN#window[r][i - x0][0] = 0
+Sobel.TextFile#main(java.lang.String[])#void#228#8356#IDENT#c
+Sobel.TextFile#loadCharArray()#char[]#0#4603#AND#openStatus && mode == TextFile$Mode.READ
+Sobel.RgbImage#sobel(int[][][])#double#124#2345#PLUS#p8 + p8
+Sobel.TextFile#loadString()#java.lang.String#26#4915#IDENT#streamTokenizer
+Sobel.RgbImage#sobel(int[][][])#double#153#2369#VARDEF#double y = (p3 + (p6 + p6) + p9 - p1 - (p4 + p4) - p7)
+Sobel.TextFile#loadChar()#char#43#3600#SELECT#streamTokenizer.ttype
+Sobel.TextFile#loadBooleanArray()#boolean[]#55#5303#IDENT#loadChar
+Sobel.TextFile#main(java.lang.String[])#void#23#7741#NEWARRAY#new boolean[10]
+Sobel.TextFile#main(java.lang.String[])#void#25#7737#VARDEF#boolean[] b = new boolean[10]
+Sobel.RgbImage#load(java.lang.String)#void#85#525#IDENT#j
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#59#1103#PLUS#y + (int)((float)h / 2.0)
+Sobel.RgbImage#sqrt(double)#double#5#1802#IDENT#num
+Sobel.RgbImage#main(java.lang.String[])#void#41#3526#IDENT#j
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#126#1297#ASSIGN#window[r][i - x0][1] = 0
+Sobel.TextFile#save(long)#void#11#1436#SELECT#TextFile$Mode.WRITE
+Sobel.RgbImage#makeGrayscale()#void#42#2907#IDENT#image
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#180#1439#IDENT#x0
+Sobel.RgbImage#load(java.lang.String)#void#91#507#PREINC#++j
+Sobel.TextFile#loadDoubleArray()#double[]#59#6455#IDENT#i
+Sobel.TextFile#loadDoubleArray()#double[]#73#6570#IDENT#d
+Sobel.TextFile#save(char)#void#11#1237#SELECT#TextFile$Mode.WRITE
+Sobel.TextFile#loadIntArray()#int[]#73#5759#IDENT#n
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#114#1278#IDENT#window
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#110#1256#INDEXED#window[r][i - x0]
+Sobel.TextFile.Mode#<clinit>()#void#0#115#IDENT#WRITE
+Sobel.TextFile#main(java.lang.String[])#void#59#7834#SELECT#textFile.save
+Sobel.TextFile#loadInt()#int#31#3917#SELECT#streamTokenizer.nval
+Sobel.TextFile#save(long)#void#14#1429#EQ#mode == TextFile$Mode.WRITE
+Sobel.RgbImage#load(java.lang.String)#void#188#809#LT#j < (width - 1)
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#50#1111#TYPECAST#(float)h
+Sobel.TextFile#loadBoolean()#boolean#42#3344#IDENT#b
+Sobel.TextFile#save(double)#void#1#1512#IDENT#openStatus
+Sobel.RgbImage#makeGrayscale()#void#101#3020#IDENT#image
+Sobel.RgbImage#load(java.lang.String)#void#179#777#ASSIGN#image[i][j][2] = textFile.loadInt()
+Sobel.RgbImage#main(java.lang.String[])#void#62#3475#IDENT#i
+Sobel.RgbImage#sobel(int[][][])#double#171#2465#IDENT#l
+Sobel.TextFile#loadBoolean()#boolean#43#3346#ASSIGN#b = true
+Sobel.RgbImage#load(java.lang.String)#void#4#278#IDENT#filePath
+Sobel.TextFile#save(boolean[])#void#59#2116#SELECT#streamWriter.print
+Sobel.RgbImage#main(java.lang.String[])#void#16#3399#SELECT#rgbImage.makeGrayscale
+Sobel.RgbImage#luminance(int[])#int#30#2622#IDENT#rgb
+Sobel.TextFile#save(long[])#void#11#2448#SELECT#TextFile$Mode.WRITE
+Sobel.RgbImage#makeGrayscale()#void#125#3078#INDEXED#image[i][j][2]
+Sobel.TextFile#save(double[])#void#0#2683#AND#openStatus && mode == TextFile$Mode.WRITE
+Sobel.TextFile#save(char)#void#8#1225#IDENT#mode
+Sobel.RgbImage#makeGrayscale()#void#64#2940#INDEXED#image[i][j][1]
+Sobel.TextFile#loadBooleanArray()#boolean[]#73#5360#IDENT#b
+Sobel.TextFile#loadIntArray()#int[]#44#5635#LT#i < n.length
+Sobel.TextFile#save(long)#void#14#1421#AND#openStatus && mode == TextFile$Mode.WRITE
+Sobel.TextFile#main(java.lang.String[])#void#224#8351#IDENT#s
+Sobel.TextFile#save(int)#void#11#1336#SELECT#TextFile$Mode.WRITE
+Sobel.RgbImage#makeGrayscale()#void#28#2858#IDENT#j
+Sobel.TextFile#loadString()#java.lang.String#11#4866#SELECT#TextFile$Mode.READ
+Sobel.TextFile#save(int)#void#21#1367#IDENT#i
+Sobel.RgbImage#makeGrayscale()#void#50#2918#INDEXED#image[i][j][0]
+Sobel.TextFile#save(double[])#void#8#2686#IDENT#mode
+Sobel.TextFile#<init>()#void#5#347#IDENT#openStatus
+Sobel.TextFile#main(java.lang.String[])#void#168#8230#SELECT#textFile.loadChar
+Sobel.TextFile#loadBooleanArray()#boolean[]#50#5273#IDENT#loadBoolean
+Sobel.RgbImage#sobel(int[][][])#double#21#1914#VARDEF#double p2 = (double)luminance(window[0][1])
+Sobel.TextFile#save(int[])#void#11#2200#SELECT#TextFile$Mode.WRITE
+Sobel.TextFile#loadDouble()#double#1#4195#VARDEF#double d = 0.0
+Sobel.TextFile#loadCharArray()#char[]#42#4722#ASSIGN#s = new char[1]
+Sobel.TextFile#loadChar()#char#40#3585#IDENT#streamTokenizer
+Sobel.TextFile#loadIntArray()#int[]#14#5481#AND#openStatus && mode == TextFile$Mode.READ
+Sobel.TextFile#main(java.lang.String[])#void#52#7792#PREINC#++i
+Sobel.TextFile#save(char[])#void#11#1640#SELECT#TextFile$Mode.WRITE
+Sobel.TextFile#loadLongArray()#long[]#42#6036#IDENT#l
+Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#22#664#IDENT#filePath
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#297#1169#IDENT#j
+Sobel.TextFile#main(java.lang.String[])#void#280#8210#IDENT#i
+Sobel.RgbImage#sobel(int[][][])#double#159#2440#MUL#x * x
+Sobel.TextFile#loadLongArray()#long[]#59#6046#IDENT#i
+Sobel.RgbImage#main(java.lang.String[])#void#39#3521#VARDEF#int j = 0
+Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#2#568#ASSIGN#openStatus = true
+Sobel.TextFile#loadLongArray()#long[]#14#5887#EQ#mode == TextFile$Mode.READ
+Sobel.TextFile#save(char[])#void#21#1671#IDENT#s
+Sobel.RgbImage#main(java.lang.String[])#void#149#3920#IDENT#L
+Sobel.TextFile#save(double)#void#21#1561#SELECT#streamWriter.print
+Sobel.TextFile#save(int)#void#0#1321#AND#openStatus && mode == TextFile$Mode.WRITE
+Sobel.TextFile#save(char[])#void#8#1628#IDENT#mode
+Sobel.RgbImage#main(java.lang.String[])#void#34#3496#NEWARRAY#new int[3][]
+Sobel.TextFile#loadBooleanArray()#boolean[]#59#5245#PREINC#++i
+Sobel.RgbImage#main(java.lang.String[])#void#8#3364#IDENT#rgbImage
+Sobel.TextFile#<init>()#void#0#343#IDENT#super
+Sobel.RgbImage#luminance(int[])#int#27#2601#PLUS#rC * rgb[0] + gC * rgb[1]
+Sobel.TextFile#save(int[])#void#21#2225#SELECT#streamWriter.print
+Sobel.TextFile#loadCharArray()#char[]#47#4764#IDENT#s
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#206#1503#IDENT#x0
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#212#1510#ASSIGN#window[r][i - x0][2] = 0
+Sobel.RgbImage#main(java.lang.String[])#void#62#3476#PREINC#++i
+Sobel.RgbImage#makeGrayscale()#void#56#2929#IDENT#image
+Sobel.RgbImage#load(java.lang.String)#void#129#636#IDENT#i
+Sobel.RgbImage#main(java.lang.String[])#void#149#3931#IDENT#L
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#234#1566#IDENT#i
+Sobel.TextFile#loadIntArray()#int[]#11#5496#SELECT#TextFile$Mode.READ
+Sobel.TextFile#loadInt()#int#1#3808#VARDEF#int i = 0
+Sobel.TextFile#save(double[])#void#11#2698#SELECT#TextFile$Mode.WRITE
+Sobel.RgbImage#main(java.lang.String[])#void#92#3681#IDENT#rgbImage
+Sobel.RgbImage#main(java.lang.String[])#void#85#3654#IDENT#rgbImage
+Sobel.RgbImage#sobel(int[][][])#double#133#2380#IDENT#p6
+Sobel.TextFile#loadChar()#char#64#3713#IDENT#streamTokenizer
+Sobel.TextFile#main(java.lang.String[])#void#276#8433#IDENT#s
+Sobel.RgbImage#sobel(int[][][])#double#28#1996#INDEXED#window[0][2]
+Sobel.TextFile#loadBooleanArray()#boolean[]#14#5082#EQ#mode == TextFile$Mode.READ
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#200#1491#IDENT#window
+Sobel.TextFile#save(int)#void#14#1321#AND#openStatus && mode == TextFile$Mode.WRITE
+Sobel.TextFile#save(char)#void#14#1230#EQ#mode == TextFile$Mode.WRITE
+Sobel.TextFile#loadBooleanArray()#boolean[]#35#5198#IDENT#loadChar
+Sobel.RgbImage#makeGrayscale()#void#33#2868#IDENT#i
+Sobel.TextFile#loadLongArray()#long[]#28#5943#ASSIGN#l = new long[loadInt()]
+Sobel.RgbImage#load(java.lang.String)#void#149#702#IDENT#i
+Sobel.RgbImage#luminance(int[])#int#19#2592#MUL#rC * rgb[0]
+Sobel.TextFile#loadBoolean()#boolean#39#3334#EQ#streamTokenizer.sval.compareTo("true") == 0
+Sobel.RgbImage#sobel(int[][][])#double#128#2351#MINUS#p1 + (p2 + p2) + p3 - p7 - (p8 + p8) - p9
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#7#974#SELECT#window[0].length
+Sobel.RgbImage#makeGrayscale()#void#8#2756#VARDEF#double gC = 0.59 / 256.0
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#288#1382#PREINC#++i
+Sobel.RgbImage#main(java.lang.String[])#void#47#3541#IDENT#window
+Sobel.TextFile#loadChar()#char#3#3443#IDENT#openStatus
+Sobel.RgbImage#makeGrayscale()#void#66#2927#MUL#gC * image[i][j][1]
+Sobel.TextFile#loadIntArray()#int[]#28#5545#ASSIGN#n = new int[loadInt()]
+Sobel.RgbImage#sqrt(double)#double#4#1767#ASSIGN#num = accept(num)
+Sobel.RgbImage#load(java.lang.String)#void#199#619#IDENT#j
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#262#1613#INDEXED#image[j][i][1]
+Sobel.TextFile#loadDouble()#double#28#4285#IDENT#streamTokenizer
+Sobel.TextFile#loadLong()#long#27#4087#TYPECAST#(long)streamTokenizer.nval
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#294#1684#IDENT#r
+Sobel.RgbImage#makeGrayscale()#void#90#2982#IDENT#j
+Sobel.TextFile#main(java.lang.String[])#void#6#7688#SELECT#TextFile$Mode.WRITE
+Sobel.TextFile#loadInt()#int#39#3938#IDENT#i
+Sobel.RgbImage#main(java.lang.String[])#void#55#3554#ASSIGN#window[i][j] = new int[3]
+Sobel.TextFile#loadLongArray()#long[]#41#6032#IDENT#i
+Sobel.TextFile.Mode#valueOf(java.lang.String)#Sobel.TextFile.Mode#3#87#SELECT#TextFile.Mode.class
+Sobel.RgbImage#luminance(int[])#int#26#2606#MUL#gC * rgb[1]
+Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#6#590#IDENT#mode
+Sobel.RgbImage#sobel(int[][][])#double#1#1879#IDENT#luminance
+Sobel.TextFile#loadChar()#char#48#3607#NE#streamTokenizer.ttype != StreamTokenizer.TT_NUMBER
+Sobel.RgbImage#sobel(int[][][])#double#139#2391#IDENT#p9
+Sobel.RgbImage#load(java.lang.String)#void#130#635#INDEXED#image[i]
+Sobel.RgbImage#makeGrayscale()#void#109#3031#INDEXED#image[i][j][1]
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#219#1542#INDEXED#window[r]
+Sobel.RgbImage#makeGrayscale()#void#17#2819#IDENT#i
+Sobel.TextFile#main(java.lang.String[])#void#134#8048#SELECT#textFile.open
+Sobel.RgbImage#makeGrayscale()#void#132#2880#PREINC#++j
+Sobel.RgbImage#makeGrayscale()#void#83#2900#ASSIGN#luminance = rC * image[i][j][0] + gC * image[i][j][1] + bC * image[i][j][2]
+Sobel.RgbImage#sobel(int[][][])#double#152#2411#MINUS#p3 + (p6 + p6) + p9 - p1 - (p4 + p4) - p7
+Sobel.RgbImage#luminance(int[])#int#35#2615#PLUS#rC * rgb[0] + gC * rgb[1] + bC * rgb[2]
+Sobel.TextFile#loadChar()#char#16#3454#AND#openStatus && mode == TextFile$Mode.READ
+Sobel.RgbImage#makeGrayscale()#void#35#2870#SELECT#image[i].length
+Sobel.TextFile#save(boolean[])#void#48#2085#SELECT#Arrays.toString
+Sobel.TextFile#loadIntArray()#int[]#41#5633#IDENT#i
+Sobel.TextFile#loadCharArray()#char[]#21#4645#SELECT#streamTokenizer.nextToken
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#255#1608#IDENT#j
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#236#1565#INDEXED#image[j][i]
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#188#1466#IDENT#r
+Sobel.TextFile#save(int[])#void#39#2288#SELECT#streamWriter.print
+Sobel.TextFile#main(java.lang.String[])#void#123#7896#PREINC#++i
+Sobel.RgbImage#load(java.lang.String)#void#183#812#IDENT#width
+Sobel.RgbImage#main(java.lang.String[])#void#20#3439#NEWARRAY#new int[3][][]
+Sobel.RgbImage#load(java.lang.String)#void#153#704#INDEXED#image[i][j]
+Sobel.TextFile#loadLong()#long#31#4108#SELECT#streamTokenizer.nval
+Sobel.TextFile#save(java.lang.String)#void#8#1730#IDENT#mode
+Sobel.RgbImage#main(java.lang.String[])#void#161#3966#IDENT#L
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#107#1259#IDENT#x0
+Sobel.RgbImage#sobel(int[][][])#double#107#2314#IDENT#p1
+Sobel.RgbImage#sobel(int[][][])#double#36#2037#IDENT#window
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#11#999#TYPECAST#(int)((float)w / 2.0)
+Sobel.TextFile#loadDouble()#double#10#4224#IDENT#mode
+Sobel.TextFile#save(char[])#void#11#1640#SELECT#TextFile$Mode.WRITE
+Sobel.TextFile#save(boolean[])#void#30#2007#SELECT#streamWriter.print
+Sobel.TextFile#save(boolean[])#void#48#2071#SELECT#streamWriter.print
+Sobel.RgbImage#main(java.lang.String[])#void#83#3650#IDENT#x
+Sobel.RgbImage#main(java.lang.String[])#void#109#3757#VARDEF#int L = (int)(l)
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#228#1557#IDENT#image
+Sobel.TextFile#save(java.lang.Object[])#void#39#3040#SELECT#streamWriter.print
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#227#1551#INDEXED#window[r][i - x0][0]
+Sobel.RgbImage#main(java.lang.String[])#void#0#3346#NEWCLASS#new RgbImage()
+Sobel.RgbImage#makeGrayscale()#void#105#3025#INDEXED#image[i]
+Sobel.TextFile#save(char)#void#18#1248#IDENT#streamWriter
+Sobel.TextFile#save(long[])#void#56#2599#IDENT#streamWriter
+Sobel.TextFile#save(int[])#void#30#2262#IDENT#i
+Sobel.TextFile#save(java.lang.Object)#void#1#1820#IDENT#openStatus
+Sobel.TextFile#save(int[])#void#36#2276#IDENT#streamWriter
+Sobel.TextFile#<init>()#void#1#343#IDENT#super
+Sobel.RgbImage#main(java.lang.String[])#void#134#3874#IDENT#L
+Sobel.RgbImage#luminance(int[])#int#24#2611#INDEXED#rgb[1]
+Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#78#803#ASSIGN#streamReader = new BufferedReader(new InputStreamReader(inputStream))
+Sobel.TextFile#loadCharArray()#char[]#39#4720#IDENT#s
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#63#1132#VARDEF#int r = 0
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#240#1581#IDENT#window
+Sobel.TextFile#loadCharArray()#char[]#18#4630#IDENT#streamTokenizer
+Sobel.RgbImage#load(java.lang.String)#void#51#434#LT#i < height
+Sobel.TextFile#save(int[])#void#0#2185#AND#openStatus && mode == TextFile$Mode.WRITE
+Sobel.TextFile#save(double[])#void#39#2786#SELECT#streamWriter.print
+Sobel.RgbImage#makeGrayscale()#void#138#2837#IDENT#i
+Sobel.TextFile#loadChar()#char#23#3496#SELECT#streamTokenizer.nextToken
+Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#48#741#IDENT#inputStream
+Sobel.RgbImage#sobel(int[][][])#double#141#2389#PLUS#p3 + (p6 + p6) + p9
+Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#41#691#ASSIGN#streamWriter = new PrintWriter(outputStream)
+Sobel.TextFile.Mode#valueOf(java.lang.String)#Sobel.TextFile.Mode#3#87#IDENT#name
+Sobel.TextFile#main(java.lang.String[])#void#158#8193#VARDEF#int i = 0
+Sobel.TextFile#loadLong()#long#3#4012#IDENT#openStatus
+Sobel.TextFile#loadIntArray()#int[]#74#5763#NEWARRAY#new int[0]
+Sobel.RgbImage#load(java.lang.String)#void#107#574#IDENT#height
+Sobel.TextFile#loadDouble()#double#3#4210#IDENT#openStatus
+Sobel.TextFile#main(java.lang.String[])#void#27#7770#VARDEF#int i = 0
+Sobel.TextFile#save(long[])#void#48#2566#SELECT#streamWriter.print
+Sobel.TextFile#loadIntArray()#int[]#76#5761#ASSIGN#n = new int[0]
+Sobel.RgbImage#sobel(int[][][])#double#110#2325#IDENT#p2
+Sobel.RgbImage#sobel(int[][][])#double#165#2444#PLUS#x * x + y * y
+Sobel.TextFile#save(int[])#void#27#2242#IDENT#streamWriter
+Sobel.TextFile.Mode#valueOf(java.lang.String)#Sobel.TextFile.Mode#0#87#TYPECAST#(TextFile$Mode)Enum.valueOf(TextFile.Mode.class, name)
+Sobel.RgbImage#main(java.lang.String[])#void#32#3491#IDENT#i
+Sobel.TextFile#save(boolean)#void#14#1130#EQ#mode == TextFile$Mode.WRITE
+Sobel.RgbImage#sobel(int[][][])#double#72#2175#IDENT#luminance
+Sobel.TextFile#loadInt()#int#13#3848#SELECT#TextFile$Mode.READ
+Sobel.RgbImage#makeGrayscale()#void#93#2984#INDEXED#image[i][j][0]
+Sobel.RgbImage#makeGrayscale()#void#125#3084#TYPECAST#(int)(luminance * 256)
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#174#1427#IDENT#window
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#220#1546#IDENT#i
+Sobel.TextFile#loadBooleanArray()#boolean[]#59#5245#PREINC#++i
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#294#1685#PREINC#++r
+Sobel.RgbImage#load(java.lang.String)#void#87#524#INDEXED#image[i][j]
+Sobel.TextFile#main(java.lang.String[])#void#136#8073#SELECT#TextFile$Mode.READ
+Sobel.TextFile#loadBoolean()#boolean#16#3230#AND#openStatus && mode == TextFile$Mode.READ
+Sobel.TextFile#close()#void#11#1003#SELECT#TextFile$Mode.WRITE
+Sobel.TextFile#loadChar()#char#13#3469#SELECT#TextFile$Mode.READ
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#297#1167#PREINC#++j
+Sobel.TextFile#save(java.lang.String)#void#18#1753#IDENT#streamWriter
+Sobel.RgbImage#main(java.lang.String[])#void#9#3378#IDENT#args
+Sobel.RgbImage#load(java.lang.String)#void#159#711#ASSIGN#image[i][j][1] = textFile.loadInt()
+Sobel.TextFile#loadIntArray()#int[]#59#5647#IDENT#i
+Sobel.RgbImage#makeGrayscale()#void#79#2962#INDEXED#image[i][j][2]
+Sobel.TextFile#loadBooleanArray()#boolean[]#28#5138#ASSIGN#b = new boolean[loadInt()]
+Sobel.TextFile#loadLongArray()#long[]#47#6068#IDENT#l
+Sobel.TextFile#loadIntArray()#int[]#47#5669#IDENT#n
+Sobel.TextFile#save(double[])#void#36#2774#IDENT#streamWriter
+Sobel.RgbImage#load(java.lang.String)#void#202#582#PREINC#++i
+Sobel.RgbImage#sobel(int[][][])#double#114#2331#IDENT#p3
+Sobel.TextFile#save(java.lang.String)#void#0#1727#AND#openStatus && mode == TextFile$Mode.WRITE
+Sobel.TextFile#loadIntArray()#int[]#18#5515#IDENT#loadChar
+Sobel.TextFile#loadDoubleArray()#double[]#77#6603#IDENT#d
+Sobel.TextFile#main(java.lang.String[])#void#123#7895#IDENT#i
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#31#1048#DIV#(float)w / 2.0
+Sobel.TextFile#save(long[])#void#48#2591#IDENT#l
+Sobel.RgbImage#sobel(int[][][])#double#105#2259#VARDEF#double p9 = (double)luminance(window[2][2])
+Sobel.TextFile#loadChar()#char#55#3661#SELECT#streamTokenizer.ttype
+Sobel.TextFile#main(java.lang.String[])#void#147#8146#SELECT#System.out
+Sobel.RgbImage#makeGrayscale()#void#113#3054#MUL#luminance * 256
+Sobel.TextFile#save(java.lang.Object)#void#18#1857#IDENT#streamWriter
+Sobel.RgbImage#makeGrayscale()#void#53#2924#IDENT#gC
+Sobel.RgbImage#main(java.lang.String[])#void#7#3335#VARDEF#RgbImage rgbImage = new RgbImage()
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#109#1258#MINUS#i - x0
+Sobel.TextFile#loadLongArray()#long[]#50#6075#IDENT#loadLong
+Sobel.RgbImage#load(java.lang.String)#void#13#311#IDENT#textFile
+Sobel.TextFile#main(java.lang.String[])#void#63#7847#IDENT#textFile
+Sobel.RgbImage#main(java.lang.String[])#void#56#3532#PREINC#++j
+Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#60#790#IDENT#streamReader
+Sobel.TextFile#main(java.lang.String[])#void#205#8294#IDENT#c
+Sobel.RgbImage#load(java.lang.String)#void#110#572#LT#i < height
+Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#48#755#NEWCLASS#new FileInputStream(filePath)
+Sobel.TextFile#loadLongArray()#long[]#40#6025#VARDEF#int i = 0
+Sobel.TextFile#main(java.lang.String[])#void#150#8150#SELECT#System.out.println
+Sobel.TextFile#save(double[])#void#59#2861#SELECT#streamWriter.print
+Sobel.RgbImage#load(java.lang.String)#void#116#608#IDENT#j
+Sobel.RgbImage#main(java.lang.String[])#void#111#3810#IDENT#L
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#130#1315#INDEXED#window[r]
+Sobel.TextFile#loadIntArray()#int[]#77#5789#IDENT#n
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#21#990#VARDEF#int x0 = x - (int)((float)w / 2.0)
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#157#1375#LE#i <= x1
+Sobel.TextFile#save(java.lang.Object)#void#21#1869#SELECT#streamWriter.print
+Sobel.RgbImage#main(java.lang.String[])#void#144#3911#ASSIGN#L = 0
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#81#1190#IDENT#j
+Sobel.RgbImage#load(java.lang.String)#void#63#463#NEWARRAY#new int[width][]
+Sobel.RgbImage#sobel(int[][][])#double#88#2243#INDEXED#window[2][1]
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#282#1655#IDENT#i
+Sobel.TextFile#save(int)#void#21#1359#SELECT#streamWriter.print
+Sobel.TextFile#save(boolean[])#void#11#1953#SELECT#TextFile$Mode.WRITE
+Sobel.RgbImage#load(java.lang.String)#void#97#444#PREINC#++i
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#249#1590#INDEXED#window[r][i - x0]
+Sobel.RgbImage#sobel(int[][][])#double#138#2377#PLUS#p3 + (p6 + p6)
+Sobel.RgbImage#sobel(int[][][])#double#50#2092#INDEXED#window[1]
+Sobel.TextFile#main(java.lang.String[])#void#58#7826#IDENT#textFile
+Sobel.TextFile#save(double[])#void#45#2804#IDENT#streamWriter
+Sobel.RgbImage#sobel(int[][][])#double#60#2125#IDENT#luminance
+Sobel.RgbImage#load(java.lang.String)#void#180#807#IDENT#j
+Sobel.TextFile#main(java.lang.String[])#void#160#8200#IDENT#i
+Sobel.TextFile#loadCharArray()#char[]#45#4741#INDEXED#s[0]
+Sobel.RgbImage#luminance(int[])#int#12#2560#VARDEF#double bC = 0.11
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#8#961#VARDEF#int w = window[0].length
+Sobel.TextFile#close()#void#8#991#IDENT#mode
+Sobel.RgbImage#load(java.lang.String)#void#156#721#SELECT#textFile.loadInt
+Sobel.TextFile#save(boolean[])#void#39#2041#SELECT#streamWriter.print
+Sobel.RgbImage#sobel(int[][][])#double#162#2450#IDENT#y
+Sobel.TextFile#loadLongArray()#long[]#59#6047#PREINC#++i
+Sobel.RgbImage#accept(double)#double#0#3258#IDENT#i
+Sobel.TextFile#main(java.lang.String[])#void#39#7808#IDENT#i
+Sobel.TextFile#loadString()#java.lang.String#14#4859#EQ#mode == TextFile$Mode.READ
+Sobel.RgbImage#sobel(int[][][])#double#64#2144#INDEXED#window[1][2]
+Sobel.RgbImage#load(java.lang.String)#void#173#770#INDEXED#image[i][j]
+Sobel.RgbImage#makeGrayscale()#void#138#2838#PREINC#++i
+Sobel.TextFile#loadBoolean()#boolean#23#3272#SELECT#streamTokenizer.nextToken
+Sobel.TextFile#loadLongArray()#long[]#14#5879#AND#openStatus && mode == TextFile$Mode.READ
+Sobel.TextFile#loadLong()#long#13#4038#SELECT#TextFile$Mode.READ
+Sobel.TextFile#save(long[])#void#11#2448#SELECT#TextFile$Mode.WRITE
+Sobel.TextFile#save(java.lang.Object)#void#0#1831#AND#openStatus && mode == TextFile$Mode.WRITE
+Sobel.TextFile#save(boolean)#void#11#1137#SELECT#TextFile$Mode.WRITE
+Sobel.TextFile#save(java.lang.Object[])#void#11#2950#SELECT#TextFile$Mode.WRITE
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#190#1465#INDEXED#window[r]
+Sobel.RgbImage#load(java.lang.String)#void#27#373#SELECT#textFile.loadInt
+Sobel.TextFile#loadBooleanArray()#boolean[]#26#5140#NEWARRAY#new boolean[loadInt()]
+Sobel.TextFile#save(int)#void#14#1329#EQ#mode == TextFile$Mode.WRITE
+Sobel.RgbImage#sobel(int[][][])#double#155#2433#IDENT#sqrt
+Sobel.TextFile#save(long[])#void#48#2580#SELECT#Arrays.toString
+Sobel.TextFile#save(long[])#void#39#2536#SELECT#streamWriter.print
+Sobel.TextFile#loadInt()#int#10#3836#IDENT#mode
+Sobel.RgbImage#sobel(int[][][])#double#38#2043#INDEXED#window[1]
+Sobel.TextFile#main(java.lang.String[])#void#52#7791#IDENT#i
+Sobel.RgbImage#makeGrayscale()#void#115#3035#ASSIGN#image[i][j][1] = (int)(luminance * 256)
+Sobel.RgbImage#load(java.lang.String)#void#135#641#INDEXED#image[i][j][0]
+Sobel.RgbImage#sobel(int[][][])#double#96#2273#IDENT#luminance
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#208#1502#MINUS#i - x0
+Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#93#882#ASSIGN#streamTokenizer = new StreamTokenizer(streamReader)
+Sobel.RgbImage#load(java.lang.String)#void#192#839#SELECT#textFile.loadChar
+Sobel.RgbImage#sobel(int[][][])#double#1#1889#IDENT#window
+Sobel.TextFile#save(boolean)#void#14#1122#AND#openStatus && mode == TextFile$Mode.WRITE
+Sobel.TextFile#save(long[])#void#31#2511#SELECT#l.length
+Sobel.TextFile#loadDoubleArray()#double[]#22#6348#IDENT#d
+Sobel.TextFile#save(char)#void#11#1237#SELECT#TextFile$Mode.WRITE
+Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#10#602#IDENT#mode
+Sobel.TextFile#save(char)#void#21#1260#SELECT#streamWriter.print
+Sobel.TextFile#save(java.lang.Object[])#void#27#2992#IDENT#streamWriter
+Sobel.TextFile#save(java.lang.Object[])#void#0#2935#AND#openStatus && mode == TextFile$Mode.WRITE
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#92#1218#VARDEF#int i = x0
+Sobel.TextFile#save(java.lang.String)#void#21#1773#IDENT#s
+Sobel.RgbImage#sobel(int[][][])#double#129#2309#VARDEF#double x = (p1 + (p2 + p2) + p3 - p7 - (p8 + p8) - p9)
+Sobel.TextFile#save(boolean[])#void#31#2016#SELECT#b.length
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#284#1654#INDEXED#image[j][i]
+Sobel.TextFile#save(char[])#void#14#1633#EQ#mode == TextFile$Mode.WRITE
+Sobel.TextFile#loadLongArray()#long[]#18#5913#IDENT#loadChar
+Sobel.TextFile.Mode#<clinit>()#void#38#87#SELECT#TextFile$Mode.READ
+Sobel.TextFile#loadCharArray()#char[]#32#4687#SELECT#streamTokenizer.sval.toCharArray
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#224#1547#MINUS#i - x0
+Sobel.TextFile#save(long[])#void#18#2461#IDENT#streamWriter
+Sobel.RgbImage#main(java.lang.String[])#void#93#3689#SELECT#rgbImage.slideWindow
+Sobel.TextFile#save(char)#void#14#1222#AND#openStatus && mode == TextFile$Mode.WRITE
+Sobel.TextFile#loadDoubleArray()#double[]#42#6445#IDENT#d
+Sobel.TextFile#main(java.lang.String[])#void#6#7688#SELECT#TextFile$Mode.WRITE
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#263#1600#ASSIGN#window[r][i - x0][1] = image[j][i][1]
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#222#1548#IDENT#x0
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#204#1501#IDENT#i
+Sobel.TextFile#loadLongArray()#long[]#11#5894#SELECT#TextFile$Mode.READ
+Sobel.RgbImage#main(java.lang.String[])#void#93#3702#IDENT#x
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#287#1644#ASSIGN#window[r][i - x0][2] = image[j][i][2]
+Sobel.TextFile#close()#void#14#988#AND#openStatus && mode == TextFile$Mode.WRITE
+Sobel.TextFile#main(java.lang.String[])#void#129#7969#IDENT#textFile
+Sobel.TextFile#save(int[])#void#48#2343#IDENT#i
+Sobel.TextFile#main(java.lang.String[])#void#238#8366#IDENT#n
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#11#1012#IDENT#w
+Sobel.TextFile#save(char[])#void#21#1663#SELECT#streamWriter.print
+Sobel.RgbImage#main(java.lang.String[])#void#26#3470#IDENT#i
+Sobel.RgbImage#sobel(int[][][])#double#116#2329#PLUS#p1 + (p2 + p2) + p3
+Sobel.TextFile#loadBooleanArray()#boolean[]#8#5077#IDENT#mode
+Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#35#710#IDENT#outputStream
+Sobel.RgbImage#sobel(int[][][])#double#144#2402#IDENT#p4
+Sobel.RgbImage#load(java.lang.String)#void#14#319#SELECT#textFile.loadInt
+Sobel.TextFile#loadCharArray()#char[]#26#4667#IDENT#streamTokenizer
+Sobel.TextFile#loadCharArray()#char[]#11#4618#SELECT#TextFile$Mode.READ
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#185#1442#INDEXED#window[r][i - x0][0]
+Sobel.RgbImage#load(java.lang.String)#void#5#292#SELECT#TextFile$Mode.READ
+Sobel.TextFile.Mode#<clinit>()#void#13#122#NEWCLASS#new TextFile$Mode("READ", 1)
+Sobel.TextFile#main(java.lang.String[])#void#247#8376#IDENT#textFile
+Sobel.TextFile#save(long[])#void#36#2524#IDENT#streamWriter
+Sobel.TextFile#loadBooleanArray()#boolean[]#18#5108#IDENT#loadChar
+Sobel.RgbImage#load(java.lang.String)#void#114#601#VARDEF#int j = 0
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#297#1167#PREINC#++j
+Sobel.TextFile#loadInt()#int#23#3875#SELECT#streamTokenizer.nextToken
+Sobel.TextFile#loadIntArray()#int[]#48#5671#IDENT#i
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#117#1284#INDEXED#window[r]
+Sobel.TextFile#loadBoolean()#boolean#1#3201#VARDEF#boolean b = false
+Sobel.TextFile#loadChar()#char#31#3541#SELECT#streamTokenizer.ttype
+Sobel.TextFile#<init>(java.lang.String,Sobel.TextFile.Mode)#void#6#466#IDENT#mode
+Sobel.RgbImage#sqrt(double)#double#5#1795#SELECT#Math.sqrt
+Sobel.RgbImage#precise(int)#int#0#3208#IDENT#i
+Sobel.TextFile#loadInt()#int#27#3893#IDENT#i
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#233#1562#INDEXED#image[j]
+Sobel.TextFile#loadIntArray()#int[]#1#5470#IDENT#openStatus
+Sobel.RgbImage#luminance(int[])#int#22#2608#IDENT#rgb
+Sobel.TextFile.Mode#values()#Sobel.TextFile.Mode[]#3#87#SELECT#$VALUES.clone
+Sobel.RgbImage#load(java.lang.String)#void#46#433#IDENT#i
+Sobel.RgbImage#sobel(int[][][])#double#122#2347#IDENT#p8
+Sobel.RgbImage#load(java.lang.String)#void#151#705#IDENT#j
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#183#1436#INDEXED#window[r][i - x0]
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#20#997#MINUS#x - (int)((float)w / 2.0)
+Sobel.TextFile#loadChar()#char#71#3705#ASSIGN#c = (char)streamTokenizer.ttype
+Sobel.TextFile#loadChar()#char#27#3575#AND#streamTokenizer.ttype != StreamTokenizer.TT_WORD && streamTokenizer.ttype != StreamTokenizer.TT_NUMBER
+Sobel.TextFile#loadBoolean()#boolean#13#3245#SELECT#TextFile$Mode.READ
+Sobel.TextFile#save(boolean[])#void#0#1938#AND#openStatus && mode == TextFile$Mode.WRITE
+Sobel.RgbImage#sobel(int[][][])#double#95#2264#TYPECAST#(double)luminance(window[2][2])
+Sobel.TextFile#main(java.lang.String[])#void#146#8086#ASSIGN#b = textFile.loadBooleanArray()
+Sobel.RgbImage#load(java.lang.String)#void#166#762#IDENT#image
+Sobel.TextFile#save(boolean[])#void#48#2085#SELECT#Arrays.toString
+Sobel.RgbImage#main(java.lang.String[])#void#86#3662#SELECT#rgbImage.width
+Sobel.RgbImage#main(java.lang.String[])#void#71#3605#IDENT#y
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#120#1290#IDENT#x0
+Sobel.TextFile#save(double[])#void#14#2691#EQ#mode == TextFile$Mode.WRITE
+Sobel.RgbImage#load(java.lang.String)#void#141#679#SELECT#textFile.loadChar
+Sobel.RgbImage#main(java.lang.String[])#void#56#3532#PREINC#++j
+Sobel.TextFile#loadIntArray()#int[]#35#5601#IDENT#loadChar
+Sobel.RgbImage#makeGrayscale()#void#60#2934#INDEXED#image[i]
+Sobel.RgbImage#main(java.lang.String[])#void#77#3607#LT#y < rgbImage.height
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#244#1591#IDENT#i
+Sobel.RgbImage#main(java.lang.String[])#void#149#3924#IDENT#accept
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#78#1183#LT#j < 0
+Sobel.RgbImage#load(java.lang.String)#void#84#521#INDEXED#image[i]
+Sobel.TextFile#main(java.lang.String[])#void#173#8247#IDENT#n
+Sobel.RgbImage#sobel(int[][][])#double#148#2405#PLUS#p4 + p4
+Sobel.RgbImage#<init>()#void#1#182#IDENT#super
+Sobel.TextFile#main(java.lang.String[])#void#273#8419#SELECT#System.out
+Sobel.TextFile#save(long[])#void#8#2436#IDENT#mode
+Sobel.TextFile#save(boolean[])#void#8#1941#IDENT#mode
+Sobel.TextFile.Mode#<clinit>()#void#26#87#IDENT#$VALUES
+Sobel.TextFile#<init>()#void#6#358#ASSIGN#openStatus = false
+Sobel.TextFile#loadBooleanArray()#boolean[]#44#5232#LT#i < b.length
+Sobel.RgbImage#makeGrayscale()#void#109#3044#IDENT#luminance
+Sobel.TextFile#loadIntArray()#int[]#30#5578#IDENT#loadChar
+Sobel.RgbImage#load(java.lang.String)#void#34#388#IDENT#image
+Sobel.RgbImage#makeGrayscale()#void#88#2979#IDENT#i
+Sobel.TextFile#loadLong()#long#27#4083#IDENT#l
+Sobel.TextFile#loadCharArray()#char[]#25#4663#IDENT#s
+Sobel.TextFile#main(java.lang.String[])#void#212#8335#SELECT#textFile.loadInt
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#37#1076#TYPECAST#(float)h
+Sobel.RgbImage#load(java.lang.String)#void#68#492#VARDEF#int j = 0
+Sobel.TextFile#loadLongArray()#long[]#44#6034#LT#i < l.length
+Sobel.TextFile#main(java.lang.String[])#void#247#8372#IDENT#c
+Sobel.TextFile#loadString()#java.lang.String#11#4866#SELECT#TextFile$Mode.READ
+Sobel.TextFile#loadBoolean()#boolean#10#3233#IDENT#mode
+Sobel.TextFile#loadInt()#int#20#3860#IDENT#streamTokenizer
+Sobel.TextFile.Mode#values()#Sobel.TextFile.Mode[]#0#87#IDENT#$VALUES
+Sobel.TextFile#loadIntArray()#int[]#59#5648#PREINC#++i
+Sobel.TextFile#loadDouble()#double#27#4281#IDENT#d
+Sobel.RgbImage#luminance(int[])#int#15#2594#IDENT#rgb
+Sobel.TextFile#save(double)#void#8#1526#IDENT#mode
+Sobel.RgbImage#main(java.lang.String[])#void#166#3968#ASSIGN#L = precise(L)
+Sobel.TextFile#save(boolean[])#void#14#1946#EQ#mode == TextFile$Mode.WRITE
+Sobel.TextFile#save(boolean)#void#8#1125#IDENT#mode
+Sobel.RgbImage#makeGrayscale()#void#125#3091#IDENT#luminance
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#123#1287#INDEXED#window[r][i - x0]
+Sobel.TextFile#save(long[])#void#0#2433#AND#openStatus && mode == TextFile$Mode.WRITE
+Sobel.TextFile#main(java.lang.String[])#void#150#8166#SELECT#Arrays.toString
+Sobel.TextFile#main(java.lang.String[])#void#196#8288#IDENT#n
+Sobel.TextFile#loadDoubleArray()#double[]#53#6482#ASSIGN#d[i] = loadDouble()
+Sobel.RgbImage#load(java.lang.String)#void#48#435#IDENT#height
+Sobel.RgbImage#load(java.lang.String)#void#55#452#IDENT#image
+Sobel.TextFile#loadBooleanArray()#boolean[]#23#5152#IDENT#loadInt
+Sobel.RgbImage#main(java.lang.String[])#void#102#3739#IDENT#window
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#209#1500#INDEXED#window[r][i - x0]
+Sobel.RgbImage#luminance(int[])#int#39#2629#PLUS#rC * rgb[0] + gC * rgb[1] + bC * rgb[2] + 0.5
+Sobel.TextFile#save(java.lang.Object[])#void#48#3070#SELECT#streamWriter.print
+Sobel.TextFile#loadIntArray()#int[]#49#5670#INDEXED#n[i]
+Sobel.RgbImage#load(java.lang.String)#void#70#497#IDENT#j
+Sobel.RgbImage#load(java.lang.String)#void#140#671#IDENT#textFile
+Sobel.RgbImage#load(java.lang.String)#void#88#530#NEWARRAY#new int[3]
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#135#1320#MINUS#i - x0
+Sobel.TextFile#loadChar()#char#27#3636#AND#streamTokenizer.ttype != StreamTokenizer.TT_WORD && streamTokenizer.ttype != StreamTokenizer.TT_NUMBER && streamTokenizer.ttype != StreamTokenizer.TT_EOL
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#115#1285#IDENT#r
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#239#1555#ASSIGN#window[r][i - x0][0] = image[j][i][0]
+Sobel.RgbImage#sobel(int[][][])#double#40#2046#INDEXED#window[1][0]
+Sobel.RgbImage#makeGrayscale()#void#107#3028#INDEXED#image[i][j]
+Sobel.TextFile#save(java.lang.Object)#void#11#1846#SELECT#TextFile$Mode.WRITE
+Sobel.RgbImage#main(java.lang.String[])#void#73#3609#IDENT#rgbImage
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#193#1471#IDENT#x0
+Sobel.TextFile#loadLong()#long#1#3998#VARDEF#long l = 0
+Sobel.TextFile#loadChar()#char#1#3428#VARDEF#char c = 0
+Sobel.TextFile#save(boolean[])#void#45#2059#IDENT#streamWriter
+Sobel.RgbImage#main(java.lang.String[])#void#28#3471#LT#i < 3
+Sobel.TextFile#save(char[])#void#1#1614#IDENT#openStatus
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#128#1316#IDENT#r
+Sobel.TextFile#save(long[])#void#14#2441#EQ#mode == TextFile$Mode.WRITE
+Sobel.TextFile#save(int)#void#8#1324#IDENT#mode
+Sobel.TextFile#main(java.lang.String[])#void#260#8401#IDENT#s
+Sobel.TextFile#loadBoolean()#boolean#3#3219#IDENT#openStatus
+Sobel.TextFile#save(char)#void#21#1268#IDENT#c
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#102#1254#IDENT#r
+Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#82#884#NEWCLASS#new StreamTokenizer(streamReader)
+Sobel.TextFile#loadCharArray()#char[]#29#4682#SELECT#streamTokenizer.sval
+Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#60#805#NEWCLASS#new BufferedReader(new InputStreamReader(inputStream))
+Sobel.RgbImage#sobel(int[][][])#double#35#2018#TYPECAST#(double)luminance(window[1][0])
+Sobel.RgbImage#main(java.lang.String[])#void#49#3547#INDEXED#window[i]
+Sobel.RgbImage#sobel(int[][][])#double#52#2095#INDEXED#window[1][1]
+Sobel.TextFile#save(boolean)#void#0#1122#AND#openStatus && mode == TextFile$Mode.WRITE
+Sobel.RgbImage#main(java.lang.String[])#void#52#3550#INDEXED#window[i][j]
+Sobel.RgbImage#sobel(int[][][])#double#146#2407#IDENT#p4
+Sobel.RgbImage#main(java.lang.String[])#void#123#3824#GE#L >= 256
+Sobel.TextFile#close()#void#28#1054#SELECT#outputStream.close
+Sobel.RgbImage#main(java.lang.String[])#void#140#3899#LT#L < 0
+Sobel.RgbImage#main(java.lang.String[])#void#116#3801#ASSIGN#L = accept(L)
+Sobel.RgbImage#sobel(int[][][])#double#36#2027#IDENT#luminance
+Sobel.TextFile#loadBoolean()#boolean#34#3314#SELECT#streamTokenizer.sval.compareTo
+Sobel.RgbImage#sobel(int[][][])#double#84#2224#IDENT#luminance
+Sobel.RgbImage#sobel(int[][][])#double#120#2342#IDENT#p8
+Sobel.RgbImage#sobel(int[][][])#double#5#1898#INDEXED#window[0][0]
+Sobel.TextFile#save(int[])#void#18#2213#IDENT#streamWriter
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#87#1192#GE#j >= height
+Sobel.RgbImage#main(java.lang.String[])#void#48#3548#IDENT#i
+Sobel.RgbImage#sqrt(double)#double#0#1769#IDENT#accept
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#257#1607#INDEXED#image[j]
+Sobel.TextFile#save(int[])#void#48#2332#SELECT#Arrays.toString
+Sobel.TextFile#main(java.lang.String[])#void#130#7977#SELECT#textFile.close
+Sobel.TextFile#save(java.lang.Object[])#void#21#2975#SELECT#streamWriter.print
+Sobel.TextFile#loadDoubleArray()#double[]#18#6320#IDENT#loadChar
+Sobel.TextFile#loadCharArray()#char[]#35#4665#ASSIGN#s = streamTokenizer.sval.toCharArray()
+Sobel.RgbImage#sobel(int[][][])#double#96#2283#IDENT#window
+Sobel.RgbImage#makeGrayscale()#void#34#2867#INDEXED#image[i]
+Sobel.TextFile#save(java.lang.Object[])#void#14#2943#EQ#mode == TextFile$Mode.WRITE
+Sobel.RgbImage#makeGrayscale()#void#93#2997#IDENT#luminance
+Sobel.TextFile#save(double[])#void#48#2841#IDENT#d
+Sobel.TextFile#loadIntArray()#int[]#59#5648#PREINC#++i
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#273#1634#INDEXED#window[r][i - x0]
+Sobel.RgbImage#sobel(int[][][])#double#155#2438#IDENT#x
+Sobel.TextFile#save(double[])#void#21#2723#SELECT#streamWriter.print
+Sobel.TextFile.Mode#<clinit>()#void#13#122#IDENT#READ
+Sobel.RgbImage#sobel(int[][][])#double#150#2413#IDENT#p7
+Sobel.RgbImage#sobel(int[][][])#double#14#1944#INDEXED#window[0]
+Sobel.RgbImage#load(java.lang.String)#void#38#396#NEWARRAY#new int[height][][]
+Sobel.RgbImage#main(java.lang.String[])#void#106#3722#ASSIGN#l = rgbImage.sobel(window)
+Sobel.RgbImage#makeGrayscale()#void#67#2922#PLUS#rC * image[i][j][0] + gC * image[i][j][1]
+Sobel.TextFile#main(java.lang.String[])#void#79#7905#IDENT#s
+Sobel.TextFile#save(long)#void#18#1447#IDENT#streamWriter
+Sobel.RgbImage#makeGrayscale()#void#138#2838#PREINC#++i
+Sobel.TextFile#main(java.lang.String[])#void#43#7814#EQ#i % 2 == 0
+Sobel.RgbImage#sobel(int[][][])#double#86#2240#INDEXED#window[2]
+Sobel.TextFile.Mode#<init>()#void#1#101#IDENT#$enum$name
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#140#1237#IDENT#i
+Sobel.TextFile#main(java.lang.String[])#void#64#7855#SELECT#textFile.save
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#153#1373#IDENT#i
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#4#965#IDENT#window
+Sobel.RgbImage#main(java.lang.String[])#void#44#3527#LT#j < 3
+Sobel.RgbImage#main(java.lang.String[])#void#134#3878#IDENT#accept
+Sobel.TextFile#save(double[])#void#48#2830#SELECT#Arrays.toString
+Sobel.RgbImage#makeGrayscale()#void#117#3067#IDENT#image
+Sobel.RgbImage#makeGrayscale()#void#48#2915#INDEXED#image[i][j]
+Sobel.TextFile#save(long[])#void#30#2510#IDENT#l
+Sobel.RgbImage#main(java.lang.String[])#void#174#3627#PREINC#++y
+Sobel.TextFile#loadBooleanArray()#boolean[]#0#5074#AND#openStatus && mode == TextFile$Mode.READ
+Sobel.TextFile#save(java.lang.String)#void#14#1735#EQ#mode == TextFile$Mode.WRITE
+Sobel.RgbImage#sobel(int[][][])#double#108#2320#IDENT#p2
+Sobel.TextFile#main(java.lang.String[])#void#133#8040#IDENT#textFile
+Sobel.TextFile#loadInt()#int#16#3841#EQ#mode == TextFile$Mode.READ
+Sobel.TextFile#main(java.lang.String[])#void#167#8222#IDENT#textFile
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#44#1084#DIV#(float)h / 2.0
+Sobel.RgbImage#main(java.lang.String[])#void#143#3909#IDENT#L
+Sobel.TextFile#save(boolean[])#void#36#2029#IDENT#streamWriter
+Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#14#607#EQ#mode == TextFile$Mode.WRITE
+Sobel.TextFile#main(java.lang.String[])#void#280#8208#PREINC#++i
+Sobel.TextFile#loadCharArray()#char[]#40#4724#NEWARRAY#new char[1]
+Sobel.TextFile#main(java.lang.String[])#void#251#8374#ASSIGN#c = textFile.loadChar()
+Sobel.TextFile#save(int[])#void#14#2185#AND#openStatus && mode == TextFile$Mode.WRITE
+Sobel.TextFile#save(long[])#void#59#2611#SELECT#streamWriter.print
+Sobel.TextFile#main(java.lang.String[])#void#32#7782#SELECT#b.length
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#112#1262#INDEXED#window[r][i - x0][0]
+Sobel.RgbImage#load(java.lang.String)#void#20#333#IDENT#textFile
+Sobel.TextFile#main(java.lang.String[])#void#173#8251#IDENT#textFile
+Sobel.RgbImage#makeGrayscale()#void#19#2823#IDENT#image
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#168#1412#IDENT#width
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#84#1195#IDENT#height
+Sobel.TextFile#loadString()#java.lang.String#0#4851#AND#openStatus && mode == TextFile$Mode.READ
+Sobel.TextFile#save(boolean[])#void#27#1995#IDENT#streamWriter
+Sobel.TextFile#main(java.lang.String[])#void#119#7959#IDENT#s
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#46#1068#MINUS#y - (int)((float)h / 2.0)
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#18#1013#DIV#(float)w / 2.0
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#37#1083#IDENT#h
+Sobel.RgbImage#load(java.lang.String)#void#202#582#PREINC#++i
+Sobel.RgbImage#makeGrayscale()#void#47#2916#IDENT#j
+Sobel.RgbImage#makeGrayscale()#void#46#2912#INDEXED#image[i]
+Sobel.TextFile#close()#void#0#988#AND#openStatus && mode == TextFile$Mode.WRITE
+Sobel.TextFile#main(java.lang.String[])#void#31#7781#IDENT#b
+Sobel.RgbImage#main(java.lang.String[])#void#101#3720#IDENT#l
+Sobel.TextFile#main(java.lang.String[])#void#29#7777#IDENT#i
+Sobel.RgbImage#load(java.lang.String)#void#199#620#PREINC#++j
+Sobel.RgbImage#main(java.lang.String[])#void#168#3671#PREINC#++x
+Sobel.RgbImage#makeGrayscale()#void#36#2860#LT#j < image[i].length
+Sobel.TextFile#main(java.lang.String[])#void#52#7792#PREINC#++i
+Sobel.RgbImage#load(java.lang.String)#void#169#768#IDENT#i
+Sobel.RgbImage#load(java.lang.String)#void#202#584#IDENT#i
+Sobel.TextFile#main(java.lang.String[])#void#91#7915#IDENT#i
+Sobel.RgbImage#makeGrayscale()#void#23#2821#LT#i < image.length
+Sobel.TextFile#save(double[])#void#30#2760#IDENT#d
+Sobel.RgbImage#sobel(int[][][])#double#74#2191#INDEXED#window[2]
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#90#1222#IDENT#x0
+Sobel.TextFile#save(long[])#void#30#2502#SELECT#streamWriter.print
+Sobel.TextFile#loadBoolean()#boolean#2#3230#AND#openStatus && mode == TextFile$Mode.READ
+Sobel.TextFile#<init>(java.lang.String,Sobel.TextFile.Mode)#void#1#446#IDENT#super
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#160#1398#IDENT#i
+Sobel.TextFile#save(java.lang.Object)#void#21#1877#IDENT#obj
+Sobel.TextFile#main(java.lang.String[])#void#13#7710#NEWCLASS#new String()
+Sobel.TextFile#loadDoubleArray()#double[]#41#6441#IDENT#i
+Sobel.RgbImage#load(java.lang.String)#void#30#363#ASSIGN#height = textFile.loadInt()
+Sobel.TextFile#save(java.lang.Object[])#void#30#3004#SELECT#streamWriter.print
+Sobel.RgbImage#load(java.lang.String)#void#97#443#IDENT#i
+Sobel.RgbImage#load(java.lang.String)#void#122#610#LT#j < width
+Sobel.TextFile#loadDoubleArray()#double[]#44#6443#LT#i < d.length
+Sobel.RgbImage#sqrt(double)#double#0#1763#IDENT#num
+Sobel.TextFile.Mode#<init>()#void#2#101#IDENT#$enum$ordinal
+Sobel.TextFile#save(boolean[])#void#56#2104#IDENT#streamWriter
+Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#1#557#IDENT#openStatus
+Sobel.RgbImage#makeGrayscale()#void#131#3082#ASSIGN#image[i][j][2] = (int)(luminance * 256)
+Sobel.TextFile#loadCharArray()#char[]#43#4740#IDENT#s
+Sobel.TextFile#main(java.lang.String[])#void#76#7889#LT#i < 10
+Sobel.TextFile#loadBooleanArray()#boolean[]#40#5223#VARDEF#int i = 0
+Sobel.RgbImage#load(java.lang.String)#void#11#253#VARDEF#TextFile textFile = new TextFile(filePath, TextFile$Mode.READ)
+Sobel.TextFile#loadInt()#int#3#3822#IDENT#openStatus
+Sobel.TextFile#main(java.lang.String[])#void#51#7806#ASSIGN#b[i] = i % 2 == 0
+Sobel.TextFile#loadDoubleArray()#double[]#76#6572#ASSIGN#d = new double[0]
+Sobel.RgbImage#accept(int)#int#0#3163#IDENT#i
+Sobel.RgbImage#main(java.lang.String[])#void#37#3494#ASSIGN#window[i] = new int[3][]
+Sobel.RgbImage#luminance(int[])#int#44#2636#MOD#(int)(rC * rgb[0] + gC * rgb[1] + bC * rgb[2] + 0.5) % 256
+Sobel.TextFile#loadBooleanArray()#boolean[]#43#5235#SELECT#b.length
+Sobel.TextFile#loadDouble()#double#38#4321#IDENT#d
+Sobel.RgbImage#main(java.lang.String[])#void#118#3822#IDENT#L
+Sobel.TextFile#loadBooleanArray()#boolean[]#22#5136#IDENT#b
+Sobel.RgbImage#sobel(int[][][])#double#93#2210#VARDEF#double p8 = (double)luminance(window[2][1])
+Sobel.TextFile#save(long)#void#8#1424#IDENT#mode
+Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#87#905#IDENT#streamReader
+Sobel.RgbImage#load(java.lang.String)#void#160#737#IDENT#textFile
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#33#1032#PLUS#x + (int)((float)w / 2.0)
+Sobel.RgbImage#main(java.lang.String[])#void#168#3671#PREINC#++x
+Sobel.TextFile#loadChar()#char#28#3526#IDENT#streamTokenizer
+Sobel.RgbImage#load(java.lang.String)#void#13#303#IDENT#width
+Sobel.TextFile#main(java.lang.String[])#void#209#8296#ASSIGN#c = textFile.loadChar()
+Sobel.RgbImage#sobel(int[][][])#double#23#1968#TYPECAST#(double)luminance(window[0][2])
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#76#1187#OR#j < 0 || j >= height
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#101#1247#IDENT#window
+Sobel.RgbImage#load(java.lang.String)#void#191#831#IDENT#textFile
+Sobel.RgbImage#sobel(int[][][])#double#135#2385#IDENT#p6
+Sobel.TextFile#save(java.lang.Object[])#void#30#3012#IDENT#obj
+Sobel.RgbImage#main(java.lang.String[])#void#161#3978#IDENT#L
+Sobel.RgbImage#makeGrayscale()#void#22#2828#SELECT#image.length
+Sobel.TextFile#main(java.lang.String[])#void#147#8146#SELECT#System.out
+Sobel.RgbImage#sobel(int[][][])#double#16#1947#INDEXED#window[0][1]
+Sobel.RgbImage#main(java.lang.String[])#void#31#3484#IDENT#window
+Sobel.RgbImage#<init>()#void#0#182#IDENT#super
+Sobel.RgbImage#sobel(int[][][])#double#100#2292#INDEXED#window[2][2]
+Sobel.TextFile#loadLongArray()#long[]#30#5977#IDENT#loadChar
+Sobel.TextFile#main(java.lang.String[])#void#206#8306#SELECT#textFile.loadChar
+Sobel.RgbImage#load(java.lang.String)#void#26#356#IDENT#height
+Sobel.RgbImage#main(java.lang.String[])#void#136#3876#ASSIGN#L = accept(L)
+Sobel.TextFile#loadChar()#char#16#3462#EQ#mode == TextFile$Mode.READ
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#57#1119#DIV#(float)h / 2.0
+Sobel.TextFile#loadInt()#int#16#3833#AND#openStatus && mode == TextFile$Mode.READ
+Sobel.TextFile#loadIntArray()#int[]#0#5481#AND#openStatus && mode == TextFile$Mode.READ
+Sobel.TextFile#loadDoubleArray()#double[]#40#6434#VARDEF#int i = 0
+Sobel.TextFile#save(char[])#void#14#1625#AND#openStatus && mode == TextFile$Mode.WRITE
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#37#1070#TYPECAST#(int)((float)h / 2.0)
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#98#1228#LE#i <= x1
+Sobel.RgbImage#luminance(int[])#int#3#2518#VARDEF#double rC = 0.3
+Sobel.TextFile#loadLong()#long#16#4031#EQ#mode == TextFile$Mode.READ
+Sobel.RgbImage#load(java.lang.String)#void#170#767#INDEXED#image[i]
+Sobel.RgbImage#load(java.lang.String)#void#73#499#IDENT#width
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#198#1474#INDEXED#window[r][i - x0][1]
+Sobel.TextFile#loadBooleanArray()#boolean[]#48#5268#IDENT#i
+Sobel.TextFile#loadCharArray()#char[]#1#4592#IDENT#openStatus
+Sobel.TextFile#loadIntArray()#int[]#42#5637#IDENT#n
+Sobel.TextFile#loadDoubleArray()#double[]#43#6446#SELECT#d.length
+Sobel.RgbImage#main(java.lang.String[])#void#102#3732#SELECT#rgbImage.sobel
+Sobel.RgbImage#sobel(int[][][])#double#72#2185#IDENT#window
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#171#1409#GE#i >= width
+Sobel.TextFile#main(java.lang.String[])#void#264#8406#IDENT#c
+Sobel.RgbImage#load(java.lang.String)#void#119#612#IDENT#width
+Sobel.TextFile#save(int[])#void#48#2332#SELECT#Arrays.toString
+Sobel.TextFile#loadBooleanArray()#boolean[]#30#5175#IDENT#loadChar
+Sobel.TextFile#save(java.lang.Object[])#void#59#3117#SELECT#streamWriter.print
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#140#1235#PREINC#++i
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#60#1096#VARDEF#int y1 = y + (int)((float)h / 2.0)
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#264#1625#IDENT#window
+Sobel.RgbImage#sobel(int[][][])#double#47#2067#TYPECAST#(double)luminance(window[1][1])
+Sobel.RgbImage#luminance(int[])#int#28#2617#IDENT#bC
+Sobel.TextFile#save(boolean)#void#1#1111#IDENT#openStatus
+Sobel.RgbImage#sobel(int[][][])#double#160#2446#IDENT#y
+Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#11#614#SELECT#TextFile$Mode.WRITE
+Sobel.TextFile#save(long)#void#21#1459#SELECT#streamWriter.print
+Sobel.RgbImage#makeGrayscale()#void#82#2944#PLUS#rC * image[i][j][0] + gC * image[i][j][1] + bC * image[i][j][2]
+Sobel.TextFile#save(int[])#void#48#2318#SELECT#streamWriter.print
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#11#1005#TYPECAST#(float)w
+Sobel.TextFile#loadBooleanArray()#boolean[]#49#5267#INDEXED#b[i]
+Sobel.RgbImage#load(java.lang.String)#void#91#507#PREINC#++j
+Sobel.RgbImage#makeGrayscale()#void#26#2851#IDENT#j
+Sobel.TextFile#save(long)#void#11#1436#SELECT#TextFile$Mode.WRITE
+Sobel.RgbImage#sobel(int[][][])#double#169#2429#VARDEF#double l = sqrt(x * x + y * y)
+Sobel.TextFile#loadLongArray()#long[]#77#6190#IDENT#l
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#133#1321#IDENT#x0
+Sobel.TextFile#loadBoolean()#boolean#13#3245#SELECT#TextFile$Mode.READ
+Sobel.TextFile#loadLongArray()#long[]#73#6159#IDENT#l
+Sobel.TextFile#loadDouble()#double#2#4221#AND#openStatus && mode == TextFile$Mode.READ
+Sobel.TextFile#loadBooleanArray()#boolean[]#77#5394#IDENT#b
+Sobel.TextFile#loadDoubleArray()#double[]#48#6479#IDENT#i
+Sobel.TextFile#loadDouble()#double#23#4263#SELECT#streamTokenizer.nextToken
+Sobel.TextFile#loadBoolean()#boolean#20#3257#IDENT#streamTokenizer
+Sobel.RgbImage#sobel(int[][][])#double#45#2013#VARDEF#double p4 = (double)luminance(window[1][0])
+Sobel.TextFile.Mode#<clinit>()#void#32#87#SELECT#TextFile$Mode.WRITE
+Sobel.TextFile#main(java.lang.String[])#void#205#8298#IDENT#textFile
+Sobel.RgbImage#main(java.lang.String[])#void#33#3490#INDEXED#window[i]
+Sobel.RgbImage#load(java.lang.String)#void#136#655#SELECT#textFile.loadInt
+Sobel.TextFile#loadCharArray()#char[]#46#4745#ASSIGN#s[0] = 0
+Sobel.TextFile#save(boolean[])#void#21#1978#SELECT#streamWriter.print
+Sobel.TextFile#<init>(java.lang.String,Sobel.TextFile.Mode)#void#5#450#IDENT#open
+Sobel.RgbImage#sobel(int[][][])#double#84#2234#IDENT#window
+Sobel.RgbImage#load(java.lang.String)#void#104#563#VARDEF#int i = 0
+Sobel.TextFile#save(java.lang.Object)#void#14#1839#EQ#mode == TextFile$Mode.WRITE
+Sobel.RgbImage#load(java.lang.String)#void#175#779#IDENT#textFile
+Sobel.TextFile#save(int[])#void#45#2306#IDENT#streamWriter
+Sobel.TextFile.Mode#<clinit>()#void#27#87#NEWARRAY#new TextFile$Mode[][]{TextFile$Mode.WRITE, TextFile$Mode.READ}
+Sobel.TextFile#save(double)#void#11#1538#SELECT#TextFile$Mode.WRITE
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#243#1587#INDEXED#window[r]
+Sobel.TextFile#loadBooleanArray()#boolean[]#74#5364#NEWARRAY#new boolean[0]
+Sobel.TextFile#save(int[])#void#8#2188#IDENT#mode
+Sobel.TextFile#loadBooleanArray()#boolean[]#14#5074#AND#openStatus && mode == TextFile$Mode.READ
+Sobel.TextFile#loadChar()#char#10#3457#IDENT#mode
+Sobel.TextFile#main(java.lang.String[])#void#211#8327#IDENT#textFile
+Sobel.RgbImage#main(java.lang.String[])#void#56#3531#IDENT#j
+Sobel.TextFile#loadBooleanArray()#boolean[]#66#5331#IDENT#loadChar
+Sobel.RgbImage#main(java.lang.String[])#void#153#3945#SELECT#System.out
+Sobel.RgbImage#sobel(int[][][])#double#142#2396#IDENT#p1
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#281#1651#INDEXED#image[j]
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#34#1025#VARDEF#int x1 = x + (int)((float)w / 2.0)
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#286#1657#INDEXED#image[j][i][2]
+Sobel.TextFile#loadCharArray()#char[]#14#4611#EQ#mode == TextFile$Mode.READ
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#162#1400#LT#i < 0
+Sobel.TextFile#save(boolean[])#void#1#1927#IDENT#openStatus
+Sobel.TextFile#loadChar()#char#75#3751#IDENT#c
+Sobel.TextFile#loadIntArray()#int[]#53#5674#ASSIGN#n[i] = loadInt()
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#270#1637#IDENT#x0
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#258#1611#IDENT#i
+Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#18#642#NEWCLASS#new FileOutputStream(filePath)
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#125#1293#INDEXED#window[r][i - x0][1]
+Sobel.TextFile#loadLong()#long#2#4023#AND#openStatus && mode == TextFile$Mode.READ
+Sobel.RgbImage#load(java.lang.String)#void#5#292#SELECT#TextFile$Mode.READ
+Sobel.RgbImage#sqrt(double)#double#0#1776#IDENT#num
+Sobel.TextFile#save(double[])#void#14#2683#AND#openStatus && mode == TextFile$Mode.WRITE
+Sobel.TextFile#loadLongArray()#long[]#11#5894#SELECT#TextFile$Mode.READ
+Sobel.TextFile#save(int)#void#11#1336#SELECT#TextFile$Mode.WRITE
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#49#1101#IDENT#y
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#187#1459#IDENT#window
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#127#1309#IDENT#window
+Sobel.TextFile#main(java.lang.String[])#void#136#8073#SELECT#TextFile$Mode.READ
+Sobel.RgbImage#sobel(int[][][])#double#33#1963#VARDEF#double p3 = (double)luminance(window[0][2])
+Sobel.TextFile#save(boolean[])#void#11#1953#SELECT#TextFile$Mode.WRITE
+Sobel.RgbImage#load(java.lang.String)#void#133#638#INDEXED#image[i][j]
+Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#52#776#IDENT#filePath
+Sobel.TextFile#main(java.lang.String[])#void#177#8249#ASSIGN#n = textFile.loadInt()
+Sobel.TextFile#main(java.lang.String[])#void#101#7926#IDENT#i
+Sobel.TextFile#save(long[])#void#1#2422#IDENT#openStatus
+Sobel.TextFile.Mode#<init>()#void#1#101#IDENT#super
+Sobel.RgbImage#main(java.lang.String[])#void#156#3949#SELECT#System.out.println
+Sobel.TextFile#save(java.lang.Object[])#void#14#2935#AND#openStatus && mode == TextFile$Mode.WRITE
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#171#1404#OR#i < 0 || i >= width
+Sobel.TextFile#save(double[])#void#31#2761#SELECT#d.length
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#73#1160#LE#j <= y1
+Sobel.RgbImage#makeGrayscale()#void#13#2785#VARDEF#double bC = 0.11 / 256.0
+Sobel.TextFile#save(double)#void#18#1549#IDENT#streamWriter
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#139#1328#ASSIGN#window[r][i - x0][2] = 0
+Sobel.RgbImage#load(java.lang.String)#void#76#498#LT#j < width
+Sobel.TextFile#main(java.lang.String[])#void#280#8208#PREINC#++i
+Sobel.TextFile#loadBooleanArray()#boolean[]#53#5271#ASSIGN#b[i] = loadBoolean()
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#65#1154#IDENT#y0
+Sobel.TextFile#loadChar()#char#36#3548#NE#streamTokenizer.ttype != StreamTokenizer.TT_WORD
+Sobel.TextFile#save(java.lang.String)#void#11#1742#SELECT#TextFile$Mode.WRITE
+Sobel.RgbImage#sqrt(double)#double#5#1795#SELECT#Math.sqrt
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#6#971#INDEXED#window[0]
+Sobel.TextFile#loadIntArray()#int[]#66#5730#IDENT#loadChar
+Sobel.RgbImage#load(java.lang.String)#void#60#471#IDENT#width
+Sobel.TextFile#loadString()#java.lang.String#38#4955#ASSIGN#s = ""
+Sobel.TextFile#loadIntArray()#int[]#50#5676#IDENT#loadInt
+Sobel.RgbImage#makeGrayscale()#void#61#2938#IDENT#j
+Sobel.TextFile#loadChar()#char#2#3454#AND#openStatus && mode == TextFile$Mode.READ
+Sobel.TextFile#loadString()#java.lang.String#32#4913#ASSIGN#s = streamTokenizer.sval
+Sobel.TextFile#main(java.lang.String[])#void#164#8202#LT#i < 10
+Sobel.RgbImage#sobel(int[][][])#double#11#1919#TYPECAST#(double)luminance(window[0][1])
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#0#940#IDENT#window
+Sobel.TextFile#loadCharArray()#char[]#11#4618#SELECT#TextFile$Mode.READ
+Sobel.TextFile#close()#void#14#996#EQ#mode == TextFile$Mode.WRITE
+Sobel.RgbImage#load(java.lang.String)#void#126#630#IDENT#image
+Sobel.RgbImage#main(java.lang.String[])#void#174#3627#PREINC#++y
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#122#1289#MINUS#i - x0
+Sobel.TextFile#save(java.lang.Object[])#void#48#3084#SELECT#Arrays.toString
+Sobel.TextFile#save(java.lang.Object[])#void#56#3105#IDENT#streamWriter
+Sobel.TextFile#save(long)#void#21#1467#IDENT#l
+Sobel.TextFile#save(java.lang.Object[])#void#36#3028#IDENT#streamWriter
+Sobel.TextFile#save(long[])#void#21#2473#SELECT#streamWriter.print
+Sobel.TextFile#save(double)#void#21#1569#IDENT#d
+Sobel.RgbImage#main(java.lang.String[])#void#50#3551#IDENT#j
+Sobel.RgbImage#makeGrayscale()#void#85#2973#IDENT#image
+Sobel.RgbImage#sobel(int[][][])#double#76#2194#INDEXED#window[2][0]
+Sobel.TextFile#loadInt()#int#13#3848#SELECT#TextFile$Mode.READ
+Sobel.RgbImage#makeGrayscale()#void#81#2949#MUL#bC * image[i][j][2]
+Sobel.RgbImage#main(java.lang.String[])#void#168#3670#IDENT#x
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#201#1498#IDENT#r
+Sobel.RgbImage#makeGrayscale()#void#68#2946#IDENT#bC
+Sobel.TextFile.Mode#valueOf(java.lang.String)#Sobel.TextFile.Mode#0#87#SELECT#Enum.valueOf
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#182#1438#MINUS#i - x0
+Sobel.TextFile#loadBooleanArray()#boolean[]#41#5230#IDENT#i
+Sobel.TextFile#loadLongArray()#long[]#76#6161#ASSIGN#l = new long[0]
+Sobel.TextFile#loadBoolean()#boolean#28#3294#IDENT#streamTokenizer
+Sobel.TextFile.Mode#values()#Sobel.TextFile.Mode[]#0#87#TYPECAST#(TextFile$Mode[])$VALUES.clone()
+Sobel.TextFile#main(java.lang.String[])#void#37#7803#IDENT#i
+Sobel.TextFile#loadBooleanArray()#boolean[]#76#5362#ASSIGN#b = new boolean[0]
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#23#1030#IDENT#x
+Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#7#588#ASSIGN#this.mode = mode
+Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#6#582#SELECT#this.mode
+Sobel.TextFile#loadInt()#int#28#3902#IDENT#streamTokenizer
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#2#936#VARDEF#int h = window.length
+Sobel.RgbImage#sobel(int[][][])#double#0#1870#TYPECAST#(double)luminance(window[0][0])
+Sobel.TextFile#loadDouble()#double#16#4229#EQ#mode == TextFile$Mode.READ
+Sobel.TextFile#save(char[])#void#0#1625#AND#openStatus && mode == TextFile$Mode.WRITE
+Sobel.RgbImage#sobel(int[][][])#double#59#2116#TYPECAST#(double)luminance(window[1][2])
+Sobel.TextFile#loadString()#java.lang.String#18#4878#IDENT#streamTokenizer
+Sobel.TextFile#main(java.lang.String[])#void#273#8419#SELECT#System.out
+Sobel.TextFile#loadIntArray()#int[]#23#5555#IDENT#loadInt
+Sobel.RgbImage#makeGrayscale()#void#132#2880#PREINC#++j
+Sobel.RgbImage#sobel(int[][][])#double#10#1865#VARDEF#double p1 = (double)luminance(window[0][0])
+Sobel.TextFile#loadDoubleArray()#double[]#59#6456#PREINC#++i
+Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#18#627#IDENT#outputStream
+Sobel.TextFile#loadLongArray()#long[]#0#5879#AND#openStatus && mode == TextFile$Mode.READ
+Sobel.TextFile#main(java.lang.String[])#void#59#7841#IDENT#b
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#288#1382#PREINC#++i
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#149#1369#IDENT#x0
+Sobel.TextFile#save(int)#void#1#1310#IDENT#openStatus
+Sobel.TextFile#loadDoubleArray()#double[]#8#6289#IDENT#mode
+Sobel.RgbImage#main(java.lang.String[])#void#89#3652#LT#x < rgbImage.width
+Sobel.TextFile#save(int[])#void#1#2174#IDENT#openStatus
+Sobel.TextFile#loadLongArray()#long[]#53#6073#ASSIGN#l[i] = loadLong()
+Sobel.RgbImage#sobel(int[][][])#double#125#2339#MINUS#p1 + (p2 + p2) + p3 - p7 - (p8 + p8)
+Sobel.TextFile#save(long[])#void#14#2433#AND#openStatus && mode == TextFile$Mode.WRITE
+Sobel.TextFile#save(double[])#void#56#2849#IDENT#streamWriter
+Sobel.TextFile#loadDoubleArray()#double[]#14#6286#AND#openStatus && mode == TextFile$Mode.READ
+Sobel.RgbImage#load(java.lang.String)#void#146#696#IDENT#image
+Sobel.RgbImage#sobel(int[][][])#double#26#1993#INDEXED#window[0]
+Sobel.TextFile#loadLongArray()#long[]#55#6102#IDENT#loadChar
+Sobel.TextFile#loadDoubleArray()#double[]#26#6352#NEWARRAY#new double[loadInt()]
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#36#1066#IDENT#y
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#217#1543#IDENT#r
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#279#1652#IDENT#j
+Sobel.TextFile#loadLongArray()#long[]#22#5941#IDENT#l
+Sobel.RgbImage#sobel(int[][][])#double#137#2383#PLUS#p6 + p6
+Sobel.TextFile#loadDoubleArray()#double[]#11#6301#SELECT#TextFile$Mode.READ
+Sobel.TextFile#save(boolean)#void#18#1148#IDENT#streamWriter
+Sobel.RgbImage#makeGrayscale()#void#120#3073#IDENT#i
+Sobel.RgbImage#luminance(int[])#int#17#2597#INDEXED#rgb[0]
+Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#82#866#IDENT#streamTokenizer
+Sobel.TextFile#save(java.lang.Object[])#void#45#3058#IDENT#streamWriter
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#203#1497#INDEXED#window[r]
+Sobel.RgbImage#load(java.lang.String)#void#175#773#INDEXED#image[i][j][2]
+Sobel.RgbImage#makeGrayscale()#void#106#3029#IDENT#j
+Sobel.RgbImage#makeGrayscale()#void#3#2727#VARDEF#double rC = 0.3 / 256.0
+Sobel.TextFile#main(java.lang.String[])#void#119#7952#SELECT#textFile.save
+Sobel.TextFile#save(java.lang.Object)#void#11#1846#SELECT#TextFile$Mode.WRITE
+Sobel.TextFile#save(int[])#void#14#2193#EQ#mode == TextFile$Mode.WRITE
+Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#30#693#NEWCLASS#new PrintWriter(outputStream)
+Sobel.TextFile#loadLong()#long#13#4038#SELECT#TextFile$Mode.READ
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#199#1478#ASSIGN#window[r][i - x0][1] = 0
+Sobel.TextFile#loadInt()#int#2#3833#AND#openStatus && mode == TextFile$Mode.READ
+Sobel.TextFile#main(java.lang.String[])#void#117#7907#ASSIGN#s = "(" + i + ", " + i * i + ")\n"
+Sobel.TextFile#main(java.lang.String[])#void#174#8259#SELECT#textFile.loadInt
+Sobel.TextFile#loadCharArray()#char[]#8#4606#IDENT#mode
+Sobel.TextFile#loadLongArray()#long[]#49#6069#INDEXED#l[i]
+Sobel.RgbImage#sobel(int[][][])#double#3#1895#INDEXED#window[0]
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#178#1437#IDENT#i
+Sobel.RgbImage#load(java.lang.String)#void#26#365#IDENT#textFile
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#246#1593#IDENT#x0
+Sobel.TextFile#loadDoubleArray()#double[]#0#6286#AND#openStatus && mode == TextFile$Mode.READ
+Sobel.RgbImage#makeGrayscale()#void#16#2814#ASSIGN#i = 0
+Sobel.RgbImage#load(java.lang.String)#void#150#701#INDEXED#image[i]
+Sobel.TextFile.Mode#<clinit>()#void#32#87#SELECT#TextFile$Mode.WRITE
+Sobel.RgbImage#main(java.lang.String[])#void#126#3837#IDENT#L
+Sobel.RgbImage#sobel(int[][][])#double#24#1987#IDENT#window
+Sobel.TextFile#loadIntArray()#int[]#43#5638#SELECT#n.length
+Sobel.RgbImage#makeGrayscale()#void#99#2988#ASSIGN#image[i][j][0] = (int)(luminance * 256)
+Sobel.TextFile#loadDouble()#double#31#4300#SELECT#streamTokenizer.nval
+Sobel.TextFile#loadIntArray()#int[]#40#5626#VARDEF#int i = 0
+Sobel.TextFile#loadIntArray()#int[]#8#5484#IDENT#mode
+Sobel.TextFile#loadLong()#long#35#4085#ASSIGN#l = (long)streamTokenizer.nval
+Sobel.TextFile#loadBoolean()#boolean#16#3238#EQ#mode == TextFile$Mode.READ
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#94#1226#IDENT#i
+Sobel.RgbImage#load(java.lang.String)#void#83#522#IDENT#i
+Sobel.TextFile#loadDoubleArray()#double[]#14#6294#EQ#mode == TextFile$Mode.READ
+Sobel.TextFile#loadDoubleArray()#double[]#35#6409#IDENT#loadChar
+Sobel.TextFile#loadDoubleArray()#double[]#55#6513#IDENT#loadChar
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#191#1469#IDENT#i
+Sobel.RgbImage#luminance(int[])#int#14#2582#TYPECAST#(int)(rC * rgb[0] + gC * rgb[1] + bC * rgb[2] + 0.5)
+Sobel.TextFile#loadChar()#char#67#3728#SELECT#streamTokenizer.ttype
+Sobel.RgbImage#main(java.lang.String[])#void#53#3556#NEWARRAY#new int[3]
+Sobel.RgbImage#main(java.lang.String[])#void#156#3958#IDENT#L
+Sobel.RgbImage#sobel(int[][][])#double#71#2166#TYPECAST#(double)luminance(window[2][0])
+Sobel.TextFile#loadLongArray()#long[]#66#6130#IDENT#loadChar
+Sobel.RgbImage#makeGrayscale()#void#132#2879#IDENT#j
+Sobel.TextFile#save(double[])#void#1#2672#IDENT#openStatus
+Sobel.RgbImage#load(java.lang.String)#void#17#309#ASSIGN#width = textFile.loadInt()
+Sobel.TextFile#save(double[])#void#27#2740#IDENT#streamWriter
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#248#1592#MINUS#i - x0
+Sobel.TextFile#save(java.lang.Object[])#void#1#2924#IDENT#openStatus
+Sobel.TextFile#loadChar()#char#63#3703#IDENT#c
+Sobel.RgbImage#main(java.lang.String[])#void#9#3372#SELECT#rgbImage.load
+Sobel.TextFile#loadCharArray()#char[]#14#4603#AND#openStatus && mode == TextFile$Mode.READ
+Sobel.RgbImage#load(java.lang.String)#void#45#428#VARDEF#int i = 0
+Sobel.RgbImage#load(java.lang.String)#void#80#516#IDENT#image
+Sobel.RgbImage#sobel(int[][][])#double#24#1977#IDENT#luminance
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#151#1365#VARDEF#int i = x0
+Sobel.TextFile#loadInt()#int#27#3897#TYPECAST#(int)streamTokenizer.nval
+Sobel.TextFile#main(java.lang.String[])#void#204#8277#ASSIGN#s = "" + c + n
+Sobel.TextFile#save(boolean[])#void#30#2015#IDENT#b
+Sobel.TextFile#loadDoubleArray()#double[]#11#6301#SELECT#TextFile$Mode.READ
+Sobel.TextFile#loadBooleanArray()#boolean[]#42#5234#IDENT#b
+Sobel.TextFile#loadLong()#long#20#4050#IDENT#streamTokenizer
+Sobel.RgbImage#load(java.lang.String)#void#131#639#IDENT#j
+Sobel.TextFile#<init>(java.lang.String,Sobel.TextFile.Mode)#void#5#456#IDENT#filePath
+Sobel.TextFile#loadLong()#long#10#4026#IDENT#mode
+Sobel.TextFile#save(boolean[])#void#18#1966#IDENT#streamWriter
+Sobel.TextFile#loadLong()#long#16#4023#AND#openStatus && mode == TextFile$Mode.READ
+Sobel.TextFile#loadChar()#char#63#3707#TYPECAST#(char)streamTokenizer.ttype
+Sobel.RgbImage#load(java.lang.String)#void#139#645#ASSIGN#image[i][j][0] = textFile.loadInt()
+Sobel.RgbImage#makeGrayscale()#void#91#2981#INDEXED#image[i][j]
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#104#1253#INDEXED#window[r]
+Sobel.TextFile#loadDouble()#double#20#4248#IDENT#streamTokenizer
+Sobel.RgbImage#makeGrayscale()#void#71#2951#IDENT#image
+Sobel.TextFile#loadChar()#char#48#3575#AND#streamTokenizer.ttype != StreamTokenizer.TT_WORD && streamTokenizer.ttype != StreamTokenizer.TT_NUMBER
+Sobel.RgbImage#sobel(int[][][])#double#57#2062#VARDEF#double p5 = (double)luminance(window[1][1])
+Sobel.TextFile#main(java.lang.String[])#void#36#7801#IDENT#b
+Sobel.TextFile#save(double[])#void#48#2816#SELECT#streamWriter.print
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#294#1685#PREINC#++r
+Sobel.RgbImage#load(java.lang.String)#void#155#707#INDEXED#image[i][j][1]
+Sobel.TextFile#save(long)#void#1#1410#IDENT#openStatus
+Sobel.RgbImage#main(java.lang.String[])#void#81#3645#VARDEF#int x = 0
+Sobel.TextFile#save(java.lang.Object[])#void#48#3084#SELECT#Arrays.toString
+Sobel.TextFile#main(java.lang.String[])#void#211#8323#IDENT#n
+Sobel.RgbImage#makeGrayscale()#void#52#2905#MUL#rC * image[i][j][0]
+Sobel.TextFile#loadDouble()#double#13#4236#SELECT#TextFile$Mode.READ
+Sobel.TextFile#loadBooleanArray()#boolean[]#59#5244#IDENT#i
+Sobel.TextFile.Mode#<clinit>()#void#23#122#ASSIGN#READ = new TextFile$Mode("READ", 1)
+Sobel.RgbImage#load(java.lang.String)#void#105#570#IDENT#i
+Sobel.RgbImage#main(java.lang.String[])#void#62#3476#PREINC#++i
+Sobel.TextFile#loadChar()#char#13#3469#SELECT#TextFile$Mode.READ
+Sobel.RgbImage#sobel(int[][][])#double#69#2111#VARDEF#double p6 = (double)luminance(window[1][2])
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#87#1187#OR#j < 0 || j >= height
+Sobel.RgbImage#luminance(int[])#int#14#2589#IDENT#rC
+Sobel.TextFile#main(java.lang.String[])#void#12#7645#VARDEF#TextFile textFile = new TextFile("Sample.txt", TextFile$Mode.WRITE)
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#216#1536#IDENT#window
+Sobel.RgbImage#load(java.lang.String)#void#187#818#MINUS#width - 1
+Sobel.TextFile#<init>(java.lang.String,Sobel.TextFile.Mode)#void#0#446#IDENT#super
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#105#1257#IDENT#i
+Sobel.RgbImage#sobel(int[][][])#double#119#2334#MINUS#p1 + (p2 + p2) + p3 - p7
+Sobel.TextFile#loadChar()#char#52#3646#IDENT#streamTokenizer
+Sobel.TextFile#loadIntArray()#int[]#55#5702#IDENT#loadChar
+Sobel.RgbImage#main(java.lang.String[])#void#69#3600#VARDEF#int y = 0
+Sobel.RgbImage#makeGrayscale()#void#15#2812#IDENT#i
+Sobel.RgbImage#load(java.lang.String)#void#97#444#PREINC#++i
+Sobel.TextFile#loadBoolean()#boolean#47#3368#IDENT#b
+Sobel.TextFile#main(java.lang.String[])#void#171#8220#ASSIGN#c = textFile.loadChar()
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#275#1640#INDEXED#window[r][i - x0][2]
+Sobel.TextFile#main(java.lang.String[])#void#142#8088#IDENT#textFile
+Sobel.RgbImage#load(java.lang.String)#void#176#787#SELECT#textFile.loadInt
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#288#1384#IDENT#i
+Sobel.TextFile#save(boolean[])#void#48#2096#IDENT#b
+Sobel.TextFile#main(java.lang.String[])#void#42#7810#MOD#i % 2
+Sobel.TextFile#loadIntArray()#int[]#22#5543#IDENT#n
+Sobel.TextFile#save(double)#void#11#1538#SELECT#TextFile$Mode.WRITE
+Sobel.TextFile#save(int[])#void#11#2200#SELECT#TextFile$Mode.WRITE
+Sobel.TextFile#loadString()#java.lang.String#29#4930#SELECT#streamTokenizer.sval
+Sobel.TextFile#main(java.lang.String[])#void#0#7656#NEWCLASS#new TextFile("Sample.txt", TextFile$Mode.WRITE)
+Sobel.RgbImage#makeGrayscale()#void#77#2959#INDEXED#image[i][j]
+Sobel.TextFile#save(double)#void#14#1531#EQ#mode == TextFile$Mode.WRITE
+Sobel.RgbImage#makeGrayscale()#void#45#2913#IDENT#i
+Sobel.TextFile#main(java.lang.String[])#void#20#7706#VARDEF#String s = new String()
+Sobel.TextFile#loadDoubleArray()#double[]#47#6477#IDENT#d
+Sobel.TextFile#loadDouble()#double#34#4283#ASSIGN#d = streamTokenizer.nval
+Sobel.TextFile#save(java.lang.Object[])#void#11#2950#SELECT#TextFile$Mode.WRITE
+Sobel.TextFile#main(java.lang.String[])#void#72#7887#IDENT#i
+Sobel.TextFile#save(double[])#void#30#2752#SELECT#streamWriter.print
+Sobel.RgbImage#makeGrayscale()#void#27#2853#ASSIGN#j = 0
+Sobel.TextFile#loadDoubleArray()#double[]#66#6541#IDENT#loadChar
+Sobel.TextFile#save(java.lang.Object[])#void#18#2963#IDENT#streamWriter
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#96#1231#IDENT#x1
+Sobel.TextFile#save(int[])#void#56#2351#IDENT#streamWriter
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#76#1181#IDENT#j
+Sobel.TextFile#save(boolean)#void#21#1160#SELECT#streamWriter.print
+Sobel.RgbImage#main(java.lang.String[])#void#129#3839#ASSIGN#L = 255
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#67#1150#VARDEF#int j = y0
+Sobel.RgbImage#makeGrayscale()#void#59#2935#IDENT#i
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#260#1610#INDEXED#image[j][i]
+Sobel.TextFile#save(java.lang.Object[])#void#8#2938#IDENT#mode
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#265#1632#IDENT#r
+Sobel.TextFile#save(double[])#void#48#2830#SELECT#Arrays.toString
+Sobel.TextFile#loadDoubleArray()#double[]#50#6484#IDENT#loadDouble
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#71#1163#IDENT#y1
+Sobel.TextFile#loadLongArray()#long[]#35#6000#IDENT#loadChar
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#195#1470#MINUS#i - x0
+Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#64#825#NEWCLASS#new InputStreamReader(inputStream)
+Sobel.RgbImage#makeGrayscale()#void#97#3007#MUL#luminance * 256
+Sobel.TextFile#save(double)#void#14#1523#AND#openStatus && mode == TextFile$Mode.WRITE
+Sobel.RgbImage#sobel(int[][][])#double#149#2399#MINUS#p3 + (p6 + p6) + p9 - p1 - (p4 + p4)
+Sobel.TextFile#save(long[])#void#45#2554#IDENT#streamWriter
+Sobel.TextFile.Mode#<clinit>()#void#42#87#ASSIGN#$VALUES = new TextFile$Mode[][]{TextFile$Mode.WRITE, TextFile$Mode.READ}
+Sobel.RgbImage#load(java.lang.String)#void#0#264#NEWCLASS#new TextFile(filePath, TextFile$Mode.READ)
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#47#1061#VARDEF#int y0 = y - (int)((float)h / 2.0)
+Sobel.RgbImage#makeGrayscale()#void#30#2862#IDENT#image
+Sobel.RgbImage#sobel(int[][][])#double#98#2289#INDEXED#window[2]
+Sobel.RgbImage#luminance(int[])#int#32#2625#INDEXED#rgb[2]
+Sobel.RgbImage#sobel(int[][][])#double#131#2374#IDENT#p3
+Sobel.TextFile#loadDoubleArray()#double[]#74#6574#NEWARRAY#new double[0]
+Sobel.TextFile#loadString()#java.lang.String#36#4953#IDENT#s
+Sobel.TextFile#loadLongArray()#long[]#23#5954#IDENT#loadInt
+Sobel.TextFile#loadChar()#char#20#3481#IDENT#streamTokenizer
+Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#30#678#IDENT#streamWriter
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#50#1105#TYPECAST#(int)((float)h / 2.0)
+Sobel.TextFile#loadIntArray()#int[]#11#5496#SELECT#TextFile$Mode.READ
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#69#1158#IDENT#j
+Sobel.TextFile#main(java.lang.String[])#void#105#7928#MUL#i * i
+Sobel.TextFile#main(java.lang.String[])#void#150#8166#SELECT#Arrays.toString
+Sobel.RgbImage#sobel(int[][][])#double#83#2215#TYPECAST#(double)luminance(window[2][1])
+Sobel.TextFile#loadDoubleArray()#double[]#28#6350#ASSIGN#d = new double[loadInt()]
+Sobel.TextFile#main(java.lang.String[])#void#167#8218#IDENT#c
+Sobel.TextFile#loadDouble()#double#16#4221#AND#openStatus && mode == TextFile$Mode.READ
+Sobel.RgbImage#main(java.lang.String[])#void#111#3803#IDENT#accept
+Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#11#614#SELECT#TextFile$Mode.WRITE
+Sobel.TextFile#loadChar()#char#60#3668#NE#streamTokenizer.ttype != StreamTokenizer.TT_EOL
+Sobel.RgbImage#makeGrayscale()#void#93#2990#TYPECAST#(int)(luminance * 256)
+Sobel.TextFile#main(java.lang.String[])#void#276#8423#SELECT#System.out.println
+Sobel.TextFile#main(java.lang.String[])#void#70#7880#VARDEF#int i = 0
+Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#56#753#ASSIGN#inputStream = new FileInputStream(filePath)
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#160#1404#OR#i < 0 || i >= width
+Sobel.TextFile#loadDoubleArray()#double[]#30#6386#IDENT#loadChar
+Sobel.RgbImage#main(java.lang.String[])#void#174#3626#IDENT#y
+Sobel.RgbImage#load(java.lang.String)#void#135#647#IDENT#textFile
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#131#1319#IDENT#i
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#24#1034#TYPECAST#(int)((float)w / 2.0)
+Sobel.RgbImage#main(java.lang.String[])#void#101#3724#IDENT#rgbImage
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#251#1596#INDEXED#window[r][i - x0][1]
+Sobel.TextFile#main(java.lang.String[])#void#103#7930#IDENT#i
+Sobel.TextFile#close()#void#25#1042#IDENT#outputStream
+Sobel.TextFile#loadBooleanArray()#boolean[]#47#5266#IDENT#b
+Sobel.TextFile#loadIntArray()#int[]#14#5489#EQ#mode == TextFile$Mode.READ
+Sobel.TextFile#main(java.lang.String[])#void#123#7896#PREINC#++i
+Sobel.TextFile#loadIntArray()#int[]#26#5547#NEWARRAY#new int[loadInt()]
+Sobel.RgbImage#sobel(int[][][])#double#164#2448#MUL#y * y
+Sobel.TextFile#save(java.lang.String)#void#11#1742#SELECT#TextFile$Mode.WRITE
+Sobel.TextFile#close()#void#11#1003#SELECT#TextFile$Mode.WRITE
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#24#1047#IDENT#w
+Sobel.RgbImage#makeGrayscale()#void#39#2890#IDENT#luminance
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#225#1545#INDEXED#window[r][i - x0]
+Sobel.TextFile#loadString()#java.lang.String#1#4840#IDENT#openStatus
+Sobel.TextFile#save(java.lang.Object)#void#8#1834#IDENT#mode
+Sobel.TextFile#loadLong()#long#28#4093#IDENT#streamTokenizer
+Sobel.TextFile#save(java.lang.Object[])#void#48#3095#IDENT#obj
+Sobel.TextFile#loadLong()#long#39#4129#IDENT#l
+Sobel.TextFile#save(java.lang.String)#void#21#1765#SELECT#streamWriter.print
+Sobel.RgbImage#load(java.lang.String)#void#41#394#ASSIGN#image = new int[height][][]
+Sobel.RgbImage#makeGrayscale()#void#74#2957#IDENT#i
+Sobel.RgbImage#sobel(int[][][])#double#117#2336#IDENT#p7
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#196#1468#INDEXED#window[r][i - x0]
+Sobel.RgbImage#sobel(int[][][])#double#48#2086#IDENT#window
+Sobel.TextFile#main(java.lang.String[])#void#39#7802#INDEXED#b[i]
+Sobel.TextFile#main(java.lang.String[])#void#179#8275#IDENT#s
+Sobel.TextFile#loadLongArray()#long[]#26#5945#NEWARRAY#new long[loadInt()]
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#177#1433#INDEXED#window[r]
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#267#1631#INDEXED#window[r]
+Sobel.RgbImage#sobel(int[][][])#double#126#2353#IDENT#p9
+Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#26#640#ASSIGN#outputStream = new FileOutputStream(filePath)
+Sobel.RgbImage#load(java.lang.String)#void#91#506#IDENT#j
+Sobel.RgbImage#sobel(int[][][])#double#60#2135#IDENT#window
+Sobel.TextFile#save(char[])#void#18#1651#IDENT#streamWriter
+Sobel.TextFile#save(long[])#void#27#2490#IDENT#streamWriter
+Sobel.TextFile#main(java.lang.String[])#void#150#8177#IDENT#b
+Sobel.RgbImage#makeGrayscale()#void#104#3026#IDENT#i
+Sobel.RgbImage#main(java.lang.String[])#void#138#3897#IDENT#L
+Sobel.RgbImage#sobel(int[][][])#double#143#2394#MINUS#p3 + (p6 + p6) + p9 - p1
+Sobel.TextFile#save(int[])#void#59#2363#SELECT#streamWriter.print
+Sobel.TextFile#save(java.lang.Object[])#void#31#3015#SELECT#obj.length
+Sobel.RgbImage#makeGrayscale()#void#109#3037#TYPECAST#(int)(luminance * 256)
+Sobel.RgbImage#sobel(int[][][])#double#12#1928#IDENT#luminance
+Sobel.TextFile#loadLongArray()#long[]#8#5882#IDENT#mode
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#155#1378#IDENT#x1
+Sobel.TextFile#loadDoubleArray()#double[]#23#6363#IDENT#loadInt
+Sobel.TextFile#main(java.lang.String[])#void#191#8284#IDENT#c
+Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#5#578#IDENT#this
+Sobel.RgbImage#load(java.lang.String)#void#161#745#SELECT#textFile.loadChar
+Sobel.TextFile#main(java.lang.String[])#void#215#8325#ASSIGN#n = textFile.loadInt()
+Sobel.TextFile#loadBooleanArray()#boolean[]#11#5089#SELECT#TextFile$Mode.READ
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#138#1324#INDEXED#window[r][i - x0][2]
+Sobel.RgbImage#makeGrayscale()#void#76#2960#IDENT#j
+Sobel.TextFile#loadLongArray()#long[]#74#6163#NEWARRAY#new long[0]
+Sobel.RgbImage#makeGrayscale()#void#62#2937#INDEXED#image[i][j]
+Sobel.TextFile#loadString()#java.lang.String#39#4975#IDENT#s
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#268#1635#IDENT#i
+Sobel.RgbImage#sobel(int[][][])#double#62#2141#INDEXED#window[1]
+Sobel.RgbImage#load(java.lang.String)#void#21#341#SELECT#textFile.loadChar
+Sobel.TextFile#main(java.lang.String[])#void#143#8096#SELECT#textFile.loadBooleanArray
+Sobel.TextFile.Mode#<clinit>()#void#38#87#SELECT#TextFile$Mode.READ
+Sobel.TextFile#save(double)#void#0#1523#AND#openStatus && mode == TextFile$Mode.WRITE
+Sobel.RgbImage#sobel(int[][][])#double#12#1938#IDENT#window
+Sobel.TextFile#open(java.lang.String,Sobel.TextFile.Mode)#void#69#848#IDENT#inputStream
+Sobel.RgbImage#makeGrayscale()#void#89#2978#INDEXED#image[i]
+Sobel.RgbImage#load(java.lang.String)#void#66#461#ASSIGN#image[i] = new int[width][]
+Sobel.RgbImage#load(java.lang.String)#void#155#713#IDENT#textFile
+Sobel.TextFile#loadLongArray()#long[]#1#5868#IDENT#openStatus
+Sobel.TextFile#save(boolean[])#void#14#1938#AND#openStatus && mode == TextFile$Mode.WRITE
+Sobel.RgbImage#load(java.lang.String)#void#171#771#IDENT#j
+Sobel.RgbImage#sobel(int[][][])#double#113#2317#PLUS#p1 + (p2 + p2)
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#118#1288#IDENT#i
+Sobel.RgbImage#load(java.lang.String)#void#59#457#INDEXED#image[i]
+Sobel.RgbImage#main(java.lang.String[])#void#11#3382#INDEXED#args[0]
+Sobel.RgbImage#slideWindow(int,int,int[][][])#void#50#1118#IDENT#h
+Sobel.TextFile#loadBooleanArray()#boolean[]#1#5063#IDENT#openStatus
+Sobel.TextFile#loadDoubleArray()#double[]#1#6275#IDENT#openStatus
+Sobel.TextFile#save(java.lang.String)#void#1#1716#IDENT#openStatus
+Sobel.RgbImage#main(java.lang.String[])#void#151#3922#ASSIGN#L = accept(L)
+Sobel.TextFile#close()#void#1#977#IDENT#openStatus
+Sobel.RgbImage#makeGrayscale()#void#39#2902#IDENT#rC
+Sobel.TextFile#loadLongArray()#long[]#48#6070#IDENT#i
+Sobel.TextFile#loadDouble()#double#13#4236#SELECT#TextFile$Mode.READ
+Sobel.TextFile.Mode#<clinit>()#void#0#115#NEWCLASS#new TextFile$Mode("WRITE", 0)
