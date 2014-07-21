@@ -16,6 +16,8 @@
 
 package com.google.zxing.common;
 
+import chord.analyses.expax.lang.Accept;
+
 import com.google.zxing.Binarizer;
 import com.google.zxing.LuminanceSource;
 import com.google.zxing.NotFoundException;
@@ -128,15 +130,13 @@ public final class HybridBinarizer extends GlobalHistogramBinarizer {
 			for (int x = 0; x < 8; x++) {
 				int pixel = (luminances[offset + x] & 0xff);
 				//additional accept
-				pixel = accept(pixel);
+				pixel = Accept.accept(pixel);
 				if (pixel < threshold) {
 					matrix.set(xoffset + x, yoffset + y);
 				}
 			}
 		}
 	}
-	
-	public static int accept(int i){return i;}
 
 	// Calculates a single black point for each 8x8 block of pixels and saves it
 	// away.
@@ -156,7 +156,7 @@ public final class HybridBinarizer extends GlobalHistogramBinarizer {
 					for (int xx = 0; xx < 8; xx++) {
 						int pixel = (luminances[offset + xx] & 0xff);
 						//additional accept
-						pixel = accept(pixel);
+						pixel = Accept.accept(pixel);
 						sum += pixel;
 						if (pixel < min) {
 							min = pixel;

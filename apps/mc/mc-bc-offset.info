@@ -1,430 +1,431 @@
-429
-jnt.scimark2.Random#<init>(double,double)#void#117#1758#ASSIGN#this.left = left
-jnt.scimark2.Random#<init>(int,double,double)#void#110#2661#IDENT#seed
-jnt.scimark2.Random#initialize(int)#void#1#3582#IDENT#seed
-jnt.scimark2.Random#<init>()#void#65#631#IDENT#one
-jnt.scimark2.Random#<init>(int,double,double)#void#5#440#IDENT#seed
-jnt.scimark2.Random#initialize(int)#void#31#3670#PREDEC#--jseed
-jnt.scimark2.Random#initialize(int)#void#70#3766#ASSIGN#iloop = 0
-jnt.scimark2.MonteCarlo#integrate(int,int)#double#52#976#IDENT#sum
-jnt.scimark2.commandline#main(java.lang.String[])#void#9#391#NE#args.length != 1
-jnt.scimark2.MonteCarlo#integrate(int,int)#double#72#1047#DIV#(double)under_curve / Num_samples
-jnt.scimark2.Random#initialize(int)#void#63#3749#IDENT#m2
-jnt.scimark2.commandline#main(java.lang.String[])#void#22#479#IDENT#seed
-jnt.scimark2.Random#<init>(double,double)#void#134#1824#ASSIGN#haveRange = true
-jnt.scimark2.Random#<init>()#void#106#910#ASSIGN#width = 1.0
-jnt.scimark2.Random#nextDouble()#double#77#3205#ASSIGN#j = 16
-jnt.scimark2.Random#initialize(int)#void#147#3933#IDENT#j
-jnt.scimark2.Random#initialize(int)#void#84#3826#IDENT#jseed
-jnt.scimark2.Random#<init>(int)#void#100#882#IDENT#right
-jnt.scimark2.Random#initialize(int)#void#119#3893#IDENT#m
-jnt.scimark2.Random#<init>(double,double)#void#65#631#IDENT#one
-jnt.scimark2.Random#<init>(int,double,double)#void#58#607#MINUS#(one << mdig - 2) - one
-jnt.scimark2.Random#<init>(double,double)#void#55#608#IDENT#one
-jnt.scimark2.Random#initialize(int)#void#135#3783#PREINC#++iloop
-jnt.scimark2.Random#<init>(int)#void#74#635#SL#one << mdig / 2
-jnt.scimark2.Random#<init>(int,double,double)#void#42#578#SL#one << mdig - 2
-jnt.scimark2.commandline#main(java.lang.String[])#void#5#359#VARDEF#String seed = null
-jnt.scimark2.Constants#<init>()#void#1#30#IDENT#super
-jnt.scimark2.Random#<init>()#void#86#778#ASSIGN#dm1 = 1.0 / (double)m1
-jnt.scimark2.Random#<init>(double,double)#void#5#440#IDENT#seed
-jnt.scimark2.Random#<init>(int)#void#10#473#IDENT#i
-jnt.scimark2.Random#initialize(int)#void#13#3611#IDENT#jseed
-jnt.scimark2.Random#<init>(double,double)#void#10#473#IDENT#i
-jnt.scimark2.Random#<init>(double,double)#void#11#473#ASSIGN#i = 4
-jnt.scimark2.Random#initialize(int)#void#28#3664#EQ#jseed % 2 == 0
-jnt.scimark2.Random#initialize(int)#void#31#3672#IDENT#jseed
-jnt.scimark2.Random#<init>(double,double)#void#122#1779#ASSIGN#this.right = right
-jnt.scimark2.Random#<init>()#void#90#819#IDENT#haveRange
-jnt.scimark2.Random#<init>(int)#void#11#473#ASSIGN#i = 4
-jnt.scimark2.Random#initialize(int)#void#50#3709#DIV#9069 / m2
-jnt.scimark2.Random#nextDouble()#double#5#3089#IDENT#i
-jnt.scimark2.Random#<init>(double,double)#void#91#819#ASSIGN#haveRange = false
-jnt.scimark2.Random#<init>(double,double)#void#73#642#DIV#mdig / 2
-jnt.scimark2.Random#<init>(int,double,double)#void#96#854#ASSIGN#left = 0.0
-jnt.scimark2.commandline#main(java.lang.String[])#void#27#556#IDENT#seed
-jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#19#202#ASSIGN#out = MonteCarlo.integrate(cycles, SEED)
-jnt.scimark2.Random#<init>()#void#85#802#DIV#1.0 / (double)m1
-jnt.scimark2.kernel#precise(double)#double#0#457#IDENT#d
-jnt.scimark2.Random#<init>()#void#5#440#IDENT#seed
-jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#13#225#IDENT#cycles
-jnt.scimark2.Constants#<init>()#void#0#30#IDENT#super
-jnt.scimark2.Random#<init>(int,double,double)#void#44#593#IDENT#one
-jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#54#331#IDENT#out
-jnt.scimark2.Random#<init>(int)#void#75#615#ASSIGN#m2 = one << mdig / 2
-jnt.scimark2.MonteCarlo#integrate(int,int)#double#56#980#LE#sum <= 1.0
-jnt.scimark2.Random#nextDouble()#double#68#3191#IDENT#j
-jnt.scimark2.Random#initialize(int)#void#84#3820#IDENT#j1
-jnt.scimark2.Random#<init>(int,double,double)#void#23#513#ASSIGN#mdig = 32
-jnt.scimark2.MonteCarlo#integrate(int,int)#double#68#1035#IDENT#under_curve
-jnt.scimark2.Random#initialize(int)#void#13#3623#SELECT#Math.min
-jnt.scimark2.Random#<init>(int,double,double)#void#10#473#IDENT#i
-jnt.scimark2.Random#initialize(int)#void#67#3739#ASSIGN#j1 = jseed / m2
-jnt.scimark2.Random#<init>(double,double)#void#69#638#IDENT#mdig
-jnt.scimark2.MonteCarlo#integrate(int,int)#double#37#912#IDENT#y
-jnt.scimark2.Random#<init>(int)#void#58#607#MINUS#(one << mdig - 2) - one
-jnt.scimark2.Random#<init>(int)#void#17#492#ASSIGN#j = 16
-jnt.scimark2.Random#initialize(int)#void#53#3717#IDENT#j0
-jnt.scimark2.Random#<init>(int)#void#27#536#IDENT#one
-jnt.scimark2.Random#nextDouble()#double#19#3085#ASSIGN#k = m[i] - m[j]
-jnt.scimark2.Random#nextDouble()#double#21#3109#LT#k < 0
-jnt.scimark2.Random#<init>(int)#void#1#2095#IDENT#super
-jnt.scimark2.Random#initialize(int)#void#143#3926#ASSIGN#i = 4
-jnt.scimark2.Random#<init>(double,double)#void#80#804#TYPECAST#(double)m1
-jnt.scimark2.Random#<init>(int,double,double)#void#128#2728#IDENT#left
-jnt.scimark2.Random#<init>(int,double,double)#void#32#557#IDENT#m1
-jnt.scimark2.Random#initialize(int)#void#79#3808#IDENT#j0
-jnt.scimark2.Random#initialize(int)#void#59#3720#ASSIGN#j0 = jseed % m2
-jnt.scimark2.MonteCarlo#accept(double)#double#0#1120#IDENT#i
-jnt.scimark2.MonteCarlo#integrate(int,int)#double#62#821#PREINC#++count
-jnt.scimark2.Random#initialize(int)#void#61#3736#IDENT#j1
-jnt.scimark2.Random#nextDouble()#double#63#3180#PREDEC#--i
-jnt.scimark2.Random#initialize(int)#void#124#3894#INDEXED#m[iloop]
-jnt.scimark2.Random#<init>()#void#59#589#PLUS#(one << mdig - 2) + ((one << mdig - 2) - one)
-jnt.scimark2.Random#<init>(int,double,double)#void#120#2703#IDENT#right
-jnt.scimark2.Random#initialize(int)#void#76#3777#LT#iloop < 17
-jnt.scimark2.Random#<init>(int,double,double)#void#69#638#IDENT#mdig
-jnt.scimark2.Random#initialize(int)#void#142#3924#IDENT#i
-jnt.scimark2.commandline#main(java.lang.String[])#void#24#490#INDEXED#args[0]
-jnt.scimark2.Random#initialize(int)#void#43#3699#IDENT#k1
-jnt.scimark2.Random#<init>(int,double,double)#void#85#802#DIV#1.0 / (double)m1
-jnt.scimark2.MonteCarlo#integrate(int,int)#double#32#906#IDENT#x
-jnt.scimark2.Random#<init>()#void#37#581#IDENT#mdig
-jnt.scimark2.Random#nextDouble()#double#40#3135#ASSIGN#m[j] = k
-jnt.scimark2.Random#<init>(int)#void#69#638#IDENT#mdig
-jnt.scimark2.Random#initialize(int)#void#53#3722#IDENT#jseed
-jnt.scimark2.Random#initialize(int)#void#37#3681#IDENT#k0
-jnt.scimark2.commandline#main(java.lang.String[])#void#6#379#IDENT#args
-jnt.scimark2.Random#initialize(int)#void#6#3591#IDENT#m
-jnt.scimark2.Random#<init>()#void#73#642#DIV#mdig / 2
-jnt.scimark2.Random#<init>(int,double,double)#void#126#2712#IDENT#width
-jnt.scimark2.Random#<init>()#void#110#1268#IDENT#initialize
-jnt.scimark2.Random#nextDouble()#double#26#3123#IDENT#m1
-jnt.scimark2.Random#<init>(double,double)#void#105#910#IDENT#width
-jnt.scimark2.Random#<init>(double,double)#void#28#536#ASSIGN#one = 1
-jnt.scimark2.Random#initialize(int)#void#18#3643#IDENT#m1
-jnt.scimark2.MonteCarlo#integrate(int,int)#double#59#1004#PREINC#++under_curve
-jnt.scimark2.Random#<init>()#void#10#473#IDENT#i
-jnt.scimark2.Random#initialize(int)#void#96#3849#IDENT#j1
-jnt.scimark2.kernel#<init>()#void#1#30#IDENT#super
-jnt.scimark2.MonteCarlo#integrate(int,int)#double#45#962#IDENT#sum
-jnt.scimark2.Random#<init>(double,double)#void#59#589#PLUS#(one << mdig - 2) + ((one << mdig - 2) - one)
-jnt.scimark2.Random#<init>(int,double,double)#void#130#2718#ASSIGN#width = right - left
-jnt.scimark2.Random#<init>()#void#69#638#IDENT#mdig
-jnt.scimark2.Random#<init>(int,double,double)#void#116#2680#ASSIGN#this.left = left
-jnt.scimark2.Random#nextDouble()#double#119#3300#IDENT#dm1
-jnt.scimark2.Random#<init>()#void#74#635#SL#one << mdig / 2
-jnt.scimark2.Random#<init>(int,double,double)#void#75#615#ASSIGN#m2 = one << mdig / 2
-jnt.scimark2.Random#initialize(int)#void#69#3760#IDENT#iloop
-jnt.scimark2.Random#<init>(int)#void#23#513#ASSIGN#mdig = 32
-jnt.scimark2.Random#<init>(int,double,double)#void#53#597#SL#one << mdig - 2
-jnt.scimark2.Random#<init>(int)#void#110#2099#IDENT#initialize
-jnt.scimark2.MonteCarlo#integrate(int,int)#double#26#872#IDENT#R
-jnt.scimark2.Random#nextDouble()#double#45#3150#EQ#i == 0
-jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#26#248#ASSIGN#out = accept(out)
-jnt.scimark2.Random#<init>()#void#60#557#ASSIGN#m1 = (one << mdig - 2) + ((one << mdig - 2) - one)
-jnt.scimark2.MonteCarlo#integrate(int,int)#double#43#900#VARDEF#double sum = x * x + y * y
-jnt.scimark2.Random#<init>(int,double,double)#void#73#642#DIV#mdig / 2
-jnt.scimark2.Random#initialize(int)#void#13#3623#SELECT#Math.min
-jnt.scimark2.Random#<init>(double,double)#void#58#607#MINUS#(one << mdig - 2) - one
-jnt.scimark2.Random#<init>(int,double,double)#void#105#910#IDENT#width
-jnt.scimark2.Random#<init>(int)#void#86#778#ASSIGN#dm1 = 1.0 / (double)m1
-jnt.scimark2.Random#nextDouble()#double#89#3224#PREDEC#--j
-jnt.scimark2.Random#<init>(double,double)#void#101#882#ASSIGN#right = 1.0
-jnt.scimark2.Random#nextDouble()#double#110#3269#MUL#dm1 * k
-jnt.scimark2.MonteCarlo#integrate(int,int)#double#45#955#IDENT#accept
-jnt.scimark2.Random#<init>(int,double,double)#void#55#608#IDENT#one
-jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#14#233#IDENT#SEED
-jnt.scimark2.MonteCarlo#integrate(int,int)#double#12#788#VARDEF#int count = 0
-jnt.scimark2.Random#initialize(int)#void#42#3684#ASSIGN#k0 = 9069 % m2
-jnt.scimark2.Random#<init>()#void#32#557#IDENT#m1
-jnt.scimark2.Random#nextDouble()#double#49#3160#IDENT#i
-jnt.scimark2.Random#<init>(int)#void#101#882#ASSIGN#right = 1.0
-jnt.scimark2.Random#<init>(int,double,double)#void#86#778#ASSIGN#dm1 = 1.0 / (double)m1
-jnt.scimark2.MonteCarlo#integrate(int,int)#double#39#914#IDENT#y
-jnt.scimark2.Random#initialize(int)#void#112#3886#IDENT#m2
-jnt.scimark2.commandline#main(java.lang.String[])#void#26#546#IDENT#min_time
-jnt.scimark2.Random#initialize(int)#void#90#3839#IDENT#j0
-jnt.scimark2.Random#<init>()#void#48#600#IDENT#mdig
-jnt.scimark2.Random#<init>(double,double)#void#120#1768#IDENT#this
-jnt.scimark2.Random#<init>(int,double,double)#void#81#813#IDENT#m1
-jnt.scimark2.MonteCarlo#integrate(int,int)#double#10#759#VARDEF#int under_curve = 0
-jnt.scimark2.Random#<init>()#void#105#910#IDENT#width
-jnt.scimark2.Random#initialize(int)#void#1#3574#SELECT#this.seed
-jnt.scimark2.Random#<init>(int,double,double)#void#80#804#TYPECAST#(double)m1
+430
+jnt.scimark2.Random#<init>(double,double)#void#85#802#DIV#1.0 / (double)m1
 jnt.scimark2.Random#<init>(int,double,double)#void#79#778#IDENT#dm1
-jnt.scimark2.Random#<init>(double,double)#void#128#1804#MINUS#right - left
-jnt.scimark2.Random#nextDouble()#double#17#3095#INDEXED#m[j]
-jnt.scimark2.Random#initialize(int)#void#24#3617#ASSIGN#jseed = Math.min(Math.abs(seed), m1)
-jnt.scimark2.Random#<init>(int)#void#28#536#ASSIGN#one = 1
-jnt.scimark2.Random#<init>(double,double)#void#23#513#ASSIGN#mdig = 32
-jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#5#147#VARDEF#double out = 0.0
-jnt.scimark2.Random#<init>(int,double,double)#void#110#2649#IDENT#initialize
-jnt.scimark2.Random#<init>()#void#101#882#ASSIGN#right = 1.0
-jnt.scimark2.Random#initialize(int)#void#47#3711#IDENT#m2
-jnt.scimark2.Random#initialize(int)#void#135#3785#IDENT#iloop
-jnt.scimark2.Random#initialize(int)#void#81#3813#IDENT#k0
-jnt.scimark2.Random#<init>(double,double)#void#42#578#SL#one << mdig - 2
-jnt.scimark2.Random#initialize(int)#void#55#3730#IDENT#m2
-jnt.scimark2.Random#nextDouble()#double#116#3262#PLUS#left + dm1 * k * width
-jnt.scimark2.MonteCarlo#integrate(int,int)#double#4#745#IDENT#SEED
-jnt.scimark2.Random#initialize(int)#void#82#3811#MUL#j0 * k0
-jnt.scimark2.Random#<init>(double,double)#void#116#1752#SELECT#this.left
-jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#59#321#ASSIGN#out = precise(out)
-jnt.scimark2.Random#<init>(int)#void#65#631#IDENT#one
-jnt.scimark2.Random#<init>(int,double,double)#void#15#492#IDENT#j
-jnt.scimark2.Random#initialize(int)#void#130#3914#IDENT#j1
-jnt.scimark2.Random#<init>(int,double,double)#void#48#600#IDENT#mdig
-jnt.scimark2.Random#initialize(int)#void#100#3847#PLUS#jseed / m2 + j0 * k1 + j1 * k0
-jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#43#307#IDENT#out
-jnt.scimark2.MonteCarlo#integrate(int,int)#double#20#842#IDENT#R
-jnt.scimark2.Random#<init>(int,double,double)#void#41#585#MINUS#mdig - 2
+jnt.scimark2.Random#nextDouble()#double#89#3224#PREDEC#--j
+jnt.scimark2.Random#<init>()#void#32#557#IDENT#m1
+jnt.scimark2.Random#<init>(int)#void#85#802#DIV#1.0 / (double)m1
 jnt.scimark2.Random#initialize(int)#void#10#3593#ASSIGN#m = new int[17]
-jnt.scimark2.Random#<init>()#void#41#585#MINUS#mdig - 2
-jnt.scimark2.Random#<init>(double,double)#void#52#604#MINUS#mdig - 2
-jnt.scimark2.Random#initialize(int)#void#99#3852#MUL#j1 * k0
-jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#54#323#IDENT#precise
+jnt.scimark2.Random#initialize(int)#void#47#3711#IDENT#m2
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#39#956#IDENT#y
+jnt.scimark2.Random#initialize(int)#void#38#3693#IDENT#m2
+jnt.scimark2.Random#<init>(double,double)#void#115#1748#IDENT#this
+jnt.scimark2.Random#<init>()#void#75#615#ASSIGN#m2 = one << mdig / 2
+jnt.scimark2.Random#nextDouble()#double#36#3132#IDENT#j
+jnt.scimark2.Random#initialize(int)#void#119#3893#IDENT#m
+jnt.scimark2.Random#initialize(int)#void#61#3741#IDENT#jseed
+jnt.scimark2.Random#<init>(int)#void#65#631#IDENT#one
+jnt.scimark2.Random#initialize(int)#void#95#3837#PLUS#jseed / m2 + j0 * k1
+jnt.scimark2.Random#<init>(double,double)#void#32#557#IDENT#m1
+jnt.scimark2.Random#<init>(int,double,double)#void#21#513#IDENT#mdig
+jnt.scimark2.Random#<init>(double,double)#void#17#492#ASSIGN#j = 16
+jnt.scimark2.Random#initialize(int)#void#112#3886#IDENT#m2
+jnt.scimark2.Random#<init>(int)#void#41#585#MINUS#mdig - 2
+jnt.scimark2.Random#<init>(int,double,double)#void#5#440#IDENT#seed
+jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#13#262#IDENT#cycles
+jnt.scimark2.Random#<init>()#void#55#608#IDENT#one
+jnt.scimark2.Random#<init>()#void#85#802#DIV#1.0 / (double)m1
+jnt.scimark2.Random#<init>(double,double)#void#121#1772#SELECT#this.right
+jnt.scimark2.Random#nextDouble()#double#110#3269#MUL#dm1 * k
+jnt.scimark2.commandline#main(java.lang.String[])#void#24#490#INDEXED#args[0]
+jnt.scimark2.Random#<init>()#void#90#819#IDENT#haveRange
+jnt.scimark2.Random#<init>()#void#91#819#ASSIGN#haveRange = false
+jnt.scimark2.Random#initialize(int)#void#2#3580#ASSIGN#this.seed = seed
+jnt.scimark2.Random#initialize(int)#void#8#3595#NEWARRAY#new int[17]
+jnt.scimark2.Random#<init>(double,double)#void#95#854#IDENT#left
+jnt.scimark2.Random#<init>()#void#58#607#MINUS#(one << mdig - 2) - one
+jnt.scimark2.Random#<init>(double,double)#void#121#1781#IDENT#right
+jnt.scimark2.Random#initialize(int)#void#18#3643#IDENT#m1
+jnt.scimark2.Random#<init>(int,double,double)#void#116#2680#ASSIGN#this.left = left
+jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#43#351#IDENT#out
+jnt.scimark2.Random#<init>(double,double)#void#59#589#PLUS#(one << mdig - 2) + ((one << mdig - 2) - one)
+jnt.scimark2.Random#<init>(double,double)#void#37#581#IDENT#mdig
+jnt.scimark2.Random#initialize(int)#void#133#3907#PLUS#j0 + m2 * j1
+jnt.scimark2.Random#<init>(int,double,double)#void#64#615#IDENT#m2
+jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#21#301#IDENT#out
+jnt.scimark2.commandline#main(java.lang.String[])#void#3#308#VARDEF#double min_time = Constants.RESOLUTION_DEFAULT
+jnt.scimark2.kernel#<init>()#void#1#67#IDENT#super
+jnt.scimark2.Random#<init>()#void#53#597#SL#one << mdig - 2
+jnt.scimark2.Random#<init>(int,double,double)#void#6#440#ASSIGN#seed = 0
+jnt.scimark2.Random#<init>(int)#void#42#578#SL#one << mdig - 2
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#41#955#MUL#y * y
+jnt.scimark2.Random#nextDouble()#double#26#3123#IDENT#m1
+jnt.scimark2.Random#initialize(int)#void#61#3736#IDENT#j1
+jnt.scimark2.Constants#<init>()#void#1#30#IDENT#super
+jnt.scimark2.Random#<init>(int)#void#101#882#ASSIGN#right = 1.0
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#45#1011#IDENT#sum
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#37#954#IDENT#y
+jnt.scimark2.Random#nextDouble()#double#112#3275#IDENT#width
+jnt.scimark2.Random#<init>(int)#void#90#819#IDENT#haveRange
+jnt.scimark2.Random#initialize(int)#void#42#3684#ASSIGN#k0 = 9069 % m2
+jnt.scimark2.Random#<init>(double,double)#void#33#574#IDENT#one
+jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#21#293#SELECT#Accept.accept
+jnt.scimark2.Random#<init>(int)#void#21#513#IDENT#mdig
+jnt.scimark2.Random#<init>(double,double)#void#126#1790#IDENT#width
+jnt.scimark2.Random#initialize(int)#void#25#3654#IDENT#jseed
+jnt.scimark2.Random#<init>(double,double)#void#128#1804#MINUS#right - left
+jnt.scimark2.Random#<init>(int,double,double)#void#129#2726#MINUS#right - left
+jnt.scimark2.Random#<init>(int,double,double)#void#134#2736#IDENT#haveRange
+jnt.scimark2.Random#<init>(double,double)#void#116#1760#IDENT#left
+jnt.scimark2.Random#initialize(int)#void#116#3876#ASSIGN#j0 = jseed % m2
+jnt.scimark2.Random#<init>(double,double)#void#48#600#IDENT#mdig
+jnt.scimark2.Random#initialize(int)#void#143#3926#ASSIGN#i = 4
+jnt.scimark2.Random#<init>(int,double,double)#void#105#910#IDENT#width
+jnt.scimark2.Random#<init>(int)#void#110#2099#IDENT#initialize
+jnt.scimark2.Random#initialize(int)#void#53#3722#IDENT#jseed
+jnt.scimark2.Random#initialize(int)#void#31#3672#IDENT#jseed
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#52#1025#IDENT#sum
 jnt.scimark2.Random#initialize(int)#void#31#3670#PREDEC#--jseed
 jnt.scimark2.commandline#main(java.lang.String[])#void#7#383#SELECT#args.length
-jnt.scimark2.Random#<init>(double,double)#void#17#492#ASSIGN#j = 16
-jnt.scimark2.Random#<init>(int)#void#21#513#IDENT#mdig
-jnt.scimark2.Random#<init>(int)#void#32#557#IDENT#m1
-jnt.scimark2.Random#<init>()#void#21#513#IDENT#mdig
-jnt.scimark2.Random#initialize(int)#void#94#3842#MUL#j0 * k1
-jnt.scimark2.Random#initialize(int)#void#135#3783#PREINC#++iloop
-jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#7#179#SELECT#Integer.parseInt
-jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#13#198#IDENT#out
-jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#21#250#IDENT#accept
-jnt.scimark2.Random#<init>(int,double,double)#void#91#819#ASSIGN#haveRange = false
-jnt.scimark2.Random#<init>(int,double,double)#void#101#882#ASSIGN#right = 1.0
-jnt.scimark2.Random#<init>()#void#33#574#IDENT#one
-jnt.scimark2.Random#<init>(double,double)#void#0#1720#IDENT#super
-jnt.scimark2.Random#<init>(int,double,double)#void#74#635#SL#one << mdig / 2
-jnt.scimark2.Random#nextDouble()#double#36#3132#IDENT#j
-jnt.scimark2.Random#nextDouble()#double#94#3235#IDENT#haveRange
-jnt.scimark2.Random#<init>(double,double)#void#27#536#IDENT#one
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#68#1084#IDENT#under_curve
 jnt.scimark2.Random#nextDouble()#double#24#3118#IDENT#k
-jnt.scimark2.Random#<init>()#void#23#513#ASSIGN#mdig = 32
-jnt.scimark2.Random#<init>(double,double)#void#6#440#ASSIGN#seed = 0
-jnt.scimark2.Random#<init>(double,double)#void#90#819#IDENT#haveRange
-jnt.scimark2.Random#<init>(int,double,double)#void#64#615#IDENT#m2
-jnt.scimark2.Random#nextDouble()#double#32#3130#IDENT#m
-jnt.scimark2.Random#<init>(double,double)#void#15#492#IDENT#j
-jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#28#272#SELECT#System.out
-jnt.scimark2.MonteCarlo#integrate(int,int)#double#62#816#IDENT#count
-jnt.scimark2.Random#<init>(double,double)#void#95#854#IDENT#left
-jnt.scimark2.commandline#main(java.lang.String[])#void#26#527#SELECT#kernel.measureMonteCarlo
-jnt.scimark2.commandline#main(java.lang.String[])#void#22#486#IDENT#args
-jnt.scimark2.Random#<init>(double,double)#void#126#1790#IDENT#width
-jnt.scimark2.Random#initialize(int)#void#13#3632#SELECT#Math.abs
-jnt.scimark2.Random#<init>()#void#6#440#ASSIGN#seed = 0
-jnt.scimark2.Random#nextDouble()#double#1#3087#IDENT#m
-jnt.scimark2.Random#nextDouble()#double#39#3137#IDENT#k
-jnt.scimark2.MonteCarlo#integrate(int,int)#double#50#953#ASSIGN#sum = accept(sum)
-jnt.scimark2.Random#<init>(double,double)#void#64#615#IDENT#m2
-jnt.scimark2.Random#<init>(int,double,double)#void#126#2720#IDENT#right
-jnt.scimark2.Random#initialize(int)#void#72#3771#IDENT#iloop
-jnt.scimark2.Random#<init>(int)#void#55#608#IDENT#one
-jnt.scimark2.Random#<init>(int,double,double)#void#1#2645#IDENT#super
-jnt.scimark2.Random#initialize(int)#void#132#3912#MUL#m2 * j1
-jnt.scimark2.Random#<init>()#void#0#1264#IDENT#super
-jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#3#125#VARDEF#int cycles = 1492
-jnt.scimark2.Random#<init>(int)#void#79#778#IDENT#dm1
-jnt.scimark2.Random#<init>(int)#void#73#642#DIV#mdig / 2
-jnt.scimark2.Random#<init>(int)#void#106#910#ASSIGN#width = 1.0
-jnt.scimark2.Random#<init>(int,double,double)#void#6#440#ASSIGN#seed = 0
-jnt.scimark2.Random#<init>()#void#100#882#IDENT#right
-jnt.scimark2.Random#<init>(int,double,double)#void#60#557#ASSIGN#m1 = (one << mdig - 2) + ((one << mdig - 2) - one)
-jnt.scimark2.MonteCarlo#integrate(int,int)#double#45#949#IDENT#sum
-jnt.scimark2.Random#initialize(int)#void#58#3728#MOD#jseed % m2
-jnt.scimark2.Random#<init>(double,double)#void#41#585#MINUS#mdig - 2
-jnt.scimark2.Random#<init>(int)#void#60#557#ASSIGN#m1 = (one << mdig - 2) + ((one << mdig - 2) - one)
-jnt.scimark2.Random#<init>(double,double)#void#81#813#IDENT#m1
-jnt.scimark2.Random#<init>(int)#void#64#615#IDENT#m2
-jnt.scimark2.Random#initialize(int)#void#13#3637#IDENT#seed
-jnt.scimark2.Random#<init>()#void#44#593#IDENT#one
-jnt.scimark2.MonteCarlo#<init>()#void#0#633#IDENT#super
-jnt.scimark2.MonteCarlo#integrate(int,int)#double#34#908#IDENT#x
-jnt.scimark2.Random#initialize(int)#void#27#3660#MOD#jseed % 2
-jnt.scimark2.Random#<init>()#void#52#604#MINUS#mdig - 2
-jnt.scimark2.Random#nextDouble()#double#71#3193#EQ#j == 0
-jnt.scimark2.Random#nextDouble()#double#122#3306#IDENT#k
-jnt.scimark2.Random#<init>(double,double)#void#48#600#IDENT#mdig
-jnt.scimark2.Random#<init>(int,double,double)#void#100#882#IDENT#right
-jnt.scimark2.kernel#accept(double)#double#0#405#IDENT#d
-jnt.scimark2.kernel#<init>()#void#0#30#IDENT#super
-jnt.scimark2.Random#<init>(int)#void#41#585#MINUS#mdig - 2
-jnt.scimark2.Random#initialize(int)#void#38#3693#IDENT#m2
-jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#21#257#IDENT#out
-jnt.scimark2.Random#initialize(int)#void#115#3884#MOD#jseed % m2
-jnt.scimark2.Random#<init>(int,double,double)#void#0#2645#IDENT#super
-jnt.scimark2.Random#<init>(int,double,double)#void#28#536#ASSIGN#one = 1
-jnt.scimark2.Random#<init>(double,double)#void#21#513#IDENT#mdig
-jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#28#272#SELECT#System.out
-jnt.scimark2.MonteCarlo#<init>()#void#1#633#IDENT#super
-jnt.scimark2.Random#nextDouble()#double#84#3223#IDENT#j
-jnt.scimark2.Random#<init>(int)#void#85#802#DIV#1.0 / (double)m1
-jnt.scimark2.Random#initialize(int)#void#41#3691#MOD#9069 % m2
-jnt.scimark2.Random#<init>()#void#91#819#ASSIGN#haveRange = false
-jnt.scimark2.Random#nextDouble()#double#14#3096#IDENT#j
-jnt.scimark2.MonteCarlo#integrate(int,int)#double#24#839#VARDEF#double x = R.nextDouble()
-jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#21#244#IDENT#out
-jnt.scimark2.Random#<init>(double,double)#void#106#910#ASSIGN#width = 1.0
-jnt.scimark2.commandline#main(java.lang.String[])#void#3#308#VARDEF#double min_time = Constants.RESOLUTION_DEFAULT
-jnt.scimark2.Random#initialize(int)#void#25#3654#IDENT#jseed
-jnt.scimark2.Random#nextDouble()#double#42#3148#IDENT#i
-jnt.scimark2.Random#<init>()#void#42#578#SL#one << mdig - 2
-jnt.scimark2.Random#<init>(double,double)#void#115#1748#IDENT#this
-jnt.scimark2.Random#<init>(double,double)#void#116#1760#IDENT#left
-jnt.scimark2.Random#initialize(int)#void#102#3861#IDENT#m2
-jnt.scimark2.MonteCarlo#integrate(int,int)#double#27#873#SELECT#R.nextDouble
-jnt.scimark2.Random#<init>()#void#15#492#IDENT#j
-jnt.scimark2.Random#initialize(int)#void#108#3823#ASSIGN#j1 = (jseed / m2 + j0 * k1 + j1 * k0) % (m2 / 2)
-jnt.scimark2.Random#<init>(int)#void#59#589#PLUS#(one << mdig - 2) + ((one << mdig - 2) - one)
-jnt.scimark2.Random#<init>()#void#95#854#IDENT#left
-jnt.scimark2.Random#initialize(int)#void#0#3570#IDENT#this
-jnt.scimark2.Random#<init>(int,double,double)#void#115#2682#IDENT#left
-jnt.scimark2.Random#nextDouble()#double#57#3180#PREDEC#--i
-jnt.scimark2.commandline#<init>()#void#0#235#IDENT#super
-jnt.scimark2.MonteCarlo#integrate(int,int)#double#59#1004#PREINC#++under_curve
-jnt.scimark2.Random#<init>(int)#void#105#910#IDENT#width
-jnt.scimark2.Random#<init>(double,double)#void#86#778#ASSIGN#dm1 = 1.0 / (double)m1
-jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#31#276#SELECT#System.out.println
-jnt.scimark2.Random#<init>(int)#void#15#492#IDENT#j
-jnt.scimark2.Random#nextDouble()#double#115#3273#MUL#dm1 * k * width
-jnt.scimark2.Random#initialize(int)#void#89#3832#DIV#jseed / m2
-jnt.scimark2.MonteCarlo#integrate(int,int)#double#41#913#MUL#y * y
-jnt.scimark2.Random#nextDouble()#double#29#3120#PLUS_ASG#k += m1
-jnt.scimark2.Random#<init>(int)#void#95#854#IDENT#left
-jnt.scimark2.commandline#main(java.lang.String[])#void#12#406#NEWCLASS#new RuntimeException("Error! Seed should be provided as an argument")
-jnt.scimark2.MonteCarlo#integrate(int,int)#double#21#843#SELECT#R.nextDouble
-jnt.scimark2.Random#<init>(double,double)#void#96#854#ASSIGN#left = 0.0
-jnt.scimark2.Random#<init>(double,double)#void#33#574#IDENT#one
-jnt.scimark2.Random#<init>(int,double,double)#void#90#819#IDENT#haveRange
-jnt.scimark2.Random#<init>(double,double)#void#79#778#IDENT#dm1
-jnt.scimark2.MonteCarlo#integrate(int,int)#double#14#797#IDENT#count
-jnt.scimark2.Random#<init>(double,double)#void#1#1720#IDENT#super
-jnt.scimark2.Random#<init>(int,double,double)#void#33#574#IDENT#one
-jnt.scimark2.MonteCarlo#integrate(int,int)#double#76#1062#MUL#((double)under_curve / Num_samples) * 4.0
-jnt.scimark2.MonteCarlo#integrate(int,int)#double#62#821#PREINC#++count
-jnt.scimark2.Random#<init>()#void#96#854#ASSIGN#left = 0.0
-jnt.scimark2.Random#<init>(int,double,double)#void#17#492#ASSIGN#j = 16
-jnt.scimark2.Random#<init>(int)#void#96#854#ASSIGN#left = 0.0
-jnt.scimark2.Random#<init>(int,double,double)#void#120#2694#SELECT#this.right
-jnt.scimark2.Random#<init>(int,double,double)#void#134#2736#IDENT#haveRange
-jnt.scimark2.Random#initialize(int)#void#110#3878#IDENT#jseed
-jnt.scimark2.Random#initialize(int)#void#107#3858#MOD#(jseed / m2 + j0 * k1 + j1 * k0) % (m2 / 2)
-jnt.scimark2.Random#<init>(int)#void#52#604#MINUS#mdig - 2
-jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#13#214#SELECT#MonteCarlo.integrate
-jnt.scimark2.Random#initialize(int)#void#2#3580#ASSIGN#this.seed = seed
-jnt.scimark2.Random#<init>(int,double,double)#void#27#536#IDENT#one
-jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#11#165#VARDEF#int SEED = Integer.parseInt(seed)
-jnt.scimark2.commandline#main(java.lang.String[])#void#26#527#SELECT#kernel.measureMonteCarlo
-jnt.scimark2.Random#<init>(double,double)#void#53#597#SL#one << mdig - 2
-jnt.scimark2.Random#<init>(double,double)#void#32#557#IDENT#m1
-jnt.scimark2.Random#<init>(int)#void#53#597#SL#one << mdig - 2
-jnt.scimark2.Random#<init>()#void#80#804#TYPECAST#(double)m1
-jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#7#179#SELECT#Integer.parseInt
-jnt.scimark2.MonteCarlo#integrate(int,int)#double#30#869#VARDEF#double y = R.nextDouble()
-jnt.scimark2.Random#<init>(double,double)#void#85#802#DIV#1.0 / (double)m1
-jnt.scimark2.Random#<init>(int,double,double)#void#106#910#ASSIGN#width = 1.0
-jnt.scimark2.Random#nextDouble()#double#83#3224#PREDEC#--j
-jnt.scimark2.Random#nextDouble()#double#58#3179#IDENT#i
-jnt.scimark2.Random#<init>(double,double)#void#74#635#SL#one << mdig / 2
-jnt.scimark2.Random#<init>(double,double)#void#121#1772#SELECT#this.right
-jnt.scimark2.Random#nextDouble()#double#112#3275#IDENT#width
-jnt.scimark2.Random#nextDouble()#double#10#3094#IDENT#m
-jnt.scimark2.Random#<init>(int)#void#80#804#TYPECAST#(double)m1
-jnt.scimark2.Random#initialize(int)#void#95#3837#PLUS#jseed / m2 + j0 * k1
-jnt.scimark2.MonteCarlo#integrate(int,int)#double#42#910#PLUS#x * x + y * y
-jnt.scimark2.Random#nextDouble()#double#105#3265#IDENT#dm1
-jnt.scimark2.Random#initialize(int)#void#133#3907#PLUS#j0 + m2 * j1
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#62#863#PREINC#++count
+jnt.scimark2.MonteCarlo#<init>()#void#1#675#IDENT#super
 jnt.scimark2.Random#initialize(int)#void#98#3854#IDENT#k0
-jnt.scimark2.Random#<init>()#void#1#1264#IDENT#super
-jnt.scimark2.Random#<init>(int)#void#37#581#IDENT#mdig
-jnt.scimark2.MonteCarlo#integrate(int,int)#double#59#992#IDENT#under_curve
-jnt.scimark2.Random#initialize(int)#void#124#3904#IDENT#j0
-jnt.scimark2.Random#<init>(int)#void#44#593#IDENT#one
-jnt.scimark2.Random#<init>()#void#27#536#IDENT#one
-jnt.scimark2.Random#nextDouble()#double#108#3271#IDENT#k
-jnt.scimark2.Random#nextDouble()#double#8#3088#INDEXED#m[i]
-jnt.scimark2.Random#<init>(double,double)#void#121#1781#IDENT#right
-jnt.scimark2.Random#initialize(int)#void#106#3864#DIV#m2 / 2
+jnt.scimark2.Random#<init>()#void#23#513#ASSIGN#mdig = 32
 jnt.scimark2.Random#<init>(int,double,double)#void#95#854#IDENT#left
-jnt.scimark2.commandline#main(java.lang.String[])#void#25#484#ASSIGN#seed = args[0]
-jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#7#189#IDENT#seed
-jnt.scimark2.Random#<init>()#void#17#492#ASSIGN#j = 16
-jnt.scimark2.Random#nextDouble()#double#18#3092#MINUS#m[i] - m[j]
 jnt.scimark2.Random#initialize(int)#void#51#3702#ASSIGN#k1 = 9069 / m2
-jnt.scimark2.Random#<init>()#void#53#597#SL#one << mdig - 2
-jnt.scimark2.Random#initialize(int)#void#116#3876#ASSIGN#j0 = jseed % m2
-jnt.scimark2.Random#<init>()#void#64#615#IDENT#m2
-jnt.scimark2.Random#nextDouble()#double#20#3107#IDENT#k
-jnt.scimark2.Random#initialize(int)#void#86#3834#IDENT#m2
-jnt.scimark2.Random#<init>(int)#void#81#813#IDENT#m1
-jnt.scimark2.Random#nextDouble()#double#0#3083#IDENT#k
-jnt.scimark2.Random#nextDouble()#double#124#3304#MUL#dm1 * k
-jnt.scimark2.Random#<init>(double,double)#void#100#882#IDENT#right
-jnt.scimark2.MonteCarlo#integrate(int,int)#double#70#1049#IDENT#Num_samples
-jnt.scimark2.Random#<init>(int,double,double)#void#135#2746#ASSIGN#haveRange = true
-jnt.scimark2.MonteCarlo#integrate(int,int)#double#8#730#VARDEF#Random R = new Random(SEED)
-jnt.scimark2.Random#<init>(double,double)#void#133#1814#IDENT#haveRange
-jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#54#317#IDENT#out
-jnt.scimark2.commandline#<init>()#void#1#235#IDENT#super
-jnt.scimark2.Random#initialize(int)#void#61#3741#IDENT#jseed
-jnt.scimark2.Random#initialize(int)#void#83#3806#ASSIGN#jseed = j0 * k0
-jnt.scimark2.MonteCarlo#integrate(int,int)#double#68#1026#TYPECAST#(double)under_curve
-jnt.scimark2.Random#<init>()#void#79#778#IDENT#dm1
-jnt.scimark2.Random#initialize(int)#void#110#3873#IDENT#j0
-jnt.scimark2.Random#<init>(double,double)#void#126#1798#IDENT#right
-jnt.scimark2.Random#<init>(int,double,double)#void#59#589#PLUS#(one << mdig - 2) + ((one << mdig - 2) - one)
-jnt.scimark2.Random#initialize(int)#void#149#3935#ASSIGN#j = 16
-jnt.scimark2.Random#<init>(int)#void#90#819#IDENT#haveRange
-jnt.scimark2.Random#<init>(int)#void#42#578#SL#one << mdig - 2
-jnt.scimark2.Random#<init>()#void#81#813#IDENT#m1
-jnt.scimark2.Random#<init>(double,double)#void#37#581#IDENT#mdig
-jnt.scimark2.Random#initialize(int)#void#92#3844#IDENT#k1
-jnt.scimark2.Random#<init>(int)#void#110#2111#IDENT#seed
-jnt.scimark2.Random#<init>(double,double)#void#110#1724#IDENT#initialize
-jnt.scimark2.Random#nextDouble()#double#101#3257#IDENT#left
-jnt.scimark2.MonteCarlo#integrate(int,int)#double#16#803#IDENT#Num_samples
-jnt.scimark2.Random#<init>(int,double,double)#void#52#604#MINUS#mdig - 2
-jnt.scimark2.Random#<init>()#void#11#473#ASSIGN#i = 4
-jnt.scimark2.Random#initialize(int)#void#8#3595#NEWARRAY#new int[17]
-jnt.scimark2.Random#<init>(int)#void#5#440#IDENT#seed
-jnt.scimark2.Random#<init>(int,double,double)#void#11#473#ASSIGN#i = 4
-jnt.scimark2.Random#<init>(int,double,double)#void#21#513#IDENT#mdig
-jnt.scimark2.Random#<init>(int,double,double)#void#115#2674#SELECT#this.left
-jnt.scimark2.Random#<init>(int)#void#33#574#IDENT#one
-jnt.scimark2.Random#initialize(int)#void#66#3747#DIV#jseed / m2
-jnt.scimark2.Random#<init>(int)#void#0#2095#IDENT#super
-jnt.scimark2.MonteCarlo#integrate(int,int)#double#0#734#NEWCLASS#new Random(SEED)
-jnt.scimark2.Random#<init>()#void#75#615#ASSIGN#m2 = one << mdig / 2
-jnt.scimark2.Random#<init>()#void#58#607#MINUS#(one << mdig - 2) - one
-jnt.scimark2.Random#<init>(double,double)#void#60#557#ASSIGN#m1 = (one << mdig - 2) + ((one << mdig - 2) - one)
-jnt.scimark2.Random#<init>(double,double)#void#129#1796#ASSIGN#width = right - left
-jnt.scimark2.MonteCarlo#integrate(int,int)#double#36#907#MUL#x * x
-jnt.scimark2.Random#<init>(int,double,double)#void#129#2726#MINUS#right - left
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#59#1053#PREINC#++under_curve
+jnt.scimark2.Random#<init>(int,double,double)#void#33#574#IDENT#one
+jnt.scimark2.Random#initialize(int)#void#124#3894#INDEXED#m[iloop]
+jnt.scimark2.Random#initialize(int)#void#115#3884#MOD#jseed % m2
+jnt.scimark2.Random#initialize(int)#void#135#3783#PREINC#++iloop
 jnt.scimark2.Random#initialize(int)#void#13#3632#SELECT#Math.abs
-jnt.scimark2.Random#initialize(int)#void#134#3902#ASSIGN#m[iloop] = j0 + m2 * j1
-jnt.scimark2.Random#<init>(int,double,double)#void#114#2670#IDENT#this
-jnt.scimark2.Random#initialize(int)#void#127#3909#IDENT#m2
-jnt.scimark2.Random#<init>(int,double,double)#void#122#2701#ASSIGN#this.right = right
-jnt.scimark2.Random#nextDouble()#double#51#3162#ASSIGN#i = 16
-jnt.scimark2.Random#<init>(int)#void#91#819#ASSIGN#haveRange = false
-jnt.scimark2.Random#<init>(double,double)#void#75#615#ASSIGN#m2 = one << mdig / 2
+jnt.scimark2.MonteCarlo#<init>()#void#0#675#IDENT#super
+jnt.scimark2.Random#<init>(int,double,double)#void#53#597#SL#one << mdig - 2
+jnt.scimark2.Random#<init>()#void#0#1264#IDENT#super
+jnt.scimark2.Random#nextDouble()#double#10#3094#IDENT#m
+jnt.scimark2.Random#<init>(int)#void#33#574#IDENT#one
+jnt.scimark2.Random#initialize(int)#void#27#3660#MOD#jseed % 2
+jnt.scimark2.Random#initialize(int)#void#13#3611#IDENT#jseed
+jnt.scimark2.Random#nextDouble()#double#101#3257#IDENT#left
+jnt.scimark2.Random#<init>()#void#37#581#IDENT#mdig
+jnt.scimark2.Random#<init>(int,double,double)#void#100#882#IDENT#right
+jnt.scimark2.Random#<init>()#void#79#778#IDENT#dm1
+jnt.scimark2.Random#nextDouble()#double#0#3083#IDENT#k
+jnt.scimark2.Random#<init>(double,double)#void#73#642#DIV#mdig / 2
+jnt.scimark2.Random#<init>()#void#105#910#IDENT#width
+jnt.scimark2.Random#nextDouble()#double#124#3304#MUL#dm1 * k
+jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#31#320#SELECT#System.out.println
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#45#991#IDENT#sum
+jnt.scimark2.commandline#main(java.lang.String[])#void#22#486#IDENT#args
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#36#949#MUL#x * x
+jnt.scimark2.Random#initialize(int)#void#76#3777#LT#iloop < 17
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#32#948#IDENT#x
+jnt.scimark2.Random#<init>(double,double)#void#23#513#ASSIGN#mdig = 32
+jnt.scimark2.commandline#main(java.lang.String[])#void#22#479#IDENT#seed
+jnt.scimark2.Random#<init>(int,double,double)#void#110#2649#IDENT#initialize
+jnt.scimark2.Random#<init>()#void#33#574#IDENT#one
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#62#858#IDENT#count
+jnt.scimark2.Random#<init>(int,double,double)#void#86#778#ASSIGN#dm1 = 1.0 / (double)m1
+jnt.scimark2.Random#nextDouble()#double#71#3193#EQ#j == 0
+jnt.scimark2.Random#<init>()#void#41#585#MINUS#mdig - 2
+jnt.scimark2.Random#<init>(int,double,double)#void#42#578#SL#one << mdig - 2
+jnt.scimark2.Random#initialize(int)#void#43#3699#IDENT#k1
 jnt.scimark2.Random#<init>(double,double)#void#127#1806#IDENT#left
-jnt.scimark2.Random#<init>()#void#55#608#IDENT#one
-jnt.scimark2.Random#<init>(int,double,double)#void#65#631#IDENT#one
-jnt.scimark2.Random#<init>(int,double,double)#void#119#2690#IDENT#this
-jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#13#214#SELECT#MonteCarlo.integrate
-jnt.scimark2.Random#<init>(double,double)#void#44#593#IDENT#one
-jnt.scimark2.Random#<init>(int)#void#6#440#ASSIGN#seed = 0
+jnt.scimark2.Random#<init>(int,double,double)#void#15#492#IDENT#j
+jnt.scimark2.Random#<init>(int)#void#75#615#ASSIGN#m2 = one << mdig / 2
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#14#839#IDENT#count
+jnt.scimark2.Random#nextDouble()#double#17#3095#INDEXED#m[j]
+jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#7#216#SELECT#Integer.parseInt
+jnt.scimark2.Random#<init>()#void#27#536#IDENT#one
+jnt.scimark2.commandline#main(java.lang.String[])#void#26#527#SELECT#kernel.measureMonteCarlo
 jnt.scimark2.Random#<init>(int,double,double)#void#37#581#IDENT#mdig
-jnt.scimark2.Random#initialize(int)#void#79#3800#IDENT#jseed
-jnt.scimark2.Random#<init>(int)#void#48#600#IDENT#mdig
-jnt.scimark2.Random#nextDouble()#double#39#3131#INDEXED#m[j]
+jnt.scimark2.Random#nextDouble()#double#115#3273#MUL#dm1 * k * width
+jnt.scimark2.Random#<init>(double,double)#void#21#513#IDENT#mdig
+jnt.scimark2.Random#<init>(int,double,double)#void#73#642#DIV#mdig / 2
+jnt.scimark2.Random#<init>(int)#void#55#608#IDENT#one
+jnt.scimark2.Random#nextDouble()#double#40#3135#ASSIGN#m[j] = k
+jnt.scimark2.Random#<init>(double,double)#void#69#638#IDENT#mdig
+jnt.scimark2.Random#nextDouble()#double#57#3180#PREDEC#--i
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#26#914#IDENT#R
+jnt.scimark2.Random#<init>(int,double,double)#void#17#492#ASSIGN#j = 16
+jnt.scimark2.kernel#<init>()#void#0#67#IDENT#super
+jnt.scimark2.Random#initialize(int)#void#13#3632#SELECT#Math.abs
+jnt.scimark2.Random#nextDouble()#double#18#3092#MINUS#m[i] - m[j]
+jnt.scimark2.Random#<init>(int)#void#69#638#IDENT#mdig
+jnt.scimark2.Random#<init>(int,double,double)#void#55#608#IDENT#one
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#68#1075#TYPECAST#(double)under_curve
+jnt.scimark2.Random#initialize(int)#void#90#3839#IDENT#j0
+jnt.scimark2.commandline#<init>()#void#1#235#IDENT#super
+jnt.scimark2.Random#initialize(int)#void#67#3739#ASSIGN#j1 = jseed / m2
+jnt.scimark2.Random#<init>()#void#10#473#IDENT#i
+jnt.scimark2.Random#<init>(double,double)#void#86#778#ASSIGN#dm1 = 1.0 / (double)m1
+jnt.scimark2.Random#<init>(int,double,double)#void#52#604#MINUS#mdig - 2
+jnt.scimark2.Random#<init>()#void#74#635#SL#one << mdig / 2
+jnt.scimark2.Random#nextDouble()#double#84#3223#IDENT#j
+jnt.scimark2.Random#initialize(int)#void#147#3933#IDENT#j
+jnt.scimark2.Random#<init>(int,double,double)#void#48#600#IDENT#mdig
+jnt.scimark2.Random#<init>(int,double,double)#void#44#593#IDENT#one
+jnt.scimark2.Random#<init>(double,double)#void#105#910#IDENT#width
+jnt.scimark2.Random#<init>(int,double,double)#void#126#2720#IDENT#right
+jnt.scimark2.Random#initialize(int)#void#0#3570#IDENT#this
+jnt.scimark2.Random#<init>(double,double)#void#129#1796#ASSIGN#width = right - left
+jnt.scimark2.Random#<init>()#void#100#882#IDENT#right
+jnt.scimark2.Random#<init>(int,double,double)#void#75#615#ASSIGN#m2 = one << mdig / 2
+jnt.scimark2.Random#<init>()#void#73#642#DIV#mdig / 2
+jnt.scimark2.Random#initialize(int)#void#13#3637#IDENT#seed
+jnt.scimark2.Random#initialize(int)#void#110#3878#IDENT#jseed
+jnt.scimark2.Random#initialize(int)#void#55#3730#IDENT#m2
+jnt.scimark2.Random#<init>(double,double)#void#5#440#IDENT#seed
+jnt.scimark2.Random#initialize(int)#void#28#3664#EQ#jseed % 2 == 0
+jnt.scimark2.Random#nextDouble()#double#68#3191#IDENT#j
+jnt.scimark2.Random#initialize(int)#void#58#3728#MOD#jseed % m2
+jnt.scimark2.Random#<init>(double,double)#void#80#804#TYPECAST#(double)m1
+jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#13#251#SELECT#MonteCarlo.integrate
+jnt.scimark2.Random#<init>(int)#void#32#557#IDENT#m1
+jnt.scimark2.Random#<init>(int)#void#95#854#IDENT#left
+jnt.scimark2.Random#initialize(int)#void#102#3861#IDENT#m2
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#76#1111#MUL#((double)under_curve / Num_samples) * 4.0
+jnt.scimark2.Random#<init>(int,double,double)#void#10#473#IDENT#i
+jnt.scimark2.Random#initialize(int)#void#81#3813#IDENT#k0
+jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#28#316#SELECT#System.out
+jnt.scimark2.Random#<init>(int,double,double)#void#1#2645#IDENT#super
+jnt.scimark2.Random#nextDouble()#double#108#3271#IDENT#k
+jnt.scimark2.Random#<init>()#void#1#1264#IDENT#super
+jnt.scimark2.Random#<init>(double,double)#void#11#473#ASSIGN#i = 4
+jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#14#270#IDENT#SEED
+jnt.scimark2.Random#initialize(int)#void#79#3808#IDENT#j0
+jnt.scimark2.Random#<init>(int,double,double)#void#120#2694#SELECT#this.right
+jnt.scimark2.Random#initialize(int)#void#6#3591#IDENT#m
+jnt.scimark2.Random#<init>()#void#95#854#IDENT#left
+jnt.scimark2.Random#<init>(double,double)#void#126#1798#IDENT#right
+jnt.scimark2.Random#<init>(double,double)#void#133#1814#IDENT#haveRange
+jnt.scimark2.Random#initialize(int)#void#70#3766#ASSIGN#iloop = 0
+jnt.scimark2.Random#initialize(int)#void#110#3873#IDENT#j0
+jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#5#184#VARDEF#double out = 0.0
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#72#1096#DIV#(double)under_curve / Num_samples
+jnt.scimark2.Random#<init>(int,double,double)#void#59#589#PLUS#(one << mdig - 2) + ((one << mdig - 2) - one)
+jnt.scimark2.Random#<init>(int,double,double)#void#69#638#IDENT#mdig
+jnt.scimark2.Random#<init>()#void#80#804#TYPECAST#(double)m1
+jnt.scimark2.Random#<init>(int,double,double)#void#41#585#MINUS#mdig - 2
+jnt.scimark2.Random#nextDouble()#double#8#3088#INDEXED#m[i]
+jnt.scimark2.commandline#main(java.lang.String[])#void#26#527#SELECT#kernel.measureMonteCarlo
+jnt.scimark2.Random#nextDouble()#double#42#3148#IDENT#i
+jnt.scimark2.Random#<init>()#void#101#882#ASSIGN#right = 1.0
+jnt.scimark2.Random#<init>(int,double,double)#void#135#2746#ASSIGN#haveRange = true
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#4#787#IDENT#SEED
+jnt.scimark2.Random#<init>()#void#86#778#ASSIGN#dm1 = 1.0 / (double)m1
+jnt.scimark2.Random#<init>(double,double)#void#58#607#MINUS#(one << mdig - 2) - one
+jnt.scimark2.Random#<init>(int,double,double)#void#28#536#ASSIGN#one = 1
+jnt.scimark2.commandline#main(java.lang.String[])#void#6#379#IDENT#args
+jnt.scimark2.Random#nextDouble()#double#5#3089#IDENT#i
+jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#11#202#VARDEF#int SEED = Integer.parseInt(seed)
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#45#1003#SELECT#Accept.accept
+jnt.scimark2.Random#<init>(double,double)#void#60#557#ASSIGN#m1 = (one << mdig - 2) + ((one << mdig - 2) - one)
+jnt.scimark2.commandline#<init>()#void#0#235#IDENT#super
+jnt.scimark2.Random#<init>(double,double)#void#96#854#ASSIGN#left = 0.0
+jnt.scimark2.Random#nextDouble()#double#116#3262#PLUS#left + dm1 * k * width
+jnt.scimark2.Random#<init>(int,double,double)#void#115#2682#IDENT#left
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#34#950#IDENT#x
+jnt.scimark2.Random#<init>(double,double)#void#28#536#ASSIGN#one = 1
+jnt.scimark2.Random#<init>(int,double,double)#void#101#882#ASSIGN#right = 1.0
+jnt.scimark2.Random#initialize(int)#void#50#3709#DIV#9069 / m2
+jnt.scimark2.Random#<init>(int)#void#17#492#ASSIGN#j = 16
+jnt.scimark2.Random#<init>(int)#void#81#813#IDENT#m1
+jnt.scimark2.Random#initialize(int)#void#106#3864#DIV#m2 / 2
+jnt.scimark2.Random#initialize(int)#void#124#3904#IDENT#j0
+jnt.scimark2.Random#<init>(int)#void#86#778#ASSIGN#dm1 = 1.0 / (double)m1
+jnt.scimark2.Random#<init>(int)#void#74#635#SL#one << mdig / 2
+jnt.scimark2.Random#<init>(int)#void#44#593#IDENT#one
+jnt.scimark2.Random#<init>(int)#void#37#581#IDENT#mdig
+jnt.scimark2.Random#<init>()#void#69#638#IDENT#mdig
+jnt.scimark2.Random#<init>(int,double,double)#void#27#536#IDENT#one
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#24#881#VARDEF#double x = R.nextDouble()
+jnt.scimark2.Random#initialize(int)#void#31#3670#PREDEC#--jseed
+jnt.scimark2.Random#<init>(double,double)#void#1#1720#IDENT#super
+jnt.scimark2.Random#<init>(int)#void#27#536#IDENT#one
+jnt.scimark2.Random#<init>(double,double)#void#52#604#MINUS#mdig - 2
+jnt.scimark2.Random#<init>(int)#void#28#536#ASSIGN#one = 1
+jnt.scimark2.Random#nextDouble()#double#122#3306#IDENT#k
+jnt.scimark2.Random#<init>()#void#6#440#ASSIGN#seed = 0
+jnt.scimark2.Random#initialize(int)#void#1#3582#IDENT#seed
+jnt.scimark2.Random#<init>()#void#11#473#ASSIGN#i = 4
+jnt.scimark2.Random#nextDouble()#double#29#3120#PLUS_ASG#k += m1
 jnt.scimark2.Random#nextDouble()#double#75#3203#IDENT#j
-jnt.scimark2.MonteCarlo#integrate(int,int)#double#17#802#LT#count < Num_samples
-jnt.scimark2.Random#initialize(int)#void#122#3895#IDENT#iloop
+jnt.scimark2.Random#<init>(double,double)#void#10#473#IDENT#i
+jnt.scimark2.Random#<init>(int,double,double)#void#65#631#IDENT#one
+jnt.scimark2.Random#<init>(int)#void#1#2095#IDENT#super
+jnt.scimark2.Random#initialize(int)#void#13#3623#SELECT#Math.min
+jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#7#216#SELECT#Integer.parseInt
+jnt.scimark2.Random#initialize(int)#void#92#3844#IDENT#k1
+jnt.scimark2.Random#<init>(int)#void#80#804#TYPECAST#(double)m1
+jnt.scimark2.Random#<init>(int)#void#106#910#ASSIGN#width = 1.0
+jnt.scimark2.Random#<init>()#void#96#854#ASSIGN#left = 0.0
+jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#7#226#IDENT#seed
+jnt.scimark2.Random#nextDouble()#double#39#3137#IDENT#k
+jnt.scimark2.Random#<init>(int)#void#53#597#SL#one << mdig - 2
+jnt.scimark2.Random#initialize(int)#void#13#3623#SELECT#Math.min
+jnt.scimark2.Random#<init>()#void#59#589#PLUS#(one << mdig - 2) + ((one << mdig - 2) - one)
+jnt.scimark2.Random#<init>(int,double,double)#void#126#2712#IDENT#width
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#12#830#VARDEF#int count = 0
+jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#54#374#SELECT#Precise.precise
+jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#3#162#VARDEF#int cycles = 1492
+jnt.scimark2.Random#<init>(double,double)#void#74#635#SL#one << mdig / 2
+jnt.scimark2.commandline#main(java.lang.String[])#void#9#391#NE#args.length != 1
+jnt.scimark2.Random#initialize(int)#void#1#3574#SELECT#this.seed
+jnt.scimark2.Random#nextDouble()#double#14#3096#IDENT#j
+jnt.scimark2.Random#<init>()#void#5#440#IDENT#seed
+jnt.scimark2.Random#<init>(double,double)#void#79#778#IDENT#dm1
+jnt.scimark2.Random#<init>(double,double)#void#81#813#IDENT#m1
+jnt.scimark2.Random#initialize(int)#void#82#3811#MUL#j0 * k0
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#16#845#IDENT#Num_samples
+jnt.scimark2.Random#initialize(int)#void#84#3826#IDENT#jseed
+jnt.scimark2.Random#<init>(int)#void#23#513#ASSIGN#mdig = 32
+jnt.scimark2.Random#<init>()#void#64#615#IDENT#m2
+jnt.scimark2.Random#nextDouble()#double#83#3224#PREDEC#--j
+jnt.scimark2.Random#<init>(int,double,double)#void#85#802#DIV#1.0 / (double)m1
+jnt.scimark2.Random#nextDouble()#double#20#3107#IDENT#k
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#42#952#PLUS#x * x + y * y
+jnt.scimark2.Random#<init>(int)#void#73#642#DIV#mdig / 2
+jnt.scimark2.Random#<init>(double,double)#void#55#608#IDENT#one
+jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#13#251#SELECT#MonteCarlo.integrate
+jnt.scimark2.Random#<init>(double,double)#void#122#1779#ASSIGN#this.right = right
+jnt.scimark2.Random#nextDouble()#double#63#3180#PREDEC#--i
+jnt.scimark2.commandline#main(java.lang.String[])#void#26#546#IDENT#min_time
+jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#54#374#SELECT#Precise.precise
+jnt.scimark2.Random#initialize(int)#void#66#3747#DIV#jseed / m2
+jnt.scimark2.commandline#main(java.lang.String[])#void#12#406#NEWCLASS#new RuntimeException("Error! Seed should be provided as an argument")
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#20#884#IDENT#R
+jnt.scimark2.Random#nextDouble()#double#1#3087#IDENT#m
+jnt.scimark2.Random#<init>(int)#void#60#557#ASSIGN#m1 = (one << mdig - 2) + ((one << mdig - 2) - one)
+jnt.scimark2.Random#<init>(double,double)#void#64#615#IDENT#m2
+jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#54#383#IDENT#out
+jnt.scimark2.commandline#main(java.lang.String[])#void#25#484#ASSIGN#seed = args[0]
+jnt.scimark2.Random#<init>()#void#110#1268#IDENT#initialize
+jnt.scimark2.Random#<init>(int,double,double)#void#58#607#MINUS#(one << mdig - 2) - one
+jnt.scimark2.Random#<init>(double,double)#void#44#593#IDENT#one
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#27#915#SELECT#R.nextDouble
+jnt.scimark2.Random#<init>()#void#81#813#IDENT#m1
+jnt.scimark2.Random#<init>(int)#void#110#2111#IDENT#seed
+jnt.scimark2.Random#<init>(int)#void#96#854#ASSIGN#left = 0.0
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#45#1003#SELECT#Accept.accept
+jnt.scimark2.Random#<init>()#void#65#631#IDENT#one
+jnt.scimark2.Random#<init>(int)#void#64#615#IDENT#m2
+jnt.scimark2.Random#<init>(int,double,double)#void#91#819#ASSIGN#haveRange = false
+jnt.scimark2.Random#initialize(int)#void#132#3912#MUL#m2 * j1
+jnt.scimark2.Random#<init>(int,double,double)#void#110#2661#IDENT#seed
+jnt.scimark2.Random#initialize(int)#void#89#3832#DIV#jseed / m2
+jnt.scimark2.Random#initialize(int)#void#84#3820#IDENT#j1
+jnt.scimark2.Random#<init>(int)#void#11#473#ASSIGN#i = 4
+jnt.scimark2.Random#nextDouble()#double#94#3235#IDENT#haveRange
+jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#13#235#IDENT#out
+jnt.scimark2.Random#<init>(int)#void#105#910#IDENT#width
+jnt.scimark2.Random#<init>(double,double)#void#15#492#IDENT#j
+jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#21#281#IDENT#out
+jnt.scimark2.Random#<init>()#void#106#910#ASSIGN#width = 1.0
+jnt.scimark2.Random#<init>(int)#void#15#492#IDENT#j
+jnt.scimark2.MonteCarlo#accept(double)#double#0#1169#IDENT#i
+jnt.scimark2.Random#<init>()#void#48#600#IDENT#mdig
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#17#844#LT#count < Num_samples
+jnt.scimark2.commandline#main(java.lang.String[])#void#27#556#IDENT#seed
+jnt.scimark2.Random#<init>(double,double)#void#53#597#SL#one << mdig - 2
+jnt.scimark2.Random#<init>(int,double,double)#void#74#635#SL#one << mdig / 2
+jnt.scimark2.Random#nextDouble()#double#39#3131#INDEXED#m[j]
+jnt.scimark2.Random#nextDouble()#double#21#3109#LT#k < 0
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#56#1029#LE#sum <= 1.0
+jnt.scimark2.Random#<init>(double,double)#void#41#585#MINUS#mdig - 2
+jnt.scimark2.Random#<init>(double,double)#void#90#819#IDENT#haveRange
+jnt.scimark2.Random#nextDouble()#double#58#3179#IDENT#i
+jnt.scimark2.Random#<init>(int,double,double)#void#122#2701#ASSIGN#this.right = right
+jnt.scimark2.Random#<init>(int)#void#48#600#IDENT#mdig
+jnt.scimark2.Random#initialize(int)#void#72#3771#IDENT#iloop
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#21#885#SELECT#R.nextDouble
+jnt.scimark2.Random#nextDouble()#double#49#3160#IDENT#i
+jnt.scimark2.Random#initialize(int)#void#107#3858#MOD#(jseed / m2 + j0 * k1 + j1 * k0) % (m2 / 2)
+jnt.scimark2.Random#initialize(int)#void#79#3800#IDENT#jseed
+jnt.scimark2.Random#<init>(int)#void#0#2095#IDENT#super
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#43#942#VARDEF#double sum = x * x + y * y
+jnt.scimark2.Random#initialize(int)#void#99#3852#MUL#j1 * k0
+jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#26#285#ASSIGN#out = Accept.accept(out)
+jnt.scimark2.Random#<init>(int)#void#6#440#ASSIGN#seed = 0
+jnt.scimark2.Random#initialize(int)#void#135#3783#PREINC#++iloop
+jnt.scimark2.Random#nextDouble()#double#51#3162#ASSIGN#i = 16
+jnt.scimark2.Random#<init>(int,double,double)#void#119#2690#IDENT#this
+jnt.scimark2.Random#<init>(double,double)#void#91#819#ASSIGN#haveRange = false
+jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#19#239#ASSIGN#out = MonteCarlo.integrate(cycles, SEED)
+jnt.scimark2.Random#initialize(int)#void#83#3806#ASSIGN#jseed = j0 * k0
+jnt.scimark2.Random#<init>(int,double,double)#void#60#557#ASSIGN#m1 = (one << mdig - 2) + ((one << mdig - 2) - one)
+jnt.scimark2.Random#<init>(int,double,double)#void#128#2728#IDENT#left
+jnt.scimark2.Random#initialize(int)#void#24#3617#ASSIGN#jseed = Math.min(Math.abs(seed), m1)
+jnt.scimark2.Random#<init>()#void#15#492#IDENT#j
+jnt.scimark2.Random#initialize(int)#void#94#3842#MUL#j0 * k1
 jnt.scimark2.Random#<init>()#void#28#536#ASSIGN#one = 1
+jnt.scimark2.Random#initialize(int)#void#130#3914#IDENT#j1
+jnt.scimark2.Random#<init>(int,double,double)#void#130#2718#ASSIGN#width = right - left
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#30#911#VARDEF#double y = R.nextDouble()
+jnt.scimark2.Random#initialize(int)#void#63#3749#IDENT#m2
+jnt.scimark2.Random#<init>(int)#void#52#604#MINUS#mdig - 2
+jnt.scimark2.Random#<init>(int,double,double)#void#115#2674#SELECT#this.left
+jnt.scimark2.Random#nextDouble()#double#77#3205#ASSIGN#j = 16
+jnt.scimark2.Random#<init>(double,double)#void#65#631#IDENT#one
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#50#995#ASSIGN#sum = Accept.accept(sum)
+jnt.scimark2.Random#<init>(int,double,double)#void#114#2670#IDENT#this
+jnt.scimark2.Random#<init>(double,double)#void#110#1724#IDENT#initialize
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#0#776#NEWCLASS#new Random(SEED)
+jnt.scimark2.Random#initialize(int)#void#37#3681#IDENT#k0
+jnt.scimark2.Random#<init>(int,double,double)#void#120#2703#IDENT#right
+jnt.scimark2.Random#initialize(int)#void#59#3720#ASSIGN#j0 = jseed % m2
+jnt.scimark2.Random#initialize(int)#void#127#3909#IDENT#m2
+jnt.scimark2.Random#<init>()#void#44#593#IDENT#one
+jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#21#293#SELECT#Accept.accept
+jnt.scimark2.Random#initialize(int)#void#86#3834#IDENT#m2
+jnt.scimark2.Random#<init>(double,double)#void#100#882#IDENT#right
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#70#1098#IDENT#Num_samples
+jnt.scimark2.Random#<init>(int,double,double)#void#23#513#ASSIGN#mdig = 32
+jnt.scimark2.Random#initialize(int)#void#134#3902#ASSIGN#m[iloop] = j0 + m2 * j1
+jnt.scimark2.Random#initialize(int)#void#122#3895#IDENT#iloop
+jnt.scimark2.Random#<init>(int)#void#58#607#MINUS#(one << mdig - 2) - one
+jnt.scimark2.Random#<init>(int)#void#5#440#IDENT#seed
+jnt.scimark2.Random#<init>()#void#52#604#MINUS#mdig - 2
+jnt.scimark2.Random#<init>(double,double)#void#0#1720#IDENT#super
+jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#54#361#IDENT#out
+jnt.scimark2.Random#initialize(int)#void#69#3760#IDENT#iloop
+jnt.scimark2.Random#<init>(int)#void#79#778#IDENT#dm1
+jnt.scimark2.Random#<init>(double,double)#void#75#615#ASSIGN#m2 = one << mdig / 2
+jnt.scimark2.Random#nextDouble()#double#45#3150#EQ#i == 0
+jnt.scimark2.Random#<init>(int,double,double)#void#11#473#ASSIGN#i = 4
+jnt.scimark2.Random#nextDouble()#double#105#3265#IDENT#dm1
+jnt.scimark2.Random#<init>(double,double)#void#117#1758#ASSIGN#this.left = left
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#10#801#VARDEF#int under_curve = 0
+jnt.scimark2.Random#<init>(int)#void#100#882#IDENT#right
+jnt.scimark2.Random#<init>(int)#void#91#819#ASSIGN#haveRange = false
+jnt.scimark2.Random#<init>(int,double,double)#void#81#813#IDENT#m1
+jnt.scimark2.Random#<init>(double,double)#void#134#1824#ASSIGN#haveRange = true
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#8#772#VARDEF#Random R = new Random(SEED)
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#62#863#PREINC#++count
+jnt.scimark2.Random#initialize(int)#void#41#3691#MOD#9069 % m2
+jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#59#365#ASSIGN#out = Precise.precise(out)
+jnt.scimark2.Random#<init>(double,double)#void#116#1752#SELECT#this.left
+jnt.scimark2.Random#<init>()#void#42#578#SL#one << mdig - 2
+jnt.scimark2.Random#<init>()#void#21#513#IDENT#mdig
+jnt.scimark2.Random#<init>(double,double)#void#27#536#IDENT#one
+jnt.scimark2.Random#<init>(double,double)#void#106#910#ASSIGN#width = 1.0
+jnt.scimark2.Constants#<init>()#void#0#30#IDENT#super
+jnt.scimark2.Random#initialize(int)#void#142#3924#IDENT#i
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#59#1041#IDENT#under_curve
+jnt.scimark2.Random#<init>(int,double,double)#void#106#910#ASSIGN#width = 1.0
+jnt.scimark2.Random#nextDouble()#double#119#3300#IDENT#dm1
+jnt.scimark2.Random#initialize(int)#void#108#3823#ASSIGN#j1 = (jseed / m2 + j0 * k1 + j1 * k0) % (m2 / 2)
+jnt.scimark2.commandline#main(java.lang.String[])#void#5#359#VARDEF#String seed = null
+jnt.scimark2.Random#<init>(int,double,double)#void#80#804#TYPECAST#(double)m1
+jnt.scimark2.Random#initialize(int)#void#100#3847#PLUS#jseed / m2 + j0 * k1 + j1 * k0
+jnt.scimark2.Random#<init>(int,double,double)#void#96#854#ASSIGN#left = 0.0
+jnt.scimark2.Random#nextDouble()#double#19#3085#ASSIGN#k = m[i] - m[j]
+jnt.scimark2.Random#<init>(int)#void#59#589#PLUS#(one << mdig - 2) + ((one << mdig - 2) - one)
+jnt.scimark2.Random#initialize(int)#void#149#3935#ASSIGN#j = 16
+jnt.scimark2.Random#<init>(double,double)#void#42#578#SL#one << mdig - 2
+jnt.scimark2.Random#<init>(double,double)#void#101#882#ASSIGN#right = 1.0
+jnt.scimark2.Random#initialize(int)#void#135#3785#IDENT#iloop
+jnt.scimark2.Random#<init>()#void#17#492#ASSIGN#j = 16
+jnt.scimark2.Random#<init>(int,double,double)#void#32#557#IDENT#m1
+jnt.scimark2.Random#<init>(int,double,double)#void#90#819#IDENT#haveRange
+jnt.scimark2.Random#<init>(double,double)#void#6#440#ASSIGN#seed = 0
+jnt.scimark2.Random#<init>(double,double)#void#120#1768#IDENT#this
+jnt.scimark2.Random#<init>(int,double,double)#void#0#2645#IDENT#super
+jnt.scimark2.Random#initialize(int)#void#53#3717#IDENT#j0
+jnt.scimark2.Random#<init>(int)#void#10#473#IDENT#i
+jnt.scimark2.kernel#measureMonteCarlo(double,java.lang.String)#double#28#316#SELECT#System.out
+jnt.scimark2.Random#<init>()#void#60#557#ASSIGN#m1 = (one << mdig - 2) + ((one << mdig - 2) - one)
+jnt.scimark2.MonteCarlo#integrate(int,int)#double#59#1053#PREINC#++under_curve
+jnt.scimark2.Random#nextDouble()#double#32#3130#IDENT#m
+jnt.scimark2.Random#initialize(int)#void#96#3849#IDENT#j1

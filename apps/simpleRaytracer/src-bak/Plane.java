@@ -3,8 +3,8 @@
  */
 
 import java.awt.*;
-import java.awt.image.*;
-import java.io.*;
+
+import chord.analyses.expax.lang.*;
 
 public class Plane {
 	int w, h;
@@ -23,7 +23,7 @@ public class Plane {
 		h=dd.height;
 		texture=Integer.parseInt(args[0]);
 		light=Integer.parseInt(args[1]);
-		alloc_TAG1();
+		Alloc.alloc_TAG1();
 		pixels=new int[w*h];	
 		int index,x,y; 
 		float xe,ye,ze,xd,yd,zd;
@@ -64,7 +64,7 @@ public class Plane {
 
 				float cond = (k-ye)*yd;
 				//additional accept
-				cond = accept(cond);
+				cond = Accept.accept(cond);
 				if(cond<=0) {
 					t=-1;	
 				} else {
@@ -74,7 +74,7 @@ public class Plane {
 				index=y*w+x;
 				
 				// additional accept
-				t = accept(t);	
+				t = Accept.accept(t);	
 				if(t >= 0)
 				{
 					ix=xe+t*xd;
@@ -88,9 +88,8 @@ public class Plane {
 					lz=lz-iz;	
 					float param = (lx*lx+ly*ly+lz*lz);
 					//additional accept
-					param = accept(param);	
-					sng=(float)Math.sqrt(param);	
-					sng = accept(sng);
+					param = Accept.accept(param);	
+					sng=(float)Math.sqrt(param);
 					sng=1.0f/sng;
 					lcoff=(lx*nx+ly*ny+lz*nz)*sng;	
 					pixels[index]=texture(ix,iy,iz);
@@ -101,13 +100,12 @@ public class Plane {
 			}
 		}
 
-		pixels = accept_all_FIELD2_TAG1(pixels);
+		pixels = Accept.accept_all_FIELD2_TAG1(pixels);
 		
 		for (int i = 0; i < pixels.length; i++) {
 			System.out.println((pixels[i] & 0xff)+"\n");
 			System.out.println(((pixels[i] >> 8) & 0xff)+"\n");
 			System.out.println(((pixels[i] >> 16) & 0xff)+"\n");
-			pixels = precise_all_FIELD2_TAG1(pixels);
 		}
 	}
 
@@ -127,10 +125,10 @@ public class Plane {
 			col=(255<<24)|(255<<16);
 		} else if(texture==2) {
 			//additional accept
-			x = accept(x);	
+			x = Accept.accept(x);	
 			int mrx = Math.round(x);
 			//additional accept
-			z = accept(z);
+			z = Accept.accept(z);
 			int mrz = Math.round(z);
 			v = (mrx + mrz) %2;	
 	
@@ -147,16 +145,8 @@ public class Plane {
 		return col;	
 	}
 
-	public int accept(int i){return i;}	
-	public float accept(float i){return i;}	
-	public int[] accept_all_FIELD2_TAG1(int[] p){return p;}
-	public int[] precise_all_FIELD2_TAG1(int[] p){return p;}
-	public Plane accept_all_FIELD1_TAG2(Plane p){return p;}
-	public void alloc_TAG1(){}
-	public static void alloc_TAG2(){}
-
 	public static void main(String[] args) {
-		alloc_TAG2();
+		Alloc.alloc_TAG2();
 		Plane p = new Plane();	
 		p.init(args);
 	}

@@ -16,7 +16,9 @@
 
 package com.google.zxing.qrcode.detector;
 
-import com.google.zxing.ApproxMath;
+import chord.analyses.expax.lang.Accept;
+import chord.analyses.expax.lang.math.ApproxMath;
+
 import com.google.zxing.ResultPoint;
 
 
@@ -41,14 +43,12 @@ public final class AlignmentPattern extends ResultPoint {
    */
    boolean aboutEquals(float moduleSize, float i, float j) {
 	//additional accept
-	moduleSize = accept(moduleSize);
+	moduleSize = Accept.accept(moduleSize);
     if (Math.abs(i - getY()) <= moduleSize && Math.abs(j - getX()) <= moduleSize) {
       float moduleSizeDiff = ApproxMath.abs(moduleSize - estimatedModuleSize);
       return moduleSizeDiff <= 1.0f || moduleSizeDiff / estimatedModuleSize <= 1.0f;
     }
     return false;
   }
-   
-   public static float accept(float i){return i;}
 
 }

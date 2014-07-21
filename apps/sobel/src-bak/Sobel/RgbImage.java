@@ -1,6 +1,9 @@
 package Sobel;
 
 import java.io.IOException;
+
+import chord.analyses.expax.lang.*;
+import chord.analyses.expax.lang.math.*;
 import Sobel.TextFile.Mode;
 
 
@@ -75,13 +78,7 @@ public class RgbImage {
 		}
 	}
 
-	public static double sqrt (double num) {
-		//additional accept
-		num = accept(num);
-		return Math.sqrt((num));
-	}
-
-	public  double sobel (int[][][] window) {
+	public double sobel (int[][][] window) {
 		double p1 = ( double)luminance(window[0][0]);	
 		double p2 = ( double)luminance(window[0][1]);	
 		double p3 = ( double)luminance(window[0][2]);	
@@ -97,7 +94,7 @@ public class RgbImage {
 		double x = (p1 + (p2 + p2) + p3 - p7 - (p8 + p8) - p9); 	
 		double y = (p3 + (p6 + p6) + p9 - p1 - (p4 + p4) - p7);	
 
-		double l = sqrt(x * x + y * y);	
+		double l = ApproxMath.sqrt(x * x + y * y);	
 
 		return l;
 	}
@@ -130,10 +127,6 @@ public class RgbImage {
 		}
 	}
 
-	public static int accept(int i){return i;}
-	public static int precise(int i){return i;}
-	public static double accept(double i){return i;}
-
 	public static void main(String[] args) throws IOException {
 		RgbImage rgbImage = new RgbImage();
 		rgbImage.load(args[0]);
@@ -154,16 +147,16 @@ public class RgbImage {
 				l = rgbImage.sobel(window);	
 				int L = (int)(l);
 				//additional accept
-				L = accept(L);
+				L = Accept.accept(L);
 				if (L >= 256)
 					L = 255;
 				//additional accept
-				L = accept(L);
+				L = Accept.accept(L);
 				if (L < 0)
 					L = 0;
-				L = accept(L);
+				L = Accept.accept(L);
 				System.out.println(L);
-				L = precise(L);	
+				L = Precise.precise(L);	
 			}
 		}
 	}

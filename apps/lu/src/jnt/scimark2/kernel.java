@@ -1,5 +1,7 @@
 package jnt.scimark2;
 
+import chord.analyses.expax.lang.*;
+
 public class kernel
 {
 
@@ -29,7 +31,7 @@ public class kernel
 
 		System.out.print("LU vector: ");
 		for (int i = 0; i < N; ++i) {
-			accept_all_FIELD1_TAG1(y);
+			y = Accept.accept_all_FIELD1_TAG1(y);
 			System.out.print((y[i]) + " ");
 		}
 		System.out.println("");
@@ -84,7 +86,7 @@ public class kernel
 		return A;
 	}
 
-	private static  double[] RandomVector(int N, Random R)
+	private static double[] RandomVector(int N, Random R)
 	{
 		double A[] = new double[N];
 
@@ -93,10 +95,10 @@ public class kernel
 		return A;
 	}
 
-	private static  double[] matvec( double A[][],  double x[])
+	private static double[] matvec( double A[][],  double x[])
 	{
 		int N = x.length;
-		alloc_TAG1();
+		Alloc.alloc_TAG1();
 		double y[] = new  double[N];
 
 		matvec(A, x, y);
@@ -121,8 +123,5 @@ public class kernel
 			y[i] = sum; 
 		}
 	}
-
-	private static void alloc_TAG1(){}
-	private static double[] accept_all_FIELD1_TAG1(double[] d){return d;}
 
 }

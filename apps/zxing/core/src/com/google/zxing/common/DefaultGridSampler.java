@@ -16,6 +16,8 @@
 
 package com.google.zxing.common;
 
+import chord.analyses.expax.lang.*;
+
 import com.google.zxing.NotFoundException;
 
 /**
@@ -45,7 +47,7 @@ public final class DefaultGridSampler extends GridSampler {
                               int dimension,
                               PerspectiveTransform transform) throws NotFoundException {
     BitMatrix bits = new BitMatrix(dimension);
-    alloc_TAG6();
+    Alloc.alloc_TAG6();
     float[] points = new float[dimension << 1];
     for (int y = 0; y < dimension; y++) {
       int max = points.length;
@@ -61,10 +63,10 @@ public final class DefaultGridSampler extends GridSampler {
       try {
         for (int x = 0; x < max; x += 2) {
           //additional accept
-          accept_all_FIELD1_TAG6(points);
+          points = Accept.accept_all_FIELD1_TAG6(points);
           boolean imageGet = image.get((int)points[x], (int)points[x + 1]);
           //additional accept
-          imageGet = accept(imageGet);
+          imageGet = Accept.accept(imageGet);
           if (imageGet) {
             // Black(-ish) pixel
             bits.set(x >> 1, y);
@@ -87,7 +89,4 @@ public final class DefaultGridSampler extends GridSampler {
     return bits;
   }
 
-  public static void alloc_TAG6(){}
-  public static boolean accept(boolean b){return b;}
-  public static float[] accept_all_FIELD1_TAG6(float[] f){return f;}
 } 

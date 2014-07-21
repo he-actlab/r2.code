@@ -16,6 +16,8 @@
 
 package com.google.zxing.oned;
 
+import chord.analyses.expax.lang.Accept;
+
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.ChecksumException;
 import com.google.zxing.FormatException;
@@ -71,13 +73,13 @@ public final class UPCEReader extends UPCEANReader {
     for (int x = 0; x < 6 && rowOffset < end; x++) {
       int bestMatch = decodeDigit(row, counters, rowOffset, ( int [] [])L_AND_G_PATTERNS);
       //additional accept
-      bestMatch = accept(bestMatch);
+      bestMatch = Accept.accept(bestMatch);
       result.append((char) ('0' + bestMatch % 10));
       for (int i = 0; i < counters.length; i++) {
         rowOffset += counters[i];
       }
       //additional accept
-      bestMatch = accept(bestMatch);
+      bestMatch = Accept.accept(bestMatch);
       if (bestMatch >= 10) {
         lgPatternFound |= 1 << (5 - x);
       }
@@ -87,8 +89,6 @@ public final class UPCEReader extends UPCEANReader {
 
     return rowOffset;
   }
-  
-  public static int accept(int i){return i;}
 
   protected int[] decodeEnd(BitArray row, int endStart) throws NotFoundException {
     return findGuardPattern(row, endStart, true, MIDDLE_END_PATTERN);

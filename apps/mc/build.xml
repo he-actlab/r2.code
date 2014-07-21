@@ -18,7 +18,10 @@
     <property name="cfrt.jar" value="../../checker-runtime/build/cfrt.jar" />
     <property name="enerj.checker" value="enerj.PrecisionChecker" />
 
-    <!-- Expax arguments -->
+		<!-- ExpAX -->
+		<property name="expax.dir" value="${env.EXPAX_ANALYSIS}" />
+		<property name="expax.jar" value="${expax.dir}/expax-analysis.jar" />
+
     <property name="expaxbc.info" value="${user.dir}/mc-bc-offset.info" /> 
     <property name="expaxanal.flag" value="${user.dir}/analysis.flag" />
     <property name="expaxanal.result" value="${user.dir}/analysis.result" />
@@ -31,7 +34,7 @@
     </condition>
     <presetdef name="enerjc">
         <jsr308.javac verbose="${enerjc.verbose}">
-            <compilerarg line="-Xbootclasspath/a:${cfrt.jar}:${enerj.jar} -processorpath ${cfrt.jar}:${enerj.jar} -processor ${enerj.checker}" />
+            <compilerarg line="-Xbootclasspath/a:${cfrt.jar}:${enerj.jar}:${expax.jar} -processorpath ${cfrt.jar}:${enerj.jar} -processor ${enerj.checker}" />
             <compilerarg line="${enerjc.args}" />
             <compilerarg line="-expaxanalflag ${expaxanal.flag}" />
             <compilerarg line="-expaxbcinfo ${expaxbc.info}" />

@@ -140,10 +140,6 @@ public class Random {
 		else
 			nextValue = dm1 * k;
 		
-		precise(nextValue);
-		precise_all_FIELD1_TAG1(m);
-		precise(k);
-		
 		return nextValue;
 
 	} 
@@ -158,7 +154,6 @@ public class Random {
 
 		this.seed = seed;	
 
-		alloc_TAG1();
 		m = new int[17];
 
 		jseed = Math.min(Math.abs(seed),m1);
@@ -176,17 +171,6 @@ public class Random {
 		}
 		i = 4;
 		j = 16;
-		
-		precise_all_FIELD1_TAG1(m);
 	}
-
-	//jspark
-	private void alloc_TAG1(){}
-	private int accept (int i){return i;}
-	private void accept_all_FIELD2_TAG(){}
-	private void precise_all_FIELD1_TAG1(int[] m){}
-	private double precise(double nextValue) {return nextValue;}
-	private int precise(int i){return i;}
-	//krapsj
 
 }

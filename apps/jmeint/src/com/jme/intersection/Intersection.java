@@ -32,7 +32,9 @@
 
 package com.jme.intersection;
 
-import com.jme.math.ApproxMath;
+import chord.analyses.expax.lang.*;
+import chord.analyses.expax.lang.math.*;
+
 import com.jme.math.Vector2f;
 import com.jme.math.Vector3f;
 
@@ -92,13 +94,13 @@ public class Intersection {
 
 		float absdu0 = ApproxMath.abs(du0);
 		//additional accept
-		absdu0 = accept(absdu0);
+		absdu0 = Accept.accept(absdu0);
 		float absdu1 = ApproxMath.abs(du1);
 		//additional accept
-		absdu1 = accept(absdu1);
+		absdu1 = Accept.accept(absdu1);
 		float absdu2 = ApproxMath.abs(du2);
 		//additional accept
-		absdu2 = accept(absdu2);
+		absdu2 = Accept.accept(absdu2);
 		
 		if (absdu0 < EPSILON)
 			du0 = 0.0f;
@@ -113,7 +115,7 @@ public class Intersection {
 		boolean rhs = (du0du2 > 0.0f);
 		boolean cond = lhs && rhs;
 		//additional accept
-		cond = accept(cond);
+		cond = Accept.accept(cond);
 		if (cond) {
 			return false;
 		}
@@ -129,13 +131,13 @@ public class Intersection {
 
 		float absdv0 = ApproxMath.abs(dv0);
 		//additional accept
-		absdv0 = accept(absdv0);
+		absdv0 = Accept.accept(absdv0);
 		float absdv1 = ApproxMath.abs(dv1);
 		//additional accept
-		absdv1 = accept(absdv1);
+		absdv1 = Accept.accept(absdv1);
 		float absdv2 = ApproxMath.abs(dv2);
 		//additional accept
-		absdv2 = accept(absdv2);
+		absdv2 = Accept.accept(absdv2);
 		
 		if (absdv0 < EPSILON)
 			dv0 = 0.0f;
@@ -146,16 +148,12 @@ public class Intersection {
 
 		dv0dv1 = dv0 * dv1;
 		dv0dv2 = dv0 * dv2;
-
-		// additional accept
-		dv0dv1 = accept(dv0dv1);
-		dv0dv2 = accept(dv0dv2);
 		
 		lhs = (dv0dv1 > 0.0f);
 		rhs = (dv0dv2 > 0.0f);
 		cond = lhs && rhs;
 		//additional accept
-		cond = accept(cond);
+		cond = Accept.accept(cond);
 		
 		if (cond) {
 			return false;
@@ -170,7 +168,7 @@ public class Intersection {
 
 		cond = (bb > max);
 		// additional accept
-		cond = accept(cond);
+		cond = Accept.accept(cond);
 		if (bb > max) {
 			max = bb;
 			index = 1;
@@ -178,7 +176,7 @@ public class Intersection {
 		
 		cond = (cc > max);
 		// additional accept
-		cond = accept(cond);
+		cond = Accept.accept(cond);
 		if (cc > max) {
 			max = cc;
 			vp0 = v0.z;
@@ -238,7 +236,7 @@ public class Intersection {
 
 		cond = isect1[1] < isect2[0] || isect2[1] < isect1[0];
 		//additional accept
-		cond = accept(cond);
+		cond = Accept.accept(cond);
 		if (cond) {
 			return false;
 		}
@@ -250,7 +248,7 @@ public class Intersection {
 
 		boolean cond = (f[0] > f[1]);
 		// additional accept
-		cond = accept(cond);
+		cond = Accept.accept(cond);
 		if (cond) {
 			float c = f[0];
 			f[0] = f[1];
@@ -263,33 +261,26 @@ public class Intersection {
 			Vector2f x0x1) {
 
 		boolean cond1, cond2, cond3, cond4, cond5;
-		
-		// additional accept
-		d0d1 = accept(d0d1);
-		d0d2 = accept(d0d2);
-		d0 = accept(d0);
-		d1 = accept(d1);
-		d2 = accept(d2);
 
 		cond1 = (d0d1 > 0.0f);
 		//additional accept
-		cond1 = accept(cond1);
+		cond1 = Accept.accept(cond1);
 		
 		cond2 = (d0d2 > 0.0f);
 		//additional accept
-		cond1 = accept(cond1);
+		cond1 = Accept.accept(cond1);
 		
 		cond3 = (d1 * d2 > 0.0f || d0 != 0.0f);
 		//additional accept
-		cond3 = accept(cond3);
+		cond3 = Accept.accept(cond3);
 		
 		cond4 = (d1 != 0.0f);
 		//additional accept
-		cond4 = accept(cond4);
+		cond4 = Accept.accept(cond4);
 		
 		cond5 = (d2 != 0.0f);
 		//additional accept
-		cond5 = accept(cond5);
+		cond5 = Accept.accept(cond5);
 		
 		if (cond1) {
 			abc.x = vv2;
@@ -340,15 +331,15 @@ public class Intersection {
 		
 		cond1 = (a.x > a.y);
 		//additional accept
-		cond1 = accept(cond1);
+		cond1 = Accept.accept(cond1);
 		
 		cond2 = (a.x > a.z);
 		//additional accept
-		cond2 = accept(cond2);
+		cond2 = Accept.accept(cond2);
 		
 		cond3 = (a.z > a.y);
 		//additional accept
-		cond3 = accept(cond3);
+		cond3 = Accept.accept(cond3);
 		
 		if (cond1) {
 			if (cond2) {
@@ -383,21 +374,21 @@ public class Intersection {
 		
 		cond1 = edgeAgainstTriEdges(v0f, v1f, u0f, u1f, u2f, i0, i1);
 		//additional accept
-		cond1 = accept(cond1);
+		cond1 = Accept.accept(cond1);
 		if (cond1) {
 			return true;
 		}
 		
 		cond2 = edgeAgainstTriEdges(v1f, v2f, u0f, u1f, u2f, i0, i1);
 		//additional accept
-		cond2 = accept(cond2);
+		cond2 = Accept.accept(cond2);
 		if (cond2) {
 			return true;
 		}
 		
 		cond3 = edgeAgainstTriEdges(v2f, v0f, u0f, u1f, u2f, i0, i1);
 		//additional accept
-		cond3 = accept(cond3);
+		cond3 = Accept.accept(cond3);
 		if (cond3) {
 			return true;
 		}
@@ -427,8 +418,7 @@ public class Intersection {
 
 		boolean cond = (d0 * d1 > 0.0 && d0 * d2 > 0.0);
 		// additional accept
-		cond = accept(cond);
-		
+		cond = Accept.accept(cond);
 		if (cond)
 			return true;
 
@@ -441,13 +431,23 @@ public class Intersection {
 		aX = v1[i0] - v0[i0];
 		aY = v1[i1] - v0[i1];
 
-		if ((edgeEdgeTest(v0, u0, u1, i0, i1, aX, aY))) {
+		boolean cond;
+		cond = edgeEdgeTest(v0, u0, u1, i0, i1, aX, aY);
+		//additional accept
+		cond = Accept.accept(cond);
+		if (cond) {
 			return true;
 		}
-		if ((edgeEdgeTest(v0, u1, u2, i0, i1, aX, aY))) {
+		cond = edgeEdgeTest(v0, u1, u2, i0, i1, aX, aY);
+		//additional accept
+		cond = Accept.accept(cond);
+		if (cond) {
 			return true;
 		}
-		if ((edgeEdgeTest(v0, u2, u0, i0, i1, aX, aY))) {
+		cond = edgeEdgeTest(v0, u2, u0, i0, i1, aX, aY);
+		//additional accept
+		cond = Accept.accept(cond);
+		if (cond) {
 			return true;
 		}
 		return false;
@@ -465,29 +465,26 @@ public class Intersection {
 		boolean cond1, cond2, cond3;
 		cond1 = ((f > 0 && d >= 0 && d <= f) || (f < 0 && d <= 0 && d >= f)); 
 		// additional accept
-		cond1 = accept(cond1);
+		cond1 = Accept.accept(cond1);
 		if (cond1) {
 			float e = aX * Cy - Ay * Cx;
 			cond2 = (f > 0);
 			// additional accept
-			cond2 = accept(cond2);
+			cond2 = Accept.accept(cond2);
 			if (cond2) {
 				cond3 = (e >= 0 && e <= f);
 				//additional accept
-				cond3 = accept(cond3);
+				cond3 = Accept.accept(cond3);
 				if (cond3)
 					return true;
 			} else {
 				cond3 = (e <= 0 && e >= f);
 				//additional accept
-				cond3 = accept(cond3);
+				cond3 = Accept.accept(cond3);
 				if (cond3)
 					return true;
 			}
 		}
 		return false;
 	}
-
-	public static boolean accept(boolean b) {return b;}
-	public static float accept(float f) {return f;}
 }

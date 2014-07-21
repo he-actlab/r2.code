@@ -26,6 +26,7 @@
 			source="1.5" target="1.5" srcdir="src" destdir="classes"
 			classpath="${chord.home.dir}/chord.jar"> 
 		</javac>		
+		<jar jarfile="expax-analysis.jar" basedir="classes"/>
 	</target>
 
 	<target name="run">

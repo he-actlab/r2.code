@@ -16,6 +16,8 @@
 
 package com.google.zxing.common;
 
+import chord.analyses.expax.lang.*;
+
 /**
  * <p>Represents a 2D matrix of bits. In function arguments below, and throughout the common
  * module, x is the column position, and y is the row position. The ordering is always x, y.
@@ -51,12 +53,9 @@ public final class BitMatrix {
     this.width = width;
     this.height = height;
     this.rowSize = (width + 31) >> 5;
-    alloc_TAG2();
+    Alloc.alloc_TAG2();
     bits = new  int[rowSize * height];
   }
-  
-  public void alloc_TAG2(){}
-  public static int accept(int b){return b;}
 
   /**
    * <p>Gets the requested bit, where true means black.</p>
@@ -69,7 +68,7 @@ public final class BitMatrix {
     int offset = y * rowSize + (x >> 5);
     int lhs = ((bits[offset] >>> (x & 0x1f)) & 1);
     //additional accept
-    lhs = accept(lhs);
+    lhs = Accept.accept(lhs);
     return lhs != 0;
   }
 
@@ -161,7 +160,7 @@ public final class BitMatrix {
     int bitsOffset = 0;
     int b = bits[bitsOffset];
     //additional accept
-    b = accept(b);
+    b = Accept.accept(b);
     while (bitsOffset < bits.length && b == 0) {
       bitsOffset++;
     }
@@ -176,7 +175,7 @@ public final class BitMatrix {
     
     int lhs = (theBits << (31 - bit));
     //additional accept
-    lhs = accept(lhs);
+    lhs = Accept.accept(lhs);
     while (lhs == 0) {
       bit++;
     }
@@ -211,9 +210,9 @@ public final class BitMatrix {
       int lhs = bits[i];
       int rhs = other.bits[i];
       //additional accept
-      lhs = accept(lhs);
+      lhs = Accept.accept(lhs);
       //additional accept
-      rhs = accept(rhs);
+      rhs = Accept.accept(rhs);
       if (lhs != rhs) {
         return false;
       }
@@ -229,7 +228,7 @@ public final class BitMatrix {
     for (int i = 0; i < bits.length; i++) {
       int b = bits[i];
       //additional accept
-      b = accept(b);
+      b = Accept.accept(b);
       hash = 31 * hash + (int)(b);
     }
     return hash;
@@ -241,7 +240,7 @@ public final class BitMatrix {
       for (int x = 0; x < width; x++) {
     	boolean get = get(x, y);
     	//additional accept
-    	get = accept(get);
+    	get = Accept.accept(get);
         result.append(get ? "X " : "  ");
       }
       result.append('\n');
@@ -249,5 +248,4 @@ public final class BitMatrix {
     return result.toString();
   }
 
-  public boolean accept(boolean b){return b;}
 }

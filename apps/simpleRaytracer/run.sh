@@ -1,6 +1,7 @@
 #!/bin/sh
 enerjdir=../../enerj
-classpath=simpleRaytracer.jar
+expaxjar=$EXPAX_ANALYSIS/expax-analysis.jar
+classpath=simpleRaytracer.jar:$expaxjar
 mainclass=Plane
 
 enerjargs=-noisy

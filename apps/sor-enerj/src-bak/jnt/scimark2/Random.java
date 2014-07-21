@@ -1,5 +1,5 @@
 package jnt.scimark2;
-
+import enerj.lang.*;
 
 /* Random.java based on Java Numerical Toolkit (JNT) Random.UniformSequence
 	 class.  We do not use Java's own java.util.Random so that we can compare
@@ -115,20 +115,15 @@ public class Random {
 		Returns the next random number in the sequence.
 	 */
 	// EnerJ TODO
-	public final synchronized double nextDouble () {
+	public final synchronized @Approx double nextDouble () {
 
 		int k;
 		double nextValue;
 
 		k = m[i] - m[j]; 
-		// additional accept
-		k = accept(k);
 		if (k < 0) 
 			k += m1; 
 		m[j] = k; 
-
-		// additional accept
-		accept_all_FIELD2_TAG();
 
 		if (i == 0) 
 			i = 16;
@@ -176,10 +171,5 @@ public class Random {
 		j = 16;
 
 	}
-
-	//jspark
-	private int accept (int i){return i;}
-	private void accept_all_FIELD2_TAG(){}
-	//krapsj
 
 }

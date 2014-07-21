@@ -14,8 +14,6 @@ public class commandline
 
 	public static void main(String args[])
 	{
-		double min_time = Constants.RESOLUTION_DEFAULT;
-
 		int SOR_size =  Constants.TINY_SOR_SIZE;
 
 		String seed = null;

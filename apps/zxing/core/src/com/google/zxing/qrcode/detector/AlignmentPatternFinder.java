@@ -16,6 +16,8 @@
 
 package com.google.zxing.qrcode.detector;
 
+import chord.analyses.expax.lang.Accept;
+
 import com.google.zxing.NotFoundException;
 import com.google.zxing.ResultPoint;
 import com.google.zxing.ResultPointCallback;
@@ -78,8 +80,6 @@ final class AlignmentPatternFinder {
     this.crossCheckStateCount = new int[3];
     this.resultPointCallback = resultPointCallback;
   }
-
-  public static boolean accept(boolean b){return b;}
   
   /**
    * <p>This method attempts to find the bottom-right alignment pattern in the image. It is a bit messy since
@@ -113,7 +113,7 @@ final class AlignmentPatternFinder {
       while (j < maxJ) {
     	boolean imageGet = image.get(j, i);
     	//additional accept
-    	imageGet = accept(imageGet);
+    	imageGet = Accept.accept(imageGet);
         if (imageGet) {
           // Black pixel
           if (currentState == 1) { // Counting black pixels
@@ -211,13 +211,13 @@ final class AlignmentPatternFinder {
     boolean imageGet;
     imageGet = image.get(centerJ, i);
     //additional accept
-    imageGet = accept(imageGet);
+    imageGet = Accept.accept(imageGet);
     while (i >= 0 && imageGet && stateCount[1] <= maxCount) {
       stateCount[1]++;
       i--;
       imageGet = image.get(centerJ, i);
       //additional accept
-      imageGet = accept(imageGet);
+      imageGet = Accept.accept(imageGet);
     }
     // If already too many modules in this state or ran off the edge:
     if (i < 0 || stateCount[1] > maxCount) {
@@ -225,13 +225,13 @@ final class AlignmentPatternFinder {
     }
     imageGet = image.get(centerJ, i);
     //additional accept
-    imageGet = accept(imageGet);
+    imageGet = Accept.accept(imageGet);
     while (i >= 0 && !imageGet && stateCount[0] <= maxCount) {
       stateCount[0]++;
       i--;
       imageGet = image.get(centerJ, i);
       //additional accept
-      imageGet = accept(imageGet);
+      imageGet = Accept.accept(imageGet);
     }
     if (stateCount[0] > maxCount) {
       return Float.NaN;
@@ -241,26 +241,26 @@ final class AlignmentPatternFinder {
     i = startI + 1;
     imageGet = image.get(centerJ, i);
     //additional accept
-    imageGet = accept(imageGet);
+    imageGet = Accept.accept(imageGet);
     while (i < maxI && imageGet && stateCount[1] <= maxCount) {
       stateCount[1]++;
       i++;
       imageGet = image.get(centerJ, i);
       //additional accept
-      imageGet = accept(imageGet);
+      imageGet = Accept.accept(imageGet);
     }
     if (i == maxI || stateCount[1] > maxCount) {
       return Float.NaN;
     }
     imageGet = !image.get(centerJ, i);
     //additional accept
-    imageGet = accept(imageGet);
+    imageGet = Accept.accept(imageGet);
     while (i < maxI && imageGet && stateCount[2] <= maxCount) {
       stateCount[2]++;
       i++;
       imageGet = !image.get(centerJ, i);
       //additional accept
-      imageGet = accept(imageGet);
+      imageGet = Accept.accept(imageGet);
     }
     if (stateCount[2] > maxCount) {
       return Float.NaN;
@@ -297,7 +297,7 @@ final class AlignmentPatternFinder {
         // Look for about the same center and module size:
         boolean cond = center.aboutEquals(estimatedModuleSize, centerI, centerJ);
         //additional accept
-        cond = accept(cond);
+        cond = Accept.accept(cond);
         if (cond) {
           return new AlignmentPattern(centerJ, centerI, estimatedModuleSize);
         }

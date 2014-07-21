@@ -16,35 +16,19 @@ public class commandline
 	{
 		double min_time = Constants.RESOLUTION_DEFAULT; // approx: move to min_time
 
-		int FFT_size = Constants.FFT_SIZE;
+		int FFT_size = Constants.TINY_FFT_SIZE;
 
 		String benchSel = null;
 		String seed = null;
 
-		if (args.length > 0)
-		{
+		if (args.length != 1)
+			throw new RuntimeException("Error! Seed should be provided as an argument");
 
-			if (args[0].equalsIgnoreCase("-h") || 
-					args[0].equalsIgnoreCase("-help"))
-			{
-				System.out.println("Usage: [-large] [minimum_time]");
-				return;
-			}
-
-			int current_arg = 0;
-			if (args.length > current_arg) {
-				benchSel = args[current_arg++];
-			}
-
-			if (args.length > current_arg) {
-				seed = args[current_arg];
-			}
-		}
+		seed = args[0];
 
 		// run the benchmark
 		Random R = new Random(Integer.parseInt(seed));
-		if (benchSel == null || benchSel.equals("fft"))
-			kernel.measureFFT( FFT_size, min_time, R);
+		kernel.measureFFT( FFT_size, min_time, R);
 				
 	}
 

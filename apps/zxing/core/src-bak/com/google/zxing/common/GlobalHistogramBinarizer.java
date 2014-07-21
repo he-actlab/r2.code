@@ -16,6 +16,8 @@
 
 package com.google.zxing.common;
 
+import chord.analyses.expax.lang.*;
+
 import com.google.zxing.Binarizer;
 import com.google.zxing.LuminanceSource;
 import com.google.zxing.NotFoundException;
@@ -60,7 +62,7 @@ public class GlobalHistogramBinarizer extends Binarizer {
     for (int x = 0; x < width; x++) {
       int pixel = (localLuminances[x] & 0xff);
       //additional accept
-      pixel = accept(pixel);
+      pixel = Accept.accept(pixel);
       localBuckets[pixel >> LUMINANCE_SHIFT]++;
     }
      int blackPoint = estimateBlackPoint(localBuckets);
@@ -72,9 +74,9 @@ public class GlobalHistogramBinarizer extends Binarizer {
       // A simple -1 4 -1 box filter with a weight of 2.
       int luminance = ((center << 2) - left - right) >> 1;
       // additional accept
-      luminance = accept(luminance);
+      luminance = Accept.accept(luminance);
       // additional accept
-      blackPoint = accept(blackPoint);
+      blackPoint = Accept.accept(blackPoint);
       if (luminance < blackPoint) {
         row.set(x);
       }
@@ -83,8 +85,6 @@ public class GlobalHistogramBinarizer extends Binarizer {
     }
     return row;
   }
-  
-  public static int accept(int i){return i;}
 
   // Does not sharpen the data, as this call is intended to only be used by 2D Readers.
   public BitMatrix getBlackMatrix() throws NotFoundException {
@@ -104,7 +104,7 @@ public class GlobalHistogramBinarizer extends Binarizer {
       for (int x = width / 5; x < right; x++) {
         int pixel = (localLuminances[x] & 0xff);
         //additional accept
-        pixel = accept(pixel);
+        pixel = Accept.accept(pixel);
         localBuckets[pixel >> LUMINANCE_SHIFT]++; // EnerJ TODO
       }
     }
@@ -119,9 +119,9 @@ public class GlobalHistogramBinarizer extends Binarizer {
       for (int x = 0; x< width; x++) {
         int pixel = (localLuminances[offset + x] & 0xff);
         //additional accept
-        pixel = accept(pixel);
+        pixel = Accept.accept(pixel);
         //additional accept
-        blackPoint = accept(blackPoint);
+        blackPoint = Accept.accept(blackPoint);
         if (pixel < blackPoint) {
           matrix.set(x, y);
         }
@@ -134,15 +134,13 @@ public class GlobalHistogramBinarizer extends Binarizer {
   public Binarizer createBinarizer(LuminanceSource source) {
     return new GlobalHistogramBinarizer(source);
   }
-
-  public static void alloc_TAG5(){}
   
   private void initArrays(int luminanceSize) {
     if (luminances == null || luminances.length < luminanceSize) {
       luminances = new byte[luminanceSize];
     }
     if (buckets == null) {
-      alloc_TAG5();
+      Alloc.alloc_TAG5();
       buckets = new int[LUMINANCE_BUCKETS];
     } else {
       for (int x = 0; x < LUMINANCE_BUCKETS; x++) {
@@ -150,8 +148,6 @@ public class GlobalHistogramBinarizer extends Binarizer {
       }
     }
   }
-  
-  public static int[] accept_all_FIELD1_TAG5(int[] i){return i;}
   
   private static  int estimateBlackPoint( int[] buckets) throws NotFoundException {
     // Find the tallest peak in the histogram.
@@ -161,15 +157,15 @@ public class GlobalHistogramBinarizer extends Binarizer {
     int firstPeakSize = 0;
     for (int x = 0; x < numBuckets; x++) {
       // additional accept
-      accept_all_FIELD1_TAG5(buckets);
+      buckets = Accept.accept_all_FIELD1_TAG5(buckets);
       // additional accept
-      firstPeakSize = accept(firstPeakSize);
+      firstPeakSize = Accept.accept(firstPeakSize);
       if (buckets[x] > firstPeakSize) {
         firstPeak = x;
         firstPeakSize = buckets[x];
       }
       // additional accept
-      maxBucketCount = accept(maxBucketCount);
+      maxBucketCount = Accept.accept(maxBucketCount);
       if (buckets[x] > maxBucketCount) {
         maxBucketCount = buckets[x];
       }
@@ -183,9 +179,9 @@ public class GlobalHistogramBinarizer extends Binarizer {
       // Encourage more distant second peaks by multiplying by square of distance.
       int score = buckets[x] * distanceToBiggest * distanceToBiggest;
       // additional accept 
-      score = accept(score);
+      score = Accept.accept(score);
       // additional accept
-      secondPeakScore = accept(secondPeakScore);
+      secondPeakScore = Accept.accept(secondPeakScore);
       if (score > secondPeakScore) {
         secondPeak = x;
         secondPeakScore = score;
@@ -214,9 +210,9 @@ public class GlobalHistogramBinarizer extends Binarizer {
       int fromFirst = x - firstPeak;
       int score = fromFirst * fromFirst * (secondPeak - x) * (maxBucketCount - buckets[x]);
       // additional accept
-      score = accept(score);
+      score = Accept.accept(score);
       // additional accept
-      bestValleyScore = accept(bestValleyScore);
+      bestValleyScore = Accept.accept(bestValleyScore);
       if (score > bestValleyScore) {
         bestValley = x;
         bestValleyScore = score;

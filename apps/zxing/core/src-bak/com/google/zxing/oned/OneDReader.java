@@ -16,6 +16,8 @@
 
 package com.google.zxing.oned;
 
+import chord.analyses.expax.lang.Accept;
+
 import com.google.zxing.BinaryBitmap;
 import com.google.zxing.ChecksumException;
 import com.google.zxing.DecodeHintType;
@@ -270,9 +272,9 @@ public abstract class OneDReader implements Reader {
       patternLength += pattern[i];
     }
     //additional accept
-    total = accept(total);
+    total = Accept.accept(total);
     //additional accept
-    patternLength = accept(patternLength);
+    patternLength = Accept.accept(patternLength);
     if (total < patternLength) {
       // If we don't even have one pixel per unit of bar width, assume this is too small
       // to reliably match, so fail:
@@ -289,14 +291,14 @@ public abstract class OneDReader implements Reader {
       int counter = counters[x] << INTEGER_MATH_SHIFT;
       int scaledPattern = pattern[x] * unitBarWidth;
       //additional accept
-      counter = accept(counter);
+      counter = Accept.accept(counter);
       //additional accept
-      scaledPattern = accept(scaledPattern);
+      scaledPattern = Accept.accept(scaledPattern);
       int variance = (counter > scaledPattern) ? counter - scaledPattern : scaledPattern - counter;
       // addtional accept
-      variance = accept(variance);
+      variance = Accept.accept(variance);
       // addtional accept
-      maxIndividualVariance = accept(maxIndividualVariance);
+      maxIndividualVariance = Accept.accept(maxIndividualVariance);
       if (variance > maxIndividualVariance) {
         return Integer.MAX_VALUE;
       }
@@ -304,8 +306,6 @@ public abstract class OneDReader implements Reader {
     }
     return totalVariance / total;
   }
-
-  public static int accept(int i){return i;}
   
   /**
    * <p>Attempts to decode a one-dimensional barcode format given a single row of

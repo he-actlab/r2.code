@@ -16,7 +16,9 @@
 
 package com.google.zxing.qrcode.detector;
 
-import com.google.zxing.ApproxMath;
+import chord.analyses.expax.lang.Accept;
+import chord.analyses.expax.lang.math.ApproxMath;
+
 import com.google.zxing.DecodeHintType;
 import com.google.zxing.NotFoundException;
 import com.google.zxing.ResultPoint;
@@ -104,7 +106,7 @@ public class FinderPatternFinder {
       for (int j = 0; j < maxJ; j++) {
     	boolean cond = image.get(j, i);
     	//additional accept
-    	cond = accept(cond);
+    	cond = Accept.accept(cond);
         if (cond) {
           // Black pixel
           if ((currentState & 1) == 1) { // Counting white pixels
@@ -253,13 +255,13 @@ public class FinderPatternFinder {
     boolean imageGet;
     imageGet = image.get(centerJ, i);
     //additional accept
-    imageGet = accept(imageGet);
+    imageGet = Accept.accept(imageGet);
     while (i >= 0 && imageGet) {
       stateCount[2]++;
       i--;
       imageGet = image.get(centerJ, i);
       //additional accept
-      imageGet = accept(imageGet);
+      imageGet = Accept.accept(imageGet);
     }
     
     if (i < 0) {
@@ -267,13 +269,13 @@ public class FinderPatternFinder {
     }
     imageGet = image.get(centerJ, i);
     //additional accept
-    imageGet = accept(imageGet);
+    imageGet = Accept.accept(imageGet);
     while (i >= 0 && !imageGet && stateCount[1] <= maxCount) {
       stateCount[1]++;
       i--;
       imageGet = image.get(centerJ, i);
       //additional accept
-      imageGet = accept(imageGet);
+      imageGet = Accept.accept(imageGet);
     }
     // If already too many modules in this state or ran off the edge:
     if (i < 0 || stateCount[1] > maxCount) {
@@ -281,13 +283,13 @@ public class FinderPatternFinder {
     }
     imageGet = image.get(centerJ, i);
     //additional accept
-    imageGet = accept(imageGet);
+    imageGet = Accept.accept(imageGet);
     while (i >= 0 && imageGet && stateCount[0] <= maxCount) {
       stateCount[0]++;
       i--;
       imageGet = image.get(centerJ, i);
       //additional accept
-      imageGet = accept(imageGet);
+      imageGet = Accept.accept(imageGet);
     }
     if (stateCount[0] > maxCount) {
       return Float.NaN;
@@ -297,39 +299,39 @@ public class FinderPatternFinder {
     i = startI + 1;
     imageGet = image.get(centerJ, i);
     //additional accept
-    imageGet = accept(imageGet);
+    imageGet = Accept.accept(imageGet);
     while (i < maxI && imageGet) {
       stateCount[2]++;
       i++;
       imageGet = image.get(centerJ, i);
       //additional accept
-      imageGet = accept(imageGet);
+      imageGet = Accept.accept(imageGet);
     }
     if (i == maxI) {
       return Float.NaN;
     }
     imageGet = image.get(centerJ, i);
     //additional accept
-    imageGet = accept(imageGet);
+    imageGet = Accept.accept(imageGet);
     while (i < maxI && !imageGet && stateCount[3] < maxCount) {
       stateCount[3]++;
       i++;
       imageGet = image.get(centerJ, i);
       //additional accept
-      imageGet = accept(imageGet);
+      imageGet = Accept.accept(imageGet);
     }
     if (i == maxI || stateCount[3] >= maxCount) {
       return Float.NaN;
     }
     imageGet = image.get(centerJ, i);
     //additional accept
-    imageGet = accept(imageGet);
+    imageGet = Accept.accept(imageGet);
     while (i < maxI && imageGet && stateCount[4] < maxCount) {
       stateCount[4]++;
       i++;
       imageGet = image.get(centerJ, i);
       //additional accept
-      imageGet = accept(imageGet);
+      imageGet = Accept.accept(imageGet);
     }
     if (stateCount[4] >= maxCount) {
       return Float.NaN;
@@ -363,39 +365,39 @@ public class FinderPatternFinder {
     boolean imageGet;
     imageGet = image.get(j, centerI);
     //additional accept
-    imageGet = accept(imageGet);
+    imageGet = Accept.accept(imageGet);
     while (j >= 0 && imageGet) {
       stateCount[2]++;
       j--;
       imageGet = image.get(j, centerI);
       //additional accept
-      imageGet = accept(imageGet);
+      imageGet = Accept.accept(imageGet);
     }
     if (j < 0) {
       return Float.NaN;
     }
     imageGet = image.get(j, centerI);
     //additional accept
-    imageGet = accept(imageGet);
+    imageGet = Accept.accept(imageGet);
     while (j >= 0 && !imageGet && stateCount[1] <= maxCount) {
       stateCount[1]++;
       j--;
       imageGet = image.get(j, centerI);
       //additional accept
-      imageGet = accept(imageGet);
+      imageGet = Accept.accept(imageGet);
     }
     if (j < 0 || stateCount[1] > maxCount) {
       return Float.NaN;
     }
     imageGet = image.get(j, centerI);
     //additional accept
-    imageGet = accept(imageGet);
+    imageGet = Accept.accept(imageGet);
     while (j >= 0 && imageGet && stateCount[0] <= maxCount) {
       stateCount[0]++;
       j--;
       imageGet = image.get(j, centerI);
       //additional accept
-      imageGet = accept(imageGet);
+      imageGet = Accept.accept(imageGet);
     }
     if (stateCount[0] > maxCount) {
       return Float.NaN;
@@ -404,39 +406,39 @@ public class FinderPatternFinder {
     j = startJ + 1;
     imageGet = image.get(j, centerI);
     //additional accept
-    imageGet = accept(imageGet);
+    imageGet = Accept.accept(imageGet);
     while (j < maxJ && imageGet) {
       stateCount[2]++;
       j++;
       imageGet = image.get(j, centerI);
       //additional accept
-      imageGet = accept(imageGet);
+      imageGet = Accept.accept(imageGet);
     }
     if (j == maxJ) {
       return Float.NaN;
     }
     imageGet = image.get(j, centerI);
     //additional accept
-    imageGet = accept(imageGet);
+    imageGet = Accept.accept(imageGet);
     while (j < maxJ && !imageGet && stateCount[3] < maxCount) {
       stateCount[3]++;
       j++;
       imageGet = image.get(j, centerI);
       //additional accept
-      imageGet = accept(imageGet);
+      imageGet = Accept.accept(imageGet);
     }
     if (j == maxJ || stateCount[3] >= maxCount) {
       return Float.NaN;
     }
     imageGet = image.get(j, centerI);
     //additional accept
-    imageGet = accept(imageGet);
+    imageGet = Accept.accept(imageGet);
     while (j < maxJ && imageGet && stateCount[4] < maxCount) {
       stateCount[4]++;
       j++;
       imageGet = image.get(j, centerI);
       //additional accept
-      imageGet = accept(imageGet);
+      imageGet = Accept.accept(imageGet);
     }
     if (stateCount[4] >= maxCount) {
       return Float.NaN;
@@ -486,7 +488,7 @@ public class FinderPatternFinder {
           // Look for about the same center and module size:
           boolean cond = center.aboutEquals(estimatedModuleSize, centerI, centerJ);
           //additional accept
-          cond = accept(cond);
+          cond = Accept.accept(cond);
           if (cond) {
             center.incrementCount();
             found = true;
@@ -494,9 +496,6 @@ public class FinderPatternFinder {
           }
         }
         if (!found) {
-          //jspark
-          //alloc_TAG3();
-          //krapsj
           ResultPoint point = new FinderPattern(centerJ, centerI, estimatedModuleSize);
           possibleCenters.addElement(point);
           if (resultPointCallback != null) {
@@ -508,10 +507,6 @@ public class FinderPatternFinder {
     }
     return false;
   }
-  
-  //jspark
-  public void alloc_TAG3(){};
-  //krapsj
 
   /**
    * @return number of rows we could safely skip during scanning, based on the first
@@ -604,7 +599,7 @@ public class FinderPatternFinder {
         FinderPattern pattern = (FinderPattern) possibleCenters.elementAt(i);
         boolean cond = (ApproxMath.abs(pattern.getEstimatedModuleSize() - average) > 0.2f * average);
         //additional accept
-        cond = accept(cond);
+        cond = Accept.accept(cond);
         if (cond) {
           possibleCenters.removeElementAt(i);
           i--;
@@ -624,8 +619,6 @@ public class FinderPatternFinder {
         (FinderPattern) possibleCenters.elementAt(2)
     };
   }
-
-  public static boolean accept(boolean b){return b;}
   
   /**
    * <p>Orders by {@link FinderPattern#getCount()}, descending.</p>

@@ -16,6 +16,8 @@
 
 package com.google.zxing.qrcode.decoder;
 
+import chord.analyses.expax.lang.Accept;
+
 import com.google.zxing.common.BitMatrix;
 
 
@@ -49,8 +51,6 @@ abstract class DataMask {
 
   private DataMask() {
   }
-
-  public boolean accept(boolean b){return b;}
   
   /**
    * <p>Implementations of this method reverse the data masking process applied to a QR Code and
@@ -64,7 +64,7 @@ abstract class DataMask {
       for (int j = 0; j < dimension; j++) {
     	boolean b = isMasked(i, j);
     	//additional accept
-    	b = accept(b);
+    	b = Accept.accept(b);
         if (b) {
           bits.flip(j, i);
         }

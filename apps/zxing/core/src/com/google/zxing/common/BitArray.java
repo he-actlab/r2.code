@@ -16,6 +16,9 @@
 
 package com.google.zxing.common;
 
+import chord.analyses.expax.lang.Accept;
+import chord.analyses.expax.lang.Alloc;
+
 /**
  * <p>A simple, fast array of bits, represented compactly by an array of ints internally.</p>
  *
@@ -32,7 +35,7 @@ public final class BitArray {
 
   public BitArray() {
     this.size = 0;
-    alloc_TAG2();
+    Alloc.alloc_TAG2();
     this.bits = new int[1];
   }
 
@@ -65,7 +68,7 @@ public final class BitArray {
   public boolean get(int i) {
 	//additional accept - cmp operator
 	int lhs = (bits[i>>5] & (1 << (i & 0x1F)));
-	lhs = accept(lhs);
+	lhs = Accept.accept(lhs);
     return lhs != 0; 
   }
 
@@ -145,9 +148,9 @@ public final class BitArray {
       int lhs= bits[i] & mask;
       int rhs= (value ? mask : 0);
       // additional accept
-      lhs= accept(lhs);
+      lhs= Accept.accept(lhs);
       // additional accept
-      rhs = accept(rhs);
+      rhs = Accept.accept(rhs);
       if (lhs != rhs) {
         return false;
       }
@@ -155,13 +158,10 @@ public final class BitArray {
     return true;
   }
   
-  public static int accept(int i){return i;}
-  public static boolean accept(boolean i){return i;}
-  
   public void appendBit(boolean bit) {
     ensureCapacity(size + 1);
     //additional accept
-    bit = accept(bit);
+    bit = Accept.accept(bit);
     if (bit) {
       bits[size >> 5] |= (1 << (size & 0x1F));
     }
@@ -216,7 +216,7 @@ public final class BitArray {
       for (int j = 0; j < 8; j++) {
     	boolean get = get(bitOffset);
     	//additional accept
-    	get = accept(get);
+    	get = Accept.accept(get);
         if (get) {
           theByte |= 1 << (7 - j);
         }
@@ -238,13 +238,13 @@ public final class BitArray {
    * Reverses all bits in the array.
    */
   public void reverse() {
-	alloc_TAG2();
+	Alloc.alloc_TAG2();
     int[] newBits = new int[bits.length];
     int size = this.size;
     for (int i = 0; i < size; i++) {
       boolean get = get(size - i - 1);
       //additional accept
-      get = accept(get);
+      get = Accept.accept(get);
       if (get) {
         newBits[i >> 5] |= 1 << (i & 0x1F);
       }
@@ -253,8 +253,8 @@ public final class BitArray {
   }
 
   private static  int[] makeArray(int size) {
-	alloc_TAG2();
-    return new  int[(size + 31) >> 5];
+	Alloc.alloc_TAG2();
+    return new int[(size + 31) >> 5];
   }
   
   public String toString() {
@@ -265,12 +265,10 @@ public final class BitArray {
       }
       //additional accept 
       boolean get = get(i);
-      get = accept(get);
+      get = Accept.accept(get);
       result.append(get ? 'X' : '.');
     }
     return result.toString();
   }
-
-  public static void alloc_TAG2(){}
   
 }

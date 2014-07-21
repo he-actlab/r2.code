@@ -1,167 +1,167 @@
 163
-jnt.scimark2.FFT#transform_internal(double[],int)#void#217#521: MOVE_D R140, R135
-jnt.scimark2.FFT#inverse(double[])#void#17#12: DIV_D T7, DConst: 1.0, T20
 jnt.scimark2.Random#nextDouble()#double#110#46: GETFIELD_D T39, R0, .width
-jnt.scimark2.Random#initialize(int)#void#37#15: MOVE_I R7, IConst: 0
-jnt.scimark2.FFT#transform_internal(double[],int)#void#53#209: MUL_D T52, T51, DConst: 3.141592653589793
-jnt.scimark2.FFT#transform_internal(double[],int)#void#69#217: MOVE_D R59, T58
-jnt.scimark2.FFT#transform_internal(double[],int)#void#71#218: MOVE_D R60, R59
-jnt.scimark2.FFT#transform_internal(double[],int)#void#138#402: ALOAD_D T92, R0, R91
-jnt.scimark2.FFT#inverse(double[])#void#36#34: MUL_D T31, T29, R30
-jnt.scimark2.FFT#transform_internal(double[],int)#void#230#529: SUB_D T148, T144, T147
-jnt.scimark2.FFT#inverse(double[])#void#18#13: MOVE_D R21, T7
-jnt.scimark2.FFT#transform_internal(double[],int)#void#336#594: SUB_D T213, T211, R212
-jnt.scimark2.Random#nextDouble()#double#113#47: MUL_D T40, T38, T39
-jnt.scimark2.FFT#transform_internal(double[],int)#void#42#205: MOVE_D R49, DConst: 0.0
 jnt.scimark2.FFT#transform_internal(double[],int)#void#351#603: SUB_D T221, T219, R220
-jnt.scimark2.FFT#transform_internal(double[],int)#void#349#602: MOVE_D R220, R207
-jnt.scimark2.Random#<init>(int)#void#34#7: PUTFIELD_I R0, .m1, IConst: 2147483647
-jnt.scimark2.FFT#transform_internal(double[],int)#void#243#537: MOVE_D R156, R150
-jnt.scimark2.FFT#transform_internal(double[],int)#void#173#422: SUB_D T111, T109, R110
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#12#5: MOVE_L R6, LConst: 100
-jnt.scimark2.FFT#transform_internal(double[],int)#void#106#232: MOVE_D R74, R72
-jnt.scimark2.FFT#bitreverse(double[])#void#62#104: ASTORE_D T51, T50, R48
-jnt.scimark2.FFT#transform_internal(double[],int)#void#239#534: MUL_D T153, R151, R152
-jnt.scimark2.FFT#transform_internal(double[],int)#void#84#223: MOVE_D R65, T64
-jnt.scimark2.FFT#transform_internal(double[],int)#void#76#220: MOVE_D R62, T61
-jnt.scimark2.FFT#transform_internal(double[],int)#void#310#578: MUL_D T197, R195, R196
-jnt.scimark2.FFT#transform_internal(double[],int)#void#298#571: ALOAD_D T190, R0, T189
-jnt.scimark2.FFT#transform_internal(double[],int)#void#348#601: ALOAD_D T219, R0, T217
-jnt.scimark2.FFT#transform_internal(double[],int)#void#240#535: ADD_D T154, R150, T153
-jnt.scimark2.FFT#transform_internal(double[],int)#void#103#230: MOVE_D R72, R71
-jnt.scimark2.FFT#transform_internal(double[],int)#void#61#213: DIV_D T55, T52, T54
-jnt.scimark2.FFT#bitreverse(double[])#void#52#98: ALOAD_D T46, R0, T45
-jnt.scimark2.FFT#transform_internal(double[],int)#void#291#568: MOVE_D R187, T186
-jnt.scimark2.FFT#transform_internal(double[],int)#void#108#233: MUL_D T75, T73, R74
-jnt.scimark2.FFT#transform_internal(double[],int)#void#225#526: MOVE_D R145, R132
-jnt.scimark2.FFT#transform_internal(double[],int)#void#190#435: ALOAD_D T122, R0, T119
-jnt.scimark2.Random#<init>(int)#void#47#9: PUTFIELD_D R0, .dm1, DConst: 4.656612875245797E-10
-jnt.scimark2.FFT#transform_internal(double[],int)#void#155#411: ALOAD_D T101, R0, R99
-jnt.scimark2.FFT#transform_internal(double[],int)#void#39#204: MOVE_D R48, DConst: 1.0
-jnt.scimark2.FFT#transform_internal(double[],int)#void#159#414: ASTORE_D T103, T100, R98
-jnt.scimark2.Random#nextDouble()#double#106#43: MOVE_I R36, R24
-jnt.scimark2.FFT#transform_internal(double[],int)#void#337#595: ASTORE_D T213, T210, R208
-jnt.scimark2.FFT#transform_internal(double[],int)#void#182#429: ADD_D T117, T115, R116
-jnt.scimark2.FFT#inverse(double[])#void#34#33: MOVE_D R30, R24
-jnt.scimark2.FFT#bitreverse(double[])#void#74#111: ASTORE_D T56, T55, T53
-jnt.scimark2.FFT#transform_internal(double[],int)#void#303#574: MOVE_D R193, R187
-jnt.scimark2.FFT#transform_internal(double[],int)#void#180#428: MOVE_D R116, R102
+jnt.scimark2.Random#nextDouble()#double#113#47: MUL_D T40, T38, T39
 jnt.scimark2.FFT#transform_internal(double[],int)#void#235#532: MOVE_D R151, R141
-jnt.scimark2.FFT#transform_internal(double[],int)#void#311#579: SUB_D T198, T194, T197
-jnt.scimark2.FFT#inverse(double[])#void#2#2: MOVE_I T1, IConst: 1
-jnt.scimark2.FFT#transform_internal(double[],int)#void#191#436: MOVE_D R123, R110
-jnt.scimark2.FFT#transform_internal(double[],int)#void#301#573: MOVE_D R192, R168
-jnt.scimark2.FFT#transform_internal(double[],int)#void#241#536: MOVE_D R155, R145
-jnt.scimark2.FFT#transform(double[])#void#2#2: MOVE_I T1, IConst: -1
-jnt.scimark2.FFT#transform_internal(double[],int)#void#170#420: ALOAD_D T109, R0, T107
-jnt.scimark2.FFT#transform_internal(double[],int)#void#360#610: ADD_D T227, T225, R226
-jnt.scimark2.FFT#transform_internal(double[],int)#void#64#215: MOVE_D R57, R56
-jnt.scimark2.FFT#transform_internal(double[],int)#void#146#406: ALOAD_D T96, R0, T95
-jnt.scimark2.FFT#inverse(double[])#void#37#35: ASTORE_D T31, T11, T10
-jnt.scimark2.FFT#inverse(double[])#void#15#10: MOVE_I R19, R18
-jnt.scimark2.FFT#transform_internal(double[],int)#void#247#540: MOVE_D R159, T158
-jnt.scimark2.Random#<init>(int)#void#23#5: PUTFIELD_I R0, .mdig, IConst: 32
-jnt.scimark2.Random#nextDouble()#double#107#44: INT_2DOUBLE T37, R36
-jnt.scimark2.FFT#transform_internal(double[],int)#void#49#208: MUL_D T51, DConst: 2.0, T50
-jnt.scimark2.FFT#transform_internal(double[],int)#void#334#593: MOVE_D R212, R199
 jnt.scimark2.FFT#transform_internal(double[],int)#void#83#222: DIV_D T64, R63, DConst: 2.0
-jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#20#18: ASTORE_D T5, R3, R13
-jnt.scimark2.FFT#transform_internal(double[],int)#void#158#413: SUB_D T103, T101, R102
-jnt.scimark2.FFT#transform_internal(double[],int)#void#290#567: ALOAD_D T186, R0, R185
-jnt.scimark2.FFT#transform_internal(double[],int)#void#319#584: MOVE_D R203, R195
-jnt.scimark2.FFT#transform_internal(double[],int)#void#306#576: MOVE_D R195, R167
-jnt.scimark2.Random#<init>(int)#void#28#6: PUTFIELD_I R0, .one, IConst: 1
-jnt.scimark2.Random#<init>(int)#void#67#13: PUTFIELD_D R0, .width, DConst: 1.0
-jnt.scimark2.FFT#transform_internal(double[],int)#void#183#430: ASTORE_D T117, T114, T113
-jnt.scimark2.FFT#transform_internal(double[],int)#void#174#423: ASTORE_D T111, T108, T105
-jnt.scimark2.FFT#transform_internal(double[],int)#void#224#525: SUB_D T144, R140, T143
-jnt.scimark2.Random#nextDouble()#double#121#38: INT_2DOUBLE T44, R43
-jnt.scimark2.FFT#transform_internal(double[],int)#void#233#531: MOVE_D R150, R142
-jnt.scimark2.FFT#bitreverse(double[])#void#73#110: ALOAD_D T56, R0, T15
-jnt.scimark2.Random#nextDouble()#double#117#36: GETFIELD_D T42, R0, .dm1
-jnt.scimark2.Random#initialize(int)#void#35#14: MOVE_I R6, IConst: 9069
-jnt.scimark2.FFT#transform_internal(double[],int)#void#219#522: MOVE_D R141, R133
-jnt.scimark2.FFT#transform_internal(double[],int)#void#223#524: MUL_D T143, R141, R142
-jnt.scimark2.FFT#inverse(double[])#void#10#6: DIV_I T15, R14, IConst: 2
-jnt.scimark2.FFT#transform_internal(double[],int)#void#299#572: MOVE_D R191, T190
-jnt.scimark2.FFT#transform_internal(double[],int)#void#352#604: ASTORE_D T221, T218, T215
-jnt.scimark2.FFT#transform_internal(double[],int)#void#246#539: SUB_D T158, T154, T157
-jnt.scimark2.FFT#transform_internal(double[],int)#void#62#214: MOVE_D R56, T55
-jnt.scimark2.FFT#transform_internal(double[],int)#void#316#582: MOVE_D R201, R196
-jnt.scimark2.FFT#transform_internal(double[],int)#void#325#588: MOVE_D R207, T206
-jnt.scimark2.FFT#transform_internal(double[],int)#void#245#538: MUL_D T157, R155, R156
-jnt.scimark2.FFT#inverse(double[])#void#12#8: MOVE_I R17, R16
-jnt.scimark2.FFT#transform_internal(double[],int)#void#98#229: MOVE_D R71, T70
-jnt.scimark2.FFT#transform_internal(double[],int)#void#371#618: ADD_D T234, T232, R233
-jnt.scimark2.FFT#transform_internal(double[],int)#void#333#592: ALOAD_D T211, R0, R209
-jnt.scimark2.FFT#transform_internal(double[],int)#void#60#212: MUL_D T54, DConst: 2.0, T11
-jnt.scimark2.FFT#inverse(double[])#void#13#9: MOVE_I R18, R17
-jnt.scimark2.FFT#transform_internal(double[],int)#void#47#206: MOVE_I R1, R1
-jnt.scimark2.FFT#transform_internal(double[],int)#void#59#211: INT_2DOUBLE T11, R53
-jnt.scimark2.FFT#bitreverse(double[])#void#88#118: ASTORE_D R61, R0, T60
-jnt.scimark2.commandline#main(java.lang.String[])#void#3#1: MOVE_D R1, DConst: 2.0
-jnt.scimark2.commandline#main(java.lang.String[])#void#6#2: MOVE_I R2, IConst: 16
-jnt.scimark2.FFT#transform_internal(double[],int)#void#249#541: MOVE_D R160, R149
-jnt.scimark2.FFT#bitreverse(double[])#void#78#113: MOVE_D R58, R43
-jnt.scimark2.FFT#transform_internal(double[],int)#void#93#227: MOVE_D R69, R68
-jnt.scimark2.FFT#transform_internal(double[],int)#void#369#617: MOVE_D R233, R220
-jnt.scimark2.FFT#transform_internal(double[],int)#void#105#231: MUL_D T73, DConst: 2.0, R72
-jnt.scimark2.Random#<init>(int)#void#40#8: PUTFIELD_I R0, .m2, IConst: 65536
+jnt.scimark2.FFT#transform_internal(double[],int)#void#337#595: ASTORE_D T213, T210, R208
+jnt.scimark2.FFT#transform_internal(double[],int)#void#53#209: MUL_D T52, T51, DConst: 3.141592653589793
 jnt.scimark2.Random#nextDouble()#double#103#42: GETFIELD_D T35, R0, .dm1
-jnt.scimark2.FFT#bitreverse(double[])#void#53#99: MOVE_D R47, T46
-jnt.scimark2.Random#nextDouble()#double#120#37: MOVE_I R43, R24
-jnt.scimark2.Random#<init>(int)#void#57#11: PUTFIELD_D R0, .left, DConst: 0.0
-jnt.scimark2.FFT#inverse(double[])#void#11#7: MOVE_I R16, T15
-jnt.scimark2.FFT#transform_internal(double[],int)#void#193#437: ADD_D T124, T122, R123
-jnt.scimark2.FFT#transform_internal(double[],int)#void#86#224: MOVE_D R66, R65
-jnt.scimark2.FFT#transform_internal(double[],int)#void#194#438: ASTORE_D T124, T121, T120
-jnt.scimark2.FFT#transform_internal(double[],int)#void#221#523: MOVE_D R142, R134
-jnt.scimark2.commandline#main(java.lang.String[])#void#52#15: MOVE_D T11, DConst: 2.0
-jnt.scimark2.FFT#transform_internal(double[],int)#void#109#234: MOVE_D R76, T75
-jnt.scimark2.FFT#transform_internal(double[],int)#void#314#581: MOVE_D R200, R192
-jnt.scimark2.FFT#transform_internal(double[],int)#void#251#542: MOVE_D R161, R160
-jnt.scimark2.FFT#transform_internal(double[],int)#void#361#611: ASTORE_D T227, T224, T223
-jnt.scimark2.FFT#bitreverse(double[])#void#44#94: ALOAD_D T42, R0, R41
-jnt.scimark2.FFT#transform_internal(double[],int)#void#318#583: MUL_D T202, R200, R201
-jnt.scimark2.FFT#transform_internal(double[],int)#void#323#586: MUL_D T205, R203, R204
-jnt.scimark2.FFT#accept(double)#double#0#1: MOVE_D R0, R0
-jnt.scimark2.FFT#transform_internal(double[],int)#void#312#580: MOVE_D R199, T198
-jnt.scimark2.FFT#transform_internal(double[],int)#void#48#207: INT_2DOUBLE T50, R1
-jnt.scimark2.FFT#transform_internal(double[],int)#void#237#533: MOVE_D R152, R146
-jnt.scimark2.FFT#bitreverse(double[])#void#80#114: ASTORE_D R58, R0, R57
-jnt.scimark2.Random#<init>(int)#void#6#2: PUTFIELD_I R0, .seed, IConst: 0
-jnt.scimark2.FFT#transform_internal(double[],int)#void#156#412: MOVE_D R102, R93
-jnt.scimark2.FFT#transform_internal(double[],int)#void#139#403: MOVE_D R93, T92
-jnt.scimark2.FFT#transform_internal(double[],int)#void#255#544: MOVE_D R163, R162
-jnt.scimark2.FFT#transform_internal(double[],int)#void#229#528: MUL_D T147, R145, R146
-jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#80#52: ALOAD_D T12, R31, R35
-jnt.scimark2.FFT#bitreverse(double[])#void#61#103: ALOAD_D T51, R0, R49
-jnt.scimark2.FFT#transform_internal(double[],int)#void#324#587: ADD_D T206, T202, T205
-jnt.scimark2.FFT#inverse(double[])#void#16#11: INT_2DOUBLE T20, R19
-jnt.scimark2.FFT#transform_internal(double[],int)#void#227#527: MOVE_D R146, R140
+jnt.scimark2.FFT#inverse(double[])#void#10#6: DIV_I T15, R14, IConst: 2
+jnt.scimark2.FFT#transform_internal(double[],int)#void#245#538: MUL_D T157, R155, R156
+jnt.scimark2.FFT#transform_internal(double[],int)#void#243#537: MOVE_D R156, R150
+jnt.scimark2.FFT#transform_internal(double[],int)#void#303#574: MOVE_D R193, R187
 jnt.scimark2.FFT#transform_internal(double[],int)#void#305#575: MUL_D T194, R192, R193
-jnt.scimark2.Random#<init>(int)#void#62#12: PUTFIELD_D R0, .right, DConst: 1.0
-jnt.scimark2.FFT#transform_internal(double[],int)#void#231#530: MOVE_D R149, T148
-jnt.scimark2.FFT#transform_internal(double[],int)#void#171#421: MOVE_D R110, R97
-jnt.scimark2.Random#nextDouble()#double#108#45: MUL_D T38, T35, T37
-jnt.scimark2.FFT#transform_internal(double[],int)#void#91#226: MOVE_D R68, T67
-jnt.scimark2.FFT#transform_internal(double[],int)#void#179#427: ALOAD_D T115, R0, R112
-jnt.scimark2.FFT#transform_internal(double[],int)#void#308#577: MOVE_D R196, R191
-jnt.scimark2.FFT#bitreverse(double[])#void#45#95: MOVE_D R43, T42
 jnt.scimark2.FFT#transform_internal(double[],int)#void#321#585: MOVE_D R204, R193
-jnt.scimark2.FFT#transform_internal(double[],int)#void#147#407: MOVE_D R97, T96
-jnt.scimark2.FFT#bitreverse(double[])#void#86#117: MOVE_D R61, R47
+jnt.scimark2.FFT#transform_internal(double[],int)#void#108#233: MUL_D T75, T73, R74
+jnt.scimark2.FFT#transform_internal(double[],int)#void#308#577: MOVE_D R196, R191
+jnt.scimark2.FFT#transform_internal(double[],int)#void#352#604: ASTORE_D T221, T218, T215
+jnt.scimark2.Random#initialize(int)#void#35#14: MOVE_I R6, IConst: 9069
+jnt.scimark2.FFT#transform_internal(double[],int)#void#369#617: MOVE_D R233, R220
+jnt.scimark2.FFT#inverse(double[])#void#13#9: MOVE_I R18, R17
+jnt.scimark2.FFT#transform_internal(double[],int)#void#170#420: ALOAD_D T109, R0, T107
+jnt.scimark2.Random#nextDouble()#double#122#39: MUL_D T45, T42, T44
+jnt.scimark2.commandline#main(java.lang.String[])#void#52#15: MOVE_D T11, DConst: 2.0
+jnt.scimark2.FFT#transform_internal(double[],int)#void#39#204: MOVE_D R48, DConst: 1.0
+jnt.scimark2.Random#nextDouble()#double#108#45: MUL_D T38, T35, T37
+jnt.scimark2.Random#nextDouble()#double#120#37: MOVE_I R43, R24
+jnt.scimark2.FFT#transform_internal(double[],int)#void#155#411: ALOAD_D T101, R0, R99
+jnt.scimark2.FFT#transform_internal(double[],int)#void#146#406: ALOAD_D T96, R0, T95
+jnt.scimark2.Random#<init>(int)#void#34#7: PUTFIELD_I R0, .m1, IConst: 2147483647
 jnt.scimark2.FFT#transform_internal(double[],int)#void#253#543: MOVE_D R162, R159
-jnt.scimark2.FFT#transform_internal(double[],int)#void#372#619: ASTORE_D T234, T231, T230
+jnt.scimark2.FFT#transform_internal(double[],int)#void#249#541: MOVE_D R160, R149
+jnt.scimark2.FFT#transform_internal(double[],int)#void#301#573: MOVE_D R192, R168
+jnt.scimark2.FFT#transform_internal(double[],int)#void#190#435: ALOAD_D T122, R0, T119
+jnt.scimark2.FFT#inverse(double[])#void#37#35: ASTORE_D T31, T11, T10
 jnt.scimark2.FFT#transform_internal(double[],int)#void#358#609: MOVE_D R226, R212
 jnt.scimark2.Random#nextDouble()#double#114#48: ADD_D T41, T34, T40
-jnt.scimark2.FFT#transform_internal(double[],int)#void#78#221: MOVE_D R63, R60
-jnt.scimark2.FFT#inverse(double[])#void#33#32: ALOAD_D T29, R0, R28
+jnt.scimark2.FFT#transform_internal(double[],int)#void#247#540: MOVE_D R159, T158
+jnt.scimark2.Random#<init>(int)#void#67#13: PUTFIELD_D R0, .width, DConst: 1.0
+jnt.scimark2.FFT#transform_internal(double[],int)#void#221#523: MOVE_D R142, R134
+jnt.scimark2.FFT#inverse(double[])#void#12#8: MOVE_I R17, R16
+jnt.scimark2.FFT#transform_internal(double[],int)#void#42#205: MOVE_D R49, DConst: 0.0
+jnt.scimark2.FFT#transform_internal(double[],int)#void#372#619: ASTORE_D T234, T231, T230
+jnt.scimark2.FFT#transform_internal(double[],int)#void#182#429: ADD_D T117, T115, R116
+jnt.scimark2.FFT#transform_internal(double[],int)#void#183#430: ASTORE_D T117, T114, T113
+jnt.scimark2.FFT#transform_internal(double[],int)#void#147#407: MOVE_D R97, T96
+jnt.scimark2.FFT#transform_internal(double[],int)#void#106#232: MOVE_D R74, R72
+jnt.scimark2.FFT#transform_internal(double[],int)#void#69#217: MOVE_D R59, T58
+jnt.scimark2.FFT#transform_internal(double[],int)#void#98#229: MOVE_D R71, T70
 jnt.scimark2.Random#nextDouble()#double#99#41: GETFIELD_D T34, R0, .left
+jnt.scimark2.FFT#transform_internal(double[],int)#void#291#568: MOVE_D R187, T186
+jnt.scimark2.FFT#transform_internal(double[],int)#void#290#567: ALOAD_D T186, R0, R185
+jnt.scimark2.Random#nextDouble()#double#107#44: INT_2DOUBLE T37, R36
+jnt.scimark2.FFT#transform_internal(double[],int)#void#237#533: MOVE_D R152, R146
 jnt.scimark2.Random#initialize(int)#void#2#2: PUTFIELD_I R0, .seed, R14
-jnt.scimark2.FFT#transform_internal(double[],int)#void#357#608: ALOAD_D T225, R0, R222
-jnt.scimark2.Random#nextDouble()#double#122#39: MUL_D T45, T42, T44
+jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#20#18: ASTORE_D T5, R3, R13
+jnt.scimark2.FFT#transform_internal(double[],int)#void#310#578: MUL_D T197, R195, R196
+jnt.scimark2.FFT#transform_internal(double[],int)#void#139#403: MOVE_D R93, T92
+jnt.scimark2.FFT#transform_internal(double[],int)#void#349#602: MOVE_D R220, R207
+jnt.scimark2.FFT#transform_internal(double[],int)#void#219#522: MOVE_D R141, R133
+jnt.scimark2.FFT#bitreverse(double[])#void#61#103: ALOAD_D T51, R0, R49
+jnt.scimark2.Random#nextDouble()#double#121#38: INT_2DOUBLE T44, R43
+jnt.scimark2.FFT#transform_internal(double[],int)#void#156#412: MOVE_D R102, R93
+jnt.scimark2.FFT#inverse(double[])#void#36#34: MUL_D T31, T29, R30
+jnt.scimark2.FFT#transform_internal(double[],int)#void#316#582: MOVE_D R201, R196
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#80#52: ALOAD_D T12, R31, R35
+jnt.scimark2.FFT#inverse(double[])#void#11#7: MOVE_I R16, T15
+jnt.scimark2.FFT#inverse(double[])#void#33#32: ALOAD_D T29, R0, R28
+jnt.scimark2.FFT#transform_internal(double[],int)#void#174#423: ASTORE_D T111, T108, T105
+jnt.scimark2.FFT#transform_internal(double[],int)#void#171#421: MOVE_D R110, R97
+jnt.scimark2.FFT#transform_internal(double[],int)#void#193#437: ADD_D T124, T122, R123
+jnt.scimark2.FFT#bitreverse(double[])#void#73#110: ALOAD_D T56, R0, T15
+jnt.scimark2.FFT#transform_internal(double[],int)#void#180#428: MOVE_D R116, R102
+jnt.scimark2.FFT#bitreverse(double[])#void#52#98: ALOAD_D T46, R0, T45
+jnt.scimark2.Random#<init>(int)#void#57#11: PUTFIELD_D R0, .left, DConst: 0.0
+jnt.scimark2.FFT#transform_internal(double[],int)#void#246#539: SUB_D T158, T154, T157
+jnt.scimark2.Random#<init>(int)#void#40#8: PUTFIELD_I R0, .m2, IConst: 65536
+jnt.scimark2.FFT#transform_internal(double[],int)#void#324#587: ADD_D T206, T202, T205
+jnt.scimark2.FFT#inverse(double[])#void#17#12: DIV_D T7, DConst: 1.0, T20
+jnt.scimark2.FFT#transform_internal(double[],int)#void#91#226: MOVE_D R68, T67
+jnt.scimark2.FFT#transform_internal(double[],int)#void#78#221: MOVE_D R63, R60
+jnt.scimark2.Random#nextDouble()#double#117#36: GETFIELD_D T42, R0, .dm1
+jnt.scimark2.FFT#transform_internal(double[],int)#void#62#214: MOVE_D R56, T55
+jnt.scimark2.FFT#transform_internal(double[],int)#void#158#413: SUB_D T103, T101, R102
+jnt.scimark2.FFT#transform_internal(double[],int)#void#138#402: ALOAD_D T92, R0, R91
+jnt.scimark2.FFT#transform_internal(double[],int)#void#299#572: MOVE_D R191, T190
+jnt.scimark2.FFT#inverse(double[])#void#15#10: MOVE_I R19, R18
+jnt.scimark2.FFT#transform_internal(double[],int)#void#323#586: MUL_D T205, R203, R204
+jnt.scimark2.FFT#bitreverse(double[])#void#44#94: ALOAD_D T42, R0, R41
+jnt.scimark2.FFT#transform_internal(double[],int)#void#298#571: ALOAD_D T190, R0, T189
+jnt.scimark2.FFT#transform_internal(double[],int)#void#59#211: INT_2DOUBLE T11, R53
+jnt.scimark2.FFT#transform_internal(double[],int)#void#229#528: MUL_D T147, R145, R146
+jnt.scimark2.FFT#transform_internal(double[],int)#void#86#224: MOVE_D R66, R65
+jnt.scimark2.FFT#transform_internal(double[],int)#void#159#414: ASTORE_D T103, T100, R98
+jnt.scimark2.Random#<init>(int)#void#47#9: PUTFIELD_D R0, .dm1, DConst: 4.656612875245797E-10
+jnt.scimark2.FFT#transform_internal(double[],int)#void#255#544: MOVE_D R163, R162
+jnt.scimark2.FFT#transform_internal(double[],int)#void#306#576: MOVE_D R195, R167
+jnt.scimark2.FFT#transform_internal(double[],int)#void#233#531: MOVE_D R150, R142
+jnt.scimark2.FFT#inverse(double[])#void#18#13: MOVE_D R21, T7
+jnt.scimark2.FFT#transform_internal(double[],int)#void#48#207: INT_2DOUBLE T50, R1
+jnt.scimark2.FFT#transform_internal(double[],int)#void#227#527: MOVE_D R146, R140
+jnt.scimark2.FFT#transform_internal(double[],int)#void#223#524: MUL_D T143, R141, R142
+jnt.scimark2.FFT#bitreverse(double[])#void#86#117: MOVE_D R61, R47
+jnt.scimark2.FFT#transform_internal(double[],int)#void#105#231: MUL_D T73, DConst: 2.0, R72
+jnt.scimark2.commandline#main(java.lang.String[])#void#3#1: MOVE_D R1, DConst: 2.0
+jnt.scimark2.FFT#transform_internal(double[],int)#void#241#536: MOVE_D R155, R145
+jnt.scimark2.Random#nextDouble()#double#106#43: MOVE_I R36, R24
+jnt.scimark2.FFT#transform_internal(double[],int)#void#360#610: ADD_D T227, T225, R226
+jnt.scimark2.FFT#bitreverse(double[])#void#80#114: ASTORE_D R58, R0, R57
+jnt.scimark2.Random#initialize(int)#void#37#15: MOVE_I R7, IConst: 0
+jnt.scimark2.FFT#transform_internal(double[],int)#void#93#227: MOVE_D R69, R68
+jnt.scimark2.FFT#bitreverse(double[])#void#45#95: MOVE_D R43, T42
+jnt.scimark2.FFT#transform_internal(double[],int)#void#61#213: DIV_D T55, T52, T54
+jnt.scimark2.FFT#transform_internal(double[],int)#void#336#594: SUB_D T213, T211, R212
+jnt.scimark2.commandline#main(java.lang.String[])#void#6#2: MOVE_I R2, IConst: 16
+jnt.scimark2.FFT#transform_internal(double[],int)#void#239#534: MUL_D T153, R151, R152
+jnt.scimark2.FFT#inverse(double[])#void#16#11: INT_2DOUBLE T20, R19
+jnt.scimark2.FFT#transform_internal(double[],int)#void#225#526: MOVE_D R145, R132
+jnt.scimark2.FFT#inverse(double[])#void#2#2: MOVE_I T1, IConst: 1
+jnt.scimark2.FFT#transform_internal(double[],int)#void#47#206: MOVE_I R1, R1
+jnt.scimark2.FFT#transform_internal(double[],int)#void#311#579: SUB_D T198, T194, T197
+jnt.scimark2.FFT#transform_internal(double[],int)#void#240#535: ADD_D T154, R150, T153
+jnt.scimark2.FFT#transform_internal(double[],int)#void#318#583: MUL_D T202, R200, R201
+jnt.scimark2.FFT#transform_internal(double[],int)#void#333#592: ALOAD_D T211, R0, R209
+jnt.scimark2.FFT#transform_internal(double[],int)#void#64#215: MOVE_D R57, R56
+jnt.scimark2.FFT#bitreverse(double[])#void#74#111: ASTORE_D T56, T55, T53
+jnt.scimark2.Random#<init>(int)#void#23#5: PUTFIELD_I R0, .mdig, IConst: 32
+jnt.scimark2.FFT#transform_internal(double[],int)#void#217#521: MOVE_D R140, R135
+jnt.scimark2.FFT#transform(double[])#void#2#2: MOVE_I T1, IConst: -1
+jnt.scimark2.FFT#bitreverse(double[])#void#88#118: ASTORE_D R61, R0, T60
+jnt.scimark2.FFT#transform_internal(double[],int)#void#194#438: ASTORE_D T124, T121, T120
+jnt.scimark2.FFT#transform_internal(double[],int)#void#334#593: MOVE_D R212, R199
+jnt.scimark2.FFT#transform_internal(double[],int)#void#371#618: ADD_D T234, T232, R233
+jnt.scimark2.Random#<init>(int)#void#62#12: PUTFIELD_D R0, .right, DConst: 1.0
+jnt.scimark2.FFT#bitreverse(double[])#void#78#113: MOVE_D R58, R43
+jnt.scimark2.FFT#transform_internal(double[],int)#void#191#436: MOVE_D R123, R110
+chord.analyses.expax.lang.Accept#accept(double)#double#0#1: MOVE_D R0, R0
+jnt.scimark2.kernel#measureFFT(int,double,jnt.scimark2.Random)#double#12#5: MOVE_L R6, LConst: 100
+jnt.scimark2.Random#<init>(int)#void#6#2: PUTFIELD_I R0, .seed, IConst: 0
+jnt.scimark2.FFT#transform_internal(double[],int)#void#319#584: MOVE_D R203, R195
+jnt.scimark2.FFT#transform_internal(double[],int)#void#84#223: MOVE_D R65, T64
+jnt.scimark2.FFT#transform_internal(double[],int)#void#103#230: MOVE_D R72, R71
+jnt.scimark2.FFT#transform_internal(double[],int)#void#251#542: MOVE_D R161, R160
+jnt.scimark2.FFT#transform_internal(double[],int)#void#109#234: MOVE_D R76, T75
 jnt.scimark2.FFT#transform_internal(double[],int)#void#368#616: ALOAD_D T232, R0, T229
+jnt.scimark2.FFT#transform_internal(double[],int)#void#357#608: ALOAD_D T225, R0, R222
+jnt.scimark2.FFT#transform_internal(double[],int)#void#224#525: SUB_D T144, R140, T143
+jnt.scimark2.FFT#transform_internal(double[],int)#void#230#529: SUB_D T148, T144, T147
+jnt.scimark2.FFT#transform_internal(double[],int)#void#348#601: ALOAD_D T219, R0, T217
+jnt.scimark2.FFT#transform_internal(double[],int)#void#76#220: MOVE_D R62, T61
+jnt.scimark2.FFT#transform_internal(double[],int)#void#173#422: SUB_D T111, T109, R110
+jnt.scimark2.Random#<init>(int)#void#28#6: PUTFIELD_I R0, .one, IConst: 1
+jnt.scimark2.FFT#transform_internal(double[],int)#void#314#581: MOVE_D R200, R192
+jnt.scimark2.FFT#inverse(double[])#void#34#33: MOVE_D R30, R24
+jnt.scimark2.FFT#bitreverse(double[])#void#62#104: ASTORE_D T51, T50, R48
+jnt.scimark2.FFT#bitreverse(double[])#void#53#99: MOVE_D R47, T46
+jnt.scimark2.FFT#transform_internal(double[],int)#void#71#218: MOVE_D R60, R59
+jnt.scimark2.FFT#transform_internal(double[],int)#void#49#208: MUL_D T51, DConst: 2.0, T50
+jnt.scimark2.FFT#transform_internal(double[],int)#void#231#530: MOVE_D R149, T148
+jnt.scimark2.FFT#transform_internal(double[],int)#void#312#580: MOVE_D R199, T198
+jnt.scimark2.FFT#transform_internal(double[],int)#void#179#427: ALOAD_D T115, R0, R112
+jnt.scimark2.FFT#transform_internal(double[],int)#void#60#212: MUL_D T54, DConst: 2.0, T11
+jnt.scimark2.FFT#transform_internal(double[],int)#void#325#588: MOVE_D R207, T206
+jnt.scimark2.FFT#transform_internal(double[],int)#void#361#611: ASTORE_D T227, T224, T223
 10
 jnt.scimark2.commandline#main(java.lang.String[])#void#34#9: NEW T19, jnt.scimark2.Random#mdig#I#jnt.scimark2.Random
 jnt.scimark2.commandline#main(java.lang.String[])#void#34#9: NEW T19, jnt.scimark2.Random#m2#I#jnt.scimark2.Random

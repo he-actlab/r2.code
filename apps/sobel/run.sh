@@ -1,7 +1,8 @@
 #!/bin/sh
 enerjdir=../../enerj
-#classpath=sobel.jar
-classpath=new.jar
+expaxjar=$EXPAX_ANALYSIS/expax-analysis.jar
+#classpath=sobel.jar:$expaxjar
+classpath=new.jar:$expaxjar
 mainclass=Sobel.RgbImage
 
 enerjargs=-noisy

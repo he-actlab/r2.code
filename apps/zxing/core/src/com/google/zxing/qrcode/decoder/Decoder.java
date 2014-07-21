@@ -16,6 +16,8 @@
 
 package com.google.zxing.qrcode.decoder;
 
+import chord.analyses.expax.lang.Accept;
+
 import com.google.zxing.ChecksumException;
 import com.google.zxing.FormatException;
 import com.google.zxing.NotFoundException;
@@ -66,7 +68,7 @@ public final class Decoder {
       for (int j = 0; j < dimension; j++) {
     	//additional accept 
     	boolean b = image[i][j];
-    	b = accept(b);
+    	b = Accept.accept(b);
         if (b) {
           bits.set(j, i);
         }
@@ -74,8 +76,6 @@ public final class Decoder {
     }
     return decode(bits, hints);
   }
-
-  public static boolean accept(boolean b){return b;}
   
   public DecoderResult decode(BitMatrix bits) throws ChecksumException, FormatException, NotFoundException {
     return decode(bits, null);

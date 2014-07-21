@@ -16,6 +16,8 @@
 
 package com.google.zxing.common;
 
+import chord.analyses.expax.lang.Accept;
+
 /**
  * <p>This class implements a perspective transform in two dimensions. Given four source and four
  * destination points, it will compute the transformation implied between them. The code is based
@@ -86,8 +88,6 @@ public final class PerspectiveTransform {
       yValues[i] = (a12 * x + a22 * y + a32) / denominator;
     }
   }
-
-  public static float accept(float f){return f;}
   
   public static PerspectiveTransform squareToQuadrilateral(float x0, float y0,
                                                            float x1, float y1,
@@ -96,8 +96,8 @@ public final class PerspectiveTransform {
     float dy2 = y3 - y2;
     float dy3 = y0 - y1 + y2 - y3;
     //additional accept
-    dy2 = accept(dy2);
-    dy3 = accept(dy3);
+    dy2 = Accept.accept(dy2);
+    dy3 = Accept.accept(dy3);
     if (dy2 == 0.0f && dy3 == 0.0f) {
       return new PerspectiveTransform(x1 - x0, x2 - x1, x0,
           y1 - y0, y2 - y1, y0,

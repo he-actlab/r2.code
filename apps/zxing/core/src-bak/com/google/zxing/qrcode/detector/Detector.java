@@ -16,7 +16,9 @@
 
 package com.google.zxing.qrcode.detector;
 
-import com.google.zxing.ApproxMath;
+import chord.analyses.expax.lang.Accept;
+import chord.analyses.expax.lang.math.ApproxMath;
+
 import com.google.zxing.DecodeHintType;
 import com.google.zxing.FormatException;
 import com.google.zxing.NotFoundException;
@@ -83,8 +85,6 @@ public class Detector {
 
     return processFinderPatternInfo(info);
   }
-
-  public static float accept(float f){return f;}
   
   protected DetectorResult processFinderPatternInfo(FinderPatternInfo info)
       throws NotFoundException, FormatException {
@@ -93,9 +93,9 @@ public class Detector {
     FinderPattern topRight = info.getTopRight();
     FinderPattern bottomLeft = info.getBottomLeft();
 
-     float moduleSize = calculateModuleSize(topLeft, topRight, bottomLeft);
+    float moduleSize = calculateModuleSize(topLeft, topRight, bottomLeft);
     //additional accept
-    moduleSize = accept(moduleSize);
+    moduleSize = Accept.accept(moduleSize);
     if (moduleSize < 1.0f) {
         System.err.println("module too small " + (moduleSize));
       throw NotFoundException.getNotFoundInstance();
@@ -208,15 +208,15 @@ public class Detector {
 	float num; 
 	num = (ResultPoint.distance(topLeft, topRight) / moduleSize);
 	//additional accept
-	num = accept(num);
+	num = Accept.accept(num);
     int tltrCentersDimension = round(num);
     num = (ResultPoint.distance(topLeft, bottomLeft) / moduleSize);
 	//additional accept
-	num = accept(num);
+	num = Accept.accept(num);
     int tlblCentersDimension = round(num);
     int dimension = ((tltrCentersDimension + tlblCentersDimension) >> 1) + 7;
     //additional accept
-    dimension = accept(dimension);
+    dimension = Accept.accept(dimension);
     switch (dimension & 0x03) { // mod 4
       case 0:
         dimension++;
@@ -261,7 +261,7 @@ public class Detector {
     boolean cond;
     cond = ApproxMath.isNaN(moduleSizeEst1);
     //additional accept
-    cond = accept(cond);
+    cond = Accept.accept(cond);
     if (cond) {
       return moduleSizeEst2 / 7.0f;
     }
@@ -295,7 +295,7 @@ public class Detector {
      otherToX = image.getWidth() - 1;
    }
    //additional accept
-   scale = accept(scale);
+   scale = Accept.accept(scale);
    int otherToY = (int) (fromY - (toY - fromY) * scale); // EnerJ TODO
 
    scale = 1.0f;
@@ -307,7 +307,7 @@ public class Detector {
      otherToY = image.getHeight() - 1;
    }
    //additional accept
-   scale = accept(scale);
+   scale = Accept.accept(scale);
    otherToX = (int) (fromX + (otherToX - fromX) * scale); // EnerJ TODO
 
    result += sizeOfBlackWhiteBlackRun(fromX, fromY, otherToX, otherToY);
@@ -348,14 +348,14 @@ public class Detector {
       if (state == 1) { // In white pixels, looking for black
     	//additional accept
     	boolean imageGet = (image.get(realX, realY));
-    	imageGet = accept(imageGet);
+    	imageGet = Accept.accept(imageGet);
         if (imageGet) {
           state++;
         }
       } else {
       	//additional accept
       	boolean imageGet = (image.get(realX, realY));
-      	imageGet = accept(imageGet);
+      	imageGet = Accept.accept(imageGet);
         if (!imageGet) {
           state++;
         }
@@ -379,8 +379,6 @@ public class Detector {
     int diffY = toY - fromY;
     return (float) ApproxMath.sqrt((double) (diffX * diffX + diffY * diffY));
   }
-
-  public static int accept(int i){return i;}
   
   /**
    * <p>Attempts to locate an alignment pattern in a limited region of the image, which is
@@ -405,7 +403,7 @@ public class Detector {
     int alignmentAreaRightX = ApproxMath.min(image.getWidth() - 1, estAlignmentX + allowance);
     boolean b = (alignmentAreaRightX - alignmentAreaLeftX < overallEstModuleSize * 3);
     //additional accept
-    b = accept(b);
+    b = Accept.accept(b);
     if (b) {
         System.err.println("alignment vs module size");
       throw NotFoundException.getNotFoundInstance();
@@ -415,13 +413,13 @@ public class Detector {
     int alignmentAreaBottomY = ApproxMath.min(image.getHeight() - 1, estAlignmentY + allowance);
 
     //additional accept
-    alignmentAreaLeftX = accept(alignmentAreaLeftX);
+    alignmentAreaLeftX = Accept.accept(alignmentAreaLeftX);
     //additional accept
-    alignmentAreaTopY = accept(alignmentAreaTopY);
+    alignmentAreaTopY = Accept.accept(alignmentAreaTopY);
     //additional accept
-    alignmentAreaRightX = accept(alignmentAreaRightX);
+    alignmentAreaRightX = Accept.accept(alignmentAreaRightX);
     //additional accept
-    alignmentAreaBottomY = accept(alignmentAreaBottomY);
+    alignmentAreaBottomY = Accept.accept(alignmentAreaBottomY);
     
     AlignmentPatternFinder alignmentFinder =
         new AlignmentPatternFinder(
@@ -443,5 +441,4 @@ public class Detector {
     return (int) (d + 0.5f);
   }
   
-  public static boolean accept(boolean b){return b;}
 }

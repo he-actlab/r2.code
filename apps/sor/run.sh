@@ -1,6 +1,7 @@
 #!/bin/sh
 enerjdir=../../enerj
-classpath=sor.jar
+expaxjar=$EXPAX_ANALYSIS/expax-analysis.jar
+classpath=sor.jar:$expaxjar
 mainclass=jnt.scimark2.commandline
 
 enerjargs=-noisy

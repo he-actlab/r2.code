@@ -1,5 +1,7 @@
 package jnt.scimark2;
 
+import chord.analyses.expax.lang.*;
+
 public class kernel
 {
 
@@ -10,16 +12,13 @@ public class kernel
 		int SEED = Integer.parseInt(seed);
 		out = MonteCarlo.integrate(cycles, SEED); 
 
-		out = accept(out);
+		out = Accept.accept(out);
 
 		System.out.println("MonteCarlo out: " + (out));
 
-		out = precise(out);
+		out = Precise.precise(out);
 		
 		return 0.0;
 	}
-
-	private static double accept(double d){return d;}
-	private static double precise(double d){return d;}
 
 }

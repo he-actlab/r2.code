@@ -1,5 +1,8 @@
 package jnt.scimark2;
 
+import chord.analyses.expax.lang.math.ApproxMath;
+import chord.analyses.expax.lang.Accept;
+
 /**
 	LU matrix factorization. (Based on TNT implementation.)
 	Decomposes a matrix A  into a triangular lower triangular
@@ -34,13 +37,13 @@ public class LU
 		{
 			int jp=j;
 
-			double t = absolute(A[j][j]);
+			double t = ApproxMath.abs(A[j][j]);
 			for (int i=j+1; i<M; i++)
 			{
-				double ab = absolute(A[i][j]);
+				double ab = ApproxMath.abs(A[i][j]);
 				// additional accept
-				t = accept(t);
-				ab = accept(ab);
+				t = Accept.accept(t);
+				ab = Accept.accept(ab);
 				if (ab > t)
 				{
 					jp = i;
@@ -52,7 +55,7 @@ public class LU
 
 			//additional accept
 			double d = A[jp][j];
-			d = accept(d);
+			d = Accept.accept(d);
 			if (d == 0)                 
 				return 1;       
 
@@ -88,13 +91,6 @@ public class LU
 		return 0;
 	}
 
-	public static  double absolute( double num) {
-		//additional accept
-		accept(num);
-		double ret = Math.abs(num);
-		return ret;
-	}
-
 	/**
 		Solve a linear system, using a prefactored matrix
 		in LU form.
@@ -120,7 +116,7 @@ public class LU
 
 			b[ip] = b[i];
 			// additional accept
-			accept(sum);
+			sum = Accept.accept(sum);
 			if (ii==0)
 				for (int j=ii; j<i; j++) {
 					sum -= LU[i][j] * b[j];
@@ -139,5 +135,4 @@ public class LU
 			b[i] = sum / LU[i][i]; 
 		}
 	}   
-	private static double accept(double d){return d;}
 }

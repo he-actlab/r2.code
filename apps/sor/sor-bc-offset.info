@@ -1,545 +1,545 @@
 544
-jnt.scimark2.Random#<init>()#void#27#537#IDENT#one
-jnt.scimark2.Random#<init>(int,double,double)#void#58#608#MINUS#(one << mdig - 2) - one
-jnt.scimark2.Random#<init>(int)#void#10#474#IDENT#i
-jnt.scimark2.Random#initialize(int)#void#76#3780#LT#iloop < 17
-jnt.scimark2.Random#initialize(int)#void#84#3823#IDENT#j1
-jnt.scimark2.Constants#<init>()#void#1#30#IDENT#super
-jnt.scimark2.commandline#main(java.lang.String[])#void#16#480#NEWCLASS#new RuntimeException("Error! Seed should be provided as an argument")
-jnt.scimark2.Random#<init>(double,double)#void#59#590#PLUS#(one << mdig - 2) + ((one << mdig - 2) - one)
-jnt.scimark2.Random#<init>(int,double,double)#void#100#883#IDENT#right
-jnt.scimark2.Random#<init>(int,double,double)#void#135#2748#ASSIGN#haveRange = true
-jnt.scimark2.Random#initialize(int)#void#100#3850#PLUS#jseed / m2 + j0 * k1 + j1 * k0
-jnt.scimark2.SOR#execute(double,double[][],int)#void#28#320#IDENT#N
-jnt.scimark2.Random#<init>(int,double,double)#void#128#2730#IDENT#left
-jnt.scimark2.Random#initialize(int)#void#27#3663#MOD#jseed % 2
-jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#59#696#PREINC#++j
-jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#1#554#NEWARRAY#new double[M][]
-jnt.scimark2.Random#initialize(int)#void#31#3675#IDENT#jseed
-jnt.scimark2.Random#<init>()#void#55#609#IDENT#one
-jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#18#621#IDENT#i
-jnt.scimark2.Random#<init>(int,double,double)#void#11#474#ASSIGN#i = 4
-jnt.scimark2.Random#nextDouble()#double#105#3267#IDENT#dm1
-jnt.scimark2.Random#nextDouble()#double#17#3097#INDEXED#m[j]
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#105#432#SELECT#System.out
-jnt.scimark2.Random#<init>(double,double)#void#41#586#MINUS#mdig - 2
-jnt.scimark2.Random#nextDouble()#double#49#3162#IDENT#i
-jnt.scimark2.SOR#execute(double,double[][],int)#void#118#542#MUL#omega_over_four * (Gim1[j] + Gip1[j] + Gi[j - 1] + Gi[j + 1])
-jnt.scimark2.SOR#execute(double,double[][],int)#void#85#518#IDENT#Gi
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#53#344#SELECT#System.out
-jnt.scimark2.SOR#execute(double,double[][],int)#void#10#206#IDENT#omega
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#10#163#SELECT#SOR.execute
-jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#6#582#VARDEF#int i = 0
-jnt.scimark2.Random#<init>(double,double)#void#106#912#ASSIGN#width = 1.0
-jnt.scimark2.Random#nextDouble()#double#89#3226#PREDEC#--j
-jnt.scimark2.Random#<init>(double,double)#void#10#474#IDENT#i
-jnt.scimark2.Random#<init>(double,double)#void#91#820#ASSIGN#haveRange = false
-jnt.scimark2.SOR#execute(double,double[][],int)#void#46#386#IDENT#i
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#93#286#PREINC#++j
-jnt.scimark2.Random#initialize(int)#void#18#3646#IDENT#m1
-jnt.scimark2.Random#<init>(int,double,double)#void#69#639#IDENT#mdig
-jnt.scimark2.Random#<init>()#void#65#632#IDENT#one
-jnt.scimark2.Random#initialize(int)#void#61#3744#IDENT#jseed
-jnt.scimark2.Random#<init>(int,double,double)#void#91#820#ASSIGN#haveRange = false
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#99#255#IDENT#i
-jnt.scimark2.Random#<init>(int,double,double)#void#96#855#ASSIGN#left = 0.0
-jnt.scimark2.Random#<init>()#void#37#582#IDENT#mdig
-jnt.scimark2.SOR#execute(double,double[][],int)#void#4#165#IDENT#G
-jnt.scimark2.SOR#execute(double,double[][],int)#void#59#447#IDENT#G
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#41#281#LT#j < N
-jnt.scimark2.Random#<init>()#void#69#639#IDENT#mdig
-jnt.scimark2.Random#<init>(int,double,double)#void#115#2676#SELECT#this.left
-jnt.scimark2.Random#<init>(int)#void#58#608#MINUS#(one << mdig - 2) - one
-jnt.scimark2.SOR#execute(double,double[][],int)#void#80#503#IDENT#Nm1
-jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#59#695#IDENT#j
-jnt.scimark2.SOR#execute(double,double[][],int)#void#39#344#IDENT#num_iterations
-jnt.scimark2.Random#nextDouble()#double#122#3308#IDENT#k
-jnt.scimark2.Random#<init>(double,double)#void#133#1816#IDENT#haveRange
-jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#52#709#IDENT#j
-jnt.scimark2.Random#initialize(int)#void#47#3714#IDENT#m2
-jnt.scimark2.SOR#execute(double,double[][],int)#void#37#342#IDENT#p
-jnt.scimark2.Random#initialize(int)#void#112#3889#IDENT#m2
-jnt.scimark2.Random#<init>(double,double)#void#95#855#IDENT#left
-jnt.scimark2.Random#<init>(double,double)#void#11#474#ASSIGN#i = 4
-jnt.scimark2.SOR#execute(double,double[][],int)#void#18#254#IDENT#omega
-jnt.scimark2.Random#<init>(int,double,double)#void#5#440#IDENT#seed
-jnt.scimark2.Random#initialize(int)#void#115#3887#MOD#jseed % m2
-jnt.scimark2.SOR#execute(double,double[][],int)#void#87#521#IDENT#j
-jnt.scimark2.Random#nextDouble()#double#14#3098#IDENT#j
-jnt.scimark2.SOR#execute(double,double[][],int)#void#0#145#IDENT#G
-jnt.scimark2.Random#<init>(double,double)#void#75#616#ASSIGN#m2 = one << mdig / 2
-jnt.scimark2.Random#<init>(int,double,double)#void#73#643#DIV#mdig / 2
-jnt.scimark2.Random#<init>(double,double)#void#64#616#IDENT#m2
-jnt.scimark2.Random#<init>(int,double,double)#void#130#2720#ASSIGN#width = right - left
-jnt.scimark2.Random#initialize(int)#void#90#3842#IDENT#j0
-jnt.scimark2.kernel#accept_all_FIELD1_TAG1(double[])#double[]#0#849#IDENT#d
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#64#358#IDENT#i
-jnt.scimark2.Random#initialize(int)#void#122#3898#IDENT#iloop
-jnt.scimark2.Random#<init>()#void#105#912#IDENT#width
-jnt.scimark2.Random#initialize(int)#void#135#3786#PREINC#++iloop
-jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#14#602#IDENT#alloc_TAG1
-jnt.scimark2.Random#<init>()#void#74#636#SL#one << mdig / 2
-jnt.scimark2.Random#<init>(int,double,double)#void#116#2682#ASSIGN#this.left = left
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#10#200#SELECT#SOR.execute
 jnt.scimark2.Random#<init>()#void#80#805#TYPECAST#(double)m1
-jnt.scimark2.SOR#execute(double,double[][],int)#void#108#567#INDEXED#Gi[j - 1]
-jnt.scimark2.Random#<init>(int)#void#75#616#ASSIGN#m2 = one << mdig / 2
-jnt.scimark2.Random#<init>(int)#void#80#805#TYPECAST#(double)m1
-jnt.scimark2.Random#<init>()#void#59#590#PLUS#(one << mdig - 2) + ((one << mdig - 2) - one)
-jnt.scimark2.Random#nextDouble()#double#101#3259#IDENT#left
-jnt.scimark2.Random#initialize(int)#void#119#3896#IDENT#m
-jnt.scimark2.Random#initialize(int)#void#6#3594#IDENT#m
-jnt.scimark2.Random#<init>(int)#void#41#586#MINUS#mdig - 2
-jnt.scimark2.commandline#main(java.lang.String[])#void#35#627#SELECT#Integer.parseInt
-jnt.scimark2.Random#<init>(double,double)#void#81#814#IDENT#m1
-jnt.scimark2.Random#nextDouble()#double#8#3090#INDEXED#m[i]
-jnt.scimark2.Random#<init>(int,double,double)#void#122#2703#ASSIGN#this.right = right
-jnt.scimark2.SOR#execute(double,double[][],int)#void#48#388#IDENT#Mm1
-jnt.scimark2.Random#<init>(int,double,double)#void#126#2714#IDENT#width
-jnt.scimark2.Random#initialize(int)#void#135#3788#IDENT#iloop
-jnt.scimark2.Random#<init>(int,double,double)#void#1#2647#IDENT#super
-jnt.scimark2.Random#initialize(int)#void#53#3720#IDENT#j0
-jnt.scimark2.Constants#<init>()#void#0#30#IDENT#super
-jnt.scimark2.Random#nextDouble()#double#57#3182#PREDEC#--i
-jnt.scimark2.Random#<init>(int)#void#28#537#ASSIGN#one = 1
-jnt.scimark2.Random#nextDouble()#double#1#3089#IDENT#m
-jnt.scimark2.Random#nextDouble()#double#110#3271#MUL#dm1 * k
-jnt.scimark2.Random#nextDouble()#double#94#3237#IDENT#haveRange
-jnt.scimark2.Random#initialize(int)#void#37#3684#IDENT#k0
-jnt.scimark2.Random#initialize(int)#void#0#3572#IDENT#this
-jnt.scimark2.Random#<init>(int,double,double)#void#110#2663#IDENT#seed
-jnt.scimark2.Random#<init>(double,double)#void#126#1792#IDENT#width
-jnt.scimark2.Random#<init>(int)#void#100#883#IDENT#right
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#46#304#IDENT#accept_all_FIELD1_TAG1
-jnt.scimark2.Random#<init>(double,double)#void#5#440#IDENT#seed
-jnt.scimark2.Random#<init>(int,double,double)#void#119#2692#IDENT#this
-jnt.scimark2.Random#<init>(int,double,double)#void#101#883#ASSIGN#right = 1.0
-jnt.scimark2.Random#<init>(int,double,double)#void#60#558#ASSIGN#m1 = (one << mdig - 2) + ((one << mdig - 2) - one)
-jnt.scimark2.Random#initialize(int)#void#24#3620#ASSIGN#jseed = Math.min(Math.abs(seed), m1)
-jnt.scimark2.Random#initialize(int)#void#13#3626#SELECT#Math.min
-jnt.scimark2.Random#<init>(int)#void#33#575#IDENT#one
-jnt.scimark2.Random#<init>(int)#void#85#803#DIV#1.0 / (double)m1
-jnt.scimark2.Random#<init>()#void#10#474#IDENT#i
-jnt.scimark2.SOR#execute(double,double[][],int)#void#40#343#LT#p < num_iterations
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#9#146#VARDEF#int cycles = 100
-jnt.scimark2.SOR#execute(double,double[][],int)#void#22#303#IDENT#M
-jnt.scimark2.Random#<init>(int,double,double)#void#81#814#IDENT#m1
-jnt.scimark2.Random#initialize(int)#void#61#3739#IDENT#j1
-jnt.scimark2.commandline#main(java.lang.String[])#void#43#605#VARDEF#Random R = new Random(Integer.parseInt(seed))
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#56#348#SELECT#System.out.print
-jnt.scimark2.SOR#execute(double,double[][],int)#void#135#393#IDENT#i
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#38#279#IDENT#j
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#108#436#SELECT#System.out.println
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#52#302#ASSIGN#G[0] = accept_all_FIELD1_TAG1(G[0])
-jnt.scimark2.SOR#execute(double,double[][],int)#void#82#502#LT#j < Nm1
-jnt.scimark2.commandline#main(java.lang.String[])#void#45#665#IDENT#SOR_size
-jnt.scimark2.Random#initialize(int)#void#142#3927#IDENT#i
-jnt.scimark2.Random#initialize(int)#void#108#3826#ASSIGN#j1 = (jseed / m2 + j0 * k1 + j1 * k0) % (m2 / 2)
-jnt.scimark2.SOR#execute(double,double[][],int)#void#128#524#ASSIGN#Gi[j] = omega_over_four * (Gim1[j] + Gip1[j] + Gi[j - 1] + Gi[j + 1]) + one_minus_omega * Gi[j]
-jnt.scimark2.Random#initialize(int)#void#59#3723#ASSIGN#j0 = jseed % m2
-jnt.scimark2.Random#<init>(int)#void#44#594#IDENT#one
-jnt.scimark2.kernel#precise_all_FIELD1_TAG1(double[])#double[]#0#921#IDENT#d
-jnt.scimark2.Random#<init>(int)#void#21#514#IDENT#mdig
-jnt.scimark2.Random#<init>(int,double,double)#void#44#594#IDENT#one
-jnt.scimark2.commandline#main(java.lang.String[])#void#3#338#VARDEF#double min_time = Constants.RESOLUTION_DEFAULT
-jnt.scimark2.SOR#execute(double,double[][],int)#void#117#582#PLUS#Gim1[j] + Gip1[j] + Gi[j - 1] + Gi[j + 1]
-jnt.scimark2.SOR#execute(double,double[][],int)#void#100#559#INDEXED#Gip1[j]
-jnt.scimark2.commandline#main(java.lang.String[])#void#35#627#SELECT#Integer.parseInt
-jnt.scimark2.commandline#main(java.lang.String[])#void#31#609#NEWCLASS#new Random(Integer.parseInt(seed))
-jnt.scimark2.commandline#main(java.lang.String[])#void#26#556#IDENT#seed
-jnt.scimark2.Random#<init>(double,double)#void#120#1770#IDENT#this
-jnt.scimark2.Random#<init>(int,double,double)#void#134#2738#IDENT#haveRange
-jnt.scimark2.SOR#execute(double,double[][],int)#void#54#423#IDENT#i
-jnt.scimark2.Random#<init>()#void#79#779#IDENT#dm1
-jnt.scimark2.Random#<init>(double,double)#void#101#883#ASSIGN#right = 1.0
-jnt.scimark2.Random#<init>(double,double)#void#52#605#MINUS#mdig - 2
-jnt.scimark2.Random#initialize(int)#void#143#3929#ASSIGN#i = 4
-jnt.scimark2.Random#<init>(int)#void#105#912#IDENT#width
-jnt.scimark2.Random#initialize(int)#void#79#3811#IDENT#j0
-jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#44#692#IDENT#N
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#99#253#PREINC#++i
-jnt.scimark2.commandline#main(java.lang.String[])#void#10#453#IDENT#args
-jnt.scimark2.Random#initialize(int)#void#84#3829#IDENT#jseed
-jnt.scimark2.SOR#execute(double,double[][],int)#void#102#565#IDENT#Gi
-jnt.scimark2.Random#initialize(int)#void#67#3742#ASSIGN#j1 = jseed / m2
-jnt.scimark2.SOR#execute(double,double[][],int)#void#25#304#MINUS#M - 1
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#105#432#SELECT#System.out
-jnt.scimark2.Random#initialize(int)#void#58#3731#MOD#jseed % m2
-jnt.scimark2.SOR#execute(double,double[][],int)#void#95#549#INDEXED#Gim1[j]
-jnt.scimark2.Random#<init>(int,double,double)#void#74#636#SL#one << mdig / 2
-jnt.scimark2.Random#<init>(int)#void#1#2097#IDENT#super
-jnt.scimark2.SOR#execute(double,double[][],int)#void#56#422#INDEXED#G[i]
-jnt.scimark2.Random#<init>(double,double)#void#27#537#IDENT#one
-jnt.scimark2.Random#<init>(int,double,double)#void#21#514#IDENT#mdig
-jnt.scimark2.Random#<init>(int,double,double)#void#33#575#IDENT#one
-jnt.scimark2.Random#initialize(int)#void#13#3614#IDENT#jseed
-jnt.scimark2.SOR#execute(double,double[][],int)#void#57#416#VARDEF#double[] Gi = G[i]
-jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#54#714#IDENT#R
-jnt.scimark2.Random#<init>(double,double)#void#105#912#IDENT#width
-jnt.scimark2.Random#initialize(int)#void#99#3855#MUL#j1 * k0
-jnt.scimark2.commandline#main(java.lang.String[])#void#13#465#NE#args.length != 1
-jnt.scimark2.Random#<init>(int,double,double)#void#110#2651#IDENT#initialize
-jnt.scimark2.Random#initialize(int)#void#72#3774#IDENT#iloop
-jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#49#706#IDENT#i
-jnt.scimark2.Random#<init>(int)#void#106#912#ASSIGN#width = 1.0
-jnt.scimark2.Random#initialize(int)#void#82#3814#MUL#j0 * k0
-jnt.scimark2.Random#<init>(double,double)#void#126#1800#IDENT#right
-jnt.scimark2.Random#<init>(double,double)#void#42#579#SL#one << mdig - 2
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#86#384#IDENT#precise_all_FIELD1_TAG1
-jnt.scimark2.Random#initialize(int)#void#96#3852#IDENT#j1
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#27#239#VARDEF#int i = 0
-jnt.scimark2.Random#nextDouble()#double#40#3137#ASSIGN#m[j] = k
-jnt.scimark2.Random#initialize(int)#void#95#3840#PLUS#jseed / m2 + j0 * k1
-jnt.scimark2.Random#initialize(int)#void#43#3702#IDENT#k1
-jnt.scimark2.Random#nextDouble()#double#20#3109#IDENT#k
-jnt.scimark2.SOR#execute(double,double[][],int)#void#20#230#VARDEF#double one_minus_omega = 1.0 - omega
-jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#20#637#IDENT#N
-jnt.scimark2.commandline#main(java.lang.String[])#void#26#563#IDENT#args
-jnt.scimark2.Random#<init>()#void#28#537#ASSIGN#one = 1
-jnt.scimark2.Random#<init>(double,double)#void#122#1781#ASSIGN#this.right = right
-jnt.scimark2.Random#initialize(int)#void#124#3907#IDENT#j0
-jnt.scimark2.SOR#execute(double,double[][],int)#void#76#496#VARDEF#int j = 1
-jnt.scimark2.Random#initialize(int)#void#83#3809#ASSIGN#jseed = j0 * k0
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#13#178#IDENT#G
-jnt.scimark2.Random#<init>(int,double,double)#void#55#609#IDENT#one
-jnt.scimark2.Random#initialize(int)#void#8#3598#NEWARRAY#new int[17]
-jnt.scimark2.SOR#execute(double,double[][],int)#void#93#550#IDENT#j
-jnt.scimark2.Random#<init>(double,double)#void#121#1783#IDENT#right
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#44#297#IDENT#G
-jnt.scimark2.Random#<init>(double,double)#void#121#1774#SELECT#this.right
-jnt.scimark2.Random#initialize(int)#void#134#3905#ASSIGN#m[iloop] = j0 + m2 * j1
-jnt.scimark2.Random#<init>()#void#48#601#IDENT#mdig
-jnt.scimark2.Random#<init>(int)#void#73#643#DIV#mdig / 2
-jnt.scimark2.Random#<init>(int,double,double)#void#85#803#DIV#1.0 / (double)m1
-jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#24#592#IDENT#i
-jnt.scimark2.Random#<init>()#void#81#814#IDENT#m1
-jnt.scimark2.Random#<init>(int)#void#6#440#ASSIGN#seed = 0
-jnt.scimark2.kernel#<init>()#void#0#30#IDENT#super
-jnt.scimark2.Random#<init>(int,double,double)#void#114#2672#IDENT#this
-jnt.scimark2.Random#nextDouble()#double#84#3225#IDENT#j
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#93#286#PREINC#++j
-jnt.scimark2.Random#<init>(int,double,double)#void#120#2696#SELECT#this.right
-jnt.scimark2.Random#<init>(int,double,double)#void#42#579#SL#one << mdig - 2
-jnt.scimark2.Random#<init>()#void#21#514#IDENT#mdig
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#0#116#IDENT#RandomMatrix
-jnt.scimark2.Random#<init>(double,double)#void#1#1722#IDENT#super
-jnt.scimark2.SOR#execute(double,double[][],int)#void#26#297#VARDEF#int Mm1 = M - 1
-jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#0#565#IDENT#M
-jnt.scimark2.SOR#execute(double,double[][],int)#void#60#449#IDENT#i
-jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#17#619#IDENT#A
-jnt.scimark2.commandline#main(java.lang.String[])#void#29#561#ASSIGN#seed = args[0]
-jnt.scimark2.Random#<init>(double,double)#void#69#639#IDENT#mdig
-jnt.scimark2.Random#nextDouble()#double#68#3193#IDENT#j
-jnt.scimark2.Random#<init>(double,double)#void#96#855#ASSIGN#left = 0.0
-jnt.scimark2.Random#nextDouble()#double#24#3120#IDENT#k
-jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#48#704#IDENT#A
-jnt.scimark2.Random#<init>(double,double)#void#90#820#IDENT#haveRange
-jnt.scimark2.Random#<init>(int,double,double)#void#65#632#IDENT#one
-jnt.scimark2.Random#initialize(int)#void#124#3897#INDEXED#m[iloop]
-jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#40#685#VARDEF#int j = 0
-jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#51#705#INDEXED#A[i]
-jnt.scimark2.Random#<init>(int)#void#60#558#ASSIGN#m1 = (one << mdig - 2) + ((one << mdig - 2) - one)
-jnt.scimark2.Random#<init>(int,double,double)#void#95#855#IDENT#left
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#0#129#IDENT#N
-jnt.scimark2.Random#initialize(int)#void#25#3657#IDENT#jseed
-jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#45#691#LT#j < N
-jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#10#589#IDENT#M
-jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#65#669#PREINC#++i
-jnt.scimark2.Random#<init>()#void#75#616#ASSIGN#m2 = one << mdig / 2
-jnt.scimark2.Random#<init>()#void#85#803#DIV#1.0 / (double)m1
-jnt.scimark2.Random#nextDouble()#double#83#3226#PREDEC#--j
-jnt.scimark2.Random#<init>(double,double)#void#128#1806#MINUS#right - left
-jnt.scimark2.Random#<init>(int)#void#0#2097#IDENT#super
-jnt.scimark2.Random#<init>(double,double)#void#117#1760#ASSIGN#this.left = left
-jnt.scimark2.Random#<init>(int)#void#91#820#ASSIGN#haveRange = false
-jnt.scimark2.Random#initialize(int)#void#66#3750#DIV#jseed / m2
-jnt.scimark2.SOR#execute(double,double[][],int)#void#31#321#MINUS#N - 1
-jnt.scimark2.kernel#<init>()#void#1#30#IDENT#super
-jnt.scimark2.commandline#main(java.lang.String[])#void#8#433#VARDEF#String seed = null
-jnt.scimark2.Random#<init>(int,double,double)#void#23#514#ASSIGN#mdig = 32
-jnt.scimark2.Random#<init>(int)#void#81#814#IDENT#m1
-jnt.scimark2.SOR#execute(double,double[][],int)#void#2#141#VARDEF#int M = G.length
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#53#344#SELECT#System.out
-jnt.scimark2.SOR#execute(double,double[][],int)#void#135#394#PREINC#++i
-jnt.scimark2.Random#<init>(double,double)#void#116#1754#SELECT#this.left
-jnt.scimark2.SOR#execute(double,double[][],int)#void#112#587#IDENT#j
-jnt.scimark2.Random#initialize(int)#void#51#3705#ASSIGN#k1 = 9069 / m2
-jnt.scimark2.Random#<init>(int)#void#90#820#IDENT#haveRange
-jnt.scimark2.Random#<init>()#void#6#440#ASSIGN#seed = 0
-jnt.scimark2.SOR#execute(double,double[][],int)#void#127#593#PLUS#omega_over_four * (Gim1[j] + Gip1[j] + Gi[j - 1] + Gi[j + 1]) + one_minus_omega * Gi[j]
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#2#135#IDENT#R
-jnt.scimark2.Random#initialize(int)#void#31#3673#PREDEC#--jseed
-jnt.scimark2.Random#initialize(int)#void#42#3687#ASSIGN#k0 = 9069 % m2
-jnt.scimark2.SOR#execute(double,double[][],int)#void#72#476#INDEXED#G[i + 1]
-jnt.scimark2.Random#<init>()#void#41#586#MINUS#mdig - 2
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#46#298#INDEXED#G[0]
-jnt.scimark2.commandline#main(java.lang.String[])#void#28#567#INDEXED#args[0]
-jnt.scimark2.Random#<init>(int,double,double)#void#75#616#ASSIGN#m2 = one << mdig / 2
-jnt.scimark2.SOR#execute(double,double[][],int)#void#1#146#SELECT#G.length
-jnt.scimark2.SOR#execute(double,double[][],int)#void#121#613#IDENT#Gi
-jnt.scimark2.Random#<init>(int)#void#55#609#IDENT#one
-jnt.scimark2.SOR#execute(double,double[][],int)#void#53#421#IDENT#G
-jnt.scimark2.Random#<init>(int)#void#96#855#ASSIGN#left = 0.0
-jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#20#620#INDEXED#A[i]
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#6#108#VARDEF#double[][] G = RandomMatrix(N, N, R)
-jnt.scimark2.Random#<init>(int)#void#37#582#IDENT#mdig
-jnt.scimark2.Random#nextDouble()#double#0#3085#IDENT#k
-jnt.scimark2.Random#<init>()#void#101#883#ASSIGN#right = 1.0
-jnt.scimark2.Random#<init>(double,double)#void#58#608#MINUS#(one << mdig - 2) - one
-jnt.scimark2.Random#nextDouble()#double#71#3195#EQ#j == 0
-jnt.scimark2.SOR#execute(double,double[][],int)#void#110#584#IDENT#Gi
-jnt.scimark2.Random#initialize(int)#void#31#3673#PREDEC#--jseed
-jnt.scimark2.commandline#main(java.lang.String[])#void#46#675#IDENT#R
-jnt.scimark2.Random#nextDouble()#double#112#3277#IDENT#width
-jnt.scimark2.Random#<init>(double,double)#void#6#440#ASSIGN#seed = 0
-jnt.scimark2.Random#<init>(double,double)#void#15#493#IDENT#j
-jnt.scimark2.Random#<init>(double,double)#void#48#601#IDENT#mdig
-jnt.scimark2.Random#<init>(double,double)#void#60#558#ASSIGN#m1 = (one << mdig - 2) + ((one << mdig - 2) - one)
-jnt.scimark2.Random#<init>(double,double)#void#115#1750#IDENT#this
-jnt.scimark2.Random#<init>(int,double,double)#void#120#2705#IDENT#right
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#18#200#SELECT#System.out
-jnt.scimark2.Random#initialize(int)#void#89#3835#DIV#jseed / m2
-jnt.scimark2.SOR#execute(double,double[][],int)#void#126#611#MUL#one_minus_omega * Gi[j]
-jnt.scimark2.SOR#execute(double,double[][],int)#void#141#360#IDENT#p
-jnt.scimark2.Random#<init>()#void#110#1270#IDENT#initialize
-jnt.scimark2.Random#<init>(int,double,double)#void#80#805#TYPECAST#(double)m1
-jnt.scimark2.Random#<init>(double,double)#void#0#1722#IDENT#super
-jnt.scimark2.Random#initialize(int)#void#79#3803#IDENT#jseed
-jnt.scimark2.Random#<init>(int,double,double)#void#90#820#IDENT#haveRange
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#66#357#INDEXED#G[i]
-jnt.scimark2.Random#<init>(int,double,double)#void#6#440#ASSIGN#seed = 0
-jnt.scimark2.Random#<init>(int,double,double)#void#48#601#IDENT#mdig
-jnt.scimark2.SOR#execute(double,double[][],int)#void#73#468#VARDEF#double[] Gip1 = G[i + 1]
-jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#31#658#VARDEF#int i = 0
-jnt.scimark2.Random#<init>(double,double)#void#134#1826#ASSIGN#haveRange = true
-jnt.scimark2.SOR#execute(double,double[][],int)#void#32#314#VARDEF#int Nm1 = N - 1
-jnt.scimark2.commandline#main(java.lang.String[])#void#45#653#SELECT#kernel.measureSOR
-jnt.scimark2.Random#<init>()#void#90#820#IDENT#haveRange
-jnt.scimark2.Random#<init>(int,double,double)#void#105#912#IDENT#width
-jnt.scimark2.SOR#execute(double,double[][],int)#void#96#555#IDENT#Gip1
-jnt.scimark2.SOR#execute(double,double[][],int)#void#19#252#MINUS#1.0 - omega
-jnt.scimark2.Random#nextDouble()#double#42#3150#IDENT#i
-jnt.scimark2.Random#<init>(double,double)#void#55#609#IDENT#one
-jnt.scimark2.Random#<init>(double,double)#void#80#805#TYPECAST#(double)m1
-jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#11#588#LT#i < M
-jnt.scimark2.Random#<init>(int,double,double)#void#17#493#ASSIGN#j = 16
-jnt.scimark2.Random#<init>(double,double)#void#23#514#ASSIGN#mdig = 32
-jnt.scimark2.Random#<init>(int,double,double)#void#106#912#ASSIGN#width = 1.0
-jnt.scimark2.SOR#execute(double,double[][],int)#void#123#616#IDENT#j
-jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#24#593#PREINC#++i
-jnt.scimark2.Random#<init>(int)#void#69#639#IDENT#mdig
-jnt.scimark2.SOR#execute(double,double[][],int)#void#129#509#PREINC#++j
-jnt.scimark2.Random#<init>()#void#11#474#ASSIGN#i = 4
-jnt.scimark2.Random#initialize(int)#void#13#3640#IDENT#seed
-jnt.scimark2.Random#initialize(int)#void#53#3725#IDENT#jseed
-jnt.scimark2.Random#initialize(int)#void#102#3864#IDENT#m2
-jnt.scimark2.Random#<init>(int,double,double)#void#86#779#ASSIGN#dm1 = 1.0 / (double)m1
-jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#55#715#SELECT#R.nextDouble
-jnt.scimark2.Random#<init>(int)#void#101#883#ASSIGN#right = 1.0
-jnt.scimark2.Random#<init>()#void#17#493#ASSIGN#j = 16
-jnt.scimark2.Random#<init>()#void#23#514#ASSIGN#mdig = 32
-jnt.scimark2.Random#nextDouble()#double#26#3125#IDENT#m1
-jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#4#546#VARDEF#double[][] A = new double[M][]
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#48#328#INDEXED#G[0]
-jnt.scimark2.SOR#execute(double,double[][],int)#void#68#477#IDENT#i
-jnt.scimark2.Random#nextDouble()#double#36#3134#IDENT#j
-jnt.scimark2.Random#<init>()#void#106#912#ASSIGN#width = 1.0
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#46#327#IDENT#G
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#18#200#SELECT#System.out
-jnt.scimark2.SOR#execute(double,double[][],int)#void#116#586#INDEXED#Gi[j + 1]
-jnt.scimark2.Random#<init>(int,double,double)#void#53#598#SL#one << mdig - 2
-jnt.scimark2.SOR#execute(double,double[][],int)#void#64#448#INDEXED#G[i - 1]
-jnt.scimark2.Random#<init>(int)#void#17#493#ASSIGN#j = 16
-jnt.scimark2.Random#<init>(int)#void#110#2113#IDENT#seed
-jnt.scimark2.Random#initialize(int)#void#13#3635#SELECT#Math.abs
-jnt.scimark2.Random#<init>(double,double)#void#44#594#IDENT#one
-jnt.scimark2.Random#<init>(int,double,double)#void#41#586#MINUS#mdig - 2
-jnt.scimark2.Random#<init>()#void#73#643#DIV#mdig / 2
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#31#250#IDENT#N
-jnt.scimark2.Random#initialize(int)#void#69#3763#IDENT#iloop
-jnt.scimark2.SOR#execute(double,double[][],int)#void#50#387#LT#i < Mm1
-jnt.scimark2.SOR#execute(double,double[][],int)#void#65#440#VARDEF#double[] Gim1 = G[i - 1]
-jnt.scimark2.Random#nextDouble()#double#19#3087#ASSIGN#k = m[i] - m[j]
-jnt.scimark2.Random#initialize(int)#void#55#3733#IDENT#m2
-jnt.scimark2.SOR#execute(double,double[][],int)#void#129#508#IDENT#j
-jnt.scimark2.Random#<init>(int)#void#86#779#ASSIGN#dm1 = 1.0 / (double)m1
-jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#33#663#IDENT#i
-jnt.scimark2.Random#<init>(double,double)#void#33#575#IDENT#one
-jnt.scimark2.Random#initialize(int)#void#28#3667#EQ#jseed % 2 == 0
-jnt.scimark2.Random#initialize(int)#void#13#3626#SELECT#Math.min
-jnt.scimark2.Random#initialize(int)#void#63#3752#IDENT#m2
-jnt.scimark2.Random#<init>(double,double)#void#127#1808#IDENT#left
-jnt.scimark2.commandline#main(java.lang.String[])#void#11#457#SELECT#args.length
-jnt.scimark2.Random#<init>()#void#5#440#IDENT#seed
-jnt.scimark2.SOR#execute(double,double[][],int)#void#14#212#MUL#omega * 0.25
-jnt.scimark2.Random#<init>(double,double)#void#85#803#DIV#1.0 / (double)m1
-jnt.scimark2.commandline#<init>()#void#0#265#IDENT#super
-jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#71#739#IDENT#A
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#69#360#INDEXED#G[i][j]
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#63#356#IDENT#G
-jnt.scimark2.Random#<init>(double,double)#void#73#643#DIV#mdig / 2
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#1#132#IDENT#N
-jnt.scimark2.Random#<init>(double,double)#void#37#582#IDENT#mdig
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#93#288#IDENT#j
-jnt.scimark2.Random#<init>(int)#void#27#537#IDENT#one
-jnt.scimark2.Random#nextDouble()#double#119#3302#IDENT#dm1
-jnt.scimark2.Random#<init>(int)#void#48#601#IDENT#mdig
-jnt.scimark2.Random#nextDouble()#double#39#3139#IDENT#k
-jnt.scimark2.Random#nextDouble()#double#32#3132#IDENT#m
-jnt.scimark2.Random#<init>()#void#96#855#ASSIGN#left = 0.0
-jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#65#669#PREINC#++i
-jnt.scimark2.Random#<init>(int,double,double)#void#59#590#PLUS#(one << mdig - 2) + ((one << mdig - 2) - one)
-jnt.scimark2.SOR#execute(double,double[][],int)#void#63#450#MINUS#i - 1
-jnt.scimark2.SOR#execute(double,double[][],int)#void#119#595#IDENT#one_minus_omega
-jnt.scimark2.Random#<init>(double,double)#void#79#779#IDENT#dm1
-jnt.scimark2.SOR#execute(double,double[][],int)#void#115#588#PLUS#j + 1
-jnt.scimark2.Random#initialize(int)#void#41#3694#MOD#9069 % m2
-jnt.scimark2.SOR#execute(double,double[][],int)#void#125#615#INDEXED#Gi[j]
-jnt.scimark2.SOR#execute(double,double[][],int)#void#101#553#PLUS#Gim1[j] + Gip1[j]
-jnt.scimark2.Random#<init>()#void#100#883#IDENT#right
-jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#21#626#NEWARRAY#new double[N]
-jnt.scimark2.Random#initialize(int)#void#132#3915#MUL#m2 * j1
-jnt.scimark2.Random#initialize(int)#void#70#3769#ASSIGN#iloop = 0
-jnt.scimark2.Random#initialize(int)#void#107#3861#MOD#(jseed / m2 + j0 * k1 + j1 * k0) % (m2 / 2)
-jnt.scimark2.Random#<init>(int,double,double)#void#15#493#IDENT#j
-jnt.scimark2.Random#<init>(int)#void#5#440#IDENT#seed
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#14#181#IDENT#cycles
-jnt.scimark2.Random#<init>(int,double,double)#void#0#2647#IDENT#super
-jnt.scimark2.Random#<init>()#void#0#1266#IDENT#super
-jnt.scimark2.Random#<init>()#void#32#558#IDENT#m1
-jnt.scimark2.Random#<init>(int,double,double)#void#37#582#IDENT#mdig
-jnt.scimark2.SOR#<init>()#void#0#30#IDENT#super
 jnt.scimark2.Random#<init>(int)#void#65#632#IDENT#one
-jnt.scimark2.Random#<init>(double,double)#void#17#493#ASSIGN#j = 16
-jnt.scimark2.SOR#execute(double,double[][],int)#void#6#166#INDEXED#G[0]
-jnt.scimark2.Random#<init>(int,double,double)#void#28#537#ASSIGN#one = 1
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#29#246#IDENT#i
-jnt.scimark2.Random#initialize(int)#void#92#3847#IDENT#k1
-jnt.scimark2.SOR#execute(double,double[][],int)#void#98#560#IDENT#j
-jnt.scimark2.Random#nextDouble()#double#75#3205#IDENT#j
-jnt.scimark2.Random#initialize(int)#void#133#3910#PLUS#j0 + m2 * j1
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#40#283#IDENT#N
-jnt.scimark2.commandline#main(java.lang.String[])#void#35#637#IDENT#seed
-jnt.scimark2.Random#nextDouble()#double#58#3181#IDENT#i
-jnt.scimark2.SOR#execute(double,double[][],int)#void#89#520#INDEXED#Gi[j]
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#88#409#INDEXED#G[0]
-jnt.scimark2.Random#initialize(int)#void#1#3584#IDENT#seed
-jnt.scimark2.Random#<init>(int,double,double)#void#32#558#IDENT#m1
-jnt.scimark2.Random#<init>(int)#void#59#590#PLUS#(one << mdig - 2) + ((one << mdig - 2) - one)
-jnt.scimark2.SOR#execute(double,double[][],int)#void#104#568#IDENT#j
-jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#35#665#IDENT#N
-jnt.scimark2.Random#<init>()#void#33#575#IDENT#one
-jnt.scimark2.SOR#execute(double,double[][],int)#void#135#394#PREINC#++i
-jnt.scimark2.Random#nextDouble()#double#29#3122#PLUS_ASG#k += m1
-jnt.scimark2.commandline#main(java.lang.String[])#void#6#386#VARDEF#int SOR_size = Constants.TINY_SOR_SIZE
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#21#204#SELECT#System.out.print
-jnt.scimark2.Random#<init>(double,double)#void#129#1798#ASSIGN#width = right - left
-jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#24#593#PREINC#++i
-jnt.scimark2.Random#initialize(int)#void#38#3696#IDENT#m2
-jnt.scimark2.Random#<init>(int)#void#74#636#SL#one << mdig / 2
-jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#59#696#PREINC#++j
-jnt.scimark2.Random#<init>(int,double,double)#void#115#2684#IDENT#left
-jnt.scimark2.commandline#<init>()#void#1#265#IDENT#super
-jnt.scimark2.Random#initialize(int)#void#130#3917#IDENT#j1
-jnt.scimark2.SOR#execute(double,double[][],int)#void#91#545#IDENT#Gim1
-jnt.scimark2.Random#nextDouble()#double#45#3152#EQ#i == 0
-jnt.scimark2.Random#nextDouble()#double#116#3264#PLUS#left + dm1 * k * width
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#99#253#PREINC#++i
-jnt.scimark2.Random#<init>(int)#void#79#779#IDENT#dm1
-jnt.scimark2.SOR#execute(double,double[][],int)#void#35#337#VARDEF#int p = 0
-jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#58#712#ASSIGN#A[i][j] = R.nextDouble()
-jnt.scimark2.SOR#<init>()#void#1#30#IDENT#super
-jnt.scimark2.Random#nextDouble()#double#18#3094#MINUS#m[i] - m[j]
-jnt.scimark2.Random#initialize(int)#void#81#3816#IDENT#k0
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#67#361#IDENT#j
-jnt.scimark2.SOR#execute(double,double[][],int)#void#8#161#VARDEF#int N = G[0].length
-jnt.scimark2.Random#<init>(double,double)#void#21#514#IDENT#mdig
-jnt.scimark2.Random#<init>(int)#void#53#598#SL#one << mdig - 2
-jnt.scimark2.Random#<init>(int,double,double)#void#52#605#MINUS#mdig - 2
-jnt.scimark2.Random#initialize(int)#void#127#3912#IDENT#m2
-jnt.scimark2.Random#<init>(int)#void#52#605#MINUS#mdig - 2
-jnt.scimark2.SOR#execute(double,double[][],int)#void#15#188#VARDEF#double omega_over_four = omega * 0.25
-jnt.scimark2.Random#initialize(int)#void#110#3881#IDENT#jseed
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#36#272#VARDEF#int j = 0
-jnt.scimark2.SOR#execute(double,double[][],int)#void#107#569#MINUS#j - 1
-jnt.scimark2.Random#<init>()#void#53#598#SL#one << mdig - 2
-jnt.scimark2.Random#<init>(int,double,double)#void#126#2722#IDENT#right
-jnt.scimark2.Random#initialize(int)#void#13#3635#SELECT#Math.abs
-jnt.scimark2.Random#<init>(int)#void#64#616#IDENT#m2
-jnt.scimark2.SOR#execute(double,double[][],int)#void#78#501#IDENT#j
-jnt.scimark2.Random#nextDouble()#double#10#3096#IDENT#m
-jnt.scimark2.Random#nextDouble()#double#115#3275#MUL#dm1 * k * width
-jnt.scimark2.SOR#execute(double,double[][],int)#void#7#169#SELECT#G[0].length
-jnt.scimark2.Random#nextDouble()#double#39#3133#INDEXED#m[j]
-jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#23#624#ASSIGN#A[i] = new double[N]
-jnt.scimark2.Random#<init>()#void#42#579#SL#one << mdig - 2
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#86#408#IDENT#G
-jnt.scimark2.Random#<init>(double,double)#void#110#1726#IDENT#initialize
-jnt.scimark2.Random#nextDouble()#double#124#3306#MUL#dm1 * k
-jnt.scimark2.Random#nextDouble()#double#108#3273#IDENT#k
-jnt.scimark2.Random#<init>()#void#91#820#ASSIGN#haveRange = false
-jnt.scimark2.Random#<init>(double,double)#void#28#537#ASSIGN#one = 1
-jnt.scimark2.Random#nextDouble()#double#21#3111#LT#k < 0
-jnt.scimark2.Random#<init>(double,double)#void#53#598#SL#one << mdig - 2
-jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#36#664#LT#i < N
-jnt.scimark2.Random#<init>()#void#15#493#IDENT#j
-jnt.scimark2.Random#initialize(int)#void#116#3879#ASSIGN#j0 = jseed % m2
-jnt.scimark2.Random#<init>(int,double,double)#void#27#537#IDENT#one
+jnt.scimark2.Random#<init>(int,double,double)#void#110#2651#IDENT#initialize
 jnt.scimark2.Random#initialize(int)#void#110#3876#IDENT#j0
-jnt.scimark2.Random#<init>(double,double)#void#100#883#IDENT#right
-jnt.scimark2.SOR#execute(double,double[][],int)#void#89#526#IDENT#omega_over_four
-jnt.scimark2.Random#<init>(int,double,double)#void#64#616#IDENT#m2
-jnt.scimark2.Random#<init>()#void#60#558#ASSIGN#m1 = (one << mdig - 2) + ((one << mdig - 2) - one)
-jnt.scimark2.Random#<init>(double,double)#void#65#632#IDENT#one
-jnt.scimark2.Random#<init>(double,double)#void#74#636#SL#one << mdig / 2
-jnt.scimark2.Random#initialize(int)#void#98#3857#IDENT#k0
-jnt.scimark2.Random#<init>(int)#void#15#493#IDENT#j
-jnt.scimark2.Random#initialize(int)#void#106#3867#DIV#m2 / 2
-jnt.scimark2.Random#<init>()#void#86#779#ASSIGN#dm1 = 1.0 / (double)m1
-jnt.scimark2.SOR#execute(double,double[][],int)#void#67#475#IDENT#G
-jnt.scimark2.commandline#main(java.lang.String[])#void#45#653#SELECT#kernel.measureSOR
-jnt.scimark2.Random#initialize(int)#void#149#3938#ASSIGN#j = 16
-jnt.scimark2.Random#<init>(int,double,double)#void#129#2728#MINUS#right - left
-jnt.scimark2.Random#<init>()#void#58#608#MINUS#(one << mdig - 2) - one
-jnt.scimark2.SOR#execute(double,double[][],int)#void#141#361#PREINC#++p
-jnt.scimark2.SOR#execute(double,double[][],int)#void#44#381#VARDEF#int i = 1
-jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#54#708#INDEXED#A[i][j]
+jnt.scimark2.Random#initialize(int)#void#122#3898#IDENT#iloop
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#0#166#IDENT#N
+jnt.scimark2.Random#<init>(double,double)#void#115#1750#IDENT#this
+jnt.scimark2.Random#nextDouble()#double#1#3089#IDENT#m
+jnt.scimark2.Random#nextDouble()#double#32#3132#IDENT#m
+jnt.scimark2.Random#initialize(int)#void#142#3927#IDENT#i
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#53#388#SELECT#System.out
 jnt.scimark2.SOR#execute(double,double[][],int)#void#71#478#PLUS#i + 1
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#92#382#ASSIGN#G[0] = precise_all_FIELD1_TAG1(G[0])
-jnt.scimark2.Random#initialize(int)#void#86#3837#IDENT#m2
-jnt.scimark2.SOR#execute(double,double[][],int)#void#141#361#PREINC#++p
-jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#42#690#IDENT#j
-jnt.scimark2.Random#<init>()#void#52#605#MINUS#mdig - 2
-jnt.scimark2.Random#initialize(int)#void#2#3582#ASSIGN#this.seed = seed
-jnt.scimark2.Random#<init>(int,double,double)#void#79#779#IDENT#dm1
-jnt.scimark2.Random#<init>(int)#void#42#579#SL#one << mdig - 2
-jnt.scimark2.Random#nextDouble()#double#77#3207#ASSIGN#j = 16
-jnt.scimark2.Random#initialize(int)#void#50#3712#DIV#9069 / m2
-jnt.scimark2.Random#<init>(int)#void#11#474#ASSIGN#i = 4
-jnt.scimark2.Random#nextDouble()#double#63#3182#PREDEC#--i
+jnt.scimark2.Random#initialize(int)#void#67#3742#ASSIGN#j1 = jseed / m2
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#24#645#PREINC#++i
+jnt.scimark2.Random#initialize(int)#void#72#3774#IDENT#iloop
+jnt.scimark2.Random#<init>()#void#101#883#ASSIGN#right = 1.0
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#45#749#LT#j < N
+jnt.scimark2.Random#<init>(int,double,double)#void#69#639#IDENT#mdig
+jnt.scimark2.Random#initialize(int)#void#13#3635#SELECT#Math.abs
+jnt.scimark2.Random#nextDouble()#double#57#3182#PREDEC#--i
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#21#684#NEWARRAY#new double[N]
+jnt.scimark2.Random#<init>(double,double)#void#91#820#ASSIGN#haveRange = false
+jnt.scimark2.Random#nextDouble()#double#124#3306#MUL#dm1 * k
+jnt.scimark2.commandline#main(java.lang.String[])#void#29#576#SELECT#Integer.parseInt
+jnt.scimark2.SOR#execute(double,double[][],int)#void#119#595#IDENT#one_minus_omega
+jnt.scimark2.Random#<init>()#void#27#537#IDENT#one
+jnt.scimark2.SOR#execute(double,double[][],int)#void#50#387#LT#i < Mm1
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#46#347#SELECT#Accept.accept_all_FIELD1_TAG1
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#33#721#IDENT#i
+jnt.scimark2.Random#<init>(int)#void#6#440#ASSIGN#seed = 0
+jnt.scimark2.Random#<init>()#void#11#474#ASSIGN#i = 4
+jnt.scimark2.Random#<init>(double,double)#void#65#632#IDENT#one
+jnt.scimark2.Random#<init>(double,double)#void#129#1798#ASSIGN#width = right - left
+jnt.scimark2.SOR#execute(double,double[][],int)#void#87#521#IDENT#j
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#17#677#IDENT#A
+jnt.scimark2.Random#initialize(int)#void#61#3744#IDENT#jseed
+jnt.scimark2.Random#<init>(double,double)#void#1#1722#IDENT#super
+jnt.scimark2.Random#<init>(int,double,double)#void#116#2682#ASSIGN#this.left = left
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#18#237#SELECT#System.out
+jnt.scimark2.Random#initialize(int)#void#98#3857#IDENT#k0
+jnt.scimark2.Random#<init>(int,double,double)#void#134#2738#IDENT#haveRange
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#20#678#INDEXED#A[i]
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#18#237#SELECT#System.out
+jnt.scimark2.Random#nextDouble()#double#0#3085#IDENT#k
+jnt.scimark2.SOR#execute(double,double[][],int)#void#40#343#LT#p < num_iterations
+jnt.scimark2.SOR#execute(double,double[][],int)#void#98#560#IDENT#j
+jnt.scimark2.Random#<init>(double,double)#void#5#440#IDENT#seed
+jnt.scimark2.Random#nextDouble()#double#17#3097#INDEXED#m[j]
 jnt.scimark2.Random#<init>(int)#void#110#2101#IDENT#initialize
-jnt.scimark2.Random#<init>(int)#void#32#558#IDENT#m1
-jnt.scimark2.Random#<init>(double,double)#void#32#558#IDENT#m1
-jnt.scimark2.Random#<init>()#void#1#1266#IDENT#super
-jnt.scimark2.Random#initialize(int)#void#10#3596#ASSIGN#m = new int[17]
-jnt.scimark2.Random#<init>()#void#44#594#IDENT#one
-jnt.scimark2.Random#initialize(int)#void#1#3576#SELECT#this.seed
-jnt.scimark2.Random#<init>(double,double)#void#116#1762#IDENT#left
-jnt.scimark2.Random#<init>(int)#void#23#514#ASSIGN#mdig = 32
-jnt.scimark2.Random#initialize(int)#void#94#3845#MUL#j0 * k1
-jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#65#668#IDENT#i
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#32#248#LT#i < N
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#84#377#IDENT#G
-jnt.scimark2.Random#<init>()#void#64#616#IDENT#m2
-jnt.scimark2.Random#<init>(double,double)#void#86#779#ASSIGN#dm1 = 1.0 / (double)m1
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#10#163#SELECT#SOR.execute
-jnt.scimark2.Random#nextDouble()#double#5#3091#IDENT#i
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#86#378#INDEXED#G[0]
-jnt.scimark2.Random#<init>()#void#95#855#IDENT#left
-jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#8#587#IDENT#i
-jnt.scimark2.Random#<init>(int)#void#95#855#IDENT#left
-jnt.scimark2.Random#initialize(int)#void#147#3936#IDENT#j
-jnt.scimark2.SOR#execute(double,double[][],int)#void#129#509#PREINC#++j
-jnt.scimark2.SOR#execute(double,double[][],int)#void#109#563#PLUS#Gim1[j] + Gip1[j] + Gi[j - 1]
-jnt.scimark2.Random#initialize(int)#void#135#3786#PREINC#++iloop
-jnt.scimark2.Random#<init>(int,double,double)#void#10#474#IDENT#i
+jnt.scimark2.SOR#execute(double,double[][],int)#void#117#582#PLUS#Gim1[j] + Gip1[j] + Gi[j - 1] + Gi[j + 1]
+jnt.scimark2.Random#<init>()#void#55#609#IDENT#one
+jnt.scimark2.Random#<init>()#void#32#558#IDENT#m1
+jnt.scimark2.SOR#execute(double,double[][],int)#void#80#503#IDENT#Nm1
+jnt.scimark2.Random#initialize(int)#void#31#3673#PREDEC#--jseed
+jnt.scimark2.Random#<init>(int)#void#53#598#SL#one << mdig - 2
+jnt.scimark2.Random#initialize(int)#void#84#3823#IDENT#j1
+jnt.scimark2.SOR#execute(double,double[][],int)#void#78#501#IDENT#j
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#105#484#SELECT#System.out
+jnt.scimark2.SOR#execute(double,double[][],int)#void#56#422#INDEXED#G[i]
+jnt.scimark2.Random#<init>(double,double)#void#133#1816#IDENT#haveRange
+jnt.scimark2.Random#<init>(double,double)#void#69#639#IDENT#mdig
+jnt.scimark2.SOR#execute(double,double[][],int)#void#60#449#IDENT#i
+jnt.scimark2.commandline#main(java.lang.String[])#void#8#414#NE#args.length != 1
+jnt.scimark2.Random#<init>(int,double,double)#void#60#558#ASSIGN#m1 = (one << mdig - 2) + ((one << mdig - 2) - one)
+jnt.scimark2.SOR#execute(double,double[][],int)#void#121#613#IDENT#Gi
 jnt.scimark2.Random#nextDouble()#double#51#3164#ASSIGN#i = 16
+jnt.scimark2.SOR#execute(double,double[][],int)#void#32#314#VARDEF#int Nm1 = N - 1
+jnt.scimark2.SOR#execute(double,double[][],int)#void#10#206#IDENT#omega
+jnt.scimark2.Random#<init>(double,double)#void#121#1774#SELECT#this.right
+jnt.scimark2.Random#<init>(int,double,double)#void#119#2692#IDENT#this
+jnt.scimark2.Random#<init>(double,double)#void#116#1762#IDENT#left
+jnt.scimark2.Random#nextDouble()#double#26#3125#IDENT#m1
+jnt.scimark2.Random#<init>()#void#28#537#ASSIGN#one = 1
+jnt.scimark2.Random#initialize(int)#void#130#3917#IDENT#j1
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#84#421#IDENT#G
+jnt.scimark2.commandline#main(java.lang.String[])#void#25#558#NEWCLASS#new Random(Integer.parseInt(seed))
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#27#276#VARDEF#int i = 0
+jnt.scimark2.Random#<init>(double,double)#void#52#605#MINUS#mdig - 2
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#86#460#IDENT#G
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#42#748#IDENT#j
+jnt.scimark2.Random#<init>(double,double)#void#10#474#IDENT#i
+jnt.scimark2.Random#nextDouble()#double#19#3087#ASSIGN#k = m[i] - m[j]
+jnt.scimark2.Random#<init>(double,double)#void#17#493#ASSIGN#j = 16
+jnt.scimark2.SOR#execute(double,double[][],int)#void#141#360#IDENT#p
+jnt.scimark2.Random#<init>(int,double,double)#void#15#493#IDENT#j
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#92#426#ASSIGN#G[0] = Precise.precise_all_FIELD1_TAG1(G[0])
+jnt.scimark2.Random#<init>(int,double,double)#void#21#514#IDENT#mdig
+jnt.scimark2.Random#<init>()#void#106#912#ASSIGN#width = 1.0
+jnt.scimark2.Random#initialize(int)#void#13#3635#SELECT#Math.abs
+jnt.scimark2.Random#<init>()#void#42#579#SL#one << mdig - 2
+jnt.scimark2.Random#initialize(int)#void#42#3687#ASSIGN#k0 = 9069 % m2
+jnt.scimark2.Random#<init>(int)#void#91#820#ASSIGN#haveRange = false
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#93#325#IDENT#j
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#21#241#SELECT#System.out.print
+jnt.scimark2.Random#<init>(double,double)#void#126#1792#IDENT#width
+jnt.scimark2.Random#nextDouble()#double#40#3137#ASSIGN#m[j] = k
+jnt.scimark2.SOR#execute(double,double[][],int)#void#14#212#MUL#omega * 0.25
+jnt.scimark2.SOR#execute(double,double[][],int)#void#89#520#INDEXED#Gi[j]
+jnt.scimark2.SOR#execute(double,double[][],int)#void#2#141#VARDEF#int M = G.length
+jnt.scimark2.Random#<init>(int,double,double)#void#59#590#PLUS#(one << mdig - 2) + ((one << mdig - 2) - one)
+jnt.scimark2.Constants#<init>()#void#1#30#IDENT#super
+jnt.scimark2.Random#initialize(int)#void#89#3835#DIV#jseed / m2
+jnt.scimark2.commandline#main(java.lang.String[])#void#21#512#IDENT#args
+jnt.scimark2.commandline#main(java.lang.String[])#void#4#382#VARDEF#String seed = null
+jnt.scimark2.Random#initialize(int)#void#1#3576#SELECT#this.seed
+jnt.scimark2.Random#<init>(int)#void#81#814#IDENT#m1
+jnt.scimark2.Random#nextDouble()#double#39#3133#INDEXED#m[j]
+jnt.scimark2.Random#<init>(int)#void#21#514#IDENT#mdig
+jnt.scimark2.Random#initialize(int)#void#18#3646#IDENT#m1
+jnt.scimark2.Random#initialize(int)#void#79#3803#IDENT#jseed
+jnt.scimark2.Random#initialize(int)#void#31#3673#PREDEC#--jseed
+jnt.scimark2.Random#nextDouble()#double#10#3096#IDENT#m
+jnt.scimark2.SOR#execute(double,double[][],int)#void#15#188#VARDEF#double omega_over_four = omega * 0.25
+jnt.scimark2.Random#<init>(int)#void#41#586#MINUS#mdig - 2
+jnt.scimark2.SOR#execute(double,double[][],int)#void#4#165#IDENT#G
+jnt.scimark2.Random#<init>(int,double,double)#void#42#579#SL#one << mdig - 2
+jnt.scimark2.Random#<init>(double,double)#void#60#558#ASSIGN#m1 = (one << mdig - 2) + ((one << mdig - 2) - one)
+jnt.scimark2.Random#nextDouble()#double#20#3109#IDENT#k
+jnt.scimark2.Random#nextDouble()#double#5#3091#IDENT#i
+jnt.scimark2.Random#<init>(int,double,double)#void#114#2672#IDENT#this
+jnt.scimark2.Random#initialize(int)#void#63#3752#IDENT#m2
+jnt.scimark2.Random#initialize(int)#void#53#3720#IDENT#j0
+jnt.scimark2.Random#<init>(int)#void#86#779#ASSIGN#dm1 = 1.0 / (double)m1
+jnt.scimark2.SOR#execute(double,double[][],int)#void#1#146#SELECT#G.length
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#0#617#IDENT#M
+jnt.scimark2.Random#<init>(int,double,double)#void#27#537#IDENT#one
+jnt.scimark2.SOR#execute(double,double[][],int)#void#82#502#LT#j < Nm1
+jnt.scimark2.Random#<init>()#void#65#632#IDENT#one
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#46#335#INDEXED#G[0]
+jnt.scimark2.SOR#execute(double,double[][],int)#void#65#440#VARDEF#double[] Gim1 = G[i - 1]
+jnt.scimark2.Random#<init>(int,double,double)#void#126#2722#IDENT#right
+jnt.scimark2.Random#initialize(int)#void#96#3852#IDENT#j1
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#69#404#INDEXED#G[i][j]
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#24#645#PREINC#++i
+jnt.scimark2.Random#nextDouble()#double#83#3226#PREDEC#--j
+jnt.scimark2.SOR#execute(double,double[][],int)#void#118#542#MUL#omega_over_four * (Gim1[j] + Gip1[j] + Gi[j - 1] + Gi[j + 1])
+jnt.scimark2.Random#<init>()#void#17#493#ASSIGN#j = 16
+jnt.scimark2.Random#initialize(int)#void#95#3840#PLUS#jseed / m2 + j0 * k1
+jnt.scimark2.Random#<init>(int)#void#96#855#ASSIGN#left = 0.0
+jnt.scimark2.SOR#execute(double,double[][],int)#void#37#342#IDENT#p
+jnt.scimark2.Random#<init>(int)#void#75#616#ASSIGN#m2 = one << mdig / 2
+jnt.scimark2.Random#<init>(int,double,double)#void#96#855#ASSIGN#left = 0.0
+jnt.scimark2.SOR#execute(double,double[][],int)#void#129#509#PREINC#++j
+jnt.scimark2.SOR#execute(double,double[][],int)#void#93#550#IDENT#j
+jnt.scimark2.Random#<init>(int)#void#28#537#ASSIGN#one = 1
+jnt.scimark2.Random#nextDouble()#double#29#3122#PLUS_ASG#k += m1
+jnt.scimark2.Random#<init>(double,double)#void#15#493#IDENT#j
+jnt.scimark2.Random#<init>(int)#void#1#2097#IDENT#super
+jnt.scimark2.Random#<init>(double,double)#void#101#883#ASSIGN#right = 1.0
+jnt.scimark2.Random#<init>(int,double,double)#void#48#601#IDENT#mdig
+jnt.scimark2.Random#initialize(int)#void#112#3889#IDENT#m2
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#65#727#PREINC#++i
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#18#679#IDENT#i
+jnt.scimark2.Random#initialize(int)#void#124#3897#INDEXED#m[iloop]
+jnt.scimark2.SOR#execute(double,double[][],int)#void#135#393#IDENT#i
+jnt.scimark2.Random#initialize(int)#void#102#3864#IDENT#m2
+jnt.scimark2.SOR#execute(double,double[][],int)#void#67#475#IDENT#G
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#23#682#ASSIGN#A[i] = new double[N]
+jnt.scimark2.Random#initialize(int)#void#94#3845#MUL#j0 * k1
+jnt.scimark2.Random#<init>(int)#void#23#514#ASSIGN#mdig = 32
+jnt.scimark2.SOR#execute(double,double[][],int)#void#128#524#ASSIGN#Gi[j] = omega_over_four * (Gim1[j] + Gip1[j] + Gi[j - 1] + Gi[j + 1]) + one_minus_omega * Gi[j]
+jnt.scimark2.Random#<init>(int,double,double)#void#120#2696#SELECT#this.right
+jnt.scimark2.Random#<init>()#void#15#493#IDENT#j
+jnt.scimark2.SOR#execute(double,double[][],int)#void#95#549#INDEXED#Gim1[j]
+jnt.scimark2.Random#<init>(int)#void#59#590#PLUS#(one << mdig - 2) + ((one << mdig - 2) - one)
+jnt.scimark2.Random#<init>(double,double)#void#80#805#TYPECAST#(double)m1
+jnt.scimark2.Random#<init>(int,double,double)#void#75#616#ASSIGN#m2 = one << mdig / 2
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#6#145#VARDEF#double[][] G = RandomMatrix(N, N, R)
+jnt.scimark2.Random#<init>()#void#64#616#IDENT#m2
+jnt.scimark2.Random#<init>(int,double,double)#void#86#779#ASSIGN#dm1 = 1.0 / (double)m1
+jnt.scimark2.SOR#execute(double,double[][],int)#void#96#555#IDENT#Gip1
+jnt.scimark2.Random#initialize(int)#void#50#3712#DIV#9069 / m2
+jnt.scimark2.Random#<init>(int)#void#5#440#IDENT#seed
+jnt.scimark2.Random#initialize(int)#void#135#3786#PREINC#++iloop
+jnt.scimark2.Random#initialize(int)#void#108#3826#ASSIGN#j1 = (jseed / m2 + j0 * k1 + j1 * k0) % (m2 / 2)
+jnt.scimark2.Random#<init>(int,double,double)#void#52#605#MINUS#mdig - 2
+jnt.scimark2.Random#initialize(int)#void#116#3879#ASSIGN#j0 = jseed % m2
+jnt.scimark2.Random#<init>(int)#void#42#579#SL#one << mdig - 2
+jnt.scimark2.Random#<init>(double,double)#void#95#855#IDENT#left
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#6#634#VARDEF#int i = 0
+jnt.scimark2.Random#initialize(int)#void#135#3786#PREINC#++iloop
+jnt.scimark2.Constants#<init>()#void#0#30#IDENT#super
+jnt.scimark2.Random#nextDouble()#double#116#3264#PLUS#left + dm1 * k * width
+jnt.scimark2.Random#initialize(int)#void#134#3905#ASSIGN#m[iloop] = j0 + m2 * j1
+jnt.scimark2.SOR#execute(double,double[][],int)#void#18#254#IDENT#omega
+jnt.scimark2.Random#initialize(int)#void#83#3809#ASSIGN#jseed = j0 * k0
+jnt.scimark2.Random#nextDouble()#double#68#3193#IDENT#j
+jnt.scimark2.SOR#execute(double,double[][],int)#void#64#448#INDEXED#G[i - 1]
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#49#764#IDENT#i
+jnt.scimark2.commandline#<init>()#void#0#265#IDENT#super
+jnt.scimark2.Random#<init>()#void#81#814#IDENT#m1
+jnt.scimark2.Random#<init>(int)#void#37#582#IDENT#mdig
+jnt.scimark2.SOR#execute(double,double[][],int)#void#115#588#PLUS#j + 1
+jnt.scimark2.Random#initialize(int)#void#119#3896#IDENT#m
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#46#371#IDENT#G
+jnt.scimark2.Random#<init>(int,double,double)#void#106#912#ASSIGN#width = 1.0
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#108#488#SELECT#System.out.println
+jnt.scimark2.Random#initialize(int)#void#43#3702#IDENT#k1
+jnt.scimark2.SOR#execute(double,double[][],int)#void#127#593#PLUS#omega_over_four * (Gim1[j] + Gip1[j] + Gi[j - 1] + Gi[j + 1]) + one_minus_omega * Gi[j]
+jnt.scimark2.Random#<init>(int)#void#33#575#IDENT#one
+jnt.scimark2.Random#<init>(int)#void#32#558#IDENT#m1
+jnt.scimark2.Random#<init>()#void#95#855#IDENT#left
+jnt.scimark2.Random#<init>(int,double,double)#void#10#474#IDENT#i
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#29#283#IDENT#i
+jnt.scimark2.Random#<init>(int,double,double)#void#128#2730#IDENT#left
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#54#772#IDENT#R
+jnt.scimark2.Random#<init>(double,double)#void#21#514#IDENT#mdig
+jnt.scimark2.Random#<init>()#void#5#440#IDENT#seed
+jnt.scimark2.Random#<init>(int)#void#64#616#IDENT#m2
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#31#287#IDENT#N
+jnt.scimark2.Random#nextDouble()#double#14#3098#IDENT#j
+jnt.scimark2.Random#initialize(int)#void#13#3626#SELECT#Math.min
+jnt.scimark2.Random#nextDouble()#double#42#3150#IDENT#i
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#14#659#SELECT#Alloc.alloc_TAG1
+jnt.scimark2.commandline#main(java.lang.String[])#void#36#554#VARDEF#Random R = new Random(Integer.parseInt(seed))
+jnt.scimark2.Random#<init>()#void#6#440#ASSIGN#seed = 0
+jnt.scimark2.Random#nextDouble()#double#21#3111#LT#k < 0
+jnt.scimark2.Random#<init>(int,double,double)#void#95#855#IDENT#left
+jnt.scimark2.commandline#<init>()#void#1#265#IDENT#super
+jnt.scimark2.Random#nextDouble()#double#45#3152#EQ#i == 0
+jnt.scimark2.Random#<init>()#void#75#616#ASSIGN#m2 = one << mdig / 2
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#36#309#VARDEF#int j = 0
+jnt.scimark2.Random#<init>(double,double)#void#59#590#PLUS#(one << mdig - 2) + ((one << mdig - 2) - one)
+jnt.scimark2.SOR#execute(double,double[][],int)#void#68#477#IDENT#i
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#24#644#IDENT#i
+jnt.scimark2.SOR#execute(double,double[][],int)#void#100#559#INDEXED#Gip1[j]
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#44#750#IDENT#N
+jnt.scimark2.commandline#main(java.lang.String[])#void#21#505#IDENT#seed
+jnt.scimark2.Random#initialize(int)#void#6#3594#IDENT#m
+jnt.scimark2.Random#<init>(double,double)#void#134#1826#ASSIGN#haveRange = true
+jnt.scimark2.Random#nextDouble()#double#94#3237#IDENT#haveRange
+jnt.scimark2.Random#<init>(double,double)#void#128#1806#MINUS#right - left
+jnt.scimark2.Random#<init>(int,double,double)#void#115#2684#IDENT#left
+jnt.scimark2.commandline#main(java.lang.String[])#void#6#406#SELECT#args.length
+jnt.scimark2.Random#nextDouble()#double#89#3226#PREDEC#--j
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#65#727#PREINC#++i
+jnt.scimark2.Random#<init>(int,double,double)#void#0#2647#IDENT#super
+jnt.scimark2.Random#<init>(int,double,double)#void#135#2748#ASSIGN#haveRange = true
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#38#316#IDENT#j
+jnt.scimark2.Random#initialize(int)#void#66#3750#DIV#jseed / m2
+jnt.scimark2.commandline#main(java.lang.String[])#void#29#586#IDENT#seed
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#71#797#IDENT#A
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#36#722#LT#i < N
+jnt.scimark2.commandline#main(java.lang.String[])#void#5#402#IDENT#args
+jnt.scimark2.Random#<init>()#void#0#1266#IDENT#super
+jnt.scimark2.Random#<init>(double,double)#void#11#474#ASSIGN#i = 4
+jnt.scimark2.Random#<init>(double,double)#void#23#514#ASSIGN#mdig = 32
+jnt.scimark2.Random#nextDouble()#double#75#3205#IDENT#j
+jnt.scimark2.Random#initialize(int)#void#13#3626#SELECT#Math.min
+jnt.scimark2.SOR#execute(double,double[][],int)#void#22#303#IDENT#M
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#2#172#IDENT#R
+jnt.scimark2.Random#<init>(int)#void#48#601#IDENT#mdig
+jnt.scimark2.Random#<init>(int)#void#58#608#MINUS#(one << mdig - 2) - one
+jnt.scimark2.Random#<init>(int)#void#27#537#IDENT#one
+jnt.scimark2.Random#<init>(int,double,double)#void#33#575#IDENT#one
+jnt.scimark2.SOR#execute(double,double[][],int)#void#72#476#INDEXED#G[i + 1]
+jnt.scimark2.Random#initialize(int)#void#100#3850#PLUS#jseed / m2 + j0 * k1 + j1 * k0
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#32#285#LT#i < N
+jnt.scimark2.Random#<init>(int,double,double)#void#79#779#IDENT#dm1
+jnt.scimark2.Random#<init>(int,double,double)#void#23#514#ASSIGN#mdig = 32
+jnt.scimark2.SOR#execute(double,double[][],int)#void#39#344#IDENT#num_iterations
+jnt.scimark2.Random#<init>()#void#53#598#SL#one << mdig - 2
+jnt.scimark2.Random#<init>(int)#void#15#493#IDENT#j
+jnt.scimark2.Random#initialize(int)#void#86#3837#IDENT#m2
+jnt.scimark2.Random#<init>(int,double,double)#void#32#558#IDENT#m1
+jnt.scimark2.Random#<init>()#void#58#608#MINUS#(one << mdig - 2) - one
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#9#183#VARDEF#int cycles = 100
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#41#318#LT#j < N
+jnt.scimark2.Random#initialize(int)#void#76#3780#LT#iloop < 17
+jnt.scimark2.Random#initialize(int)#void#82#3814#MUL#j0 * k0
+jnt.scimark2.SOR#<init>()#void#0#30#IDENT#super
+jnt.scimark2.SOR#execute(double,double[][],int)#void#110#584#IDENT#Gi
+jnt.scimark2.Random#<init>()#void#90#820#IDENT#haveRange
+jnt.scimark2.Random#<init>(int,double,double)#void#120#2705#IDENT#right
+jnt.scimark2.SOR#execute(double,double[][],int)#void#91#545#IDENT#Gim1
+jnt.scimark2.Random#<init>(int)#void#106#912#ASSIGN#width = 1.0
+jnt.scimark2.Random#<init>(int,double,double)#void#41#586#MINUS#mdig - 2
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#48#762#IDENT#A
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#88#461#INDEXED#G[0]
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#44#334#IDENT#G
+jnt.scimark2.Random#<init>(int)#void#90#820#IDENT#haveRange
+jnt.scimark2.Random#<init>()#void#23#514#ASSIGN#mdig = 32
+jnt.scimark2.Random#nextDouble()#double#36#3134#IDENT#j
+jnt.scimark2.Random#<init>(double,double)#void#48#601#IDENT#mdig
+jnt.scimark2.Random#<init>(double,double)#void#110#1726#IDENT#initialize
+jnt.scimark2.Random#initialize(int)#void#8#3598#NEWARRAY#new int[17]
+jnt.scimark2.Random#initialize(int)#void#70#3769#ASSIGN#iloop = 0
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#99#290#PREINC#++i
+jnt.scimark2.Random#initialize(int)#void#24#3620#ASSIGN#jseed = Math.min(Math.abs(seed), m1)
+jnt.scimark2.SOR#execute(double,double[][],int)#void#53#421#IDENT#G
+jnt.scimark2.Random#<init>(double,double)#void#64#616#IDENT#m2
+jnt.scimark2.Random#<init>(double,double)#void#73#643#DIV#mdig / 2
+jnt.scimark2.Random#<init>(double,double)#void#100#883#IDENT#right
+jnt.scimark2.Random#<init>(double,double)#void#116#1754#SELECT#this.left
+jnt.scimark2.Random#<init>(int)#void#11#474#ASSIGN#i = 4
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#52#339#ASSIGN#G[0] = Accept.accept_all_FIELD1_TAG1(G[0])
+jnt.scimark2.Random#initialize(int)#void#127#3912#IDENT#m2
+jnt.scimark2.Random#<init>()#void#44#594#IDENT#one
+jnt.scimark2.Random#<init>(double,double)#void#55#609#IDENT#one
+jnt.scimark2.Random#<init>(double,double)#void#58#608#MINUS#(one << mdig - 2) - one
+jnt.scimark2.Random#<init>(int,double,double)#void#126#2714#IDENT#width
+jnt.scimark2.Random#initialize(int)#void#110#3881#IDENT#jseed
+jnt.scimark2.Random#<init>(int,double,double)#void#130#2720#ASSIGN#width = right - left
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#86#422#INDEXED#G[0]
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#93#323#PREINC#++j
+jnt.scimark2.Random#<init>(int,double,double)#void#64#616#IDENT#m2
+jnt.scimark2.Random#<init>(int,double,double)#void#100#883#IDENT#right
+jnt.scimark2.SOR#execute(double,double[][],int)#void#112#587#IDENT#j
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#58#770#ASSIGN#A[i][j] = R.nextDouble()
+jnt.scimark2.Random#<init>(int)#void#55#609#IDENT#one
+jnt.scimark2.SOR#execute(double,double[][],int)#void#73#468#VARDEF#double[] Gip1 = G[i + 1]
+jnt.scimark2.Random#<init>(double,double)#void#32#558#IDENT#m1
+jnt.scimark2.Random#nextDouble()#double#8#3090#INDEXED#m[i]
+jnt.scimark2.SOR#execute(double,double[][],int)#void#129#509#PREINC#++j
+jnt.scimark2.SOR#execute(double,double[][],int)#void#63#450#MINUS#i - 1
+jnt.scimark2.Random#nextDouble()#double#119#3302#IDENT#dm1
+jnt.scimark2.commandline#main(java.lang.String[])#void#37#602#SELECT#kernel.measureSOR
+jnt.scimark2.Random#<init>(double,double)#void#106#912#ASSIGN#width = 1.0
+jnt.scimark2.Random#<init>(double,double)#void#122#1781#ASSIGN#this.right = right
+jnt.scimark2.Random#<init>()#void#1#1266#IDENT#super
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#0#153#IDENT#RandomMatrix
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#40#743#VARDEF#int j = 0
+jnt.scimark2.Random#<init>(int,double,double)#void#74#636#SL#one << mdig / 2
+jnt.scimark2.Random#<init>(double,double)#void#79#779#IDENT#dm1
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#54#766#INDEXED#A[i][j]
+jnt.scimark2.SOR#execute(double,double[][],int)#void#25#304#MINUS#M - 1
+jnt.scimark2.Random#<init>(int,double,double)#void#6#440#ASSIGN#seed = 0
+jnt.scimark2.kernel#<init>()#void#1#67#IDENT#super
+jnt.scimark2.Random#<init>()#void#69#639#IDENT#mdig
+jnt.scimark2.Random#initialize(int)#void#61#3739#IDENT#j1
+jnt.scimark2.Random#initialize(int)#void#90#3842#IDENT#j0
+jnt.scimark2.Random#initialize(int)#void#143#3929#ASSIGN#i = 4
+jnt.scimark2.Random#<init>(int,double,double)#void#129#2728#MINUS#right - left
+jnt.scimark2.Random#<init>(int,double,double)#void#44#594#IDENT#one
+jnt.scimark2.Random#<init>()#void#74#636#SL#one << mdig / 2
+jnt.scimark2.Random#<init>()#void#79#779#IDENT#dm1
+jnt.scimark2.commandline#main(java.lang.String[])#void#24#510#ASSIGN#seed = args[0]
+jnt.scimark2.Random#nextDouble()#double#101#3259#IDENT#left
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#31#716#VARDEF#int i = 0
+jnt.scimark2.SOR#execute(double,double[][],int)#void#108#567#INDEXED#Gi[j - 1]
+jnt.scimark2.Random#nextDouble()#double#110#3271#MUL#dm1 * k
+jnt.scimark2.kernel#<init>()#void#0#67#IDENT#super
+jnt.scimark2.Random#<init>(double,double)#void#53#598#SL#one << mdig - 2
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#53#388#SELECT#System.out
+jnt.scimark2.Random#<init>(int,double,double)#void#105#912#IDENT#width
+jnt.scimark2.SOR#execute(double,double[][],int)#void#102#565#IDENT#Gi
+jnt.scimark2.Random#<init>(int)#void#74#636#SL#one << mdig / 2
+jnt.scimark2.Random#<init>(int,double,double)#void#55#609#IDENT#one
+jnt.scimark2.Random#initialize(int)#void#58#3731#MOD#jseed % m2
+jnt.scimark2.Random#<init>(double,double)#void#96#855#ASSIGN#left = 0.0
+jnt.scimark2.Random#<init>()#void#52#605#MINUS#mdig - 2
+jnt.scimark2.Random#<init>(int,double,double)#void#91#820#ASSIGN#haveRange = false
+jnt.scimark2.Random#<init>(double,double)#void#6#440#ASSIGN#seed = 0
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#64#402#IDENT#i
+jnt.scimark2.Random#initialize(int)#void#106#3867#DIV#m2 / 2
+jnt.scimark2.SOR#execute(double,double[][],int)#void#104#568#IDENT#j
+jnt.scimark2.SOR#execute(double,double[][],int)#void#89#526#IDENT#omega_over_four
+jnt.scimark2.Random#nextDouble()#double#63#3182#PREDEC#--i
+jnt.scimark2.Random#initialize(int)#void#92#3847#IDENT#k1
+jnt.scimark2.Random#<init>(int,double,double)#void#28#537#ASSIGN#one = 1
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#59#754#PREINC#++j
+jnt.scimark2.Random#<init>(double,double)#void#86#779#ASSIGN#dm1 = 1.0 / (double)m1
+jnt.scimark2.Random#initialize(int)#void#69#3763#IDENT#iloop
+jnt.scimark2.Random#initialize(int)#void#51#3705#ASSIGN#k1 = 9069 / m2
+jnt.scimark2.Random#<init>()#void#59#590#PLUS#(one << mdig - 2) + ((one << mdig - 2) - one)
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#99#292#IDENT#i
+jnt.scimark2.Random#initialize(int)#void#99#3855#MUL#j1 * k0
+jnt.scimark2.Random#<init>(int)#void#44#594#IDENT#one
+jnt.scimark2.Random#<init>()#void#41#586#MINUS#mdig - 2
+jnt.scimark2.SOR#execute(double,double[][],int)#void#57#416#VARDEF#double[] Gi = G[i]
+jnt.scimark2.Random#<init>(double,double)#void#126#1800#IDENT#right
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#86#435#SELECT#Precise.precise_all_FIELD1_TAG1
+jnt.scimark2.Random#<init>(double,double)#void#117#1760#ASSIGN#this.left = left
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#40#320#IDENT#N
+jnt.scimark2.Random#<init>(double,double)#void#90#820#IDENT#haveRange
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#14#659#SELECT#Alloc.alloc_TAG1
+jnt.scimark2.Random#<init>(int)#void#80#805#TYPECAST#(double)m1
+jnt.scimark2.Random#initialize(int)#void#28#3667#EQ#jseed % 2 == 0
+jnt.scimark2.Random#<init>(int)#void#100#883#IDENT#right
+jnt.scimark2.Random#nextDouble()#double#115#3275#MUL#dm1 * k * width
+jnt.scimark2.Random#nextDouble()#double#108#3273#IDENT#k
+jnt.scimark2.Random#<init>(double,double)#void#42#579#SL#one << mdig - 2
+jnt.scimark2.Random#<init>(int,double,double)#void#110#2663#IDENT#seed
+jnt.scimark2.SOR#execute(double,double[][],int)#void#101#553#PLUS#Gim1[j] + Gip1[j]
+jnt.scimark2.Random#<init>(double,double)#void#121#1783#IDENT#right
+jnt.scimark2.commandline#main(java.lang.String[])#void#29#576#SELECT#Integer.parseInt
+jnt.scimark2.Random#<init>()#void#10#474#IDENT#i
+jnt.scimark2.Random#initialize(int)#void#81#3816#IDENT#k0
+jnt.scimark2.SOR#execute(double,double[][],int)#void#135#394#PREINC#++i
+jnt.scimark2.Random#<init>(double,double)#void#44#594#IDENT#one
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#51#763#INDEXED#A[i]
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#13#215#IDENT#G
+jnt.scimark2.SOR#execute(double,double[][],int)#void#35#337#VARDEF#int p = 0
+jnt.scimark2.Random#initialize(int)#void#107#3861#MOD#(jseed / m2 + j0 * k1 + j1 * k0) % (m2 / 2)
+jnt.scimark2.Random#<init>()#void#48#601#IDENT#mdig
+jnt.scimark2.Random#initialize(int)#void#149#3938#ASSIGN#j = 16
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#93#323#PREINC#++j
+jnt.scimark2.Random#<init>(int,double,double)#void#73#643#DIV#mdig / 2
+jnt.scimark2.Random#<init>(int)#void#60#558#ASSIGN#m1 = (one << mdig - 2) + ((one << mdig - 2) - one)
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#48#372#INDEXED#G[0]
+jnt.scimark2.Random#<init>(int,double,double)#void#58#608#MINUS#(one << mdig - 2) - one
+jnt.scimark2.Random#<init>()#void#33#575#IDENT#one
+jnt.scimark2.SOR#<init>()#void#1#30#IDENT#super
+jnt.scimark2.Random#<init>()#void#85#803#DIV#1.0 / (double)m1
+jnt.scimark2.Random#<init>(int,double,double)#void#90#820#IDENT#haveRange
+jnt.scimark2.SOR#execute(double,double[][],int)#void#7#169#SELECT#G[0].length
+jnt.scimark2.Random#<init>(int,double,double)#void#5#440#IDENT#seed
+jnt.scimark2.Random#<init>(double,double)#void#74#636#SL#one << mdig / 2
+jnt.scimark2.Random#nextDouble()#double#77#3207#ASSIGN#j = 16
+jnt.scimark2.SOR#execute(double,double[][],int)#void#44#381#VARDEF#int i = 1
+jnt.scimark2.Random#<init>(int,double,double)#void#81#814#IDENT#m1
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#63#400#IDENT#G
+jnt.scimark2.Random#initialize(int)#void#132#3915#MUL#m2 * j1
+jnt.scimark2.SOR#execute(double,double[][],int)#void#129#508#IDENT#j
+jnt.scimark2.Random#initialize(int)#void#10#3596#ASSIGN#m = new int[17]
+jnt.scimark2.Random#nextDouble()#double#84#3225#IDENT#j
+jnt.scimark2.commandline#main(java.lang.String[])#void#37#602#SELECT#kernel.measureSOR
+jnt.scimark2.Random#<init>(double,double)#void#28#537#ASSIGN#one = 1
+jnt.scimark2.Random#initialize(int)#void#1#3584#IDENT#seed
+jnt.scimark2.SOR#execute(double,double[][],int)#void#123#616#IDENT#j
+jnt.scimark2.Random#<init>(double,double)#void#37#582#IDENT#mdig
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#10#641#IDENT#M
+jnt.scimark2.Random#initialize(int)#void#38#3696#IDENT#m2
+jnt.scimark2.Random#<init>(int,double,double)#void#85#803#DIV#1.0 / (double)m1
+jnt.scimark2.Random#<init>(int)#void#110#2113#IDENT#seed
+jnt.scimark2.SOR#execute(double,double[][],int)#void#135#394#PREINC#++i
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#59#753#IDENT#j
+jnt.scimark2.Random#<init>()#void#86#779#ASSIGN#dm1 = 1.0 / (double)m1
+jnt.scimark2.Random#nextDouble()#double#105#3267#IDENT#dm1
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#56#392#SELECT#System.out.print
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#10#200#SELECT#SOR.execute
+jnt.scimark2.SOR#execute(double,double[][],int)#void#20#230#VARDEF#double one_minus_omega = 1.0 - omega
+jnt.scimark2.Random#<init>(int)#void#52#605#MINUS#mdig - 2
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#55#773#SELECT#R.nextDouble
+jnt.scimark2.Random#initialize(int)#void#79#3811#IDENT#j0
+jnt.scimark2.commandline#main(java.lang.String[])#void#38#624#IDENT#R
+jnt.scimark2.commandline#main(java.lang.String[])#void#2#335#VARDEF#int SOR_size = Constants.TINY_SOR_SIZE
+jnt.scimark2.Random#<init>(int,double,double)#void#11#474#ASSIGN#i = 4
+jnt.scimark2.Random#nextDouble()#double#18#3094#MINUS#m[i] - m[j]
+jnt.scimark2.SOR#execute(double,double[][],int)#void#126#611#MUL#one_minus_omega * Gi[j]
+jnt.scimark2.Random#nextDouble()#double#122#3308#IDENT#k
+jnt.scimark2.Random#initialize(int)#void#27#3663#MOD#jseed % 2
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#20#695#IDENT#N
+jnt.scimark2.Random#<init>(int,double,double)#void#17#493#ASSIGN#j = 16
+jnt.scimark2.SOR#execute(double,double[][],int)#void#76#496#VARDEF#int j = 1
+jnt.scimark2.SOR#execute(double,double[][],int)#void#8#161#VARDEF#int N = G[0].length
+jnt.scimark2.Random#nextDouble()#double#58#3181#IDENT#i
+jnt.scimark2.Random#initialize(int)#void#115#3887#MOD#jseed % m2
+jnt.scimark2.commandline#main(java.lang.String[])#void#23#516#INDEXED#args[0]
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#86#435#SELECT#Precise.precise_all_FIELD1_TAG1
+jnt.scimark2.SOR#execute(double,double[][],int)#void#48#388#IDENT#Mm1
+jnt.scimark2.Random#<init>(double,double)#void#75#616#ASSIGN#m2 = one << mdig / 2
+jnt.scimark2.Random#<init>(int)#void#105#912#IDENT#width
+jnt.scimark2.Random#<init>(int,double,double)#void#101#883#ASSIGN#right = 1.0
+jnt.scimark2.Random#<init>()#void#60#558#ASSIGN#m1 = (one << mdig - 2) + ((one << mdig - 2) - one)
+jnt.scimark2.Random#initialize(int)#void#53#3725#IDENT#jseed
+jnt.scimark2.Random#initialize(int)#void#55#3733#IDENT#m2
+jnt.scimark2.Random#<init>(int)#void#101#883#ASSIGN#right = 1.0
+jnt.scimark2.SOR#execute(double,double[][],int)#void#59#447#IDENT#G
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#67#405#IDENT#j
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#1#169#IDENT#N
+jnt.scimark2.SOR#execute(double,double[][],int)#void#141#361#PREINC#++p
+jnt.scimark2.Random#<init>()#void#100#883#IDENT#right
+jnt.scimark2.Random#initialize(int)#void#59#3723#ASSIGN#j0 = jseed % m2
+jnt.scimark2.Random#<init>(int,double,double)#void#1#2647#IDENT#super
+jnt.scimark2.SOR#execute(double,double[][],int)#void#116#586#INDEXED#Gi[j + 1]
+jnt.scimark2.Random#nextDouble()#double#49#3162#IDENT#i
+jnt.scimark2.Random#initialize(int)#void#25#3657#IDENT#jseed
+jnt.scimark2.SOR#execute(double,double[][],int)#void#46#386#IDENT#i
+jnt.scimark2.Random#nextDouble()#double#112#3277#IDENT#width
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#52#767#IDENT#j
+jnt.scimark2.Random#<init>()#void#91#820#ASSIGN#haveRange = false
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#8#639#IDENT#i
+jnt.scimark2.Random#<init>(int)#void#10#474#IDENT#i
+jnt.scimark2.Random#initialize(int)#void#31#3675#IDENT#jseed
+jnt.scimark2.Random#initialize(int)#void#13#3640#IDENT#seed
+jnt.scimark2.Random#<init>(double,double)#void#33#575#IDENT#one
+jnt.scimark2.Random#<init>(double,double)#void#81#814#IDENT#m1
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#99#290#PREINC#++i
+jnt.scimark2.Random#nextDouble()#double#71#3195#EQ#j == 0
+jnt.scimark2.Random#<init>(double,double)#void#105#912#IDENT#width
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#59#754#PREINC#++j
+jnt.scimark2.Random#<init>()#void#73#643#DIV#mdig / 2
+jnt.scimark2.Random#<init>(int,double,double)#void#80#805#TYPECAST#(double)m1
+jnt.scimark2.Random#<init>(int)#void#0#2097#IDENT#super
+jnt.scimark2.SOR#execute(double,double[][],int)#void#125#615#INDEXED#Gi[j]
+jnt.scimark2.Random#<init>(int,double,double)#void#115#2676#SELECT#this.left
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#14#218#IDENT#cycles
+jnt.scimark2.Random#<init>()#void#110#1270#IDENT#initialize
+jnt.scimark2.Random#<init>(double,double)#void#120#1770#IDENT#this
+jnt.scimark2.Random#initialize(int)#void#135#3788#IDENT#iloop
+jnt.scimark2.Random#<init>(int)#void#73#643#DIV#mdig / 2
+jnt.scimark2.SOR#execute(double,double[][],int)#void#19#252#MINUS#1.0 - omega
+jnt.scimark2.Random#initialize(int)#void#147#3936#IDENT#j
+jnt.scimark2.Random#<init>(double,double)#void#27#537#IDENT#one
+jnt.scimark2.SOR#execute(double,double[][],int)#void#6#166#INDEXED#G[0]
+jnt.scimark2.SOR#execute(double,double[][],int)#void#31#321#MINUS#N - 1
+jnt.scimark2.SOR#execute(double,double[][],int)#void#107#569#MINUS#j - 1
+jnt.scimark2.SOR#execute(double,double[][],int)#void#0#145#IDENT#G
+jnt.scimark2.Random#nextDouble()#double#24#3120#IDENT#k
+jnt.scimark2.Random#<init>()#void#105#912#IDENT#width
+jnt.scimark2.SOR#execute(double,double[][],int)#void#85#518#IDENT#Gi
+jnt.scimark2.SOR#execute(double,double[][],int)#void#109#563#PLUS#Gim1[j] + Gip1[j] + Gi[j - 1]
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#11#640#LT#i < M
+jnt.scimark2.Random#initialize(int)#void#124#3907#IDENT#j0
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#65#726#IDENT#i
+jnt.scimark2.commandline#main(java.lang.String[])#void#37#614#IDENT#SOR_size
+jnt.scimark2.Random#<init>()#void#21#514#IDENT#mdig
+jnt.scimark2.SOR#execute(double,double[][],int)#void#54#423#IDENT#i
+jnt.scimark2.Random#<init>()#void#96#855#ASSIGN#left = 0.0
+jnt.scimark2.Random#initialize(int)#void#41#3694#MOD#9069 % m2
+jnt.scimark2.Random#<init>(int)#void#95#855#IDENT#left
+jnt.scimark2.Random#<init>(int,double,double)#void#122#2703#ASSIGN#this.right = right
+jnt.scimark2.Random#initialize(int)#void#13#3614#IDENT#jseed
+jnt.scimark2.Random#initialize(int)#void#84#3829#IDENT#jseed
+jnt.scimark2.commandline#main(java.lang.String[])#void#11#429#NEWCLASS#new RuntimeException("Error! Seed should be provided as an argument")
+jnt.scimark2.Random#<init>(int)#void#69#639#IDENT#mdig
+jnt.scimark2.Random#initialize(int)#void#2#3582#ASSIGN#this.seed = seed
+jnt.scimark2.Random#<init>(int,double,double)#void#53#598#SL#one << mdig - 2
+jnt.scimark2.Random#<init>(int)#void#85#803#DIV#1.0 / (double)m1
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#105#484#SELECT#System.out
+jnt.scimark2.Random#<init>(double,double)#void#85#803#DIV#1.0 / (double)m1
+jnt.scimark2.Random#<init>()#void#37#582#IDENT#mdig
+jnt.scimark2.Random#initialize(int)#void#47#3714#IDENT#m2
+jnt.scimark2.Random#initialize(int)#void#37#3684#IDENT#k0
+jnt.scimark2.Random#<init>(int)#void#17#493#ASSIGN#j = 16
+jnt.scimark2.Random#<init>(int)#void#79#779#IDENT#dm1
+jnt.scimark2.SOR#execute(double,double[][],int)#void#26#297#VARDEF#int Mm1 = M - 1
+jnt.scimark2.Random#initialize(int)#void#133#3910#PLUS#j0 + m2 * j1
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#66#401#INDEXED#G[i]
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#1#606#NEWARRAY#new double[M][]
+jnt.scimark2.Random#<init>(double,double)#void#127#1808#IDENT#left
+jnt.scimark2.Random#<init>(double,double)#void#0#1722#IDENT#super
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#46#347#SELECT#Accept.accept_all_FIELD1_TAG1
+jnt.scimark2.Random#nextDouble()#double#39#3139#IDENT#k
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#4#598#VARDEF#double[][] A = new double[M][]
+jnt.scimark2.Random#<init>(double,double)#void#41#586#MINUS#mdig - 2
+jnt.scimark2.SOR#execute(double,double[][],int)#void#28#320#IDENT#N
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#35#723#IDENT#N
+jnt.scimark2.Random#<init>(int,double,double)#void#37#582#IDENT#mdig
+jnt.scimark2.SOR#execute(double,double[][],int)#void#141#361#PREINC#++p
+jnt.scimark2.Random#<init>(int,double,double)#void#65#632#IDENT#one
+jnt.scimark2.Random#initialize(int)#void#0#3572#IDENT#this

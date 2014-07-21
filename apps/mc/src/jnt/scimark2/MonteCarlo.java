@@ -1,5 +1,7 @@
 package jnt.scimark2;
 
+import chord.analyses.expax.lang.Accept;
+
 /**
  Estimate Pi by approximating the area of a circle.
 
@@ -45,7 +47,7 @@ public class MonteCarlo
 			double sum = x*x + y*y; 
 			
 			// additional accept
-			sum = accept(sum);
+			sum = Accept.accept(sum);
 
 			if (sum <= 1.0)
 				under_curve ++; 

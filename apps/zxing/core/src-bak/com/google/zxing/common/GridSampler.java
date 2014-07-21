@@ -16,6 +16,8 @@
 
 package com.google.zxing.common;
 
+import chord.analyses.expax.lang.Accept;
+
 import com.google.zxing.NotFoundException;
 
 /**
@@ -98,8 +100,6 @@ public abstract class GridSampler {
     throw new IllegalStateException(); // Can't use UnsupportedOperationException
   }
   
-  public static int accept(int i){return i;}
-  
   /**
    * <p>Checks a set of points that have been transformed to sample points on an image against
    * the image's dimensions to see if the point are even within the image.</p>
@@ -125,9 +125,9 @@ public abstract class GridSampler {
       int x = ((int) points[offset]);
       int y = ((int) points[offset + 1]);
       //additional accept
-      x = accept(x);
+      x = Accept.accept(x);
       //additional accept
-      y = accept(y);
+      y = Accept.accept(y);
       if (x < -1 || x > width || y < -1 || y > height) {
           if (false) {
               throw NotFoundException.getNotFoundInstance();
@@ -158,9 +158,9 @@ public abstract class GridSampler {
       int x = ((int) points[offset]);
       int y = ((int) points[offset + 1]);
       //additional accept
-      x = accept(x);
+      x = Accept.accept(x);
       //additional accept
-      y = accept(y);
+      y = Accept.accept(y);
       if (x < -1 || x > width || y < -1 || y > height) {
           if (false) {
                 throw NotFoundException.getNotFoundInstance();

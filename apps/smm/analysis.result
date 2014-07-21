@@ -1,41 +1,41 @@
 37
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#66#117: ALOAD_D T17, R1, R48
-jnt.scimark2.Random#nextDouble()#double#123#39: INT_2DOUBLE T45, R44
-jnt.scimark2.Random#nextDouble()#double#116#49: ADD_D T42, T35, T41
-jnt.scimark2.Random#<init>(int)#void#101#33: PUTFIELD_D R0, .right, DConst: 1.0
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#62#115: ALOAD_D T47, R4, T15
-jnt.scimark2.Random#nextDouble()#double#119#37: GETFIELD_D T43, R0, .dm1
-jnt.scimark2.commandline#main(java.lang.String[])#void#9#3: MOVE_I R3, IConst: 50
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#80#124: MOVE_D R53, R42
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#27#81: MOVE_D R31, DConst: 0.0
-jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#17#17: ASTORE_D T5, R3, R13
-jnt.scimark2.Random#nextDouble()#double#124#40: MUL_D T46, T43, T45
-jnt.scimark2.Random#<init>(int)#void#84#28: INT_2DOUBLE T6, T26
-jnt.scimark2.commandline#main(java.lang.String[])#void#3#1: MOVE_D R1, DConst: 2.0
-jnt.scimark2.Random#nextDouble()#double#122#38: MOVE_I R44, R25
-jnt.scimark2.Random#nextDouble()#double#109#45: INT_2DOUBLE T38, R37
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#82#125: ASTORE_D R53, R0, R52
-jnt.scimark2.Random#nextDouble()#double#101#42: GETFIELD_D T35, R0, .left
-jnt.scimark2.commandline#main(java.lang.String[])#void#55#15: MOVE_D T11, DConst: 2.0
-jnt.scimark2.Random#<init>(int)#void#85#29: DIV_D T7, DConst: 1.0, T6
-jnt.scimark2.Random#<init>(int)#void#106#34: PUTFIELD_D R0, .width, DConst: 1.0
-jnt.scimark2.Random#nextDouble()#double#110#46: MUL_D T39, T36, T38
 jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#69#120: MOVE_D R50, T18
-jnt.scimark2.Random#nextDouble()#double#108#44: MOVE_I R37, R25
-jnt.scimark2.Random#nextDouble()#double#112#47: GETFIELD_D T40, R0, .width
-jnt.scimark2.Random#nextDouble()#double#105#43: GETFIELD_D T36, R0, .dm1
-jnt.scimark2.Random#<init>(int)#void#6#2: PUTFIELD_I R0, .seed, IConst: 0
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#67#118: MUL_D T49, T47, T17
-jnt.scimark2.Random#<init>(int)#void#86#30: PUTFIELD_D T25, .dm1, T7
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#135#129: MOVE_I R79, IConst: 100
-jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#190#100: ALOAD_D T19, R89, R93
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#54#112: MOVE_D R45, R42
-jnt.scimark2.Random#nextDouble()#double#115#48: MUL_D T41, T39, T40
-jnt.scimark2.Random#<init>(int)#void#81#27: GETFIELD_I T26, R0, .m1
-jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#68#119: ADD_D T18, R45, T49
-jnt.scimark2.Random#initialize(int)#void#2#2: PUTFIELD_I R0, .seed, R14
-jnt.scimark2.commandline#main(java.lang.String[])#void#6#2: MOVE_I R2, IConst: 10
+jnt.scimark2.Random#nextDouble()#double#109#45: INT_2DOUBLE T38, R37
+jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#17#17: ASTORE_D T5, R3, R13
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#66#117: ALOAD_D T17, R1, R48
+jnt.scimark2.Random#nextDouble()#double#110#46: MUL_D T39, T36, T38
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#82#125: ASTORE_D R53, R0, R52
 jnt.scimark2.Random#<init>(int)#void#96#32: PUTFIELD_D R0, .left, DConst: 0.0
+jnt.scimark2.commandline#main(java.lang.String[])#void#3#1: MOVE_D R1, DConst: 2.0
+jnt.scimark2.Random#initialize(int)#void#2#2: PUTFIELD_I R0, .seed, R14
+jnt.scimark2.Random#<init>(int)#void#81#27: GETFIELD_I T26, R0, .m1
+jnt.scimark2.Random#<init>(int)#void#106#34: PUTFIELD_D R0, .width, DConst: 1.0
+jnt.scimark2.Random#nextDouble()#double#108#44: MOVE_I R37, R25
+jnt.scimark2.Random#nextDouble()#double#122#38: MOVE_I R44, R25
+jnt.scimark2.Random#<init>(int)#void#85#29: DIV_D T7, DConst: 1.0, T6
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#135#129: MOVE_I R79, IConst: 100
+jnt.scimark2.Random#<init>(int)#void#84#28: INT_2DOUBLE T6, T26
+jnt.scimark2.Random#nextDouble()#double#112#47: GETFIELD_D T40, R0, .width
+jnt.scimark2.Random#nextDouble()#double#124#40: MUL_D T46, T43, T45
+jnt.scimark2.Random#<init>(int)#void#86#30: PUTFIELD_D T25, .dm1, T7
+jnt.scimark2.kernel#measureSparseMatmult(int,int,double,jnt.scimark2.Random)#double#190#100: ALOAD_D T19, R89, R93
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#67#118: MUL_D T49, T47, T17
+jnt.scimark2.commandline#main(java.lang.String[])#void#55#15: MOVE_D T11, DConst: 2.0
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#62#115: ALOAD_D T47, R4, T15
+jnt.scimark2.Random#nextDouble()#double#101#42: GETFIELD_D T35, R0, .left
+jnt.scimark2.Random#<init>(int)#void#101#33: PUTFIELD_D R0, .right, DConst: 1.0
+jnt.scimark2.commandline#main(java.lang.String[])#void#9#3: MOVE_I R3, IConst: 50
+jnt.scimark2.Random#nextDouble()#double#116#49: ADD_D T42, T35, T41
+jnt.scimark2.Random#nextDouble()#double#105#43: GETFIELD_D T36, R0, .dm1
+jnt.scimark2.Random#nextDouble()#double#115#48: MUL_D T41, T39, T40
+jnt.scimark2.Random#nextDouble()#double#123#39: INT_2DOUBLE T45, R44
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#80#124: MOVE_D R53, R42
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#54#112: MOVE_D R45, R42
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#68#119: ADD_D T18, R45, T49
+jnt.scimark2.Random#<init>(int)#void#6#2: PUTFIELD_I R0, .seed, IConst: 0
+jnt.scimark2.SparseCompRow#matmult(double[],double[],int[],int[],double[],int)#void#27#81: MOVE_D R31, DConst: 0.0
+jnt.scimark2.Random#nextDouble()#double#119#37: GETFIELD_D T43, R0, .dm1
+jnt.scimark2.commandline#main(java.lang.String[])#void#6#2: MOVE_I R2, IConst: 10
 7
 jnt.scimark2.kernel#RandomVector(int,jnt.scimark2.Random)#double[]#1#2: NEWARRAY T2, R7, double[]#ARRAY#double[]#ARRAY
 jnt.scimark2.commandline#main(java.lang.String[])#void#35#9: NEW T20, jnt.scimark2.Random#right#D#jnt.scimark2.Random

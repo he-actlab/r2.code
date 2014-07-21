@@ -16,6 +16,8 @@
 
 package com.google.zxing.qrcode;
 
+import chord.analyses.expax.lang.*;
+
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.BinaryBitmap;
 import com.google.zxing.ChecksumException;
@@ -71,17 +73,14 @@ public class QRCodeReader implements Reader {
       BitMatrix bits = extractPureBits(image.getBlackMatrix());
       decoderResult = decoder.decode(bits, hints);
       points = NO_POINTS;
-      accept_all_FIELD1_TAG2(bits.bits);
+      Accept.accept_all_FIELD1_TAG2(bits.bits);
     } else {
       DetectorResult detectorResult = new Detector(image.getBlackMatrix()).detect(hints);
       decoderResult = decoder.decode(detectorResult.getBits(), hints);
       BitMatrix bitMatrix = detectorResult.getBits();
       points = detectorResult.getPoints();
-      accept_all_FIELD1_TAG2(bitMatrix.bits);
+      Accept.accept_all_FIELD1_TAG2(bitMatrix.bits);
     }
-    
-//    accept_all_FIELD2_TAG3(points[0]);
-//    accept_all_FIELD3_TAG3(points[0]);
     
     Result result = new Result(decoderResult.getText(), decoderResult.getRawBytes(), points, BarcodeFormat.QR_CODE);
     if (decoderResult.getByteSegments() != null) {
@@ -92,13 +91,6 @@ public class QRCodeReader implements Reader {
     }
     return result;
   }
-   
-  public static float accept(float x) {return x;}
-  public static float precise(float x) {return x;}
-  public static ResultPoint accept_all(ResultPoint x) {return x;}
-  public static void accept_all_FIELD1_TAG2(int[] i){}
-//  public static void accept_all_FIELD2_TAG3(ResultPoint p){}
-//  public static void accept_all_FIELD3_TAG3(ResultPoint p){}
   
   public void reset() {
     // do nothing
@@ -177,7 +169,7 @@ public class QRCodeReader implements Reader {
       for (int j = 0; j < dimension; j++) {
     	//additional accept
     	boolean imageGet = image.get(x + j * moduleSize, iOffset);
-    	imageGet = accept(imageGet);
+    	imageGet = Accept.accept(imageGet);
         if (imageGet) {
           bits.set(j, i);
         }
@@ -185,7 +177,5 @@ public class QRCodeReader implements Reader {
     }
     return bits;
   }
-
-  private static boolean accept(boolean imageGet) {return imageGet;}
 
 }

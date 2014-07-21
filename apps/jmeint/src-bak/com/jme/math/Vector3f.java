@@ -38,6 +38,8 @@ import java.io.ObjectInput;
 import java.io.ObjectOutput;
 import java.util.logging.Logger;
 
+import chord.analyses.expax.lang.Accept;
+
 
 
 /*
@@ -258,8 +260,14 @@ public class Vector3f implements Externalizable, Cloneable {
         if (this == o) { return true; }
 
         Vector3f comp = (Vector3f) o;
+        //additional accept
+        x = Accept.accept(x);
         if (Float.compare((x),comp.x) != 0) return false;
+        //additional accept
+        y = Accept.accept(y);
         if (Float.compare((y),comp.y) != 0) return false;
+        //additional accept
+        z = Accept.accept(z);
         if (Float.compare((z),comp.z) != 0) return false;
         return true;
     }
@@ -272,9 +280,15 @@ public class Vector3f implements Externalizable, Cloneable {
      */
     public int hashCode() {
         int hash = 37;
-        hash += 37 * hash + Float.floatToIntBits((x));
-        hash += 37 * hash + Float.floatToIntBits((y));
-        hash += 37 * hash + Float.floatToIntBits((z));
+        //additional accept
+        x = Accept.accept(x);
+        hash += 37 * hash + Float.floatToIntBits(x);
+        //additional accept
+        y = Accept.accept(y);
+        hash += 37 * hash + Float.floatToIntBits(y);
+        //additional accept
+        z = Accept.accept(z);
+        hash += 37 * hash + Float.floatToIntBits(z);
         return hash;
     }
 
@@ -289,6 +303,12 @@ public class Vector3f implements Externalizable, Cloneable {
      * @return the string representation of this vector.
      */
     public String toString() {
+        //additional accept
+        x = Accept.accept(x);
+        //additional accept
+        y = Accept.accept(y);
+        //additional accept
+        z = Accept.accept(z);
         return "(" + (x) + ", " + (y) + ", " + (z) + ")";
     }
 

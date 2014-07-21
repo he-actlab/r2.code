@@ -1,12 +1,14 @@
 package jnt.scimark2;
 
+import chord.analyses.expax.lang.*;
+
 public class kernel
 {
 
 	public static double measureSparseMatmult(int N, int nz, double min_time, Random R)
 	{
 		double x[] = RandomVector(N, R);
-		alloc_TAG1();
+		Alloc.alloc_TAG1();
 		double y[] = new double[N];
 
 		int nr = nz/N; 	
@@ -34,9 +36,8 @@ public class kernel
 
 		System.out.print("SparseMatMult vector: ");
 		for (int i = 0; i < N; ++i) {
-			y = accept_all_FIELD1_TAG1(y);
+			y = Accept.accept_all_FIELD1_TAG1(y);
 			System.out.print((y[i]) + " ");
-			y = precise_all_FIELD1_TAG1(y);
 		}
 		System.out.println("");
 
@@ -50,11 +51,5 @@ public class kernel
 			A[i] = R.nextDouble(); 
 		return A;
 	}
-
-	private static void alloc_TAG1(){}
-	private static double[] accept_all_FIELD1_TAG1(double[] d){return d;}
-	private static double[] precise_all_FIELD1_TAG1(double[] d){return d;}
-
-
 
 }

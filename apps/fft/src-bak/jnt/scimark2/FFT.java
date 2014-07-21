@@ -1,5 +1,8 @@
 package jnt.scimark2;
 
+import chord.analyses.expax.lang.*;
+import chord.analyses.expax.lang.math.*;
+
 /** Computes FFT's of complex, double precision data where n is an integer power of 2.
  * This appears to be slower than the Radix2 method,
  * but the code is smaller and simpler, and it requires no extra storage.
@@ -38,8 +41,6 @@ public class FFT {
 			throw new Error("FFT: Data length is not a power of 2!: "+n);
 		return log; 
 	}
-
-	private static double accept(double d){return d;}
 	
 	protected static void transform_internal (double data[], int direction) {
 		if (data.length == 0) return;    
@@ -57,10 +58,12 @@ public class FFT {
 			double w_imag = 0.0; 
 
 			double theta = 2.0 * direction * Math.PI / (2.0 * (double) dual);
-			theta = accept(theta);
+			//additional accept
+			theta = Accept.accept(theta);
 			double s = Math.sin(theta);
 			double param = theta / 2.0;
-			param = accept(param);
+			//additional accept
+			param = Accept.accept(param);
 			double t = Math.sin(param); 
 			double s2 = 2.0 * t * t; 
 

@@ -16,6 +16,8 @@
 
 package com.google.zxing.qrcode.decoder;
 
+import chord.analyses.expax.lang.Accept;
+
 import com.google.zxing.FormatException;
 import com.google.zxing.common.BitMatrix;
 
@@ -139,11 +141,9 @@ final class BitMatrixParser {
   private int copyBit(int i, int j, int versionBits) {
 	boolean b = bitMatrix.get(i, j);
 	//additional accept
-	b = accept(b);
+	b = Accept.accept(b);
     return b ? (versionBits << 1) | 0x1 : versionBits << 1;
   }
-  
-  public boolean accept(boolean b){return b;}
 
   /**
    * <p>Reads the bits in the {@link BitMatrix} representing the finder pattern in the

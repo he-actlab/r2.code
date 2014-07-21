@@ -16,6 +16,8 @@
 
 package com.google.zxing.oned;
 
+import chord.analyses.expax.lang.Accept;
+
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.ChecksumException;
 import com.google.zxing.DecodeHintType;
@@ -108,7 +110,7 @@ public abstract class UPCEANReader extends OneDReader {
     int[] startRange = null;
     int nextStart = 0;
     //additional accept
-    foundStart = accept(foundStart);
+    foundStart = Accept.accept(foundStart);
     while (!(foundStart)) {
       startRange = findGuardPattern(row, nextStart, false, START_END_PATTERN);
       int start = startRange[0];
@@ -120,13 +122,11 @@ public abstract class UPCEANReader extends OneDReader {
       if (quietStart >= 0) {
         foundStart = row.isRange(quietStart, start, false);
         //additional accept
-        foundStart = accept(foundStart);
+        foundStart = Accept.accept(foundStart);
       }
     }
     return startRange;
   }
-  
-  public static boolean accept(boolean b){return b;}
 
   public Result decodeRow(int rowNumber, BitArray row, Hashtable hints)
       throws NotFoundException, ChecksumException, FormatException {
@@ -252,8 +252,6 @@ public abstract class UPCEANReader extends OneDReader {
   int[] decodeEnd(BitArray row, int endStart) throws NotFoundException {
     return findGuardPattern(row, endStart, false, START_END_PATTERN);
   }
-
-  public static int accept(int i){return i;}
   
   /**
    * @param row row of black/white values to search
@@ -272,17 +270,17 @@ public abstract class UPCEANReader extends OneDReader {
     int width = row.getSize();
     boolean isWhite = false;
     //additional accept
-    rowOffset = accept(rowOffset);
+    rowOffset = Accept.accept(rowOffset);
     while (rowOffset < width) {
       isWhite = !row.get(rowOffset);
       //additional accept
-      isWhite = accept(isWhite);
+      isWhite = Accept.accept(isWhite);
       if (whiteFirst == isWhite) {
         break;
       }
       rowOffset++;
       //additional accept
-      rowOffset = accept(rowOffset);
+      rowOffset = Accept.accept(rowOffset);
     }
 
     int counterPosition = 0;
@@ -291,14 +289,14 @@ public abstract class UPCEANReader extends OneDReader {
       boolean pixel = row.get(x);
       boolean cond = pixel ^ isWhite;
       // additional accept
-      cond = accept(cond);
+      cond = Accept.accept(cond);
       if (cond) {
         counters[counterPosition]++;
       } else {
         if (counterPosition == patternLength - 1) {
           int lhs = patternMatchVariance(counters, pattern, MAX_INDIVIDUAL_VARIANCE);
           //additional accept
-          lhs = accept(lhs);
+          lhs = Accept.accept(lhs);
           cond = (lhs < MAX_AVG_VARIANCE);
           if (cond) {
             return new int[]{patternStart, x};
@@ -342,9 +340,9 @@ public abstract class UPCEANReader extends OneDReader {
        int[] pattern = patterns[i];
        int variance = patternMatchVariance(counters, pattern, MAX_INDIVIDUAL_VARIANCE);
       //additional accept
-      variance = accept(variance);
+      variance = Accept.accept(variance);
       //additional accept
-      bestVariance = accept(bestVariance);
+      bestVariance = Accept.accept(bestVariance);
       if (variance < bestVariance) {
         bestVariance = variance;
         bestMatch = i;

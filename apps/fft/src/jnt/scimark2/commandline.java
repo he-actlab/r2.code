@@ -14,9 +14,9 @@ public class commandline
 
 	public static void main(String args[])
 	{
-		double min_time = Constants.RESOLUTION_DEFAULT; // approx: move to min_time	// op: 1: MOVE_D R1, DConst: 2.0
+		double min_time = Constants.RESOLUTION_DEFAULT; // approx: move to min_time
 
-		int FFT_size = Constants.TINY_FFT_SIZE;	// op: 2: MOVE_I R2, IConst: 16
+		int FFT_size = Constants.TINY_FFT_SIZE;
 
 		String benchSel = null;
 		String seed = null;
@@ -27,8 +27,8 @@ public class commandline
 		seed = args[0];
 
 		// run the benchmark
-		Random R = new Random(Integer.parseInt(seed));	// st: 9: NEW T19, jnt.scimark2.Random	// st: 9: NEW T19, jnt.scimark2.Random	// st: 9: NEW T19, jnt.scimark2.Random	// st: 9: NEW T19, jnt.scimark2.Random	// st: 9: NEW T19, jnt.scimark2.Random	// st: 9: NEW T19, jnt.scimark2.Random	// st: 9: NEW T19, jnt.scimark2.Random	// st: 9: NEW T19, jnt.scimark2.Random	// st: 9: NEW T19, jnt.scimark2.Random
-		kernel.measureFFT( FFT_size, min_time, R);	// op: 15: MOVE_D T11, DConst: 2.0
+		Random R = new Random(Integer.parseInt(seed));
+		kernel.measureFFT( FFT_size, min_time, R);
 				
 	}
 

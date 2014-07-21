@@ -1,58 +1,57 @@
-47
-jnt.scimark2.SOR#execute(double,double[][],int)#void#116#171: ALOAD_D T86, R15, T85
+46
+jnt.scimark2.SOR#execute(double,double[][],int)#void#18#9: MOVE_D R34, R31
+jnt.scimark2.Random#<init>(int)#void#6#2: PUTFIELD_I R0, .seed, IConst: 0
+jnt.scimark2.Random#nextDouble()#double#116#49: ADD_D T42, T35, T41
+jnt.scimark2.Random#nextDouble()#double#115#48: MUL_D T41, T39, T40
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#15#8: MOVE_D T6, DConst: 1.25
+jnt.scimark2.SOR#execute(double,double[][],int)#void#126#177: MUL_D T92, R89, T91
+jnt.scimark2.Random#<init>(int)#void#86#30: PUTFIELD_D T25, .dm1, T7
+jnt.scimark2.SOR#execute(double,double[][],int)#void#128#179: ASTORE_D T93, R15, R90
+jnt.scimark2.SOR#execute(double,double[][],int)#void#95#161: ALOAD_D T76, R17, R75
+jnt.scimark2.Random#nextDouble()#double#123#39: INT_2DOUBLE T45, R44
+jnt.scimark2.SOR#execute(double,double[][],int)#void#100#163: ALOAD_D T78, R18, R77
+jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#58#61: ASTORE_D T8, T33, R34
+jnt.scimark2.SOR#execute(double,double[][],int)#void#109#168: ADD_D T83, T79, T82
+jnt.scimark2.SOR#execute(double,double[][],int)#void#127#178: ADD_D T93, T88, T92
 jnt.scimark2.SOR#execute(double,double[][],int)#void#117#172: ADD_D T87, T83, T86
 jnt.scimark2.Random#nextDouble()#double#105#43: GETFIELD_D T36, R0, .dm1
-jnt.scimark2.Random#<init>(int)#void#85#29: DIV_D T7, DConst: 1.0, T6
-jnt.scimark2.SOR#execute(double,double[][],int)#void#128#179: ASTORE_D T93, R15, R90
-jnt.scimark2.SOR#execute(double,double[][],int)#void#125#176: ALOAD_D T91, R15, R90
 jnt.scimark2.SOR#execute(double,double[][],int)#void#89#159: MOVE_D R74, R70
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#69#89: ALOAD_D T12, T35, R36
-jnt.scimark2.SOR#execute(double,double[][],int)#void#127#178: ADD_D T93, T88, T92
-jnt.scimark2.Random#<init>(int)#void#84#28: INT_2DOUBLE T6, T26
-jnt.scimark2.SOR#execute(double,double[][],int)#void#118#173: MUL_D T88, R74, T87
-jnt.scimark2.Random#<init>(int)#void#6#2: PUTFIELD_I R0, .seed, IConst: 0
-jnt.scimark2.Random#<init>(int)#void#101#33: PUTFIELD_D R0, .right, DConst: 1.0
-jnt.scimark2.Random#<init>(int)#void#81#27: GETFIELD_I T26, R0, .m1
-jnt.scimark2.Random#nextDouble()#double#112#47: GETFIELD_D T40, R0, .width
-jnt.scimark2.Random#nextDouble()#double#109#45: INT_2DOUBLE T38, R37
-jnt.scimark2.SOR#execute(double,double[][],int)#void#14#7: MUL_D T32, R31, DConst: 0.25
-jnt.scimark2.SOR#execute(double,double[][],int)#void#119#174: MOVE_D R89, R69
-jnt.scimark2.SOR#execute(double,double[][],int)#void#100#163: ALOAD_D T78, R18, R77
-jnt.scimark2.SOR#execute(double,double[][],int)#void#10#6: MOVE_D R31, R0
-jnt.scimark2.SOR#execute(double,double[][],int)#void#126#177: MUL_D T92, R89, T91
-jnt.scimark2.Random#nextDouble()#double#124#40: MUL_D T46, T43, T45
-jnt.scimark2.Random#nextDouble()#double#123#39: INT_2DOUBLE T45, R44
-jnt.scimark2.Random#nextDouble()#double#119#37: GETFIELD_D T43, R0, .dm1
-jnt.scimark2.Random#nextDouble()#double#116#49: ADD_D T42, T35, T41
-jnt.scimark2.SOR#execute(double,double[][],int)#void#95#161: ALOAD_D T76, R17, R75
-jnt.scimark2.Random#<init>(int)#void#96#32: PUTFIELD_D R0, .left, DConst: 0.0
-jnt.scimark2.SOR#execute(double,double[][],int)#void#20#11: MOVE_D R36, T35
-jnt.scimark2.SOR#execute(double,double[][],int)#void#109#168: ADD_D T83, T79, T82
-jnt.scimark2.Random#nextDouble()#double#122#38: MOVE_I R44, R25
-jnt.scimark2.Random#nextDouble()#double#101#42: GETFIELD_D T35, R0, .left
-jnt.scimark2.Random#nextDouble()#double#110#46: MUL_D T39, T36, T38
-jnt.scimark2.SOR#execute(double,double[][],int)#void#18#9: MOVE_D R34, R31
-jnt.scimark2.Random#<init>(int)#void#106#34: PUTFIELD_D R0, .width, DConst: 1.0
-jnt.scimark2.Random#nextDouble()#double#108#44: MOVE_I R37, R25
-jnt.scimark2.SOR#execute(double,double[][],int)#void#15#8: MOVE_D R33, T32
-jnt.scimark2.Random#initialize(int)#void#2#2: PUTFIELD_I R0, .seed, R14
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#9#5: MOVE_I R4, IConst: 100
-jnt.scimark2.SOR#execute(double,double[][],int)#void#19#10: SUB_D T35, DConst: 1.0, R34
-jnt.scimark2.commandline#main(java.lang.String[])#void#6#2: MOVE_I R2, IConst: 10
-jnt.scimark2.Random#nextDouble()#double#115#48: MUL_D T41, T39, T40
-jnt.scimark2.SOR#execute(double,double[][],int)#void#108#167: ALOAD_D T82, R15, T81
-jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#15#8: MOVE_D T6, DConst: 1.25
-jnt.scimark2.commandline#main(java.lang.String[])#void#3#1: MOVE_D R1, DConst: 2.0
+jnt.scimark2.SOR#execute(double,double[][],int)#void#125#176: ALOAD_D T91, R15, R90
 jnt.scimark2.SOR#execute(double,double[][],int)#void#101#164: ADD_D T79, T76, T78
-jnt.scimark2.Random#<init>(int)#void#86#30: PUTFIELD_D T25, .dm1, T7
-jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#58#61: ASTORE_D T8, T33, R34
+jnt.scimark2.SOR#execute(double,double[][],int)#void#20#11: MOVE_D R36, T35
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#9#5: MOVE_I R4, IConst: 100
+jnt.scimark2.SOR#execute(double,double[][],int)#void#119#174: MOVE_D R89, R69
+jnt.scimark2.Random#nextDouble()#double#108#44: MOVE_I R37, R25
+jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#69#89: ALOAD_D T12, T35, R36
+jnt.scimark2.Random#<init>(int)#void#101#33: PUTFIELD_D R0, .right, DConst: 1.0
+jnt.scimark2.Random#nextDouble()#double#101#42: GETFIELD_D T35, R0, .left
+jnt.scimark2.Random#nextDouble()#double#124#40: MUL_D T46, T43, T45
+jnt.scimark2.Random#<init>(int)#void#84#28: INT_2DOUBLE T6, T26
+jnt.scimark2.Random#nextDouble()#double#112#47: GETFIELD_D T40, R0, .width
+jnt.scimark2.Random#<init>(int)#void#106#34: PUTFIELD_D R0, .width, DConst: 1.0
+jnt.scimark2.Random#nextDouble()#double#109#45: INT_2DOUBLE T38, R37
+jnt.scimark2.SOR#execute(double,double[][],int)#void#19#10: SUB_D T35, DConst: 1.0, R34
+jnt.scimark2.SOR#execute(double,double[][],int)#void#116#171: ALOAD_D T86, R15, T85
+jnt.scimark2.Random#nextDouble()#double#122#38: MOVE_I R44, R25
+jnt.scimark2.Random#nextDouble()#double#110#46: MUL_D T39, T36, T38
+jnt.scimark2.Random#initialize(int)#void#2#2: PUTFIELD_I R0, .seed, R14
+jnt.scimark2.SOR#execute(double,double[][],int)#void#14#7: MUL_D T32, R31, DConst: 0.25
+jnt.scimark2.commandline#main(java.lang.String[])#void#2#1: MOVE_I R1, IConst: 10
+jnt.scimark2.Random#<init>(int)#void#96#32: PUTFIELD_D R0, .left, DConst: 0.0
+jnt.scimark2.SOR#execute(double,double[][],int)#void#15#8: MOVE_D R33, T32
+jnt.scimark2.Random#nextDouble()#double#119#37: GETFIELD_D T43, R0, .dm1
+jnt.scimark2.Random#<init>(int)#void#81#27: GETFIELD_I T26, R0, .m1
+jnt.scimark2.SOR#execute(double,double[][],int)#void#108#167: ALOAD_D T82, R15, T81
+jnt.scimark2.SOR#execute(double,double[][],int)#void#10#6: MOVE_D R31, R0
+jnt.scimark2.Random#<init>(int)#void#85#29: DIV_D T7, DConst: 1.0, T6
+jnt.scimark2.SOR#execute(double,double[][],int)#void#118#173: MUL_D T88, R74, T87
 6
-jnt.scimark2.commandline#main(java.lang.String[])#void#31#8: NEW T17, jnt.scimark2.Random#right#D#jnt.scimark2.Random
+jnt.scimark2.commandline#main(java.lang.String[])#void#25#7: NEW T16, jnt.scimark2.Random#right#D#jnt.scimark2.Random
 jnt.scimark2.kernel#RandomMatrix(int,int,jnt.scimark2.Random)#double[][]#21#49: NEWARRAY T9, R19, double[]#ARRAY#double[]#ARRAY
-jnt.scimark2.commandline#main(java.lang.String[])#void#31#8: NEW T17, jnt.scimark2.Random#left#D#jnt.scimark2.Random
-jnt.scimark2.commandline#main(java.lang.String[])#void#31#8: NEW T17, jnt.scimark2.Random#dm1#D#jnt.scimark2.Random
-jnt.scimark2.commandline#main(java.lang.String[])#void#31#8: NEW T17, jnt.scimark2.Random#seed#I#jnt.scimark2.Random
-jnt.scimark2.commandline#main(java.lang.String[])#void#31#8: NEW T17, jnt.scimark2.Random#width#D#jnt.scimark2.Random
+jnt.scimark2.commandline#main(java.lang.String[])#void#25#7: NEW T16, jnt.scimark2.Random#left#D#jnt.scimark2.Random
+jnt.scimark2.commandline#main(java.lang.String[])#void#25#7: NEW T16, jnt.scimark2.Random#dm1#D#jnt.scimark2.Random
+jnt.scimark2.commandline#main(java.lang.String[])#void#25#7: NEW T16, jnt.scimark2.Random#seed#I#jnt.scimark2.Random
+jnt.scimark2.commandline#main(java.lang.String[])#void#25#7: NEW T16, jnt.scimark2.Random#width#D#jnt.scimark2.Random
 4
 jnt.scimark2.Random#initialize(int)#void#1
 jnt.scimark2.kernel#measureSOR(int,jnt.scimark2.Random)#double#10
