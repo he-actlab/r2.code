@@ -263,6 +263,11 @@ public class SharedData {
 				return false;
 			return true;
 		}
+		if(o instanceof Unary){
+			if(o instanceof Unary.ADDRESS_2INT || o instanceof Unary.ADDRESS_2OBJECT || o instanceof Unary.INT_2ADDRESS || o instanceof Unary.ISNULL_P || o instanceof Unary.OBJECT_2ADDRESS)
+				return false;
+			return true;
+		}
 		if(o instanceof Binary)
 			return true;
 		return false;
