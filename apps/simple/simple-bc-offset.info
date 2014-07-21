@@ -1,10 +1,16 @@
-9
-Simple#main(java.lang.String[])#void#17#138#VARDEF#boolean c = (a && i)
-Simple#main(java.lang.String[])#void#4#145#AND#a && i
-Simple#<init>()#void#1#31#IDENT#super
-Simple#main(java.lang.String[])#void#1#98#VARDEF#boolean a = true
-Simple#main(java.lang.String[])#void#9#145#AND#a && i
-Simple#main(java.lang.String[])#void#4#143#IDENT#a
+15
+Simple#main(java.lang.String[])#void#11#126#IDENT#a
+Simple#main(java.lang.String[])#void#5#111#PREDEC#--a
 Simple#<init>()#void#0#31#IDENT#super
-Simple#main(java.lang.String[])#void#3#118#VARDEF#boolean i = true
-Simple#main(java.lang.String[])#void#8#148#IDENT#i
+Simple#main(java.lang.String[])#void#2#104#PREINC#++a
+Simple#main(java.lang.String[])#void#2#103#IDENT#a
+Simple#main(java.lang.String[])#void#5#110#IDENT#a
+Simple#main(java.lang.String[])#void#11#124#PREDEC#--a
+Simple#<init>()#void#1#31#IDENT#super
+Simple#main(java.lang.String[])#void#8#117#PREINC#++a
+Simple#main(java.lang.String[])#void#5#111#PREDEC#--a
+Simple#main(java.lang.String[])#void#2#104#PREINC#++a
+Simple#main(java.lang.String[])#void#8#117#PREINC#++a
+Simple#main(java.lang.String[])#void#11#124#PREDEC#--a
+Simple#main(java.lang.String[])#void#1#94#VARDEF#int a = 1
+Simple#main(java.lang.String[])#void#8#119#IDENT#a

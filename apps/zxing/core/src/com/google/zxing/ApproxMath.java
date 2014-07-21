@@ -7,20 +7,35 @@ public class ApproxMath {
 	}
 	
 	public static int max(int lhs, int rhs){
-		return -1;
+		//additional accept
+		lhs = accept(lhs);
+		//additional accept
+		rhs = accept(rhs);
+		return Math.max(lhs, rhs);
 	}
 	
 	public static int min(int lhs, int rhs){
-		return -1;
+		//additional accept
+		lhs = accept(lhs);
+		//additional accept
+		rhs = accept(rhs);
+		return Math.min(lhs, rhs);
 	}
 	
 	public static boolean isNaN(float f){
-		return false;
+		//additional accept
+		f = accept(f);
+		return Float.isNaN(f);
 	}
 	
-	public static float sqrt(double d){
-		return -1.0f;
+	public static double sqrt(double d){
+		//additional accept
+		d = accept(d);
+		return Math.sqrt(d);
 	}
 	
 	public static float accept(float f){return f;}
+	public static int accept(int i){return i;}
+	public static double accept(double d){return d;}
+	
 }

@@ -3,10 +3,11 @@
 public class Simple{
 
 	public static void main(String[] args) {
-		boolean a = true;
-		boolean i = true;
-		boolean c = (a && i);	
-
+		int a = 1;
+		a++;
+		a--;
+		++a;
+		--a;
 	}
 }
 

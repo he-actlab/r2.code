@@ -215,6 +215,9 @@ final class AlignmentPatternFinder {
     while (i >= 0 && imageGet && stateCount[1] <= maxCount) {
       stateCount[1]++;
       i--;
+      imageGet = image.get(centerJ, i);
+      //additional accept
+      imageGet = accept(imageGet);
     }
     // If already too many modules in this state or ran off the edge:
     if (i < 0 || stateCount[1] > maxCount) {
@@ -226,6 +229,9 @@ final class AlignmentPatternFinder {
     while (i >= 0 && !imageGet && stateCount[0] <= maxCount) {
       stateCount[0]++;
       i--;
+      imageGet = image.get(centerJ, i);
+      //additional accept
+      imageGet = accept(imageGet);
     }
     if (stateCount[0] > maxCount) {
       return Float.NaN;
@@ -239,6 +245,9 @@ final class AlignmentPatternFinder {
     while (i < maxI && imageGet && stateCount[1] <= maxCount) {
       stateCount[1]++;
       i++;
+      imageGet = image.get(centerJ, i);
+      //additional accept
+      imageGet = accept(imageGet);
     }
     if (i == maxI || stateCount[1] > maxCount) {
       return Float.NaN;
@@ -249,6 +258,9 @@ final class AlignmentPatternFinder {
     while (i < maxI && imageGet && stateCount[2] <= maxCount) {
       stateCount[2]++;
       i++;
+      imageGet = !image.get(centerJ, i);
+      //additional accept
+      imageGet = accept(imageGet);
     }
     if (stateCount[2] > maxCount) {
       return Float.NaN;

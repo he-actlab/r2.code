@@ -93,7 +93,7 @@ public class Detector {
     FinderPattern topRight = info.getTopRight();
     FinderPattern bottomLeft = info.getBottomLeft();
 
-     float moduleSize = calculateModuleSize(topLeft, topRight, bottomLeft);
+    float moduleSize = calculateModuleSize(topLeft, topRight, bottomLeft);
     //additional accept
     moduleSize = accept(moduleSize);
     if (moduleSize < 1.0f) {

@@ -257,7 +257,11 @@ public class FinderPatternFinder {
     while (i >= 0 && imageGet) {
       stateCount[2]++;
       i--;
+      imageGet = image.get(centerJ, i);
+      //additional accept
+      imageGet = accept(imageGet);
     }
+    
     if (i < 0) {
       return Float.NaN;
     }
@@ -267,6 +271,9 @@ public class FinderPatternFinder {
     while (i >= 0 && !imageGet && stateCount[1] <= maxCount) {
       stateCount[1]++;
       i--;
+      imageGet = image.get(centerJ, i);
+      //additional accept
+      imageGet = accept(imageGet);
     }
     // If already too many modules in this state or ran off the edge:
     if (i < 0 || stateCount[1] > maxCount) {
@@ -278,6 +285,9 @@ public class FinderPatternFinder {
     while (i >= 0 && imageGet && stateCount[0] <= maxCount) {
       stateCount[0]++;
       i--;
+      imageGet = image.get(centerJ, i);
+      //additional accept
+      imageGet = accept(imageGet);
     }
     if (stateCount[0] > maxCount) {
       return Float.NaN;
@@ -291,6 +301,9 @@ public class FinderPatternFinder {
     while (i < maxI && imageGet) {
       stateCount[2]++;
       i++;
+      imageGet = image.get(centerJ, i);
+      //additional accept
+      imageGet = accept(imageGet);
     }
     if (i == maxI) {
       return Float.NaN;
@@ -301,6 +314,9 @@ public class FinderPatternFinder {
     while (i < maxI && !imageGet && stateCount[3] < maxCount) {
       stateCount[3]++;
       i++;
+      imageGet = image.get(centerJ, i);
+      //additional accept
+      imageGet = accept(imageGet);
     }
     if (i == maxI || stateCount[3] >= maxCount) {
       return Float.NaN;
@@ -311,6 +327,9 @@ public class FinderPatternFinder {
     while (i < maxI && imageGet && stateCount[4] < maxCount) {
       stateCount[4]++;
       i++;
+      imageGet = image.get(centerJ, i);
+      //additional accept
+      imageGet = accept(imageGet);
     }
     if (stateCount[4] >= maxCount) {
       return Float.NaN;
@@ -348,6 +367,9 @@ public class FinderPatternFinder {
     while (j >= 0 && imageGet) {
       stateCount[2]++;
       j--;
+      imageGet = image.get(j, centerI);
+      //additional accept
+      imageGet = accept(imageGet);
     }
     if (j < 0) {
       return Float.NaN;
@@ -358,6 +380,9 @@ public class FinderPatternFinder {
     while (j >= 0 && !imageGet && stateCount[1] <= maxCount) {
       stateCount[1]++;
       j--;
+      imageGet = image.get(j, centerI);
+      //additional accept
+      imageGet = accept(imageGet);
     }
     if (j < 0 || stateCount[1] > maxCount) {
       return Float.NaN;
@@ -368,6 +393,9 @@ public class FinderPatternFinder {
     while (j >= 0 && imageGet && stateCount[0] <= maxCount) {
       stateCount[0]++;
       j--;
+      imageGet = image.get(j, centerI);
+      //additional accept
+      imageGet = accept(imageGet);
     }
     if (stateCount[0] > maxCount) {
       return Float.NaN;
@@ -380,6 +408,9 @@ public class FinderPatternFinder {
     while (j < maxJ && imageGet) {
       stateCount[2]++;
       j++;
+      imageGet = image.get(j, centerI);
+      //additional accept
+      imageGet = accept(imageGet);
     }
     if (j == maxJ) {
       return Float.NaN;
@@ -390,6 +421,9 @@ public class FinderPatternFinder {
     while (j < maxJ && !imageGet && stateCount[3] < maxCount) {
       stateCount[3]++;
       j++;
+      imageGet = image.get(j, centerI);
+      //additional accept
+      imageGet = accept(imageGet);
     }
     if (j == maxJ || stateCount[3] >= maxCount) {
       return Float.NaN;
@@ -400,6 +434,9 @@ public class FinderPatternFinder {
     while (j < maxJ && imageGet && stateCount[4] < maxCount) {
       stateCount[4]++;
       j++;
+      imageGet = image.get(j, centerI);
+      //additional accept
+      imageGet = accept(imageGet);
     }
     if (stateCount[4] >= maxCount) {
       return Float.NaN;

@@ -25,3 +25,5 @@ $enerjdir/bin/enerj $enerjargs -cp $classpath $mainclass $filename $zxingargs
 
 # Output stats.
 # $enerjdir/bin/enerjstats
+
+# java -cp javase/javase.jar:core/core.jar com.google.zxing.client.j2se.CommandLineRunner input1.png

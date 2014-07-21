@@ -69,7 +69,7 @@ public final class UPCEReader extends UPCEANReader {
     int lgPatternFound = 0;
 
     for (int x = 0; x < 6 && rowOffset < end; x++) {
-      @Approx int bestMatch = decodeDigit(row, counters, rowOffset, (@Approx int [] @Approx [])L_AND_G_PATTERNS);
+      @Approx int bestMatch = decodeDigit(row, counters, rowOffset, (@Approx int [][])L_AND_G_PATTERNS);
       result.append((char) Endorsements.endorse('0' + bestMatch % 10));
       for (int i = 0; i < counters.length; i++) {
         rowOffset += counters[i];
