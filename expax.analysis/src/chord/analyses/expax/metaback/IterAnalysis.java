@@ -42,6 +42,9 @@ import chord.util.tuple.object.Pair;
 @Chord(name = "expax-metaback-java", consumes = {"checkIncludedP"})
 public class IterAnalysis extends ParallelAnalysis {
 	private JobDispatcher dispatcher;
+	private int iterations = 0;
+	private double forwardTimeSum = 0.0;
+	private double backwardTimeSum = 0.0;
 	
 	@Override
 	public void init() {
@@ -181,6 +184,7 @@ public class IterAnalysis extends ParallelAnalysis {
 
 	@Override
 	public String apply(String line) {
+		iterations++;
 		Scenario scenario = new Scenario(line,ExpaxJobDispatcher.MAJOR_SEP);
 		ExpAbstraction abs = (ExpAbstraction) ExpAbstractionFactory.singleton.genAbsFromStr(scenario.getIn());
 		String qStrs[] = Utils.split(scenario.getOut(), ExpaxJobDispatcher.MINOR_SEP, true,
@@ -189,19 +193,22 @@ public class IterAnalysis extends ParallelAnalysis {
 		ExpQuery query = (ExpQuery) ExpQueryFactory.singleton.getQueryFromStr(qStrs[0]);
 		ForwardAnalysis forward = new ForwardAnalysis(abs);
 		forward.printApproxSize();
+		double before;
+		before = System.currentTimeMillis();
 		forward.run();
+		forwardTimeSum += System.currentTimeMillis() - before;
 		IWrappedPE<Edge,Edge> errEdge = forward.getErrEdge(query);
 		ExpQueryResult eqr = null;
 		if(errEdge == null){
 			eqr = new ExpQueryResult(query,QueryResult.PROVEN,null);
-			forward.printApproxAfterSize(); // jspark: when it's proven, print the number of approximate quads
+			forward.printApproxAfterSize(iterations, forwardTimeSum, backwardTimeSum); // jspark: when it's proven, print the statistic numbers
 			forward.writeResultFile(); // jspark: write the analysis result into a file so that compiler can read it
 		}else{
-			System.out.println("size of translateCount = " + forward.translateCount);
-			System.out.println("size of totalCount = " + forward.totalCount);
 			BackTraceIterator<Edge,Edge> backIter = forward.getBackTraceIterator(errEdge);
 			MetaBackAnalysis backward = new MetaBackAnalysis(getErrCondition(), backIter, abs);
+			before = System.currentTimeMillis();
 			DNF nc = backward.run();
+			backwardTimeSum += System.currentTimeMillis() - before;
 			assert(!nc.isFalse());
 			eqr = new ExpQueryResult(query,QueryResult.REFINE,nc);
 		}

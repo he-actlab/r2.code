@@ -66,8 +66,7 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 	MyQuadVisitor visitor = new MyQuadVisitor();
 	ExpAbstraction abs;
 	boolean isTimeOut;
-	int translateCount = 0;
-	int totalCount = 0;
+	Set<Quad> totalVisitOpSet = new HashSet<Quad>();
 	
 	public ForwardAnalysis(ExpAbstraction abs){
 		this.abs = abs;
@@ -311,6 +310,8 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 		visitor.inNode = pe.dstNode;
 		visitor.outNode = pe.dstNode;
 		
+		totalVisitOpSet.add(q);
+		
 		// jspark:
 		// even in error state, the forward analysis should visit allocation quads to assign TAGs
     	// when an object (or an array) is created, create a mapping between the NEW quad and allocTag
@@ -325,14 +326,8 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 		}	
 		
 		if(!visitor.outNode.isErr) {//we do not need to anything abour \top
-			double before = System.currentTimeMillis();
 			q.accept(visitor);
-			double elapsed = System.currentTimeMillis() - before;
-			if (elapsed > 100)
-				System.out.println("*** elapsed time for quad(" + q.toString() + ") is " + elapsed);
-			translateCount++;
 		}
-		totalCount++;
 		Operator op = q.getOperator();
 		
 		// jspark: for debug
@@ -414,9 +409,35 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 	 * for debug
 	 * @author jspark
 	 */
-	public void printApproxAfterSize() {
-		System.out.println("*** EXPAX_COUNT - Finished! size of approxStatements AFTER analysis: " + abs.approxStatements.size());
-		System.out.println("*** EXPAX_COUNT - Finished! size of approxStorage AFTER analysis: " + abs.approxStorage.size());
+	public void printApproxAfterSize(int iterations, double forwardTimeSum, double backwardTimeSum) {
+		System.out.println("EXPAX_EXPERIMENT total # of operations analyzed (visited) = " + totalVisitOpSet.size());
+		System.out.println("EXPAX_EXPERIMENT # Safe to Approximate Operations = " + abs.approxStatements.size());
+		System.out.println("EXPAX_EXPERIMENT # Safe to Approximate memeory Locatioons = " + abs.approxStorage.size());
+		System.out.println("EXPAX_EXPERIMENT # approximate operations = " + SharedData.allApproxStatements.size());
+		System.out.println("EXPAX_EXPERIMENT # approximate memory locations = " + SharedData.allApproxStorage.size());
+		System.out.println("EXPAX_EXPERIMENT # iterations = " + iterations);
+		double avgBitFlip = ((double)(SharedData.allApproxStatements.size() - abs.approxStatements.size()) + (double)(SharedData.allApproxStorage.size() - abs.approxStorage.size())) / (double)iterations;
+		System.out.println("EXPAX_EXPERIMENT avg # of bit flips = " + avgBitFlip);
+		System.out.println("EXPAX_EXPERIMENT avg time for each iteration of backward analysis = " + formatTime((backwardTimeSum / (double)iterations)));
+		System.out.println("EXPAX_EXPERIMENT avg time for each iteration of forward analysis = " + formatTime((forwardTimeSum / (double)iterations)));
+		double totalTime = forwardTimeSum + backwardTimeSum;
+		System.out.println("EXPAX_EXPERIMENT Total Time = " + formatTime(totalTime));
+		System.out.println("EXPAX_EXPERIMENT Average time per operation (total time/# operations + memeory locations) = " + formatTime((totalTime / (SharedData.allApproxStatements.size() + SharedData.allApproxStorage.size()))));
+		System.out.println("EXPAX_EXPERIMENT Average time per operation (total time/# total operations analyzed + total memeory locations analyzed) = " + formatTime((totalTime / totalVisitOpSet.size())));
+	}
+	
+	private String formatTime(double time) {
+		int ms = (int)(time % 1000);
+		int totalSeconds = (int)((time - ms) / 1000);
+		int remain;
+		int day = (int)(totalSeconds / 86400);
+		remain = (int)(totalSeconds - day * 86400);
+		int hour = (int)(remain / 3600);
+		remain = (int)(remain - hour * 3600);
+		int minute = (int)(remain / 60);
+		remain = (int)(remain - minute * 60);
+		int second = remain;
+		return String.format("%02d:%02d:%02d:%02d:%03d dd:hh:mm:ss:ms",day,hour,minute,second,ms);
 	}
 	
 	/**

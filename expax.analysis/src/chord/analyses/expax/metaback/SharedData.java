@@ -95,6 +95,9 @@ public class SharedData {
 	static Set<Quad> prevRemovedQuad = new ArraySet<Quad>();  
 	static boolean EXPAX_LOG = false; 
 	
+	// jspark: Experiment - Total # of operations analyzed (visited)
+	
+	
 	static{
 		preciseMethList = new HashSet<String>();
 		preciseMethList.add("precise");
