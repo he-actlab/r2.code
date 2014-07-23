@@ -64,7 +64,7 @@ public class Plane {
 
 				float cond = (k-ye)*yd;
 				//additional accept
-				cond = Accept.accept(cond);
+//				cond = Accept.accept(cond);
 				if(cond<=0) {
 					t=-1;	
 				} else {
@@ -146,7 +146,6 @@ public class Plane {
 	}
 
 	public static void main(String[] args) {
-		Alloc.alloc_TAG2();
 		Plane p = new Plane();	
 		p.init(args);
 	}

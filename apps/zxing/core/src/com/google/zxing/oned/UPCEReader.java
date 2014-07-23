@@ -79,7 +79,7 @@ public final class UPCEReader extends UPCEANReader {
         rowOffset += counters[i];
       }
       //additional accept
-      bestMatch = Accept.accept(bestMatch);
+//      bestMatch = Accept.accept(bestMatch);
       if (bestMatch >= 10) {
         lgPatternFound |= 1 << (5 - x);
       }

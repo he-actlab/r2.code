@@ -45,9 +45,6 @@ public class MonteCarlo
 			double y= R.nextDouble();	
 
 			double sum = x*x + y*y; 
-			
-			// additional accept
-			sum = Accept.accept(sum);
 
 			if (sum <= 1.0)
 				under_curve ++; 

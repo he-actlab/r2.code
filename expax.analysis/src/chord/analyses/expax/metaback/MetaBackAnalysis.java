@@ -1243,8 +1243,11 @@ public class MetaBackAnalysis {
 		}
 
 		@Override
-		public void visitIntIfCmp(Quad obj) { 
+		public void visitIntIfCmp(Quad obj) {
 			oDNF = iDNF;
+			Boolean isApproxIf = SharedData.approxIfConditional.get(obj); 
+			if(isApproxIf != null && isApproxIf == true)
+				return;
         	Operand srcO1 = IntIfCmp.getSrc1(obj);
         	Operand srcO2 = IntIfCmp.getSrc2(obj);
         	int src1Idx = -1;

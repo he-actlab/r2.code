@@ -147,11 +147,11 @@ public class RgbImage {
 				l = rgbImage.sobel(window);	
 				int L = (int)(l);
 				//additional accept
-				L = Accept.accept(L);
+//				L = Accept.accept(L);
 				if (L >= 256)
 					L = 255;
 				//additional accept
-				L = Accept.accept(L);
+//				L = Accept.accept(L);
 				if (L < 0)
 					L = 0;
 				L = Accept.accept(L);

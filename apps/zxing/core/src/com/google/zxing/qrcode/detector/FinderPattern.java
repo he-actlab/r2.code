@@ -64,10 +64,10 @@ public final class FinderPattern extends ResultPoint {
     if (cond) {
       float moduleSizeDiff = ApproxMath.abs(moduleSize - estimatedModuleSize);
       //additional accept
-      moduleSizeDiff = Accept.accept(moduleSizeDiff);
+//      moduleSizeDiff = Accept.accept(moduleSizeDiff);
       float temp = estimatedModuleSize;
       //additional accept
-      temp = Accept.accept(temp);
+//      temp = Accept.accept(temp);
       return moduleSizeDiff <= 1.0f || moduleSizeDiff / temp <= 1.0f;
     }
     return false;

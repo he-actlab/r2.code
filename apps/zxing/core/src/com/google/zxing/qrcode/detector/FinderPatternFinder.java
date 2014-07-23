@@ -252,44 +252,28 @@ public class FinderPatternFinder {
 
     // Start counting up from center
     int i = startI;
-    boolean imageGet;
-    imageGet = image.get(centerJ, i);
     //additional accept
-    imageGet = Accept.accept(imageGet);
-    while (i >= 0 && imageGet) {
+    while (i >= 0 && Accept.accept(image.get(centerJ, i))) {
       stateCount[2]++;
       i--;
-      imageGet = image.get(centerJ, i);
-      //additional accept
-      imageGet = Accept.accept(imageGet);
     }
     
     if (i < 0) {
       return Float.NaN;
     }
-    imageGet = image.get(centerJ, i);
     //additional accept
-    imageGet = Accept.accept(imageGet);
-    while (i >= 0 && !imageGet && stateCount[1] <= maxCount) {
+    while (i >= 0 && !Accept.accept(image.get(centerJ, i)) && stateCount[1] <= maxCount) {
       stateCount[1]++;
       i--;
-      imageGet = image.get(centerJ, i);
-      //additional accept
-      imageGet = Accept.accept(imageGet);
     }
     // If already too many modules in this state or ran off the edge:
     if (i < 0 || stateCount[1] > maxCount) {
       return Float.NaN;
     }
-    imageGet = image.get(centerJ, i);
     //additional accept
-    imageGet = Accept.accept(imageGet);
-    while (i >= 0 && imageGet && stateCount[0] <= maxCount) {
+    while (i >= 0 && Accept.accept(image.get(centerJ, i)) && stateCount[0] <= maxCount) {
       stateCount[0]++;
       i--;
-      imageGet = image.get(centerJ, i);
-      //additional accept
-      imageGet = Accept.accept(imageGet);
     }
     if (stateCount[0] > maxCount) {
       return Float.NaN;
@@ -297,41 +281,26 @@ public class FinderPatternFinder {
 
     // Now also count down from center
     i = startI + 1;
-    imageGet = image.get(centerJ, i);
     //additional accept
-    imageGet = Accept.accept(imageGet);
-    while (i < maxI && imageGet) {
+    while (i < maxI && Accept.accept(image.get(centerJ, i))) {
       stateCount[2]++;
       i++;
-      imageGet = image.get(centerJ, i);
-      //additional accept
-      imageGet = Accept.accept(imageGet);
     }
     if (i == maxI) {
       return Float.NaN;
     }
-    imageGet = image.get(centerJ, i);
     //additional accept
-    imageGet = Accept.accept(imageGet);
-    while (i < maxI && !imageGet && stateCount[3] < maxCount) {
+    while (i < maxI && !Accept.accept(image.get(centerJ, i)) && stateCount[3] < maxCount) {
       stateCount[3]++;
       i++;
-      imageGet = image.get(centerJ, i);
-      //additional accept
-      imageGet = Accept.accept(imageGet);
     }
     if (i == maxI || stateCount[3] >= maxCount) {
       return Float.NaN;
     }
-    imageGet = image.get(centerJ, i);
     //additional accept
-    imageGet = Accept.accept(imageGet);
-    while (i < maxI && imageGet && stateCount[4] < maxCount) {
+    while (i < maxI && Accept.accept(image.get(centerJ, i)) && stateCount[4] < maxCount) {
       stateCount[4]++;
       i++;
-      imageGet = image.get(centerJ, i);
-      //additional accept
-      imageGet = Accept.accept(imageGet);
     }
     if (stateCount[4] >= maxCount) {
       return Float.NaN;
@@ -362,83 +331,52 @@ public class FinderPatternFinder {
     int[] stateCount = getCrossCheckStateCount();
 
     int j = startJ;
-    boolean imageGet;
-    imageGet = image.get(j, centerI);
     //additional accept
-    imageGet = Accept.accept(imageGet);
-    while (j >= 0 && imageGet) {
+    while (j >= 0 && Accept.accept(image.get(j, centerI))) {
       stateCount[2]++;
       j--;
-      imageGet = image.get(j, centerI);
-      //additional accept
-      imageGet = Accept.accept(imageGet);
     }
     if (j < 0) {
       return Float.NaN;
     }
-    imageGet = image.get(j, centerI);
     //additional accept
-    imageGet = Accept.accept(imageGet);
-    while (j >= 0 && !imageGet && stateCount[1] <= maxCount) {
+    while (j >= 0 && !Accept.accept(image.get(j, centerI)) && stateCount[1] <= maxCount) {
       stateCount[1]++;
       j--;
-      imageGet = image.get(j, centerI);
-      //additional accept
-      imageGet = Accept.accept(imageGet);
     }
     if (j < 0 || stateCount[1] > maxCount) {
       return Float.NaN;
     }
-    imageGet = image.get(j, centerI);
     //additional accept
-    imageGet = Accept.accept(imageGet);
-    while (j >= 0 && imageGet && stateCount[0] <= maxCount) {
+    while (j >= 0 && Accept.accept(image.get(j, centerI)) && stateCount[0] <= maxCount) {
       stateCount[0]++;
       j--;
-      imageGet = image.get(j, centerI);
-      //additional accept
-      imageGet = Accept.accept(imageGet);
     }
     if (stateCount[0] > maxCount) {
       return Float.NaN;
     }
 
     j = startJ + 1;
-    imageGet = image.get(j, centerI);
     //additional accept
-    imageGet = Accept.accept(imageGet);
-    while (j < maxJ && imageGet) {
+    while (j < maxJ && Accept.accept(image.get(j, centerI))) {
       stateCount[2]++;
       j++;
-      imageGet = image.get(j, centerI);
-      //additional accept
-      imageGet = Accept.accept(imageGet);
     }
     if (j == maxJ) {
       return Float.NaN;
     }
-    imageGet = image.get(j, centerI);
     //additional accept
-    imageGet = Accept.accept(imageGet);
-    while (j < maxJ && !imageGet && stateCount[3] < maxCount) {
+    while (j < maxJ && !Accept.accept(image.get(j, centerI)) && stateCount[3] < maxCount) {
       stateCount[3]++;
       j++;
-      imageGet = image.get(j, centerI);
-      //additional accept
-      imageGet = Accept.accept(imageGet);
     }
     if (j == maxJ || stateCount[3] >= maxCount) {
       return Float.NaN;
     }
-    imageGet = image.get(j, centerI);
     //additional accept
-    imageGet = Accept.accept(imageGet);
-    while (j < maxJ && imageGet && stateCount[4] < maxCount) {
+    while (j < maxJ && Accept.accept(image.get(j, centerI)) && stateCount[4] < maxCount) {
       stateCount[4]++;
       j++;
-      imageGet = image.get(j, centerI);
-      //additional accept
-      imageGet = Accept.accept(imageGet);
     }
     if (stateCount[4] >= maxCount) {
       return Float.NaN;

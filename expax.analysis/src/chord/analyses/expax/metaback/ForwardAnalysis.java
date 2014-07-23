@@ -2,8 +2,11 @@ package chord.analyses.expax.metaback;
 
 import java.io.File;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.StringTokenizer;
 
@@ -12,6 +15,8 @@ import joeq.Class.jq_Field;
 import joeq.Class.jq_Method;
 import joeq.Class.jq_Type;
 import joeq.Compiler.Quad.BasicBlock;
+import joeq.Compiler.Quad.Dominators;
+import joeq.Compiler.Quad.Dominators.DominatorNode;
 import joeq.Compiler.Quad.Inst;
 import joeq.Compiler.Quad.Operand;
 import joeq.Compiler.Quad.Operand.AConstOperand;
@@ -25,6 +30,7 @@ import joeq.Compiler.Quad.Operator.AStore;
 import joeq.Compiler.Quad.Operator.Binary;
 import joeq.Compiler.Quad.Operator.Getfield;
 import joeq.Compiler.Quad.Operator.Getstatic;
+import joeq.Compiler.Quad.Operator.Goto;
 import joeq.Compiler.Quad.Operator.IntIfCmp;
 import joeq.Compiler.Quad.Operator.Invoke;
 import joeq.Compiler.Quad.Operator.LookupSwitch;
@@ -44,6 +50,8 @@ import joeq.Compiler.Quad.Quad;
 import joeq.Compiler.Quad.QuadVisitor;
 import joeq.Compiler.Quad.RegisterFactory;
 import joeq.Compiler.Quad.RegisterFactory.Register;
+import jwutil.graphs.Navigator;
+import jwutil.math.BitString;
 import chord.analyses.alias.ICICG;
 import chord.program.Loc;
 import chord.project.Config;
@@ -857,8 +865,160 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
         	this.outNode = new AbstractState(taintedGlobals, taintedVars, taintedFs, inNode.taintedRet, inNode.isErr);
         }
         
+        private void generateDominateSets(Dominators dominators, jq_Method method, boolean dom){
+        	
+        	Map<jq_Method,Map<BasicBlock,Set<BasicBlock>>> map = null;
+        	if(dom)
+        		map = SharedData.domMap;
+        	else
+        		map = SharedData.pdomMap;
+        	
+        	List<BasicBlock> allBBs = method.getCFG().reversePostOrder();
+
+        	Map<BasicBlock,Set<BasicBlock>> domMap = new HashMap<BasicBlock,Set<BasicBlock>>();
+
+        	for(BasicBlock outbb : allBBs) {
+	        	Set<BasicBlock> domSet = new ArraySet<BasicBlock>();
+	        	domSet.add(outbb);
+	        	boolean change = true;
+	        	while(change){
+	        		change = false;
+	        		for(BasicBlock bb2 : allBBs) {
+	        			Set<BasicBlock> addSet = new ArraySet<BasicBlock>();
+	        			for(BasicBlock bb3 : domSet) {
+		        			DominatorNode dNode = dominators.getDominatorNode(bb2);
+		        			DominatorNode parent = dNode.getParent();
+		        			if(parent != null) {
+		        				BasicBlock parentBB = parent.getBasicBlock();
+		        				if(parentBB.equals(bb3) && !domSet.contains(bb2)) { 
+		        					addSet.add(bb2);
+		        					change = true;
+		        				}
+		        			}
+	        			}
+	        			domSet.addAll(addSet);
+	        		}
+	        	}
+	        	domMap.put(outbb, domSet);
+        	}
+    		map.put(method, domMap);
+        }
+        
+        private void generateDominateSets(boolean dom, jq_Method method) {
+        	Dominators dominators = new Dominators(dom);
+    		dominators.visitMethod(method);
+    		dominators.computeTree();
+    		generateDominateSets(dominators, method, dom);
+        }
+        
+        private List<BasicBlock> getControlDependentBasicBlocks(jq_Method method, BasicBlock bb) {
+        	List<BasicBlock> ctrlDepdBBs = SharedData.ctrlDependence.get(new Pair<jq_Method,BasicBlock>(method,bb));
+        	if (ctrlDepdBBs == null) {
+        		ctrlDepdBBs = new ArrayList<BasicBlock>();
+	        	Map<BasicBlock,Set<BasicBlock>> domMap = SharedData.domMap.get(method);
+	        	if (domMap == null) {
+	        		generateDominateSets(true, method);
+	        		System.out.println("Generate domMap for " + method.toString());
+	        		domMap = SharedData.domMap.get(method);
+	        	}
+	        	Map<BasicBlock,Set<BasicBlock>> pdomMap = SharedData.pdomMap.get(method);
+	        	if (pdomMap == null) {
+	        		generateDominateSets(false, method);
+	        		System.out.println("Generate pdomMap for " + method.toString());
+	        		pdomMap = SharedData.pdomMap.get(method);
+	        	}
+	        	Set<BasicBlock> successors = new ArraySet<BasicBlock>();
+	        	successors.addAll(bb.getSuccessors());
+	        	Set<List<BasicBlock>> paths = new ArraySet<List<BasicBlock>>();
+	        	Map<BasicBlock,Integer> pathCounter = new HashMap<BasicBlock,Integer>();
+	        	for(BasicBlock bb2 : successors){
+	        		List<BasicBlock> path = new ArrayList<BasicBlock>();
+	        		path.add(bb2);
+	        		paths.add(path);
+	        		pathCounter.put(bb2, 1);
+	        	}
+	        	Set<BasicBlock> handledLast = new HashSet<BasicBlock>();
+	        	while(!paths.isEmpty()) {
+	        		Set<List<BasicBlock>> rmvdPaths = new HashSet<List<BasicBlock>>();
+	        		for (List<BasicBlock> path : paths) {
+	        			BasicBlock last = path.get(path.size()-1);
+	        			if(handledLast.contains(last))
+	        				continue;
+	        			Set<List<BasicBlock>> allPaths = new HashSet<List<BasicBlock>>();
+	        			if(pathCounter.get(last) != last.getPredecessors().size()) {
+	        				rmvdPaths.add(path);
+	        			} else {
+	        				for (List<BasicBlock> path2 : paths) {
+	        					if (path2.get(path2.size()-1).equals(last))
+	        						allPaths.add(path2);
+	        				}
+		        			boolean isCtrlDepd = true;
+		        			for(List<BasicBlock> path2 : allPaths) {
+		        				for (BasicBlock bb2 : path2) {
+		        					if (!pdomMap.get(last).contains(bb2)) {
+		        						rmvdPaths.add(path2);
+		        						isCtrlDepd = false;
+		        						break;
+		        					}
+		        				}
+		        				if(!isCtrlDepd) break;
+		        			}
+		        			if(isCtrlDepd) {
+		        				ctrlDepdBBs.add(last);
+		        			}
+	        			}
+	        			handledLast.add(last);
+	        		}
+	    			paths.removeAll(rmvdPaths);
+	    			rmvdPaths.clear();
+	    			Set<List<BasicBlock>> addPaths = new ArraySet<List<BasicBlock>>();
+	    			for(List<BasicBlock> path2 : paths) {
+	    				BasicBlock last = path2.get(path2.size()-1);
+	    				List<BasicBlock> lastSuccs = last.getSuccessors();
+	    				for(BasicBlock lastSucc : lastSuccs) {
+	    					if(handledLast.contains(lastSucc))
+	    						continue;
+	    					List<BasicBlock> newPath = new ArrayList<BasicBlock>(path2);
+	    					newPath.add(lastSucc);
+	    					addPaths.add(newPath);
+	    					pathCounter.put(lastSucc, lastSucc.getNumberOfPredecessors());
+	    				}
+	    				rmvdPaths.add(path2);
+	    			}
+	    			paths.addAll(addPaths);	
+	    			paths.removeAll(rmvdPaths);
+	        	}
+	        	ctrlDepdBBs.remove(bb);
+	        	SharedData.ctrlDependence.put(new Pair<jq_Method,BasicBlock>(method,bb), ctrlDepdBBs);
+        	} 
+	        return ctrlDepdBBs;
+        }
+        
         /** A compare and branch instruction. */
         public void visitIntIfCmp(Quad obj) {
+        	BasicBlock curBB = obj.getBasicBlock();
+        	jq_Method method = obj.getBasicBlock().getMethod();
+        	if(SharedData.approxIfConditional.get(obj) == null) {
+	        	List<BasicBlock> ctrlDepdBBs = getControlDependentBasicBlocks(method, curBB);
+	        	boolean isPredicatePossible = true;
+	        	for(BasicBlock bb : ctrlDepdBBs) {
+	        		List<Quad> qList = bb.getQuads();
+	        		for(Quad q : qList) {
+	        			if (q.getOperator() instanceof Invoke || q.getOperator() instanceof IntIfCmp || q.getOperator() instanceof Return ) {
+	        				isPredicatePossible = false;
+	        				break;
+	        			}
+	        		}
+	        		if(!isPredicatePossible)
+	        			break;
+	        	}
+	        	if(isPredicatePossible) 
+	        		SharedData.approxIfConditional.put(obj, true);
+	        	else
+	        		SharedData.approxIfConditional.put(obj, false);
+        	}
+        	if(SharedData.approxIfConditional.get(obj))
+        		return;
         	Operand srcO1 = IntIfCmp.getSrc1(obj);
         	Operand srcO2 = IntIfCmp.getSrc2(obj);
         	if(srcO1 instanceof RegisterOperand){

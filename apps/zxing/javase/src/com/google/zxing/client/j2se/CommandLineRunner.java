@@ -308,7 +308,7 @@ public final class CommandLineRunner {
 			for (int x = 0; x < width; x++) {
 				boolean rowGet = row.get(x);
 				//additional accept
-				rowGet = Accept.accept(rowGet);
+//				rowGet = Accept.accept(rowGet);
 				if (rowGet) {
 					pixels[offset + x] = 0xff000000;
 				} else {
@@ -325,7 +325,7 @@ public final class CommandLineRunner {
 				for (int x = 0; x < width; x++) {
 					boolean matrixGet = matrix.get(x, y);
 					//additional accept
-					matrixGet = Accept.accept(matrixGet); 
+//					matrixGet = Accept.accept(matrixGet); 
 					if (matrixGet) {
 						pixels[offset + x] = 0xff000000;
 					} else {

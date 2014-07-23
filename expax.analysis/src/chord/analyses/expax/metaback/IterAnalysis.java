@@ -3,7 +3,6 @@ package chord.analyses.expax.metaback;
 import java.util.HashSet;
 import java.util.StringTokenizer;
 
-import joeq.Class.PrimordialClassLoader;
 import joeq.Class.jq_Array;
 import joeq.Class.jq_Class;
 import joeq.Class.jq_Field;
@@ -17,6 +16,8 @@ import joeq.Compiler.Quad.Quad;
 import chord.analyses.alias.CICGAnalysis;
 import chord.analyses.alias.CIPAAnalysis;
 import chord.analyses.alloc.DomH;
+import chord.analyses.basicblock.DomB;
+import chord.analyses.basicblock.RelPostDomBB;
 import chord.analyses.field.DomF;
 import chord.analyses.parallelizer.JobDispatcher;
 import chord.analyses.parallelizer.Mode;
@@ -60,6 +61,8 @@ public class IterAnalysis extends ParallelAnalysis {
 		ClassicProject.g().runTask(SharedData.domF);
 		SharedData.domH = (DomH) ClassicProject.g().getTrgt("H");
 		ClassicProject.g().runTask(SharedData.domH);
+		SharedData.domB = (DomB) ClassicProject.g().getTrgt("B");
+		ClassicProject.g().runTask(SharedData.domB);
 		
 		Program p = Program.g();
 		SharedData.mainMethod = p.getMainMethod();
@@ -77,6 +80,7 @@ public class IterAnalysis extends ParallelAnalysis {
 		ProgramRel checkIncludedP = (ProgramRel) ClassicProject.g().getTrgt(
 				"checkIncludedP");
 		checkIncludedP.load();
+		
 		SharedData.allApproxStatements = new HashSet<Integer>();
 		SharedData.allApproxStorage = new HashSet<Pair<Integer,Integer>>();
 		String excludeStr = System.getProperty("chord.check.exclude","java.,com.,sun.,sunw.,javax.,launchrer.,org.");

@@ -94,13 +94,13 @@ public class Intersection {
 
 		float absdu0 = ApproxMath.abs(du0);
 		//additional accept
-		absdu0 = Accept.accept(absdu0);
+//		absdu0 = Accept.accept(absdu0);
 		float absdu1 = ApproxMath.abs(du1);
 		//additional accept
-		absdu1 = Accept.accept(absdu1);
+//		absdu1 = Accept.accept(absdu1);
 		float absdu2 = ApproxMath.abs(du2);
 		//additional accept
-		absdu2 = Accept.accept(absdu2);
+//		absdu2 = Accept.accept(absdu2);
 		
 		if (absdu0 < EPSILON)
 			du0 = 0.0f;
@@ -131,13 +131,13 @@ public class Intersection {
 
 		float absdv0 = ApproxMath.abs(dv0);
 		//additional accept
-		absdv0 = Accept.accept(absdv0);
+//		absdv0 = Accept.accept(absdv0);
 		float absdv1 = ApproxMath.abs(dv1);
 		//additional accept
-		absdv1 = Accept.accept(absdv1);
+//		absdv1 = Accept.accept(absdv1);
 		float absdv2 = ApproxMath.abs(dv2);
 		//additional accept
-		absdv2 = Accept.accept(absdv2);
+//		absdv2 = Accept.accept(absdv2);
 		
 		if (absdv0 < EPSILON)
 			dv0 = 0.0f;
@@ -168,7 +168,7 @@ public class Intersection {
 
 		cond = (bb > max);
 		// additional accept
-		cond = Accept.accept(cond);
+//		cond = Accept.accept(cond);
 		if (bb > max) {
 			max = bb;
 			index = 1;
@@ -176,8 +176,8 @@ public class Intersection {
 		
 		cond = (cc > max);
 		// additional accept
-		cond = Accept.accept(cond);
-		if (cc > max) {
+//		cond = Accept.accept(cond);
+		if (cond) {
 			max = cc;
 			vp0 = v0.z;
 			vp1 = v1.z;
@@ -248,7 +248,7 @@ public class Intersection {
 
 		boolean cond = (f[0] > f[1]);
 		// additional accept
-		cond = Accept.accept(cond);
+//		cond = Accept.accept(cond);
 		if (cond) {
 			float c = f[0];
 			f[0] = f[1];
@@ -264,23 +264,23 @@ public class Intersection {
 
 		cond1 = (d0d1 > 0.0f);
 		//additional accept
-		cond1 = Accept.accept(cond1);
+//		cond1 = Accept.accept(cond1);
 		
 		cond2 = (d0d2 > 0.0f);
 		//additional accept
-		cond1 = Accept.accept(cond1);
+//		cond1 = Accept.accept(cond1);
 		
 		cond3 = (d1 * d2 > 0.0f || d0 != 0.0f);
 		//additional accept
-		cond3 = Accept.accept(cond3);
+//		cond3 = Accept.accept(cond3);
 		
 		cond4 = (d1 != 0.0f);
 		//additional accept
-		cond4 = Accept.accept(cond4);
+//		cond4 = Accept.accept(cond4);
 		
 		cond5 = (d2 != 0.0f);
 		//additional accept
-		cond5 = Accept.accept(cond5);
+//		cond5 = Accept.accept(cond5);
 		
 		if (cond1) {
 			abc.x = vv2;
@@ -335,11 +335,11 @@ public class Intersection {
 		
 		cond2 = (a.x > a.z);
 		//additional accept
-		cond2 = Accept.accept(cond2);
+//		cond2 = Accept.accept(cond2);
 		
 		cond3 = (a.z > a.y);
 		//additional accept
-		cond3 = Accept.accept(cond3);
+//		cond3 = Accept.accept(cond3);
 		
 		if (cond1) {
 			if (cond2) {

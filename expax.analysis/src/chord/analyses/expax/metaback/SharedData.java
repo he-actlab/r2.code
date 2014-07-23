@@ -6,19 +6,20 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.StringTokenizer;
 
-import joeq.Class.jq_Class;
 import joeq.Class.jq_Field;
 import joeq.Class.jq_Member;
 import joeq.Class.jq_Method;
+import joeq.Compiler.Quad.BasicBlock;
+import joeq.Compiler.Quad.Dominators;
 import joeq.Compiler.Quad.Inst;
 import joeq.Compiler.Quad.Operand;
 import joeq.Compiler.Quad.Operator;
 import joeq.Compiler.Quad.Operand.TypeOperand;
-import joeq.Compiler.Quad.Operator.ALength;
 import joeq.Compiler.Quad.Operator.ALoad;
 import joeq.Compiler.Quad.Operator.AStore;
 import joeq.Compiler.Quad.Operator.Binary;
@@ -33,6 +34,8 @@ import joeq.Compiler.Quad.Quad;
 import chord.analyses.alias.CIPAAnalysis;
 import chord.analyses.alias.ICICG;
 import chord.analyses.alloc.DomH;
+import chord.analyses.basicblock.DomB;
+import chord.analyses.basicblock.RelPostDomBB;
 import chord.analyses.field.DomF;
 import chord.analyses.point.DomP;
 import chord.project.Config;
@@ -45,6 +48,7 @@ public class SharedData {
 	static DomU domU;
 	static DomH domH;
 	static DomF domF;
+	static DomB domB;
 	static ICICG cicg;
 	static Inst exitMain;
 	static CIPAAnalysis cipa;
@@ -74,6 +78,16 @@ public class SharedData {
 	static Map<Pair<Integer,Integer>,Pair<Quad,jq_Field>> idxFieldMap = new HashMap<Pair<Integer,Integer>,Pair<Quad,jq_Field>>();
 	// jspark: approx parameters' set
 	static Map<jq_Method,Set<Integer>> approxParams = new HashMap<jq_Method,Set<Integer>>();
+	// jspark: post dominator map
+	static Map<jq_Method,Dominators> postDominatorsMap = new HashMap<jq_Method,Dominators>();
+	// jspark: dominator map
+	static Map<jq_Method,Map<BasicBlock,Set<BasicBlock>>> domMap = new HashMap<jq_Method,Map<BasicBlock,Set<BasicBlock>>>();
+	// jspark: postdominator map
+	static Map<jq_Method,Map<BasicBlock,Set<BasicBlock>>> pdomMap = new HashMap<jq_Method,Map<BasicBlock,Set<BasicBlock>>>();
+	// jspark: control dependence
+	static Map<Pair<jq_Method,BasicBlock>, List<BasicBlock>> ctrlDependence = new HashMap<Pair<jq_Method,BasicBlock>, List<BasicBlock>>();
+	// jspark: approximable if-conditionals set 
+	static Map<Quad, Boolean> approxIfConditional = new HashMap<Quad, Boolean>();
 	
 	// jspark: DEBUG - stores the mapping between a quad and an index corresponding to it
 	static Map<Integer,Quad> indexQuadMap = new HashMap<Integer,Quad>();

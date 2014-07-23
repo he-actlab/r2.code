@@ -41,9 +41,6 @@ public class LU
 			for (int i=j+1; i<M; i++)
 			{
 				double ab = ApproxMath.abs(A[i][j]);
-				// additional accept
-				t = Accept.accept(t);
-				ab = Accept.accept(ab);
 				if (ab > t)
 				{
 					jp = i;
@@ -115,14 +112,12 @@ public class LU
 			double sum = b[ip];
 
 			b[ip] = b[i];
-			// additional accept
-			sum = Accept.accept(sum);
 			if (ii==0)
 				for (int j=ii; j<i; j++) {
 					sum -= LU[i][j] * b[j];
 				}
 			else 
-				if ((sum == 0.0))
+				if (sum == 0.0)
 					ii = i;
 			b[i] = sum;
 		}

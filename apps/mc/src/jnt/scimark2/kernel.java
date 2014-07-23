@@ -15,8 +15,6 @@ public class kernel
 		out = Accept.accept(out);
 
 		System.out.println("MonteCarlo out: " + (out));
-
-		out = Precise.precise(out);
 		
 		return 0.0;
 	}

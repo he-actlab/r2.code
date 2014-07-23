@@ -140,7 +140,7 @@ public class GlobalHistogramBinarizer extends Binarizer {
       luminances = new byte[luminanceSize];
     }
     if (buckets == null) {
-      Alloc.alloc_TAG5();
+//      Alloc.alloc_TAG5();
       buckets = new int[LUMINANCE_BUCKETS];
     } else {
       for (int x = 0; x < LUMINANCE_BUCKETS; x++) {
@@ -157,15 +157,15 @@ public class GlobalHistogramBinarizer extends Binarizer {
     int firstPeakSize = 0;
     for (int x = 0; x < numBuckets; x++) {
       // additional accept
-      buckets = Accept.accept_all_FIELD1_TAG5(buckets);
+//      buckets = Accept.accept_all_FIELD1_TAG5(buckets);
       // additional accept
-      firstPeakSize = Accept.accept(firstPeakSize);
+//      firstPeakSize = Accept.accept(firstPeakSize);
       if (buckets[x] > firstPeakSize) {
         firstPeak = x;
         firstPeakSize = buckets[x];
       }
       // additional accept
-      maxBucketCount = Accept.accept(maxBucketCount);
+//      maxBucketCount = Accept.accept(maxBucketCount);
       if (buckets[x] > maxBucketCount) {
         maxBucketCount = buckets[x];
       }
@@ -179,9 +179,9 @@ public class GlobalHistogramBinarizer extends Binarizer {
       // Encourage more distant second peaks by multiplying by square of distance.
       int score = buckets[x] * distanceToBiggest * distanceToBiggest;
       // additional accept 
-      score = Accept.accept(score);
+//      score = Accept.accept(score);
       // additional accept
-      secondPeakScore = Accept.accept(secondPeakScore);
+//      secondPeakScore = Accept.accept(secondPeakScore);
       if (score > secondPeakScore) {
         secondPeak = x;
         secondPeakScore = score;
@@ -210,9 +210,9 @@ public class GlobalHistogramBinarizer extends Binarizer {
       int fromFirst = x - firstPeak;
       int score = fromFirst * fromFirst * (secondPeak - x) * (maxBucketCount - buckets[x]);
       // additional accept
-      score = Accept.accept(score);
+//      score = Accept.accept(score);
       // additional accept
-      bestValleyScore = Accept.accept(bestValleyScore);
+//      bestValleyScore = Accept.accept(bestValleyScore);
       if (score > bestValleyScore) {
         bestValley = x;
         bestValleyScore = score;

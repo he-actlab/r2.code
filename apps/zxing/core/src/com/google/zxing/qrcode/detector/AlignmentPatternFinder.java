@@ -111,10 +111,8 @@ final class AlignmentPatternFinder {
       }
       int currentState = 0;
       while (j < maxJ) {
-    	boolean imageGet = image.get(j, i);
     	//additional accept
-    	imageGet = Accept.accept(imageGet);
-        if (imageGet) {
+        if (Accept.accept(image.get(j, i))) {
           // Black pixel
           if (currentState == 1) { // Counting black pixels
             stateCount[currentState]++;
@@ -208,59 +206,37 @@ final class AlignmentPatternFinder {
 
     // Start counting up from center
     int i = startI;
-    boolean imageGet;
-    imageGet = image.get(centerJ, i);
     //additional accept
-    imageGet = Accept.accept(imageGet);
-    while (i >= 0 && imageGet && stateCount[1] <= maxCount) {
+    while (i >= 0 && Accept.accept(image.get(centerJ, i)) && stateCount[1] <= maxCount) {
       stateCount[1]++;
       i--;
-      imageGet = image.get(centerJ, i);
-      //additional accept
-      imageGet = Accept.accept(imageGet);
     }
     // If already too many modules in this state or ran off the edge:
     if (i < 0 || stateCount[1] > maxCount) {
       return Float.NaN;
     }
-    imageGet = image.get(centerJ, i);
     //additional accept
-    imageGet = Accept.accept(imageGet);
-    while (i >= 0 && !imageGet && stateCount[0] <= maxCount) {
+    while (i >= 0 && !Accept.accept(image.get(centerJ, i)) && stateCount[0] <= maxCount) {
       stateCount[0]++;
       i--;
-      imageGet = image.get(centerJ, i);
-      //additional accept
-      imageGet = Accept.accept(imageGet);
     }
     if (stateCount[0] > maxCount) {
       return Float.NaN;
     }
-
     // Now also count down from center
     i = startI + 1;
-    imageGet = image.get(centerJ, i);
     //additional accept
-    imageGet = Accept.accept(imageGet);
-    while (i < maxI && imageGet && stateCount[1] <= maxCount) {
+    while (i < maxI && Accept.accept(image.get(centerJ, i)) && stateCount[1] <= maxCount) {
       stateCount[1]++;
       i++;
-      imageGet = image.get(centerJ, i);
-      //additional accept
-      imageGet = Accept.accept(imageGet);
     }
     if (i == maxI || stateCount[1] > maxCount) {
       return Float.NaN;
     }
-    imageGet = !image.get(centerJ, i);
     //additional accept
-    imageGet = Accept.accept(imageGet);
-    while (i < maxI && imageGet && stateCount[2] <= maxCount) {
+    while (i < maxI && !Accept.accept(image.get(centerJ, i)) && stateCount[2] <= maxCount) {
       stateCount[2]++;
       i++;
-      imageGet = !image.get(centerJ, i);
-      //additional accept
-      imageGet = Accept.accept(imageGet);
     }
     if (stateCount[2] > maxCount) {
       return Float.NaN;

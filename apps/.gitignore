@@ -1,2 +1,7 @@
 /bin
 /eclipse-bin
+*bc-offset.info
+analysis.result
+analysis.flag
+results.json
+enerjstats.json

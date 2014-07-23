@@ -141,7 +141,7 @@ final class BitMatrixParser {
   private int copyBit(int i, int j, int versionBits) {
 	boolean b = bitMatrix.get(i, j);
 	//additional accept
-	b = Accept.accept(b);
+//	b = Accept.accept(b);
     return b ? (versionBits << 1) | 0x1 : versionBits << 1;
   }
 
