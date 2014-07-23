@@ -66,6 +66,8 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 	MyQuadVisitor visitor = new MyQuadVisitor();
 	ExpAbstraction abs;
 	boolean isTimeOut;
+	int translateCount = 0;
+	int totalCount = 0;
 	
 	public ForwardAnalysis(ExpAbstraction abs){
 		this.abs = abs;
@@ -322,8 +324,15 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
         	}
 		}	
 		
-		if(!visitor.outNode.isErr) //we do not need to anything abour \top
-			q.accept(visitor); 
+		if(!visitor.outNode.isErr) {//we do not need to anything abour \top
+			double before = System.currentTimeMillis();
+			q.accept(visitor);
+			double elapsed = System.currentTimeMillis() - before;
+			if (elapsed > 100)
+				System.out.println("*** elapsed time for quad(" + q.toString() + ") is " + elapsed);
+			translateCount++;
+		}
+		totalCount++;
 		Operator op = q.getOperator();
 		
 		// jspark: for debug
@@ -918,13 +927,11 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 	        	Map<BasicBlock,Set<BasicBlock>> domMap = SharedData.domMap.get(method);
 	        	if (domMap == null) {
 	        		generateDominateSets(true, method);
-	        		System.out.println("Generate domMap for " + method.toString());
 	        		domMap = SharedData.domMap.get(method);
 	        	}
 	        	Map<BasicBlock,Set<BasicBlock>> pdomMap = SharedData.pdomMap.get(method);
 	        	if (pdomMap == null) {
 	        		generateDominateSets(false, method);
-	        		System.out.println("Generate pdomMap for " + method.toString());
 	        		pdomMap = SharedData.pdomMap.get(method);
 	        	}
 	        	Set<BasicBlock> successors = new ArraySet<BasicBlock>();

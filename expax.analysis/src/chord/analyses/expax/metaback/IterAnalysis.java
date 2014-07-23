@@ -197,6 +197,8 @@ public class IterAnalysis extends ParallelAnalysis {
 			forward.printApproxAfterSize(); // jspark: when it's proven, print the number of approximate quads
 			forward.writeResultFile(); // jspark: write the analysis result into a file so that compiler can read it
 		}else{
+			System.out.println("size of translateCount = " + forward.translateCount);
+			System.out.println("size of totalCount = " + forward.totalCount);
 			BackTraceIterator<Edge,Edge> backIter = forward.getBackTraceIterator(errEdge);
 			MetaBackAnalysis backward = new MetaBackAnalysis(getErrCondition(), backIter, abs);
 			DNF nc = backward.run();
