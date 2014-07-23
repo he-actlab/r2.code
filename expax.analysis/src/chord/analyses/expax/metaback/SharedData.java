@@ -397,4 +397,18 @@ public class SharedData {
 			e.printStackTrace();
 		}		
 	}
+	
+	public static String formatTime(double time) {
+		int ms = (int)(time % 1000);
+		int totalSeconds = (int)((time - ms) / 1000);
+		int remain;
+		int day = (int)(totalSeconds / 86400);
+		remain = (int)(totalSeconds - day * 86400);
+		int hour = (int)(remain / 3600);
+		remain = (int)(remain - hour * 3600);
+		int minute = (int)(remain / 60);
+		remain = (int)(remain - minute * 60);
+		int second = remain;
+		return String.format("%02d:%02d:%02d:%02d:%03d dd:hh:mm:ss:ms",day,hour,minute,second,ms);
+	}
 }

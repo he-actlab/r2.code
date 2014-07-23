@@ -419,26 +419,12 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 		System.out.println("EXPAX_EXPERIMENT # iterations = " + iterations);
 		double avgBitFlip = ((double)(SharedData.allApproxStatements.size() - abs.approxStatements.size()) + (double)(SharedData.allApproxStorage.size() - abs.approxStorage.size())) / (double)iterations;
 		System.out.println("EXPAX_EXPERIMENT avg # of bit flips = " + avgBitFlip);
-		System.out.println("EXPAX_EXPERIMENT avg time for each iteration of backward analysis = " + formatTime((backwardTimeSum / (double)iterations)));
-		System.out.println("EXPAX_EXPERIMENT avg time for each iteration of forward analysis = " + formatTime((forwardTimeSum / (double)iterations)));
+		System.out.println("EXPAX_EXPERIMENT avg time for each iteration of backward analysis = " + SharedData.formatTime((backwardTimeSum / (double)iterations)));
+		System.out.println("EXPAX_EXPERIMENT avg time for each iteration of forward analysis = " + SharedData.formatTime((forwardTimeSum / (double)iterations)));
 		double totalTime = forwardTimeSum + backwardTimeSum;
-		System.out.println("EXPAX_EXPERIMENT Total Time = " + formatTime(totalTime));
-		System.out.println("EXPAX_EXPERIMENT Average time per operation (total time/# operations + memeory locations) = " + formatTime((totalTime / (SharedData.allApproxStatements.size() + SharedData.allApproxStorage.size()))));
-		System.out.println("EXPAX_EXPERIMENT Average time per operation (total time/# total operations analyzed + total memeory locations analyzed) = " + formatTime((totalTime / totalVisitOpSet.size())));
-	}
-	
-	private String formatTime(double time) {
-		int ms = (int)(time % 1000);
-		int totalSeconds = (int)((time - ms) / 1000);
-		int remain;
-		int day = (int)(totalSeconds / 86400);
-		remain = (int)(totalSeconds - day * 86400);
-		int hour = (int)(remain / 3600);
-		remain = (int)(remain - hour * 3600);
-		int minute = (int)(remain / 60);
-		remain = (int)(remain - minute * 60);
-		int second = remain;
-		return String.format("%02d:%02d:%02d:%02d:%03d dd:hh:mm:ss:ms",day,hour,minute,second,ms);
+		System.out.println("EXPAX_EXPERIMENT Total Time = " + SharedData.formatTime(totalTime));
+		System.out.println("EXPAX_EXPERIMENT Average time per operation (total time/# operations + memeory locations) = " + SharedData.formatTime((totalTime / (SharedData.allApproxStatements.size() + SharedData.allApproxStorage.size()))));
+		System.out.println("EXPAX_EXPERIMENT Average time per operation (total time/# total operations analyzed + total memeory locations analyzed) = " + SharedData.formatTime((totalTime / totalVisitOpSet.size())));
 	}
 	
 	/**
