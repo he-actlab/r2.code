@@ -189,7 +189,7 @@ final class BitMatrixParser {
             currentByte <<= 1;
             boolean b = bitMatrix.get(j - col, i);
             //additional accept
-            b = accept(b);
+//            b = Accept.accept(b);
             if (b) {
               currentByte |= 1;
             }
