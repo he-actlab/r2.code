@@ -27,7 +27,8 @@ public class ExpAbstractionFactory implements AbstractionFactory {
 		if(dnf.isFalse())
 			throw new RuntimeException();
 		Clause c = dnf.getClauses().first();
-		for(Map.Entry<Variable, Domain> predicate : c.getLiterals().entrySet())
+		int removed = 0;
+		for(Map.Entry<Variable, Domain> predicate : c.getLiterals().entrySet()) {
 			if(predicate.getKey() instanceof OVariable){
 				OVariable ov = (OVariable)predicate.getKey();
 				if(BoolDomain.F.equals(predicate.getValue())) {
@@ -37,6 +38,7 @@ public class ExpAbstractionFactory implements AbstractionFactory {
 						if (!SharedData.prevRemovedQuad.contains(q)) {
 							System.out.println("*** EXPAX_LOG: REMOVED QUAD (" + SharedData.indexQuadMap.get(new Integer(ov.getIdx())).toString() + ")");
 							SharedData.prevRemovedQuad.add(q);
+							removed++;
 						}
 					}
 					approxQ.remove(ov.getIdx());
@@ -49,6 +51,9 @@ public class ExpAbstractionFactory implements AbstractionFactory {
 			}
 			else
 				throw new RuntimeException();
+		}
+		System.out.println("EXPAX_EXPERIMENT # of bit-flips = " + removed);
+		
 		return new ExpAbstraction(approxQ, approxS);
 	}
 

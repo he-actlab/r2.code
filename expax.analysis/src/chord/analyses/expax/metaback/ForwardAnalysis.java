@@ -78,20 +78,21 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 		Timer timer = new Timer("forward-timer");
 		timer.init();
 		try{
-		System.out.println("Approximated operations: ");
-		for(Integer i : abs.approxStatements){
-			Inst inst = SharedData.domP.get(i);
-			System.out.println(inst.toVerboseStr());
-		}
-		System.out.println("Approximated storage: ");
-		for(Pair<Integer,Integer> pair : abs.approxStorage) {
-			Pair<Quad,jq_Field> qj = SharedData.idxFieldMap.get(pair);
-			if(qj.val1 == null)
-				System.out.println("h(" + qj.val0.toString() + "," + pair.val0 + ") f(ARRAY,-1)");
-			else
-				System.out.println("h(" + qj.val0.toString() + "," + pair.val0 + ") f(" + qj.val1.toString() + "," + pair.val1 + ")");
-		}
-		runPass();
+			System.out.println("EXPAX_EXPERIMENT # of safe-to-approximate operations = " + (abs.approxStatements.size() + abs.approxStorage.size()));
+			System.out.println("Approximated operations: ");
+			for(Integer i : abs.approxStatements){
+				Inst inst = SharedData.domP.get(i);
+				System.out.println(inst.toVerboseStr());
+			}
+			System.out.println("Approximated storage: ");
+			for(Pair<Integer,Integer> pair : abs.approxStorage) {
+				Pair<Quad,jq_Field> qj = SharedData.idxFieldMap.get(pair);
+				if(qj.val1 == null)
+					System.out.println("h(" + qj.val0.toString() + "," + pair.val0 + ") f(ARRAY,-1)");
+				else
+					System.out.println("h(" + qj.val0.toString() + "," + pair.val0 + ") f(" + qj.val1.toString() + "," + pair.val1 + ")");
+			}
+			runPass();
 		}
 		catch(TimeoutException ex){
 			isTimeOut = true;

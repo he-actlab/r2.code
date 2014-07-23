@@ -193,10 +193,11 @@ public class IterAnalysis extends ParallelAnalysis {
 		ExpQuery query = (ExpQuery) ExpQueryFactory.singleton.getQueryFromStr(qStrs[0]);
 		ForwardAnalysis forward = new ForwardAnalysis(abs);
 		forward.printApproxSize();
-		double before;
+		double before, forwardTime, backwardTime;
 		before = System.currentTimeMillis();
 		forward.run();
-		forwardTimeSum += System.currentTimeMillis() - before;
+		forwardTime = System.currentTimeMillis() - before;
+		forwardTimeSum += forwardTime;
 		IWrappedPE<Edge,Edge> errEdge = forward.getErrEdge(query);
 		ExpQueryResult eqr = null;
 		if(errEdge == null){
@@ -208,9 +209,13 @@ public class IterAnalysis extends ParallelAnalysis {
 			MetaBackAnalysis backward = new MetaBackAnalysis(getErrCondition(), backIter, abs);
 			before = System.currentTimeMillis();
 			DNF nc = backward.run();
-			backwardTimeSum += System.currentTimeMillis() - before;
+			backwardTime = System.currentTimeMillis() - before;
+			backwardTimeSum += backwardTime;
 			assert(!nc.isFalse());
 			eqr = new ExpQueryResult(query,QueryResult.REFINE,nc);
+			System.out.println("EXPAX_EXPERIMENT time for forward analysis = " + forwardTime);
+			System.out.println("EXPAX_EXPERIMENT time for backward analysis = " + backwardTime);
+			System.out.println("EXPAX_EXPERIMENT total time for iteration#" + iterations + " = " + (forwardTime + backwardTime));
 		}
 		scenario.setOut(eqr.encode());
 		scenario.setType(AbstractJobDispatcher.RESULT);
