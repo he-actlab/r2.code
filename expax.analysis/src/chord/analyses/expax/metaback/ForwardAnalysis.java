@@ -78,20 +78,36 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 		Timer timer = new Timer("forward-timer");
 		timer.init();
 		try{
+			Set<Quad> curOpSet = new ArraySet<Quad>();
+			Set<Quad> curStSet = new ArraySet<Quad>();
 			System.out.println("EXPAX_EXPERIMENT # of safe-to-approximate operations = " + (abs.approxStatements.size() + abs.approxStorage.size()));
 			System.out.println("Approximated operations: ");
 			for(Integer i : abs.approxStatements){
 				Inst inst = SharedData.domP.get(i);
+				curOpSet.add((Quad)inst);
 				System.out.println(inst.toVerboseStr());
 			}
 			System.out.println("Approximated storage: ");
 			for(Pair<Integer,Integer> pair : abs.approxStorage) {
 				Pair<Quad,jq_Field> qj = SharedData.idxFieldMap.get(pair);
+				curStSet.add(qj.val0);
 				if(qj.val1 == null)
 					System.out.println("h(" + qj.val0.toString() + "," + pair.val0 + ") f(ARRAY,-1)");
 				else
 					System.out.println("h(" + qj.val0.toString() + "," + pair.val0 + ") f(" + qj.val1.toString() + "," + pair.val1 + ")");
 			}
+			SharedData.previousAllApproxOpSet.removeAll(curOpSet);
+			for(Quad q : SharedData.previousAllApproxOpSet) {
+				System.out.println("ZXING_DEBUG Removed quad = " + q.toVerboseStr());
+			}	
+			SharedData.previousAllApproxStorageSet.removeAll(curStSet);
+			for(Quad q : SharedData.previousAllApproxStorageSet) {
+				System.out.println("ZXING_DEBUG Removed quad = " + q.toVerboseStr());
+			}
+			SharedData.previousAllApproxOpSet.clear();
+			SharedData.previousAllApproxStorageSet.clear();
+			SharedData.previousAllApproxOpSet.addAll(curOpSet);
+			SharedData.previousAllApproxStorageSet.addAll(curStSet);
 			runPass();
 		}
 		catch(TimeoutException ex){
@@ -189,6 +205,7 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 				Register reg = args.get(i).getRegister();
 				Integer ridx = SharedData.domU.indexOf(reg);
 				if(oldtvs.contains(ridx)){
+					System.out.println("ZXING_DEBUG Go in Error state[getInitState(precisemethod)]: " + invoke.toVerboseStr());
 					return this.getErrState();
 				}
 			}
@@ -203,6 +220,7 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 	    		if (oldtgs.contains(gidx)) {
 					if(SharedData.EXPAX_LOG)
 						System.out.println("*** EXPAX_LOG: [Forward] precise_all - ERROR! global (" + gidx + ") quad(" + invoke.toString() + ")");
+					System.out.println("ZXING_DEBUG Go in Error state[getInitState(preciseall)]: " + invoke.toVerboseStr());
 					return this.getErrState();	
 	    		}
 	    	} else if (args.length() > 0) { // arrays or object field
@@ -223,6 +241,7 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 						if (oldtfs.contains(hf)){
 							if(SharedData.EXPAX_LOG)
 								System.out.println("*** EXPAX_LOG: [Forward] precise_all - ERROR! array or object.field (" + hf.toString() + ") quad(" + invoke.toString() + ")");
+							System.out.println("ZXING_DEBUG Go in Error state[getInitState(preciseall)]: " + invoke.toVerboseStr());
 							return this.getErrState();
 						}
 					}
@@ -412,10 +431,10 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 	 */
 	public void printApproxAfterSize(int iterations, double forwardTimeSum, double backwardTimeSum) {
 		System.out.println("EXPAX_EXPERIMENT total # of operations analyzed (visited) = " + totalVisitOpSet.size());
-		System.out.println("EXPAX_EXPERIMENT # Safe to Approximate Operations = " + abs.approxStatements.size());
-		System.out.println("EXPAX_EXPERIMENT # Safe to Approximate memeory Locatioons = " + abs.approxStorage.size());
 		System.out.println("EXPAX_EXPERIMENT # approximate operations = " + SharedData.allApproxStatements.size());
 		System.out.println("EXPAX_EXPERIMENT # approximate memory locations = " + SharedData.allApproxStorage.size());
+		System.out.println("EXPAX_EXPERIMENT # Safe to Approximate Operations = " + abs.approxStatements.size());
+		System.out.println("EXPAX_EXPERIMENT # Safe to Approximate memeory Locatioons = " + abs.approxStorage.size());
 		System.out.println("EXPAX_EXPERIMENT # iterations = " + iterations);
 		double avgBitFlip = ((double)(SharedData.allApproxStatements.size() - abs.approxStatements.size()) + (double)(SharedData.allApproxStorage.size() - abs.approxStorage.size())) / (double)iterations;
 		System.out.println("EXPAX_EXPERIMENT avg # of bit flips = " + avgBitFlip);
@@ -740,6 +759,7 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 	        	Register idxR = idxRO.getRegister();
 	        	int idxIndx = SharedData.domU.indexOf(idxR);
 	    		if(inNode.taintedVars.contains(idxIndx)){
+	    			System.out.println("ZXING_DEBUG Go in Error state[visitALoad]: " + obj.toVerboseStr());
 	    			outNode = getErrState();
 	    			return;
 	    		}
@@ -786,6 +806,7 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 	        	Register idxR = idxRO.getRegister();
 	        	int idxIndx = SharedData.domU.indexOf(idxR);
 	    		if(inNode.taintedVars.contains(idxIndx)){
+	    			System.out.println("ZXING_DEBUG Go in Error state[visitAStore]: " + obj.toVerboseStr());
 	    			outNode = getErrState();
 	    			return;
 	    		}
@@ -1019,7 +1040,7 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 	        	for(BasicBlock bb : ctrlDepdBBs) {
 	        		List<Quad> qList = bb.getQuads();
 	        		for(Quad q : qList) {
-	        			if (q.getOperator() instanceof Invoke || q.getOperator() instanceof IntIfCmp || q.getOperator() instanceof Return ) {
+	        			if (q.getOperator() instanceof Invoke || q.getOperator() instanceof IntIfCmp || q.getOperator() instanceof Return || q.getOperator() instanceof Goto) {
 	        				isPredicatePossible = false;
 	        				break;
 	        			}
@@ -1027,10 +1048,16 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 	        		if(!isPredicatePossible)
 	        			break;
 	        	}
-	        	if(isPredicatePossible) 
+	        	if(isPredicatePossible) { 
 	        		SharedData.approxIfConditional.put(obj, true);
+	        		System.out.println("If-conversion: " + obj.toVerboseStr());
+		        	for(BasicBlock bb : ctrlDepdBBs) {
+		        		System.out.println("bb = " + bb.toString());
+		        	}
+	        	}
 	        	else
 	        		SharedData.approxIfConditional.put(obj, false);
+	        	
         	}
         	if(SharedData.approxIfConditional.get(obj))
         		return;
@@ -1040,6 +1067,7 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
         		Register srcR1 = ((RegisterOperand) srcO1).getRegister();
         		int src1Indx = SharedData.domU.indexOf(srcR1);
         		if(inNode.taintedVars.contains(src1Indx)){
+        			System.out.println("ZXING_DEBUG Go in Error state[visitIntIfCmp]: " + obj.toVerboseStr());
         			outNode = getErrState();
         			return;
         		}
@@ -1048,6 +1076,7 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
         		Register srcR2 = ((RegisterOperand) srcO2).getRegister();
         		int src2Indx = SharedData.domU.indexOf(srcR2);
         		if(inNode.taintedVars.contains(src2Indx)){
+        			System.out.println("ZXING_DEBUG Go in Error state[visitIntIfCmp]: " + obj.toVerboseStr());
         			outNode = getErrState();
         			return;
         		}
@@ -1061,6 +1090,7 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
         		Register srcR = ((RegisterOperand) src).getRegister();
         		int srcIndx = SharedData.domU.indexOf(srcR);
         		if (inNode.taintedVars.contains(srcIndx)) {
+        			System.out.println("ZXING_DEBUG Go in Error state[visitLookupSwitch]: " + obj.toVerboseStr());
         			outNode = getErrState();
         			return;
         		}
@@ -1143,6 +1173,7 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
         		Register srcR = ((RegisterOperand) src).getRegister();
         		int srcIndx = SharedData.domU.indexOf(srcR);
         		if(inNode.taintedVars.contains(srcIndx)){
+        			System.out.println("ZXING_DEBUG Go in Error state[visitTableSwitch]: " + obj.toVerboseStr());
         			outNode = getErrState();
         			return;
         		}
@@ -1202,6 +1233,7 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 	    		Register srcR = ((RegisterOperand) srcO).getRegister();
 	    		int srcIndx = SharedData.domU.indexOf(srcR);
 	    		if(inNode.taintedVars.contains(srcIndx)){
+	    			System.out.println("ZXING_DEBUG Go in Error state[visitNewArray]: " + obj.toVerboseStr());
 	    			outNode = getErrState();
 	    			return;
 	    		}
@@ -1231,6 +1263,7 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
         		Register srcR1 = ((RegisterOperand) srcO1).getRegister();
         		int src1Indx = SharedData.domU.indexOf(srcR1);
         		if(inNode.taintedVars.contains(src1Indx)){
+        			System.out.println("ZXING_DEBUG Go in Error state[visitMultiNewArray]: " + obj.toVerboseStr());
         			outNode = getErrState();
         			return;
         		}
@@ -1239,6 +1272,7 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
         		Register srcR2 = ((RegisterOperand) srcO2).getRegister();
         		int src2Indx = SharedData.domU.indexOf(srcR2);
         		if(inNode.taintedVars.contains(src2Indx)){
+        			System.out.println("ZXING_DEBUG Go in Error state[visitMultiNewArray]: " + obj.toVerboseStr());
         			outNode = getErrState();
         			return;
         		}
@@ -1247,6 +1281,7 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
         		Register srcR3 = ((RegisterOperand) srcO3).getRegister();
         		int src3Indx = SharedData.domU.indexOf(srcR3);
         		if(inNode.taintedVars.contains(src3Indx)){
+        			System.out.println("ZXING_DEBUG Go in Error state[visitMultiNewArray]: " + obj.toVerboseStr());
         			outNode = getErrState();
         			return;
         		}

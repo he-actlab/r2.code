@@ -59,7 +59,7 @@ my %local_options_map = (
             "-Dchord.rhs.merge=pjoin",
             "-Dchord.rhs.trace=shortest",
             "-Dchord.run.analyses=cipa-0cfa-dlog,expax-metaback-java",
-						"-Dchord.scope.exclude=com.sun.,sun.",
+						"-Dchord.scope.exclude=com.sun.,com.oracle.,sun.",
 #				    "-Dchord.check.exclude=java.,com.,sun.,sunw.,javax.,launcher.,org.",				# set at runpl.sh 
 #					  "-Dchord.check.exclude=java.,com.sun.,sun.,sunw.,javax.,launcher.,org.", 		# set at runpl.sh
         ],

@@ -36,7 +36,6 @@ public class ExpAbstractionFactory implements AbstractionFactory {
 					Quad q = SharedData.indexQuadMap.get(ov.getIdx()); 
 					if (q != null) {
 						if (!SharedData.prevRemovedQuad.contains(q)) {
-							System.out.println("*** EXPAX_LOG: REMOVED QUAD (" + SharedData.indexQuadMap.get(new Integer(ov.getIdx())).toString() + ")");
 							SharedData.prevRemovedQuad.add(q);
 							removed++;
 						}

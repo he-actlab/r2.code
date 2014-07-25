@@ -93,6 +93,8 @@ public class SharedData {
 	static Map<Integer,Quad> indexQuadMap = new HashMap<Integer,Quad>();
 	// jspark: DEBUG - stores a list of quads that have already removed from approximate operation list
 	static Set<Quad> prevRemovedQuad = new ArraySet<Quad>();  
+	static Set<Quad> previousAllApproxOpSet = new ArraySet<Quad>();
+	static Set<Quad> previousAllApproxStorageSet = new ArraySet<Quad>();
 	static boolean EXPAX_LOG = false; 
 	
 	// jspark: Experiment - Total # of operations analyzed (visited)
