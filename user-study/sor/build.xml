@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="sor" default="build">
+
+    <!-- JSR308 support -->
+    <property environment="env" />
+    <property name="jsr308.dir" value="${env.JSR308}" />
+    <property name="jsr308.bin" value="${env.JSR308}/checkers/binary" />
+    <property name="jsr308.jar" value="${jsr308.bin}/jsr308-all.jar" />
+    <presetdef name="jsr308.javac">
+        <javac fork="yes">
+            <compilerarg line="-J-Xbootclasspath/p:${jsr308.jar}" />
+        </javac>
+    </presetdef>
+
+    <!-- EnerJ checker -->
+    <property name="enerj.jar" value="../../enerj/build/enerj.jar" />
+    <property name="cfrt.jar" value="../../checker-runtime/build/cfrt.jar" />
+    <property name="enerj.checker" value="enerj.PrecisionChecker" />
+
+    <!-- Expax -->
+        <property name="expax.dir" value="${env.EXPAX_ANALYSIS}" />
+        <property name="expax.jar" value="${expax.dir}/expax-analysis.jar" />
+
+    <property name="expaxbc.info" value="${user.dir}/sor-bc-offset.info" /> 
+    <property name="expaxanal.flag" value="${user.dir}/analysis.flag" />
+    <property name="expaxanal.result" value="${user.dir}/analysis.result" />
+
+    <condition property="enerjc.args" value="-Alint=mbstatic,expax,${expaxanal.flag},${expaxbc.info},${expaxanal.result}" else="-Alint=mbstatic,simulation,expax,${expaxanal.flag},${expaxbc.info},${expaxanal.result}"> 
+        <isset property="env.EnerJNoSim" />
+    </condition>
+    <condition property="enerjc.verbose" value="false" else="true">
+        <isset property="env.EnerJNoSim" />
+    </condition>
+    <presetdef name="relaxc">
+        <jsr308.javac>
+            <compilerarg line="-Xbootclasspath/a:${cfrt.jar}:${enerj.jar}:${expax.jar} -processorpath ${cfrt.jar}:${enerj.jar} -processor ${enerj.checker}" />
+            <compilerarg line="${enerjc.args}" />
+            <compilerarg line="-expaxanalflag ${expaxanal.flag}" />
+            <compilerarg line="-expaxbcinfo ${expaxbc.info}" />
+                        <compilerarg line="-expaxgen false" />
+                        <compilerarg line="-expaxast false" />
+        </jsr308.javac>
+    </presetdef>
+
+    <target name="copyflag">
+        <exec command="cp ${expax.dir}/analysis.flag ." />
+    </target>
+
+    <target name="build" depends="clean,copyflag">
+        <mkdir dir="build"/>
+        <relaxc srcdir="src"
+               destdir="build"
+               optimize="true"
+               debug="true"
+               deprecation="true">
+        </relaxc>
+        <jar jarfile="sor.jar" basedir="build"/>
+    </target>
+
+    <target name="clean">
+        <delete dir="build"/>
+        <delete dir="chord_output_expax"/>
+        <delete dir="chord_output"/>
+        <delete dir="eclipse-log"/>
+        <delete dir="src-marked"/>
+        <delete file="analysis.flag"/>
+        <delete file="analysis.result"/>
+        <delete file="after"/>
+        <delete file="markJava.log"/>
+        <delete file="sor.jar"/>
+        <delete file="sor-bc-offset.info"/>
+    </target>
+
+</project>
