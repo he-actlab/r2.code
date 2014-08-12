@@ -48,7 +48,7 @@ public class Code {
 
 	// FIXME these debugging lines were used to investigate how the compiler generates bytecode
 	// they are now useless, but just in case, I'll keep it
-	private static final boolean EXPAX_CODE = false; 
+	private static final boolean R2_CODE = false; 
 	
 	public int bytecodeOffset = 0;
 	
@@ -363,8 +363,8 @@ public class Code {
     /** Emit an opcode.
      */
     private void emitop(int op) {
-    	if(EXPAX_CODE)
-    		System.out.println("*** EXPAX_CODE: (emitop) bytecode offset = " + bytecodeOffset);
+    	if(R2_CODE)
+    		System.out.println("*** R2_CODE: (emitop) bytecode offset = " + bytecodeOffset);
         if (pendingJumps != null) resolvePending();
         if (alive) {
             if (pendingStatPos != Position.NOPOS)
@@ -388,8 +388,8 @@ public class Code {
     /** Emit a multinewarray instruction.
      */
     public void emitMultianewarray(int ndims, int type, Type arrayType) {
-    	if(EXPAX_CODE)
-    		System.out.println("*** EXPAX_CODE: (emitMultianewarray) bytecode offset = " + bytecodeOffset);
+    	if(R2_CODE)
+    		System.out.println("*** R2_CODE: (emitMultianewarray) bytecode offset = " + bytecodeOffset);
         emitop(multianewarray);
         if (!alive) return;
         emit2(type);
@@ -401,8 +401,8 @@ public class Code {
     /** Emit newarray.
      */
     public void emitNewarray(int elemcode, Type arrayType) {
-    	if(EXPAX_CODE)
-    		System.out.println("*** EXPAX_CODE: (emitNewarray) bytecode offset = " + bytecodeOffset);
+    	if(R2_CODE)
+    		System.out.println("*** R2_CODE: (emitNewarray) bytecode offset = " + bytecodeOffset);
         emitop(newarray);
         if (!alive) return;
         emit1(elemcode);
@@ -413,8 +413,8 @@ public class Code {
     /** Emit anewarray.
      */
     public void emitAnewarray(int od, Type arrayType) {
-    	if(EXPAX_CODE)
-    		System.out.println("*** EXPAX_CODE: (emitAnewarray) bytecode offset = " + bytecodeOffset);
+    	if(R2_CODE)
+    		System.out.println("*** R2_CODE: (emitAnewarray) bytecode offset = " + bytecodeOffset);
     	emitop(anewarray);
         if (!alive) return;
         emit2(od);
@@ -425,8 +425,8 @@ public class Code {
     /** Emit an invokeinterface instruction.
      */
     public void emitInvokeinterface(int meth, Type mtype) {
-    	if(EXPAX_CODE)
-    		System.out.println("*** EXPAX_CODE: (emitInvokeinterface) bytecode offset = " + bytecodeOffset);
+    	if(R2_CODE)
+    		System.out.println("*** R2_CODE: (emitInvokeinterface) bytecode offset = " + bytecodeOffset);
     	int argsize = width(mtype.getParameterTypes());
         emitop(invokeinterface);
         if (!alive) return;
@@ -440,8 +440,8 @@ public class Code {
     /** Emit an invokespecial instruction.
      */
     public void emitInvokespecial(int meth, Type mtype) {
-    	if(EXPAX_CODE)
-    		System.out.println("*** EXPAX_CODE: (emitInvokespecial) bytecode offset = " + bytecodeOffset);    	
+    	if(R2_CODE)
+    		System.out.println("*** R2_CODE: (emitInvokespecial) bytecode offset = " + bytecodeOffset);    	
         int argsize = width(mtype.getParameterTypes());
         emitop(invokespecial);
         if (!alive) return;
@@ -457,8 +457,8 @@ public class Code {
     /** Emit an invokestatic instruction.
      */
     public void emitInvokestatic(int meth, Type mtype) {
-    	if(EXPAX_CODE)
-    		System.out.println("*** EXPAX_CODE: (emitInvokestatic) bytecode offset = " + bytecodeOffset);
+    	if(R2_CODE)
+    		System.out.println("*** R2_CODE: (emitInvokestatic) bytecode offset = " + bytecodeOffset);
         int argsize = width(mtype.getParameterTypes());
         emitop(invokestatic);
         if (!alive) return;
@@ -470,8 +470,8 @@ public class Code {
     /** Emit an invokevirtual instruction.
      */
     public void emitInvokevirtual(int meth, Type mtype) {
-    	if(EXPAX_CODE)
-    		System.out.println("*** EXPAX_CODE: (emitInvokevirtual) bytecode offset = " + bytecodeOffset);
+    	if(R2_CODE)
+    		System.out.println("*** R2_CODE: (emitInvokevirtual) bytecode offset = " + bytecodeOffset);
         int argsize = width(mtype.getParameterTypes());
         emitop(invokevirtual);
         if (!alive) return;
@@ -483,8 +483,8 @@ public class Code {
     /** Emit an invokedynamic instruction.
      */
     public void emitInvokedynamic(int desc, Type mtype) {
-    	if(EXPAX_CODE)
-    		System.out.println("*** EXPAX_CODE: (emitInvokedynamic) bytecode offset = " + bytecodeOffset);
+    	if(R2_CODE)
+    		System.out.println("*** R2_CODE: (emitInvokedynamic) bytecode offset = " + bytecodeOffset);
         // N.B. this format is under consideration by the JSR 292 EG
         int argsize = width(mtype.getParameterTypes());
         emitop(invokedynamic);
@@ -498,8 +498,8 @@ public class Code {
     /** Emit an opcode with no operand field.
      */
     public void emitop0(int op) {
-    	if(EXPAX_CODE){
-    		System.out.println("*** EXPAX_CODE: (emitop0) bytecode offset = " + bytecodeOffset);
+    	if(R2_CODE){
+    		System.out.println("*** R2_CODE: (emitop0) bytecode offset = " + bytecodeOffset);
     	}
         emitop(op);
         if (!alive) return;
@@ -583,8 +583,8 @@ public class Code {
         case saload:
             state.pop(2);
             state.push(syms.intType);
-            if(EXPAX_CODE)
-        		System.out.println("*** EXPAX_CODE: (emitop0) iaload");
+            if(R2_CODE)
+        		System.out.println("*** R2_CODE: (emitop0) iaload");
             break;
         case laload:
             state.pop(2);
@@ -767,8 +767,8 @@ public class Code {
         case fastore:
         case sastore:
             state.pop(3);
-            if(EXPAX_CODE)
-        		System.out.println("*** EXPAX_CODE: (emitop0) iastore");
+            if(R2_CODE)
+        		System.out.println("*** R2_CODE: (emitop0) iastore");
             break;
         case lastore:
         case dastore:
@@ -911,8 +911,8 @@ public class Code {
     /** Emit an opcode with a one-byte operand field.
      */
     public void emitop1(int op, int od) {
-    	if(EXPAX_CODE)
-    		System.out.println("*** EXPAX_CODE: (emitop1) bytecode offset = " + bytecodeOffset);
+    	if(R2_CODE)
+    		System.out.println("*** R2_CODE: (emitop1) bytecode offset = " + bytecodeOffset);
         emitop(op);
         if (!alive) return;
         emit1(od);
@@ -945,8 +945,8 @@ public class Code {
      *  widen if field does not fit in a byte.
      */
     public void emitop1w(int op, int od) {
-    	if(EXPAX_CODE)
-    		System.out.println("*** EXPAX_CODE: (emitop1w) bytecode offset = " + bytecodeOffset);
+    	if(R2_CODE)
+    		System.out.println("*** R2_CODE: (emitop1w) bytecode offset = " + bytecodeOffset);
         if (od > 0xFF) {
             emitop(wide);
             emitop(op);
@@ -994,8 +994,8 @@ public class Code {
      *  widen if either field does not fit in a byte.
      */
     public void emitop1w(int op, int od1, int od2) {
-    	if(EXPAX_CODE)
-    		System.out.println("*** EXPAX_CODE: (emitop1w) bytecode offset = " + bytecodeOffset);
+    	if(R2_CODE)
+    		System.out.println("*** R2_CODE: (emitop1w) bytecode offset = " + bytecodeOffset);
         if (od1 > 0xFF || od2 < -128 || od2 > 127) {
             emitop(wide);
             emitop(op);
@@ -1018,21 +1018,21 @@ public class Code {
     /** Emit an opcode with a two-byte operand field.
      */
     public void emitop2(int op, int od) {
-    	if(EXPAX_CODE)
-    		System.out.println("*** EXPAX_CODE: (emitop2) bytecode offset = " + bytecodeOffset);
+    	if(R2_CODE)
+    		System.out.println("*** R2_CODE: (emitop2) bytecode offset = " + bytecodeOffset);
         emitop(op);
         if (!alive) return;
         emit2(od);
         switch (op) {
         case getstatic:
             state.push(((Symbol)(pool.pool[od])).erasure(types));
-            if(EXPAX_CODE)
-        		System.out.println("*** EXPAX_CODE: (emitop2) getstatic");
+            if(R2_CODE)
+        		System.out.println("*** R2_CODE: (emitop2) getstatic");
             break;
         case putstatic:
             state.pop(((Symbol)(pool.pool[od])).erasure(types));
-            if(EXPAX_CODE)
-        		System.out.println("*** EXPAX_CODE: (emitop2) putstatic");
+            if(R2_CODE)
+        		System.out.println("*** R2_CODE: (emitop2) putstatic");
             break;
         case new_:
             state.push(uninitializedObject(((Symbol)(pool.pool[od])).erasure(types), cp-3));
@@ -1066,14 +1066,14 @@ public class Code {
         case putfield:
             state.pop(((Symbol)(pool.pool[od])).erasure(types));
             state.pop(1); // object ref
-            if(EXPAX_CODE)
-        		System.out.println("*** EXPAX_CODE: (emitop2) putfield");
+            if(R2_CODE)
+        		System.out.println("*** R2_CODE: (emitop2) putfield");
             break;
         case getfield:
             state.pop(1); // object ref
             state.push(((Symbol)(pool.pool[od])).erasure(types));
-            if(EXPAX_CODE)
-        		System.out.println("*** EXPAX_CODE: (emitop2) getfield");
+            if(R2_CODE)
+        		System.out.println("*** R2_CODE: (emitop2) getfield");
             break;
         case checkcast: {
             state.pop(1); // object ref
@@ -1104,8 +1104,8 @@ public class Code {
     /** Emit an opcode with a four-byte operand field.
      */
     public void emitop4(int op, int od) {
-    	if(EXPAX_CODE)
-    		System.out.println("*** EXPAX_CODE: (emitop4) bytecode offset = " + bytecodeOffset);
+    	if(R2_CODE)
+    		System.out.println("*** R2_CODE: (emitop4) bytecode offset = " + bytecodeOffset);
     	emitop(op);
         if (!alive) return;
         emit4(od);
@@ -1450,8 +1450,8 @@ public class Code {
      *  Return code pointer of instruction to be patched.
      */
     public int emitJump(int opcode) {
-    	if(EXPAX_CODE)
-    		System.out.println("*** EXPAX_CODE: emitJump");
+    	if(R2_CODE)
+    		System.out.println("*** R2_CODE: emitJump");
         if (fatcode) {
             if (opcode == goto_ || opcode == jsr) {
                 emitop4(opcode + goto_w - goto_, 0);

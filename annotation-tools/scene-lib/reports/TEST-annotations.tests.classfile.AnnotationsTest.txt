@@ -1,30 +1,30 @@
 Testsuite: annotations.tests.classfile.AnnotationsTest
-Tests run: 27, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.182 sec
+Tests run: 27, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.176 sec
 
-Testcase: testAll took 0 sec
-Testcase: testcClassEmpty took 0.01 sec
+Testcase: testAll took 0.001 sec
+Testcase: testcClassEmpty took 0.009 sec
 Testcase: testiClassEmpty took 0.013 sec
-Testcase: testcClassNonEmpty took 0.003 sec
-Testcase: testiClassNonEmpty took 0.002 sec
-Testcase: testcFieldSimple took 0.005 sec
+Testcase: testcClassNonEmpty took 0.002 sec
+Testcase: testiClassNonEmpty took 0.003 sec
+Testcase: testcFieldSimple took 0.003 sec
 Testcase: testiFieldSimple took 0.004 sec
 Testcase: testcFieldGeneric took 0.014 sec
-Testcase: testiFieldGeneric took 0.013 sec
-Testcase: testcLocalVariable took 0.006 sec
+Testcase: testiFieldGeneric took 0.012 sec
+Testcase: testcLocalVariable took 0.005 sec
 Testcase: testiLocalVariable took 0.006 sec
-Testcase: testcLocalVariableGenericArray took 0.01 sec
+Testcase: testcLocalVariableGenericArray took 0.011 sec
 Testcase: testiLocalVariableGenericArray took 0.01 sec
-Testcase: testcTypecast took 0.006 sec
-Testcase: testiTypecast took 0.005 sec
-Testcase: testcTypecastGenericArray took 0.008 sec
-Testcase: testiTypecastGenericArray took 0.008 sec
+Testcase: testcTypecast took 0.003 sec
+Testcase: testiTypecast took 0.004 sec
+Testcase: testcTypecastGenericArray took 0.007 sec
+Testcase: testiTypecastGenericArray took 0.009 sec
 Testcase: testcTypeTest took 0.005 sec
 Testcase: testiTypeTest took 0.006 sec
-Testcase: testcObjectCreation took 0.005 sec
+Testcase: testcObjectCreation took 0.004 sec
 Testcase: testiObjectCreation took 0.004 sec
 Testcase: testcObjectCreationGenericArray took 0.006 sec
-Testcase: testiObjectCreationGenericArray took 0.007 sec
-Testcase: testcMethodReceiver took 0.003 sec
-Testcase: testiMethodReceiver took 0.004 sec
-Testcase: testcMethodReturnTypeGenericArray took 0.005 sec
-Testcase: testiMethodReturnTypeGenericArray took 0.006 sec
+Testcase: testiObjectCreationGenericArray took 0.008 sec
+Testcase: testcMethodReceiver took 0.002 sec
+Testcase: testiMethodReceiver took 0.003 sec
+Testcase: testcMethodReturnTypeGenericArray took 0.006 sec
+Testcase: testiMethodReturnTypeGenericArray took 0.007 sec

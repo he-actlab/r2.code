@@ -82,8 +82,8 @@ import static com.sun.tools.javac.util.ListBuffer.lb;
  */
 public class JavaCompiler implements ClassReader.SourceCompleter {
 	
-	private static final boolean EXPAX_JC = false;
-	private static String expaxInfoPath = "";
+	private static final boolean R2_JC = false;
+	private static String r2InfoPath = "";
 	
     /** The context key for the compiler. */
     protected static final Context.Key<JavaCompiler> compilerKey =
@@ -334,8 +334,8 @@ public class JavaCompiler implements ClassReader.SourceCompleter {
     /** Construct a new compiler using a shared context.
      */
     public JavaCompiler(final Context context) {
-    	if(EXPAX_JC){
-    		System.out.println("*** EXPAX_JC: JavaCompiler ***");
+    	if(R2_JC){
+    		System.out.println("*** R2_JC: JavaCompiler ***");
     	}
         uid = ++uidCounter;
         this.context = context;
@@ -1506,7 +1506,7 @@ public class JavaCompiler implements ClassReader.SourceCompleter {
     }
 
     public void generateBytecodeInfo(){
-    	String analysisFlagFilename = options.get(EXPAXANALFLAG);
+    	String analysisFlagFilename = options.get(R2ANALFLAG);
 		FileReader fr = null;
 		BufferedReader br = null;
 		try { 
@@ -1520,13 +1520,13 @@ public class JavaCompiler implements ClassReader.SourceCompleter {
 			String analysisFlagStr = br.readLine();
 			if (analysisFlagStr != null){
 	    		boolean analysisFlag = analysisFlagStr.equalsIgnoreCase("true") ? true : false;
-	    		if(EXPAX_JC)
-	    			System.out.println("*** EXPAX_JC: analysisFlag = " + analysisFlag);
+	    		if(R2_JC)
+	    			System.out.println("*** R2_JC: analysisFlag = " + analysisFlag);
 	    		if (!analysisFlag) {
-	    			String expaxBcInfoPathStr = options.get(EXPAXBCINFO);
-	    			if (expaxBcInfoPathStr != null){
-	    				expaxInfoPath = expaxBcInfoPathStr;
-	    				gen.writeExpaxInfo(expaxInfoPath);
+	    			String r2BcInfoPathStr = options.get(R2BCINFO);
+	    			if (r2BcInfoPathStr != null){
+	    				r2InfoPath = r2BcInfoPathStr;
+	    				gen.writeR2Info(r2InfoPath);
 	    			}
 	    		}
 	    	}

@@ -159,13 +159,13 @@ public enum Option {
         }
     },
     
-    EXPAXBCINFO("-expaxbcinfo", "opt.arg.path", "opt.expaxbcinfo", STANDARD, FILEMANAGER),
+    R2BCINFO("-r2bcinfo", "opt.arg.path", "opt.r2bcinfo", STANDARD, FILEMANAGER),
     
-    EXPAXANALFLAG("-expaxanalflag", "opt.arg.path", "opt.expaxanalflag", STANDARD, FILEMANAGER),
+    R2ANALFLAG("-r2analflag", "opt.arg.path", "opt.r2analflag", STANDARD, FILEMANAGER),
     
-    EXPAXGEN("-expaxgen", "opt.arg.path", "opt.expaxgen", STANDARD, BASIC),
+    R2GEN("-r2gen", "opt.arg.path", "opt.r2gen", STANDARD, BASIC),
     
-    EXPAXAST("-expaxast", "opt.arg.path", "opt.expaxast", STANDARD, BASIC),
+    R2AST("-r2ast", "opt.arg.path", "opt.r2ast", STANDARD, BASIC),
     
     PROC("-proc:", "opt.proc.none.only", STANDARD, BASIC,  ONEOF, "none", "only"),
 

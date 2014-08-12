@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="r2" default="compile">
+	<property environment="env"/>
+	<property name="chord.home.dir" location="${env.CHORD_MAIN}"/>
+	<!--
+	<property name="checkerframework" value="${env.CHECKERFRAMEWORK}" />
+	<property name="cfJavac" value="javac"/>
+
+	<presetdef name="jsr308.javac">
+		<javac fork="yes" executable="${checkerframework}/checker/bin/${cfJavac}" >
+		<compilerarg value="-version"/>
+		<compilerarg value="-implicit:class"/>
+		</javac>
+	</presetdef>
+	-->
+
+	<target name="compile" depends="clean">
+		<ant dir="${chord.home.dir}" target="compile"/>
+		<mkdir dir="classes"/>
+		<!--
+		<javac debug="true" debuglevel="source,lines,vars" includeAntRuntime="false"
+			source="1.5" target="1.5" srcdir="src" destdir="classes"
+			classpath="${chord.home.dir}/chord.jar:${checkerframework}/checker/dist/checker-qual.jar"> 
+		-->
+		<javac debug="true" debuglevel="source,lines,vars" includeAntRuntime="false"
+			source="1.5" target="1.5" srcdir="src" destdir="classes"
+			classpath="${chord.home.dir}/chord.jar"> 
+		</javac>		
+		<jar jarfile="r2-analysis.jar" basedir="classes"/>
+	</target>
+
+	<target name="run">
+		<property name="chord.ext.java.analysis.path" location="classes"/>
+		<property name="chord.ext.dlog.analysis.path" location="src"/>
+		<ant dir="${chord.home.dir}" target="run"/>
+	</target>
+
+	<target name="runw">
+	 <property name="chord.ext.java.analysis.path" location="classes"/>
+	 <property name="chord.ext.dlog.analysis.path" location="src"/>
+	<java classname="chord.project.Boot" failonerror="true" classpath="${chord.home.dir}/chord.jar:./generatedSource">
+	<syspropertyset>
+		<propertyref builtin="all"/>
+		</syspropertyset>
+	</java>
+
+	</target>
+
+	<target name="clean">
+		<delete dir="classes"/>
+	</target>
+</project>

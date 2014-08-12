@@ -10,7 +10,7 @@ eclipse-log/
 *.swo
 worker/
 chord_output/
-chord_output_expax/
+chord_output_r2/
 intra.txt
 bddbddb
 classes/

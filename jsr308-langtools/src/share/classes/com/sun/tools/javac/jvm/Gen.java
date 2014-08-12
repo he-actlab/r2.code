@@ -36,7 +36,7 @@ import com.sun.tools.javac.code.Symbol.*;
 import com.sun.tools.javac.code.Type.*;
 import com.sun.tools.javac.jvm.Code.*;
 import com.sun.tools.javac.jvm.Items.*;
-import com.sun.tools.javac.jvm.expax.ExpaxASTNodeInfo;
+import com.sun.tools.javac.jvm.r2.R2ASTNodeInfo;
 import com.sun.tools.javac.tree.EndPosTable;
 import com.sun.tools.javac.tree.JCTree.*;
 
@@ -60,7 +60,7 @@ public class Gen extends JCTree.Visitor {
 	
 	// FIXME these debugging lines were used to investigate how the compiler generates bytecode
 	// they are now useless, but just in case, I'll keep it
-    private static boolean EXPAX_GEN = false;
+    private static boolean R2_GEN = false;
 	
     protected static final Context.Key<Gen> genKey =
         new Context.Key<Gen>();
@@ -77,7 +77,7 @@ public class Gen extends JCTree.Visitor {
     private Name accessDollar;
     private final Types types;
     
-    public ExpaxASTNodeInfo expaxInfo;
+    public R2ASTNodeInfo r2Info;
     public String curClassName = " ";
     public String curMethName = " ";
     public String curRetTypeName = " ";
@@ -163,23 +163,23 @@ public class Gen extends JCTree.Visitor {
         this.jsrlimit = setjsrlimit;
         this.useJsrLocally = false; // reset in visitTry
         
-        String expaxGenStr = options.get(EXPAXGEN);
-        if(expaxGenStr!=null){
-        	if(expaxGenStr.equalsIgnoreCase("true"))
-        		EXPAX_GEN = true;
+        String r2GenStr = options.get(R2GEN);
+        if(r2GenStr!=null){
+        	if(r2GenStr.equalsIgnoreCase("true"))
+        		R2_GEN = true;
         	else
-        		EXPAX_GEN = false;
+        		R2_GEN = false;
         } else 
-        	EXPAX_GEN = false;
+        	R2_GEN = false;
         
-        String expaxAstStr = options.get(EXPAXAST);
-        if(expaxAstStr!= null) {
-        	if(expaxAstStr.equalsIgnoreCase("true"))
-        		expaxInfo = new ExpaxASTNodeInfo(true);
+        String r2AstStr = options.get(R2AST);
+        if(r2AstStr!= null) {
+        	if(r2AstStr.equalsIgnoreCase("true"))
+        		r2Info = new R2ASTNodeInfo(true);
         	else
-        		expaxInfo = new ExpaxASTNodeInfo(false);
+        		r2Info = new R2ASTNodeInfo(false);
         } else
-        	expaxInfo = new ExpaxASTNodeInfo(false);
+        	r2Info = new R2ASTNodeInfo(false);
     }
 
     /** Switches
@@ -701,11 +701,11 @@ public class Gen extends JCTree.Visitor {
      *  @param env     The environment current at the definition.
      */
     public void genDef(JCTree tree, Env<GenContext> env) {
-    	if(EXPAX_GEN){
-    		System.out.println("*** EXPAX_GEN: genDef - tree.toString() = " + tree.toString());
-    		System.out.println("*** EXPAX_GEN: tree.getTag() = " + tree.getTag().toString());
+    	if(R2_GEN){
+    		System.out.println("*** R2_GEN: genDef - tree.toString() = " + tree.toString());
+    		System.out.println("*** R2_GEN: tree.getTag() = " + tree.getTag().toString());
     		if(code!=null)
-    			System.out.println("*** EXPAX_GEN: genDef - code.bytecodeOffset = " + code.bytecodeOffset);
+    			System.out.println("*** R2_GEN: genDef - code.bytecodeOffset = " + code.bytecodeOffset);
     	}
         Env<GenContext> prevEnv = this.env;
         try {
@@ -855,7 +855,7 @@ public class Gen extends JCTree.Visitor {
      *  @param pt      The expression's expected type (proto-type).
      */
     public Item genExpr(JCTree tree, Type pt) {
-    	if(EXPAX_GEN) System.out.println("*** EXPAX_GEN: genExpr - tree.toString() = " + tree.toString());
+    	if(R2_GEN) System.out.println("*** R2_GEN: genExpr - tree.toString() = " + tree.toString());
         Type prevPt = this.pt;
         try {
             if (tree.type.constValue() != null) {
@@ -902,9 +902,9 @@ public class Gen extends JCTree.Visitor {
     }
 
     public void visitMethodDef(JCMethodDecl tree) {
-    	if(EXPAX_GEN){
-    		System.out.println("*** EXPAX_GEN: visitMethodDef - tree.toString() = " + tree.toString());
-    		System.out.println("*** EXPAX_GEN: tree.getTag() = " + tree.getTag().toString());
+    	if(R2_GEN){
+    		System.out.println("*** R2_GEN: visitMethodDef - tree.toString() = " + tree.toString());
+    		System.out.println("*** R2_GEN: tree.getTag() = " + tree.getTag().toString());
     	}
         // Create a new local environment that points pack at method
         // definition.
@@ -930,15 +930,15 @@ public class Gen extends JCTree.Visitor {
          */
         void genMethod(JCMethodDecl tree, Env<GenContext> env, boolean fatcode) {
             MethodSymbol meth = tree.sym;
-            if(EXPAX_GEN){
-            	System.out.println("*** EXPAX_GEN: method name = " + meth.toString());
-            	System.out.println("*** EXPAX_GEN: return type = " + meth.getReturnType().toString());
-            	System.out.println("*** EXPAX_GEN: tree = " + tree.toString());
-            	System.out.println("*** EXPAX_GEN: tree.getName() = " + tree.getName());
-            	System.out.println("*** EXPAX_GEN: flatname = " + meth.flatName().toString());
-            	System.out.println("*** EXPAX_GEN: qname = " + meth.getQualifiedName().toString());
-            	System.out.println("*** EXPAX_GEN: sname" + meth.getSimpleName().toString());
-            	System.out.println("*** EXPAX_GEN: tree.getTag() = " + tree.getTag().toString());
+            if(R2_GEN){
+            	System.out.println("*** R2_GEN: method name = " + meth.toString());
+            	System.out.println("*** R2_GEN: return type = " + meth.getReturnType().toString());
+            	System.out.println("*** R2_GEN: tree = " + tree.toString());
+            	System.out.println("*** R2_GEN: tree.getName() = " + tree.getName());
+            	System.out.println("*** R2_GEN: flatname = " + meth.flatName().toString());
+            	System.out.println("*** R2_GEN: qname = " + meth.getQualifiedName().toString());
+            	System.out.println("*** R2_GEN: sname" + meth.getSimpleName().toString());
+            	System.out.println("*** R2_GEN: tree.getTag() = " + tree.getTag().toString());
             }
             curMethName = tree.getName().toString();
             if(!(curMethName.equalsIgnoreCase("<init>") || curMethName.equalsIgnoreCase("<clinit>"))){
@@ -948,7 +948,7 @@ public class Gen extends JCTree.Visitor {
             	String params = tree.sym.toString().substring(index);
             	curMethName += params;
             }
-            if(EXPAX_GEN) System.out.println("*** EXPAX_GEN: method name is changed to " + curMethName);
+            if(R2_GEN) System.out.println("*** R2_GEN: method name is changed to " + curMethName);
             if(meth.getReturnType() != null)
             	curRetTypeName = meth.getReturnType().toString();
             else
@@ -1070,9 +1070,9 @@ public class Gen extends JCTree.Visitor {
         }
 
     public void visitVarDef(JCVariableDecl tree) {
-      	if(EXPAX_GEN){
-	    	System.out.println("*** EXPAX_GEN: visitVarDef = " + tree.toString());
-	    	System.out.println("*** EXPAX_GEN: tree.getTag() = " + tree.getTag().toString());
+      	if(R2_GEN){
+	    	System.out.println("*** R2_GEN: visitVarDef = " + tree.toString());
+	    	System.out.println("*** R2_GEN: tree.getTag() = " + tree.getTag().toString());
       	}
         VarSymbol v = tree.sym;
         code.newLocal(v);
@@ -1080,8 +1080,8 @@ public class Gen extends JCTree.Visitor {
             checkStringConstant(tree.init.pos(), v.getConstValue());
             if (v.getConstValue() == null || varDebugInfo) {
                 genExpr(tree.init, v.erasure(types)).load();
-                if(EXPAX_GEN) System.out.println("*** EXPAX_GEN: call expaxInfo.add at visitVarDef");
-                expaxInfo.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
+                if(R2_GEN) System.out.println("*** R2_GEN: call r2Info.add at visitVarDef");
+                r2Info.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
                 items.makeLocalItem(v).store();
             }
         }
@@ -1092,9 +1092,9 @@ public class Gen extends JCTree.Visitor {
     }
 
     public void visitBlock(JCBlock tree) {
-      	if(EXPAX_GEN){
-	    	System.out.println("*** EXPAX_GEN: visitBlock = " + tree.toString());
-	    	System.out.println("*** EXPAX_GEN: tree.getTag() = " + tree.getTag().toString());
+      	if(R2_GEN){
+	    	System.out.println("*** R2_GEN: visitBlock = " + tree.toString());
+	    	System.out.println("*** R2_GEN: tree.getTag() = " + tree.getTag().toString());
       	}
         int limit = code.nextreg;
         Env<GenContext> localEnv = env.dup(tree, new GenContext());
@@ -1108,25 +1108,25 @@ public class Gen extends JCTree.Visitor {
     }
 
     public void visitDoLoop(JCDoWhileLoop tree) {
-      	if(EXPAX_GEN){
-	    	System.out.println("*** EXPAX_GEN: visitDoLoop = " + tree.toString());
-	    	System.out.println("*** EXPAX_GEN: tree.getTag() = " + tree.getTag().toString());
+      	if(R2_GEN){
+	    	System.out.println("*** R2_GEN: visitDoLoop = " + tree.toString());
+	    	System.out.println("*** R2_GEN: tree.getTag() = " + tree.getTag().toString());
       	}
         genLoop(tree, tree.body, tree.cond, List.<JCExpressionStatement>nil(), false);
     }
 
     public void visitWhileLoop(JCWhileLoop tree) {
-      	if(EXPAX_GEN){
-	    	System.out.println("*** EXPAX_GEN: visitWhileLoop = " + tree.toString());
-	    	System.out.println("*** EXPAX_GEN: tree.getTag() = " + tree.getTag().toString());
+      	if(R2_GEN){
+	    	System.out.println("*** R2_GEN: visitWhileLoop = " + tree.toString());
+	    	System.out.println("*** R2_GEN: tree.getTag() = " + tree.getTag().toString());
       	}
         genLoop(tree, tree.body, tree.cond, List.<JCExpressionStatement>nil(), true);
     }
 
     public void visitForLoop(JCForLoop tree) {
-      	if(EXPAX_GEN){
-	    	System.out.println("*** EXPAX_GEN: visitForLoop = " + tree.toString());
-	    	System.out.println("*** EXPAX_GEN: tree.getTag() = " + tree.getTag().toString());
+      	if(R2_GEN){
+	    	System.out.println("*** R2_GEN: visitForLoop = " + tree.toString());
+	    	System.out.println("*** R2_GEN: tree.getTag() = " + tree.getTag().toString());
       	}
         int limit = code.nextreg;
         genStats(tree.init, env);
@@ -1182,17 +1182,17 @@ public class Gen extends JCTree.Visitor {
         }
 
     public void visitForeachLoop(JCEnhancedForLoop tree) {
-      	if(EXPAX_GEN){
-	    	System.out.println("*** EXPAX_GEN: visitForeachLoop = " + tree.toString());
-	    	System.out.println("*** EXPAX_GEN: tree.getTag() = " + tree.getTag().toString());
+      	if(R2_GEN){
+	    	System.out.println("*** R2_GEN: visitForeachLoop = " + tree.toString());
+	    	System.out.println("*** R2_GEN: tree.getTag() = " + tree.getTag().toString());
       	}
         throw new AssertionError(); // should have been removed by Lower.
     }
 
     public void visitLabelled(JCLabeledStatement tree) {
-      	if(EXPAX_GEN){
-	    	System.out.println("*** EXPAX_GEN: visitLabelled = " + tree.toString());
-	    	System.out.println("*** EXPAX_GEN: tree.getTag() = " + tree.getTag().toString());
+      	if(R2_GEN){
+	    	System.out.println("*** R2_GEN: visitLabelled = " + tree.toString());
+	    	System.out.println("*** R2_GEN: tree.getTag() = " + tree.getTag().toString());
       	}
         Env<GenContext> localEnv = env.dup(tree, new GenContext());
         genStat(tree.body, localEnv, CRT_STATEMENT);
@@ -1200,9 +1200,9 @@ public class Gen extends JCTree.Visitor {
     }
 
     public void visitSwitch(JCSwitch tree) {
-      	if(EXPAX_GEN){
-	    	System.out.println("*** EXPAX_GEN: visitSwitch = " + tree.toString());
-	    	System.out.println("*** EXPAX_GEN: tree.getTag() = " + tree.getTag().toString());
+      	if(R2_GEN){
+	    	System.out.println("*** R2_GEN: visitSwitch = " + tree.toString());
+	    	System.out.println("*** R2_GEN: tree.getTag() = " + tree.getTag().toString());
       	}
         int limit = code.nextreg;
         Assert.check(tree.selector.type.tag != CLASS);
@@ -1403,7 +1403,7 @@ public class Gen extends JCTree.Visitor {
     }
 
     public void visitTry(final JCTry tree) {
-    	if(EXPAX_GEN) System.out.println("*** EXPAX_GEN: visitTry - tree.toString() = " + tree.toString());
+    	if(R2_GEN) System.out.println("*** R2_GEN: visitTry - tree.toString() = " + tree.toString());
         // Generate code for a try statement with given body and catch clauses,
         // in a new environment which calls the finally block if there is one.
         final Env<GenContext> tryEnv = env.dup(tree, new GenContext());
@@ -1699,9 +1699,9 @@ public class Gen extends JCTree.Visitor {
     }
 
     public void visitIf(JCIf tree) {
-      	if(EXPAX_GEN){
-	    	System.out.println("*** EXPAX_GEN: visitIf = " + tree.toString());
-	    	System.out.println("*** EXPAX_GEN: tree.getTag() = " + tree.getTag().toString());
+      	if(R2_GEN){
+	    	System.out.println("*** R2_GEN: visitIf = " + tree.toString());
+	    	System.out.println("*** R2_GEN: tree.getTag() = " + tree.getTag().toString());
       	}
         int limit = code.nextreg;
         Chain thenExit = null;
@@ -1723,9 +1723,9 @@ public class Gen extends JCTree.Visitor {
     }
 
     public void visitExec(JCExpressionStatement tree) {
-    	if(EXPAX_GEN){
-    		System.out.println("*** EXPAX_GEN: visitExec - tree.toString() = " + tree.toString());
-    		System.out.println("*** EXPAX_GEN: tree.getTag() = " + tree.getTag().toString());
+    	if(R2_GEN){
+    		System.out.println("*** R2_GEN: visitExec - tree.toString() = " + tree.toString());
+    		System.out.println("*** R2_GEN: tree.getTag() = " + tree.getTag().toString());
     	}
         // Optimize x++ to ++x and x-- to --x.
         JCExpression e = tree.expr;
@@ -1741,9 +1741,9 @@ public class Gen extends JCTree.Visitor {
     }
 
     public void visitBreak(JCBreak tree) {
-      	if(EXPAX_GEN){
-	    	System.out.println("*** EXPAX_GEN: visitBreak = " + tree.toString());
-	    	System.out.println("*** EXPAX_GEN: tree.getTag() = " + tree.getTag().toString());
+      	if(R2_GEN){
+	    	System.out.println("*** R2_GEN: visitBreak = " + tree.toString());
+	    	System.out.println("*** R2_GEN: tree.getTag() = " + tree.getTag().toString());
       	}
         Env<GenContext> targetEnv = unwind(tree.target, env);
         Assert.check(code.state.stacksize == 0);
@@ -1752,9 +1752,9 @@ public class Gen extends JCTree.Visitor {
     }
 
     public void visitContinue(JCContinue tree) {
-      	if(EXPAX_GEN){
-	    	System.out.println("*** EXPAX_GEN: visitContinue = " + tree.toString());
-	    	System.out.println("*** EXPAX_GEN: tree.getTag() = " + tree.getTag().toString());
+      	if(R2_GEN){
+	    	System.out.println("*** R2_GEN: visitContinue = " + tree.toString());
+	    	System.out.println("*** R2_GEN: tree.getTag() = " + tree.getTag().toString());
       	}
         Env<GenContext> targetEnv = unwind(tree.target, env);
         Assert.check(code.state.stacksize == 0);
@@ -1763,9 +1763,9 @@ public class Gen extends JCTree.Visitor {
     }
 
     public void visitReturn(JCReturn tree) {
-      	if(EXPAX_GEN){
-	    	System.out.println("*** EXPAX_GEN: visitReturn = " + tree.toString());
-	    	System.out.println("*** EXPAX_GEN: tree.getTag() = " + tree.getTag().toString());
+      	if(R2_GEN){
+	    	System.out.println("*** R2_GEN: visitReturn = " + tree.toString());
+	    	System.out.println("*** R2_GEN: tree.getTag() = " + tree.getTag().toString());
       	}
         int limit = code.nextreg;
         final Env<GenContext> targetEnv;
@@ -1787,9 +1787,9 @@ public class Gen extends JCTree.Visitor {
     }
 
     public void visitThrow(JCThrow tree) {
-      	if(EXPAX_GEN){
-	    	System.out.println("*** EXPAX_GEN: visitThrow = " + tree.toString());
-	    	System.out.println("*** EXPAX_GEN: tree.getTag() = " + tree.getTag().toString());
+      	if(R2_GEN){
+	    	System.out.println("*** R2_GEN: visitThrow = " + tree.toString());
+	    	System.out.println("*** R2_GEN: tree.getTag() = " + tree.getTag().toString());
       	}
         genExpr(tree.expr, tree.expr.type).load();
         code.emitop0(athrow);
@@ -1800,9 +1800,9 @@ public class Gen extends JCTree.Visitor {
  *************************************************************************/
 
     public void visitApply(JCMethodInvocation tree) {
-      	if(EXPAX_GEN){
-	    	System.out.println("*** EXPAX_GEN: visitApply = " + tree.toString());
-	    	System.out.println("*** EXPAX_GEN: tree.getTag() = " + tree.getTag().toString());
+      	if(R2_GEN){
+	    	System.out.println("*** R2_GEN: visitApply = " + tree.toString());
+	    	System.out.println("*** R2_GEN: tree.getTag() = " + tree.getTag().toString());
       	}
         setTypeAnnotationPositions(tree.pos);
         // Generate code for method.
@@ -1818,9 +1818,9 @@ public class Gen extends JCTree.Visitor {
     }
 
     public void visitConditional(JCConditional tree) {
-      	if(EXPAX_GEN){
-	    	System.out.println("*** EXPAX_GEN: visitConditional = " + tree.toString());
-	    	System.out.println("*** EXPAX_GEN: tree.getTag() = " + tree.getTag().toString());
+      	if(R2_GEN){
+	    	System.out.println("*** R2_GEN: visitConditional = " + tree.toString());
+	    	System.out.println("*** R2_GEN: tree.getTag() = " + tree.getTag().toString());
       	}
         Chain thenExit = null;
         CondItem c = genCond(tree.cond, CRT_FLOW_CONTROLLER);
@@ -1884,17 +1884,17 @@ public class Gen extends JCTree.Visitor {
    }
 
     public void visitNewClass(JCNewClass tree) {
-    	if(EXPAX_GEN){
-	    	System.out.println("*** EXPAX_GEN: visitNewClass = " + tree.toString());
-	    	System.out.println("*** EXPAX_GEN: tree.getTag() = " + tree.getTag().toString());
+    	if(R2_GEN){
+	    	System.out.println("*** R2_GEN: visitNewClass = " + tree.toString());
+	    	System.out.println("*** R2_GEN: tree.getTag() = " + tree.getTag().toString());
     	}
         // Enclosing instances or anonymous classes should have been eliminated
         // by now.
         Assert.check(tree.encl == null && tree.def == null);
         setTypeAnnotationPositions(tree.pos);
 
-        if(EXPAX_GEN) System.out.println("*** EXPAX_GEN: call expaxInfo.add at visitNewClass");
-        expaxInfo.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
+        if(R2_GEN) System.out.println("*** R2_GEN: call r2Info.add at visitNewClass");
+        r2Info.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
         code.emitop2(new_, makeRef(tree.pos(), tree.type));
         code.emitop0(dup);
 
@@ -1908,17 +1908,17 @@ public class Gen extends JCTree.Visitor {
     }
 
     public void visitNewArray(JCNewArray tree) {
-    	if(EXPAX_GEN){
-	    	System.out.println("*** EXPAX_GEN: visitNewArray = " + tree.toString());
-	    	System.out.println("*** EXPAX_GEN: tree.getTag() = " + tree.getTag().toString());
+    	if(R2_GEN){
+	    	System.out.println("*** R2_GEN: visitNewArray = " + tree.toString());
+	    	System.out.println("*** R2_GEN: tree.getTag() = " + tree.getTag().toString());
     	}
         setTypeAnnotationPositions(tree.pos);
 
         if (tree.elems != null) {
             Type elemtype = types.elemtype(tree.type);
             loadIntConst(tree.elems.length());
-            if(EXPAX_GEN) System.out.println("*** EXPAX_GEN: call expaxInfo.add at visitNewArray#1");
-            expaxInfo.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
+            if(R2_GEN) System.out.println("*** R2_GEN: call r2Info.add at visitNewArray#1");
+            r2Info.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
             Item arr = makeNewArray(tree.pos(), tree.type, 1);
             int i = 0;
             for (List<JCExpression> l = tree.elems; l.nonEmpty(); l = l.tail) {
@@ -1933,8 +1933,8 @@ public class Gen extends JCTree.Visitor {
             for (List<JCExpression> l = tree.dims; l.nonEmpty(); l = l.tail) {
                 genExpr(l.head, syms.intType).load();
             }
-            if(EXPAX_GEN) System.out.println("*** EXPAX_GEN: call expaxInfo.add at visitNewArray#2");
-            expaxInfo.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
+            if(R2_GEN) System.out.println("*** R2_GEN: call r2Info.add at visitNewArray#2");
+            r2Info.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
             result = makeNewArray(tree.pos(), tree.type, tree.dims.length());
         }
     }
@@ -1960,32 +1960,32 @@ public class Gen extends JCTree.Visitor {
         }
 
     public void visitParens(JCParens tree) {
-    	if(EXPAX_GEN){
-	    	System.out.println("*** EXPAX_GEN: visitParens = " + tree.toString());
-	    	System.out.println("*** EXPAX_GEN: tree.getTag() = " + tree.getTag().toString());
+    	if(R2_GEN){
+	    	System.out.println("*** R2_GEN: visitParens = " + tree.toString());
+	    	System.out.println("*** R2_GEN: tree.getTag() = " + tree.getTag().toString());
     	}
         result = genExpr(tree.expr, tree.expr.type);
     }
 
     public void visitAssign(JCAssign tree) {
-    	if(EXPAX_GEN){
-	    	System.out.println("*** EXPAX_GEN: visitAssign = " + tree.toString());
-	    	System.out.println("*** EXPAX_GEN: visitAssign (bytecode offset) = " + code.bytecodeOffset);
-	    	System.out.println("*** EXPAX_GEN: tree.getTag() = " + tree.getTag().toString());
+    	if(R2_GEN){
+	    	System.out.println("*** R2_GEN: visitAssign = " + tree.toString());
+	    	System.out.println("*** R2_GEN: visitAssign (bytecode offset) = " + code.bytecodeOffset);
+	    	System.out.println("*** R2_GEN: tree.getTag() = " + tree.getTag().toString());
     	}
     	Item l = genExpr(tree.lhs, tree.lhs.type);
         Item item = genExpr(tree.rhs, tree.lhs.type);
         item.load();
-        if(EXPAX_GEN) System.out.println("*** EXPAX_GEN: call expaxInfo.add at visitAssign");
-    	expaxInfo.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
+        if(R2_GEN) System.out.println("*** R2_GEN: call r2Info.add at visitAssign");
+    	r2Info.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
         result = items.makeAssignItem(l);
     }
 
     public void visitAssignop (JCAssignOp tree) {
-    	if(EXPAX_GEN){
-    		System.out.println("*** EXPAX_GEN: visitAssignop = " + tree.toString());
-    		System.out.println("*** EXPAX_GEN: visitAssignop (bytecode offset) = " + code.bytecodeOffset);
-    		System.out.println("*** EXPAX_GEN: tree.getTag() = " + tree.getTag().toString());
+    	if(R2_GEN){
+    		System.out.println("*** R2_GEN: visitAssignop = " + tree.toString());
+    		System.out.println("*** R2_GEN: visitAssignop (bytecode offset) = " + code.bytecodeOffset);
+    		System.out.println("*** R2_GEN: tree.getTag() = " + tree.getTag().toString());
     	}
         OperatorSymbol operator = (OperatorSymbol) tree.operator;
         Item l;
@@ -2024,11 +2024,11 @@ public class Gen extends JCTree.Visitor {
                 int ival = ((Number) tree.rhs.type.constValue()).intValue();
                 if (tree.hasTag(MINUS_ASG)) ival = -ival;
                 ((LocalItem)l).incr(ival);
-                if(EXPAX_GEN) System.out.println("*** EXPAX_GEN: call expaxInfo.add at visitAssignOp");
+                if(R2_GEN) System.out.println("*** R2_GEN: call r2Info.add at visitAssignOp");
                 // add
-                expaxInfo.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
+                r2Info.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
                 // store
-                expaxInfo.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset + 1, tree.pos, tree.getTag().toString(), tree);
+                r2Info.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset + 1, tree.pos, tree.getTag().toString(), tree);
                 result = l;
                 return;
             }
@@ -2042,12 +2042,12 @@ public class Gen extends JCTree.Visitor {
     }
 
     public void visitUnary(JCUnary tree) {
-    	if(EXPAX_GEN){
-	    	System.out.println("*** EXPAX_GEN: visitUnary = " + tree.toString());
-	    	System.out.println("*** EXPAX_GEN: tree.getTag() = " + tree.getTag().toString());
+    	if(R2_GEN){
+	    	System.out.println("*** R2_GEN: visitUnary = " + tree.toString());
+	    	System.out.println("*** R2_GEN: tree.getTag() = " + tree.getTag().toString());
     	}
-    	if(EXPAX_GEN) System.out.println("*** EXPAX_GEN: call expaxInfo.add at visitUnary");
-    	expaxInfo.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
+    	if(R2_GEN) System.out.println("*** R2_GEN: call r2Info.add at visitUnary");
+    	r2Info.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
         OperatorSymbol operator = (OperatorSymbol)tree.operator;
         if (tree.hasTag(NOT)) {
             CondItem od = genCond(tree.arg, false);
@@ -2071,13 +2071,13 @@ public class Gen extends JCTree.Visitor {
                 od.duplicate();
                 if (od instanceof LocalItem &&
                     (operator.opcode == iadd || operator.opcode == isub)) {
-                	expaxInfo.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
+                	r2Info.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
                     ((LocalItem)od).incr(tree.hasTag(PREINC) ? 1 : -1);
                     result = od;
                 } else {
                     od.load();
                     code.emitop0(one(od.typecode));
-                    expaxInfo.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
+                    r2Info.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
                     code.emitop0(operator.opcode);
                     // Perform narrowing primitive conversion if byte,
                     // char, or short.  Fix for 4304655.
@@ -2092,14 +2092,14 @@ public class Gen extends JCTree.Visitor {
                 if (od instanceof LocalItem &&
                     (operator.opcode == iadd || operator.opcode == isub)) {
                     Item res = od.load();
-                    expaxInfo.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
+                    r2Info.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
                     ((LocalItem)od).incr(tree.hasTag(POSTINC) ? 1 : -1);
                     result = res;
                 } else {
                     Item res = od.load();
                     od.stash(od.typecode);
                     code.emitop0(one(od.typecode));
-                    expaxInfo.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
+                    r2Info.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
                     code.emitop0(operator.opcode);
                     // Perform narrowing primitive conversion if byte,
                     // char, or short.  Fix for 4304655.
@@ -2123,8 +2123,8 @@ public class Gen extends JCTree.Visitor {
 
     /** Generate a null check from the object value at stack top. */
     private void genNullCheck(DiagnosticPosition pos) {
-    	if(EXPAX_GEN){
-	    	System.out.println("*** EXPAX_GEN: genNullCheck");
+    	if(R2_GEN){
+	    	System.out.println("*** R2_GEN: genNullCheck");
     	}
         callMethod(pos, syms.objectType, names.getClass,
                    List.<Type>nil(), false);
@@ -2132,10 +2132,10 @@ public class Gen extends JCTree.Visitor {
     }
 
     public void visitBinary(JCBinary tree) {
-    	if(EXPAX_GEN){
-	    	System.out.println("*** EXPAX_GEN: visitBinary = " + tree.toString());
-	    	System.out.println("*** EXPAX_GEN: visitBinary (bytecode offset) = " + code.bytecodeOffset);
-	    	System.out.println("*** EXPAX_GEN: tree.getTag() = " + tree.getTag().toString());
+    	if(R2_GEN){
+	    	System.out.println("*** R2_GEN: visitBinary = " + tree.toString());
+	    	System.out.println("*** R2_GEN: visitBinary (bytecode offset) = " + code.bytecodeOffset);
+	    	System.out.println("*** R2_GEN: tree.getTag() = " + tree.getTag().toString());
     	}
         OperatorSymbol operator = (OperatorSymbol)tree.operator;
         if (operator.opcode == string_add) {
@@ -2147,15 +2147,15 @@ public class Gen extends JCTree.Visitor {
             bufferToString(tree.pos());
             result = items.makeStackItem(syms.stringType);
         } else if (tree.hasTag(AND)) {
-        	if(EXPAX_GEN) System.out.println("*** EXPAX_GEN: call expaxInfo.add at visitBinary#1");
-        	expaxInfo.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
+        	if(R2_GEN) System.out.println("*** R2_GEN: call r2Info.add at visitBinary#1");
+        	r2Info.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
             CondItem lcond = genCond(tree.lhs, CRT_FLOW_CONTROLLER);
             if (!lcond.isFalse()) {
                 Chain falseJumps = lcond.jumpFalse();
                 code.resolve(lcond.trueJumps);
                 CondItem rcond = genCond(tree.rhs, CRT_FLOW_TARGET);
-                if(EXPAX_GEN) System.out.println("*** EXPAX_GEN: call expaxInfo.add at visitBinary#2");
-                expaxInfo.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
+                if(R2_GEN) System.out.println("*** R2_GEN: call r2Info.add at visitBinary#2");
+                r2Info.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
                 result = items.
                     makeCondItem(rcond.opcode,
                                  rcond.trueJumps,
@@ -2165,15 +2165,15 @@ public class Gen extends JCTree.Visitor {
                 result = lcond;
             }
         } else if (tree.hasTag(OR)) {
-        	if(EXPAX_GEN) System.out.println("*** EXPAX_GEN: call expaxInfo.add at visitBinary#3");
-        	expaxInfo.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
+        	if(R2_GEN) System.out.println("*** R2_GEN: call r2Info.add at visitBinary#3");
+        	r2Info.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
             CondItem lcond = genCond(tree.lhs, CRT_FLOW_CONTROLLER);
             if (!lcond.isTrue()) {
                 Chain trueJumps = lcond.jumpTrue();
                 code.resolve(lcond.falseJumps);
                 CondItem rcond = genCond(tree.rhs, CRT_FLOW_TARGET);
-                if(EXPAX_GEN) System.out.println("*** EXPAX_GEN: call expaxInfo.add at visitBinary#4");
-                expaxInfo.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
+                if(R2_GEN) System.out.println("*** R2_GEN: call r2Info.add at visitBinary#4");
+                r2Info.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
                 result = items.
                     makeCondItem(rcond.opcode,
                                  Code.mergeChains(trueJumps, rcond.trueJumps),
@@ -2287,23 +2287,23 @@ public class Gen extends JCTree.Visitor {
             }
             if (opcode >= ifeq && opcode <= if_acmpne ||
                 opcode == if_acmp_null || opcode == if_acmp_nonnull) {
-            	if(EXPAX_GEN) System.out.println("*** EXPAX_GEN: call expaxInfo.add at completeBinop");
-            	expaxInfo.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
+            	if(R2_GEN) System.out.println("*** R2_GEN: call r2Info.add at completeBinop");
+            	r2Info.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
                 return items.makeCondItem(opcode);
             } else {
-            	if(EXPAX_GEN) System.out.println("*** EXPAX_GEN: call expaxInfo.add at completeBinop");
-            	expaxInfo.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
+            	if(R2_GEN) System.out.println("*** R2_GEN: call r2Info.add at completeBinop");
+            	r2Info.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
                 code.emitop0(opcode);
-//                expaxInfo.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
+//                r2Info.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
                 return items.makeStackItem(optype.restype);
             }
         }
 
     public void visitTypeCast(JCTypeCast tree) {
-    	if(EXPAX_GEN) System.out.println("*** EXPAX_GEN: visitTypeCast - tree.toString() = " + tree.toString());
+    	if(R2_GEN) System.out.println("*** R2_GEN: visitTypeCast - tree.toString() = " + tree.toString());
         setTypeAnnotationPositions(tree.pos);
-    	if(EXPAX_GEN) System.out.println("*** EXPAX_GEN: call expaxInfo.add at visitTypeCast");
-    	expaxInfo.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
+    	if(R2_GEN) System.out.println("*** R2_GEN: call r2Info.add at visitTypeCast");
+    	r2Info.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
         result = genExpr(tree.expr, tree.clazz.type).load();
         // Additional code is only needed if we cast to a reference type
         // which is not statically a supertype of the expression's type.
@@ -2320,7 +2320,7 @@ public class Gen extends JCTree.Visitor {
     }
 
     public void visitTypeTest(JCInstanceOf tree) {
-    	if(EXPAX_GEN) System.out.println("*** EXPAX_GEN: visitTypeTest - tree.toString() = " + tree.toString());
+    	if(R2_GEN) System.out.println("*** R2_GEN: visitTypeTest - tree.toString() = " + tree.toString());
         setTypeAnnotationPositions(tree.pos);
         genExpr(tree.expr, tree.expr.type).load();
         code.emitop2(instanceof_, makeRef(tree.pos(), tree.clazz.type));
@@ -2328,63 +2328,63 @@ public class Gen extends JCTree.Visitor {
     }
 
     public void visitIndexed(JCArrayAccess tree) {
-    	if(EXPAX_GEN) {
-    		System.out.println("*** EXPAX_GEN: visitIndexed - tree.toString() = " + tree.toString());
-    		System.out.println("*** EXPAX_GEN: visitIndexed (bytecode offset) = " + code.bytecodeOffset);
-    		System.out.println("*** EXPAX_GEN: tree.getTag() = " + tree.getTag().toString());
+    	if(R2_GEN) {
+    		System.out.println("*** R2_GEN: visitIndexed - tree.toString() = " + tree.toString());
+    		System.out.println("*** R2_GEN: visitIndexed (bytecode offset) = " + code.bytecodeOffset);
+    		System.out.println("*** R2_GEN: tree.getTag() = " + tree.getTag().toString());
     	}
         genExpr(tree.indexed, tree.indexed.type).load();
         genExpr(tree.index, syms.intType).load();
-        if(EXPAX_GEN) System.out.println("*** EXPAX_GEN: call expaxInfo.add at visitIndexed");
-        expaxInfo.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
+        if(R2_GEN) System.out.println("*** R2_GEN: call r2Info.add at visitIndexed");
+        r2Info.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
         result = items.makeIndexedItem(tree.type);
     }
 
     public void visitIdent(JCIdent tree) {
-    	if(EXPAX_GEN){
-    		System.out.println("*** EXPAX_GEN: visitIdent - tree.toString() = " + tree.toString());
-    		System.out.println("*** EXPAX_GEN: visitIdent (bytecode offset) = " + code.bytecodeOffset);
-    		System.out.println("*** EXPAX_GEN: tree.getTag() = " + tree.getTag().toString());
+    	if(R2_GEN){
+    		System.out.println("*** R2_GEN: visitIdent - tree.toString() = " + tree.toString());
+    		System.out.println("*** R2_GEN: visitIdent (bytecode offset) = " + code.bytecodeOffset);
+    		System.out.println("*** R2_GEN: tree.getTag() = " + tree.getTag().toString());
     	}
         Symbol sym = tree.sym;
         if (tree.name == names._this || tree.name == names._super) {
-        	if(EXPAX_GEN) System.out.println("*** EXPAX_GEN: call expaxInfo.add at visitIdent#0");
-        	expaxInfo.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
+        	if(R2_GEN) System.out.println("*** R2_GEN: call r2Info.add at visitIdent#0");
+        	r2Info.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
             Item res = tree.name == names._this
                 ? items.makeThisItem()
                 : items.makeSuperItem();
             if (sym.kind == MTH) {
                 // Generate code to address the constructor.
                 res.load();
-                if(EXPAX_GEN) System.out.println("*** EXPAX_GEN: call expaxInfo.add at visitIdent#1");
-                expaxInfo.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
+                if(R2_GEN) System.out.println("*** R2_GEN: call r2Info.add at visitIdent#1");
+                r2Info.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
                 res = items.makeMemberItem(sym, true);
             }
             result = res;
         } else if (sym.kind == VAR && sym.owner.kind == MTH) {
-            if(EXPAX_GEN) System.out.println("*** EXPAX_GEN: call expaxInfo.add at visitIdent#2");
-            expaxInfo.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
+            if(R2_GEN) System.out.println("*** R2_GEN: call r2Info.add at visitIdent#2");
+            r2Info.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
             result = items.makeLocalItem((VarSymbol)sym);
         } else if ((sym.flags() & STATIC) != 0) {
             if (!isAccessSuper(env.enclMethod))
                 sym = binaryQualifier(sym, env.enclClass.type);
-            if(EXPAX_GEN) System.out.println("*** EXPAX_GEN: call expaxInfo.add at visitIdent#3");
-            expaxInfo.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
+            if(R2_GEN) System.out.println("*** R2_GEN: call r2Info.add at visitIdent#3");
+            r2Info.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
             result = items.makeStaticItem(sym);
         } else {
             items.makeThisItem().load();
             sym = binaryQualifier(sym, env.enclClass.type);
-            if(EXPAX_GEN) System.out.println("*** EXPAX_GEN: call expaxInfo.add at visitIdent#4");
-            expaxInfo.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
+            if(R2_GEN) System.out.println("*** R2_GEN: call r2Info.add at visitIdent#4");
+            r2Info.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
             result = items.makeMemberItem(sym, (sym.flags() & PRIVATE) != 0);
         }
     }
 
     public void visitSelect(JCFieldAccess tree) {
-    	if(EXPAX_GEN){
-    		System.out.println("*** EXPAX_GEN: visitSelect - tree.toString() = " + tree.toString());
-    		System.out.println("*** EXPAX_GEN: visitSelect (bytecode offset) = " + code.bytecodeOffset);
-    		System.out.println("*** EXPAX_GEN: tree.getTag() = " + tree.getTag().toString());
+    	if(R2_GEN){
+    		System.out.println("*** R2_GEN: visitSelect - tree.toString() = " + tree.toString());
+    		System.out.println("*** R2_GEN: visitSelect (bytecode offset) = " + code.bytecodeOffset);
+    		System.out.println("*** R2_GEN: tree.getTag() = " + tree.getTag().toString());
     	}
     	
         Symbol sym = tree.sym;
@@ -2393,8 +2393,8 @@ public class Gen extends JCTree.Visitor {
             Assert.check(target.hasClassLiterals());
             setTypeAnnotationPositions(tree.pos);
             code.emitop2(ldc2, makeRef(tree.pos(), tree.selected.type));
-            if(EXPAX_GEN) System.out.println("*** EXPAX_GEN: call expaxInfo.add at visitSelect#1");
-            expaxInfo.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
+            if(R2_GEN) System.out.println("*** R2_GEN: call r2Info.add at visitSelect#1");
+            r2Info.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
             result = items.makeStackItem(pt);
             return;
        } else if (tree.name == names.TYPE) {
@@ -2417,8 +2417,8 @@ public class Gen extends JCTree.Visitor {
 
         Item base = null;
         if (selectSuper) {
-        	if(EXPAX_GEN) System.out.println("*** EXPAX_GEN: call expaxInfo.add at visitSelect#2");
-        	expaxInfo.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
+        	if(R2_GEN) System.out.println("*** R2_GEN: call r2Info.add at visitSelect#2");
+        	r2Info.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
         	base = items.makeSuperItem();
         }
         else{
@@ -2436,8 +2436,8 @@ public class Gen extends JCTree.Visitor {
                 base.load();
                 genNullCheck(tree.selected.pos());
             }
-            if(EXPAX_GEN) System.out.println("*** EXPAX_GEN: call expaxInfo.add at visitSelect#3");
-            expaxInfo.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
+            if(R2_GEN) System.out.println("*** R2_GEN: call r2Info.add at visitSelect#3");
+            r2Info.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
             result = items.
                 makeImmediateItem(sym.type, ((VarSymbol) sym).getConstValue());
         } else {
@@ -2449,19 +2449,19 @@ public class Gen extends JCTree.Visitor {
                     base = base.load();
                 }
                 base.drop();
-                if(EXPAX_GEN) System.out.println("*** EXPAX_GEN: call expaxInfo.add at visitSelect#4");
-                expaxInfo.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
+                if(R2_GEN) System.out.println("*** R2_GEN: call r2Info.add at visitSelect#4");
+                r2Info.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
                 result = items.makeStaticItem(sym);
             } else {
                 base.load();
                 if (sym == syms.lengthVar) {
-                	if(EXPAX_GEN) System.out.println("*** EXPAX_GEN: call expaxInfo.add at visitSelect#5");
-                	expaxInfo.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
+                	if(R2_GEN) System.out.println("*** R2_GEN: call r2Info.add at visitSelect#5");
+                	r2Info.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
                     code.emitop0(arraylength);
                     result = items.makeStackItem(syms.intType);
                 } else {
-                	if(EXPAX_GEN) System.out.println("*** EXPAX_GEN: call expaxInfo.add at visitSelect#6");
-                	expaxInfo.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
+                	if(R2_GEN) System.out.println("*** R2_GEN: call r2Info.add at visitSelect#6");
+                	r2Info.add(curClassName, curMethName, curRetTypeName, code.bytecodeOffset, tree.pos, tree.getTag().toString(), tree);
                     result = items.
                         makeMemberItem(sym,
                                        (sym.flags() & PRIVATE) != 0 ||
@@ -2472,10 +2472,10 @@ public class Gen extends JCTree.Visitor {
     }
 
     public void visitLiteral(JCLiteral tree) {
-    	if(EXPAX_GEN){
-    		System.out.println("*** EXPAX_GEN: visitLiteral - tree.toString() = " + tree.toString());
-    		System.out.println("*** EXPAX_GEN: visitLiteral (bytecode offset) = " + code.bytecodeOffset);
-    		System.out.println("*** EXPAX_GEN: tree.getTag() = " + tree.getTag().toString());
+    	if(R2_GEN){
+    		System.out.println("*** R2_GEN: visitLiteral - tree.toString() = " + tree.toString());
+    		System.out.println("*** R2_GEN: visitLiteral (bytecode offset) = " + code.bytecodeOffset);
+    		System.out.println("*** R2_GEN: tree.getTag() = " + tree.getTag().toString());
     	}
         if (tree.type.tag == TypeTags.BOT) {
             code.emitop0(aconst_null);
@@ -2491,7 +2491,7 @@ public class Gen extends JCTree.Visitor {
     }
 
     public void visitLetExpr(LetExpr tree) {
-    	if(EXPAX_GEN) System.out.println("*** EXPAX_GEN: visitLetExpr - tree.toString() = " + tree.toString());
+    	if(R2_GEN) System.out.println("*** R2_GEN: visitLetExpr - tree.toString() = " + tree.toString());
         int limit = code.nextreg;
         genStats(tree.defs, env);
         result = genExpr(tree.expr, tree.expr.type).load();
@@ -2510,9 +2510,9 @@ public class Gen extends JCTree.Visitor {
      *  @return      True if code is generated with no errors.
      */
     public boolean genClass(Env<AttrContext> env, JCClassDecl cdef) {
-    	if(EXPAX_GEN) {
-    		System.out.println("*** EXPAX_GEN: class name is changed to = " + cdef.sym.toString());
-			System.out.println("*** EXPAX_RPT: method name is changed to = " + curMethName);
+    	if(R2_GEN) {
+    		System.out.println("*** R2_GEN: class name is changed to = " + cdef.sym.toString());
+			System.out.println("*** R2_RPT: method name is changed to = " + curMethName);
     	}
         try {
         	curClassName = cdef.sym.toString();
@@ -2624,7 +2624,7 @@ public class Gen extends JCTree.Visitor {
     /**
      * @author jspark
      */
-	public void writeExpaxInfo(String expaxInfoPath) {
-		expaxInfo.write(expaxInfoPath);
+	public void writeR2Info(String r2InfoPath) {
+		r2Info.write(r2InfoPath);
 	}
 }
