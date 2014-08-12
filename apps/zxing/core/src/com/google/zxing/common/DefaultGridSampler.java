@@ -47,7 +47,7 @@ public final class DefaultGridSampler extends GridSampler {
                               int dimension,
                               PerspectiveTransform transform) throws NotFoundException {
     BitMatrix bits = new BitMatrix(dimension);
-    Alloc.alloc_TAG6();
+//    Alloc.alloc_TAG6();
     float[] points = new float[dimension << 1];
     for (int y = 0; y < dimension; y++) {
       int max = points.length;
@@ -63,13 +63,15 @@ public final class DefaultGridSampler extends GridSampler {
       try {
         for (int x = 0; x < max; x += 2) {
           //additional accept
-          points = Accept.accept_all_FIELD1_TAG6(points);
+//          points = Accept.accept_all_FIELD1_TAG6(points);
           boolean imageGet = image.get((int)points[x], (int)points[x + 1]);
           //additional accept
-          imageGet = Accept.accept(imageGet);
+//          imageGet = Accept.accept(imageGet);
           if (imageGet) {
+    	    int offset = y * bits.rowSize + ((x >> 1) >> 5);
+    	    bits.bits[offset] |= 1 << ((x >> 1) & 0x1f);
             // Black(-ish) pixel
-            bits.set(x >> 1, y);
+//            bits.set(x >> 1, y);
           }
         }
       } catch (ArrayIndexOutOfBoundsException aioobe) {

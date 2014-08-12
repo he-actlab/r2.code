@@ -97,7 +97,7 @@ public class Detector {
     //additional accept
     moduleSize = Accept.accept(moduleSize);
     if (moduleSize < 1.0f) {
-        System.err.println("module too small " + (moduleSize));
+      System.err.println("module too small " + (moduleSize));
       throw NotFoundException.getNotFoundInstance();
     }
     int dimension = computeDimension(topLeft, topRight, bottomLeft, moduleSize);
@@ -208,11 +208,11 @@ public class Detector {
 	float num; 
 	num = (ResultPoint.distance(topLeft, topRight) / moduleSize);
 	//additional accept
-	num = Accept.accept(num);
+//	num = Accept.accept(num);
     int tltrCentersDimension = round(num);
     num = (ResultPoint.distance(topLeft, bottomLeft) / moduleSize);
 	//additional accept
-	num = Accept.accept(num);
+//	num = Accept.accept(num);
     int tlblCentersDimension = round(num);
     int dimension = ((tltrCentersDimension + tlblCentersDimension) >> 1) + 7;
     //additional accept
@@ -249,30 +249,34 @@ public class Detector {
    * {@link #sizeOfBlackWhiteBlackRunBothWays(int, int, int, int)} to figure the
    * width of each, measuring along the axis between their centers.</p>
    */
-  private  float calculateModuleSizeOneWay(ResultPoint pattern, ResultPoint otherPattern) {
-     float moduleSizeEst1 = sizeOfBlackWhiteBlackRunBothWays((int) pattern.getX(),
+  private float calculateModuleSizeOneWay(ResultPoint pattern, ResultPoint otherPattern) {
+	boolean done = false;
+	float ret = -1; 
+    float moduleSizeEst1 = sizeOfBlackWhiteBlackRunBothWays((int) pattern.getX(),
         (int) pattern.getY(),
         (int) otherPattern.getX(),
         (int) otherPattern.getY());
-     float moduleSizeEst2 = sizeOfBlackWhiteBlackRunBothWays((int) otherPattern.getX(),
+    float moduleSizeEst2 = sizeOfBlackWhiteBlackRunBothWays((int) otherPattern.getX(),
         (int) otherPattern.getY(),
         (int) pattern.getX(),
         (int) pattern.getY());
     boolean cond;
     cond = ApproxMath.isNaN(moduleSizeEst1);
-    //additional accept
-    cond = Accept.accept(cond);
     if (cond) {
-      return moduleSizeEst2 / 7.0f;
+      ret = moduleSizeEst2 / 7.0f;
+      done = true;
     }
-    //additional accept
-    cond = ApproxMath.isNaN(moduleSizeEst2);
-    if (cond) {
-      return moduleSizeEst1 / 7.0f;
+    if(!done) {
+	    cond = ApproxMath.isNaN(moduleSizeEst2);
+	    if (cond) {
+	      ret = moduleSizeEst1 / 7.0f;
+	      done = true;
+	    }
+	    if(!done) {
+		    ret = (moduleSizeEst1 + moduleSizeEst2) / 14.0f;
+	    }
     }
-    // Average them, and divide by 7 since we've counted the width of 3 black modules,
-    // and 1 white and 1 black module on either side. Ergo, divide sum by 14.
-    return (moduleSizeEst1 + moduleSizeEst2) / 14.0f;
+    return ret;
   }
 
   /**
@@ -295,19 +299,19 @@ public class Detector {
      otherToX = image.getWidth() - 1;
    }
    //additional accept
-   scale = Accept.accept(scale);
+//   scale = Accept.accept(scale);
    int otherToY = (int) (fromY - (toY - fromY) * scale); // EnerJ TODO
 
    scale = 1.0f;
    if (otherToY < 0) {
      scale = (float) fromY / (float) (fromY - otherToY);
      otherToY = 0;
-   } else if (otherToY >= image.getHeight()) {
-     scale = (float) (image.getHeight() - 1 - fromY) / (float) (otherToY - fromY);
-     otherToY = image.getHeight() - 1;
+   } else if (otherToY >= image.height) {
+     scale = (float) (image.height - 1 - fromY) / (float) (otherToY - fromY);
+     otherToY = image.height - 1;
    }
    //additional accept
-   scale = Accept.accept(scale);
+//   scale = Accept.accept(scale);
    otherToX = (int) (fromX + (otherToX - fromX) * scale); // EnerJ TODO
 
    result += sizeOfBlackWhiteBlackRun(fromX, fromY, otherToX, otherToY);
@@ -348,14 +352,14 @@ public class Detector {
       if (state == 1) { // In white pixels, looking for black
     	//additional accept
     	boolean imageGet = (image.get(realX, realY));
-    	imageGet = Accept.accept(imageGet);
+//    	imageGet = Accept.accept(imageGet);
         if (imageGet) {
           state++;
         }
       } else {
       	//additional accept
       	boolean imageGet = (image.get(realX, realY));
-      	imageGet = Accept.accept(imageGet);
+//      	imageGet = Accept.accept(imageGet);
         if (!imageGet) {
           state++;
         }
@@ -413,13 +417,13 @@ public class Detector {
     int alignmentAreaBottomY = ApproxMath.min(image.getHeight() - 1, estAlignmentY + allowance);
 
     //additional accept
-    alignmentAreaLeftX = Accept.accept(alignmentAreaLeftX);
+//    alignmentAreaLeftX = Accept.accept(alignmentAreaLeftX);
     //additional accept
-    alignmentAreaTopY = Accept.accept(alignmentAreaTopY);
+//    alignmentAreaTopY = Accept.accept(alignmentAreaTopY);
     //additional accept
-    alignmentAreaRightX = Accept.accept(alignmentAreaRightX);
+//    alignmentAreaRightX = Accept.accept(alignmentAreaRightX);
     //additional accept
-    alignmentAreaBottomY = Accept.accept(alignmentAreaBottomY);
+//    alignmentAreaBottomY = Accept.accept(alignmentAreaBottomY);
     
     AlignmentPatternFinder alignmentFinder =
         new AlignmentPatternFinder(

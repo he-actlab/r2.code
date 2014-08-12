@@ -42,13 +42,14 @@ public final class AlignmentPattern extends ResultPoint {
    * position and size -- meaning, it is at nearly the same center with nearly the same size.</p>
    */
    boolean aboutEquals(float moduleSize, float i, float j) {
+	boolean ret = false;
 	//additional accept
 	moduleSize = Accept.accept(moduleSize);
     if (Math.abs(i - getY()) <= moduleSize && Math.abs(j - getX()) <= moduleSize) {
       float moduleSizeDiff = ApproxMath.abs(moduleSize - estimatedModuleSize);
-      return moduleSizeDiff <= 1.0f || moduleSizeDiff / estimatedModuleSize <= 1.0f;
+      ret = moduleSizeDiff <= 1.0f || moduleSizeDiff / estimatedModuleSize <= 1.0f;
     }
-    return false;
+    return ret;
   }
 
 }

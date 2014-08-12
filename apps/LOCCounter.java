@@ -5,7 +5,8 @@ import java.io.LineNumberReader;
 import java.util.Scanner;
 
 public class LOCCounter {
-	private static String[] libPaths = { "/Users/jspark/projects/jdk" };
+	private static String[] libPaths = { "/Users/jspark/projects/jdk", "/Users/jspark/projects/jdk/openjdk/jdk/src/share/classes" };
+	private static String[] excludeLibs = { "com/sun/", "com/oracle/", "sun/"};
 	private static String[] appPaths;
 	private static long app = 0;
 	private static long lib = 0;
@@ -48,11 +49,17 @@ public class LOCCounter {
 
 	private static long fileCount(String path) {
 		long result;
-		for (String libdir : libPaths) {
+		OUT: for (String libdir : libPaths) {
 			LineNumberReader lnr;
 			try {
 				lnr = new LineNumberReader(new FileReader(new File(libdir
 						+ File.separator + path)));
+				for (String exc : excludeLibs) {
+					if (path.contains(exc)) {
+						System.out.println("[" + path + "] is excluded");
+						continue OUT;
+					}
+				}
 				lnr.skip(Long.MAX_VALUE);
 				result = lnr.getLineNumber();
 				System.out.println(libdir + File.separator + path + " " + result);

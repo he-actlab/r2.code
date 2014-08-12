@@ -58,19 +58,20 @@ public final class FinderPattern extends ResultPoint {
    * position and size -- meaning, it is at nearly the same center with nearly the same size.</p>
    */
    boolean aboutEquals( float moduleSize, float i, float j) {
+	boolean ret = false;
 	boolean cond = (ApproxMath.abs(i - getY()) <= moduleSize && ApproxMath.abs(j - getX()) <= moduleSize);
 	//additional accept
-	cond = Accept.accept(cond);
+//	cond = Accept.accept(cond);
     if (cond) {
       float moduleSizeDiff = ApproxMath.abs(moduleSize - estimatedModuleSize);
       //additional accept
 //      moduleSizeDiff = Accept.accept(moduleSizeDiff);
       float temp = estimatedModuleSize;
-      //additional accept
+//      additional accept
 //      temp = Accept.accept(temp);
-      return moduleSizeDiff <= 1.0f || moduleSizeDiff / temp <= 1.0f;
+      ret = moduleSizeDiff <= 1.0f || moduleSizeDiff / temp <= 1.0f;
     }
-    return false;
+    return ret;
   }
    
 }

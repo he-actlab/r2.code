@@ -158,10 +158,8 @@ public final class BitMatrix {
    */
   public int[] getTopLeftOnBit() {
     int bitsOffset = 0;
-    int b = bits[bitsOffset];
     //additional accept
-    b = Accept.accept(b);
-    while (bitsOffset < bits.length && b == 0) {
+    while (bitsOffset < bits.length && Accept.accept(bits[bitsOffset]) == 0) {
       bitsOffset++;
     }
     if (bitsOffset == bits.length) {
@@ -173,10 +171,8 @@ public final class BitMatrix {
     int theBits = bits[bitsOffset];
     int bit = 0;
     
-    int lhs = (theBits << (31 - bit));
     //additional accept
-    lhs = Accept.accept(lhs);
-    while (lhs == 0) {
+    while (Accept.accept((theBits << (31 - bit))) == 0) {
       bit++;
     }
     x += bit;

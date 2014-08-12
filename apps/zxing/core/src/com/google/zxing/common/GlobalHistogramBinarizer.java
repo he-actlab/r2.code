@@ -74,11 +74,12 @@ public class GlobalHistogramBinarizer extends Binarizer {
       // A simple -1 4 -1 box filter with a weight of 2.
       int luminance = ((center << 2) - left - right) >> 1;
       // additional accept
-      luminance = Accept.accept(luminance);
+//      luminance = Accept.accept(luminance);
       // additional accept
-      blackPoint = Accept.accept(blackPoint);
+//      blackPoint = Accept.accept(blackPoint);
       if (luminance < blackPoint) {
-        row.set(x);
+    	row.bits[x >> 5] |= 1 << (x & 0x1F);
+//        row.set(x);
       }
       left = center;
       center = right;
@@ -119,11 +120,13 @@ public class GlobalHistogramBinarizer extends Binarizer {
       for (int x = 0; x< width; x++) {
         int pixel = (localLuminances[offset + x] & 0xff);
         //additional accept
-        pixel = Accept.accept(pixel);
+//        pixel = Accept.accept(pixel);
         //additional accept
-        blackPoint = Accept.accept(blackPoint);
+//        blackPoint = Accept.accept(blackPoint);
         if (pixel < blackPoint) {
-          matrix.set(x, y);
+          int offset2 = y * matrix.rowSize + (x >> 5);
+          matrix.bits[offset2] |= 1 << (x & 0x1f);
+//          matrix.set(x, y);
         }
       }
     }

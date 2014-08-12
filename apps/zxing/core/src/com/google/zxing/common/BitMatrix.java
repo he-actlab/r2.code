@@ -54,7 +54,7 @@ public final class BitMatrix {
     this.height = height;
     this.rowSize = (width + 31) >> 5;
     Alloc.alloc_TAG2();
-    bits = new  int[rowSize * height];
+    bits = new int[rowSize * height];
   }
 
   /**
@@ -194,6 +194,7 @@ public final class BitMatrix {
   }
 
   public boolean equals(Object o) {
+	boolean ret = true;
     if (!(o instanceof BitMatrix)) {
       return false;
     }
@@ -206,14 +207,14 @@ public final class BitMatrix {
       int lhs = bits[i];
       int rhs = other.bits[i];
       //additional accept
-      lhs = Accept.accept(lhs);
+//      lhs = Accept.accept(lhs);
       //additional accept
-      rhs = Accept.accept(rhs);
+//      rhs = Accept.accept(rhs);
       if (lhs != rhs) {
-        return false;
+        ret = false;
       }
     }
-    return true;
+    return ret;
   }
 
   public int hashCode() {
@@ -224,7 +225,7 @@ public final class BitMatrix {
     for (int i = 0; i < bits.length; i++) {
       int b = bits[i];
       //additional accept
-      b = Accept.accept(b);
+//      b = Accept.accept(b);
       hash = 31 * hash + (int)(b);
     }
     return hash;
@@ -236,7 +237,7 @@ public final class BitMatrix {
       for (int x = 0; x < width; x++) {
     	boolean get = get(x, y);
     	//additional accept
-    	get = Accept.accept(get);
+//    	get = Accept.accept(get);
         result.append(get ? "X " : "  ");
       }
       result.append('\n');

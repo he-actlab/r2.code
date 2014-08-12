@@ -117,7 +117,7 @@ public class QRCodeReader implements Reader {
     }
     int x = leftTopBlack[0];
     int y = leftTopBlack[1];
-    while (x < minDimension && y < minDimension && (image.get(x, y))) {
+    while (x < minDimension && y < minDimension && Accept.accept(image.get(x, y))) {
       x++;
       y++;
     }
@@ -133,7 +133,7 @@ public class QRCodeReader implements Reader {
 
     // And now find where the rightmost black module on the first row ends
     int rowEndOfSymbol = width - 1;
-    while (rowEndOfSymbol > x && !image.get(rowEndOfSymbol, y)) {
+    while (rowEndOfSymbol > x && !Accept.accept(image.get(rowEndOfSymbol, y))) {
       rowEndOfSymbol--;
     }
     if (rowEndOfSymbol <= x) {
@@ -169,9 +169,11 @@ public class QRCodeReader implements Reader {
       for (int j = 0; j < dimension; j++) {
     	//additional accept
     	boolean imageGet = image.get(x + j * moduleSize, iOffset);
-    	imageGet = Accept.accept(imageGet);
+//    	imageGet = Accept.accept(imageGet);
         if (imageGet) {
-          bits.set(j, i);
+          int offset = i * bits.rowSize + (j >> 5);
+          bits.bits[offset] |= 1 << (j & 0x1f);
+//          bits.set(j, i);
         }
       }
     }

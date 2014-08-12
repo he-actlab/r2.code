@@ -2,8 +2,8 @@ package Sobel;
 
 import java.io.IOException;
 
-import chord.analyses.expax.lang.*;
-import chord.analyses.expax.lang.math.*;
+//import chord.analyses.expax.lang.*;
+//import chord.analyses.expax.lang.math.*;
 import Sobel.TextFile.Mode;
 
 
@@ -94,7 +94,7 @@ public class RgbImage {
 		double x = (p1 + (p2 + p2) + p3 - p7 - (p8 + p8) - p9); 	
 		double y = (p3 + (p6 + p6) + p9 - p1 - (p4 + p4) - p7);	
 
-		double l = ApproxMath.sqrt(x * x + y * y);	
+		double l = Math.sqrt(x * x + y * y);	
 
 		return l;
 	}
@@ -154,9 +154,9 @@ public class RgbImage {
 //				L = Accept.accept(L);
 				if (L < 0)
 					L = 0;
-				L = Accept.accept(L);
+//				L = Accept.accept(L);
 				System.out.println(L);
-				L = Precise.precise(L);	
+//				L = Precise.precise(L);	
 			}
 		}
 	}

@@ -130,9 +130,11 @@ public final class HybridBinarizer extends GlobalHistogramBinarizer {
 			for (int x = 0; x < 8; x++) {
 				int pixel = (luminances[offset + x] & 0xff);
 				//additional accept
-				pixel = Accept.accept(pixel);
+//				pixel = Accept.accept(pixel);
 				if (pixel < threshold) {
-					matrix.set(xoffset + x, yoffset + y);
+				    int offset2 = (yoffset + y) * matrix.rowSize + ((xoffset + x) >> 5);
+				    matrix.bits[offset2] |= 1 << ((xoffset + x) & 0x1f);
+//					matrix.set(xoffset + x, yoffset + y);
 				}
 			}
 		}

@@ -67,6 +67,14 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 	ExpAbstraction abs;
 	boolean isTimeOut;
 	Set<Quad> totalVisitOpSet = new HashSet<Quad>();
+	Map<jq_Method, Set<Quad>> unusedQuad = new HashMap<jq_Method,Set<Quad>>();
+	Map<jq_Method,Set<Register>> alreadyUsedQuad = new HashMap<jq_Method,Set<Register>>();
+	Map<jq_Method, Set<Register>> unusedReg = new HashMap<jq_Method,Set<Register>>();
+	Map<jq_Method,Map<Register,Quad>> regToQuad = new HashMap<jq_Method,Map<Register,Quad>>();
+	
+	boolean DEBUG = false;
+	boolean EXPAX_EXPERIMENT = true;
+	boolean ZXING_DEBUG = true;
 	
 	public ForwardAnalysis(ExpAbstraction abs){
 		this.abs = abs;
@@ -80,34 +88,37 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 		try{
 			Set<Quad> curOpSet = new ArraySet<Quad>();
 			Set<Quad> curStSet = new ArraySet<Quad>();
-			System.out.println("EXPAX_EXPERIMENT # of safe-to-approximate operations = " + (abs.approxStatements.size() + abs.approxStorage.size()));
-			System.out.println("Approximated operations: ");
-			for(Integer i : abs.approxStatements){
-				Inst inst = SharedData.domP.get(i);
-				curOpSet.add((Quad)inst);
-				System.out.println(inst.toVerboseStr());
-			}
-			System.out.println("Approximated storage: ");
-			for(Pair<Integer,Integer> pair : abs.approxStorage) {
-				Pair<Quad,jq_Field> qj = SharedData.idxFieldMap.get(pair);
-				curStSet.add(qj.val0);
-				if(qj.val1 == null)
-					System.out.println("h(" + qj.val0.toString() + "," + pair.val0 + ") f(ARRAY,-1)");
-				else
-					System.out.println("h(" + qj.val0.toString() + "," + pair.val0 + ") f(" + qj.val1.toString() + "," + pair.val1 + ")");
+			if(EXPAX_EXPERIMENT) System.out.println("EXPAX_EXPERIMENT # of safe-to-approximate operations = " + (abs.approxStatements.size() + abs.approxStorage.size()));
+			if(DEBUG) {System.out.println("Approximated operations: ");
+				for(Integer i : abs.approxStatements){
+					Inst inst = SharedData.domP.get(i);
+					curOpSet.add((Quad)inst);
+					System.out.println(inst.toVerboseStr());
+				}
+				System.out.println("Approximated storage: ");
+				for(Pair<Integer,Integer> pair : abs.approxStorage) {
+					Pair<Quad,jq_Field> qj = SharedData.idxFieldMap.get(pair);
+					curStSet.add(qj.val0);
+					if(qj.val1 == null)
+						System.out.println("h(" + qj.val0.toString() + "," + pair.val0 + ") f(ARRAY,-1)");
+					else
+						System.out.println("h(" + qj.val0.toString() + "," + pair.val0 + ") f(" + qj.val1.toString() + "," + pair.val1 + ")");
+				}
 			}
 			SharedData.previousAllApproxOpSet.removeAll(curOpSet);
 			for(Quad q : SharedData.previousAllApproxOpSet) {
-				System.out.println("ZXING_DEBUG Removed quad = " + q.toVerboseStr());
+				if(ZXING_DEBUG) System.out.println("ZXING_DEBUG Removed quad = " + q.toVerboseStr());
 			}	
 			SharedData.previousAllApproxStorageSet.removeAll(curStSet);
 			for(Quad q : SharedData.previousAllApproxStorageSet) {
-				System.out.println("ZXING_DEBUG Removed quad = " + q.toVerboseStr());
+				if(ZXING_DEBUG) System.out.println("ZXING_DEBUG Removed quad = " + q.toVerboseStr());
 			}
 			SharedData.previousAllApproxOpSet.clear();
 			SharedData.previousAllApproxStorageSet.clear();
 			SharedData.previousAllApproxOpSet.addAll(curOpSet);
 			SharedData.previousAllApproxStorageSet.addAll(curStSet);
+			SharedData.approxIfConditional.clear();
+			SharedData.unusedQuads.clear();
 			runPass();
 		}
 		catch(TimeoutException ex){
@@ -170,9 +181,15 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 		return pe;
 	}
 
+	private void clearUnusedQuadTracknig(jq_Method m) {
+		if(unusedQuad.get(m) != null) unusedQuad.get(m).clear();
+		if(unusedReg.get(m) != null) unusedReg.get(m).clear();
+		if(regToQuad.get(m) != null) regToQuad.get(m).clear();
+	}
 	
 	@Override
-	public Edge getInitPathEdge(Quad q, jq_Method m, Edge pe) {        
+	public Edge getInitPathEdge(Quad q, jq_Method m, Edge pe) {
+		clearUnusedQuadTracknig(m);
 		//Let's assume the parameter passing is always precise
 		AbstractState abs = this.getInitState(pe.dstNode, q, m, pe);
 		return new Edge(abs,abs);
@@ -295,7 +312,7 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 	    }
 	    
 	    // jspark: store approximate parameters
-	    String excludeStr = System.getProperty("chord.check.exclude","java.,com.,sun.,sunw.,javax.,launchrer.,org.");
+	    String excludeStr = SharedData.excludeStr;
 		String[] excludes = excludeStr.split(",");
 		boolean excludeClass = false;
 		for (String exclude : excludes) {
@@ -312,6 +329,8 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 		}
 		for (int i = 0; i < args.length(); i++) {
 			Register actualReg = args.get(i).getRegister();
+			// track unused approximate quads
+        	rmRegFromUnused(invoke.getBasicBlock().getMethod(),actualReg);
 			Register formalReg = rf.get(i);
 			Integer aridx = SharedData.domU.indexOf(actualReg);
 			if(oldtvs.contains(aridx)){
@@ -329,7 +348,6 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 	public Edge getMiscPathEdge(Quad q, Edge pe) {
 		visitor.inNode = pe.dstNode;
 		visitor.outNode = pe.dstNode;
-		
 		totalVisitOpSet.add(q);
 		
 		// jspark:
@@ -358,8 +376,21 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 		return ret;
 	}
 
+	private void collectUnusedQuads(jq_Method m) {
+		if(unusedReg.get(m) == null)
+			return;
+		for (Register reg: unusedReg.get(m)) {
+			if(!alreadyUsedQuad.get(m).contains(reg)) {
+				Quad q = regToQuad.get(m).get(reg);
+				unusedQuad.get(m).add(q);
+			}
+		}
+		SharedData.unusedQuads.addAll(unusedQuad.get(m));
+	}
+	
 	@Override
 	public Edge getInvkPathEdge(Quad q, Edge clrPE, jq_Method m, Edge tgtSE) {
+		collectUnusedQuads(m);
 		AbstractState asp = this.getInitState(clrPE.dstNode, q, m, clrPE);
 		if(!asp.equals(tgtSE.srcNode)) 
 			return null;
@@ -484,7 +515,10 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 			for(Pair<Integer,Integer> pair : abs.approxStorage){
 				Pair<Quad,jq_Field> pair2 = SharedData.idxFieldMap.get(pair);
 				Quad q = pair2.val0;
-				afterWriter.write(q.toVerboseStr() + "\n");
+				if(pair2.val1 != null)
+					afterWriter.write(q.toVerboseStr() + " " + pair2.val1.toString() + "\n");
+				else
+					afterWriter.write(q.toVerboseStr() + " ARRAY\n");
 			}
 			afterWriter.close();
 		} catch (Exception e) {
@@ -689,6 +723,41 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 		return pe;
 	}
 	
+	private void rmRegFromUnused(jq_Method m, Register reg) {
+		if(alreadyUsedQuad.get(m) != null) alreadyUsedQuad.get(m).add(reg);
+		if(unusedReg.get(m) != null) unusedReg.get(m).remove(reg);
+		if(regToQuad.get(m) != null) regToQuad.get(m).remove(reg);
+	}
+	
+	
+	private void addRegToUnused(jq_Method m, Register reg, Quad quad) {
+		if(unusedReg.get(m) == null) {
+			Set<Register> newRegSet1 = new ArraySet<Register>();
+			unusedReg.put(m, newRegSet1);
+			Set<Register> newRegSet2 = new ArraySet<Register>();
+			alreadyUsedQuad.put(m,newRegSet2);
+			Set<Quad> newQuadSet = new ArraySet<Quad>();
+			unusedQuad.put(m, newQuadSet);
+			Map<Register,Quad> newRtoQMap = new HashMap<Register,Quad>();
+			regToQuad.put(m, newRtoQMap);
+			
+		}
+		if (unusedReg.get(m).contains(reg)) 
+			unusedQuad.get(m).add(regToQuad.get(m).get(reg));
+		unusedReg.get(m).add(reg);
+		regToQuad.get(m).put(reg, quad);
+	}
+	
+	public void removeUnusedApproxQuads() {
+		for (jq_Method m : unusedQuad.keySet()) {
+			collectUnusedQuads(m);
+		}
+		Set<Quad> unusedQuads = SharedData.unusedQuads;
+		for(Quad q : unusedQuads) {
+			abs.approxStatements.remove(SharedData.domP.indexOf(q));
+		}
+	}
+	
 	/**
 	 * The transfer functions for atomic commands are defined here. I could have ignored some commands
 	 * by accident. Please double check in the future.
@@ -745,8 +814,10 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 					return;
 				}
 			}
-			tvs.remove(SharedData.domU.indexOf(dst));
+			tvs.remove(SharedData.domU.indexOf(dst));			
 			outNode = new AbstractState(tgs,tvs,tfs,inNode.taintedRet,inNode.isErr);
+			// track unused approximate quads
+			addRegToUnused(obj.getBasicBlock().getMethod(),dst,obj);
 			return;
 		}
 		
@@ -795,6 +866,8 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
         		tfs.add(new Pair<Integer,Integer>(hidx,findx)); // jspark: it used to be -1 instead of findx
         	}
         	outNode = new AbstractState(tgs,tvs,tfs,inNode.taintedRet,inNode.isErr);
+			// track unused approximate quads
+        	if(src instanceof RegisterOperand) rmRegFromUnused(obj.getBasicBlock().getMethod(),((RegisterOperand)src).getRegister());
         }
         
         /** An array store instruction. */
@@ -831,6 +904,8 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
         	else 
         		tvs.remove(ridx);
         	outNode = new AbstractState(tgs,tvs,tfs,inNode.taintedRet,inNode.isErr);
+			// track unused approximate quads
+			addRegToUnused(obj.getBasicBlock().getMethod(),v,obj);
         }
         
         /** A get instance field instruction. */
@@ -856,11 +931,16 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
         	Set<Integer> tvs = new ArraySet<Integer>(inNode.taintedVars);
         	Set<Pair<Integer,Integer>> tfs = new HashSet<Pair<Integer,Integer>>(inNode.taintedFields);
         	Set<Integer> tgs = new ArraySet<Integer>(inNode.taintedGlobals);
-        	if(isApprox(obj) || this.isOperandApproximate(Binary.getSrc1(obj)) || this.isOperandApproximate(Binary.getSrc2(obj)))
+        	Operand src1O = Binary.getSrc1(obj); Operand src2O = Binary.getSrc2(obj);
+        	if(isApprox(obj) || this.isOperandApproximate(src1O) || this.isOperandApproximate(src2O))
         		tvs.add(dstIndx);
         	else 
         		tvs.remove(dstIndx);
         	outNode = new AbstractState(tgs,tvs,tfs,inNode.taintedRet,inNode.isErr);
+			// track unused approximate quads
+        	if(src1O instanceof RegisterOperand) rmRegFromUnused(obj.getBasicBlock().getMethod(),((RegisterOperand)src1O).getRegister());
+        	if(src2O instanceof RegisterOperand) rmRegFromUnused(obj.getBasicBlock().getMethod(),((RegisterOperand)src2O).getRegister());
+			addRegToUnused(obj.getBasicBlock().getMethod(),dstR,obj);
 		}
         
 		/**
@@ -876,11 +956,15 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
         	Set<Integer> taintedGlobals = new ArraySet<Integer>(inNode.taintedGlobals);
         	Set<Integer> taintedVars = new ArraySet<Integer>(inNode.taintedVars);     	
         	Set<Pair<Integer,Integer>> taintedFs = new HashSet<Pair<Integer,Integer>>(inNode.taintedFields);
-        	if(isApprox(obj) || this.isOperandApproximate(Unary.getSrc(obj)))
+        	Operand srcO = Unary.getSrc(obj);
+        	if(isApprox(obj) || this.isOperandApproximate(srcO))
         		taintedVars.add(dstIndx);
         	else
         		taintedVars.remove(dstIndx);
         	this.outNode = new AbstractState(taintedGlobals, taintedVars, taintedFs, inNode.taintedRet, inNode.isErr);
+        	// track unused approximate quads
+        	if(srcO instanceof RegisterOperand) rmRegFromUnused(obj.getBasicBlock().getMethod(),((RegisterOperand)srcO).getRegister());
+			addRegToUnused(obj.getBasicBlock().getMethod(),dstR,obj);
 		}
 
 		/** A get static field instruction. */
@@ -901,6 +985,8 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
         	else
         		taintedVars.remove(dstindx);
         	this.outNode = new AbstractState(taintedGlobals, taintedVars, taintedFs, inNode.taintedRet, inNode.isErr);
+        	// track unused approximate quads
+			addRegToUnused(obj.getBasicBlock().getMethod(),dstR,obj);
         }
         
         private void generateDominateSets(Dominators dominators, jq_Method method, boolean dom){
@@ -989,15 +1075,19 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 	        						allPaths.add(path2);
 	        				}
 		        			boolean isCtrlDepd = true;
-		        			for(List<BasicBlock> path2 : allPaths) {
-		        				for (BasicBlock bb2 : path2) {
-		        					if (!pdomMap.get(last).contains(bb2)) {
-		        						rmvdPaths.add(path2);
-		        						isCtrlDepd = false;
-		        						break;
-		        					}
-		        				}
-		        				if(!isCtrlDepd) break;
+		        			if (allPaths.size() == 0 || pdomMap.get(last).contains(bb))
+		        				isCtrlDepd = false;
+		        			else {
+			        			for(List<BasicBlock> path2 : allPaths) {
+			        				for (BasicBlock bb2 : path2) {
+			        					if (!pdomMap.get(last).contains(bb2)) {
+			        						rmvdPaths.add(path2);
+			        						isCtrlDepd = false;
+			        						break;
+			        					}
+			        				}
+			        				if(!isCtrlDepd) break;
+			        			}
 		        			}
 		        			if(isCtrlDepd) {
 		        				ctrlDepdBBs.add(last);
@@ -1027,7 +1117,65 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 	        	ctrlDepdBBs.remove(bb);
 	        	SharedData.ctrlDependence.put(new Pair<jq_Method,BasicBlock>(method,bb), ctrlDepdBBs);
         	} 
+//        	System.out.println("For basic block: " + bb.toString());
+//        	for(BasicBlock bb2: ctrlDepdBBs) { 
+//        		System.out.println("Control dependent blocks: bb[" + bb2.toString() + "]");
+//        	}
 	        return ctrlDepdBBs;
+        }
+        
+        private boolean isLoop(BasicBlock curBB, List<BasicBlock> ctrlDepdBBs) {
+        	for (BasicBlock bb : ctrlDepdBBs) {
+        		if(bb.getSuccessors().contains(curBB)) {
+        			return true;
+        		}
+        	}
+        	return false;
+        }
+        
+        private boolean isPredicable(BasicBlock curBB, jq_Method method, List<BasicBlock> ctrlDepdBBs, int counter) {
+        	if(counter == 30) { // FIXME workaround to avoid stack overflow exception. find a way to resolve the fundamental reason. 
+        		System.out.println("isPredicable killed: counter is 10 -> method[" + method.toString() + "] bb[" + curBB.fullDump() + "]");
+        		return false;
+        	}
+        	boolean isPredicatePossible = true;
+        	if(isLoop(curBB, ctrlDepdBBs)) {
+        		isPredicatePossible = false;
+        	} else {
+        		boolean isApproxOpExist = false; 
+	        	for(BasicBlock bb : ctrlDepdBBs) {
+	        		List<Quad> qList = bb.getQuads();
+	        		for(Quad q : qList) {
+	        			if (q.getOperator() instanceof IntIfCmp) { // Another If conditionals
+	        				if (SharedData.approxIfConditional.get(q) != null) {
+	        					if(SharedData.approxIfConditional.get(q) == false) {
+	    	        				isPredicatePossible = false;
+	    	        				break;
+	        					}
+	        				}
+	        				isPredicatePossible = isPredicable(bb, method, getControlDependentBasicBlocks(method, bb), counter + 1);
+	        				if(isPredicatePossible) {
+	        					SharedData.approxIfConditional.put(q, true);
+	        				} else {
+	        					SharedData.approxIfConditional.put(q, false);
+	        					isPredicatePossible = false;
+	        					break;
+	        				}
+	        			} else if (q.getOperator() instanceof Invoke || q.getOperator() instanceof Return )  { // Invoke, Return FIXME: New and NewArray operator should be filtered as well
+	        				isPredicatePossible = false;
+	        				break;
+	        			} else {
+	        				if (abs.approxStatements.contains(SharedData.domP.indexOf(q)))
+	        					isApproxOpExist = true;
+	        			}
+	        		}
+	        		if(!isPredicatePossible)
+	        			break;
+	        	}
+	        	if(isApproxOpExist == false)
+	        		isPredicatePossible = false;
+        	}
+        	return isPredicatePossible;
         }
         
         /** A compare and branch instruction. */
@@ -1035,35 +1183,36 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
         	BasicBlock curBB = obj.getBasicBlock();
         	jq_Method method = obj.getBasicBlock().getMethod();
         	if(SharedData.approxIfConditional.get(obj) == null) {
-	        	List<BasicBlock> ctrlDepdBBs = getControlDependentBasicBlocks(method, curBB);
-	        	boolean isPredicatePossible = true;
-	        	for(BasicBlock bb : ctrlDepdBBs) {
-	        		List<Quad> qList = bb.getQuads();
-	        		for(Quad q : qList) {
-	        			if (q.getOperator() instanceof Invoke || q.getOperator() instanceof IntIfCmp || q.getOperator() instanceof Return || q.getOperator() instanceof Goto) {
-	        				isPredicatePossible = false;
-	        				break;
-	        			}
-	        		}
-	        		if(!isPredicatePossible)
-	        			break;
-	        	}
-	        	if(isPredicatePossible) { 
-	        		SharedData.approxIfConditional.put(obj, true);
-	        		System.out.println("If-conversion: " + obj.toVerboseStr());
-		        	for(BasicBlock bb : ctrlDepdBBs) {
-		        		System.out.println("bb = " + bb.toString());
+        		String excludeStr = SharedData.excludeStr;
+        		String[] excludes = excludeStr.split(",");
+        		String classStr = obj.getBasicBlock().getMethod().getDeclaringClass().toString();
+        		boolean isLib = false;
+        		for (String exclude : excludes) {
+        			if(classStr.startsWith(exclude)) {
+        				isLib = true;
+        				SharedData.approxIfConditional.put(obj, false);
+        				break;
+        			}
+        		}
+        		if(!isLib) {
+		        	List<BasicBlock> ctrlDepdBBs = getControlDependentBasicBlocks(method, curBB);
+		        	boolean isPredicatePossible = isPredicable(curBB, method, ctrlDepdBBs, 0);
+		        	if(isPredicatePossible) {
+		        		System.out.println("If-conversion TRUE for " + obj.toVerboseStr());
+		        		SharedData.approxIfConditional.put(obj, true);
+		        	} else {
+		        		System.out.println("If-conversion FALSE for " + obj.toVerboseStr());
+		        		SharedData.approxIfConditional.put(obj, false);
 		        	}
-	        	}
-	        	else
-	        		SharedData.approxIfConditional.put(obj, false);
-	        	
+        		}
         	}
-        	if(SharedData.approxIfConditional.get(obj))
-        		return;
         	Operand srcO1 = IntIfCmp.getSrc1(obj);
         	Operand srcO2 = IntIfCmp.getSrc2(obj);
-        	if(srcO1 instanceof RegisterOperand){
+        	if(srcO1 instanceof RegisterOperand) rmRegFromUnused(obj.getBasicBlock().getMethod(),((RegisterOperand)srcO1).getRegister());
+        	if(srcO2 instanceof RegisterOperand) rmRegFromUnused(obj.getBasicBlock().getMethod(),((RegisterOperand)srcO2).getRegister());
+        	if(SharedData.approxIfConditional.get(obj))
+        		return;
+        	if(srcO1 instanceof RegisterOperand){        		
         		Register srcR1 = ((RegisterOperand) srcO1).getRegister();
         		int src1Indx = SharedData.domU.indexOf(srcR1);
         		if(inNode.taintedVars.contains(src1Indx)){
@@ -1087,6 +1236,8 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
         public void visitLookupSwitch(Quad obj) {
         	Operand src = LookupSwitch.getSrc(obj);
         	if (src instanceof RegisterOperand) {
+            	// track unused approximate quads
+            	if(src instanceof RegisterOperand) rmRegFromUnused(obj.getBasicBlock().getMethod(),((RegisterOperand)src).getRegister());
         		Register srcR = ((RegisterOperand) src).getRegister();
         		int srcIndx = SharedData.domU.indexOf(srcR);
         		if (inNode.taintedVars.contains(srcIndx)) {
@@ -1107,11 +1258,15 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
         	Set<Integer> taintedGlobals = new ArraySet<Integer>(inNode.taintedGlobals);
         	Set<Integer> taintedVars = new ArraySet<Integer>(inNode.taintedVars);     	
         	Set<Pair<Integer,Integer>> taintedFs = new HashSet<Pair<Integer,Integer>>(inNode.taintedFields);
-        	if(isApprox(obj) || this.isOperandApproximate(Move.getSrc(obj)))
+        	Operand srcO = Move.getSrc(obj);
+        	if(isApprox(obj) || this.isOperandApproximate(srcO))
         		taintedVars.add(dstIndx);
         	else
         		taintedVars.remove(dstIndx);
         	this.outNode = new AbstractState(taintedGlobals, taintedVars, taintedFs, inNode.taintedRet, inNode.isErr);
+        	// track unused approximate quads
+        	if(srcO instanceof RegisterOperand) rmRegFromUnused(obj.getBasicBlock().getMethod(),((RegisterOperand)srcO).getRegister());
+			addRegToUnused(obj.getBasicBlock().getMethod(),dstR,obj);
         }
         
         /** A phi instruction. (For SSA.) */
@@ -1136,11 +1291,14 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
         	if(!dst.getType().isPrimitiveType()) 
         		return;
         	int fIdx = SharedData.domF.indexOf(dst);
-        	if(isApprox(obj) || this.isOperandApproximate(Putstatic.getSrc(obj)))
+        	Operand srcO = Putstatic.getSrc(obj);
+        	if(isApprox(obj) || this.isOperandApproximate(srcO))
         		taintedGlobals.add(fIdx);
         	else 
         		taintedGlobals.remove(fIdx);
         	this.outNode = new AbstractState(taintedGlobals, taintedVars, taintedFs, inNode.taintedRet, inNode.isErr);
+        	// track unused approximate quads
+        	if(srcO instanceof RegisterOperand) rmRegFromUnused(obj.getBasicBlock().getMethod(),((RegisterOperand)srcO).getRegister());
         }
         
         /** A return from method instruction. */
@@ -1150,10 +1308,11 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 			Set<Integer> taintedGloabals = new ArraySet<Integer>(inNode.taintedGlobals);
 			Set<Pair<Integer,Integer>> taintedFields = new HashSet<Pair<Integer,Integer>>(inNode.taintedFields);
 			boolean isRetTainted = false;
+			Operand srcO = Return.getSrc(obj);
 			if (obj.getOperator() instanceof THROW_A){
 				
 			}
-			else if (Return.getSrc(obj) instanceof RegisterOperand) {
+			else if(srcO instanceof RegisterOperand) {
 				Register tgtR = ((RegisterOperand) (Return.getSrc(obj)))
 						.getRegister();
 				//jspark: we don't have to care about return values from accept or precise as tainted 
@@ -1165,11 +1324,15 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 					isRetTainted = true;
 			}
 			outNode = new AbstractState(taintedGloabals, taintedVars, taintedFields, isRetTainted, inNode.isErr);
+        	// track unused approximate quads
+        	if(srcO instanceof RegisterOperand) rmRegFromUnused(obj.getBasicBlock().getMethod(),((RegisterOperand)srcO).getRegister());
         }
         /** A jump table switch instruction. */
         public void visitTableSwitch(Quad obj) {
         	Operand src = TableSwitch.getSrc(obj);
         	if(src instanceof RegisterOperand){
+            	// track unused approximate quads
+            	if(src instanceof RegisterOperand) rmRegFromUnused(obj.getBasicBlock().getMethod(),((RegisterOperand)src).getRegister());
         		Register srcR = ((RegisterOperand) src).getRegister();
         		int srcIndx = SharedData.domU.indexOf(srcR);
         		if(inNode.taintedVars.contains(srcIndx)){
@@ -1187,9 +1350,11 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
         	Set<Integer> taintedGlobals = new ArraySet<Integer>(inNode.taintedGlobals);
         	Set<Integer> taintedVars = new ArraySet<Integer>(inNode.taintedVars);     	
         	Set<Pair<Integer,Integer>> taintedFs = new HashSet<Pair<Integer,Integer>>(inNode.taintedFields);
-        	String excludeStr = System.getProperty("chord.check.exclude","java.,com.,sun.,sunw.,javax.,launchrer.,org.");
+        	String excludeStr = SharedData.excludeStr;
         	String[] excludes = excludeStr.split(",");
         	OUT: for (Operand op : ((Quad) obj).getAllOperands()){
+            	// track unused approximate quads
+            	if(op instanceof RegisterOperand) rmRegFromUnused(obj.getBasicBlock().getMethod(),((RegisterOperand)op).getRegister());
 				if (op instanceof TypeOperand){
 					TypeOperand top = (TypeOperand) op;
 					for (String exclude : excludes) {
@@ -1230,6 +1395,8 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
         	Set<Pair<Integer,Integer>> taintedFs = new HashSet<Pair<Integer,Integer>>(inNode.taintedFields);
         	List<RegisterOperand> roList = NewArray.getReg2(obj);
         	for (RegisterOperand srcO : roList) {
+            	// track unused approximate quads
+            	if(srcO instanceof RegisterOperand) rmRegFromUnused(obj.getBasicBlock().getMethod(),((RegisterOperand)srcO).getRegister());
 	    		Register srcR = ((RegisterOperand) srcO).getRegister();
 	    		int srcIndx = SharedData.domU.indexOf(srcR);
 	    		if(inNode.taintedVars.contains(srcIndx)){
@@ -1259,6 +1426,10 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
         		srcO2 = po.get(1);
         	if (po.length() >= 3)
         		srcO3 = po.get(2);
+        	// track unused approximate quads
+        	if(srcO1 instanceof RegisterOperand) rmRegFromUnused(obj.getBasicBlock().getMethod(),((RegisterOperand)srcO1).getRegister());
+        	if(srcO2 instanceof RegisterOperand) rmRegFromUnused(obj.getBasicBlock().getMethod(),((RegisterOperand)srcO2).getRegister());
+        	if(srcO3 instanceof RegisterOperand) rmRegFromUnused(obj.getBasicBlock().getMethod(),((RegisterOperand)srcO3).getRegister());
         	if(srcO1 != null && srcO1 instanceof RegisterOperand){
         		Register srcR1 = ((RegisterOperand) srcO1).getRegister();
         		int src1Indx = SharedData.domU.indexOf(srcR1);

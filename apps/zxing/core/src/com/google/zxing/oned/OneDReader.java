@@ -225,8 +225,6 @@ public abstract class OneDReader implements Reader {
       throw NotFoundException.getNotFoundInstance();
     }
   }
-  
-  public static boolean accept(boolean b){return b;}
 
   protected static void recordPatternInReverse(BitArray row, int start,  int[] counters)
       throws NotFoundException {
@@ -236,9 +234,9 @@ public abstract class OneDReader implements Reader {
     while (start > 0 && numTransitionsLeft >= 0) {
       boolean rowGet = row.get(--start);
       //additional accept
-      rowGet = accept(rowGet);
+//      rowGet = Accept.accept(rowGet);
       //additional accept
-      last = accept(last);
+//      last = Accept.accept(last);
       if (rowGet != last) {
         numTransitionsLeft--;
         last = !last;
@@ -263,48 +261,51 @@ public abstract class OneDReader implements Reader {
    *  the total variance between counters and patterns equals the pattern length, higher values mean
    *  even more variance
    */
-  protected static  int patternMatchVariance( int[] counters,  int[] pattern,  int maxIndividualVariance) {
-    int numCounters = counters.length;
-     int total = 0;
-     int patternLength = 0;
+  protected static int patternMatchVariance( int[] counters,  int[] pattern,  int maxIndividualVariance) {
+    int ret = 0;
+    boolean done = false;
+	int numCounters = counters.length;
+    int total = 0;
+    int patternLength = 0;
     for (int i = 0; i < numCounters; i++) {
       total += counters[i];
       patternLength += pattern[i];
     }
     //additional accept
-    total = Accept.accept(total);
+//    total = Accept.accept(total);
     //additional accept
-    patternLength = Accept.accept(patternLength);
+//    patternLength = Accept.accept(patternLength);
     if (total < patternLength) {
-      // If we don't even have one pixel per unit of bar width, assume this is too small
-      // to reliably match, so fail:
-      return Integer.MAX_VALUE;
+      ret = Integer.MAX_VALUE;
+      done = true;
     }
-    // We're going to fake floating-point math in integers. We just need to use more bits.
-    // Scale up patternLength so that intermediate values below like scaledCounter will have
-    // more "significant digits"
-     int unitBarWidth = (total << INTEGER_MATH_SHIFT) / patternLength;
-    maxIndividualVariance = (maxIndividualVariance * unitBarWidth) >> INTEGER_MATH_SHIFT;
-
-     int totalVariance = 0;
-    for (int x = 0; x < numCounters; x++) {
-      int counter = counters[x] << INTEGER_MATH_SHIFT;
-      int scaledPattern = pattern[x] * unitBarWidth;
-      //additional accept
-//      counter = Accept.accept(counter);
-      //additional accept
-//      scaledPattern = Accept.accept(scaledPattern);
-      int variance = (counter > scaledPattern) ? counter - scaledPattern : scaledPattern - counter;
-      // addtional accept
-      variance = Accept.accept(variance);
-      // addtional accept
-      maxIndividualVariance = Accept.accept(maxIndividualVariance);
-      if (variance > maxIndividualVariance) {
-        return Integer.MAX_VALUE;
-      }
-      totalVariance += variance;
+    int totalVariance = 0;
+    if(!done){
+	    int unitBarWidth = (total << INTEGER_MATH_SHIFT) / patternLength;
+	    maxIndividualVariance = (maxIndividualVariance * unitBarWidth) >> INTEGER_MATH_SHIFT;
+	
+	    for (int x = 0; x < numCounters; x++) {
+	      int counter = counters[x] << INTEGER_MATH_SHIFT;
+	      int scaledPattern = pattern[x] * unitBarWidth;
+	      //additional accept
+	//      counter = Accept.accept(counter);
+	      //additional accept
+	//      scaledPattern = Accept.accept(scaledPattern);
+	      int variance = (counter > scaledPattern) ? counter - scaledPattern : scaledPattern - counter;
+	      // addtional accept
+//	      variance = Accept.accept(variance);
+	      // addtional accept
+//	      maxIndividualVariance = Accept.accept(maxIndividualVariance);
+	      if (variance > maxIndividualVariance) {
+	        ret = Integer.MAX_VALUE;
+	        done = true;
+	      }
+	      if(done) break;
+	      totalVariance += variance;
+	    }
     }
-    return totalVariance / total;
+    if(!done) ret = totalVariance / total; 
+    return ret;
   }
   
   /**

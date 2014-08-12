@@ -68,9 +68,11 @@ public final class Decoder {
       for (int j = 0; j < dimension; j++) {
     	//additional accept 
     	boolean b = image[i][j];
-    	b = Accept.accept(b);
+//    	b = Accept.accept(b);
         if (b) {
-          bits.set(j, i);
+            int offset = i * bits.rowSize + (j >> 5);
+            bits.bits[offset] |= 1 << (j & 0x1f);
+//          bits.set(j, i);
         }
       }
     }

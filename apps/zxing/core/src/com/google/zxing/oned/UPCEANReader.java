@@ -277,6 +277,8 @@ public abstract class UPCEANReader extends OneDReader {
       rowOffset++;
     }
 
+    boolean done = false;
+    int[] ret = null;
     int counterPosition = 0;
     int patternStart = rowOffset;
     for (int x = rowOffset; x < width; x++) {
@@ -290,11 +292,12 @@ public abstract class UPCEANReader extends OneDReader {
         if (counterPosition == patternLength - 1) {
           int lhs = patternMatchVariance(counters, pattern, MAX_INDIVIDUAL_VARIANCE);
           //additional accept
-          lhs = Accept.accept(lhs);
-          cond = (lhs < MAX_AVG_VARIANCE);
-          if (cond) {
-            return new int[]{patternStart, x};
+//          lhs = Accept.accept(lhs);
+          if (lhs < MAX_AVG_VARIANCE) {
+            ret = new int[]{patternStart, x};
+            done = true;
           }
+          if(done) break;
           patternStart += counters[0] + counters[1];
           for (int y = 2; y < patternLength; y++) {
             counters[y - 2] = counters[y];
@@ -309,7 +312,10 @@ public abstract class UPCEANReader extends OneDReader {
         isWhite = !isWhite;
       }
     }
-    throw NotFoundException.getNotFoundInstance();
+    if(ret == null)
+    	throw NotFoundException.getNotFoundInstance();
+    else
+    	return ret;
   }
 
   /**

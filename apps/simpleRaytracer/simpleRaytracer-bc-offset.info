@@ -1,371 +1,344 @@
-370
-Plane#init(java.lang.String[])#void#434#1517#PLUS#lx * nx + ly * ny + lz * nz
-Plane#init(java.lang.String[])#void#326#1241#IDENT#lx
-Plane#texture(float,float,float)#int#111#2405#ASSIGN#col = (255 << 24) | (r << 16)
-Plane#texture(float,float,float)#int#97#2381#BITOR#(255 << 24) | b
-Plane#init(java.lang.String[])#void#23#340#IDENT#dd
-Plane#init(java.lang.String[])#void#471#1616#IDENT#numIterations
-Plane#init(java.lang.String[])#void#251#1052#IDENT#t
-Plane#init(java.lang.String[])#void#520#1746#SELECT#System.out.println
-Plane#main(java.lang.String[])#void#0#2864#IDENT#alloc_TAG2
-Plane#init(java.lang.String[])#void#350#1311#IDENT#lz
-Plane#init(java.lang.String[])#void#377#1400#IDENT#accept
-Plane#texture(float,float,float)#int#55#2211#IDENT#x
-Plane#init(java.lang.String[])#void#514#1709#LT#i < pixels.length
-Plane#init(java.lang.String[])#void#98#677#VARDEF#int bl = (255 << 24)
-Plane#init(java.lang.String[])#void#340#1284#MINUS#lx - ix
-Plane#texture(float,float,float)#int#60#2213#ASSIGN#x = accept(x)
-Plane#init(java.lang.String[])#void#194#901#PLUS#xd * xd + yd * yd
-Plane#init(java.lang.String[])#void#158#850#IDENT#x
-Plane#init(java.lang.String[])#void#43#417#INDEXED#args[1]
-Plane#init(java.lang.String[])#void#631#1928#IDENT#pixels
-Plane#init(java.lang.String[])#void#398#1469#IDENT#sng
-Plane#init(java.lang.String[])#void#593#1849#SELECT#System.out.println
-Plane#init(java.lang.String[])#void#248#1040#LE#cond <= 0
-Plane#texture(float,float,float)#int#56#2222#IDENT#x
-Plane#init(java.lang.String[])#void#233#975#MUL#(k - ye) * yd
-Plane#init(java.lang.String[])#void#566#1812#IDENT#i
-Plane#init(java.lang.String[])#void#640#1726#IDENT#i
-Plane#init(java.lang.String[])#void#100#733#IDENT#w1
-Plane#<init>()#void#0#107#IDENT#super
-Plane#init(java.lang.String[])#void#205#923#IDENT#l
-Plane#init(java.lang.String[])#void#212#935#IDENT#l
-Plane#init(java.lang.String[])#void#237#1015#IDENT#accept
-Plane#init(java.lang.String[])#void#253#1053#ASSIGN#t = -1
-Plane#init(java.lang.String[])#void#41#403#SELECT#Integer.parseInt
-Plane#init(java.lang.String[])#void#296#1190#IDENT#ix
-Plane#init(java.lang.String[])#void#505#1700#VARDEF#int i = 0
-Plane#init(java.lang.String[])#void#289#1171#IDENT#t
-Plane#texture(float,float,float)#int#122#2473#SELECT#System.gc
-Plane#init(java.lang.String[])#void#78#622#SELECT#Integer.parseInt
-Plane#init(java.lang.String[])#void#90#655#IDENT#ny
-Plane#init(java.lang.String[])#void#116#746#ASSIGN#h1 = h / 2
-Plane#init(java.lang.String[])#void#199#910#MUL#zd * zd
-Plane#init(java.lang.String[])#void#453#1564#IDENT#iz
-Plane#init(java.lang.String[])#void#200#907#PLUS#xd * xd + yd * yd + zd * zd
-Plane#texture(float,float,float)#int#98#2371#ASSIGN#col = (255 << 24) | b
-Plane#init(java.lang.String[])#void#613#1877#BITAND#(pixels[i] >> 16) & 255
-Plane#init(java.lang.String[])#void#467#1593#INDEXED#pixels[index]
-Plane#init(java.lang.String[])#void#207#921#DIV_ASG#xd /= l
-Plane#init(java.lang.String[])#void#279#1110#PLUS#y * w + x
-Plane#init(java.lang.String[])#void#396#1456#IDENT#sng
-Plane#init(java.lang.String[])#void#428#1511#PLUS#lx * nx + ly * ny
-Plane#texture(float,float,float)#int#42#2137#ASSIGN#col = (255 << 24) | (255 << 16)
-Plane#init(java.lang.String[])#void#33#382#INDEXED#args[0]
-Plane#init(java.lang.String[])#void#56#456#IDENT#w
-Plane#init(java.lang.String[])#void#85#614#ASSIGN#ye = Integer.parseInt(args[3])
-Plane#init(java.lang.String[])#void#318#1230#IDENT#t
-Plane#init(java.lang.String[])#void#447#1543#IDENT#index
-Plane#init(java.lang.String[])#void#167#848#ASSIGN#xd = (x - w1) / w1
-Plane#init(java.lang.String[])#void#184#896#IDENT#xd
-Plane#init(java.lang.String[])#void#480#822#PREINC#++x
-Plane#texture(float,float,float)#int#83#2336#PLUS#mrx + mrz
-Plane#init(java.lang.String[])#void#63#457#MUL#w * h
-Plane#init(java.lang.String[])#void#467#1601#IDENT#bl
-Plane#init(java.lang.String[])#void#64#448#NEWARRAY#new int[w * h]
-Plane#init(java.lang.String[])#void#470#1629#PREINC#++numIterations
-Plane#init(java.lang.String[])#void#143#814#ASSIGN#x = 0
-Plane#init(java.lang.String[])#void#555#1794#SELECT#System.out.println
-Plane#init(java.lang.String[])#void#169#864#IDENT#yd
-Plane#init(java.lang.String[])#void#244#1036#IDENT#cond
-Plane#init(java.lang.String[])#void#270#1101#IDENT#index
-Plane#init(java.lang.String[])#void#486#798#PREINC#++y
-Plane#init(java.lang.String[])#void#350#1314#IDENT#lz
-Plane#init(java.lang.String[])#void#122#768#ASSIGN#ze = 0
-Plane#init(java.lang.String[])#void#69#589#SELECT#Integer.parseInt
-Plane#init(java.lang.String[])#void#105#737#DIV#w / 2
-Plane#init(java.lang.String[])#void#408#1480#IDENT#sng
-Plane#texture(float,float,float)#int#5#2041#IDENT#b
-Plane#init(java.lang.String[])#void#480#821#IDENT#x
-Plane#init(java.lang.String[])#void#219#947#IDENT#l
-Plane#init(java.lang.String[])#void#316#1227#IDENT#ze
-Plane#init(java.lang.String[])#void#359#1345#IDENT#lx
-Plane#texture(float,float,float)#int#68#2292#IDENT#z
-Plane#init(java.lang.String[])#void#31#378#IDENT#args
-Plane#init(java.lang.String[])#void#0#297#NEWCLASS#new Dimension(400, 256)
-Plane#init(java.lang.String[])#void#133#793#IDENT#y
-Plane#main(java.lang.String[])#void#3#2890#NEWCLASS#new Plane()
-Plane#texture(float,float,float)#int#73#2320#IDENT#z
-Plane#texture(float,float,float)#int#40#2134#IDENT#col
-Plane#init(java.lang.String[])#void#280#1106#ASSIGN#index = y * w + x
-Plane#init(java.lang.String[])#void#466#1594#IDENT#index
-Plane#init(java.lang.String[])#void#210#931#IDENT#yd
-Plane#init(java.lang.String[])#void#382#1398#ASSIGN#param = accept(param)
-Plane#init(java.lang.String[])#void#392#1424#ASSIGN#sng = (float)Math.sqrt(param)
-Plane#init(java.lang.String[])#void#139#794#LT#y < h
-Plane#init(java.lang.String[])#void#267#1085#DIV#(k - ye) / yd
-Plane#init(java.lang.String[])#void#448#1542#INDEXED#pixels[index]
-Plane#init(java.lang.String[])#void#517#1742#SELECT#System.out
-Plane#init(java.lang.String[])#void#258#1077#IDENT#t
-Plane#texture(float,float,float)#int#122#2473#SELECT#System.gc
-Plane#init(java.lang.String[])#void#101#736#IDENT#w
-Plane#init(java.lang.String[])#void#197#911#IDENT#zd
-Plane#init(java.lang.String[])#void#195#908#IDENT#zd
-Plane#init(java.lang.String[])#void#431#1521#IDENT#nz
-Plane#init(java.lang.String[])#void#37#360#ASSIGN#texture = Integer.parseInt(args[0])
-Plane#init(java.lang.String[])#void#494#1654#IDENT#accept_all_FIELD2_TAG1
-Plane#init(java.lang.String[])#void#171#871#IDENT#y
-Plane#init(java.lang.String[])#void#177#873#DIV#(h1 - y) / h1
-Plane#init(java.lang.String[])#void#364#1351#IDENT#ly
-Plane#init(java.lang.String[])#void#367#1347#PLUS#lx * lx + ly * ly
-Plane#init(java.lang.String[])#void#329#1256#IDENT#lly
-Plane#init(java.lang.String[])#void#630#1904#IDENT#precise_all_FIELD2_TAG1
-Plane#init(java.lang.String[])#void#385#1436#SELECT#Math.sqrt
-Plane#init(java.lang.String[])#void#163#851#MINUS#x - w1
-Plane#texture(float,float,float)#int#33#2117#IDENT#texture
-Plane#init(java.lang.String[])#void#114#748#DIV#h / 2
-Plane#texture(float,float,float)#int#18#2078#IDENT#r
-Plane#init(java.lang.String[])#void#236#1008#IDENT#cond
-Plane#init(java.lang.String[])#void#119#758#ASSIGN#xe = 0
-Plane#init(java.lang.String[])#void#341#1281#ASSIGN#lx = lx - ix
-Plane#init(java.lang.String[])#void#533#1762#INDEXED#pixels[i]
-Plane#init(java.lang.String[])#void#423#1512#IDENT#ly
-Plane#init(java.lang.String[])#void#169#868#IDENT#h1
-Plane#init(java.lang.String[])#void#270#1107#IDENT#y
-Plane#init(java.lang.String[])#void#507#1707#IDENT#i
-Plane#texture(float,float,float)#int#90#2357#EQ#v == 0
-Plane#init(java.lang.String[])#void#510#1711#IDENT#pixels
-Plane#texture(float,float,float)#int#77#2303#VARDEF#int mrz = Math.round(z)
-Plane#texture(float,float,float)#int#73#2313#SELECT#Math.round
-Plane#init(java.lang.String[])#void#372#1356#MUL#lz * lz
-Plane#init(java.lang.String[])#void#230#971#MINUS#k - ye
-Plane#texture(float,float,float)#int#56#2215#IDENT#accept
-Plane#texture(float,float,float)#int#26#2079#ASSIGN#r = (int)(255 * lcoff)
-Plane#init(java.lang.String[])#void#571#1815#SR#pixels[i] >> 8
-Plane#init(java.lang.String[])#void#127#776#ASSIGN#k = -1
-Plane#init(java.lang.String[])#void#16#328#SELECT#dd.width
-Plane#init(java.lang.String[])#void#336#1279#IDENT#lx
-Plane#init(java.lang.String[])#void#528#1756#IDENT#pixels
-Plane#texture(float,float,float)#int#85#2343#MOD#(mrx + mrz) % 2
-Plane#init(java.lang.String[])#void#78#612#IDENT#ye
-Plane#init(java.lang.String[])#void#640#1727#PREINC#++i
-Plane#init(java.lang.String[])#void#300#1198#IDENT#xd
-Plane#init(java.lang.String[])#void#313#1212#PLUS#ye + t * yd
-Plane#init(java.lang.String[])#void#629#1895#IDENT#pixels
-Plane#init(java.lang.String[])#void#110#747#IDENT#h
-Plane#texture(float,float,float)#int#61#2244#SELECT#Math.round
-Plane#texture(float,float,float)#int#8#2050#IDENT#col
-Plane#<init>()#void#6#222#ASSIGN#numIterations = 0
-Plane#init(java.lang.String[])#void#55#441#IDENT#pixels
-Plane#init(java.lang.String[])#void#273#1109#IDENT#w
-Plane#init(java.lang.String[])#void#486#798#PREINC#++y
-Plane#init(java.lang.String[])#void#41#390#IDENT#light
-Plane#init(java.lang.String[])#void#264#1081#MINUS#k - ye
-Plane#init(java.lang.String[])#void#310#1215#IDENT#yd
-Plane#init(java.lang.String[])#void#377#1407#IDENT#param
-Plane#init(java.lang.String[])#void#231#976#IDENT#yd
-Plane#texture(float,float,float)#int#3#2032#ASSIGN#r = 255
-Plane#init(java.lang.String[])#void#334#1269#ASSIGN#lz = 0
-Plane#init(java.lang.String[])#void#203#919#IDENT#xd
-Plane#init(java.lang.String[])#void#552#1790#SELECT#System.out
-Plane#init(java.lang.String[])#void#495#1677#IDENT#pixels
-Plane#init(java.lang.String[])#void#345#1301#IDENT#iy
-Plane#init(java.lang.String[])#void#476#1629#PREINC#++numIterations
-Plane#texture(float,float,float)#int#48#2171#IDENT#texture
-Plane#init(java.lang.String[])#void#439#1524#MUL#(lx * nx + ly * ny + lz * nz) * sng
-Plane#init(java.lang.String[])#void#191#905#IDENT#yd
-Plane#texture(float,float,float)#int#31#2105#IDENT#b
-Plane#init(java.lang.String[])#void#27#339#ASSIGN#h = dd.height
-Plane#init(java.lang.String[])#void#436#1525#IDENT#sng
-Plane#init(java.lang.String[])#void#338#1285#IDENT#ix
-Plane#init(java.lang.String[])#void#47#395#ASSIGN#light = Integer.parseInt(args[1])
-Plane#init(java.lang.String[])#void#268#1078#ASSIGN#t = (k - ye) / yd
-Plane#init(java.lang.String[])#void#370#1357#IDENT#lz
-Plane#init(java.lang.String[])#void#131#790#ASSIGN#y = 0
-Plane#init(java.lang.String[])#void#71#603#INDEXED#args[2]
-Plane#texture(float,float,float)#int#65#2234#VARDEF#int mrx = Math.round(x)
-Plane#init(java.lang.String[])#void#88#648#ASSIGN#nx = 0
-Plane#init(java.lang.String[])#void#458#1549#ASSIGN#pixels[index] = texture(ix, iy, iz)
-Plane#init(java.lang.String[])#void#76#581#ASSIGN#lly = Integer.parseInt(args[2])
-Plane#init(java.lang.String[])#void#193#904#MUL#yd * yd
-Plane#texture(float,float,float)#int#81#2338#IDENT#mrz
-Plane#texture(float,float,float)#int#93#2368#IDENT#col
-Plane#main(java.lang.String[])#void#11#2906#IDENT#p
-Plane#init(java.lang.String[])#void#118#756#IDENT#xe
-Plane#main(java.lang.String[])#void#12#2907#SELECT#p.init
-Plane#init(java.lang.String[])#void#93#664#IDENT#nz
-Plane#init(java.lang.String[])#void#404#1460#ASSIGN#sng = accept(sng)
-Plane#init(java.lang.String[])#void#323#1229#PLUS#ze + t * zd
-Plane#texture(float,float,float)#int#79#2332#IDENT#mrx
-Plane#init(java.lang.String[])#void#385#1442#IDENT#param
-Plane#init(java.lang.String[])#void#107#735#ASSIGN#w1 = w / 2
-Plane#init(java.lang.String[])#void#343#1298#IDENT#ly
-Plane#init(java.lang.String[])#void#24#342#SELECT#dd.height
-Plane#init(java.lang.String[])#void#422#1508#MUL#lx * nx
-Plane#init(java.lang.String[])#void#357#1342#IDENT#lx
-Plane#init(java.lang.String[])#void#331#1255#ASSIGN#ly = lly
-Plane#init(java.lang.String[])#void#427#1514#MUL#ly * ny
-Plane#init(java.lang.String[])#void#214#933#DIV_ASG#yd /= l
-Plane#init(java.lang.String[])#void#418#1499#IDENT#lcoff
-Plane#texture(float,float,float)#int#128#2494#IDENT#col
-Plane#init(java.lang.String[])#void#31#353#IDENT#texture
-Plane#init(java.lang.String[])#void#304#1192#ASSIGN#ix = xe + t * xd
-Plane#init(java.lang.String[])#void#601#1860#IDENT#pixels
-Plane#init(java.lang.String[])#void#175#874#IDENT#h1
-Plane#init(java.lang.String[])#void#282#1159#IDENT#t
-Plane#init(java.lang.String[])#void#237#1022#IDENT#cond
-Plane#texture(float,float,float)#int#103#2402#IDENT#col
-Plane#init(java.lang.String[])#void#385#1421#IDENT#sng
-Plane#init(java.lang.String[])#void#184#894#IDENT#l
-Plane#init(java.lang.String[])#void#575#1821#BITAND#(pixels[i] >> 8) & 255
-Plane#init(java.lang.String[])#void#188#898#MUL#xd * xd
-Plane#init(java.lang.String[])#void#19#325#ASSIGN#w = dd.width
-Plane#texture(float,float,float)#int#114#2441#IDENT#numIterations
-Plane#texture(float,float,float)#int#12#2063#IDENT#light
-Plane#init(java.lang.String[])#void#418#1506#IDENT#lx
-Plane#texture(float,float,float)#int#88#2356#IDENT#v
-Plane#init(java.lang.String[])#void#352#1317#IDENT#iz
-Plane#texture(float,float,float)#int#79#2327#IDENT#v
-Plane#init(java.lang.String[])#void#142#813#IDENT#x
-Plane#init(java.lang.String[])#void#302#1197#MUL#t * xd
-Plane#init(java.lang.String[])#void#449#1550#IDENT#texture
-Plane#init(java.lang.String[])#void#91#657#ASSIGN#ny = 1
-Plane#init(java.lang.String[])#void#322#1231#MUL#t * zd
-Plane#init(java.lang.String[])#void#221#945#DIV_ASG#zd /= l
-Plane#init(java.lang.String[])#void#410#1489#IDENT#sng
-Plane#init(java.lang.String[])#void#130#789#IDENT#y
-Plane#init(java.lang.String[])#void#420#1509#IDENT#nx
-Plane#init(java.lang.String[])#void#316#1224#IDENT#iz
-Plane#texture(float,float,float)#int#24#2090#MUL#255 * lcoff
-Plane#init(java.lang.String[])#void#287#1150#ASSIGN#t = accept(t)
-Plane#texture(float,float,float)#int#61#2251#IDENT#x
-Plane#accept_all_FIELD1_TAG2(Plane)#Plane#0#2752#IDENT#p
-Plane#texture(float,float,float)#int#95#2382#IDENT#b
-Plane#init(java.lang.String[])#void#480#822#PREINC#++x
-Plane#init(java.lang.String[])#void#362#1348#IDENT#ly
-Plane#texture(float,float,float)#int#109#2418#SL#r << 16
-Plane#init(java.lang.String[])#void#493#1645#IDENT#pixels
-Plane#init(java.lang.String[])#void#385#1425#TYPECAST#(float)Math.sqrt(param)
-Plane#init(java.lang.String[])#void#234#962#VARDEF#float cond = (k - ye) * yd
-Plane#init(java.lang.String[])#void#312#1214#MUL#t * yd
-Plane#accept_all_FIELD2_TAG1(int[])#int[]#0#2637#IDENT#p
-Plane#accept(float)#float#0#2579#IDENT#i
-Plane#init(java.lang.String[])#void#552#1790#SELECT#System.out
-Plane#texture(float,float,float)#int#68#2285#IDENT#accept
-Plane#init(java.lang.String[])#void#563#1805#IDENT#pixels
-Plane#texture(float,float,float)#int#0#2031#IDENT#r
-Plane#init(java.lang.String[])#void#23#338#IDENT#h
-Plane#init(java.lang.String[])#void#366#1350#MUL#ly * ly
-Plane#init(java.lang.String[])#void#13#294#VARDEF#Dimension dd = new Dimension(400, 256)
-Plane#<init>()#void#1#107#IDENT#super
-Plane#init(java.lang.String[])#void#308#1213#IDENT#t
-Plane#texture(float,float,float)#int#105#2417#IDENT#r
-Plane#init(java.lang.String[])#void#217#943#IDENT#zd
-Plane#init(java.lang.String[])#void#348#1297#ASSIGN#ly = ly - iy
-Plane#init(java.lang.String[])#void#41#413#IDENT#args
-Plane#init(java.lang.String[])#void#429#1518#IDENT#lz
-Plane#texture(float,float,float)#int#110#2415#BITOR#(255 << 24) | (r << 16)
-Plane#texture(float,float,float)#int#31#2107#IDENT#r
-Plane#texture(float,float,float)#int#30#2106#ASSIGN#b = r
-Plane#init(java.lang.String[])#void#433#1520#MUL#lz * nz
-Plane#texture(float,float,float)#int#18#2080#TYPECAST#(int)(255 * lcoff)
-Plane#init(java.lang.String[])#void#347#1300#MINUS#ly - iy
-Plane#init(java.lang.String[])#void#306#1210#IDENT#ye
-Plane#init(java.lang.String[])#void#306#1207#IDENT#iy
-Plane#init(java.lang.String[])#void#158#846#IDENT#xd
-Plane#init(java.lang.String[])#void#154#835#IDENT#t
-Plane#init(java.lang.String[])#void#361#1344#MUL#lx * lx
-Plane#init(java.lang.String[])#void#463#1587#IDENT#pixels
-Plane#texture(float,float,float)#int#37#2124#EQ#texture == 1
-Plane#init(java.lang.String[])#void#513#1717#SELECT#pixels.length
-Plane#init(java.lang.String[])#void#355#1313#ASSIGN#lz = lz - iz
-Plane#init(java.lang.String[])#void#178#866#ASSIGN#yd = (h1 - y) / h1
-Plane#init(java.lang.String[])#void#640#1727#PREINC#++i
-Plane#init(java.lang.String[])#void#69#589#SELECT#Integer.parseInt
-Plane#init(java.lang.String[])#void#31#368#SELECT#Integer.parseInt
-Plane#init(java.lang.String[])#void#324#1226#ASSIGN#iz = ze + t * zd
-Plane#init(java.lang.String[])#void#486#797#IDENT#y
-Plane#init(java.lang.String[])#void#41#403#SELECT#Integer.parseInt
-Plane#init(java.lang.String[])#void#609#1870#SR#pixels[i] >> 16
-Plane#init(java.lang.String[])#void#537#1766#BITAND#pixels[i] & 255
-Plane#init(java.lang.String[])#void#148#819#IDENT#w
-Plane#init(java.lang.String[])#void#501#1652#ASSIGN#pixels = accept_all_FIELD2_TAG1(pixels)
-Plane#init(java.lang.String[])#void#78#632#IDENT#args
-Plane#init(java.lang.String[])#void#293#1173#GE#t >= 0
-Plane#init(java.lang.String[])#void#425#1515#IDENT#ny
-Plane#texture(float,float,float)#int#6#2042#ASSIGN#b = 0
-Plane#init(java.lang.String[])#void#637#1902#ASSIGN#pixels = precise_all_FIELD2_TAG1(pixels)
-Plane#init(java.lang.String[])#void#186#899#IDENT#xd
-Plane#init(java.lang.String[])#void#225#970#IDENT#k
-Plane#init(java.lang.String[])#void#78#622#SELECT#Integer.parseInt
-Plane#init(java.lang.String[])#void#201#895#ASSIGN#l = xd * xd + yd * yd + zd * zd
-Plane#init(java.lang.String[])#void#242#1013#ASSIGN#cond = accept(cond)
-Plane#init(java.lang.String[])#void#590#1845#SELECT#System.out
-Plane#init(java.lang.String[])#void#136#795#IDENT#h
-Plane#init(java.lang.String[])#void#262#1082#IDENT#ye
-Plane#init(java.lang.String[])#void#281#1148#IDENT#t
-Plane#init(java.lang.String[])#void#414#1483#ASSIGN#sng = 1.0F / sng
-Plane#main(java.lang.String[])#void#12#2913#IDENT#args
-Plane#init(java.lang.String[])#void#282#1152#IDENT#accept
-Plane#init(java.lang.String[])#void#277#1111#IDENT#x
-Plane#init(java.lang.String[])#void#444#1536#IDENT#pixels
-Plane#init(java.lang.String[])#void#440#1504#ASSIGN#lcoff = (lx * nx + ly * ny + lz * nz) * sng
-Plane#init(java.lang.String[])#void#87#646#IDENT#nx
-Plane#init(java.lang.String[])#void#164#856#IDENT#w1
-Plane#init(java.lang.String[])#void#259#1080#IDENT#k
-Plane#init(java.lang.String[])#void#265#1086#IDENT#yd
-Plane#precise_all_FIELD2_TAG1(int[])#int[]#0#2695#IDENT#p
-Plane#init(java.lang.String[])#void#329#1253#IDENT#ly
-Plane#init(java.lang.String[])#void#354#1316#MINUS#lz - iz
-Plane#init(java.lang.String[])#void#469#1600#ASSIGN#pixels[index] = bl
-Plane#texture(float,float,float)#int#52#2178#EQ#texture == 2
-Plane#main(java.lang.String[])#void#10#2886#VARDEF#Plane p = new Plane()
-Plane#init(java.lang.String[])#void#182#884#ASSIGN#zd = -1
-Plane#init(java.lang.String[])#void#69#578#IDENT#lly
-Plane#init(java.lang.String[])#void#174#870#MINUS#h1 - y
-Plane#init(java.lang.String[])#void#180#882#IDENT#zd
-Plane#init(java.lang.String[])#void#517#1742#SELECT#System.out
-Plane#init(java.lang.String[])#void#161#852#IDENT#w1
-Plane#init(java.lang.String[])#void#31#368#SELECT#Integer.parseInt
-Plane#init(java.lang.String[])#void#15#326#IDENT#dd
-Plane#init(java.lang.String[])#void#606#1866#INDEXED#pixels[i]
-Plane#texture(float,float,float)#int#119#2455#EQ#numIterations == 25
-Plane#<init>()#void#5#222#IDENT#numIterations
-Plane#init(java.lang.String[])#void#94#666#ASSIGN#nz = 0
-Plane#init(java.lang.String[])#void#156#836#ASSIGN#t = -1
-Plane#init(java.lang.String[])#void#314#1209#ASSIGN#iy = ye + t * yd
-Plane#texture(float,float,float)#int#15#2068#NE#light != 0
-Plane#init(java.lang.String[])#void#320#1232#IDENT#zd
-Plane#init(java.lang.String[])#void#451#1561#IDENT#iy
-Plane#init(java.lang.String[])#void#343#1295#IDENT#ly
-Plane#init(java.lang.String[])#void#51#425#IDENT#alloc_TAG1
-Plane#init(java.lang.String[])#void#303#1195#PLUS#xe + t * xd
-Plane#init(java.lang.String[])#void#604#1867#IDENT#i
-Plane#init(java.lang.String[])#void#374#1333#VARDEF#float param = (lx * lx + ly * ly + lz * lz)
-Plane#texture(float,float,float)#int#86#2329#ASSIGN#v = (mrx + mrz) % 2
-Plane#texture(float,float,float)#int#72#2283#ASSIGN#z = accept(z)
-Plane#init(java.lang.String[])#void#590#1845#SELECT#System.out
-Plane#init(java.lang.String[])#void#327#1243#ASSIGN#lx = 0
-Plane#init(java.lang.String[])#void#385#1436#SELECT#Math.sqrt
-Plane#init(java.lang.String[])#void#336#1282#IDENT#lx
-Plane#init(java.lang.String[])#void#228#972#IDENT#ye
-Plane#texture(float,float,float)#int#21#2091#IDENT#lcoff
-Plane#init(java.lang.String[])#void#109#744#IDENT#h1
-Plane#init(java.lang.String[])#void#413#1488#DIV#1.0F / sng
-Plane#init(java.lang.String[])#void#151#818#LT#x < w
-Plane#init(java.lang.String[])#void#69#599#IDENT#args
-Plane#texture(float,float,float)#int#9#2053#ASSIGN#col = 0
-Plane#init(java.lang.String[])#void#15#324#IDENT#w
-Plane#init(java.lang.String[])#void#298#1196#IDENT#t
-Plane#init(java.lang.String[])#void#368#1354#IDENT#lz
-Plane#init(java.lang.String[])#void#333#1267#IDENT#lz
-Plane#accept(int)#int#0#2537#IDENT#i
-Plane#init(java.lang.String[])#void#60#458#IDENT#h
-Plane#init(java.lang.String[])#void#121#766#IDENT#ze
-Plane#init(java.lang.String[])#void#80#636#INDEXED#args[3]
-Plane#init(java.lang.String[])#void#296#1193#IDENT#xe
-Plane#texture(float,float,float)#int#73#2313#SELECT#Math.round
-Plane#init(java.lang.String[])#void#373#1353#PLUS#lx * lx + ly * ly + lz * lz
-Plane#init(java.lang.String[])#void#166#855#DIV#(x - w1) / w1
-Plane#init(java.lang.String[])#void#276#1108#MUL#y * w
-Plane#init(java.lang.String[])#void#531#1763#IDENT#i
-Plane#init(java.lang.String[])#void#189#902#IDENT#yd
-Plane#init(java.lang.String[])#void#66#447#ASSIGN#pixels = new int[w * h]
-Plane#init(java.lang.String[])#void#376#1392#IDENT#param
-Plane#init(java.lang.String[])#void#125#775#IDENT#k
-Plane#texture(float,float,float)#int#67#2281#IDENT#z
-Plane#texture(float,float,float)#int#61#2244#SELECT#Math.round
-Plane#init(java.lang.String[])#void#397#1462#IDENT#accept
-Plane#init(java.lang.String[])#void#145#817#IDENT#x
-Plane#init(java.lang.String[])#void#568#1811#INDEXED#pixels[i]
-Plane#init(java.lang.String[])#void#449#1558#IDENT#ix
+343
+Plane#init(java.lang.String[])#void#147#869#IDENT#w
+Plane#init(java.lang.String[])#void#312#1297#MUL#t * zd
+Plane#texture(float,float,float)#int#61#2198#SELECT#ApproxMath.round
+Plane#init(java.lang.String[])#void#187#948#MUL#xd * xd
+Plane#init(java.lang.String[])#void#41#434#IDENT#light
+Plane#texture(float,float,float)#int#97#2303#SL#r << 16
+Plane#init(java.lang.String[])#void#407#1518#MUL#(lx * nx + ly * ny + lz * nz) * sng
+Plane#init(java.lang.String[])#void#595#1728#PREINC#++i
+Plane#init(java.lang.String[])#void#272#1217#SELECT#Accept.accept
+Plane#init(java.lang.String[])#void#360#1423#IDENT#lz
+Plane#init(java.lang.String[])#void#77#662#IDENT#ye
+Plane#init(java.lang.String[])#void#326#1348#IDENT#lx
+Plane#init(java.lang.String[])#void#220#995#DIV_ASG#zd /= l
+Plane#texture(float,float,float)#int#18#2036#TYPECAST#(int)(255 * lcoff)
+Plane#init(java.lang.String[])#void#404#1519#IDENT#sng
+Plane#init(java.lang.String[])#void#141#863#IDENT#x
+Plane#init(java.lang.String[])#void#393#1509#IDENT#ny
+Plane#init(java.lang.String[])#void#113#798#DIV#h / 2
+Plane#init(java.lang.String[])#void#272#1225#IDENT#t
+Plane#init(java.lang.String[])#void#408#1498#ASSIGN#lcoff = (lx * nx + ly * ny + lz * nz) * sng
+Plane#init(java.lang.String[])#void#397#1512#IDENT#lz
+Plane#init(java.lang.String[])#void#376#1474#IDENT#sng
+Plane#init(java.lang.String[])#void#367#1455#SELECT#ApproxMath.sqrt
+Plane#init(java.lang.String[])#void#135#845#IDENT#h
+Plane#init(java.lang.String[])#void#62#507#MUL#w * h
+Plane#init(java.lang.String[])#void#213#983#DIV_ASG#yd /= l
+Plane#init(java.lang.String[])#void#454#847#IDENT#y
+Plane#main(java.lang.String[])#void#9#2466#IDENT#args
+Plane#init(java.lang.String[])#void#448#872#PREINC#++x
+Plane#init(java.lang.String[])#void#68#628#IDENT#lly
+Plane#init(java.lang.String[])#void#259#1137#ASSIGN#t = (k - ye) / yd
+Plane#init(java.lang.String[])#void#270#1169#PLUS#y * w + x
+Plane#init(java.lang.String[])#void#364#1399#VARDEF#float param = (lx * lx + ly * ly + lz * lz)
+Plane#init(java.lang.String[])#void#290#1264#IDENT#xd
+Plane#texture(float,float,float)#int#76#2241#IDENT#v
+Plane#init(java.lang.String[])#void#367#1434#IDENT#sng
+Plane#init(java.lang.String[])#void#173#920#MINUS#h1 - y
+Plane#texture(float,float,float)#int#85#2266#BITOR#(255 << 24) | b
+Plane#init(java.lang.String[])#void#97#727#VARDEF#int bl = (255 << 24)
+Plane#init(java.lang.String[])#void#367#1461#IDENT#param
+Plane#init(java.lang.String[])#void#437#1594#ASSIGN#pixels[index] = bl
+Plane#init(java.lang.String[])#void#176#923#DIV#(h1 - y) / h1
+Plane#texture(float,float,float)#int#15#2024#NE#light != 0
+Plane#texture(float,float,float)#int#55#2164#SELECT#ApproxMath.round
+Plane#init(java.lang.String[])#void#200#945#ASSIGN#l = xd * xd + yd * yd + zd * zd
+Plane#init(java.lang.String[])#void#230#1026#IDENT#yd
+Plane#init(java.lang.String[])#void#264#1168#IDENT#w
+Plane#texture(float,float,float)#int#67#2217#IDENT#mrx
+Plane#init(java.lang.String[])#void#16#372#SELECT#dd.width
+Plane#init(java.lang.String[])#void#333#1364#IDENT#ly
+Plane#init(java.lang.String[])#void#351#1410#MUL#lx * lx
+Plane#init(java.lang.String[])#void#89#705#IDENT#ny
+Plane#texture(float,float,float)#int#99#2290#ASSIGN#col = (255 << 24) | (r << 16)
+Plane#init(java.lang.String[])#void#130#840#ASSIGN#y = 0
+Plane#init(java.lang.String[])#void#90#707#ASSIGN#ny = 1
+Plane#init(java.lang.String[])#void#233#1012#VARDEF#float cond = (k - ye) * yd
+Plane#texture(float,float,float)#int#86#2256#ASSIGN#col = (255 << 24) | b
+Plane#init(java.lang.String[])#void#235#1095#IDENT#cond
+Plane#texture(float,float,float)#int#93#2302#IDENT#r
+Plane#init(java.lang.String[])#void#317#1309#ASSIGN#lx = 0
+Plane#init(java.lang.String[])#void#202#969#IDENT#xd
+Plane#init(java.lang.String[])#void#335#1367#IDENT#iy
+Plane#init(java.lang.String[])#void#402#1511#PLUS#lx * nx + ly * ny + lz * nz
+Plane#init(java.lang.String[])#void#426#1543#ASSIGN#pixels[index] = texture(ix, iy, iz)
+Plane#texture(float,float,float)#int#116#2379#IDENT#col
+Plane#init(java.lang.String[])#void#37#404#ASSIGN#texture = Integer.parseInt(args[0])
+Plane#init(java.lang.String[])#void#244#1112#ASSIGN#t = -1
+Plane#init(java.lang.String[])#void#296#1273#IDENT#iy
+Plane#init(java.lang.String[])#void#279#1237#IDENT#t
+Plane#texture(float,float,float)#int#24#2046#MUL#255 * lcoff
+Plane#texture(float,float,float)#int#102#2326#IDENT#numIterations
+Plane#init(java.lang.String[])#void#382#1477#ASSIGN#sng = 1.0F / sng
+Plane#init(java.lang.String[])#void#487#1747#SELECT#System.out.println
+Plane#init(java.lang.String[])#void#533#1813#IDENT#i
+Plane#init(java.lang.String[])#void#204#973#IDENT#l
+Plane#init(java.lang.String[])#void#199#957#PLUS#xd * xd + yd * yd + zd * zd
+Plane#init(java.lang.String[])#void#144#867#IDENT#x
+Plane#init(java.lang.String[])#void#304#1275#ASSIGN#iy = ye + t * yd
+Plane#init(java.lang.String[])#void#438#1623#PREINC#++numIterations
+Plane#texture(float,float,float)#int#83#2267#IDENT#b
+Plane#init(java.lang.String[])#void#372#1437#ASSIGN#sng = (float)ApproxMath.sqrt(param)
+Plane#init(java.lang.String[])#void#595#1728#PREINC#++i
+Plane#init(java.lang.String[])#void#170#921#IDENT#y
+Plane#texture(float,float,float)#int#12#2019#IDENT#light
+Plane#init(java.lang.String[])#void#306#1293#IDENT#ze
+Plane#init(java.lang.String[])#void#419#1555#IDENT#iy
+Plane#init(java.lang.String[])#void#310#1298#IDENT#zd
+Plane#texture(float,float,float)#int#69#2223#IDENT#mrz
+Plane#init(java.lang.String[])#void#412#1530#IDENT#pixels
+Plane#init(java.lang.String[])#void#277#1209#ASSIGN#t = Accept.accept(t)
+Plane#init(java.lang.String[])#void#155#886#ASSIGN#t = -1
+Plane#init(java.lang.String[])#void#363#1419#PLUS#lx * lx + ly * ly + lz * lz
+Plane#init(java.lang.String[])#void#54#491#IDENT#pixels
+Plane#init(java.lang.String[])#void#109#797#IDENT#h
+Plane#init(java.lang.String[])#void#362#1422#MUL#lz * lz
+Plane#init(java.lang.String[])#void#41#457#IDENT#args
+Plane#texture(float,float,float)#int#55#2171#IDENT#x
+Plane#init(java.lang.String[])#void#68#639#SELECT#Integer.parseInt
+Plane#init(java.lang.String[])#void#77#672#SELECT#Integer.parseInt
+Plane#init(java.lang.String[])#void#209#981#IDENT#yd
+Plane#main(java.lang.String[])#void#7#2439#VARDEF#Plane p = new Plane()
+Plane#init(java.lang.String[])#void#68#639#SELECT#Integer.parseInt
+Plane#init(java.lang.String[])#void#338#1363#ASSIGN#ly = ly - iy
+Plane#init(java.lang.String[])#void#342#1383#IDENT#iz
+Plane#init(java.lang.String[])#void#542#1822#BITAND#(pixels[i] >> 8) & 255
+Plane#init(java.lang.String[])#void#557#1846#SELECT#System.out
+Plane#init(java.lang.String[])#void#121#818#ASSIGN#ze = 0
+Plane#texture(float,float,float)#int#6#1998#ASSIGN#b = 0
+Plane#init(java.lang.String[])#void#43#461#INDEXED#args[1]
+Plane#init(java.lang.String[])#void#330#1350#MINUS#lx - ix
+Plane#init(java.lang.String[])#void#288#1262#IDENT#t
+Plane#init(java.lang.String[])#void#396#1505#PLUS#lx * nx + ly * ny
+Plane#init(java.lang.String[])#void#293#1261#PLUS#xe + t * xd
+Plane#texture(float,float,float)#int#42#2093#ASSIGN#col = (255 << 24) | (255 << 16)
+Plane#init(java.lang.String[])#void#431#1581#IDENT#pixels
+Plane#init(java.lang.String[])#void#337#1366#MINUS#ly - iy
+Plane#init(java.lang.String[])#void#79#686#INDEXED#args[3]
+Plane#texture(float,float,float)#int#9#2009#ASSIGN#col = 0
+Plane#init(java.lang.String[])#void#93#716#ASSIGN#nz = 0
+Plane#init(java.lang.String[])#void#571#1868#IDENT#i
+Plane#init(java.lang.String[])#void#390#1502#MUL#lx * nx
+Plane#init(java.lang.String[])#void#183#944#IDENT#l
+Plane#init(java.lang.String[])#void#298#1279#IDENT#t
+Plane#init(java.lang.String[])#void#256#1145#IDENT#yd
+Plane#init(java.lang.String[])#void#484#1743#SELECT#System.out
+Plane#init(java.lang.String[])#void#461#1654#SELECT#Accept.accept_all_FIELD2_TAG1
+Plane#init(java.lang.String[])#void#108#794#IDENT#h1
+Plane#init(java.lang.String[])#void#286#1259#IDENT#xe
+Plane#init(java.lang.String[])#void#50#474#SELECT#Alloc.alloc_TAG1
+Plane#init(java.lang.String[])#void#434#1588#IDENT#index
+Plane#init(java.lang.String[])#void#229#1021#MINUS#k - ye
+Plane#texture(float,float,float)#int#110#2358#SELECT#System.gc
+Plane#init(java.lang.String[])#void#417#1544#IDENT#texture
+Plane#<init>()#void#0#151#IDENT#super
+Plane#init(java.lang.String[])#void#211#985#IDENT#l
+Plane#init(java.lang.String[])#void#480#1718#SELECT#pixels.length
+Plane#init(java.lang.String[])#void#168#914#IDENT#yd
+Plane#init(java.lang.String[])#void#595#1727#IDENT#i
+Plane#init(java.lang.String[])#void#391#1506#IDENT#ly
+Plane#init(java.lang.String[])#void#50#474#SELECT#Alloc.alloc_TAG1
+Plane#init(java.lang.String[])#void#117#806#IDENT#xe
+Plane#init(java.lang.String[])#void#367#1455#SELECT#ApproxMath.sqrt
+Plane#main(java.lang.String[])#void#8#2459#IDENT#p
+Plane#texture(float,float,float)#int#98#2300#BITOR#(255 << 24) | (r << 16)
+Plane#init(java.lang.String[])#void#99#783#IDENT#w1
+Plane#init(java.lang.String[])#void#87#698#ASSIGN#nx = 0
+Plane#texture(float,float,float)#int#61#2205#IDENT#z
+Plane#init(java.lang.String[])#void#357#1413#PLUS#lx * lx + ly * ly
+Plane#init(java.lang.String[])#void#190#955#IDENT#yd
+Plane#texture(float,float,float)#int#61#2198#SELECT#ApproxMath.round
+Plane#init(java.lang.String[])#void#224#1020#IDENT#k
+Plane#init(java.lang.String[])#void#421#1558#IDENT#iz
+Plane#init(java.lang.String[])#void#106#785#ASSIGN#w1 = w / 2
+Plane#init(java.lang.String[])#void#31#422#IDENT#args
+Plane#init(java.lang.String[])#void#31#412#SELECT#Integer.parseInt
+Plane#init(java.lang.String[])#void#568#1861#IDENT#pixels
+Plane#init(java.lang.String[])#void#253#1141#IDENT#ye
+Plane#init(java.lang.String[])#void#303#1278#PLUS#ye + t * yd
+Plane#init(java.lang.String[])#void#268#1170#IDENT#x
+Plane#init(java.lang.String[])#void#27#383#ASSIGN#h = dd.height
+Plane#texture(float,float,float)#int#78#2242#EQ#v == 0
+Plane#init(java.lang.String[])#void#255#1140#MINUS#k - ye
+Plane#init(java.lang.String[])#void#358#1420#IDENT#lz
+Plane#init(java.lang.String[])#void#124#825#IDENT#k
+Plane#init(java.lang.String[])#void#150#868#LT#x < w
+Plane#init(java.lang.String[])#void#0#341#NEWCLASS#new Dimension(400, 256)
+Plane#init(java.lang.String[])#void#196#961#IDENT#zd
+Plane#init(java.lang.String[])#void#31#397#IDENT#texture
+Plane#init(java.lang.String[])#void#292#1263#MUL#t * xd
+Plane#init(java.lang.String[])#void#272#1207#IDENT#t
+Plane#texture(float,float,float)#int#21#2047#IDENT#lcoff
+Plane#init(java.lang.String[])#void#500#1763#INDEXED#pixels[i]
+Plane#texture(float,float,float)#int#8#2006#IDENT#col
+Plane#<init>()#void#5#266#IDENT#numIterations
+Plane#init(java.lang.String[])#void#15#370#IDENT#dd
+Plane#init(java.lang.String[])#void#283#1239#GE#t >= 0
+Plane#init(java.lang.String[])#void#188#952#IDENT#yd
+Plane#init(java.lang.String[])#void#314#1292#ASSIGN#iz = ze + t * zd
+Plane#texture(float,float,float)#int#40#2090#IDENT#col
+Plane#init(java.lang.String[])#void#55#506#IDENT#w
+Plane#init(java.lang.String[])#void#530#1806#IDENT#pixels
+Plane#texture(float,float,float)#int#52#2134#EQ#texture == 2
+Plane#init(java.lang.String[])#void#378#1483#IDENT#sng
+Plane#init(java.lang.String[])#void#120#816#IDENT#ze
+Plane#texture(float,float,float)#int#30#2062#ASSIGN#b = r
+Plane#init(java.lang.String[])#void#468#1646#ASSIGN#pixels = Accept.accept_all_FIELD2_TAG1(pixels)
+Plane#init(java.lang.String[])#void#13#338#VARDEF#Dimension dd = new Dimension(400, 256)
+Plane#init(java.lang.String[])#void#192#954#MUL#yd * yd
+Plane#init(java.lang.String[])#void#340#1380#IDENT#lz
+Plane#init(java.lang.String[])#void#448#872#PREINC#++x
+Plane#init(java.lang.String[])#void#399#1515#IDENT#nz
+Plane#init(java.lang.String[])#void#15#368#IDENT#w
+Plane#init(java.lang.String[])#void#142#864#ASSIGN#x = 0
+Plane#init(java.lang.String[])#void#86#696#IDENT#nx
+Plane#init(java.lang.String[])#void#41#447#SELECT#Integer.parseInt
+Plane#texture(float,float,float)#int#0#1987#IDENT#r
+Plane#init(java.lang.String[])#void#349#1411#IDENT#lx
+Plane#init(java.lang.String[])#void#68#649#IDENT#args
+Plane#init(java.lang.String[])#void#354#1417#IDENT#ly
+Plane#init(java.lang.String[])#void#70#653#INDEXED#args[2]
+Plane#init(java.lang.String[])#void#162#901#MINUS#x - w1
+Plane#init(java.lang.String[])#void#183#946#IDENT#xd
+Plane#texture(float,float,float)#int#33#2073#IDENT#texture
+Plane#init(java.lang.String[])#void#519#1791#SELECT#System.out
+Plane#init(java.lang.String[])#void#316#1307#IDENT#lx
+Plane#init(java.lang.String[])#void#461#1654#SELECT#Accept.accept_all_FIELD2_TAG1
+Plane#texture(float,float,float)#int#71#2221#PLUS#mrx + mrz
+Plane#init(java.lang.String[])#void#47#439#ASSIGN#light = Integer.parseInt(args[1])
+Plane#init(java.lang.String[])#void#271#1165#ASSIGN#index = y * w + x
+Plane#init(java.lang.String[])#void#498#1764#IDENT#i
+Plane#init(java.lang.String[])#void#386#1493#IDENT#lcoff
+Plane#texture(float,float,float)#int#26#2035#ASSIGN#r = (int)(255 * lcoff)
+Plane#init(java.lang.String[])#void#302#1280#MUL#t * yd
+Plane#texture(float,float,float)#int#37#2080#EQ#texture == 1
+Plane#init(java.lang.String[])#void#448#871#IDENT#x
+Plane#init(java.lang.String[])#void#75#631#ASSIGN#lly = Integer.parseInt(args[2])
+Plane#init(java.lang.String[])#void#59#508#IDENT#h
+Plane#init(java.lang.String[])#void#24#386#SELECT#dd.height
+Plane#init(java.lang.String[])#void#63#498#NEWARRAY#new int[w * h]
+Plane#init(java.lang.String[])#void#77#682#IDENT#args
+Plane#init(java.lang.String[])#void#157#896#IDENT#xd
+Plane#texture(float,float,float)#int#107#2340#EQ#numIterations == 25
+Plane#init(java.lang.String[])#void#538#1816#SR#pixels[i] >> 8
+Plane#main(java.lang.String[])#void#0#2443#NEWCLASS#new Plane()
+Plane#texture(float,float,float)#int#3#1988#ASSIGN#r = 255
+Plane#init(java.lang.String[])#void#165#905#DIV#(x - w1) / w1
+Plane#init(java.lang.String[])#void#481#1710#LT#i < pixels.length
+Plane#init(java.lang.String[])#void#395#1508#MUL#ly * ny
+Plane#init(java.lang.String[])#void#177#916#ASSIGN#yd = (h1 - y) / h1
+Plane#init(java.lang.String[])#void#77#672#SELECT#Integer.parseInt
+Plane#init(java.lang.String[])#void#104#787#DIV#w / 2
+Plane#<init>()#void#6#266#ASSIGN#numIterations = 0
+Plane#init(java.lang.String[])#void#138#844#LT#y < h
+Plane#init(java.lang.String[])#void#185#949#IDENT#xd
+Plane#init(java.lang.String[])#void#557#1846#SELECT#System.out
+Plane#init(java.lang.String[])#void#174#924#IDENT#h1
+Plane#init(java.lang.String[])#void#115#796#ASSIGN#h1 = h / 2
+Plane#init(java.lang.String[])#void#313#1295#PLUS#ze + t * zd
+Plane#init(java.lang.String[])#void#477#1712#IDENT#pixels
+Plane#init(java.lang.String[])#void#381#1482#DIV#1.0F / sng
+Plane#init(java.lang.String[])#void#218#997#IDENT#l
+Plane#texture(float,float,float)#int#55#2164#SELECT#ApproxMath.round
+Plane#init(java.lang.String[])#void#300#1281#IDENT#yd
+Plane#texture(float,float,float)#int#59#2148#VARDEF#int mrx = ApproxMath.round(x)
+Plane#init(java.lang.String[])#void#100#786#IDENT#w
+Plane#init(java.lang.String[])#void#474#1708#IDENT#i
+Plane#init(java.lang.String[])#void#84#664#ASSIGN#ye = Integer.parseInt(args[3])
+Plane#init(java.lang.String[])#void#472#1701#VARDEF#int i = 0
+Plane#init(java.lang.String[])#void#326#1345#IDENT#lx
+Plane#init(java.lang.String[])#void#323#1333#IDENT#lz
+Plane#init(java.lang.String[])#void#535#1812#INDEXED#pixels[i]
+Plane#texture(float,float,float)#int#81#2253#IDENT#col
+Plane#init(java.lang.String[])#void#522#1795#SELECT#System.out.println
+Plane#init(java.lang.String[])#void#344#1382#MINUS#lz - iz
+Plane#init(java.lang.String[])#void#33#426#INDEXED#args[0]
+Plane#init(java.lang.String[])#void#249#1136#IDENT#t
+Plane#init(java.lang.String[])#void#504#1767#BITAND#pixels[i] & 255
+Plane#init(java.lang.String[])#void#194#958#IDENT#zd
+Plane#texture(float,float,float)#int#110#2358#SELECT#System.gc
+Plane#init(java.lang.String[])#void#216#993#IDENT#zd
+Plane#init(java.lang.String[])#void#319#1322#IDENT#lly
+Plane#main(java.lang.String[])#void#9#2460#SELECT#p.init
+Plane#init(java.lang.String[])#void#261#1160#IDENT#index
+Plane#init(java.lang.String[])#void#454#848#PREINC#++y
+Plane#texture(float,float,float)#int#48#2127#IDENT#texture
+Plane#init(java.lang.String[])#void#23#382#IDENT#h
+Plane#init(java.lang.String[])#void#19#369#ASSIGN#w = dd.width
+Plane#init(java.lang.String[])#void#386#1500#IDENT#lx
+Plane#init(java.lang.String[])#void#352#1414#IDENT#ly
+Plane#init(java.lang.String[])#void#198#960#MUL#zd * zd
+Plane#init(java.lang.String[])#void#258#1144#DIV#(k - ye) / yd
+Plane#init(java.lang.String[])#void#308#1296#IDENT#t
+Plane#init(java.lang.String[])#void#401#1514#MUL#lz * nz
+Plane#init(java.lang.String[])#void#367#1438#TYPECAST#(float)ApproxMath.sqrt(param)
+Plane#init(java.lang.String[])#void#23#384#IDENT#dd
+Plane#init(java.lang.String[])#void#416#1536#INDEXED#pixels[index]
+Plane#init(java.lang.String[])#void#306#1290#IDENT#iz
+Plane#init(java.lang.String[])#void#439#1610#IDENT#numIterations
+Plane#texture(float,float,float)#int#31#2063#IDENT#r
+Plane#init(java.lang.String[])#void#444#1623#PREINC#++numIterations
+Plane#init(java.lang.String[])#void#435#1595#IDENT#bl
+Plane#texture(float,float,float)#int#67#2212#IDENT#v
+Plane#texture(float,float,float)#int#65#2182#VARDEF#int mrz = ApproxMath.round(z)
+Plane#init(java.lang.String[])#void#168#918#IDENT#h1
+Plane#init(java.lang.String[])#void#153#885#IDENT#t
+Plane#init(java.lang.String[])#void#267#1167#MUL#y * w
+Plane#init(java.lang.String[])#void#331#1347#ASSIGN#lx = lx - ix
+Plane#init(java.lang.String[])#void#417#1552#IDENT#ix
+Plane#init(java.lang.String[])#void#415#1537#IDENT#index
+Plane#init(java.lang.String[])#void#31#412#SELECT#Integer.parseInt
+Plane#init(java.lang.String[])#void#519#1791#SELECT#System.out
+Plane#texture(float,float,float)#int#91#2287#IDENT#col
+Plane#init(java.lang.String[])#void#92#714#IDENT#nz
+Plane#init(java.lang.String[])#void#347#1408#IDENT#lx
+Plane#init(java.lang.String[])#void#242#1111#IDENT#t
+Plane#init(java.lang.String[])#void#340#1377#IDENT#lz
+Plane#init(java.lang.String[])#void#345#1379#ASSIGN#lz = lz - iz
+Plane#init(java.lang.String[])#void#157#900#IDENT#x
+Plane#init(java.lang.String[])#void#328#1351#IDENT#ix
+Plane#init(java.lang.String[])#void#193#951#PLUS#xd * xd + yd * yd
+Plane#init(java.lang.String[])#void#181#934#ASSIGN#zd = -1
+Plane#init(java.lang.String[])#void#129#839#IDENT#y
+Plane#init(java.lang.String[])#void#272#1217#SELECT#Accept.accept
+Plane#init(java.lang.String[])#void#324#1335#ASSIGN#lz = 0
+Plane#init(java.lang.String[])#void#484#1743#SELECT#System.out
+Plane#init(java.lang.String[])#void#495#1757#IDENT#pixels
+Plane#texture(float,float,float)#int#74#2214#ASSIGN#v = (mrx + mrz) % 2
+Plane#init(java.lang.String[])#void#462#1678#IDENT#pixels
+Plane#init(java.lang.String[])#void#166#898#ASSIGN#xd = (x - w1) / w1
+Plane#init(java.lang.String[])#void#227#1022#IDENT#ye
+Plane#init(java.lang.String[])#void#576#1871#SR#pixels[i] >> 16
+Plane#texture(float,float,float)#int#5#1997#IDENT#b
+Plane#init(java.lang.String[])#void#388#1503#IDENT#nx
+Plane#init(java.lang.String[])#void#286#1256#IDENT#ix
+Plane#texture(float,float,float)#int#31#2061#IDENT#b
+Plane#init(java.lang.String[])#void#321#1321#ASSIGN#ly = lly
+Plane#init(java.lang.String[])#void#250#1139#IDENT#k
+Plane#init(java.lang.String[])#void#179#932#IDENT#zd
+Plane#init(java.lang.String[])#void#461#1639#IDENT#pixels
+Plane#init(java.lang.String[])#void#560#1850#SELECT#System.out.println
+Plane#init(java.lang.String[])#void#160#902#IDENT#w1
+Plane#init(java.lang.String[])#void#232#1025#MUL#(k - ye) * yd
+Plane#init(java.lang.String[])#void#41#447#SELECT#Integer.parseInt
+Plane#init(java.lang.String[])#void#294#1258#ASSIGN#ix = xe + t * xd
+Plane#init(java.lang.String[])#void#454#848#PREINC#++y
+Plane#init(java.lang.String[])#void#261#1166#IDENT#y
+Plane#init(java.lang.String[])#void#573#1867#INDEXED#pixels[i]
+Plane#init(java.lang.String[])#void#435#1587#INDEXED#pixels[index]
+Plane#init(java.lang.String[])#void#333#1361#IDENT#ly
+Plane#init(java.lang.String[])#void#356#1416#MUL#ly * ly
+Plane#init(java.lang.String[])#void#126#826#ASSIGN#k = -1
+Plane#init(java.lang.String[])#void#118#808#ASSIGN#xe = 0
+Plane#init(java.lang.String[])#void#239#1099#LE#cond <= 0
+Plane#init(java.lang.String[])#void#206#971#DIV_ASG#xd /= l
+Plane#<init>()#void#1#151#IDENT#super
+Plane#init(java.lang.String[])#void#580#1878#BITAND#(pixels[i] >> 16) & 255
+Plane#init(java.lang.String[])#void#296#1276#IDENT#ye
+Plane#init(java.lang.String[])#void#65#497#ASSIGN#pixels = new int[w * h]
+Plane#texture(float,float,float)#int#18#2034#IDENT#r
+Plane#init(java.lang.String[])#void#319#1319#IDENT#ly
+Plane#init(java.lang.String[])#void#132#843#IDENT#y
+Plane#texture(float,float,float)#int#73#2228#MOD#(mrx + mrz) % 2
+Plane#init(java.lang.String[])#void#163#906#IDENT#w1

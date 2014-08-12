@@ -156,7 +156,7 @@ public final class HybridBinarizer extends GlobalHistogramBinarizer {
 					for (int xx = 0; xx < 8; xx++) {
 						int pixel = (luminances[offset + xx] & 0xff);
 						//additional accept
-						pixel = Accept.accept(pixel);
+//						pixel = Accept.accept(pixel);
 						sum += pixel;
 						if (pixel < min) {
 							min = pixel;

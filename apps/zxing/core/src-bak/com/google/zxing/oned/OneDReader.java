@@ -291,9 +291,9 @@ public abstract class OneDReader implements Reader {
       int counter = counters[x] << INTEGER_MATH_SHIFT;
       int scaledPattern = pattern[x] * unitBarWidth;
       //additional accept
-      counter = Accept.accept(counter);
+//      counter = Accept.accept(counter);
       //additional accept
-      scaledPattern = Accept.accept(scaledPattern);
+//      scaledPattern = Accept.accept(scaledPattern);
       int variance = (counter > scaledPattern) ? counter - scaledPattern : scaledPattern - counter;
       // addtional accept
       variance = Accept.accept(variance);

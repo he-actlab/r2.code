@@ -93,13 +93,14 @@ public final class PerspectiveTransform {
                                                            float x1, float y1,
                                                            float x2, float y2,
                                                            float x3, float y3) {
-    float dy2 = y3 - y2;
+	PerspectiveTransform ret;
+	float dy2 = y3 - y2;
     float dy3 = y0 - y1 + y2 - y3;
     //additional accept
-    dy2 = Accept.accept(dy2);
-    dy3 = Accept.accept(dy3);
+//    dy2 = Accept.accept(dy2);
+//    dy3 = Accept.accept(dy3);
     if (dy2 == 0.0f && dy3 == 0.0f) {
-      return new PerspectiveTransform(x1 - x0, x2 - x1, x0,
+      ret = new PerspectiveTransform(x1 - x0, x2 - x1, x0,
           y1 - y0, y2 - y1, y0,
           0.0f, 0.0f, 1.0f);
     } else {
@@ -110,10 +111,11 @@ public final class PerspectiveTransform {
       float denominator = dx1 * dy2 - dx2 * dy1;
       float a13 = (dx3 * dy2 - dx2 * dy3) / denominator;
       float a23 = (dx1 * dy3 - dx3 * dy1) / denominator;
-      return new PerspectiveTransform(x1 - x0 + a13 * x1, x3 - x0 + a23 * x3, x0,
+      ret = new PerspectiveTransform(x1 - x0 + a13 * x1, x3 - x0 + a23 * x3, x0,
           y1 - y0 + a13 * y1, y3 - y0 + a23 * y3, y0,
           a13, a23, 1.0f);
     }
+    return ret;
   }
 
   public static PerspectiveTransform quadrilateralToSquare(float x0, float y0,

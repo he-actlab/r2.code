@@ -122,8 +122,8 @@ public abstract class GridSampler {
     // Check and nudge points from start until we see some that are OK:
     boolean nudged = true;
     for (int offset = 0; offset < points.length && nudged; offset += 2) {
-      int x = ((int) points[offset]);
-      int y = ((int) points[offset + 1]);
+      int x = (int) points[offset];
+      int y = (int) points[offset + 1];
       //additional accept
       x = Accept.accept(x);
       //additional accept
@@ -155,8 +155,8 @@ public abstract class GridSampler {
     // Check and nudge points from end:
     nudged = true;
     for (int offset = points.length - 2; offset >= 0 && nudged; offset -= 2) {
-      int x = ((int) points[offset]);
-      int y = ((int) points[offset + 1]);
+      int x = (int) points[offset];
+      int y = (int) points[offset + 1];
       //additional accept
       x = Accept.accept(x);
       //additional accept

@@ -8,7 +8,7 @@ import java.util.Random;
 
 public class JMEIntTest {
 	public static Random rand;
-	public static  Vector3f randvec() {
+	public static Vector3f randvec() {
 		Vector3f vec = new Vector3f(
 				rand.nextFloat(), rand.nextFloat(), rand.nextFloat()
 				);
@@ -16,7 +16,6 @@ public class JMEIntTest {
 	}
 	public static void main(String[] argv) {
 
-		// Use a constant seed so we operate deterministically.
 		rand = new Random(Integer.parseInt(argv[0])); 
 
 		for (int i = 0; i <= 100; ++i) {

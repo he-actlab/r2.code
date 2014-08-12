@@ -5,6 +5,7 @@
 import java.awt.*;
 
 import chord.analyses.expax.lang.*;
+import chord.analyses.expax.lang.math.ApproxMath;
 
 public class Plane {
 	int w, h;
@@ -86,10 +87,8 @@ public class Plane {
 					lx=lx-ix;	
 					ly=ly-iy;	
 					lz=lz-iz;	
-					float param = (lx*lx+ly*ly+lz*lz);
-					//additional accept
-					param = Accept.accept(param);	
-					sng=(float)Math.sqrt(param);
+					float param = (lx*lx+ly*ly+lz*lz);	
+					sng=(float)ApproxMath.sqrt(param);
 					sng=1.0f/sng;
 					lcoff=(lx*nx+ly*ny+lz*nz)*sng;	
 					pixels[index]=texture(ix,iy,iz);
@@ -124,12 +123,8 @@ public class Plane {
 		if(texture==1) {
 			col=(255<<24)|(255<<16);
 		} else if(texture==2) {
-			//additional accept
-			x = Accept.accept(x);	
-			int mrx = Math.round(x);
-			//additional accept
-			z = Accept.accept(z);
-			int mrz = Math.round(z);
+			int mrx = ApproxMath.round(x);
+			int mrz = ApproxMath.round(z);
 			v = (mrx + mrz) %2;	
 	
 			if(v==0) {

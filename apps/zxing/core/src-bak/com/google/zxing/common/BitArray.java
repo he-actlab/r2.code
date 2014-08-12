@@ -161,7 +161,7 @@ public final class BitArray {
   public void appendBit(boolean bit) {
     ensureCapacity(size + 1);
     //additional accept
-    bit = Accept.accept(bit);
+//    bit = Accept.accept(bit);
     if (bit) {
       bits[size >> 5] |= (1 << (size & 0x1F));
     }
@@ -216,7 +216,7 @@ public final class BitArray {
       for (int j = 0; j < 8; j++) {
     	boolean get = get(bitOffset);
     	//additional accept
-    	get = Accept.accept(get);
+//    	get = Accept.accept(get);
         if (get) {
           theByte |= 1 << (7 - j);
         }
@@ -244,7 +244,7 @@ public final class BitArray {
     for (int i = 0; i < size; i++) {
       boolean get = get(size - i - 1);
       //additional accept
-      get = Accept.accept(get);
+//      get = Accept.accept(get);
       if (get) {
         newBits[i >> 5] |= 1 << (i & 0x1F);
       }

@@ -262,6 +262,7 @@ final class AlignmentPatternFinder {
    * @return {@link AlignmentPattern} if we have found the same pattern twice, or null if not
    */
   private AlignmentPattern handlePossibleCenter(int[] stateCount, int i, int j) {
+	AlignmentPattern ret = null;
     int stateCountTotal = stateCount[0] + stateCount[1] + stateCount[2];
     float centerJ = centerFromEnd(stateCount, j);
     float centerI = crossCheckVertical(i, (int) centerJ, 2 * stateCount[1], stateCountTotal);
@@ -273,9 +274,9 @@ final class AlignmentPatternFinder {
         // Look for about the same center and module size:
         boolean cond = center.aboutEquals(estimatedModuleSize, centerI, centerJ);
         //additional accept
-        cond = Accept.accept(cond);
+//        cond = Accept.accept(cond);
         if (cond) {
-          return new AlignmentPattern(centerJ, centerI, estimatedModuleSize);
+          ret = new AlignmentPattern(centerJ, centerI, estimatedModuleSize);
         }
       }
       // Hadn't found this before; save it
@@ -285,7 +286,7 @@ final class AlignmentPatternFinder {
         resultPointCallback.foundPossibleResultPoint(point);
       }
     }
-    return null;
+    return ret;
   }
 
 }

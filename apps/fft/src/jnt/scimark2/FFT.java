@@ -58,13 +58,9 @@ public class FFT {
 			double w_imag = 0.0; 
 
 			double theta = 2.0 * direction * Math.PI / (2.0 * (double) dual);
-			//additional accept
-			theta = Accept.accept(theta);
-			double s = Math.sin(theta);
+			double s = ApproxMath.sin(theta);
 			double param = theta / 2.0;
-			//additional accept
-			param = Accept.accept(param);
-			double t = Math.sin(param); 
+			double t = ApproxMath.sin(param); 
 			double s2 = 2.0 * t * t; 
 
 			/* a = 0 */

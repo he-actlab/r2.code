@@ -110,8 +110,7 @@ public abstract class UPCEANReader extends OneDReader {
     int[] startRange = null;
     int nextStart = 0;
     //additional accept
-    foundStart = Accept.accept(foundStart);
-    while (!(foundStart)) {
+    while (!(foundStart = Accept.accept(foundStart))) {
       startRange = findGuardPattern(row, nextStart, false, START_END_PATTERN);
       int start = startRange[0];
       nextStart = startRange[1];
@@ -121,8 +120,6 @@ public abstract class UPCEANReader extends OneDReader {
       int quietStart = start - (nextStart - start);
       if (quietStart >= 0) {
         foundStart = row.isRange(quietStart, start, false);
-        //additional accept
-        foundStart = Accept.accept(foundStart);
       }
     }
     return startRange;
@@ -270,8 +267,7 @@ public abstract class UPCEANReader extends OneDReader {
     int width = row.getSize();
     boolean isWhite = false;
     //additional accept
-    rowOffset = Accept.accept(rowOffset);
-    while (rowOffset < width) {
+    while (Accept.accept(rowOffset) < width) {
       isWhite = !row.get(rowOffset);
       //additional accept
       isWhite = Accept.accept(isWhite);
@@ -279,8 +275,6 @@ public abstract class UPCEANReader extends OneDReader {
         break;
       }
       rowOffset++;
-      //additional accept
-      rowOffset = Accept.accept(rowOffset);
     }
 
     int counterPosition = 0;
@@ -340,9 +334,9 @@ public abstract class UPCEANReader extends OneDReader {
        int[] pattern = patterns[i];
        int variance = patternMatchVariance(counters, pattern, MAX_INDIVIDUAL_VARIANCE);
       //additional accept
-      variance = Accept.accept(variance);
+//      variance = Accept.accept(variance);
       //additional accept
-      bestVariance = Accept.accept(bestVariance);
+//      bestVariance = Accept.accept(bestVariance);
       if (variance < bestVariance) {
         bestVariance = variance;
         bestMatch = i;

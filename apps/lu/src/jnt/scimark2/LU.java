@@ -26,11 +26,13 @@ public class LU
 
 		@return 0, if OK, nozero value, othewise.
 	 */
-	public static  int factor( double[][] A, int pivot[])
+	public static int factor( double[][] A, int pivot[])
 	{
 		int N = A.length;
 		int M = A[0].length;
 
+		boolean done = false;
+		int ret = -1;
 		int minMN = Math.min(M,N);
 
 		for (int j=0; j<minMN; j++)
@@ -50,42 +52,45 @@ public class LU
 
 			pivot[j] = jp;
 
-			//additional accept
-			double d = A[jp][j];
-			d = Accept.accept(d);
-			if (d == 0)                 
-				return 1;       
-
-			if (jp != j)
-			{
-				// swap rows j and jp
-				double tA[] = A[j];
-				A[j] = A[jp];
-				A[jp] = tA;
+			if (A[jp][j] == 0) {             
+				ret = 1;
+				done = true;
 			}
 
-			if (j<M-1)  
-			{
-				double recp =  1.0 / A[j][j];
-
-				for (int k=j+1; k<M; k++)
-					A[k][j] *= recp;
-			}
-
-			if (j < minMN-1)
-			{
-				for (int ii=j+1; ii<M; ii++)
+			if(!done) {
+				if (jp != j)
 				{
-					double Aii[] = A[ii];
-					double Aj[] = A[j];
-					double AiiJ = Aii[j];
-					for (int jj=j+1; jj<N; jj++)
-						Aii[jj] -= AiiJ * Aj[jj];
+					// swap rows j and jp
+					double tA[] = A[j];
+					A[j] = A[jp];
+					A[jp] = tA;
+				}
+	
+				if (j<M-1)  
+				{
+					double recp =  1.0 / A[j][j];
+	
+					for (int k=j+1; k<M; k++)
+						A[k][j] *= recp;
+				}
+	
+				if (j < minMN-1)
+				{
+					for (int ii=j+1; ii<M; ii++)
+					{
+						double Aii[] = A[ii];
+						double Aj[] = A[j];
+						double AiiJ = Aii[j];
+						for (int jj=j+1; jj<N; jj++)
+							Aii[jj] -= AiiJ * Aj[jj];
+					}
 				}
 			}
 		}
+		if(!done)
+			ret = 0;
 
-		return 0;
+		return ret;
 	}
 
 	/**

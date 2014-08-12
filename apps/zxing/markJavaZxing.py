@@ -67,7 +67,7 @@ for line in lines:
 			continue
 		else:
 			started = True
-			if ch == '/' or ch == '*' or ch == '[' or ch == ']' or ch == '\"' or ch == '\'' or ch == '&':
+			if ch == '/' or ch == '*' or ch == '[' or ch == ']' or ch == '\"' or ch == '&':
 				temp += '\\' + ch
 			else:
 				temp += ch
@@ -89,7 +89,6 @@ for line in lines:
 	new = p.read().strip('\n')
 
 	if new == '':
-		logfile.write(new + '\n')
 		logfile.write(" *** EXPAX: adding annotation failed: " + org + '\n')
 		logfile.write(" *** " + quad + "\n")
 		logfile.write(" *** " + loc + "\n")

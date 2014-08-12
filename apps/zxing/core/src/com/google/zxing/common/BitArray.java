@@ -121,6 +121,7 @@ public final class BitArray {
    * @throws IllegalArgumentException if end is less than or equal to start
    */
   public boolean isRange(int start, int end, boolean value) {
+	boolean ret = true;
     if (end < start) {
       throw new IllegalArgumentException();
     }
@@ -148,14 +149,14 @@ public final class BitArray {
       int lhs= bits[i] & mask;
       int rhs= (value ? mask : 0);
       // additional accept
-      lhs= Accept.accept(lhs);
+//      lhs= Accept.accept(lhs);
       // additional accept
-      rhs = Accept.accept(rhs);
+//      rhs = Accept.accept(rhs);
       if (lhs != rhs) {
-        return false;
+        ret = false;
       }
     }
-    return true;
+    return ret;
   }
   
   public void appendBit(boolean bit) {
@@ -265,7 +266,7 @@ public final class BitArray {
       }
       //additional accept 
       boolean get = get(i);
-      get = Accept.accept(get);
+//      get = Accept.accept(get);
       result.append(get ? 'X' : '.');
     }
     return result.toString();
