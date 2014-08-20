@@ -56,7 +56,15 @@
 
   <target name="clean">
     <delete dir="build"/>
+    <delete dir="chord_output_r2"/>
+    <delete dir="chord_output"/>
+    <delete dir="eclipse-log"/>
+    <delete dir="src-marked"/>
+    <delete file="analysis.result"/>
+    <delete file="after"/>
+    <delete file="markJava.log"/>
     <delete file="simpleRaytracer.jar"/>
+    <delete file="simpleRaytracer-bc-offset.info"/>
   </target>
 
 </project>

@@ -30,16 +30,16 @@
     </presetdef>
 
     <!-- EnerJ checker -->
-    <property name="enerj.jar" value="../../../enerj/build/enerj.jar" />
+    <property name="enerj.jar" value="../../../r2.enerj/build/enerj.jar" />
     <property name="cfrt.jar" value="../../../checker-runtime/build/cfrt.jar" />
     <property name="enerj.checker" value="enerj.PrecisionChecker" />
 
     <!-- Expax arguments -->
-    <property name="expaxbc.info" value="${user.dir}/../zxing-javase-bc-offset.info" /> 
-    <property name="expaxanal.flag" value="${user.dir}/../analysis.flag" />
-    <property name="expaxanal.result" value="${user.dir}/../analysis.result" />
+    <property name="r2bc.info" value="${user.dir}/../zxing-javase-bc-offset.info" /> 
+    <property name="r2anal.flag" value="${user.dir}/../analysis.flag" />
+    <property name="r2anal.result" value="${user.dir}/../analysis.result" />
 
-		<condition property="enerjc.args" value="-Alint=mbstatic,${expaxanal.flag},${expaxbc.info},${expaxanal.result}" else="-Alint=simulation,mbstatic,${expaxanal.flag},${expaxbc.info},${expaxanal.result}">
+		<condition property="enerjc.args" value="-Alint=mbstatic,${r2anal.flag},${r2bc.info},${r2anal.result}" else="-Alint=simulation,mbstatic,${r2anal.flag},${r2bc.info},${r2anal.result}">
         <isset property="env.EnerJNoSim" />
     </condition>
     <condition property="enerjc.verbose" value="false" else="true">
@@ -49,8 +49,8 @@
         <jsr308.javac verbose="${enerjc.verbose}">
             <compilerarg line="-Xbootclasspath/a:${cfrt.jar}:${enerj.jar} -processorpath ${cfrt.jar}:${enerj.jar} -processor ${enerj.checker}" />
             <compilerarg line="${enerjc.args}" />
-						<compilerarg line="-expaxanalflag ${expaxanal.flag}" />
-						<compilerarg line="-expaxbcinfo ${expaxbc.info}" />
+						<compilerarg line="-r2analflag ${r2anal.flag}" />
+						<compilerarg line="-r2bcinfo ${r2bc.info}" />
         </jsr308.javac>
     </presetdef>
 

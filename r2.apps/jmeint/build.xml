@@ -19,7 +19,7 @@
     <property name="enerj.checker" value="enerj.PrecisionChecker" />
 
 		<!-- ExpAX -->
-s		<property name="r2.jar" value="${r2.dir}/r2-analysis.jar" />
+		<property name="r2.jar" value="${r2.dir}/r2-analysis.jar" />
 
     <property name="r2bc.info" value="${user.dir}/jmeint-bc-offset.info" /> 
     <property name="r2anal.flag" value="${user.dir}/analysis.flag" />
