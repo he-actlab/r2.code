@@ -4,8 +4,8 @@ package Sobel;
  Evaluation for Relax framework
 */
 
-import chord.analyses.expax.lang.*;
-import chord.analyses.expax.lang.math.*;
+import chord.analyses.r2.lang.*;
+import chord.analyses.r2.lang.math.*;
 
 import java.io.IOException;
 import Sobel.TextFile.Mode;

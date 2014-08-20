@@ -54,9 +54,17 @@
     <jar jarfile="mc.jar" basedir="build"/>
   </target>
 
-  <target name="clean">
-    <delete dir="build"/>
-    <delete file="mc.jar"/>
-  </target>
+    <target name="clean">
+        <delete dir="build"/>
+        <delete dir="chord_output_r2"/>
+        <delete dir="chord_output"/>
+        <delete dir="eclipse-log"/>
+        <delete dir="src-marked"/>
+        <delete file="analysis.result"/>
+        <delete file="after"/>
+        <delete file="markJava.log"/>
+        <delete file="mc.jar"/>
+        <delete file="mc-bc-offset.info"/>
+    </target>
 
 </project>

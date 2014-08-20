@@ -38,7 +38,7 @@ import java.io.ObjectInput;
 import java.io.ObjectOutput;
 import java.util.logging.Logger;
 
-import chord.analyses.expax.lang.math.*;
+import chord.analyses.r2.lang.math.*;
 
 /**
  * <code>Vector2f</code> defines a Vector for a two float value vector.

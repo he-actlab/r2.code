@@ -16,7 +16,7 @@
 
 package com.google.zxing.oned;
 
-import chord.analyses.expax.lang.Accept;
+import chord.analyses.r2.lang.*;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.DecodeHintType;
@@ -202,7 +202,7 @@ public final class ITFReader extends OneDReader {
     int quietCount = this.narrowLineWidth * 10;  // expect to find this many pixels of quiet zone
 
     for (int i = startPattern - 1; quietCount > 0 && i >= 0; i--) {
-      if (Accept.accept(row.get(i))) {
+      if (Relax.relax(row.get(i))) {
         break;
       }
       quietCount--;
@@ -224,7 +224,7 @@ public final class ITFReader extends OneDReader {
     int width = row.getSize();
     int endStart = 0;
     while (endStart < width) {
-      if (Accept.accept(row.get(endStart))) {
+      if (Relax.relax(row.get(endStart))) {
         break;
       }
       endStart++;
@@ -297,7 +297,7 @@ public final class ITFReader extends OneDReader {
     for (int x = rowOffset; x < width; x++) {
       boolean pixel = row.get(x);
       boolean cond = pixel ^ isWhite;
-      if (Accept.accept(cond)) {
+      if (Relax.relax(cond)) {
         counters[counterPosition]++;
       } else {
         if (counterPosition == patternLength - 1) {

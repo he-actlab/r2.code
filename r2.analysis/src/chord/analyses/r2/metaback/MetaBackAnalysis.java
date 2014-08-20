@@ -200,13 +200,13 @@ public class MetaBackAnalysis {
 				if(vv != null){
 					jq_Method m = Invoke.getMethod(invoke).getMethod();
 					// jspark: put APVariable for precise so that the analysis ignores their return values
-					if (SharedData.isAcceptMethod(m) ||
-						SharedData.isAcceptAllMethod(m) ||
-						SharedData.isPreciseMethod(m) ||
-						SharedData.isPreciseAllMethod(m))
+					if (SharedData.isRelaxMethod(m) ||
+						SharedData.isRelaxAllMethod(m) ||
+						SharedData.isRestrictMethod(m) ||
+						SharedData.isRestrictAllMethod(m))
 //					if (SharedData.isPreciseMethod(m) ||
 //							SharedData.isPreciseAllMethod(m))
-						nc.addLiteral(APVariable.singleton, d);
+						nc.addLiteral(R2Variable.singleton, d);
 					else
 						nc.addLiteral(RVariable.singleton, d);
 				}else{
@@ -343,14 +343,14 @@ public class MetaBackAnalysis {
 			IWrappedPE<Edge,Edge> callWPE = wpe.getWPE();
 			Inst inst = callWPE.getInst();
 			Quad invoke = (Quad)inst;
-			if (SharedData.isAcceptMethod(Invoke.getMethod(invoke).getMethod())) {
-				Set<Integer> acceptedVs = new ArraySet<Integer>();
+			if (SharedData.isRelaxMethod(Invoke.getMethod(invoke).getMethod())) {
+				Set<Integer> relaxedVs = new ArraySet<Integer>();
 				ParamListOperand paramList = Invoke.getParamList(invoke);
 				for (int i = 0; i < paramList.length(); i++) {
 					RegisterOperand ro = paramList.get(i);
 					Register r = ro.getRegister();
 					int rIdx = SharedData.domU.indexOf(r);
-					acceptedVs.add(rIdx);
+					relaxedVs.add(rIdx);
 				}
 				DNF nErrSuf = new DNF(new ClauseSizeCMP(),false);
 				OUT: for(Clause c : errSuf.getClauses()){
@@ -361,7 +361,7 @@ public class MetaBackAnalysis {
 						VVariable vv = null;
 						if(v instanceof VVariable){
 							vv =  (VVariable)v;
-							if(!acceptedVs.contains(vv.getIdx()))
+							if(!relaxedVs.contains(vv.getIdx()))
 								vv = null;
 						}
 						if(vv != null){
@@ -378,41 +378,41 @@ public class MetaBackAnalysis {
 				}
 				this.preSuf = errSuf;
 				errSuf = nErrSuf;
-			}//end of isAcceptedMethod if
+			}//end of isRelaxedMethod if
 			
 			//***********************
-			// accept_all_FIELDX_TAGY
+			// relax_all_FIELDX_TAGY
 			//***********************
-			if (SharedData.isAcceptAllMethod(Invoke.getMethod(invoke).getMethod())) {
-				Set<Integer> acceptedVs = new ArraySet<Integer>();
-				Set<Pair<Integer,Integer>> acceptedFs = new ArraySet<Pair<Integer,Integer>>();
-				Set<Integer> acceptedGs = new ArraySet<Integer>();
+			if (SharedData.isRelaxAllMethod(Invoke.getMethod(invoke).getMethod())) {
+				Set<Integer> relaxedVs = new ArraySet<Integer>();
+				Set<Pair<Integer,Integer>> relaxedFs = new ArraySet<Pair<Integer,Integer>>();
+				Set<Integer> relaxedGs = new ArraySet<Integer>();
 				ParamListOperand paramList = Invoke.getParamList(invoke);
 				if (paramList.length() == 0) {	// global
 					int gidx = SharedData.getFieldIdx(Invoke.getMethod(invoke).getMethod());
-					acceptedGs.add(gidx);
+					relaxedGs.add(gidx);
 				} else if (paramList.length() > 0) { // object.field or arrays
 					Register r = paramList.get(paramList.length()-1).getRegister();
 					if (!r.getType().isPrimitiveType()) { 
 			            Set<Quad> allocSites = SharedData.cipa.pointsTo(r).pts;
 			            for (Quad h: allocSites) {
 			              if(SharedData.R2_LOG)
-			            	  System.out.println("*** R2_LOG: [Backward] accept_all - allocation site = " + h.toString());
+			            	  System.out.println("*** R2_LOG: [Backward] relax_all - allocation site = " + h.toString());
 			        	  String tag = SharedData.getTag(Invoke.getMethod(invoke).getMethod());
-			        	  if (!tag.equalsIgnoreCase(SharedData.allocToTagMap.get(h))){
+			        	  if (!tag.equalsIgnoreCase(SharedData.quadToTagMap.get(h))){
 			        		  if(SharedData.R2_LOG)
-			        			  System.out.println("*** R2_LOG: [Backward] accept_all - Tag unmatched!");
+			        			  System.out.println("*** R2_LOG: [Backward] relax_all - Tag unmatched!");
 			        		  continue;
 			        	  }
 			              int hidx = SharedData.domH.indexOf(h);
 			              int fidx = SharedData.getFieldIdx(h, Invoke.getMethod(invoke).getMethod());
 			              Pair<Integer,Integer> hf = new Pair<Integer,Integer>(hidx,fidx);
 			              if (SharedData.R2_LOG)
-			        		System.out.println("*** R2_LOG: [Backward] accept_all - accepted! array or object.field(" + hf.toString() + ")  (" + invoke.toString() + ")");
-			              acceptedFs.add(hf);
+			        		System.out.println("*** R2_LOG: [Backward] relax_all - relaxed! array or object.field(" + hf.toString() + ")  (" + invoke.toString() + ")");
+			              relaxedFs.add(hf);
 			            }
 					} else 
-						throw new RuntimeException("Error! accept_all shouldn't have a primitive-type parameter");
+						throw new RuntimeException("Error! relax_all shouldn't have a primitive-type parameter");
 				} 
 				DNF nErrSuf = new DNF(new ClauseSizeCMP(),false);
 				OUT: for(Clause c : errSuf.getClauses()){
@@ -425,29 +425,29 @@ public class MetaBackAnalysis {
 			            GVariable gv = null;
 						if(v instanceof VVariable){
 							vv =  (VVariable)v;
-							if(!acceptedVs.contains(vv.getIdx()))
+							if(!relaxedVs.contains(vv.getIdx()))
 								vv = null;
 							else{
 								if (SharedData.R2_LOG)
-									System.out.println("*** R2_LOG: [Backward] accept_all - REMOVED VVariable(" + vv.toString() + ")  (" + invoke.toString() + ")");
+									System.out.println("*** R2_LOG: [Backward] relax_all - REMOVED VVariable(" + vv.toString() + ")  (" + invoke.toString() + ")");
 							}
 						}
 						else if(v instanceof HFVariable){
 			            	hfv = (HFVariable)v;
-			            	if(!acceptedFs.contains(new Pair<Integer,Integer>(hfv.getHIdx(),hfv.getFIdx())))
+			            	if(!relaxedFs.contains(new Pair<Integer,Integer>(hfv.getHIdx(),hfv.getFIdx())))
 			            		hfv = null;
 			            	else{
 			            		if (SharedData.R2_LOG)
-			            			System.out.println("*** R2_LOG: [Backward] accept_all - REMOVED HFVariable(" + hfv.toString() + ")  (" + invoke.toString() + ")");
+			            			System.out.println("*** R2_LOG: [Backward] relax_all - REMOVED HFVariable(" + hfv.toString() + ")  (" + invoke.toString() + ")");
 			            	}
 			            }
 						else if(v instanceof GVariable){
 			            	gv = (GVariable)v;
-			            	if(!acceptedGs.contains(gv.getIdx()))
+			            	if(!relaxedGs.contains(gv.getIdx()))
 			            		gv = null;
 			            	else{
 			            		if (SharedData.R2_LOG)
-			            			System.out.println("*** R2_LOG: [Backward] accept_all - REMOVED GVariable(" + gv.toString() + ")  (" + invoke.toString() + ")");
+			            			System.out.println("*** R2_LOG: [Backward] relax_all - REMOVED GVariable(" + gv.toString() + ")  (" + invoke.toString() + ")");
 			            	}
 			            }
 						if(vv != null){
@@ -476,14 +476,14 @@ public class MetaBackAnalysis {
 				}
 				this.preSuf = errSuf;
 				errSuf = nErrSuf;
-			}//end of isAcceptedAllMethod if
+			}//end of isRelaxedAllMethod if
 			callStack.push(wpe.getWPE());
 		} 
 	}
 	
 	private DNF checkPrecise(DNF in, Quad q){
 		jq_Method ivkedMeth = Invoke.getMethod(q).getMethod();
-		if(SharedData.isPreciseMethod(ivkedMeth)){ 		
+		if(SharedData.isRestrictMethod(ivkedMeth)){ 		
 			Set<Integer> preciseVs = new ArraySet<Integer>();
 			ParamListOperand paramList = Invoke.getParamList(q);
 			for (int i = 0; i < paramList.length(); i++) {
@@ -526,7 +526,7 @@ public class MetaBackAnalysis {
 		//***********************
 		// precise_all_FIELDX_TAGY
 		//***********************
-		if(SharedData.isPreciseAllMethod(ivkedMeth)){
+		if(SharedData.isRestrictAllMethod(ivkedMeth)){
 			Set<Integer> preciseVs = new ArraySet<Integer>();
 			Set<Pair<Integer,Integer>> preciseFs = new ArraySet<Pair<Integer,Integer>>();
 			Set<Integer> preciseGs = new ArraySet<Integer>();
@@ -542,7 +542,7 @@ public class MetaBackAnalysis {
 						if(SharedData.R2_LOG)
 							System.out.println("*** R2_LOG: [Backward] precise_all - allocation site = " + h.toString());
 						String tag = SharedData.getTag(ivkedMeth);
-			        	if (!tag.equalsIgnoreCase(SharedData.allocToTagMap.get(h))){
+			        	if (!tag.equalsIgnoreCase(SharedData.quadToTagMap.get(h))){
 			        		if(SharedData.R2_LOG)
 			        			System.out.println("*** R2_LOG: [Backward] precise_all - Tag unmatched!");
 			        		continue;
@@ -555,7 +555,7 @@ public class MetaBackAnalysis {
 						preciseFs.add(hf);
 					}
 				} else 
-					throw new RuntimeException("Error! accept_all shouldn't have a primitive-type parameter");
+					throw new RuntimeException("Error! relax_all shouldn't have a primitive-type parameter");
 			} 
 			
 			DNF nDNF = new DNF(new ClauseSizeCMP(),false);
@@ -669,7 +669,7 @@ public class MetaBackAnalysis {
 		Set<Integer> relG = new HashSet<Integer>();
 		Set<Integer> relO = new HashSet<Integer>();
 		boolean isRetRel = false;
-		boolean isAccept = false; // jspark: for PVariable
+		boolean isRelax = false; // jspark: for PVariable
 		Set<Pair<Integer,Integer>> relHF = new HashSet<Pair<Integer,Integer>>();
 		Set<Pair<Integer,Integer>> relST = new HashSet<Pair<Integer,Integer>>();
 		for (Clause c : dnf.getClauses())
@@ -677,8 +677,8 @@ public class MetaBackAnalysis {
 				Variable v = entry.getKey();
 				if(v instanceof RVariable)
 					isRetRel = true;
-				if(v instanceof APVariable){
-					isAccept = true;
+				if(v instanceof R2Variable){
+					isRelax = true;
 				}
 				if(v instanceof VVariable){
 					VVariable vv = (VVariable)v;
@@ -704,8 +704,8 @@ public class MetaBackAnalysis {
 		if(isRetRel){//return value
 			ret.addLiteral(RVariable.singleton, dNode.taintedRet?BoolDomain.T:BoolDomain.F);
 		}
-		if(isAccept){// jspark: this will be ignored
-			ret.addLiteral(APVariable.singleton, BoolDomain.T);
+		if(isRelax){// jspark: this will be ignored
+			ret.addLiteral(R2Variable.singleton, BoolDomain.T);
 		}
 		for(VVariable vv : relV){// local variables
 			int cl = vv.getContext();
@@ -905,7 +905,7 @@ public class MetaBackAnalysis {
 								Domain d = predicate.getValue(); 
 								if(v instanceof RVariable){
 									nc.addLiteral(new VVariable(retIdx), d);
-								}else if (v instanceof APVariable){ // jspark: adding false to oDNF means ignoring PVariable 
+								}else if (v instanceof R2Variable){ // jspark: adding false to oDNF means ignoring PVariable 
 									nc = new Clause(false);
 								}else
 									nc.addLiteral(v, d);

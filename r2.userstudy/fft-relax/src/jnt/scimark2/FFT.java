@@ -1,20 +1,31 @@
 package jnt.scimark2;
 
-/**
- Evaluation for Relax framework
-*/
+import chord.analyses.r2.lang.*;
+import chord.analyses.r2.lang.math.*;
 
-import chord.analyses.expax.lang.*;
-import chord.analyses.expax.lang.math.*;
+/** Computes FFT's of complex, double precision data where n is an integer power of 2.
+ * This appears to be slower than the Radix2 method,
+ * but the code is smaller and simpler, and it requires no extra storage.
+ * <P>
+ *
+ * @author Bruce R. Miller bruce.miller@nist.gov,
+ * @author Derived from GSL (Gnu Scientific Library), 
+ * @author GSL's FFT Code by Brian Gough bjg@vvv.lanl.gov
+ */
+
+/* See {@link ComplexDoubleFFT ComplexDoubleFFT} for details of data layout.
+ */
 
 public class FFT {
 
+	/** Compute Fast Fourier Transform of (complex) data, in place.*/
 	public static void transform (double data[]) {
-		transform_internal(data, -1); 
-	} 
+		transform_internal(data, -1); } 
 
+	/** Compute Inverse Fast Fourier Transform of (complex) data, in place.*/
 	public static void inverse (double data[]) {
 		transform_internal(data, +1); 
+		// Normalize
 		int nd=data.length;
 		int n =nd/2; 
 		int aprN = n; 
@@ -30,24 +41,29 @@ public class FFT {
 			throw new Error("FFT: Data length is not a power of 2!: "+n);
 		return log; 
 	}
-
+	
 	protected static void transform_internal (double data[], int direction) {
 		if (data.length == 0) return;    
 		int n = data.length/2;
-		if (n == 1) return;       
+		if (n == 1) return;         // Identity operation!
 		int logn = log2(n);
 
+		/* bit reverse the input data for decimation in time algorithm */
 		bitreverse(data) ;
 
+		/* apply fft recursion */
+		/* this loop executed log2(N) times */
 		for (int bit = 0, dual = 1; bit < logn; bit++, dual *= 2) {
 			double w_real = 1.0; 
 			double w_imag = 0.0; 
 
 			double theta = 2.0 * direction * Math.PI / (2.0 * (double) dual);
-			double s = Math.sin(theta);
-			double t = Math.sin(theta / 2.0); 
+			double s = ApproxMath.sin(theta);
+			double param = theta / 2.0;
+			double t = ApproxMath.sin(param); 
 			double s2 = 2.0 * t * t; 
 
+			/* a = 0 */
 			for (int b = 0; b < n; b += 2 * dual) {
 				int i = 2*b ;
 				int j = 2*(b + dual);
@@ -61,7 +77,9 @@ public class FFT {
 				data[i+1]+= wd_imag; 
 			}
 
+			/* a = 1 .. (dual-1) */
 			for (int a = 1; a < dual; a++) {
+				/* trignometric recurrence for w-> exp(i theta) w */
 				{
 					double tmp_real = w_real - s * w_imag - s2 * w_real; 
 					double tmp_imag = w_imag + s * w_real - s2 * w_imag; 
@@ -87,15 +105,22 @@ public class FFT {
 		}
 	}
 
+
 	protected static void bitreverse(double data[]) {
+		/* This is the Goldrader bit-reversal algorithm */
 		int n=data.length/2;
 		int nm1 = n-1;
 		int i=0; 
 		int j=0;
 		for (; i < nm1; i++) {
 
+			//int ii = 2*i;
 			int ii = i << 1;
+
+			//int jj = 2*j;
 			int jj = j << 1;
+
+			//int k = n / 2 ;
 			int k = n >> 1;
 
 			if (i < j) {
@@ -104,47 +129,48 @@ public class FFT {
 				data[ii]   = data[jj]; 
 				data[ii+1] = data[jj+1]; 
 				data[jj]   = tmp_real; 
-				data[jj+1] = tmp_imag; 
-			} 
+				data[jj+1] = tmp_imag; } 
 
-			while (k <= j)  {
-				j -= k;
-				k >>= 1 ; 
-			}
-			j += k ;
+				while (k <= j) 
+				{
+					//j = j - k ;
+					j -= k;
+
+					//k = k / 2 ; 
+					k >>= 1 ; 
+				}
+				j += k ;
 		}
 	}
-
-	private static double[] RandomVector(int N, Random R)
+	
+	public static void main(String args[])
 	{
-		double A[] = new double[N];
-
-		for (int i=0; i<N; i++)
-			A[i] = R.nextDouble(); 
-		return A;
-	}
-
-	public static void main (String args[]) {
-		Random R = new Random(Integer.parseInt(args[0]));
-
 		int N = 16;
-		double mintime = 2.0;
-
-		System.out.println("measureFFT");
+		String seed = args[0];
+		Random R = new Random(Integer.parseInt(seed));
 		double x[] = RandomVector(2*N, R);
 		long cycles = 100;
 
-		for (int i=0; i<cycles; i++) {
-			FFT.transform(x);	
-			FFT.inverse(x);		
-			System.out.println("loop = " + i);
+		for (int i=0; i<cycles; i++)
+		{
+			FFT.transform(x);	// forward transform
+			FFT.inverse(x);		// backward transform
 		}
 
 		System.out.print("FFT vector: ");
 		for (int i = 0; i < N; ++i) {
-			System.out.print(x[i] + " ");
+			System.out.print((x[i]) + " ");
 		}
 		System.out.println("");
+	}
+
+	private static double[] RandomVector(int N, Random R)
+	{
+		double A[] = new  double[N];
+
+		for (int i=0; i<N; i++)
+			A[i] = R.nextDouble(); 
+		return A;
 	}
 }
 

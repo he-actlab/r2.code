@@ -16,7 +16,7 @@
 
 package com.google.zxing.oned;
 
-import chord.analyses.expax.lang.Accept;
+import chord.analyses.r2.lang.*;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.ChecksumException;
@@ -112,7 +112,7 @@ public final class Code39Reader extends OneDReader {
     do {
       recordPattern(row, nextStart, counters);
       int pattern = toNarrowWidePattern(counters);
-      if (Accept.accept(pattern) < 0) {
+      if (Relax.relax(pattern) < 0) {
         throw NotFoundException.getNotFoundInstance();
       }
       decodedChar = patternToChar(pattern);
@@ -125,7 +125,7 @@ public final class Code39Reader extends OneDReader {
       while (nextStart < end && !row.get(nextStart)) {
         nextStart++;
       }
-    } while (Accept.accept(decodedChar) != '*');
+    } while (Relax.relax(decodedChar) != '*');
     result.deleteCharAt(result.length() - 1); // remove asterisk
 
     // Look for whitespace after pattern:
@@ -180,7 +180,7 @@ public final class Code39Reader extends OneDReader {
     int width = row.getSize();
     int rowOffset = 0;
     while (rowOffset < width) {
-      if (Accept.accept(row.get(rowOffset))) {
+      if (Relax.relax(row.get(rowOffset))) {
         break;
       }
       rowOffset++;
@@ -196,7 +196,7 @@ public final class Code39Reader extends OneDReader {
     for (int i = rowOffset; i < width; i++) {
       boolean pixel = row.get(i);
       boolean cond = pixel ^ isWhite;
-      if (Accept.accept(cond)) {
+      if (Relax.relax(cond)) {
         counters[counterPosition]++;
       } else {
         if (counterPosition == patternLength - 1) {

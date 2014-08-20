@@ -26,8 +26,8 @@ import com.google.zxing.common.BitArray;
 
 import java.util.Hashtable;
 
-import chord.analyses.expax.lang.Accept;
-import chord.analyses.expax.lang.math.*;
+import chord.analyses.r2.lang.*;
+import chord.analyses.r2.lang.math.*;
 
 /**
  * <p>Decodes Code 128 barcodes.</p>
@@ -170,7 +170,7 @@ public final class Code128Reader extends OneDReader {
     int width = row.getSize();
     int rowOffset = 0;
     while (rowOffset < width) {
-      if (Accept.accept(row.get(rowOffset))) {
+      if (Relax.relax(row.get(rowOffset))) {
         break;
       }
       rowOffset++;
@@ -186,7 +186,7 @@ public final class Code128Reader extends OneDReader {
     for (int i = rowOffset; i < width; i++) {
       boolean pixel = row.get(i);
       boolean cond = pixel ^ isWhite;
-      if (Accept.accept(cond)) {
+      if (Relax.relax(cond)) {
         counters[counterPosition]++;
       } else {
         if (counterPosition == patternLength - 1) {
@@ -257,7 +257,7 @@ public final class Code128Reader extends OneDReader {
     int[] startPatternInfo = findStartPattern(row);
     int startCode = startPatternInfo[2];
     int codeSet;
-    switch (Accept.accept(startCode)) {
+    switch (Relax.relax(startCode)) {
       case CODE_START_A:
         codeSet = CODE_CODE_A;
         break;
@@ -314,7 +314,7 @@ public final class Code128Reader extends OneDReader {
       }
 
       // Take care of illegal start codes
-      switch (Accept.accept(code)) {
+      switch (Relax.relax(code)) {
         case CODE_START_A:
         case CODE_START_B:
         case CODE_START_C:
@@ -324,7 +324,7 @@ public final class Code128Reader extends OneDReader {
       switch (codeSet) {
 
         case CODE_CODE_A:
-          code = Accept.accept(code);
+          code = Relax.relax(code);
           if (code < 64) {
             result.append((char) ' ' + code);
           } else if (code < 96) {
@@ -418,7 +418,7 @@ public final class Code128Reader extends OneDReader {
 
       // Unshift back to another code set if we were shifted
       if (unshift) {
-    	codeSet = Accept.accept(codeSet);
+    	codeSet = Relax.relax(codeSet);
         switch (codeSet) {
           case CODE_CODE_A:
             codeSet = CODE_CODE_C;
@@ -438,7 +438,7 @@ public final class Code128Reader extends OneDReader {
     // we fudged decoding CODE_STOP since it actually has 7 bars, not 6. There is a black bar left
     // to read off. Would be slightly better to properly read. Here we just skip it:
     int width = row.getSize();
-    while (nextStart < width && Accept.accept(row.get(nextStart))) {
+    while (nextStart < width && Relax.relax(row.get(nextStart))) {
       nextStart++;
     }
     if (!row.isRange(nextStart, Math.min(width, nextStart + (nextStart - lastStart) / 2),
@@ -450,7 +450,7 @@ public final class Code128Reader extends OneDReader {
     checksumTotal -= multiplier * lastCode;
     // lastCode is the checksum then:
     boolean cond = checksumTotal % 103 != lastCode;
-    if (Accept.accept(cond)) {
+    if (Relax.relax(cond)) {
       throw ChecksumException.getChecksumInstance();
     }
 
@@ -458,8 +458,8 @@ public final class Code128Reader extends OneDReader {
     int resultLength = result.length();
     // Only bother if the result had at least one character, and if the checksum digit happened to
     // be a printable character. If it was just interpreted as a control code, nothing to remove.
-    if (resultLength > 0 && Accept.accept(lastCharacterWasPrintable)) {
-      if (Accept.accept(codeSet) == CODE_CODE_C) {
+    if (resultLength > 0 && Relax.relax(lastCharacterWasPrintable)) {
+      if (Relax.relax(codeSet) == CODE_CODE_C) {
         result.delete(resultLength - 2, resultLength);
       } else {
         result.delete(resultLength - 1, resultLength);

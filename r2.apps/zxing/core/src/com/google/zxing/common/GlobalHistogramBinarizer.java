@@ -16,7 +16,7 @@
 
 package com.google.zxing.common;
 
-import chord.analyses.expax.lang.*;
+import chord.analyses.r2.lang.*;
 
 import com.google.zxing.Binarizer;
 import com.google.zxing.LuminanceSource;
@@ -62,7 +62,7 @@ public class GlobalHistogramBinarizer extends Binarizer {
     for (int x = 0; x < width; x++) {
       int pixel = (localLuminances[x] & 0xff);
       //additional accept
-      pixel = Accept.accept(pixel);
+      pixel = Relax.relax(pixel);
       localBuckets[pixel >> LUMINANCE_SHIFT]++;
     }
      int blackPoint = estimateBlackPoint(localBuckets);
@@ -74,9 +74,9 @@ public class GlobalHistogramBinarizer extends Binarizer {
       // A simple -1 4 -1 box filter with a weight of 2.
       int luminance = ((center << 2) - left - right) >> 1;
       // additional accept
-//      luminance = Accept.accept(luminance);
+//      luminance = Relax.relax(luminance);
       // additional accept
-//      blackPoint = Accept.accept(blackPoint);
+//      blackPoint = Relax.relax(blackPoint);
       if (luminance < blackPoint) {
     	row.bits[x >> 5] |= 1 << (x & 0x1F);
 //        row.set(x);
@@ -105,7 +105,7 @@ public class GlobalHistogramBinarizer extends Binarizer {
       for (int x = width / 5; x < right; x++) {
         int pixel = (localLuminances[x] & 0xff);
         //additional accept
-        pixel = Accept.accept(pixel);
+        pixel = Relax.relax(pixel);
         localBuckets[pixel >> LUMINANCE_SHIFT]++; // EnerJ TODO
       }
     }
@@ -120,9 +120,9 @@ public class GlobalHistogramBinarizer extends Binarizer {
       for (int x = 0; x< width; x++) {
         int pixel = (localLuminances[offset + x] & 0xff);
         //additional accept
-//        pixel = Accept.accept(pixel);
+//        pixel = Relax.relax(pixel);
         //additional accept
-//        blackPoint = Accept.accept(blackPoint);
+//        blackPoint = Relax.relax(blackPoint);
         if (pixel < blackPoint) {
           int offset2 = y * matrix.rowSize + (x >> 5);
           matrix.bits[offset2] |= 1 << (x & 0x1f);
@@ -143,7 +143,7 @@ public class GlobalHistogramBinarizer extends Binarizer {
       luminances = new byte[luminanceSize];
     }
     if (buckets == null) {
-//      Alloc.alloc_TAG5();
+//      Tag.TAG5();
       buckets = new int[LUMINANCE_BUCKETS];
     } else {
       for (int x = 0; x < LUMINANCE_BUCKETS; x++) {
@@ -160,15 +160,15 @@ public class GlobalHistogramBinarizer extends Binarizer {
     int firstPeakSize = 0;
     for (int x = 0; x < numBuckets; x++) {
       // additional accept
-//      buckets = Accept.accept_all_FIELD1_TAG5(buckets);
+//      buckets = Relax.relax_all_FIELD1_TAG5(buckets);
       // additional accept
-//      firstPeakSize = Accept.accept(firstPeakSize);
+//      firstPeakSize = Relax.relax(firstPeakSize);
       if (buckets[x] > firstPeakSize) {
         firstPeak = x;
         firstPeakSize = buckets[x];
       }
       // additional accept
-//      maxBucketCount = Accept.accept(maxBucketCount);
+//      maxBucketCount = Relax.relax(maxBucketCount);
       if (buckets[x] > maxBucketCount) {
         maxBucketCount = buckets[x];
       }
@@ -182,9 +182,9 @@ public class GlobalHistogramBinarizer extends Binarizer {
       // Encourage more distant second peaks by multiplying by square of distance.
       int score = buckets[x] * distanceToBiggest * distanceToBiggest;
       // additional accept 
-//      score = Accept.accept(score);
+//      score = Relax.relax(score);
       // additional accept
-//      secondPeakScore = Accept.accept(secondPeakScore);
+//      secondPeakScore = Relax.relax(secondPeakScore);
       if (score > secondPeakScore) {
         secondPeak = x;
         secondPeakScore = score;
@@ -213,9 +213,9 @@ public class GlobalHistogramBinarizer extends Binarizer {
       int fromFirst = x - firstPeak;
       int score = fromFirst * fromFirst * (secondPeak - x) * (maxBucketCount - buckets[x]);
       // additional accept
-//      score = Accept.accept(score);
+//      score = Relax.relax(score);
       // additional accept
-//      bestValleyScore = Accept.accept(bestValleyScore);
+//      bestValleyScore = Relax.relax(bestValleyScore);
       if (score > bestValleyScore) {
         bestValley = x;
         bestValleyScore = score;

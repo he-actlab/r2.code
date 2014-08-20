@@ -1,7 +1,7 @@
 package jnt.scimark2;
 
-import chord.analyses.expax.lang.*;
-import chord.analyses.expax.lang.math.*;
+import chord.analyses.r2.lang.*;
+import chord.analyses.r2.lang.math.*;
 
 /** Computes FFT's of complex, double precision data where n is an integer power of 2.
  * This appears to be slower than the Radix2 method,
@@ -141,6 +141,36 @@ public class FFT {
 				}
 				j += k ;
 		}
+	}
+	
+	public static void main(String args[])
+	{
+		int N = 16;
+		String seed = args[0];
+		Random R = new Random(Integer.parseInt(seed));
+		double x[] = RandomVector(2*N, R);
+		long cycles = 100;
+
+		for (int i=0; i<cycles; i++)
+		{
+			FFT.transform(x);	// forward transform
+			FFT.inverse(x);		// backward transform
+		}
+
+		System.out.print("FFT vector: ");
+		for (int i = 0; i < N; ++i) {
+			System.out.print((x[i]) + " ");
+		}
+		System.out.println("");
+	}
+
+	private static double[] RandomVector(int N, Random R)
+	{
+		double A[] = new  double[N];
+
+		for (int i=0; i<N; i++)
+			A[i] = R.nextDouble(); 
+		return A;
 	}
 }
 

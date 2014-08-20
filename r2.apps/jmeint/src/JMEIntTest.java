@@ -1,4 +1,4 @@
-import chord.analyses.expax.lang.Accept;
+import chord.analyses.r2.lang.*;
 
 import com.jme.intersection.Intersection;
 import com.jme.math.Vector3f;
@@ -23,7 +23,7 @@ public class JMEIntTest {
 					randvec(), randvec(), randvec(),
 					randvec(), randvec(), randvec()
 					);
-			isec = Accept.accept(isec);
+			isec = Relax.relax(isec);
 			if (isec) {
 				System.out.print("1 ");
 			} else {

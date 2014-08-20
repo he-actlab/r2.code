@@ -16,7 +16,7 @@
 
 package com.google.zxing.common.detector;
 
-import chord.analyses.expax.lang.Accept;
+import chord.analyses.r2.lang.*;
 
 import com.google.zxing.NotFoundException;
 import com.google.zxing.ResultPoint;
@@ -170,7 +170,7 @@ public final class MonochromeRectangleDetector {
     while (start >= minDim) {
       boolean cond = horizontal ? image.get(start, fixedDimension) : image.get(fixedDimension, start);
       //additional accept
-      cond = Accept.accept(cond);
+      cond = Relax.relax(cond);
       if (cond) {
         start--;
       } else {
@@ -179,7 +179,7 @@ public final class MonochromeRectangleDetector {
           start--;
           cond = !(horizontal ? image.get(start, fixedDimension) : image.get(fixedDimension, start));
           //additional accept
-          cond = Accept.accept(cond);
+          cond = Relax.relax(cond);
         } while (start >= minDim && cond);
         int whiteRunSize = whiteRunStart - start;
         if (start < minDim || whiteRunSize > maxWhiteRun) {

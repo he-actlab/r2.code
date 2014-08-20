@@ -4,8 +4,8 @@ package jnt.scimark2;
  Evaluation for Relax framework
 */
 
-import chord.analyses.expax.lang.*;
-import chord.analyses.expax.lang.math.*;
+import chord.analyses.r2.lang.*;
+import chord.analyses.r2.lang.math.*;
 
 public class LU 
 {

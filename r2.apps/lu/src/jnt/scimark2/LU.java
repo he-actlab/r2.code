@@ -1,31 +1,14 @@
 package jnt.scimark2;
 
-import chord.analyses.expax.lang.math.ApproxMath;
-import chord.analyses.expax.lang.Accept;
-
 /**
-	LU matrix factorization. (Based on TNT implementation.)
-	Decomposes a matrix A  into a triangular lower triangular
-	factor (L) and an upper triangular factor (U) such that
-	A = L*U.  By convnetion, the main diagonal of L consists
-	of 1's so that L and U can be stored compactly in
-	a NxN matrix.
+ Evaluation for Relax framework
+*/
 
+import chord.analyses.r2.lang.*;
+import chord.analyses.r2.lang.math.*;
 
- */
 public class LU 
 {
-	/**
-		LU factorization (in place).
-
-		@param A (in/out) On input, the matrix to be factored.
-		On output, the compact LU factorization.
-
-		@param pivit (out) The pivot vector records the
-		reordering of the rows of A during factorization.
-
-		@return 0, if OK, nozero value, othewise.
-	 */
 	public static int factor( double[][] A, int pivot[])
 	{
 		int N = A.length;
@@ -39,10 +22,10 @@ public class LU
 		{
 			int jp=j;
 
-			double t = ApproxMath.abs(A[j][j]);
+			double t = Math.abs(A[j][j]);
 			for (int i=j+1; i<M; i++)
 			{
-				double ab = ApproxMath.abs(A[i][j]);
+				double ab = Math.abs(A[i][j]);
 				if (ab > t)
 				{
 					jp = i;
@@ -93,18 +76,6 @@ public class LU
 		return ret;
 	}
 
-	/**
-		Solve a linear system, using a prefactored matrix
-		in LU form.
-
-
-		@param LU (in) the factored matrix in LU form. 
-		@param pivot (in) the pivot vector which lists
-		the reordering used during the factorization
-		stage.
-		@param b    (in/out) On input, the right-hand side.
-		On output, the solution vector.
-	 */
 	public static void solve( double[][] LU, int pvt[],  double b[])
 	{
 		int M = LU.length;
@@ -135,4 +106,123 @@ public class LU
 			b[i] = sum / LU[i][i]; 
 		}
 	}   
+
+	private static  double[] NewVectorCopy( double x[])
+	{
+		int N = x.length;
+
+		double y[] = new  double[N];
+		for (int i=0; i<N; i++)
+			y[i] = x[i];
+
+		return y;
+	}
+
+	private static void CopyMatrix( double B[][],  double A[][])
+	{
+		int M = A.length;
+		int N = A[0].length;
+
+		int remainder = N & 3;		 
+
+		for (int i=0; i<M; i++)
+		{
+			double Bi[] = B[i];
+			double Ai[] = A[i];
+			for (int j=0; j<remainder; j++)
+				Bi[j] = Ai[j];
+			for (int j=remainder; j<N; j+=4)
+			{
+				Bi[j] = Ai[j];
+				Bi[j+1] = Ai[j+1];
+				Bi[j+2] = Ai[j+2];
+				Bi[j+3] = Ai[j+3];
+			}
+		}
+	}
+
+	private static  double[][] RandomMatrix(int M, int N, Random R)
+	{
+		double A[][] = new double[M][];
+		for (int i=0; i<M; i++) {
+			A[i] = new double[N];
+		}	
+
+		for (int i=0; i<N; i++)
+			for (int j=0; j<N; j++)
+				A[i][j] = R.nextDouble();
+		return A;
+	}
+
+	private static double[] RandomVector(int N, Random R)
+	{
+		double A[] = new double[N];
+
+		for (int i=0; i<N; i++)
+			A[i] = R.nextDouble(); 
+		return A;
+	}
+
+	private static double[] matvec( double A[][],  double x[])
+	{
+		int N = x.length;
+		double y[] = new  double[N];
+
+		matvec(A, x, y);
+
+		return y;
+	}
+
+	private static void matvec( double A[][],  double x[],  double y[])
+	{
+		int M = A.length;
+		int N = A[0].length;
+
+		for (int i=0; i<M; i++)
+		{
+			double sum = 0.0; 
+			double Ai[] = A[i];
+			for (int j=0; j<N; j++) {
+
+				sum += Ai[j] * x[j]; 
+			}
+
+			y[i] = sum; 
+		}
+	}
+
+
+	public static void main(String[] args) {
+		int N = 10;
+		double min_time = 2.0;
+		Random R = new Random(Integer.parseInt(args[0]));
+
+		double A[][] = RandomMatrix(N, N,  R);
+		double lu[][] = new double[N][];
+		for (int i=0; i<N; i++){
+			lu[i] = new double[N];
+		}
+		int pivot[] = new int[N];
+
+		int cycles=100;
+		for (int i=0; i<cycles; i++)
+		{
+			CopyMatrix(lu, A);
+			LU.factor(( double [][])lu, pivot);
+		}
+
+		// verify that LU is correct
+		double b[] = RandomVector(N, R);
+		double x[] = NewVectorCopy(b);
+
+		LU.solve(( double [][])lu, pivot, x);
+
+		double[] y = matvec(A, x);
+
+		System.out.print("LU vector: ");
+		for (int i = 0; i < N; ++i) {
+			System.out.print((y[i]) + " ");
+		}
+		System.out.println("");
+	}
 }

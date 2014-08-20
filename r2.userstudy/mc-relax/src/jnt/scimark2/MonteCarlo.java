@@ -4,8 +4,8 @@ package jnt.scimark2;
   Evaluation for Relax Framework
 */
 
-import chord.analyses.expax.lang.*;
-import chord.analyses.expax.lang.math.*;
+import chord.analyses.r2.lang.*;
+import chord.analyses.r2.lang.math.*;
 
 /*
  Estimate Pi by approximating the area of a circle.
@@ -39,11 +39,7 @@ public class MonteCarlo
 		int SEED = Integer.parseInt(args[0]);
 		double out = MonteCarlo.integrate(cycles, SEED); 
 
-		Accept.accept(out);
-
 		System.out.println("MonteCarlo out: " + out);
-
-		Precise.precise(out);
 	}
 
 }

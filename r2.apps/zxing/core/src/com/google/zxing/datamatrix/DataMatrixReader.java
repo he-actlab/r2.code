@@ -16,7 +16,7 @@
 
 package com.google.zxing.datamatrix;
 
-import chord.analyses.expax.lang.Accept;
+import chord.analyses.r2.lang.*;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.BinaryBitmap;
@@ -109,7 +109,7 @@ public final class DataMatrixReader implements Reader {
     int x = leftTopBlack[0];
     int y = leftTopBlack[1];
     //additional accept
-    while (x < minDimension && y < minDimension && Accept.accept(image.get(x, y))) {
+    while (x < minDimension && y < minDimension && Relax.relax(image.get(x, y))) {
       x++;
     }
     if (x == minDimension) {
@@ -120,7 +120,7 @@ public final class DataMatrixReader implements Reader {
 
     // And now find where the rightmost black module on the first row ends
     int rowEndOfSymbol = width - 1;
-    while (rowEndOfSymbol >= 0 && !Accept.accept(image.get(rowEndOfSymbol, y))) {
+    while (rowEndOfSymbol >= 0 && !Relax.relax(image.get(rowEndOfSymbol, y))) {
       rowEndOfSymbol--;
     }
     if (rowEndOfSymbol < 0) {

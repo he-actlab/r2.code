@@ -16,7 +16,7 @@
 
 package com.google.zxing.common;
 
-import chord.analyses.expax.lang.Accept;
+import chord.analyses.r2.lang.*;
 
 import com.google.zxing.Binarizer;
 import com.google.zxing.LuminanceSource;
@@ -130,7 +130,7 @@ public final class HybridBinarizer extends GlobalHistogramBinarizer {
 			for (int x = 0; x < 8; x++) {
 				int pixel = (luminances[offset + x] & 0xff);
 				//additional accept
-//				pixel = Accept.accept(pixel);
+//				pixel = Relax.relax(pixel);
 				if (pixel < threshold) {
 				    int offset2 = (yoffset + y) * matrix.rowSize + ((xoffset + x) >> 5);
 				    matrix.bits[offset2] |= 1 << ((xoffset + x) & 0x1f);
@@ -158,7 +158,7 @@ public final class HybridBinarizer extends GlobalHistogramBinarizer {
 					for (int xx = 0; xx < 8; xx++) {
 						int pixel = (luminances[offset + xx] & 0xff);
 						//additional accept
-//						pixel = Accept.accept(pixel);
+//						pixel = Relax.relax(pixel);
 						sum += pixel;
 						if (pixel < min) {
 							min = pixel;

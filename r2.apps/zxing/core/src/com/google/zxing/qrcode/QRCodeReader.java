@@ -16,7 +16,7 @@
 
 package com.google.zxing.qrcode;
 
-import chord.analyses.expax.lang.*;
+import chord.analyses.r2.lang.*;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.BinaryBitmap;
@@ -73,13 +73,13 @@ public class QRCodeReader implements Reader {
       BitMatrix bits = extractPureBits(image.getBlackMatrix());
       decoderResult = decoder.decode(bits, hints);
       points = NO_POINTS;
-      Accept.accept_all_FIELD1_TAG2(bits.bits);
+      Relax.relax_all_FIELD1_TAG2(bits.bits);
     } else {
       DetectorResult detectorResult = new Detector(image.getBlackMatrix()).detect(hints);
       decoderResult = decoder.decode(detectorResult.getBits(), hints);
       BitMatrix bitMatrix = detectorResult.getBits();
       points = detectorResult.getPoints();
-      Accept.accept_all_FIELD1_TAG2(bitMatrix.bits);
+      Relax.relax_all_FIELD1_TAG2(bitMatrix.bits);
     }
     
     Result result = new Result(decoderResult.getText(), decoderResult.getRawBytes(), points, BarcodeFormat.QR_CODE);
@@ -117,7 +117,7 @@ public class QRCodeReader implements Reader {
     }
     int x = leftTopBlack[0];
     int y = leftTopBlack[1];
-    while (x < minDimension && y < minDimension && Accept.accept(image.get(x, y))) {
+    while (x < minDimension && y < minDimension && Relax.relax(image.get(x, y))) {
       x++;
       y++;
     }
@@ -133,7 +133,7 @@ public class QRCodeReader implements Reader {
 
     // And now find where the rightmost black module on the first row ends
     int rowEndOfSymbol = width - 1;
-    while (rowEndOfSymbol > x && !Accept.accept(image.get(rowEndOfSymbol, y))) {
+    while (rowEndOfSymbol > x && !Relax.relax(image.get(rowEndOfSymbol, y))) {
       rowEndOfSymbol--;
     }
     if (rowEndOfSymbol <= x) {
@@ -169,7 +169,7 @@ public class QRCodeReader implements Reader {
       for (int j = 0; j < dimension; j++) {
     	//additional accept
     	boolean imageGet = image.get(x + j * moduleSize, iOffset);
-//    	imageGet = Accept.accept(imageGet);
+//    	imageGet = Relax.relax(imageGet);
         if (imageGet) {
           int offset = i * bits.rowSize + (j >> 5);
           bits.bits[offset] |= 1 << (j & 0x1f);

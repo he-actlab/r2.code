@@ -29,8 +29,8 @@ import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.Vector;
 
-import chord.analyses.expax.lang.Accept;
-import chord.analyses.expax.lang.math.*;
+import chord.analyses.r2.lang.*;
+import chord.analyses.r2.lang.math.*;
 
 /**
  * <p>Encapsulates logic that can detect a Data Matrix Code in an image, even if the Data Matrix Code
@@ -238,9 +238,9 @@ public final class Detector {
       }
       error += dy;
       //additional accept
-      if (Accept.accept(error) > 0) {
+      if (Relax.relax(error) > 0) {
     	//additional accept
-        if (y == Accept.accept(toY)) {
+        if (y == Relax.relax(toY)) {
           break;
         }
         y += ystep;

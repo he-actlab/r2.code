@@ -16,7 +16,7 @@
 
 package com.google.zxing.qrcode.decoder;
 
-import chord.analyses.expax.lang.Accept;
+import chord.analyses.r2.lang.*;
 
 import com.google.zxing.common.BitMatrix;
 
@@ -64,7 +64,7 @@ abstract class DataMask {
       for (int j = 0; j < dimension; j++) {
     	boolean b = isMasked(i, j);
     	//additional accept
-//    	b = Accept.accept(b);
+//    	b = Relax.relax(b);
         if (b) {
           int offset = i * bits.rowSize + (j >> 5);
           bits.bits[offset] ^= 1 << (j & 0x1f);

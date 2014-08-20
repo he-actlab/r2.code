@@ -16,7 +16,7 @@
 
 package com.google.zxing.pdf417.detector;
 
-import chord.analyses.expax.lang.Accept;
+import chord.analyses.r2.lang.*;
 
 import com.google.zxing.BinaryBitmap;
 import com.google.zxing.NotFoundException;
@@ -427,7 +427,7 @@ public final class Detector {
     for (int x = column; x < column + width; x++) {
       boolean pixel = matrix.get(x, row);
       boolean cond = pixel ^ isWhite;
-      if (Accept.accept(cond)) {
+      if (Relax.relax(cond)) {
         counters[counterPosition]++;
       } else {
         if (counterPosition == patternLength - 1) {

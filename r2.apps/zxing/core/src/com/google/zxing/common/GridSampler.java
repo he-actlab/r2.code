@@ -16,7 +16,7 @@
 
 package com.google.zxing.common;
 
-import chord.analyses.expax.lang.Accept;
+import chord.analyses.r2.lang.*;
 
 import com.google.zxing.NotFoundException;
 
@@ -125,9 +125,9 @@ public abstract class GridSampler {
       int x = (int) points[offset];
       int y = (int) points[offset + 1];
       //additional accept
-      x = Accept.accept(x);
+      x = Relax.relax(x);
       //additional accept
-      y = Accept.accept(y);
+      y = Relax.relax(y);
       if (x < -1 || x > width || y < -1 || y > height) {
           if (false) {
               throw NotFoundException.getNotFoundInstance();
@@ -158,9 +158,9 @@ public abstract class GridSampler {
       int x = (int) points[offset];
       int y = (int) points[offset + 1];
       //additional accept
-      x = Accept.accept(x);
+      x = Relax.relax(x);
       //additional accept
-      y = Accept.accept(y);
+      y = Relax.relax(y);
       if (x < -1 || x > width || y < -1 || y > height) {
           if (false) {
                 throw NotFoundException.getNotFoundInstance();

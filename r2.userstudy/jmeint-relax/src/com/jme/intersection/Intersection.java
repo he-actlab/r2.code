@@ -4,8 +4,8 @@ package com.jme.intersection;
  Evaluation for Relax framework
 */
 
-import chord.analyses.expax.lang.*;
-import chord.analyses.expax.lang.math.*;
+import chord.analyses.r2.lang.*;
+import chord.analyses.r2.lang.math.*;
 
 import com.jme.math.FastMath;
 import com.jme.math.TransformMatrix;

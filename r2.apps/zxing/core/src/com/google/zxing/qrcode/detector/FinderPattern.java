@@ -16,8 +16,8 @@
 
 package com.google.zxing.qrcode.detector;
 
-import chord.analyses.expax.lang.Accept;
-import chord.analyses.expax.lang.math.ApproxMath;
+import chord.analyses.r2.lang.*;
+import chord.analyses.r2.lang.math.*;
 
 import com.google.zxing.ResultPoint;
 
@@ -61,14 +61,14 @@ public final class FinderPattern extends ResultPoint {
 	boolean ret = false;
 	boolean cond = (ApproxMath.abs(i - getY()) <= moduleSize && ApproxMath.abs(j - getX()) <= moduleSize);
 	//additional accept
-//	cond = Accept.accept(cond);
+//	cond = Relax.relax(cond);
     if (cond) {
       float moduleSizeDiff = ApproxMath.abs(moduleSize - estimatedModuleSize);
       //additional accept
-//      moduleSizeDiff = Accept.accept(moduleSizeDiff);
+//      moduleSizeDiff = Relax.relax(moduleSizeDiff);
       float temp = estimatedModuleSize;
 //      additional accept
-//      temp = Accept.accept(temp);
+//      temp = Relax.relax(temp);
       ret = moduleSizeDiff <= 1.0f || moduleSizeDiff / temp <= 1.0f;
     }
     return ret;

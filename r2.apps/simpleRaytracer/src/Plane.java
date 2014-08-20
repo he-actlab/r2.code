@@ -4,8 +4,8 @@
 
 import java.awt.*;
 
-import chord.analyses.expax.lang.*;
-import chord.analyses.expax.lang.math.ApproxMath;
+import chord.analyses.r2.lang.*;
+import chord.analyses.r2.lang.math.ApproxMath;
 
 public class Plane {
 	int w, h;
@@ -24,7 +24,7 @@ public class Plane {
 		h=dd.height;
 		texture=Integer.parseInt(args[0]);
 		light=Integer.parseInt(args[1]);
-		Alloc.alloc_TAG1();
+		Tag.TAG1();
 		pixels=new int[w*h];	
 		int index,x,y; 
 		float xe,ye,ze,xd,yd,zd;
@@ -75,7 +75,7 @@ public class Plane {
 				index=y*w+x;
 				
 				// additional accept
-				t = Accept.accept(t);	
+				t = Relax.relax(t);	
 				if(t >= 0)
 				{
 					ix=xe+t*xd;
@@ -99,7 +99,7 @@ public class Plane {
 			}
 		}
 
-		pixels = Accept.accept_all_FIELD2_TAG1(pixels);
+		pixels = Relax.relax_all_FIELD2_TAG1(pixels);
 		
 		for (int i = 0; i < pixels.length; i++) {
 			System.out.println((pixels[i] & 0xff)+"\n");

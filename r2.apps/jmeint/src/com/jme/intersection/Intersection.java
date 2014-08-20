@@ -32,8 +32,8 @@
 
 package com.jme.intersection;
 
-import chord.analyses.expax.lang.*;
-import chord.analyses.expax.lang.math.*;
+import chord.analyses.r2.lang.*;
+import chord.analyses.r2.lang.math.*;
 
 import com.jme.math.FastMath;
 import com.jme.math.TransformMatrix;
@@ -179,7 +179,7 @@ public class Intersection {
 				Vector2f x0x1 = tempV2a;
 		
 				cond = newComputeIntervals(vp0, vp1, vp2, dv0, dv1, dv2, dv0dv1, dv0dv2, abc, x0x1);
-				cond = Accept.accept(cond);
+				cond = Relax.relax(cond);
 				if (cond) {
 					ret = coplanarTriTri(n1, v0, v1, v2, u0, u1, u2);
 					done = true;
@@ -188,7 +188,7 @@ public class Intersection {
 					Vector3f def = tempVb;
 					Vector2f y0y1 = tempV2b;
 					cond = newComputeIntervals(up0, up1, up2, du0, du1, du2, du0du1, du0du2, def, y0y1);
-					cond = Accept.accept(cond);
+					cond = Relax.relax(cond);
 					if (cond) {
 						ret = coplanarTriTri(n1, v0, v1, v2, u0, u1, u2);
 						done = true;

@@ -14,7 +14,7 @@
     </presetdef>
 
     <!-- EnerJ checker -->
-    <property name="enerj.jar" value="../../enerj/build/enerj.jar" />
+    <property name="enerj.jar" value="../../r2.enerj/build/enerj.jar" />
     <property name="cfrt.jar" value="../../checker-runtime/build/cfrt.jar" />
     <property name="enerj.checker" value="enerj.PrecisionChecker" />
 

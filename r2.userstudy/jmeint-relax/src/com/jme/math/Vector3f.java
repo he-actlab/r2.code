@@ -38,7 +38,7 @@ import java.io.ObjectInput;
 import java.io.ObjectOutput;
 import java.util.logging.Logger;
 
-import chord.analyses.expax.lang.math.*;
+import chord.analyses.r2.lang.math.*;
 
 /*
  * -- Added *Local methods to cut down on object creation - JS

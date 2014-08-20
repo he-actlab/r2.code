@@ -215,7 +215,7 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 		RegisterFactory rf = m.getCFG().getRegisterFactory();
 		
 		//Any argument follows into m should be precise
-		if(SharedData.isPreciseMethod(m)){
+		if(SharedData.isRestrictMethod(m)){
 			for (int i = 0; i < args.length(); i++) {
 				Register reg = args.get(i).getRegister();
 				Integer ridx = SharedData.domU.indexOf(reg);
@@ -227,7 +227,7 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 		}
 		
 		// jspark: precise_all_FIELDX_TAGY
-		if (SharedData.isPreciseAllMethod(m)) {
+		if (SharedData.isRestrictAllMethod(m)) {
 	    	if (args.length() == 0) { // static field
 	    		int gidx = SharedData.getFieldIdx(m);
 	    		if(SharedData.R2_LOG)
@@ -244,7 +244,7 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 					Set<Quad> allocSites = SharedData.cipa.pointsTo(reg).pts;
 					for (Quad h : allocSites) {
 						String tag = SharedData.getTag(m);
-			        	if (!tag.equalsIgnoreCase(SharedData.allocToTagMap.get(h)))
+			        	if (!tag.equalsIgnoreCase(SharedData.quadToTagMap.get(h)))
 			        		continue; // not remove a field from tainted set when the tag is unmatched
 						int hidx = SharedData.domH.indexOf(h);
 						int fidx = SharedData.getFieldIdx(h, m);
@@ -266,41 +266,41 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 	    	} 
 		}
 		
-		// jspark: accept_all_FIELDX_TAGY
-	    if(SharedData.isAcceptAllMethod(m)) {
+		// jspark: relax_all_FIELDX_TAGY
+	    if(SharedData.isRelaxAllMethod(m)) {
 	    	if (args.length() == 0){
 	    		int gidx = SharedData.getFieldIdx(m);
 	    		if(SharedData.R2_LOG)
-	    			System.out.println("*** R2_LOG: [Forward] accept_all - oldtgs = " + newtgs.toString());
+	    			System.out.println("*** R2_LOG: [Forward] relax_all - oldtgs = " + newtgs.toString());
 	    		newtgs.remove(gidx);
 	    		if(SharedData.R2_LOG)
-	    			System.out.println("*** R2_LOG: [Forward] accept_all - newtgs = " + newtgs.toString());
+	    			System.out.println("*** R2_LOG: [Forward] relax_all - newtgs = " + newtgs.toString());
 	    	} else if (args.length() > 0) {
 	    		Register reg = args.get(args.length()-1).getRegister(); 
 		        if (!reg.getType().isPrimitiveType()) { // arrays or class objects
 			        Set<Quad> allocSites = SharedData.cipa.pointsTo(reg).pts;
 			        for (Quad h: allocSites) {
 			        	String tag = SharedData.getTag(m);
-			        	if (!tag.equalsIgnoreCase(SharedData.allocToTagMap.get(h)))
+			        	if (!tag.equalsIgnoreCase(SharedData.quadToTagMap.get(h)))
 			        		continue;
 			        	int hidx = SharedData.domH.indexOf(h);
 			        	int fidx = SharedData.getFieldIdx(h, m);
 			        	Pair<Integer,Integer> hf = new Pair<Integer,Integer>(hidx,fidx);
 		        		if(SharedData.R2_LOG){
-		        			System.out.println("*** R2_LOG: [Forward] accept_all - allocation site h = " + h.toString());
-		        			System.out.println("*** R2_LOG: [Forward] accept_all - oldtfs = " + newtfs.toString());
+		        			System.out.println("*** R2_LOG: [Forward] relax_all - allocation site h = " + h.toString());
+		        			System.out.println("*** R2_LOG: [Forward] relax_all - oldtfs = " + newtfs.toString());
 		        			if (newtfs.contains(hf))
 		        				if(SharedData.R2_LOG)
-		        					System.out.println("*** R2_LOG: [Forward] accept_all - REMOVE array or class objects (" + hf.toString() + ") quad(" + invoke.toString() + ")");
+		        					System.out.println("*** R2_LOG: [Forward] relax_all - REMOVE array or class objects (" + hf.toString() + ") quad(" + invoke.toString() + ")");
 		        		}
 			        	newtfs.remove(hf);
 			        	if(SharedData.R2_LOG){
-			        		System.out.println("*** R2_LOG: [Forward] accept_all - newtfs = " + newtfs.toString());
+			        		System.out.println("*** R2_LOG: [Forward] relax_all - newtfs = " + newtfs.toString());
 			        	}
 			        	
 			        }
 		        } else 
-		        	throw new RuntimeException("Error! accept_all shouldn't have a primitive-type parameter");
+		        	throw new RuntimeException("Error! relax_all shouldn't have a primitive-type parameter");
 	    	} 
 	    }
 
@@ -355,9 +355,9 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 			q.getOperator() instanceof NEWARRAY ||
 			q.getOperator() instanceof MULTINEWARRAY) {
 			// if this allocTag is the one right before this allocation
-        	if (!SharedData.allocTag.equalsIgnoreCase("")) {
-        		SharedData.allocToTagMap.put(q, SharedData.allocTag);
-        		SharedData.allocTag = ""; // initialize tag to avoid that other allocating quad use this TAG
+        	if (!SharedData.tag.equalsIgnoreCase("")) {
+        		SharedData.quadToTagMap.put(q, SharedData.tag);
+        		SharedData.tag = ""; // initialize tag to avoid that other allocating quad use this TAG
         	}
 		}	
 		
@@ -408,7 +408,7 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 				taintedVs.remove(tgtRetIndx);
 		}
 		ParamListOperand paramList = Invoke.getParamList(q);
-		if (SharedData.isAcceptMethod(m)) {
+		if (SharedData.isRelaxMethod(m)) {
 			for (int i = 0; i < paramList.length(); i++) {
 				RegisterOperand ro = paramList.get(i);
 				Register r = ro.getRegister();
@@ -582,10 +582,10 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 			Set<jq_Method> keyset = SharedData.approxParams.keySet();
 			int size = 0;
 			for (jq_Method method : keyset) {
-				if(SharedData.isAcceptMethod(method) ||
-						   SharedData.isAcceptMethod(method) ||
-						   SharedData.isPreciseMethod(method) ||
-						   SharedData.isPreciseAllMethod(method))
+				if(SharedData.isRelaxMethod(method) ||
+						   SharedData.isRelaxMethod(method) ||
+						   SharedData.isRestrictMethod(method) ||
+						   SharedData.isRestrictAllMethod(method))
 					continue;
 				Set<Integer> indexSet = SharedData.approxParams.get(method);
 				if(indexSet.isEmpty())
@@ -594,10 +594,10 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 			}
 			resultWriter.write(size + "\n");
 			for (jq_Method method : keyset) {
-				if(SharedData.isAcceptMethod(method) ||
-						   SharedData.isAcceptMethod(method) ||
-						   SharedData.isPreciseMethod(method) ||
-						   SharedData.isPreciseAllMethod(method))
+				if(SharedData.isRelaxMethod(method) ||
+						   SharedData.isRelaxMethod(method) ||
+						   SharedData.isRestrictMethod(method) ||
+						   SharedData.isRestrictAllMethod(method))
 							continue;
 				Set<Integer> indexSet = SharedData.approxParams.get(method);
 				if(indexSet.isEmpty())
@@ -1313,12 +1313,12 @@ public class ForwardAnalysis extends RHSAnalysis<Edge, Edge> {
 			else if(srcO instanceof RegisterOperand) {
 				Register tgtR = ((RegisterOperand) (Return.getSrc(obj)))
 						.getRegister();
-				//jspark: we don't have to care about return values from accept or precise as tainted 
+				//jspark: we don't have to care about return values from relax or restrict as tainted 
 				if(inNode.taintedVars.contains(SharedData.domU.indexOf(tgtR)) 
-						&& !SharedData.isAcceptMethod(obj.getMethod())    
-						&& !SharedData.isPreciseMethod(obj.getMethod())
-						&& !SharedData.isAcceptAllMethod(obj.getMethod()) 
-						&& !SharedData.isPreciseAllMethod(obj.getMethod()))
+						&& !SharedData.isRelaxMethod(obj.getMethod())    
+						&& !SharedData.isRestrictMethod(obj.getMethod())
+						&& !SharedData.isRelaxAllMethod(obj.getMethod()) 
+						&& !SharedData.isRestrictAllMethod(obj.getMethod()))
 					isRetTainted = true;
 			}
 			outNode = new AbstractState(taintedGloabals, taintedVars, taintedFields, isRetTainted, inNode.isErr);

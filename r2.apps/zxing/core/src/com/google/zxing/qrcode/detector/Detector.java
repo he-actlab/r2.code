@@ -16,8 +16,8 @@
 
 package com.google.zxing.qrcode.detector;
 
-import chord.analyses.expax.lang.Accept;
-import chord.analyses.expax.lang.math.ApproxMath;
+import chord.analyses.r2.lang.*;
+import chord.analyses.r2.lang.math.*;
 
 import com.google.zxing.DecodeHintType;
 import com.google.zxing.FormatException;
@@ -95,7 +95,7 @@ public class Detector {
 
     float moduleSize = calculateModuleSize(topLeft, topRight, bottomLeft);
     //additional accept
-    moduleSize = Accept.accept(moduleSize);
+    moduleSize = Relax.relax(moduleSize);
     if (moduleSize < 1.0f) {
       System.err.println("module too small " + (moduleSize));
       throw NotFoundException.getNotFoundInstance();
@@ -208,15 +208,15 @@ public class Detector {
 	float num; 
 	num = (ResultPoint.distance(topLeft, topRight) / moduleSize);
 	//additional accept
-//	num = Accept.accept(num);
+//	num = Relax.relax(num);
     int tltrCentersDimension = round(num);
     num = (ResultPoint.distance(topLeft, bottomLeft) / moduleSize);
 	//additional accept
-//	num = Accept.accept(num);
+//	num = Relax.relax(num);
     int tlblCentersDimension = round(num);
     int dimension = ((tltrCentersDimension + tlblCentersDimension) >> 1) + 7;
     //additional accept
-    dimension = Accept.accept(dimension);
+    dimension = Relax.relax(dimension);
     switch (dimension & 0x03) { // mod 4
       case 0:
         dimension++;
@@ -299,7 +299,7 @@ public class Detector {
      otherToX = image.getWidth() - 1;
    }
    //additional accept
-//   scale = Accept.accept(scale);
+//   scale = Relax.relax(scale);
    int otherToY = (int) (fromY - (toY - fromY) * scale); // EnerJ TODO
 
    scale = 1.0f;
@@ -311,7 +311,7 @@ public class Detector {
      otherToY = image.height - 1;
    }
    //additional accept
-//   scale = Accept.accept(scale);
+//   scale = Relax.relax(scale);
    otherToX = (int) (fromX + (otherToX - fromX) * scale); // EnerJ TODO
 
    result += sizeOfBlackWhiteBlackRun(fromX, fromY, otherToX, otherToY);
@@ -352,14 +352,14 @@ public class Detector {
       if (state == 1) { // In white pixels, looking for black
     	//additional accept
     	boolean imageGet = (image.get(realX, realY));
-//    	imageGet = Accept.accept(imageGet);
+//    	imageGet = Relax.relax(imageGet);
         if (imageGet) {
           state++;
         }
       } else {
       	//additional accept
       	boolean imageGet = (image.get(realX, realY));
-//      	imageGet = Accept.accept(imageGet);
+//      	imageGet = Relax.relax(imageGet);
         if (!imageGet) {
           state++;
         }
@@ -407,7 +407,7 @@ public class Detector {
     int alignmentAreaRightX = ApproxMath.min(image.getWidth() - 1, estAlignmentX + allowance);
     boolean b = (alignmentAreaRightX - alignmentAreaLeftX < overallEstModuleSize * 3);
     //additional accept
-    b = Accept.accept(b);
+    b = Relax.relax(b);
     if (b) {
         System.err.println("alignment vs module size");
       throw NotFoundException.getNotFoundInstance();
@@ -417,13 +417,13 @@ public class Detector {
     int alignmentAreaBottomY = ApproxMath.min(image.getHeight() - 1, estAlignmentY + allowance);
 
     //additional accept
-//    alignmentAreaLeftX = Accept.accept(alignmentAreaLeftX);
+//    alignmentAreaLeftX = Relax.relax(alignmentAreaLeftX);
     //additional accept
-//    alignmentAreaTopY = Accept.accept(alignmentAreaTopY);
+//    alignmentAreaTopY = Relax.relax(alignmentAreaTopY);
     //additional accept
-//    alignmentAreaRightX = Accept.accept(alignmentAreaRightX);
+//    alignmentAreaRightX = Relax.relax(alignmentAreaRightX);
     //additional accept
-//    alignmentAreaBottomY = Accept.accept(alignmentAreaBottomY);
+//    alignmentAreaBottomY = Relax.relax(alignmentAreaBottomY);
     
     AlignmentPatternFinder alignmentFinder =
         new AlignmentPatternFinder(

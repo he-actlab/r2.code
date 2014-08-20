@@ -2,6 +2,8 @@ package Sobel;
 
 import java.io.IOException;
 
+
+import chord.analyses.r2.lang.Relax;
 //import chord.analyses.expax.lang.*;
 //import chord.analyses.expax.lang.math.*;
 import Sobel.TextFile.Mode;
@@ -154,7 +156,7 @@ public class RgbImage {
 //				L = Accept.accept(L);
 				if (L < 0)
 					L = 0;
-//				L = Accept.accept(L);
+				L = Relax.relax(L);
 				System.out.println(L);
 //				L = Precise.precise(L);	
 			}

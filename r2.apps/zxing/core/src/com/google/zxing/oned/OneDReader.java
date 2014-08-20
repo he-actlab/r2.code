@@ -16,7 +16,7 @@
 
 package com.google.zxing.oned;
 
-import chord.analyses.expax.lang.Accept;
+import chord.analyses.r2.lang.*;
 
 import com.google.zxing.BinaryBitmap;
 import com.google.zxing.ChecksumException;
@@ -205,7 +205,7 @@ public abstract class OneDReader implements Reader {
       boolean pixel = row.get(i);
       boolean cond = pixel ^ isWhite;
       //additional accept
-      cond = accept(cond);
+      cond = Relax.relax(cond);
       if (cond) { // that is, exactly one is true
         counters[counterPosition]++;
       } else {
@@ -234,9 +234,9 @@ public abstract class OneDReader implements Reader {
     while (start > 0 && numTransitionsLeft >= 0) {
       boolean rowGet = row.get(--start);
       //additional accept
-//      rowGet = Accept.accept(rowGet);
+//      rowGet = Relax.relax(rowGet);
       //additional accept
-//      last = Accept.accept(last);
+//      last = Relax.relax(last);
       if (rowGet != last) {
         numTransitionsLeft--;
         last = !last;
@@ -272,9 +272,9 @@ public abstract class OneDReader implements Reader {
       patternLength += pattern[i];
     }
     //additional accept
-//    total = Accept.accept(total);
+//    total = Relax.relax(total);
     //additional accept
-//    patternLength = Accept.accept(patternLength);
+//    patternLength = Relax.relax(patternLength);
     if (total < patternLength) {
       ret = Integer.MAX_VALUE;
       done = true;
@@ -288,14 +288,14 @@ public abstract class OneDReader implements Reader {
 	      int counter = counters[x] << INTEGER_MATH_SHIFT;
 	      int scaledPattern = pattern[x] * unitBarWidth;
 	      //additional accept
-	//      counter = Accept.accept(counter);
+	//      counter = Relax.relax(counter);
 	      //additional accept
-	//      scaledPattern = Accept.accept(scaledPattern);
+	//      scaledPattern = Relax.relax(scaledPattern);
 	      int variance = (counter > scaledPattern) ? counter - scaledPattern : scaledPattern - counter;
 	      // addtional accept
-//	      variance = Accept.accept(variance);
+//	      variance = Relax.relax(variance);
 	      // addtional accept
-//	      maxIndividualVariance = Accept.accept(maxIndividualVariance);
+//	      maxIndividualVariance = Relax.relax(maxIndividualVariance);
 	      if (variance > maxIndividualVariance) {
 	        ret = Integer.MAX_VALUE;
 	        done = true;

@@ -16,7 +16,7 @@
 
 package com.google.zxing.oned;
 
-import chord.analyses.expax.lang.Accept;
+import chord.analyses.r2.lang.*;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.ChecksumException;
@@ -110,7 +110,7 @@ public abstract class UPCEANReader extends OneDReader {
     int[] startRange = null;
     int nextStart = 0;
     //additional accept
-    while (!(foundStart = Accept.accept(foundStart))) {
+    while (!(foundStart = Relax.relax(foundStart))) {
       startRange = findGuardPattern(row, nextStart, false, START_END_PATTERN);
       int start = startRange[0];
       nextStart = startRange[1];
@@ -267,10 +267,10 @@ public abstract class UPCEANReader extends OneDReader {
     int width = row.getSize();
     boolean isWhite = false;
     //additional accept
-    while (Accept.accept(rowOffset) < width) {
+    while (Relax.relax(rowOffset) < width) {
       isWhite = !row.get(rowOffset);
       //additional accept
-      isWhite = Accept.accept(isWhite);
+      isWhite = Relax.relax(isWhite);
       if (whiteFirst == isWhite) {
         break;
       }
@@ -285,14 +285,14 @@ public abstract class UPCEANReader extends OneDReader {
       boolean pixel = row.get(x);
       boolean cond = pixel ^ isWhite;
       // additional accept
-      cond = Accept.accept(cond);
+      cond = Relax.relax(cond);
       if (cond) {
         counters[counterPosition]++;
       } else {
         if (counterPosition == patternLength - 1) {
           int lhs = patternMatchVariance(counters, pattern, MAX_INDIVIDUAL_VARIANCE);
           //additional accept
-//          lhs = Accept.accept(lhs);
+//          lhs = Relax.relax(lhs);
           if (lhs < MAX_AVG_VARIANCE) {
             ret = new int[]{patternStart, x};
             done = true;
@@ -340,9 +340,9 @@ public abstract class UPCEANReader extends OneDReader {
        int[] pattern = patterns[i];
        int variance = patternMatchVariance(counters, pattern, MAX_INDIVIDUAL_VARIANCE);
       //additional accept
-//      variance = Accept.accept(variance);
+//      variance = Relax.relax(variance);
       //additional accept
-//      bestVariance = Accept.accept(bestVariance);
+//      bestVariance = Relax.relax(bestVariance);
       if (variance < bestVariance) {
         bestVariance = variance;
         bestMatch = i;

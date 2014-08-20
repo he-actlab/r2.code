@@ -4,8 +4,8 @@ package jnt.scimark2;
  Evaluation for Relax framework
 */
 
-import chord.analyses.expax.lang.*;
-import chord.analyses.expax.lang.math.*;
+import chord.analyses.r2.lang.*;
+import chord.analyses.r2.lang.math.*;
 
 public class SparseCompRow
 {
@@ -44,7 +44,6 @@ public class SparseCompRow
 		int nz = 50;
 
 		double x[] = RandomVector(N, R);
-		Alloc.alloc_TAG1();
 		double y[] = new double[N];
 
 		int nr = nz/N; 	
@@ -71,10 +70,8 @@ public class SparseCompRow
 		SparseCompRow.matmult(y, val, row, col, x, cycles);
 
 		System.out.print("SparseMatMult vector: ");
-		// Accept.accept_all_FIELDARRAY_TAG1(y);
 		for (int i = 0; i < N; ++i) {
 			System.out.print(y[i] + " ");
-			double tmp = y[i]; Precise.precise(tmp);
 		}
 		System.out.println("");
 	}

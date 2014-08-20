@@ -16,7 +16,7 @@
 
 package com.google.zxing.qrcode.decoder;
 
-import chord.analyses.expax.lang.Accept;
+import chord.analyses.r2.lang.*;
 
 import com.google.zxing.FormatException;
 import com.google.zxing.common.BitMatrix;
@@ -141,7 +141,7 @@ final class BitMatrixParser {
   private int copyBit(int i, int j, int versionBits) {
 	boolean b = bitMatrix.get(i, j);
 	//additional accept
-//	b = Accept.accept(b);
+//	b = Relax.relax(b);
     return b ? (versionBits << 1) | 0x1 : versionBits << 1;
   }
 
@@ -189,7 +189,7 @@ final class BitMatrixParser {
             currentByte <<= 1;
             boolean b = bitMatrix.get(j - col, i);
             //additional accept
-//            b = Accept.accept(b);
+//            b = Relax.relax(b);
             if (b) {
               currentByte |= 1;
             }

@@ -54,18 +54,18 @@ public class SharedData {
 	static CIPAAnalysis cipa;
 	static jq_Method mainMethod;
 	static jq_Method threadStartMethod;
-	static Set<String> preciseMethList;
-	static Set<String> acceptMethList;
+	static Set<String> restrictMethList;
+	static Set<String> relaxMethList;
 	static Set<Integer> allApproxStatements;
 	static Set<Pair<Integer,Integer>> allApproxStorage;
 	static Map<Quad,Set<jq_Method>> targetsMap = new HashMap<Quad,Set<jq_Method>>();
 	
-	static final String preciseAllMethPrefix = "precise_all";
-	static final String acceptAllMethPrefix = "accept_all";
-	static final String allocMethPrefix = "alloc_TAG";
+	static final String restrictAllMethPrefix = "restrict_all";
+	static final String relaxAllMethPrefix = "relax_all";
+	static final String tagMethPrefix = "TAG";
 	// jspark: temporary variable to store a tag for the following new object
-	static String allocTag = ""; 
-	static Map<Quad,String> allocToTagMap = new HashMap<Quad,String>();
+	static String tag = ""; 
+	static Map<Quad,String> quadToTagMap = new HashMap<Quad,String>();
 	// jspark: pair of method name and the argument index number
 	static Set<Pair<String,Integer>> preciseLst = new HashSet<Pair<String,Integer>>();
 	// jspark: FIXME assigned a fixed filename for now. should it be a property?
@@ -105,13 +105,13 @@ public class SharedData {
 	
 	
 	static{
-		preciseMethList = new HashSet<String>();
-		preciseMethList.add("precise");
+		restrictMethList = new HashSet<String>();
+		restrictMethList.add("restrict");
 	}
 
 	static{
-		acceptMethList = new HashSet<String>();
-		acceptMethList.add("accept");
+		relaxMethList = new HashSet<String>();
+		relaxMethList.add("relax");
 	}
 	
 	public static boolean isMainMethod(jq_Method m){
@@ -126,40 +126,40 @@ public class SharedData {
 		return m.getName().toString().equals("<clinit>");
 	}
 	
-	public static boolean isPreciseMethod(jq_Method m){
-		return preciseMethList.contains(m.getName().toString());
+	public static boolean isRestrictMethod(jq_Method m){
+		return restrictMethList.contains(m.getName().toString());
 	}
 	
-	public static boolean isAcceptMethod(jq_Method m){
-		return acceptMethList.contains(m.getName().toString());
+	public static boolean isRelaxMethod(jq_Method m){
+		return relaxMethList.contains(m.getName().toString());
 	}
 	
-	public static boolean isPreciseAllMethod(jq_Method m){
+	public static boolean isRestrictAllMethod(jq_Method m){
 		String methName = m.getName().toString();
-		return methName.startsWith(preciseAllMethPrefix);
+		return methName.startsWith(restrictAllMethPrefix);
 	}
 	
-	public static boolean isAcceptAllMethod(jq_Method m){
+	public static boolean isRelaxAllMethod(jq_Method m){
 		String methName = m.getName().toString();
-		return methName.startsWith(acceptAllMethPrefix);
+		return methName.startsWith(relaxAllMethPrefix);
 	}
 	
 	public static boolean isAllocMethod(jq_Method m){
 		String methName = m.getName().toString();
-		return methName.startsWith(allocMethPrefix);
+		return methName.startsWith(tagMethPrefix);
 	}
 	
 	/**
-	 * Parse the method name of "alloc_TAGX" and get "X" from it
+	 * Parse the method name of "TAGX" and get "X" from it
 	 */
 	public static void parseAllocTag(jq_Method m){
 		String methName = m.getName().toString();
-		StringTokenizer st = new StringTokenizer(methName,allocMethPrefix + "TAG");
-		allocTag = st.nextToken();
+		StringTokenizer st = new StringTokenizer(methName,tagMethPrefix + "TAG");
+		tag = st.nextToken();
 	}
 	
 	/**
-	 * For hf field, parse the method name of "accept_all_FIELDX_TAGY" or "precise_all_FIELDX_TAGY"
+	 * For hf field, parse the method name of "relax_all_FIELDX_TAGY" or "precise_all_FIELDX_TAGY"
 	 * Return an index number correspnoding to the field when TAG Y is matched with the tag of allocation sites
 	 */
 	public static int getFieldIdx(Quad q, jq_Method m){
@@ -196,7 +196,7 @@ public class SharedData {
 	}
 	
 	/**
-	 * For global field (static field), parse the method name of "accept_all_FIELDX_TAGY" or "precise_all_FIELDX_TAGY"
+	 * For global field (static field), parse the method name of "relax_all_FIELDX_TAGY" or "precise_all_FIELDX_TAGY"
 	 * Return an index number corresponding to the field when TAG Y is matched with the tag of allocation sites
 	 * In this case, class name is also provided by "field.txt" because there is no object for static field
 	 */
@@ -233,7 +233,7 @@ public class SharedData {
 	}
 	
 	/**
-	 * From "accept_all_FEILDX_TAGY" or "precise_all_FEILDX_TAGY", get Y
+	 * From "relax_all_FEILDX_TAGY" or "restrict_all_FEILDX_TAGY", get Y
 	 */
 	public static String getTag(jq_Method m){
 		// get fieldname

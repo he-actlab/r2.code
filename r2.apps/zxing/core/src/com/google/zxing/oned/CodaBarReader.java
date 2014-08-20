@@ -18,7 +18,7 @@ package com.google.zxing.oned;
 
 import java.util.Hashtable;
 
-import chord.analyses.expax.lang.Accept;
+import chord.analyses.r2.lang.*;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.NotFoundException;
@@ -165,7 +165,7 @@ public final class CodaBarReader extends OneDReader {
     int width = row.getSize();
     int rowOffset = 0;
     while (rowOffset < width) {
-      if (Accept.accept(row.get(rowOffset))) {
+      if (Relax.relax(row.get(rowOffset))) {
         break;
       }
       rowOffset++;
@@ -180,7 +180,7 @@ public final class CodaBarReader extends OneDReader {
     int[] ret = null;
     for (int i = rowOffset; i < width; i++) {
       boolean pixel = row.get(i);
-      pixel = Accept.accept(pixel);
+      pixel = Relax.relax(pixel);
       if (pixel ^ isWhite) {
         counters[counterPosition]++;
       } else {

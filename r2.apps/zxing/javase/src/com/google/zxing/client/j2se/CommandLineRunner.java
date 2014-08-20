@@ -16,7 +16,7 @@
 
 package com.google.zxing.client.j2se;
 
-import chord.analyses.expax.lang.*;
+import chord.analyses.r2.lang.*;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.BinaryBitmap;
@@ -280,7 +280,7 @@ public final class CommandLineRunner {
 		int width = bitmap.getWidth();
 		int height = bitmap.getHeight();
 		int stride = width * 3;
-		Alloc.alloc_TAG11();
+		Tag.TAG11();
 		int[] pixels = new int[stride * height];
 
 		// The original image
@@ -308,7 +308,7 @@ public final class CommandLineRunner {
 			for (int x = 0; x < width; x++) {
 				boolean rowGet = row.get(x);
 				//additional accept
-//				rowGet = Accept.accept(rowGet);
+//				rowGet = Relax.relax(rowGet);
 				if (rowGet) {
 					pixels[offset + x] = 0xff000000;
 				} else {
@@ -325,7 +325,7 @@ public final class CommandLineRunner {
 				for (int x = 0; x < width; x++) {
 					boolean matrixGet = matrix.get(x, y);
 					//additional accept
-//					matrixGet = Accept.accept(matrixGet); 
+//					matrixGet = Relax.relax(matrixGet); 
 					if (matrixGet) {
 						pixels[offset + x] = 0xff000000;
 					} else {
@@ -336,7 +336,7 @@ public final class CommandLineRunner {
 		} catch (NotFoundException nfe) {
 		}
 		
-		pixels = Accept.accept_all_FIELD1_TAG11(pixels);
+		pixels = Relax.relax_all_FIELD1_TAG11(pixels);
 		
 		// Write the result
 		BufferedImage result = new BufferedImage(stride, height, BufferedImage.TYPE_INT_ARGB);

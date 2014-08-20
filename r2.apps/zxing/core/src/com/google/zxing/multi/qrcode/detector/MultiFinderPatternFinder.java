@@ -30,8 +30,8 @@ import com.google.zxing.qrcode.detector.FinderPatternInfo;
 import java.util.Hashtable;
 import java.util.Vector;
 
-import chord.analyses.expax.lang.Accept;
-import chord.analyses.expax.lang.math.*;
+import chord.analyses.r2.lang.*;
+import chord.analyses.r2.lang.math.*;
 
 /**
  * <p>This class attempts to find finder patterns in a QR Code. Finder patterns are the square
@@ -164,7 +164,7 @@ final class MultiFinderPatternFinder extends FinderPatternFinder {
         float vModSize12A = ApproxMath.abs(p1.getEstimatedModuleSize() - p2.getEstimatedModuleSize());
         boolean cond = vModSize12A > DIFF_MODSIZE_CUTOFF && vModSize12 >= DIFF_MODSIZE_CUTOFF_PERCENT;
         //additional accept
-        cond = Accept.accept(cond);
+        cond = Relax.relax(cond);
         if (cond) {
           // break, since elements are ordered by the module size deviation there cannot be
           // any more interesting elements for the given p1.
@@ -183,7 +183,7 @@ final class MultiFinderPatternFinder extends FinderPatternFinder {
           float vModSize23A = ApproxMath.abs(p2.getEstimatedModuleSize() - p3.getEstimatedModuleSize());
           cond = vModSize23A > DIFF_MODSIZE_CUTOFF && vModSize23 >= DIFF_MODSIZE_CUTOFF_PERCENT;
           //additional accept
-          cond = Accept.accept(cond);
+          cond = Relax.relax(cond);
           if (cond) {
             // break, since elements are ordered by the module size deviation there cannot be
             // any more interesting elements for the given p1.
@@ -202,7 +202,7 @@ final class MultiFinderPatternFinder extends FinderPatternFinder {
           // Check the sizes
           float estimatedModuleCount = ((dA + dB) / p1.getEstimatedModuleSize()) / 2;
           cond = estimatedModuleCount > MAX_MODULE_COUNT_PER_EDGE || estimatedModuleCount < MIN_MODULE_COUNT_PER_EDGE;
-          cond = Accept.accept(cond);
+          cond = Relax.relax(cond);
           if (cond) {
             continue;
           }
@@ -267,7 +267,7 @@ final class MultiFinderPatternFinder extends FinderPatternFinder {
       stateCount[4] = 0;
       int currentState = 0;
       for (int j = 0; j < maxJ; j++) {
-        if (Accept.accept(image.get(j, i))) {
+        if (Relax.relax(image.get(j, i))) {
           // Black pixel
           if ((currentState & 1) == 1) { // Counting white pixels
             currentState++;
@@ -276,7 +276,7 @@ final class MultiFinderPatternFinder extends FinderPatternFinder {
         } else { // White pixel
           if ((currentState & 1) == 0) { // Counting black pixels
             if (currentState == 4) { // A winner?
-              if (Accept.accept(foundPatternCross(stateCount))) { // Yes
+              if (Relax.relax(foundPatternCross(stateCount))) { // Yes
                 boolean confirmed = handlePossibleCenter(stateCount, i, j);
                 if (!confirmed) {
                   do { // Advance to next black pixel
@@ -308,7 +308,7 @@ final class MultiFinderPatternFinder extends FinderPatternFinder {
         }
       } // for j=...
 
-      if (Accept.accept(foundPatternCross(stateCount))) {
+      if (Relax.relax(foundPatternCross(stateCount))) {
         handlePossibleCenter(stateCount, i, maxJ);
       } // end if foundPatternCross
     } // for i=iSkip-1 ...

@@ -1,32 +1,14 @@
 package jnt.scimark2;
 
 /**
+  Evaluation for Relax Framework
+*/
+
+import chord.analyses.r2.lang.*;
+import chord.analyses.r2.lang.math.*;
+
+/*
  Estimate Pi by approximating the area of a circle.
-
- How: generate N random numbers in the unit square, (0,0) to (1,1)
- and see how are within a radius of 1 or less, i.e.
- <pre>  
-
- sqrt(x^2 + y^2) < r
-
- </pre>
-  since the radius is 1.0, we can square both sides
-  and avoid a sqrt() computation:
-  <pre>
-
-    x^2 + y^2 <= 1.0
-
-  </pre>
-  this area under the curve is (Pi * r^2)/ 4.0,
-  and the area of the unit of square is 1.0,
-  so Pi can be approximated by 
-  <pre>
-		        # points with x^2+y^2 < 1
-     Pi =~ 		--------------------------  * 4.0
-		             total # points
-
-  </pre>
-
 */
 
 public class MonteCarlo
@@ -50,4 +32,14 @@ public class MonteCarlo
 		
 		return ((double) under_curve / Num_samples) * 4.0; 
 	}
+
+	public static void main(String args[])
+	{
+		int cycles=1492;
+		int SEED = Integer.parseInt(args[0]);
+		double out = MonteCarlo.integrate(cycles, SEED); 
+
+		System.out.println("MonteCarlo out: " + out);
+	}
+
 }

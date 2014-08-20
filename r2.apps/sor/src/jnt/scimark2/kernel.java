@@ -1,6 +1,6 @@
 package jnt.scimark2;
 
-import chord.analyses.expax.lang.*;
+import chord.analyses.r2.lang.*;
 
 public class kernel
 {
@@ -15,9 +15,9 @@ public class kernel
 		System.out.print("SOR values: ");
 		for (int i = 0; i < N; ++i) {
 			for (int j = 0; j < N; ++j) {
-				G[0] = Accept.accept_all_FIELD1_TAG1(G[0]);
+				G[0] = Relax.relax_all_FIELD1_TAG1(G[0]);
 				System.out.print((G[i][j]) + " ");
-				G[0] = Precise.precise_all_FIELD1_TAG1(G[0]);
+				G[0] = Restrict.restrict_all_FIELD1_TAG1(G[0]);
 			}
 		}
 		System.out.println("");
@@ -29,7 +29,7 @@ public class kernel
 	{
 		double A[][] = new double[M][];
 		for (int i=0; i<M; i++) {
-			Alloc.alloc_TAG1();
+			Tag.TAG1();
 			A[i] = new double[N];
 		}	
 

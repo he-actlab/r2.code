@@ -16,7 +16,7 @@
 
 package com.google.zxing.oned.rss;
 
-import chord.analyses.expax.lang.Accept;
+import chord.analyses.r2.lang.*;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.DecodeHintType;
@@ -298,7 +298,7 @@ public final class RSS14Reader extends AbstractRSSReader {
     boolean isWhite = false;
     while (rowOffset < width) {
       isWhite = !row.get(rowOffset);
-      Accept.accept(isWhite);
+      Relax.relax(isWhite);
       if (rightFinderPattern == isWhite) {
         // Will encounter white first when searching for right finder pattern
         break;
@@ -312,7 +312,7 @@ public final class RSS14Reader extends AbstractRSSReader {
     for (int x = rowOffset; x < width; x++) {
       boolean pixel = (row.get(x));
       boolean cond = pixel ^ isWhite;
-      cond = Accept.accept(cond);
+      cond = Relax.relax(cond);
       if (cond) {
         counters[counterPosition]++;
       } else {
@@ -343,10 +343,10 @@ public final class RSS14Reader extends AbstractRSSReader {
   private FinderPattern parseFoundFinderPattern(BitArray row, int rowNumber, boolean right, int[] startEnd)
       throws NotFoundException {
     // Actually we found elements 2-5
-    boolean firstIsBlack = Accept.accept(row.get(startEnd[0]));
+    boolean firstIsBlack = Relax.relax(row.get(startEnd[0]));
     int firstElementStart = startEnd[0] - 1;
     // Locate element 1
-    while (firstElementStart >= 0 && firstIsBlack ^ Accept.accept(row.get(firstElementStart))) {
+    while (firstElementStart >= 0 && firstIsBlack ^ Relax.relax(row.get(firstElementStart))) {
       firstElementStart--;
     }
     firstElementStart++;
