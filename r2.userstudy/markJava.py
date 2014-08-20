@@ -51,7 +51,7 @@ for line in lines:
 	loc = temp
 	loc = 'src-marked\/' + loc
 
-	if ("Accept.java" in loc) or ("Precise.java" in loc) or ("Alloc.java" in loc) or ("ApproxMath.java" in loc) or ("ApproxFloat.java" in loc):
+	if ("Relax.java" in loc) or ("Restrain.java" in loc) or ("Tag.java" in loc) or ("ApproxMath.java" in loc) or ("ApproxFloat.java" in loc):
 		continue
 
 	# get the content of a certain line of java source code
@@ -93,7 +93,7 @@ for line in lines:
 	new = p.read().strip('\n')
 
 	if new == '':
-		logfile.write(" *** EXPAX: adding annotation failed: " + org + '\n')
+		logfile.write(" *** R2: adding annotation failed: " + org + '\n')
 		logfile.write(" *** " + quad + "\n")
 		logfile.write(" *** " + loc + "\n")
 		logfile.write(' *** sed \'' + lineNum + 's/' + content + '/' + newcontent + '/\' ' + loc + ' > ' + loc + '.tmp')

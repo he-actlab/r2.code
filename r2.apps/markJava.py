@@ -32,6 +32,11 @@ for line in lines:
 		cnt += 1
 		continue
 
+	field=""
+	if "NEW" in line:
+		tokens = line.split(' ')
+		field = tokens[len(tokens)-1]
+
 	# get filename for the location
 	loc = tokens[1].strip('()')
 	tokens = loc.split(':')
@@ -45,6 +50,9 @@ for line in lines:
 			temp += ch
 	loc = temp
 	loc = 'src\/' + loc
+
+	if ("Relax.java" in loc) or ("Restrain.java" in loc) or ("Tag.java" in loc) or ("ApproxMath.java" in loc) or ("ApproxFloat.java" in loc):
+		continue
 
 	# get the content of a certain line of java source code
 	p = os.popen ('sed -n \'' + lineNum + 'p\' ' + loc)
@@ -68,7 +76,11 @@ for line in lines:
 
 	# replace the original line of source code with a comment of quad 
 	if "NEW" in quad or "NEW_ARRAY" in quad:
-		newcontent = content + '\t\/\/ st: ' + quad
+		quad = quad.split(',')[0]
+		if field == 'ARRAY':
+			newcontent = content + '\t\/\/ st: ' + quad
+		else:
+			newcontent = content + '\t\/\/ st: ' + quad + ', ' + field
 	else:
 		newcontent = content + '\t\/\/ op: ' + quad
 	os.system('sed \'' + lineNum + 's/' + content + '/' + newcontent + '/\' ' + loc + ' > ' + loc + '.tmp')
@@ -81,7 +93,7 @@ for line in lines:
 	new = p.read().strip('\n')
 
 	if new == '':
-		logfile.write(" *** EXPAX: adding annotation failed: " + org + '\n')
+		logfile.write(" *** R2: adding annotation failed: " + org + '\n')
 		logfile.write(" *** " + quad + "\n")
 		logfile.write(" *** " + loc + "\n")
 		logfile.write(' *** sed \'' + lineNum + 's/' + content + '/' + newcontent + '/\' ' + loc + ' > ' + loc + '.tmp')
