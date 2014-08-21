@@ -59,11 +59,9 @@
         <delete dir="chord_output"/>
         <delete dir="eclipse-log"/>
         <delete dir="src-marked"/>
-        <delete file="analysis.result"/>
         <delete file="after"/>
         <delete file="markJava.log"/>
         <delete file="jmeint.jar"/>
-        <delete file="jmeint-bc-offset.info"/>
   </target>
 
 </project>

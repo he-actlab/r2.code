@@ -32,6 +32,11 @@ for line in lines:
 		cnt += 1
 		continue
 
+	field=""
+	if "NEW" in line:
+		tokens = line.split(' ')
+		field = tokens[len(tokens)-1]
+
 	# get filename for the location
 	loc = tokens[1].strip('()')
 	tokens = loc.split(':')
@@ -45,15 +50,18 @@ for line in lines:
 		else:
 			temp += ch
 	loc = temp
-	javaseloc = 'javase/src/' + orgloc
+	javaseloc = 'javase/src-marked/' + orgloc
 	if os.path.isfile(javaseloc) == False:
-		coreloc = 'core/src/' + orgloc
+		coreloc = 'core/src-marked/' + orgloc
 		if os.path.isfile(coreloc) == False:
 			print "Error: there is no file which has this name: " + coreloc
 		else:
-			loc = 'core\/src\/' + loc
+			loc = 'core\/src-marked\/' + loc
 	else:
-		loc = 'javase\/src\/' + loc
+		loc = 'javase\/src-marked\/' + loc
+
+	if ("Relax.java" in loc) or ("Restrain.java" in loc) or ("Tag.java" in loc) or ("ApproxMath.java" in loc) or ("ApproxFloat.java" in loc):
+		continue
 
 	# get the content of a certain line of java source code
 	p = os.popen ('sed -n \'' + lineNum + 'p\' ' + loc)
@@ -72,13 +80,18 @@ for line in lines:
 			else:
 				temp += ch
 	content = temp
+
+	# replace the original line of source code with a comment of quad 
 	if "NEW" in quad or "NEW_ARRAY" in quad:
-		newcontent = content + '\t\/\/ st: ' + quad
+		quad = quad.split(',')[0]
+		if field == 'ARRAY':
+			newcontent = content + '\t\/\/ st: ' + quad
+		else:
+			newcontent = content + '\t\/\/ st: ' + quad + ', ' + field
 	else:
 		newcontent = content + '\t\/\/ op: ' + quad
 
 	# replace the original line of source code with a comment of quad 
-	  
 	os.system('sed \"' + lineNum + 's/' + content + '/' + newcontent + '/\" ' + loc + ' > ' + loc + '.tmp')
 
 	logfile.write(str(cnt) + '\n')

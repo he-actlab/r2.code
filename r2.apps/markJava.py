@@ -49,7 +49,7 @@ for line in lines:
 		else:
 			temp += ch
 	loc = temp
-	loc = 'src\/' + loc
+	loc = 'src-marked\/' + loc
 
 	if ("Relax.java" in loc) or ("Restrain.java" in loc) or ("Tag.java" in loc) or ("ApproxMath.java" in loc) or ("ApproxFloat.java" in loc):
 		continue
@@ -83,6 +83,8 @@ for line in lines:
 			newcontent = content + '\t\/\/ st: ' + quad + ', ' + field
 	else:
 		newcontent = content + '\t\/\/ op: ' + quad
+
+	# replace the original line of source code with a comment of quad 
 	os.system('sed \'' + lineNum + 's/' + content + '/' + newcontent + '/\' ' + loc + ' > ' + loc + '.tmp')
 
 	logfile.write(str(cnt) + '\n')
