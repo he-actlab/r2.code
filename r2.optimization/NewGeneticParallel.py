@@ -57,36 +57,33 @@ UniqueBitvector = set()
 sg = StatGuarantee()
 
 BENCHMARK = {
-    'FFT' : [
-        JarInfo('FFT', 'scimark2.jar', 'scimark2/', 'scimark2/', 133),
+    'fft' : [
+        JarInfo('fft', 'fft.jar', 'fft/', 'fft/', 133),
     ],
-    'SOR' : [
-        JarInfo('SOR', 'scimark2.jar', 'scimark2/', 'scimark2/', 23),
+    'sor' : [
+        JarInfo('sor', 'sor.jar', 'sor/', 'sor/', 23),
     ],
-    'MonteCarlo' : [
-        JarInfo('MonteCarlo', 'scimark2.jar', 'scimark2/', 'scimark2/', 11),
+    'mc' : [
+        JarInfo('mc', 'mc.jar', 'mc/', 'mc/', 11),
     ],
-    'SMM' : [
-        JarInfo('SparseCompRow', 'scimark2.jar', 'scimark2/', 'scimark2/', 8),
+    'smm' : [
+        JarInfo('smm', 'smm.jar', 'smm/', 'smm/', 8),
     ],
-    'LU' : [
-        JarInfo('LU', 'scimark2.jar', 'scimark2/', 'scimark2/', 53)
+    'lu' : [
+        JarInfo('lu', 'lu.jar', 'lu/', 'lu/', 53)
     ],
     'zxing' : [
-        JarInfo('ZXing', 'core.jar', 'zxing/', 'zxing/core/', 863),
-        JarInfo('ZXing', 'javase.jar', 'zxing/', 'zxing/javase/', 39)
+        JarInfo('zxing', 'core.jar', 'zxing/', 'zxing/core/', 863),
+        JarInfo('zxing', 'javase.jar', 'zxing/', 'zxing/javase/', 39)
     ],
     'jmeint' : [
-        JarInfo('jME', 'jmeint.jar', 'jmeint/', 'jmeint/', 1513),
-    ],
-    'imagefill' : [
-        JarInfo('ImageJ', 'imagefill.jar', 'imagefill/', 'imagefill/', 144),
+        JarInfo('jmeint', 'jmeint.jar', 'jmeint/', 'jmeint/', 1513),
     ],
     'simpleRaytracer' : [
-        JarInfo('Plane', 'simpleRaytracer.jar', 'simpleRaytracer/', 'simpleRaytracer/', 321),
+        JarInfo('simpleRaytracer', 'simpleRaytracer.jar', 'simpleRaytracer/', 'simpleRaytracer/', 321),
     ],
     'sobel' : [
-        JarInfo('Sobel', 'sobel.jar', 'sobel/', 'sobel/', 127),
+        JarInfo('sobel', 'sobel.jar', 'sobel/', 'sobel/', 127),
     ]
 }
 

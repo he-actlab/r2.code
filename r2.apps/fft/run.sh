@@ -1,8 +1,8 @@
 #!/bin/sh
-enerjdir=../../enerj
-expaxjar=$EXPAX_ANALYSIS/expax-analysis.jar
-classpath=fft.jar:$expaxjar
-mainclass=jnt.scimark2.commandline
+enerjdir=../../r2.enerj
+r2jar=$R2_ANALYSIS/r2-analysis.jar
+classpath=fft.jar:$r2jar
+mainclass=jnt.scimark2.FFT
 
 enerjargs=-noisy
 fftargs=
@@ -13,5 +13,4 @@ do
     *) fftargs="$fftargs $arg" ;;
     esac
 done
-echo $enerjdir/bin/enerj -Xmx2048m $enerjargs -cp $classpath $mainclass $fftargs
 $enerjdir/bin/enerj -Xmx2048m $enerjargs -cp $classpath $mainclass $fftargs

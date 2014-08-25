@@ -19,35 +19,59 @@ BMARKS = {
         #Bmark('SciMark2: SMM',        'smm', 'proportion', None),
         #Bmark('SciMark2: LU',         'lu',  'absolute', None),
     #],
-    'FFT' : [
-        Bmark('SciMark2: FFT',        'fft', 'absolute', None),
-    ],
-    'SOR' : [
-        Bmark('SciMark2: SOR',        'sor', 'absolute', None),
-    ],
-    'MonteCarlo' : [
-        Bmark('SciMark2: MonteCarlo', 'mc',  'proportion', None),
-    ],
-    'SMM' : [
-        Bmark('SciMark2: SMM',        'smm', 'proportion', None),
-    ],
-    'LU' : [
-        Bmark('SciMark2: LU',         'lu',  'absolute', None),
-    ],
     'zxing': [
+        Bmark('ZXing', '', 'string', r'Parsed result:\n(\S+)'),
+    ],
+    'zxing-enerj': [
         Bmark('ZXing', '', 'string', r'Parsed result:\n(\S+)'),
     ],
     'jmeint': [
         Bmark('jME', '', 'boolean', None),
     ],
-    'imagefill': [
-        Bmark('ImageJ', '', 10, None),
+    'jmeint-enerj': [
+        Bmark('jME', '', 'boolean', None),
     ],
     'simpleRaytracer': [
         Bmark('Plane', '' , 255, None)
     ],
+    'simpleRaytracer-enerj': [
+        Bmark('Plane', '' , 255, None)
+    ],
     'sobel': [
         Bmark('Sobel', '' , 255, None)
+    ],
+    'sobel-enerj': [
+        Bmark('Sobel', '' , 255, None)
+    ],
+    'fft': [
+        Bmark('FFT', '', 'absolute', None)
+    ],
+    'fft-enerj': [
+        Bmark('FFT', '', 'absolute', None)
+    ],
+    'sor': [
+        Bmark('SOR', '', 'absolute', None)
+    ],
+    'sor-enerj': [
+        Bmark('SOR', '', 'absolute', None)
+    ],
+    'lu': [
+        Bmark('LU', '', 'absolute', None)
+    ],
+    'lu-enerj': [
+        Bmark('LU', '', 'absolute', None)
+    ],
+    'mc': [
+        Bmark('MonteCarlo', '', 'proportion', None)
+    ],
+    'mc-enerj': [
+        Bmark('MonteCarlo', '', 'proportion', None)
+    ],
+    'smm': [
+        Bmark('SparseCompRow', '', 'proportion', None)
+    ],
+    'smm-enerj': [
+        Bmark('SParseCompRow', '', 'proportion', None)
     ]
 }
 COMMANDS = {

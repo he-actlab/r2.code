@@ -34,7 +34,7 @@
         <isset property="env.EnerJNoSim" />
     </condition>
     <presetdef name="enerjc">
-        <jsr308.javac verbose="${enerjc.verbose}">
+        <jsr308.javac>
             <compilerarg line="-Xbootclasspath/a:${cfrt.jar}:${enerj.jar}:${r2.jar} -processorpath ${cfrt.jar}:${enerj.jar} -processor ${enerj.checker}" />
             <compilerarg line="${enerjc.args}" />
             <compilerarg line="-r2analflag ${r2anal.flag}" />

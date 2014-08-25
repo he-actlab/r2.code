@@ -5,3 +5,12 @@ analysis.result
 analysis.flag
 results.json
 enerjstats.json
+enerjnoiseconsts.json
+fft.jar
+mc.jar
+sor.jar
+sobel.jar
+lu.jar
+smm.jar
+simpleRaytracer.jar
+jmeint.jar

@@ -1,7 +1,7 @@
 #!/bin/sh
-enerjdir=../../enerj
-expaxjar=$EXPAX_ANALYSIS/expax-analysis.jar
-classpath=javase/javase.jar:core/core.jar:$expaxjar
+enerjdir=../../r2.enerj
+r2jar=$R2_ANALYSIS/r2-analysis.jar
+classpath=javase/javase.jar:core/core.jar:$r2jar
 mainclass=com.google.zxing.client.j2se.CommandLineRunner
 filename=
 

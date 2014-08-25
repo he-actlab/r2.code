@@ -39,6 +39,8 @@ public class MonteCarlo
 		int SEED = Integer.parseInt(args[0]);
 		double out = MonteCarlo.integrate(cycles, SEED); 
 
+		Restrict.restrict(out);
+
 		System.out.println("MonteCarlo out: " + out);
 	}
 

@@ -1,7 +1,7 @@
 #!/bin/sh
-enerjdir=../../enerj
-expaxjar=$EXPAX_ANALYSIS/expax-analysis.jar
-classpath=jmeint.jar:$expaxjar
+enerjdir=../../r2.enerj
+r2jar=$R2_ANALYSIS/r2-analysis.jar
+classpath=jmeint.jar:$r2jar
 mainclass=JMEIntTest
 argument=
 

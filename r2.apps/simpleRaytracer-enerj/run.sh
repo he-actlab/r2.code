@@ -1,5 +1,5 @@
 #!/bin/sh
-enerjdir=../../enerj
+enerjdir=../../r2.enerj
 classpath=simpleRaytracer.jar
 mainclass=Plane
 

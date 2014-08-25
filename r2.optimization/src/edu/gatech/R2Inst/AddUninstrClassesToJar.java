@@ -1,4 +1,4 @@
-package edu.gatech.ExpaxInst;
+package edu.gatech.R2Inst;
 
 import org.apache.tools.ant.taskdefs.Jar ;
 import org.apache.tools.ant.types.ZipFileSet;

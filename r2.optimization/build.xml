@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project basedir="." default="build" name="ExpaxInst">
+<project basedir="." default="build" name="R2Inst">
 	
     <property environment="env"/>
-	<property name="ExpaxInst.dir" location="${env.EXPAXINST}"/>
-	<property name="ExpaxInst.jar.file" location="${ExpaxInst.dir}/jars/ExpaxInst.jar"/>
+	<property name="R2Inst.dir" location="${env.R2_INST}"/>
+	<property name="R2Inst.jar.file" location="${R2Inst.dir}/jars/R2Inst.jar"/>
 	<property file="build.properties"/>
 	
-	<path id="ExpaxInst.class.path">
-		<pathelement location="${ExpaxInst.dir}/libs/soot-2.5.0.jar"/>
-		<pathelement location="${ExpaxInst.dir}/libs/ant.jar"/>
-		<pathelement location="${ExpaxInst.dir}/libs/ant-launcher.jar"/>
-	   	<pathelement location="${ExpaxInst.dir}/libs/cfrt.jar"/>
-		<pathelement location="${ExpaxInst.dir}/libs/enerj.jar"/>
-		<pathelement location="${ExpaxInst.dir}/libs/rt.jar"/>
-		<pathelement location="${ExpaxInst.dir}/libs/jce.jar"/>
+	<path id="R2Inst.class.path">
+		<pathelement location="${R2Inst.dir}/libs/soot-2.5.0.jar"/>
+		<pathelement location="${R2Inst.dir}/libs/ant.jar"/>
+		<pathelement location="${R2Inst.dir}/libs/ant-launcher.jar"/>
+	   	<pathelement location="${R2Inst.dir}/libs/cfrt.jar"/>
+		<pathelement location="${R2Inst.dir}/libs/enerj.jar"/>
+		<pathelement location="${R2Inst.dir}/libs/rt.jar"/>
+		<pathelement location="${R2Inst.dir}/libs/jce.jar"/>
 	</path>
 	
 	<target name="build">
 		<mkdir dir="jars"/>
-		<antcall target="build-ExpaxInst"/>
+		<antcall target="build-R2Inst"/>
 	</target>
 	
-	<target name="build-ExpaxInst">
+	<target name="build-R2Inst">
 		
-		<path id="ExpaxInst.build.path">
-			<path refid="ExpaxInst.class.path"/>
-			<pathelement location="${ExpaxInst.dir}/libs/core.jar"/>
+		<path id="R2Inst.build.path">
+			<path refid="R2Inst.class.path"/>
+			<pathelement location="${R2Inst.dir}/libs/core.jar"/>
 		</path>
 
-		<property name="ExpaxInst.class.path" refid="ExpaxInst.class.path"/>
-		<property name="ExpaxInst.build.path" refid="ExpaxInst.build.path"/>
+		<property name="R2Inst.class.path" refid="R2Inst.class.path"/>
+		<property name="R2Inst.build.path" refid="R2Inst.build.path"/>
 
 		<sequential>
 			<mkdir dir="classes"/>
 			<javac srcdir="src" destdir="classes"
 				debug="true" debuglevel="source,lines,vars"
-				classpath="${ExpaxInst.class.path}" includeantruntime="false"/>
-			<jar jarfile="${ExpaxInst.dir}/jars/ExpaxInst.jar" basedir="classes">
+				classpath="${R2Inst.class.path}" includeantruntime="false"/>
+			<jar jarfile="${R2Inst.dir}/jars/R2Inst.jar" basedir="classes">
 	        	<manifest>
-	        		<attribute name="Class-Path" value="${ExpaxInst.build.path}"/>
-	        		<attribute name="Main-Class" value="edu.gatech.ExpaxInst.Main"/>
+	        		<attribute name="Class-Path" value="${R2Inst.build.path}"/>
+	        		<attribute name="Main-Class" value="edu.gatech.R2Inst.Main"/>
 	        	</manifest>
 			</jar>
 		</sequential>
@@ -47,18 +47,19 @@
 	
 	<target name="run" depends="build">
 		<property environment="env"/>
-		<java classname="edu.gatech.ExpaxInst.Main" fork="true" failonerror="true"
+		<java classname="edu.gatech.R2Inst.Main" fork="true" failonerror="true"
 				dir="${user.dir}" maxmemory="1024M">
 			<syspropertyset>
 				<propertyref builtin="all"/>
 			</syspropertyset>
 			<jvmarg value="-ea"/>
 			<classpath>
-				<pathelement location="${ExpaxInst.jar.file}"/>
-				<path refid="ExpaxInst.class.path"/>
+				<pathelement location="${R2Inst.jar.file}"/>
+				<path refid="R2Inst.class.path"/>
 			</classpath>
 			<arg value="${build.app.name}"/>
 			<arg value="${build.bitvector}"/>
+			<arg value="${build.mode}"/>
 		</java>
 	</target>
 	

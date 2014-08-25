@@ -1,5 +1,5 @@
 #!/bin/sh
-enerjdir=../../enerj
+enerjdir=../../r2.enerj
 classpath=jmeint.jar
 mainclass=JMEIntTest
 argument=

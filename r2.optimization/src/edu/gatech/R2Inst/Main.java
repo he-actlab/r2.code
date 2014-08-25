@@ -1,4 +1,4 @@
-package edu.gatech.ExpaxInst;
+package edu.gatech.R2Inst;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -18,9 +18,9 @@ import soot.SceneTransformer;
 import soot.SootClass;
 import soot.Transform;
 
-import edu.gatech.ExpaxInst.Instrumentor;
+import edu.gatech.R2Inst.Instrumentor;
 import edu.gatech.Utils.Config;
-import edu.gatech.ExpaxInst.AddUninstrClassesToJar;
+import edu.gatech.R2Inst.AddUninstrClassesToJar;
 import edu.gatech.Utils.Printer;
 
 public class Main extends SceneTransformer {
@@ -34,6 +34,7 @@ public class Main extends SceneTransformer {
 		config = Config.g();
 		config.appName = args[0];
 		config.bitVector = args[1];
+		config.mode = args[2];
 		
 		Scene.v().setSootClassPath(config.inJar + File.pathSeparator + config.libJar);
 		
@@ -57,7 +58,7 @@ public class Main extends SceneTransformer {
 	@Override
 	protected void internalTransform(String arg0, Map arg1) {
 		printClasses("old.txt");
-		Instrumentor inst = new Instrumentor(config.bitVector);
+		Instrumentor inst = new Instrumentor(config.bitVector, config.mode);
 		inst.instrument(classes);
 		Scene.v().getApplicationClasses().remove(Scene.v().getSootClass(dummyMainClassName));
 		printClasses("new.txt");

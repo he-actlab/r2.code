@@ -37,6 +37,7 @@ BMARKS = {
     'zxing': [
         Bmark('ZXing', '', 'string', r'Parsed result:\n(\S+)'),
     ],
+    
     'jmeint': [
         Bmark('jME', '', 'boolean', None),
     ],
@@ -77,16 +78,16 @@ BMARKS = {
         Bmark('LU', '', 'absolute', None)
     ],
     'mc': [
-        Bmark('MonteCarlo', '', 'absolute', None)
+        Bmark('MonteCarlo', '', 'proportion', None)
     ],
     'mc-enerj': [
-        Bmark('MonteCarlo', '', 'absolute', None)
+        Bmark('MonteCarlo', '', 'proportion', None)
     ],
     'smm': [
-        Bmark('SparseCompRow', '', 'absolute', None)
+        Bmark('SparseCompRow', '', 'proportion', None)
     ],
     'smm-enerj': [
-        Bmark('SParseCompRow', '', 'absolute', None)
+        Bmark('SParseCompRow', '', 'proportion', None)
     ]
 
 }

@@ -1,6 +1,5 @@
 #!/bin/sh
-enerjdir=../../enerj
-#classpath=sobel.jar
+enerjdir=../../r2.enerj
 classpath=sobel.jar
 mainclass=Sobel.RgbImage
 

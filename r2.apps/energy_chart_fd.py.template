@@ -6,10 +6,7 @@ import sys
 
 args = sys.argv[1:]
 path = args[0]
-if path == 'FFT' or path == 'SOR' or path == 'MonteCarlo' or path == 'SMM' or path == 'LU':
-	directory = 'scimark2'
-else:
-	directory = path
+directory = path
 num = -1
 
 #results = json_in()

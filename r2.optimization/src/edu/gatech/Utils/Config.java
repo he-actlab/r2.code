@@ -8,6 +8,7 @@ public final class Config {
 	
 	public String appName;
 	public String bitVector;
+	public String mode;
 
 	private static Config config;
 	
@@ -18,10 +19,11 @@ public final class Config {
 	}
 	
 	private Config() {
-		inJar = System.getProperty("ExpaxInst.in.jar", "input/old.jar");
-		outJar = System.getProperty("ExpaxInst.out.jar", "output/new.jar");
-		libJar = System.getProperty("ExpaxInst.lib.jar", ".:libs/rt.jar:libs/jce.jar:libs/soot-2.5.0.jar:libs/cfrt.jar:libs/enerj.jar:bin:libs/core.jar");
+		inJar = System.getProperty("R2Inst.in.jar", "input/old.jar");
+		outJar = System.getProperty("R2Inst.out.jar", "output/new.jar");
+		libJar = System.getProperty("R2Inst.lib.jar", ".:libs/rt.jar:libs/jce.jar:libs/soot-2.5.0.jar:libs/cfrt.jar:libs/enerj.jar:bin:libs/core.jar:jars/R2Inst.jar:../r2.analysis/r2-analysis.jar");
 		appName = null;
 		bitVector = null;
+		mode = null;
 	}
 }
