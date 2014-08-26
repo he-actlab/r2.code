@@ -1,0 +1,69 @@
+[R2]
+
+R2 is lightweight languages extensions for Java 
+to reduce manual annotations and automate approximate programming. 
+R2 extensions enable programmers to implicitly relax the accuracy 
+of program data and operations.
+
+[Compiling R2]
+
+	1. Setting Environmental Variables
+
+		To use the R2 framework, first you need to set all the necessary environment variables. 
+
+		JAVA_HOME and R2_HOME should be set according to your own machine configurations. 
+
+			export JAVA_HOME=your/java/installation/path
+			export R2_HOME=your/r2.code/path
+
+		Once your JAVA_HOME and R2_HOME are set properly, 
+		the following five variables can be just copied and pasted.
+
+			export JSR308=$R2_HOME/checker-framework/
+			export R2_INST=$R2_HOME/r2.optimization
+			export CHORD_MAIN=$R2_HOME/chord/main
+			export R2_ANALYSIS=$R2_HOME/r2.analysis
+			export R2_BENCH=$R2_HOME/r2.apps
+
+		You can manage your memory configuration of analysis using the following variable. 
+		You can see the chord's reference for detailed information. (https://code.google.com/p/jchord/)
+
+			export CHORD_MAX_HEAP=8192m
+
+	2. Building R2
+
+		We provide a script to build everything called "build.sh".
+		What you have to do is only typing the following:
+
+			$ ./build.sh 
+
+		This command will make the framework to be ready for use. 
+
+[Using R2]
+
+	1. Approximation Safety Analysis
+
+		You can find all R2 benchmarks at "r2.apps" directory. 
+		There are nine benchmarks in r2.apps: mc, fft, lu, sor, smm, simpleRaytracer, jmeint, zxing. 
+
+		Let me explain with an example, mc. 
+		If you see inside of mc (MonteCarlo) directory, you would see a source directory, src. 
+		You can add or remove annotations from source codes in src. 
+
+		Now, you can run analysis using a tool called "analysis.py" in r2.apps as described in the following command. 
+		
+		$ ./analyze.py mc
+
+		There are three phases:
+			(1) Static Analysis
+			(2) Back Annotation
+			(3) Compilation
+
+		The tool automatically generates another copy of src named "src-marked".
+		The only disparity betwteen src-marked and original src is comments describing 
+		relaxed data and operations found by the static analysis . 
+		The comments are placed at the end of source code line corresponding the data and operations.
+
+	2. Stochastic Optimization
+
+
