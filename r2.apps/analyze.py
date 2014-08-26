@@ -23,7 +23,7 @@ else:
 	os.system('cd ' + benchpath + '; ./build.sh')
 print
 print " >>>>> [1] 1st-phase compilation end >>>>> "
-os.system("cd ../r2.analysis ; ./runpl.sh " + bench + " > /dev/null")
+os.system("cd ../r2.analysis ; ./runpl.sh " + bench + " > /dev/null &> /dev/null")
 print
 print " <<<<< [2] r2 analysis start <<<<< "
 time.sleep(1)
