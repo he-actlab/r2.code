@@ -1,8 +1,8 @@
 #!/bin/sh
 
 cd jsr308-langtools/make ; ant
-cd ../../annotation-tools/asmx ; ant
-cd ../ ; ant
+cd ../../annotation-tools/asmx ; ant clean ; ant
+cd ../ ; ant clean ; ant
 cd ../checker-framework/checkers/ ; ant
 cd ../../checker-runtime/ ; ant
 cd ../r2.enerj/ ; ant
