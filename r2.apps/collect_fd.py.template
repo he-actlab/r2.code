@@ -19,59 +19,59 @@ BMARKS = {
         #Bmark('SciMark2: SMM',        'smm', 'proportion', None),
         #Bmark('SciMark2: LU',         'lu',  'absolute', None),
     #],
-    'zxing': [
-        Bmark('ZXing', '', 'string', r'Parsed result:\n(\S+)'),
+     'zxing': [
+        Bmark('zxing', '', 'string', r'Parsed result:\n(\S+)'),
     ],
     'zxing-enerj': [
-        Bmark('ZXing', '', 'string', r'Parsed result:\n(\S+)'),
+        Bmark('zxing', '', 'string', r'Parsed result:\n(\S+)'),
     ],
     'jmeint': [
-        Bmark('jME', '', 'boolean', None),
+        Bmark('jmeint', '', 'boolean', None),
     ],
     'jmeint-enerj': [
-        Bmark('jME', '', 'boolean', None),
+        Bmark('jmeint', '', 'boolean', None),
     ],
     'simpleRaytracer': [
-        Bmark('Plane', '' , 255, None)
+        Bmark('simpleRaytracer', '' , 255, None)
     ],
     'simpleRaytracer-enerj': [
-        Bmark('Plane', '' , 255, None)
+        Bmark('simpleRaytracer', '' , 255, None)
     ],
     'sobel': [
-        Bmark('Sobel', '' , 255, None)
+        Bmark('sobel', '' , 255, None)
     ],
     'sobel-enerj': [
-        Bmark('Sobel', '' , 255, None)
+        Bmark('sobel', '' , 255, None)
     ],
     'fft': [
-        Bmark('FFT', '', 'absolute', None)
+        Bmark('fft', '', 'absolute', None)
     ],
     'fft-enerj': [
-        Bmark('FFT', '', 'absolute', None)
+        Bmark('fft', '', 'absolute', None)
     ],
     'sor': [
-        Bmark('SOR', '', 'absolute', None)
+        Bmark('sor', '', 'absolute', None)
     ],
     'sor-enerj': [
-        Bmark('SOR', '', 'absolute', None)
+        Bmark('sor', '', 'absolute', None)
     ],
     'lu': [
-        Bmark('LU', '', 'absolute', None)
+        Bmark('lu', '', 'absolute', None)
     ],
     'lu-enerj': [
-        Bmark('LU', '', 'absolute', None)
+        Bmark('lu', '', 'absolute', None)
     ],
     'mc': [
-        Bmark('MonteCarlo', '', 'proportion', None)
+        Bmark('mc', '', 'proportion', None)
     ],
     'mc-enerj': [
-        Bmark('MonteCarlo', '', 'proportion', None)
+        Bmark('mc', '', 'proportion', None)
     ],
     'smm': [
-        Bmark('SparseCompRow', '', 'proportion', None)
+        Bmark('smm', '', 'proportion', None)
     ],
     'smm-enerj': [
-        Bmark('SParseCompRow', '', 'proportion', None)
+        Bmark('smm', '', 'proportion', None)
     ]
 }
 COMMANDS = {

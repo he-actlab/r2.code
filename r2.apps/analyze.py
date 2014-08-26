@@ -14,7 +14,7 @@ if os.path.exists(benchpath) == False:
 
 os.system('cd ' + benchpath + '; rm -rf src-marked')
 print
-print " <<<<< [1] compilation start <<<<< "
+print " <<<<< [1] 1st-phase compilation start <<<<< "
 print
 os.system('echo false > ' + benchpath + '/analysis.flag')
 if bench != 'zxing':
@@ -22,10 +22,10 @@ if bench != 'zxing':
 else:
 	os.system('cd ' + benchpath + '; ./build.sh')
 print
-print " >>>>> [1] compilation end >>>>> "
+print " >>>>> [1] 1st-phase compilation end >>>>> "
 os.system("cd ../r2.analysis ; ./runpl.sh " + bench + " > /dev/null")
 print
-print " <<<<< [2] relax analysis start <<<<< "
+print " <<<<< [2] r2 analysis start <<<<< "
 time.sleep(1)
 while True:
 	print "   analyzing ... "
@@ -34,7 +34,7 @@ while True:
 	if int(result.strip('\n')) == 0:
 		break
 	time.sleep(3)
-print " >>>>> [2] relax analysis end >>>>> "
+print " >>>>> [2] r2 analysis end >>>>> "
 print
 print " <<<<< [3] back annotating start <<<<< "
 if bench != 'zxing':
@@ -54,3 +54,12 @@ while True:
 	time.sleep(3)
 print " >>>>> [3] back annotating end >>>>> "
 print
+print " <<<<< [4] 2nd-phase compilation start <<<<< "
+print
+if bench != 'zxing':
+	os.system('cd ' + benchpath + '; ant')
+else:
+	os.system('cd ' + benchpath + '; ./build.sh')
+print
+print " >>>>> [4] 2nd-phase compilation end >>>>> "
+

@@ -25,16 +25,15 @@ RSRCNAMES = OrderedDict([
 LEVELNAMES = ['Mild', 'Medium', 'Aggressive']
 
 BMLONGNAMES = OrderedDict([
-    ('SciMark2: FFT', 'FFT'),
-    ('SciMark2: SOR', 'SOR'),
-    ('SciMark2: MonteCarlo', 'MonteCarlo'),
-    ('SciMark2: SMM', 'SparseMatMult'),
-    ('SciMark2: LU', 'LU'),
-    ('ZXing', 'ZXing'),
-    ('jME', 'jMonkeyEngine'),
-    ('ImageJ', 'ImageJ'),
-    ('Plane', 'Raytracer'),
-		('Sobel', 'sobel'),
+    ('fft', 'fft'),
+    ('sor', 'sor'),
+    ('mc', 'mc'),
+    ('smm', 'smm'),
+    ('lu', 'lu'),
+    ('zxing', 'zxing'),
+    ('jmeint', 'jmeint'),
+    ('simpleRaytracer', 'simpleRaytracer'),
+	('sobel', 'sobel'),
 ])
 
 def table_row(cells):

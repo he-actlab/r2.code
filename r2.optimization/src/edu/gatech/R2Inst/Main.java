@@ -119,13 +119,13 @@ public class Main extends SceneTransformer {
 
 	private static boolean toBeInstrumented(String className)
 	{
-		if (config.appName.equals("FFT") || config.appName.equals("SOR") || config.appName.equals("SparseCompRow") || config.appName.equals("MonteCarlo") || config.appName.equals("LU")) {
-			// pick a class given as argument
-			if (!className.contains(config.appName)){
-				return false;
-			}
-			return true;
-		}
+//		if (config.appName.equals("fft") || config.appName.equals("sor") || config.appName.equals("smm") || config.appName.equals("mc") || config.appName.equals("lu")) {
+//			// pick a class given as argument
+//			if (!className.contains(config.appName)){
+//				return false;
+//			}
+//			return true;
+//		}
 		return true;
 	}
 	

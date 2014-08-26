@@ -2,17 +2,26 @@
 
 import os, sys
 
-appListFileName = 'app.lst'
+parallelism = 30
 
-# check if files exist
-if os.path.isfile(appListFileName) == False:
- 	print str(appListFileName) +  " doesn't exist"
-	sys.exit(0)
+if len(sys.argv) == 1:
+	appListFileName = 'app.lst'
 
-appListFile = open(appListFileName,"r")
-appList = appListFile.readlines()
-
-for app in appList:
-	for x in range(0, 30):
-		print("rm -rf " + str(x) + app.strip('\n'))
-		os.system("rm -rf " + str(x) + app.strip('\n'))
+	# check if files exist
+	if os.path.isfile(appListFileName) == False:
+	 	print str(appListFileName) +  " doesn't exist"
+		sys.exit(0)
+	appListFile = open(appListFileName,"r")
+	appList = appListFile.readlines()
+	for app in appList:
+		for x in range(0, parallelism):
+			#print("rm -rf " + str(x) + app.strip('\n'))
+			os.system("rm -rf " + str(x) + app.strip('\n'))
+else:
+	appName = sys.argv[1]
+	if os.path.exists(appName) == False:
+		print str(appName) + " doesn't exist"
+		sys.exit(0)
+	for x in range(0, parallelism):
+		#print "rm -rf " + str(x) + appName
+		os.system("rm -rf " + str(x) + appName)

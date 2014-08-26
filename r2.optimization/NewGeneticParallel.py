@@ -13,25 +13,25 @@ from operator import itemgetter
 from collections import namedtuple
 from multiprocessing import Process, Queue
 
-BASE_ADDR = os.environ['RESEARCH'] + '/expax/'
-APP_ADDR = BASE_ADDR + 'apps/'
-INSTR_ADDR = BASE_ADDR + 'ExpaxInst/'
+BASE_ADDR = os.environ['RESEARCH'] + '/r2.code'
+APP_ADDR = BASE_ADDR + '/r2.apps/'
+INSTR_ADDR = BASE_ADDR + '/r2.optimization'
 
 # ***** Parameters *****
-NUM_RUNS = 10
+NUM_RUNS = 5
 # NUM_RUNS = 1
-PARALLEL_WIDTH = 4
+PARALLEL_WIDTH = 8
 # PARALLEL_WIDTH = 4
-POPULATION_SIZE = 30
+POPULATION_SIZE = 8
 # POPULATION_SIZE = 2
-MAX_RUNS = 10
+MAX_RUNS = 2
 # MAX_RUNS = 1
-MAX_BINARY_SEARCH_DEPTH = 10
+MAX_BINARY_SEARCH_DEPTH = 3
 # MAX_BINARY_SEARCH_DEPTH = 1
 ERR_EXPECTATION = 5
 # ***** Parameters *****
 
-JarInfo = namedtuple('AppInfo', 'prj_name jar_name src_dir dst_dir approx_inst_num')
+JarInfo = namedtuple('AppInfo', 'prj_name jar_name src_dir dst_dir')
 DictInfo = namedtuple('DictInfo', 'error energy')
 
 # Genetic Algorithm Related Data
@@ -55,42 +55,43 @@ MAX_RETRY = 100
 #
 UniqueBitvector = set()
 sg = StatGuarantee()
+zxingBits =[-1,-1]
 
 BENCHMARK = {
     'fft' : [
-        JarInfo('fft', 'fft.jar', 'fft/', 'fft/', 133),
+        JarInfo('fft', 'fft.jar', 'fft/', 'fft/'),
     ],
     'sor' : [
-        JarInfo('sor', 'sor.jar', 'sor/', 'sor/', 23),
+        JarInfo('sor', 'sor.jar', 'sor/', 'sor/'),
     ],
     'mc' : [
-        JarInfo('mc', 'mc.jar', 'mc/', 'mc/', 11),
+        JarInfo('mc', 'mc.jar', 'mc/', 'mc/'),
     ],
     'smm' : [
-        JarInfo('smm', 'smm.jar', 'smm/', 'smm/', 8),
+        JarInfo('smm', 'smm.jar', 'smm/', 'smm/'),
     ],
     'lu' : [
-        JarInfo('lu', 'lu.jar', 'lu/', 'lu/', 53)
+        JarInfo('lu', 'lu.jar', 'lu/', 'lu/')
     ],
     'zxing' : [
-        JarInfo('zxing', 'core.jar', 'zxing/', 'zxing/core/', 863),
-        JarInfo('zxing', 'javase.jar', 'zxing/', 'zxing/javase/', 39)
+        JarInfo('zxing', 'core.jar', 'zxing/core/', 'zxing/core/'),
+        JarInfo('zxing', 'javase.jar', 'zxing/javase/', 'zxing/javase/')
     ],
     'jmeint' : [
-        JarInfo('jmeint', 'jmeint.jar', 'jmeint/', 'jmeint/', 1513),
+        JarInfo('jmeint', 'jmeint.jar', 'jmeint/', 'jmeint/'),
     ],
     'simpleRaytracer' : [
-        JarInfo('simpleRaytracer', 'simpleRaytracer.jar', 'simpleRaytracer/', 'simpleRaytracer/', 321),
+        JarInfo('simpleRaytracer', 'simpleRaytracer.jar', 'simpleRaytracer/', 'simpleRaytracer/'),
     ],
     'sobel' : [
-        JarInfo('sobel', 'sobel.jar', 'sobel/', 'sobel/', 127),
+        JarInfo('sobel', 'sobel.jar', 'sobel/', 'sobel/'),
     ]
 }
 
 INSTRUMENT = {
-    'input_file' : INSTR_ADDR + 'input/old.jar',
-    'output_file' : INSTR_ADDR + 'output/new.jar',
-    'jar_file' : INSTR_ADDR + 'jars/enerjInst.jar'
+    'input_file' : INSTR_ADDR + '/input/old.jar',
+    'output_file' : INSTR_ADDR + '/output/new.jar',
+    'jar_file' : INSTR_ADDR + '/jars/R2Inst.jar'
 }
 
 def zeroBitNum(bitvector):
@@ -123,15 +124,56 @@ def generate(name, bit_size):
 def init(name):
     jar_infos = BENCHMARK[name]
     if name == 'zxing':
-        bit_size = 0
+        bit_size = -1
+        index = 0
         for jar_info in jar_infos:
-            bit_size += jar_info.approx_inst_num
-        generate(name, bit_size)
-    else:
-        for jar_info in jar_infos:
-            bit_size = jar_info.approx_inst_num
+            os.chdir(INSTR_ADDR)
+            fp = open('build.properties', 'w')
+            fp.write('build.app.name=' + name + '\n')
+            fp.write('build.bitvector=' + '\n')    
+            fp.write('build.mode=count')
+            fp.close()
+            path = APP_ADDR + jar_info.src_dir + jar_info.jar_name
+            shutil.copy(path,  INSTRUMENT['input_file'])
+            cmd = 'ant run'
+            (status, output) = commands.getstatusoutput(cmd)
+            for line in output.split('\n'):
+                if "[java] count=" in line:
+                    bit_size = int(line.split('=')[1])
+                    zxingBits[index] = bit_size
+                    index += 1
+                    break
+            if bit_size == -1:
+                print 'r2 instrumentation does not work properly'
+        if bit_size != 0:
             generate(name, bit_size)
-            
+            print zxingBits
+        else:
+            print zxingBits
+            sys.exit(1)
+    else:
+        bit_size = -1
+        for jar_info in jar_infos:
+            os.chdir(INSTR_ADDR)
+            fp = open('build.properties', 'w')
+            fp.write('build.app.name=' + name + '\n')
+            fp.write('build.bitvector=' + '\n')    
+            fp.write('build.mode=count')
+            fp.close()
+            path = APP_ADDR + jar_info.src_dir + jar_info.jar_name
+            shutil.copy(path,  INSTRUMENT['input_file'])
+            cmd = 'ant run'
+            (status, output) = commands.getstatusoutput(cmd)
+            for line in output.split('\n'):
+                if "[java] count=" in line:
+                    bit_size = int(line.split('=')[1])
+                    break
+            if bit_size == -1:
+                print 'r2 instrumentation does not work properly'
+            if bit_size != 0:
+                generate(name, bit_size)
+            else:
+                sys.exit(1);
     sg.createInfo(bit_size)
 
 # only for zxing app
@@ -146,22 +188,24 @@ def special_build(name, level, chunk, j):
         fp.write('build.bitvector=')
         if i == 0:
             if level == 0:
-                fp.write(LGeneration[name][round][0][:720])
+                fp.write(LGeneration[name][round][0][:zxingBits[0]]) 
             elif level == 1:
-                fp.write(MGeneration[name][round][0][:720])
+                fp.write(MGeneration[name][round][0][:zxingBits[0]])
             elif level == 2:
-                fp.write(FGeneration[name][round][0][:720])
+                fp.write(FGeneration[name][round][0][:zxingBits[0]])
             else:
-                fp.write(HGeneration[name][round][0][:720])
+                fp.write(HGeneration[name][round][0][:zxingBits[0]])
         else:
             if level == 0:
-                fp.write(LGeneration[name][round][0][720:])
+                fp.write(LGeneration[name][round][0][zxingBits[0]:])
             elif level == 1:
-                fp.write(MGeneration[name][round][0][720:])
+                fp.write(MGeneration[name][round][0][zxingBits[0]:])
             elif level == 2:
-                fp.write(FGeneration[name][round][0][720:])
+                fp.write(FGeneration[name][round][0][zxingBits[0]:])
             else:
-                fp.write(HGeneration[name][round][0][720:])
+                fp.write(HGeneration[name][round][0][zxingBits[0]:])
+        fp.write('\n')
+        fp.write('build.mode=inst')
         fp.close()
         path = APP_ADDR + jar_info.src_dir + jar_info.jar_name
         shutil.copy(path,  INSTRUMENT['input_file'])
@@ -179,10 +223,7 @@ def build(name, level, chunk, j):
     for jar_info in jar_infos:
         os.chdir(INSTR_ADDR)
         fp = open('build.properties', 'w')
-        if name == 'SMM':
-            fp.write('build.app.name=SparseCompRow' + '\n')
-        else:
-            fp.write('build.app.name=' + name + '\n')
+        fp.write('build.app.name=' + name + '\n')
         fp.write('build.bitvector=')
         if level == 0:
             fp.write(LGeneration[name][round][0])
@@ -192,6 +233,8 @@ def build(name, level, chunk, j):
             fp.write(FGeneration[name][round][0])
         else:
             fp.write(HGeneration[name][round][0])
+        fp.write('\n')
+        fp.write('build.mode=inst')
         fp.close()
         path = APP_ADDR + jar_info.src_dir + jar_info.jar_name
         shutil.copy(path,  INSTRUMENT['input_file'])
@@ -267,7 +310,6 @@ def run(name, level, result, chunk, pid, trainInputs, logQueue):
             if status:
                 sys.stderr.write(output)
                 sys.exit(1)
-            #print output
             index = output.find(findStr)
             #print output[index+3 : index+10]
             energy = float(output[index+3 : index+10]) * 100
@@ -659,7 +701,7 @@ def logging(name, level):
         print 'error_high:', HBestGene[name]
 
 def printUsage():
-    print "Usage: ./genetic.py [bench] [level] [arguments..]"
+    print "Usage: ./NewGeneticParallel.py [bench] [level]"
 
 def zxingGeneBuild(name, gene):
     jar_infos = BENCHMARK[name]
@@ -670,9 +712,11 @@ def zxingGeneBuild(name, gene):
         fp.write('build.app.name=' + name + '\n')
         fp.write('build.bitvector=')
         if i == 0:
-            fp.write(gene[0][:720])
+            fp.write(gene[0][:zxingBits[0]])
         else:
-            fp.write(gene[0][720:])
+            fp.write(gene[0][zxingBits[0]:])
+        fp.write('\n')
+        fp.write('build.mode=inst')
         fp.close()
         path = APP_ADDR + jar_info.src_dir + jar_info.jar_name
         shutil.copy(path,  INSTRUMENT['input_file'])
@@ -690,12 +734,10 @@ def geneBuild(name, gene):
     for jar_info in jar_infos:
         os.chdir(INSTR_ADDR)
         fp = open('build.properties', 'w')
-        if name == 'SMM':
-            fp.write('build.app.name=SparseCompRow' + '\n')
-        else:
-            fp.write('build.app.name=' + name + '\n')
+        fp.write('build.app.name=' + name + '\n')
         fp.write('build.bitvector=')
-        fp.write(gene[0])
+        fp.write(gene[0] + '\n')
+        fp.write('build.mode=inst')
         fp.close()
         path = APP_ADDR + jar_info.src_dir + jar_info.jar_name
         shutil.copy(path,  INSTRUMENT['input_file'])
@@ -847,28 +889,6 @@ def binarySearch(name, gene, level, trainInputs, oneThird, depth):
             energySum += energy
         gene[2] = errorSum / float(len(trainInputs))
         gene[3] = energySum / float(len(trainInputs))
-        # TODO satisfyConstraints should be changed with statistics
-        # n = 9: 99%(p=3.25), 98%(p=2.821), 95%(p=2.262) 
-        p = 2.262
-        # if abs((sample_mean - ERR_EXPECTATION) * sqrt(10 - 1) / standard_deviation_of_samples) < p:
-        #     satisfyConstraint = False
-        # else:    
-        #     satisfyConstraint = True
-        sampleMean = gene[2]
-        print "sampleMean: " + str(sampleMean)
-        stdSamples = math.sqrt(sum([(x - sampleMean)**2 for x in errors]) / len(trainInputs))
-        print "stdSamples: " + str(stdSamples)
-        if stdSamples < 1.0:
-            stdSamples = 1.0
-        tValue = (sampleMean - ERR_EXPECTATION) * math.sqrt(len(trainInputs)) / stdSamples
-        
-        if satisfyConstraints == True:
-            if  tValue > p:
-                print "False - t-value: " + str(tValue) 
-                satisfyConstraints = False
-            else:
-                print "True - t-value: " + str(tValue)
-                satisfyConstraints = True
         UniqueResults[gene[0]] = Results(gene[2], gene[3], satisfyConstraints)
         print 
     
@@ -1028,12 +1048,14 @@ def main():
     
     if len(sys.argv) < 3:
         printUsage()
+        sys.exit(0)
     bench = sys.argv[1]
     level = sys.argv[2]
     global logfile 
     logfile =  open(bench + '_' + level + "_" + str(ERR_EXPECTATION) + '.out', 'w')
-    logfile.write('starting %s level %s...\n' % (bench, level))
+    logfile.write('starting %s level %s...\n' % (bench, level)) # level 0[low], 1[medium], 2[high], 3[aggressive]
     init(bench)
+    os.system('cd ../r2.apps ; ./cpDir.py ' + bench)
     geneticAlgorithm(bench, int(level), Inputs.BenchInputs[bench].trainInputs)
     print "genetic algorithm finished"
     print "statistic guarantee start"
@@ -1041,6 +1063,7 @@ def main():
     print "statistic guarantee end"
     logging(bench, int(level))
     logfile.close()
+    os.system('cd ../r2.apps ; ./rmDir.py ' + bench)
 
 if __name__ == '__main__':
     main()

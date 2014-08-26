@@ -1,7 +1,8 @@
 #!/bin/sh
 enerjdir=../../r2.enerj
 r2jar=$R2_ANALYSIS/r2-analysis.jar
-classpath=lu.jar:$r2jar
+#classpath=lu.jar:$r2jar
+classpath=new.jar:$r2jar
 mainclass=jnt.scimark2.LU
 
 enerjargs=-noisy

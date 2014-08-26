@@ -4,3 +4,5 @@ jars
 new.txt
 old.txt
 build.properties
+input/old.jar
+output/new.jar

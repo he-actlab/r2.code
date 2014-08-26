@@ -18,9 +18,9 @@
     <property name="cfrt.jar" value="../../checker-runtime/build/cfrt.jar" />
     <property name="enerj.checker" value="enerj.PrecisionChecker" />
 
-		<!-- ExpAX -->
-		<property name="r2.dir" value="${env.R2_ANALYSIS}" />
-		<property name="r2.jar" value="${r2.dir}/r2-analysis.jar" />
+	<!-- ExpAX -->
+	<property name="r2.dir" value="${env.R2_ANALYSIS}" />
+	<property name="r2.jar" value="${r2.dir}/r2-analysis.jar" />
 
     <property name="r2bc.info" value="${user.dir}/mc-bc-offset.info" /> 
     <property name="r2anal.flag" value="${user.dir}/analysis.flag" />
@@ -43,23 +43,22 @@
         </jsr308.javac>
     </presetdef>
 
-  <target name="build" depends="clean">
-    <mkdir dir="build"/>
-    <enerjc srcdir="src"
-           destdir="build"
-           optimize="true"
-           debug="true"
-           deprecation="true">
-    </enerjc>
-    <jar jarfile="mc.jar" basedir="build"/>
-  </target>
+    <target name="build" depends="clean">
+        <mkdir dir="build"/>
+        <enerjc srcdir="src"
+                destdir="build"
+                optimize="true"
+                debug="true"
+                deprecation="true">
+        </enerjc>
+        <jar jarfile="mc.jar" basedir="build"/>
+    </target>
 
     <target name="clean">
         <delete dir="build"/>
         <delete dir="chord_output_r2"/>
         <delete dir="chord_output"/>
         <delete dir="eclipse-log"/>
-        <delete dir="src-marked"/>
         <delete file="after"/>
         <delete file="markJava.log"/>
         <delete file="mc.jar"/>

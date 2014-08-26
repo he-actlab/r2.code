@@ -2,9 +2,17 @@
 
 import os,sys,time
 
-if len(sys.argv) != 2:
-	print "Usage: ./analyze.py [benchname]"
+sysspec = -1
+if len(sys.argv) != 3:
+	print "Usage: ./optimize.py [benchname] [0|1|2|3]"
+	print "[0|1|2|3] are representing system specifications of low, medium, high, and aggresive respectively."
 	sys.exit()
+else:
+	sysspec = int(sys.argv[2])
+	if sysspec != 1 and sysspec != 2 and sysspec != 3 and sysspec != 4:
+		print "Usage: ./optimize.py [benchname] [0|1|2|3]"
+		print "[0|1|2|3] are representing system specifications of low, medium, high, and aggresive respectively."
+		sys.exit()
 
 bench = sys.argv[1]
 benchpath = os.environ['R2_BENCH'] + '/' + bench
@@ -12,37 +20,9 @@ if os.path.exists(benchpath) == False:
 	print "path[" + benchpath + "] doens't exist"
 	sys.exit()
 
-os.system('cd ' + benchpath + '; rm -rf src-marked')
 print
-print " <<<<< [1] compilation start <<<<< "
+print " <<<<< stochastic optimization start <<<<< "
 print
-os.system('echo false > ' + benchpath + '/analysis.flag')
-os.system('cd ' + benchpath + '; ant')
+os.system('cd ../r2.optimization ; ./NewGeneticParallel.py ' + bench + ' ' + str(sysspec))
 print
-print " >>>>> [1] compilation end >>>>> "
-os.system("cd ../r2.analysis ; ./runpl.sh " + bench + " > /dev/null")
-print
-print " <<<<< [2] relax analysis start <<<<< "
-time.sleep(1)
-while True:
-	print "   analyzing ... "
-	p = os.popen("ps -ef | grep chord.run.analyses | grep -v grep | wc -l")
-	result = p.read()
-	if int(result.strip('\n')) == 0:
-		break
-	time.sleep(3)
-print " >>>>> [2] relax analysis end >>>>> "
-print
-print " <<<<< [3] back annotating start <<<<< "
-os.system('cd ' + benchpath + '; cp -r src src-marked')
-os.system('cd ' + benchpath + '; ./markJava.py after &')
-time.sleep(1)
-while True:
-	print "   back annotating ... "
-	p = os.popen("ps -ef | grep markJava.py | grep -v grep | wc -l")
-	result = p.read()
-	if int(result.strip('\n')) == 0:
-		break
-	time.sleep(3)
-print " >>>>> [3] back annotating end >>>>> "
-print
+print " >>>>> stochastic optimization end >>>>> "
