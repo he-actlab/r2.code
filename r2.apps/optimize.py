@@ -9,7 +9,7 @@ if len(sys.argv) != 3:
 	sys.exit()
 else:
 	sysspec = int(sys.argv[2])
-	if sysspec != 1 and sysspec != 2 and sysspec != 3 and sysspec != 4:
+	if sysspec != 0 and sysspec != 1 and sysspec != 2 and sysspec != 3:
 		print "Usage: ./optimize.py [benchname] [0|1|2|3]"
 		print "[0|1|2|3] are representing system specifications of low, medium, high, and aggresive respectively."
 		sys.exit()
