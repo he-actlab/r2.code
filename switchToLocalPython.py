@@ -4,7 +4,7 @@ import os, sys
 
 directories = ['r2.optimization', 'r2.apps']
 
-newPythonPath = os.environ['RESEARCH'] + '/r2.code/Python.2.7.5/python' 
+newPythonPath = os.environ['RESEARCH'] + '/r2.code/Python-2.7.5/python' 
 _newPythonPath = ''
 for ch in newPythonPath:
 	if ch == '/':
