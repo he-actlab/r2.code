@@ -41,29 +41,42 @@ of program data and operations.
 
 [Using R2]
 
-	1. Approximation Safety Analysis
+  1. Approximation Safety Analysis
 
-		You can find all R2 benchmarks at "r2.apps" directory. 
-		There are nine benchmarks in r2.apps: mc, fft, lu, sor, smm, simpleRaytracer, jmeint, zxing. 
+    You can find all R2 benchmarks at "r2.apps" directory.
+    There are nine benchmarks in r2.apps: mc, fft, lu, sor, smm, simpleRaytracer, jmeint, zxing.
 
-		Let me explain with an example, mc. 
-		If you see inside of mc (MonteCarlo) directory, you would see a source directory, src. 
-		You can add or remove annotations from source codes in src. 
+    Let me explain with an example, mc.
+    If you see inside of mc (MonteCarlo) directory, you would see a source directory, src.
+    You can add or remove annotations from source codes in src.
 
-		Now, you can run analysis using a tool called "analysis.py" in r2.apps as described in the following command. 
-		
-		$ ./analyze.py mc
+    Now, you can run analysis using a tool called "analysis.py" in r2.apps as described in the following command.
 
-		There are three phases:
-			(1) Static Analysis
-			(2) Back Annotation
-			(3) Compilation
+    $ ./analyze.py mc
 
-		The tool automatically generates another copy of src named "src-marked".
-		The only disparity betwteen src-marked and original src is comments describing 
-		relaxed data and operations found by the static analysis . 
-		The comments are placed at the end of source code line corresponding the data and operations.
+    Generally, you can put any benchmark name and the name should be matched with the corresponding directory name.
 
-	2. Stochastic Optimization
+    $ ./analyze.py [bench]
 
+    There are three phases:
+      (1) Static Analysis
+      (2) Back Annotation
+      (3) Compilation
 
+    The tool automatically generates another copy of src named "src-marked".
+    The only disparity betwteen src-marked and original src is comments describing
+    relaxed data and operations found by the static analysis .
+    The comments are placed at the end of source code line corresponding the data and operations.
+
+  2. Stochastic Optimization
+
+    You can also run the stochastic optimization using "optimize.py" in r2.apps as following:
+
+    $ ./optimize.py mc 1
+
+    [0|1|2|3] represent error and energy models: low, medium, high, and aggressive.
+    Therefore, the above command will run the optimization for mc (MonteCarlo) on medium specification.
+
+    The following is the general command to run optimization:
+
+    $ ./optimize.py [bench] [0|1|2|3]
