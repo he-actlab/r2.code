@@ -17,8 +17,8 @@ use feature "switch";
 # Lowest priority options: those defined in global_options below. They are options independent of both the analysis and benchmark.
 
 my $chord_main_dir = &getenv("CHORD_MAIN");
-my $r2_dir = &getenv("EXPAX_ANALYSIS");
-my $r2_bench_dir = &getenv("EXPAX_BENCH_USER");
+my $r2_dir = &getenv("R2_ANALYSIS");
+my $r2_bench_dir = &getenv("R2_BENCH_USER");
 #jspark
 my $chord_max_heap = &getenv("CHORD_MAX_HEAP");
 my $chord_bddbddb_max_heap = &getenv("CHORD_BDDBDDB_MAX_HEAP"); 

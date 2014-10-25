@@ -102,7 +102,7 @@ for line in lines:
 	new = p.read().strip('\n')
 
 	if new == '':
-		logfile.write(" *** EXPAX: adding annotation failed: " + org + '\n')
+		logfile.write(" *** R2: adding annotation failed: " + org + '\n')
 		logfile.write(" *** " + quad + "\n")
 		logfile.write(" *** " + loc + "\n")
 		logfile.write(' *** sed \'' + lineNum + 's/' + content + '/' + newcontent + '/\' ' + loc + ' > ' + loc + '.tmp')

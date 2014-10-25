@@ -11,7 +11,7 @@ print
 print " >>>>> [1] compilation end >>>>> "
 p = os.popen("pwd | awk -F'/' '{print $7}'")
 result = p.read()
-os.system("cd ../../expax.analysis; ./runpl-us.sh " + result.strip('\n') + " > /dev/null")
+os.system("cd $R2_ANALYSIS; ./runpl-us.sh " + result.strip('\n') + " > /dev/null")
 print
 print " <<<<< [2] relax analysis start <<<<< "
 time.sleep(1)
