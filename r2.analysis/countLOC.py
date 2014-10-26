@@ -7,7 +7,7 @@ if len(sys.argv) != 2:
 	sys.exit(0)
 
 extradir = os.environ['CHORD_MAIN'] + '/../extra'
-benchdir = os.environ['EXPAX_BENCH'] + '/'
+benchdir = os.environ['R2_BENCH'] + '/'
 bench = sys.argv[1]
 benchpath = benchdir + bench + '/'
 cmd = 'ant -Dchord.work.dir=' + benchpath + ' -Dchord.scope.reuse=true -Dchord.methods.file=' \
