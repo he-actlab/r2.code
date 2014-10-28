@@ -1,16 +1,16 @@
 package jnt.scimark2;
 
 /**
- Evaluation for EnerJ framework
+ Evaluation for R2 framework
 */
 
-import enerj.lang.*;
+import chord.analyses.r2.lang.*;
+import chord.analyses.r2.lang.math.*;
 
 public class SparseCompRow
 {
 	public static void matmult(double y[],  double val[], int row[], 
-								int col[],  double x[], int NUM_ITERATIONS)
-	{
+								int col[],  double x[], int NUM_ITERATIONS) {
 		int M = row.length - 1;
 
 		for (int reps=0; reps<NUM_ITERATIONS; reps++)
@@ -36,7 +36,7 @@ public class SparseCompRow
 		return A;
 	}
 
-	public static void main(String[] args){
+	public static void main(String[] args) {
 		Random R = new Random(Integer.parseInt(args[0]));
 	
 		int N = 10;
@@ -70,7 +70,11 @@ public class SparseCompRow
 
 		System.out.print("SparseMatMult vector: ");
 		for (int i = 0; i < N; ++i) {
-			System.out.print((y[i]) + " ");
+			double y_i = y[i];
+			
+			System.out.print(y_i + " ");
+
+			Restrict.restrict(y_i);
 		}
 		System.out.println("");
 	}

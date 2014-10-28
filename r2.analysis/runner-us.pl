@@ -27,16 +27,16 @@ my $chord_bddbddb_max_heap = &getenv("CHORD_BDDBDDB_MAX_HEAP");
 # Map from program name to program directory relative to $pjbench_dir
 my %benchmarks = (
     "scimark2" => "scimark2",
-		"fft-relax" => "fft-relax",
-		"lu-relax" => "lu-relax",
-		"smm-relax" => "smm-relax",
-		"sor-relax" => "sor-relax",
-		"mc-relax" => "mc-relax",
-    "simple-relax" => "simple-relax",
-		"zxing-relax" => "zxing-relax",
-		"sobel-relax" => "sobel-relax",
-		"jmeint-relax" => "jmeint-relax",
-		"simpleRaytracer-relax" => "simpleRaytracer-relax"
+		"fft-r2" => "fft-r2",
+		"lu-r2" => "lu-r2",
+		"smm-r2" => "smm-r2",
+		"sor-r2" => "sor-r2",
+		"mc-r2" => "mc-r2",
+    "simple-r2" => "simple-r2",
+		"zxing-r2" => "zxing-r2",
+		"sobel-r2" => "sobel-r2",
+		"jmeint-r2" => "jmeint-r2",
+		"simpleRaytracer-r2" => "simpleRaytracer-r2"
 );
 my @programs = keys %benchmarks;
 

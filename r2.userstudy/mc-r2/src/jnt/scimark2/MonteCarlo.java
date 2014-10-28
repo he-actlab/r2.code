@@ -1,11 +1,11 @@
-
 package jnt.scimark2;
 
 /**
- Evaluation for EnerJ framework
+  Evaluation for R2 Framework
 */
- 
-import enerj.lang.*;
+
+import chord.analyses.r2.lang.*;
+import chord.analyses.r2.lang.math.*;
 
 public class MonteCarlo
 {
@@ -33,8 +33,10 @@ public class MonteCarlo
 	{
 		int SEED = Integer.parseInt(args[0]);
 		double out = MonteCarlo.integrate(1492, SEED); 
-	
+
 		System.out.println("MonteCarlo out: " + out);
+
+		Restrict.restrict(out);
 	}
 
 }

@@ -51,7 +51,7 @@ for line in lines:
 	loc = temp
 	loc = 'src-marked\/' + loc
 
-	if ("Relax.java" in loc) or ("Restrict.java" in loc) or ("Tag.java" in loc) or ("ApproxMath.java" in loc) or ("ApproxFloat.java" in loc):
+	if ("Relax.java" in loc) or ("Restrict.java" in loc) or ("Tag.java" in loc) or ("ApproxMath.java" in loc) or ("ApproxFloat.java" in loc) or ("PreciseMath.java" in loc):
 		continue
 
 	# get the content of a certain line of java source code

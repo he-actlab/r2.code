@@ -2,15 +2,15 @@
 
 import os, sys
 
-homedir = os.environ['EXPAX_ANALYSIS'] + '/../'
+homedir = os.environ['R2_ANALYSIS'] + '/../'
 
 if len(sys.argv) != 2:
 	print 'Usage: ./printQuadcode-us.py [bench]'
 	sys.exit(0)
 
 bench = sys.argv[1]
-appListFilePath = '../user-study/app.lst'
-classesFilePath = '../user-study/classes'
+appListFilePath = '../r2.userstudy/app.lst'
+classesFilePath = '../r2.userstudy/classes'
 
 if os.path.isfile(appListFilePath) == False:
 	print str(appListFilePath) + " doesn't exist"
@@ -35,7 +35,7 @@ for app in appList:
 			print 'Error! ' + classesFilePath + ' does not include an entry for ' + bench
 			sys.exit(0)
 		outfileName = bench + ".txt"
-		cmd = "ant -Dchord.work.dir=" + homedir + "/user-study/" \
+		cmd = "ant -Dchord.work.dir=" + homedir + "/r2.userstudy/" \
 				+ bench + " -Dchord.ssa.kind=nophi " + \
 				"-Dchord.print.classes=" + \
 				classes + \

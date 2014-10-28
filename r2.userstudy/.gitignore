@@ -1,3 +1,7 @@
 *.jar
 analysis.flag
 chord_output_expax
+*-r2.txt
+analysis.result
+enerjnoiseconsts.json
+enerjstats.json
