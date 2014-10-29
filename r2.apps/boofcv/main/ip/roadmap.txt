@@ -1,0 +1,53 @@
+SFM
+---------------------------------
+
+ - Face
+   * Detection
+   * Recognition
+ - Tracking
+   * people
+#  * point features
+   * line features
+ - Geometry 3D
+   * Visual Odometry
+     - stereo
+     - mono
+   * Sparse Bundle Adjustment
+#  * Dense Stereo
+#  * Image Rectification
+#- Geometry 2D
+#  * Image Stabilization
+#  * Image Mosaic
+ - Camera Calibration
+   * From calibration grid
+#- Denoising
+#- Detect Features
+#  * corners
+#  * line
+#  * blobs
+#  * SURF
+ - Region
+   * Watershed?
+   * Super Pixel
+ - Color
+   * images
+   * color space conversion
+#- Filters
+#  * convolution
+#  * median
+#- Image derivative
+#- Edge detection
+#- interpolation
+ - Image Transforms
+   * FFT
+#  * Wavelet
+#  * pyramid
+#  * Integral Image
+#  * Scale Space
+#- Misc
+#  * Non-Max Suppression
+#- Binary Image
+#  * morphological operations
+#  * Threshold/Hysteresis Threshold
+#  * blob detector
+#  * contour
