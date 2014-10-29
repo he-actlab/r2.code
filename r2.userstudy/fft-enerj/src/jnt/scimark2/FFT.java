@@ -132,7 +132,7 @@ public class FFT {
 		}
 
 		System.out.print("FFT vector: ");
-		for (int i = 0; i < N; ++i) {
+		for (int i = 0; i < 16; ++i) {
 			System.out.print(x[i] + " ");
 		}
 		System.out.println("");

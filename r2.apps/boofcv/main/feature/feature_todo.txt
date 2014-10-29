@@ -1,0 +1,35 @@
+
+- Config class for detector/descriptors
+  * Configuring those algorithms is a complex task
+  * Add Factory.configAlg() to create defaults
+  * Simplify factories a bit
+  * Simplify combined tracker too
+
+- Faster association
+  - FLANN?
+
+- See KLT list
+
+- Non-maximum suppression extraction
+ * Non-Maximum Suppression for edges
+   - Add a crude version 4 which just checks to see if gradient is > or < 0 to pick direction of line
+ * Add sub-pixel using a polynomial fit
+
+- Canny Edge Detector
+ * Uses generalized algorithm for non-max right now.  It should use a specialized one for speed that traces
+   the edge intensity and direction
+
+- Add whole image detection capability to SSD detectors
+ * Hunt through code where it expands the avoid border
+ * Main reason for adding image borders is to avoid this headache.
+
+- Ignore Borders
+  * WrapperKitRosCornerIntensity: add ignore border parameter for when the derivative has an ignore border?
+  * WrapperLaplacianBlobIntensity: same
+
+- Hough Detectors
+  * Used round to reduce round off error?  Right now it is equivalent of floor
+
+
+- Add an escape value to score associate.  if the value computed so far isn't better than X, stop.
+  Suggested by David G Ortega

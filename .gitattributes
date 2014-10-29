@@ -26,3 +26,7 @@
 /apps/sobel/log filter=lfs diff=lfs merge=lfs -text
 /apps/jmeint/log filter=lfs diff=lfs merge=lfs -text
 *.h filter=lfs diff=lfs merge=lfs -text
+*.mjpeg filter=lfs diff=lfs merge=lfs -text
+*.mpng filter=lfs diff=lfs merge=lfs -text
+*.png filter=lfs diff=lfs merge=lfs -text
+/r2.apps/boofcv/log filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,839 @@
+Change Log
+
+Date Format: year/month/day
+
+---------------------------------------------
+Date    : 2014/9/22
+Version : Alpha 0.18
+
+- Renamed ImageSegmentation to ImageSuperpixels
+  * Added a unit test which ensures connectivity requirement is meet
+  * Fixed issue with SLIC where it did not set its ConnectRule
+- Renamed ExampleStructureFromMotion to ExampleMultiviewSceneReconstruction
+- Processing
+  * Gradle copies over processing JavaDoc
+  * Fixed SimpleTrackerPoints.spawn() which did not update the tracks before
+  * Added more comments to examples
+- Removed Caliper dependency
+  * Not designed the way I want it to be and recent changes made it less usable
+- Removed v4l4j support since Webcam Capture is easier and does a better job
+- Fixed OpenKinect examples
+- ImageDistort now supports a different input and output types
+  * Support is provided for the same image type
+  * It now allows for all types to float 32. Interpolation always outputs a floating point value.
+- ThresholdImageOps
+  * Otsu's method
+  * Entropy based method
+  * Sauvola
+- Fixed problem in FilterImageReflection where it assumed two arguments but some binary operations have 3 now
+- Added pow2 and sqrt to PixelMath
+- Added invert to BinaryImageOps
+- Added rotateCW and rotateCCW to ImageMiscOps
+- FilterImageInterface
+  * Reference ImageBase instead of ImageSingleBand
+  * Can get output type
+- InputToBinary = Interface for converting an arbitrary image into a binary one
+  * Added wrappers/implementations for all current thresholding techniques
+- Fiducial Detector
+  * Square-Binary. Encodes 4096 numbers
+  * Square-Image. Detects arbitrary image fiducials contained inside a square.
+- Fixed bug in ColorHsv for multi-spectral images
+  * Was missing a check to see if saturation was zero
+  * Thanks sandreas for reporting the bug
+- GConvolveImageOps
+  * Fixed generics so it wasn't forcing input and output to be the same type
+- Added ExampleConvolution
+- Convolution
+  * ConvolveNormalizedNaive correctly handles offsets in the kernel
+  * 2D convolution correctly supports offset.  Before it used radius no matter what
+  * Normalized convolution makes sure the input kernel sums up to 1 for floating point
+- Processing
+  * Added new thresholding and fiducials
+
+---------------------------------------------
+Date    : 2014/6/19
+Version : Alpha 0.17
+
+- Improved/Fixed serialization
+  * Several classes were missing no argument constructors
+- Added ImageMiscOps.flipHorizontal()
+- Added WeightSample2D_F32 for computing the weight of a sample in an abstract manor
+  * Reduced MeanShiftPeak from 3 classes into one
+- Edge Non-Maximum suppression's documentation now clearly states that it suppresses only if adjacent pixel is
+  less than.  This is not true non-maximum suppression since it allows equal values but seems to produce
+  better results
+  * Improved unit tests to explicitly test for this behavior
+- Canny edge detector would fail if threshold was zero and the image had no texture
+  * HysteresisEdge* code was using a value of 0 to mark traversed regions.  It now uses -1 and sanity checks
+    the lower threshold.
+  * Thanks Lucaro for finding this bug
+- Added GImageMultiBand for generalized access to multi-band image data
+- Added support for MultiSpectral images to:
+  * GBlurImageOps and BlurImageOps
+- Image Segmentation / Superpixels
+  * Watershed
+  * Mean-shift
+  * Felzenszwalb-Huttenlocher 2004
+  * SLIC Superpixels
+- Dense Optical Flow
+  * KLT Based
+  * Square Region Based
+  * Horn Schunck
+  * Horn Schunck Pyramid
+  * Brox Spacial Warping
+- Fixed bugs in ConvertNV21
+  * Was applying YV12 byte alignment to NV21 images.  Depending on image size, this could cause a crash.
+- Fixed bug in ImplConvertToBitmap.multiToArray_F32()
+  * Didn't handle case where the input image has 3 bands and not 4
+- ImageBase now provides a method for getting ImageType information
+- Threshold in the interface Associate is now <= instead of <
+- Android
+  * Added classes which greatly simplify dealing with camera previews
+  * Added new visualizations intended for use with segmented images
+  * Simplified example code
+- Added XYZ and LAB color spaces
+- GImageMiscOps.fillUniform() max is inclusive for both integer and float and this is enforced
+- BinaryImageOps
+  * Erode and dilate can now be applied multiple times with a single function call
+- StitchingFromMotion2D can now resize and translate the stitch image
+  * Thanks Julien Seinturier for the suggestion
+- Convolution
+  * 1D convolution now supports kernels which are not symmetric
+- Image gradient from a difference of two neighbors added
+- Square grid calibration grid detector has been improved.
+  * No longer permutes through all combinations.  Selects each valid square and assumes its the first instead
+  * Graph connection rule has been improved too to reduce false connections
+- Moved serializeXML from BoofMiscOps to UtilIO
+  * Removing an IO function which shouldn't be in image processing
+- FactoryDerivative
+  * If derivative type is null it will use the default
+- Added ImageType to interpolate interface
+- Added ImageType to ImageSegmentation interface
+- Processing (http://processing.org) integration
+  * Lots of examples
+  * Simplified interface for working with BoofCV
+- XStream now works without that ugly hack
+  * Thanks to Jörg Schaible of XStream for fixing the issue and all the help
+- Webcam Capture Support
+  * Easy to use library for streaming webcams
+  * Wrote several example showing how Webcam Capture can be used with BoofCV
+- Structure From Motion (SFM) example
+
+---------------------------------------------
+Date    : 2013/12/25
+Version : Alpha 0.16
+
+- Simplified DescribeRegionPoint
+  * describe now returns true or false
+  * removed isInBounds()
+  * removed getDescriptionLength() since it is contained in the description itself
+  * added getImageType()
+- Feature detection and describing related classes now extend ImageBase to allow support of color image processing
+- SURF
+  * Laplacian sign calculation doesn't declare new memory for every single feature any more
+  * Added a color SURF descriptor
+- Fixed SIFT bug which produced a feature with NaN in its descriptor
+  * The extractor border was not being taken in account when examining features.  The net result was that the
+  localization interpolation would messed up since the center would not be a maximum, causing really bad stuff.
+  * Unit tests updated so that it they can detect it.
+  * Thanks Lefteris for detecting this bug.
+- SURF detector (Fast-Hessian)
+  * Was affected in a similar fashion to the SIFT bug.  The fix doesn't seem to change its stability at all.
+- NCC error now more "correct" and divides by the number of elements
+- Integral image operations now support more image types.  S64 and F64
+- KltTracker.setDescription() can now fail due to lack of texture
+- Created TrackObjectQuad for tracking user select objects inside an image
+  * Added TLD tracker
+  * Added Circulant tracker
+  * Added Sparse Flow Object Tracker
+  * Added various mean-shift trackers
+- Created recognition package
+  * No other good place to put object trackers
+- UtilImageIO
+  * Can read PPM from InputStream
+  * Can read images from URL
+  * Can read/write PGM files
+  * Can handle comments in PPM + PGM files
+- Moved FastQueue and GrowQueue into DDogleg project so that other projects can use those data structures
+- Modified ConvertBufferedImage functions with orderRgb to make it easier to maintain RGB ordering.
+  * No need to explicitly call orderBandsIntoRGB() any more
+- Change behavior of ConvertRaster so that it does not modify the order of color bands at all
+  * Improved unit tests
+- Added Fast Fourier Transform
+  * Code originally from General Purpose FFT by Takuya Ooura, actual Java code copied from JTransforms
+    with minor modifications.
+- PixelMath
+  * pixel-wise image-to-image multiplication
+  * pixel-wise image-to-image division
+  * pixel-wise log(1+x)
+- ImageMiscOps
+  * added copy() for rectangular sub-images
+  * limited support for Interleaved images
+- ThresholdImageOps
+  * Added adaptiveSquare
+  * Added adaptiveGaussian
+- Convolution and ImageBlurOps
+  * Improved accuracy of operations on integer images.  Rounded instead of floored.
+- Removed GeoModelRefine and replaced with ModelFitter
+- Image Types
+  * Improved and renamed interleaved image types
+  * Added full support to all primitive data structures in interleaved images
+  * Added ImageBase.subimage class variable
+  * Added InterleavedImageOps
+  * Added ImageMultiBand as a base class for multi-band images.
+- Generalized interpolation so that support can be provided for single-band and multi-band images.
+  * InterpolatePixelS for single-band
+  * InterpolatePixelMB for multi-band
+- Fixed sub-image support for ConvertBufferedImage.extract*
+  * Thanks pcmoen
+- Calibration target detection
+  * Locally adaptive thresholding is now used for square and chessboard target types.  Less sensitive to lighting
+    conditions
+  * Chessboard target detector works much better on small targets.  Uses QuadBlob corners to estimate initial
+    calibration point position then uses mean-shift for refinement
+  * Chessboard now orders calibration points using QuadBlobs.  Allowing orientation ambiguity to be correctly resolved
+    when the target is not symmetric.
+- ImplConvertBitmap incorrectly converted floating point images
+  * Was doing an integer divide instead of a floating point divide
+  * Thanks Vagoster for reporting the bug
+- KLT can now track features which partially extend outside the image
+- Image Interpolation
+  * Almost all interpolation routines incorrectly treated pixels 1 outside of the image as inside.  Unit tests
+  have been added and other classes modified for the change in behavior.
+- Fixed FactoryDistort.scale().  Off by one error when specifying scale factor
+- SearchLocalPeak high level interface
+  * For algorithms which perform a local search for a peak
+  * Added two mean-shift variants
+- New examples
+  * Estimating pose from calibration grids
+  * Two examples for object tracking
+  * How to remove perspective distortion
+  * Added video stabilization example
+  * Reorganized package structure
+- VisOdomDualTrackPnP
+  * It is now possible for it to produce a fatal error when all its tracks are lost
+  * Computes a descriptor of the feature each time as needed.  Doesn't extract it from the track itself.
+    Made the code base more complex.  Maybe old version has a slight runtime speed advantage
+- Fixed overflow issue in HarrisCorner_S16 weighted and unweighted
+- Improved Maven support by breaking it up into multiple modules
+- Fixed bug in UtilWavelet for integer images.  X and Y got reversed in for loop
+
+---------------------------------------------
+Date    : 2013/06/21
+Version : Alpha 0.15
+
+- Improved automatic thresholding for calibration grids
+- Fixed bug in Zhang99 calibration where skew was not being copied
+- Fixed stereo calibration bug where if a target was not detected in right image it wouldn't be removed from the left
+- Chessboard calibration
+  * Support for targets which are not symmetric. Requested by Karim Hammoudi.
+  * Much more tolerant of target which are visually small
+  * Handles cluttered backgrounds better
+- Added support for OpenKinect in integration
+  * Added related example code and applications demonstrating how to process its data
+- Can read/write PPM images
+- Added DepthVisualOdometry for computing visual odometry from a Kinect
+  * Added several related classes and interfaces too
+- Added MonocularPlaneVisualOdometry for computing 2D motion from a camera when traveling over a plane
+  * Two algorithms implement this interface
+- Generalized VisualOdometry interface to allow for arbitrary transforms
+- Cleaned up VisualOdometry and StereoVisualOdometry interfaces
+- Automatic rescaling of images for visual odometry
+  * StereoVisualOdometryScaleInput
+  * MonocularPlaneVisualOdometryScaleInput
+- Added VisualDepthParameters to specify calibration of RGB-D cameras
+- Added MonoPlaneParameters to specify calibration of single camera with a known ground plane
+- Added DistanceHomographyPixelSq so that the fit error for normalized homography can be computed in image pixels.
+- Added MultiViewOps.decomposeHomography().
+- Added more support for convert to/from 16bit BufferedImages
+- Added DoNothingPixelTransform_F32 for those times when you don't want to do anything
+- Added PairLineNorm for sets of line correspondences between two lines
+- Added algorithms for computing induced homographies from planes
+  * Three points
+  * Line and a point
+  * Two lines
+- Added NearestNeighborPixel_U16
+- Added index setters and getters to GImageSingleBand
+- CreateSyntheticOverheadView for converting an image into an overhead view when the scene is planar
+- Added numBands to ImageDataType
+- Fixed type-o in triangulation JavaDoc.  Thanks tverbele
+- Fixed bug in SIFT where a change in non-maximum behavior caused features to be detected too close to image border.
+  * Thanks lefman for pointing it out
+- Fixed ConvertBufferedImage.orderBandsIntoRGB() for ABGR images.  Thanks André Ambrósio Boechat
+- Maven build working again.  Thanks JensKapitza for the help.
+- Moved boofcv/applet into boofcv/integration/applet
+
+---------------------------------------------
+Date    : 2013/04/15
+Version : Alpha 0.14
+
+- Added histogram to ImageStatistics
+- Calibration target's binary threshold is selected using image histogram to make it more tolerant to shadows
+- Calibration grid size does not refer to number of black squares any more.  Instead to number of square total.
+- Added image enhancement operations
+  * Global histogram
+  * Local histogram
+  * Sharpen 4 and 8
+  * Demonstration to example directory
+- Interface for V4L4J to provide webcam support
+- ImageMiscOps
+  * added fillBorder()
+- BinaryImageOps
+  * Changed API and algorithms used to label blobs and find their contour
+  * New algorithm is about 3x faster in all situations.
+- Canny edge has been improved
+  * Can be configured to create a binary image output or a set of contours
+  * Conour pixels are now ordered and returned as a graph
+- Fixed bug in FactoryImageBorder.value()
+- Color Models (Added)
+  * Added HSV, YUV
+  * Added new example demonstrating simple color based segmentation
+- XML Serialization
+  * Switched over to using XStream since XMLEncoder is broken in Java 1.7.
+  * XStream also produces easier to read XML
+- Added ConfigFast. Configuration class for FAST feature detector
+- Image Pyramids and Scale-Space
+  * Added additional functions to ImagePyramid interface that provide information on how the image is sample and the amount of blur in it
+  * There is no separate class for updating image pyramids any more.  The image pyramid takes in the input image
+  * Scale-Space pyramids have been moved into the pyramid package instead of having its own
+  * Bug Fix: FeatureLaplacePyramid now looks for local maximum or minimum in searching across scales
+  * Removed GaussianScaleSpace class since it can now be represented using ImageFloatPyramid 
+- Added ExampleStereoDisparity3D and tweaked the first one
+- Shape Fitting (Added)
+  * Fit polygon
+  * Fit ellipse
+  * Usage examples
+- BRIEF description computation is 30% faster
+- Made it easier to create mosaics from colored images and updated examples
+- Generalized several classes so that images other than single band can be used
+  * VideoInterface
+  * SimpleImageSequence
+- Added average down sampling and a related discrete image pyramid
+- Android: YUV to RGB now works
+- ExampleImageStitching has rendering code pushed into it
+
+---------------------------------------------
+Date    : 2013/02/16
+Version : Alpha 0.13
+
+- Removed TupleDescQueue 
+  * Use UtilFeature.createFeature() instead or extend FastQueue
+- Fixed bug in ImplSelectSparseStandardWta_* where peak checks for 0 disparity were incorrectly handled
+- FactoryPointSequentialTracker tweaked tracker configurations for better SFM performance
+- PointTrackerKltPyramid can now create new data to store tracks after init
+- Made scale configurable in corner based interest points
+- Renamed GeneralAssociation to AssociateDescription
+- Added AssociateDescription2D for association with location info
+- ScoreAssociateCorrelation no longer takes the abs()
+- SIFT
+  * Accounts for offset during sub-sampling
+  * Documents deviations from paper in pyramid construction
+  * Tweaked pyramid construction
+  * Tweaked non-maximum suppression
+- Improved handling of Max Features in SURF + SIFT
+  * All features are considered in order of intensity
+  * Features are no longer added once the max has been reached
+- Point Trackers
+  * Renamed and changed function
+  * Created interface for extracting feature descriptions
+  * Added variant designed for two pass tracking
+- Chessboard and Square grid calibration target detectors
+  * Made minimum blob automatically adjust to image size
+  * Made it user configurable
+  * These changes allow calibration of 320x240 images
+  * Fixed multiple bugs/issues so that it detects targets more reliably
+- PerspectiveOps.scaleIntrinsic() changes image width/height
+- Improved unit tests for MultiSpectral images
+- ImageConvert
+  * Added support for ImageSInt64
+  * Added support for MultiSpectral to SingleBand using average
+  * Added GImageConvert
+- Code to convert between different types of TupleDesc
+- Fixed bug in TupleDesc_F64 SAD scorer
+- Added approximate nearest neighbor from DDogleg
+  * k-d tree best-bin-first
+  * k-d random forest
+- Changing the way complex algorithm are configured
+  * Instead of passing in parameters to a factory a config class is passed in.
+  * Affected: SIFT, SURF
+- PixelMath
+  * Fixed bug in PixelMath.subtract for ImageUInt8
+    - Thanks Paul Dumais for reporting the problem
+  * Added PixelMath.invert()
+- Associate and ScoreAssociation
+  * Added ability to set a threshold via Associate interface
+  * Can get a list of unassociate destination features
+  * Can determine if the algorithm selects a unique match for source and destination
+  * Created MatchScoreType to provide more information on the score's behavior 
+- Created EasyGeneralFeatureDetector
+  * Automatically handles image derivatives
+  * Split off from WrapGeneralFeatureDetector
+- GeneralFeatureDetector 
+  * moved to alg package
+  * can now detect local minimums
+  * Removed ability to segment image.  Turned out to not be all that useful, just increase the size of the non-maximum region.
+- Non-Maximum supression
+  * Renamed FeatureExtractor to NonMaxSuppression
+    - Removed the parameter for requesting the number of returned features
+  * All algorithms contained a bug where the ignore border was being incorrectly enforced
+  * Added support for detecting maximums and minimums
+- Fixed bugs in SortBestFeatures and added sort for negative peaks
+- GeneralFeatureIntensity: Added flags to indicate if features are maximum or minimums
+- Calibration package was missing from Maven build
+- Removed maxMatches from greedy assocaition since its not part of Association interface and can be easily added
+- Android
+  * ConvertNV21 - Convert camera preview images into BoofCV image types
+  * VisualizeImageData - Render different types of image information into a visible format
+- Fixed bug in RemoveRadialPto*_* where it couldn't detect convergence
+- 2D stabilization checks image fraction contained by points before spawning more points
+- LaplacianEdge added suport for U8 in and F32 out
+- Added kernel based (using LaplacianEdge) blob detector
+- GridRansacLineDetector has support for S16 an F32
+- Redesigned image stabilization and mosaic code
+  * Much easier to work with now and can be plugged in a high level
+  * Added a factory for creating related algorithms
+- Stereo Disparity: support for ImageSInt16
+
+---------------------------------------------
+Date    : 2012/12/05
+Version : Alpha 0.12
+
+- Fixed inverse wavelet transform so that it bounds the pixel values
+  * Wavelet denoising sometimes overflowed
+- Adding new feature tracker which combines KLT and DDA style tracking
+- Updated Pyramid KLT tracker
+  * Removed PkltTrackManager and pushed its functionality into the ImagePointTracker implementation
+  * Was only separate for historical reasons
+  * renamed PstWrapperPyramidKlt to PointTrackerKltPyramid
+  * Deleted GenericPkltFeatureSelector and put into KLT point tracker
+  * Moved what was left into KLT directory
+- ImagePointTracker
+  * Changed contract, more fully specified contract, improved tests
+  * Updated behavior of implementing classes 
+- Deleted KeyFramePointTracker
+  * Added pointless complexity.  Use ImagePointTracker instead
+  * Changed 2D and 3D SFM algorithms which were using it
+- Fixed bugs in various feature descriptors setTo() and copy() functions:
+  * SurfFeature
+  * TupleDesc_B
+  * NccFeature
+- Feature Descriptors
+  * No longer have hidden orienation estimation algorithms inside
+- Feature Orienation
+  * Interfaces moved to abst package
+  * Created wrappers to convert different types into image input
+  * Added a new factory
+- Created DetectDescribePoint interface
+  * Combines detection and describing into a single interface
+  * Useful for algorithms which have coupled data structures are are more efficient this way.
+- FactoryPointSequentialTracker has been tweaked a bit
+- GeneralAssociation provides two functions for specifying the source and destination lists
+  * Allows better optimization since preprocessing might only need to be done once
+- ConvertBufferedImage
+  * Added support for sub-image BufferedImages
+- All numerics code has been put into its own project
+  * http://ddogleg.org
+- Reworking several basic image operations
+  * Created ImageMiscOps
+  * Created ImageStatistics
+  * Deleted ImageTestingOps
+  * Changed PixelMath
+  * Changed GeneralizedImageOps
+- Added setTo() in ImageBase
+- FastHessianFeatureDetector now recycles ScalePoints that it detects
+- Removed canoncialRadius() from feature detector and descriptor
+  * It was poorly implemented
+  * Was not consistent with scale-space theory
+- Added 2D convolution in KernelMath
+- Maven build has been added.
+  * BoofCV is on the central repository
+- Added SIFT feature descriptor and detector
+- Removed seperable kernel 
+  * Wasn't being used and there is no need for it with more modern techniques
+  * Plus it was causing a unit test to fail
+- Removed Gaussian12 and Steerable feature descriptors
+  * They sucked and were not properly implemented limited their historical value
+
+---------------------------------------------
+Date    : 2012/11/6
+Version : Alpha 0.11
+
+- Association Score
+  * Normalized Cross Correlation (NCC) has been fixed (yet again) in ScoreAssociateNccFeature where the abs() was incorretly being taken.
+  * Fixed bug in NccFeature.setTo()
+- FactoryAssociation
+  * Added NCC to defaultScore()
+- Template Matching
+  * Added NCC template matching algorithm
+  * TemplateScoreType: ERROR_SQUARED renamed to SUM_DIFF_SQ
+- ModelSet
+  * Original index of inlier set can be requested now
+  * Removed the ability to generate multiple hypotheses.  Was not needed after all.
+  * RANSAC score has been deleted and RANSAC simplified
+- RectifyImageOps
+  * Cleaned up function names and improved documentation
+- LensDistortionOps
+  * Added transformRadialToPixel_F64()
+- Reorganized functions in geometric vision package
+  * Created MultiViewOps and PerspetiveOps
+  * Refactored/deleted other related Util classes
+  * Enums are now used to select which algorithm is returned in the Factory in many cases
+  * New interfaces for each problem and improved JavaDoc
+- Moved AssociatedPair and PointPositionPair to boofcv.struct.geo package
+- Trifocal Tensor
+  * Added related functions to MultiViewOps
+  * Added linear estimator for 7+ points
+- PnP Problem
+  * Added two P3P solutions
+  * Analytic Jacobian for non-linear refinement
+  * Refactored class names for better consistency
+- Fixed bugs in StereoSparse3D
+- Fixed bug in DistortImageOps.boundBox_F32()
+- Added ImageGridPanel to display a set of images as a grid
+- ModelMatcher added getMinimumSize()
+- Renamed PointPosePair to Point2D3D since the old name was misleading
+- Visual Odometry
+  * Added stereo camera based algorithm that uses PnP for pose estimation
+  * Removed broken mono and stereo algorithms
+- DetectAssociateTracker
+  * Changed from an abstract class into a regular class
+  * Deleted SURF,BRIEF,NCC specific implementations since they are no longer needed
+- AssociatedPair
+  * renamed key and curr points to p1 and p2
+  * new names are more generic and consistent 
+- DetectAssociateTracker
+  * Changed internal design a bit and fixed bugs
+  * Performs well in structure from motion applications (2D and 3D)
+- ImagePointTracker accessors changed so that a storage list is requested
+  * Makes usage easier since now its impossible to drop a track while reading
+    from the main list.
+  * Updated implementations so that the internal list is not returned
+  * Removed addTrack() since only KLT supported that functionality, hence not generic.
+- ConvertBufferedImage
+  * Fixed bug where INDEXED images where not being converted correctly
+
+---------------------------------------------
+Date    : 2012/09/18
+Version : Alpha 0.10
+
+- Association Score
+  * Pushed implementations of ScoreAssociation into abst package
+  * Put most association distance algorithms into DescriptorDistance
+  * Added hamming lookup table
+  * Brief now uses a look up table.  About a 7x speed improvement.
+  * FactoryAssociate now can create instances of ScoreAssociate.
+  * Fixed incorrect NCC equation.  Thanks Christian Kramer.
+- DescribeRegionPoint has been redesigned
+  * Now more generic and can work with any feature descriptor
+  * Separate function for checking to see if feature is inside bounds
+- TupleDesc
+  * changed to an interface
+  * functions added to provide some generic support
+- Brief descriptor renamed to TupleDesc_B
+  * Acts as a generic binary feature descriptor
+- Descriptors
+  * BRIEF and BRIEF-SO now can process features along the image border.  Bit set to false in that case.
+- Visualization Apps
+  * VisualizeAssociationScoreApp has score type in a separate panel and can support binary descriptors
+- InterestPointDetector 
+  * WrapFHtoInterestPoint now returns the correct detection radius
+  * Fixed non-compliant implementations with incorrectly handled unsupported features.  Thanks jasonnn for submitting this bug
+- FAST Feature Detector
+  * Original implementation was buggy and did not produce same results as original author's code
+  * Rewrote from scratch and replicates original author results
+- GeneralFeatureDetector moved from extract to interest package
+- Fundamental/Essential Matrix
+  * 7-point algorithm now returns all solutions and the algorithm was tweaked
+  * Nister 5-pt Essential Matrix
+  * Abstractions which can handle multiple solutions
+  * Stability evaluator for epipolar matrices
+  * Improved unit tests
+- Polynomials
+  * Various ways to find and polish polynomial roots (EVD and Sturm)
+  * New data type and basic operations
+- Added ExampleStereoTwoViewsOneCamera
+  * Demonstrates how to perform stereo image processing using a single camera and two views
+- LensDistortionOps
+  * Added normalized to distorted pixel transform
+  * Tweaked some of the function names
+- SparseIntegralSample_I32.isInBounds() did not return that correct value along the right and bottom image border 
+- Functions inside of GThresholdImageOps did not return the number of blobs found like it should
+  * Thanks jasonnn
+- NonMaxBlockStrict
+  * Fixed bug where it assumed intensity values are all positive
+- TemplateMatching
+  * Added code for template matching
+  * Added example code to demonstrate its use
+- Added support for alpha channel in ConvertBufferedImage 
+- FactoryPointSequentialTracker doesn't create trackers with FAST detector instead uses ShiTomasi to improve stability
+
+---------------------------------------------
+Date    : 2012/7/22
+Version : Alpha 0.9
+
+- Renamed factories
+  * FactoryBlobDetector -> FactoryDetectPoint
+  * FactoryCornerDetector -> FactoryDetectPoint
+- Renamed KLT corner to Shi Tomasi corner, which is more standard
+- Fixed bug various point detectors where if the input image was resized the edge intensity might not be zero when it should be
+- Changed some corner detection algorithms to take the intensity image in as an input.
+- Added new Pixel to Normalized transform
+- Created interface for Stereo visual odometry
+- Fixed bug in unsafe_set inside of ImageInt8
+- Added unsafe_set() and unsafe_get() to ImageFloat32, ImageFloat64, ImageSInt64
+- Fixed bug in ImageSInt64.set() where the value was cast into a short  
+- Changed transform* functions inside of DistortImageOps so that you can specify how outside image pixels are handled.
+- Fixed bug in ImageHistogramPanel - reported by Ray
+  * Added support for integer images
+- Integration
+  * Created ant build scripts
+  * Updated Xuggler integration code
+  * Added Android
+- Generalized SimpleImageSequence so that it does not reference BufferedImage and will play nicer with Android
+- Fixed bug in ImplImageDistort* where for 16bit and 32 bit images values were being type casted into bytes
+- Changed UnconstrainedMinimization so that the minimum function value is specified in setFunction()
+- Added ExampleContours
+  * Thanks cspnanda for pointing out the lack of documentation
+- New non-maximum suppression algorithm
+  * About the same for 3x3 regions, much faster for larger regions
+  * Tweaked related API and improved unit tests
+- Fixed bug in WrapDescrivePixelRegion where the descriptor is not properly configured for integer images
+- Added SIFT feature descriptor and detector
+
+---------------------------------------------
+Date    : 2012/05/13
+Version : Alpha 0.8
+
+*IMPORTANT* Discard old calibration files and calibrate again with latest code!
+
+- Added processing monitor to CalibrateStereoPlanarGuiApp
+- Fixed bug in Zhang99 calibration where Rodrigues coordinates were being parameterized incorrectly
+  * Calibration results would be less accurate, but have a lower residual due to the increased degree of freedom
+- Added analytic Jacobian to Zhang99
+  * Decided not to use it since it produces same estimation parameters as numerical.
+- Added functions for creating detectors in FactoryPlanarCalibrationTarget
+  * changed code to reference those functions
+- Stereo Disparity Image
+  * Dense and Sparse algorithms
+  * Rectangular region winner take all (WTA)
+    - Validation: right to left, max error, texture
+    - Precision: Pixel and Subpixel
+  * Algorithms:
+    - Basic rectangular region
+    - Five region adaptive: Hirschmuller, et. al. "Real-Time Correlation-Based Stereo Vision with Reduced Border Errors," 2002
+- IntrinsicParameters
+  * Added flipY to parameter list since it is vital information for many
+    calculations.
+- RectifyImageOps
+  * Fixed bug in functions that adjusted the rectification for viewing.
+    If left handed the coordinate systems got messed up
+- Changed allInside() so that the annoying single pixel black region is gone
+  * RectifyImageOps and LensDistortOps
+- FactoryCornerDetector
+  * Added flag for weighted KLT and Harris
+- Added weighted corners to list of features in some evaluation apps
+- Examples:
+  * ExampleCalibrateMonocularPoints
+  * ExampleDetectCalibrationPoints
+  * ExampleStereoDisparity
+- ImageTestingOps
+  * Flip image vertical 
+- Fast point cloud viewer
+
+---------------------------------------------
+Date    : 2012/04/22
+Version : Alpha 0.7
+
+- Redesigned how evaluation apps/applets handle data input and configuration
+- Removed the epipolar directory
+  * More than just stereo algorithms in there
+- Camera calibration outputs XML file containing intrinsic parameters
+  * Java XML serialization
+- For square calibration grids, added sub-pixel refinement using canny edge
+- Fixed a bug in camera calibration where it transposed the grid instead of rotating it
+  if the number of rows/columns needed to be swapped.
+- 3D Vision Algorithms
+  * Estimate translation given rotation and two observations
+  * Refine pose estimate given set of 3D points and observations
+  * Interface for n-view triangulation
+  * Bundle adjustment for calibrated cameras
+    - Analytic Jacobian
+    - A bit slow right now
+- Changed behavior of GeneralFeatureDetector
+  * Supports sub-region extraction.  Forces features to be more spread out
+  * Max N now is the total number of features, including excludes
+- Improved speed of Levenberg algorithm by taking advantage of symmetry
+- UtilEpipolar
+  * Added canonicalCamera() and decomposeCameraMatrix()
+- Created the following Util and Ops classes
+  * UtilIntrinsic
+  * LensDistortionOps
+  * RectifyImageOps
+- Stereo Rectification
+  * Calibrated with known baseline
+  * Uncalibrated, from using a fundamental matrix.
+  * Adjust rectification to maximize usefull viewing area
+- New Examples
+  * Estimate fundamental matrix
+  * Rectify calibrated
+  * Rectify fundamental matrix
+  * Remove lens distortion
+- The feature score was not being set in WrapAssociateGreedy
+  * Thanks Nir Amar
+  * Also changed AssociateSurfBasic for a similar reason
+- Fixed problem in FundamentalResidualSampson where the denominator was being squared
+- Fixed problem in Se3 Essential generator
+- Changed positive depth constraint class
+
+---------------------------------------------
+Date    : 2012/03/01
+Version : Alpha 0.6
+
+- Added convolution related code for ImageSInt32
+- Added weighted KLT and Harris corner detectors
+- Refactored factory names and other classes to make them easier to find
+  and more consistent
+- Planar calibration grid detectors
+  * Chess board pattern
+  * Square grid pattern
+- Generic code for detecting squares in binary images
+  * Inside of calibration module
+- Application for calibration from planar calibration targets
+  * GUI and commandline 
+- ImageDistort
+  * Fixed bug where border.setImage() was not being called
+- ImageBorder
+  * Added generalized get(x,y) 
+- Refactored FactoryImageBorder into two factories
+- Fixed bug in several derivative operators where the passed in border was being
+  ignored and an extended border being used instead
+- Change ImplImageDistort* to use interpolate.get_unsafe() to speed it up by a large margin
+- Moved ImageDistort from boofcv.alg.distort to boofcv.struct.distort
+- Added PointTransform_F32
+- Added both forward and reverse radial distortion PixelTransform_F32 implementations
+- ModelMatcher classes can now create multiple model hypotheses from a single set of points.
+- Changed ImagePointTracker to use PointTrack instead of AssociatedPair
+  * Created KeyFramePointTracker to track features and create AssociatedPairs
+- Added FactoryEpipolar
+- Added FactoryTriangulate
+- Added non-linear refinement for:
+  * Fundamental/Essential matrix
+  * Homography matrix
+  * Triangulation
+- Added 2-view and N-View triangulation algorithms
+  * DLT
+  * Closest point from two lines
+- Added EPnP from Lepetit 2009 paper
+  * Validation against author's code is pending
+- Added color processing to several Apps
+  * EvaluateInterpolateEnlargeApp
+  * ShowImageBlurApp
+- Added SimpleNumberSequenceReader for reading small sequences of numbers
+- Added lens distortion app
+- Found subtle bug in Harris corner detector.
+  * Surprisingly doesn't seem to change output that much.
+
+---------------------------------------------
+Date    : 2012/02/01
+Version : Alpha 0.5
+
+- Improved SURF performance
+  * Fixed various bugs and changed algorithm to improve performance
+    - Both speed and stibility have been improved
+  * Now is the best performing SURF implementation in the benchmark
+- ImplOrientationSlidingWindowIntegral has been replaced with a faster and more accurate algorithm
+- Improved integral image support
+- Improved sparse gradient support
+- Refactored sparse image operator code
+  * Added SparseImageSample interface
+- Added/Improved unconstrained non-linear optimization code
+  * Quasi-Newton line search
+  * Levenberg-Marquardt
+- Geometric vision and calibration code which uses non-linear optimization now works correectly
+- Started converting internal micro benchmarks to use Caliper
+
+---------------------------------------------
+Date    : 2012/01/06
+Version : Alpha 0.4
+
+- Changed behavior of ConvertBufferedImage so that it won't automatically swap
+  bands in MultiSpecitral image
+  * orderBandsIntoRGB() has been provided to do that manually if needed
+- All automatic convert to/from BGR and been removed from ConvertRaster
+- Fixed SURF related issue
+  * Image bounds check was being incorrectly performed for integral image
+    orientation estimation algorithms (Thanks Oleg Chernoguz for pointing this out)
+  * FactoryOrientationAlgs.sliding_ii() was creating an average orienation alg for I32 images
+  * Some coordinates were integer instead of double
+- Added comments to several factories and other classes
+- Added ant script for examples and readme.txt explaining how to use it
+
+---------------------------------------------
+Date    : 2012/01/02
+Version : Alpha 0.3
+
+- Camera Calibration
+  * Planar grid (Zhang 98)
+  * Camera calibration matrix from homographies
+  * Linear radial distortion
+  * Decomposition of homography for calibration
+  * Nonlinear optimization of all parameters
+- Calibration Grid Detection
+  * Detects corners up to "pixel accuracy", in reality its probably worse than that
+  * Sub-pixel accuracy code exists but needs more work
+- Added min and max values to ImageTestingOps.addGaussian()
+- Tweaked factories related to wavelet denoising so that they take in
+  an image type.
+- Removed cyclical dependency between modules by creating a visualize modules
+- Added to BinaryImageOps
+  * label to clusters
+  * clusters to binary
+- Renamed ImageBase to ImageSingleBand
+- Created a new ImageBase
+- Flushed out MultSpectral image type more and extended ImageBase
+  * Created functions to convert to and from BufferedImage
+- Changed behavior of several functions in GeneralizedImageOps to include
+  MultiSpectral images
+  * refactor createImage -> createSingleBand 
+- Updated ant scripts
+  * Common template is now used for the different modules
+  * Fixed unit test and make it work across the whole project
+- Added crop to ImageDistort
+  * If cropping is used the only part of the destimation image is processed
+- Created calibration package to hold calibration related code
+- Moved jars not part of the primary build into boofcv/lib/testing
+- Started converting runtime benchmark code over to Caliper
+  * http://code.google.com/p/caliper/
+
+---------------------------------------------
+Date    : 2011/12/01 
+Version : Alpha 0.2
+
+- Added integer polynomial interpolation
+  * Cleaned up polynomial interpolation code
+- Fixed bug in PixelMath.bound() dealing with unsigned images
+- Converting to a BufferedImage now marks it as modified
+- Added min and max pixel values to ImageTypeInfo
+- Added ComplexMath
+- Added PolynomialSolver
+- Added process(image) to PointSequentialTracker and renamed it to ImagePointTracker
+- Added the following 3D vision code:
+  * Linear 8-point essential/fundamental matrix
+  * Linear 7-point essential/fundamental matrix
+  * Linear 4-point homography
+  * Extract camera motion from essential
+  * Extract camera and plane normal from homography
+  * Triangulate: Linear pixel depth
+  * Projective N Point (PNP): Linear N >= 6
+- Added non-linear optimizer based upon Levenberg-Marquardt
+- Added pixel region based descriptors
+  * Raw pixel values
+  * Normalized Cross Correlation (NCC)
+- Added pixel region based trackers
+- Added Sum of Absolute Difference (SAD) feature association score for several different descriptor types.
+
+---------------------------------------------
+Date    : 2011/11/01 
+Version : Alpha 0.1 
+
+- Initial public release

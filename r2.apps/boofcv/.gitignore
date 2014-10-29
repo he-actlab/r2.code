@@ -1,0 +1,4 @@
+**/*.iml
+**/*.ipr
+.gradle/
+BoofCV*.jar
