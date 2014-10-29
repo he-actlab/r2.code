@@ -1,2 +1,0 @@
-mono_plane.xml
-left.mjpeg

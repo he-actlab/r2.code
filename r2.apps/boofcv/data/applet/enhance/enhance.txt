@@ -1,2 +1,0 @@
-Dark:dark.jpg
-Dull:dull.jpg

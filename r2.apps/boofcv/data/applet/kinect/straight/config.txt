@@ -1,3 +1,0 @@
-visualdepth.xml
-rgb.mjpeg
-depth.mpng
