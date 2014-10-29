@@ -1,7 +1,7 @@
 package jnt.scimark2;
 
 /**
-  Evaluation for Relax Framework
+  Evaluation for R2 Framework
 */
 
 import chord.analyses.r2.lang.*;

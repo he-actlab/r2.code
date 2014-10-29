@@ -1,7 +1,7 @@
 package jnt.scimark2;
 
 /**
-  Evaluation for Relax Framework
+  Evaluation for EnerJ Framework
 */
 
 import enerj.lang.*;
@@ -78,10 +78,8 @@ public class Random {
 
 	private void initialize (int seed) {
 
-		//int jseed, k0, k1, j0, j1, iloop;
-		int jseed, k0, k1, j0, j1;
-		int iloop;
-
+		int jseed, k0, k1, j0, j1, iloop;
+	
 		this.seed = seed;
 
 		m = new int[17];

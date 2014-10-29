@@ -1,7 +1,7 @@
 package jnt.scimark2;
 
 /**
- Evaluation for Relax framework
+ Evaluation for EnerJ framework
 */
 
 import enerj.lang.*;
