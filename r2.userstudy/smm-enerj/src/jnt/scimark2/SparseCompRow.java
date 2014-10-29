@@ -9,8 +9,7 @@ import enerj.lang.*;
 public class SparseCompRow
 {
 	public static void matmult(double y[],  double val[], int row[], 
-								int col[],  double x[], int NUM_ITERATIONS)
-	{
+								int col[],  double x[], int NUM_ITERATIONS) {
 		int M = row.length - 1;
 
 		for (int reps=0; reps<NUM_ITERATIONS; reps++)

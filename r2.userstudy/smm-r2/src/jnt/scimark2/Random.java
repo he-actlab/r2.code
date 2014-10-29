@@ -1,7 +1,7 @@
 package jnt.scimark2;
 
 /**
-  Evaluation for Relax Framework
+  Evaluation for R2 Framework
 */
 
 import chord.analyses.r2.lang.*;
@@ -36,24 +36,8 @@ public class Random {
 		 CONSTRUCTORS
 		 ------------------------------------------------------------------------------ */
 
-	public Random () {
-		initialize( 123456 );
-	}
-
-	public Random (double left) {
-		initialize( 123456 );
-		this.left = left;
-		haveRange = true;
-	}
-
 	public Random (int seed) {
 		initialize(seed);
-	}
-
-	public Random (int seed, double left) {
-		initialize(seed);
-		this.left = left;
-		haveRange = true;
 	}
 
 	/* ------------------------------------------------------------------------------
@@ -62,6 +46,7 @@ public class Random {
 
 	public final synchronized double nextDouble () {
 
+		double ret;
 		int k;
 
 		k = m[i] - m[j]; 
@@ -80,9 +65,11 @@ public class Random {
 			j--;
 
 		if (haveRange) 
-			return left +  dm1 * k * width; 
+			ret = left +  dm1 * k * width; 
 		else
-			return dm1 * k;
+			ret = dm1 * k;
+
+		return ret;
 
 	} 
 

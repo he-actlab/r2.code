@@ -1,13 +1,8 @@
 package jnt.scimark2;
 
 /**
- Evaluation for EnerJ framework
+  Evaluation for EnerJ Framework
 */
-
-/* Random.java based on Java Numerical Toolkit (JNT) Random.UniformSequence
-	 class.  We do not use Java's own java.util.Random so that we can compare
-	 results with equivalent C and Fortran coces.
- */
 
 import enerj.lang.*;
 
@@ -40,24 +35,8 @@ public class Random {
 		 CONSTRUCTORS
 		 ------------------------------------------------------------------------------ */
 
-	public Random () {
-		initialize( 123456 );
-	}
-
-	public Random (double left) {
-		initialize( 123456 );
-		this.left = left;
-		haveRange = true;
-	}
-
 	public Random (int seed) {
 		initialize(seed);
-	}
-
-	public Random (int seed, double left) {
-		initialize(seed);
-		this.left = left;
-		haveRange = true;
 	}
 
 	/* ------------------------------------------------------------------------------
@@ -66,6 +45,7 @@ public class Random {
 
 	public final synchronized double nextDouble () {
 
+		double ret;
 		int k;
 
 		k = m[i] - m[j]; 
@@ -84,9 +64,11 @@ public class Random {
 			j--;
 
 		if (haveRange) 
-			return left +  dm1 * k * width; 
+			ret = left +  dm1 * k * width; 
 		else
-			return dm1 * k;
+			ret = dm1 * k;
+
+		return ret;
 
 	} 
 
@@ -97,7 +79,7 @@ public class Random {
 	private void initialize (int seed) {
 
 		int jseed, k0, k1, j0, j1, iloop;
-
+	
 		this.seed = seed;
 
 		m = new int[17];

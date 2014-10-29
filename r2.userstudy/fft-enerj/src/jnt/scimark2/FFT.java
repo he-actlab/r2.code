@@ -106,7 +106,7 @@ public class FFT {
 				data[jj+1] = tmp_imag; 
 			} 
 
-			while (k <= j)  {
+			while (k <= j) {
 				j -= k;
 				k >>= 1 ; 
 			}
@@ -114,8 +114,7 @@ public class FFT {
 		}
 	}
 
-	private static double[] RandomVector(int N, Random R)
-	{
+	private static double[] RandomVector(int N, Random R) {
 		double A[] = new double[N];
 
 		for (int i=0; i<N; i++)
@@ -125,18 +124,11 @@ public class FFT {
 
 	public static void main (String args[]) {
 		Random R = new Random(Integer.parseInt(args[0]));
+		double x[] = RandomVector(32, R);
 
-		int N = 16;
-		double mintime = 2.0;
-
-		System.out.println("measureFFT");
-		double x[] = RandomVector(2*N, R);
-		long cycles = 100;
-
-		for (int i=0; i<cycles; i++) {
+		for (int i=0; i<100; i++) {
 			FFT.transform(x);	
 			FFT.inverse(x);		
-			System.out.println("loop = " + i);
 		}
 
 		System.out.print("FFT vector: ");
@@ -146,11 +138,3 @@ public class FFT {
 		System.out.println("");
 	}
 }
-
-
-
-
-
-
-
-

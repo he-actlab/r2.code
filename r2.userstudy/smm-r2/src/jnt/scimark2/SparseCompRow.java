@@ -36,7 +36,7 @@ public class SparseCompRow
 		return A;
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args){
 		Random R = new Random(Integer.parseInt(args[0]));
 	
 		int N = 10;
