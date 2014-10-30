@@ -28,6 +28,8 @@ import boofcv.struct.image.ImageSInt32;
 /**
  * <p>
  * Routines for computing the intensity of the fast hessian features in an image.
+ * 
+ * R2 - actual computation to get interesting features
  * </p>
  * 
  * <p>

@@ -48,39 +48,39 @@ import java.awt.image.BufferedImage;
 public class ExampleInterestPoint {
 
 	public static <T extends ImageSingleBand>
-	void detect( BufferedImage image , Class<T> imageType ) {
-		T input = ConvertBufferedImage.convertFromSingle(image, null, imageType);
+	void detect(BufferedImage image , Class<T> imageType ) {
+		T input = ConvertBufferedImage.convertFromSingle(image, null, imageType);		// image --> input (T = ImageFloat32)
 
 		// Create a Fast Hessian detector from the SURF paper.
 		// Other detectors can be used in this example too.
-		InterestPointDetector<T> detector = FactoryInterestPoint.fastHessian(
-				new ConfigFastHessian(10, 2, 100, 2, 9, 3, 4));
+		InterestPointDetector<T> detector = FactoryInterestPoint.fastHessian(new ConfigFastHessian(10, 2, 100, 2, 9, 3, 4));	// creates detector
 
-		// find interest points in the image
+		// find interest points in the image - FastHessianFeatureDetector.detect
 		detector.detect(input);
 
 		// Show the features
 		displayResults(image, detector);
 	}
 
-	private static <T extends ImageSingleBand> void displayResults(BufferedImage image,
-															 InterestPointDetector<T> detector)
+	private static <T extends ImageSingleBand> void displayResults(BufferedImage image, InterestPointDetector<T> detector)
 	{
 		Graphics2D g2 = image.createGraphics();
 		FancyInterestPointRender render = new FancyInterestPointRender();
-
 
 		for( int i = 0; i < detector.getNumberOfFeatures(); i++ ) {
 			Point2D_F64 pt = detector.getLocation(i);
 
 			// note how it checks the capabilities of the detector
-			if( detector.hasScale() ) {
-				double scale = detector.getScale(i);
-				int radius = (int)(scale* BoofDefaults.SCALE_SPACE_CANONICAL_RADIUS);
-				render.addCircle((int)pt.x,(int)pt.y,radius);
-			} else {
-				render.addPoint((int) pt.x, (int) pt.y);
-			}
+//			if( detector.hasScale() ) {
+//				double scale = detector.getScale(i);
+//				int radius = (int)(scale* BoofDefaults.SCALE_SPACE_CANONICAL_RADIUS);
+//				render.addCircle((int)pt.x,(int)pt.y,radius);
+//			} else {
+			/**
+			 * Just print points instead of circles
+			 */
+				render.addPoint((int)pt.x, (int)pt.y);
+//			}
 		}
 		// make the circle's thicker
 		g2.setStroke(new BasicStroke(3));
@@ -91,7 +91,11 @@ public class ExampleInterestPoint {
 	}
 
 	public static void main( String args[] ) {
-		BufferedImage image = UtilImageIO.loadImage("../data/evaluation/sunflowers.png");
+		if (args.length != 1) {
+			System.out.println("USAGE: java -cp build/libs/*.jar boofcv.examples.features.ExampleInterestPoint [input png filepath]");
+			System.exit(0);
+		}
+		BufferedImage image = UtilImageIO.loadImage(args[0]);
 		detect(image, ImageFloat32.class);
 	}
 }

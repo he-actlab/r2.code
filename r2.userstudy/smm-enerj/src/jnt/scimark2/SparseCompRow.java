@@ -69,7 +69,8 @@ public class SparseCompRow
 
 		System.out.print("SparseMatMult vector: ");
 		for (int i = 0; i < N; ++i) {
-			System.out.print((y[i]) + " ");
+			double y_i = y[i];
+			System.out.print(y_i + " ");
 		}
 		System.out.println("");
 	}

@@ -147,14 +147,23 @@ public class FastHessianFeatureDetector<II extends ImageSingleBand> {
 
 	/**
 	 * Detect interest points inside of the image.
+	 * R2 - ExampleInterestPoint calls this detect
+	 * 
+	 * 	this.detectThreshold = 10;
+		this.extractRadius = 2;
+		this.maxFeaturesPerScale = 100;
+		this.initialSampleSize = 2;
+		this.initialSize = 9;
+		this.numberScalesPerOctave = 3;
+		this.numberOfOctaves = 4;
 	 *
 	 * @param integral Image transformed into an integral image.
 	 */
-	public void detect( II integral ) {
+	public void detect( II integral ) {		// R2 - II = ImageFloat32	
 		if( intensity == null ) {
-			intensity = new ImageFloat32[3];
+			intensity = new ImageFloat32[3];		// three instances? why?
 			for( int i = 0; i < intensity.length; i++ ) {
-				intensity[i] = new ImageFloat32(integral.width,integral.height);
+				intensity[i] = new ImageFloat32(integral.width,integral.height); 	// integral --> ImageFloat32 intensity[];   
 			}
 		}
 		foundPoints.reset();
@@ -175,6 +184,9 @@ public class FastHessianFeatureDetector<II extends ImageSingleBand> {
 			if( maxSize > integral.width || maxSize > integral.height )
 				break;
 			// detect features inside of this octave
+			/**
+			 * R2 - the core function of interesting point detection
+			 */
 			detectOctave(integral,skip,sizes);
 			skip += skip;
 			octaveSize += sizeStep;
@@ -187,6 +199,8 @@ public class FastHessianFeatureDetector<II extends ImageSingleBand> {
 	/**
 	 * Computes feature intensities for all the specified feature sizes and finds features
 	 * inside of the middle feature sizes.
+	 * 
+	 * R2 - the core function of interesting point detection 
 	 *
 	 * @param integral Integral image.
 	 * @param skip Pixel skip factor

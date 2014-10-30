@@ -133,7 +133,9 @@ public class FFT {
 
 		System.out.print("FFT vector: ");
 		for (int i = 0; i < 16; ++i) {
-			System.out.print(x[i] + " ");
+			double x_i = x[i];
+
+			System.out.print(x_i + " ");
 		}
 		System.out.println("");
 	}
