@@ -9,11 +9,16 @@ init()
 os.system("rm -rf src-marked")
 print
 print Fore.MAGENTA + " <<<<< [1] compilation start <<<<< " + Fore.RESET
-print
-os.system("ant clean")
-os.system("ant copyflag")
-os.system("ant")
-print
+os.system("ant clean > /dev/null")
+os.system("ant copyflag > /dev/null")
+result = os.popen("ant 2> /dev/null").readlines()
+for line in result:
+	if "error" in line:
+		for line2 in result:
+			print '   ' + line2.strip('\n')	 
+		print Fore.MAGENTA + " >>>>> [1] compilation end >>>>> " + Fore.RESET
+		sys.exit(0);
+print "   BUILD SUCCESSFUL"
 print Fore.MAGENTA + " >>>>> [1] compilation end >>>>> " + Fore.RESET
 p = os.popen("pwd | awk -F'/' '{print $7}'")
 result = p.read()
