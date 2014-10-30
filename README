@@ -52,11 +52,11 @@ of program data and operations.
 
     Now, you can run analysis using a tool called "analysis.py" in r2.apps as described in the following command.
 
-    $ ./analyze.py mc
+		$ ./analyze.py mc
 
     Generally, you can put any benchmark name and the name should be matched with the corresponding directory name.
 
-    $ ./analyze.py [bench]
+		$ ./analyze.py [bench]
 
     There are three phases:
       (1) Static Analysis
@@ -72,11 +72,11 @@ of program data and operations.
 
     You can also run the stochastic optimization using "optimize.py" in r2.apps as following:
 
-    $ ./optimize.py mc 1
+		$ ./optimize.py mc 1
 
     [0|1|2|3] represent error and energy models: low, medium, high, and aggressive.
     Therefore, the above command will run the optimization for mc (MonteCarlo) on medium specification.
 
     The following is the general command to run optimization:
 
-    $ ./optimize.py [bench] [0|1|2|3]
+		$ ./optimize.py [bench] [0|1|2|3]
