@@ -3,6 +3,9 @@ package chord.analyses.r2.lang.math;
 import chord.analyses.r2.lang.Relax;
 
 public class ApproxMath {
+	
+	public static double PI = 3.141592653589793;
+	
 	public static int abs(int i){
 		i = Relax.relax(i);
 		return java.lang.Math.abs(i); 

@@ -38,8 +38,8 @@ public class SparseCompRow
 	public static void main(String[] args){
 		Random R = new Random(Integer.parseInt(args[0]));
 	
-		int N = 10;
-		int nz = 50;
+		int N = Integer.parseInt(args[1]);
+		int nz = Integer.parseInt(args[2]);
 
 		double x[] = RandomVector(N, R);
 		double y[] = new double[N];
@@ -64,8 +64,7 @@ public class SparseCompRow
 				col[rowr+i] = i*step;
 		}
 
-		int cycles=100;
-		SparseCompRow.matmult(y, val, row, col, x, cycles);
+		SparseCompRow.matmult(y, val, row, col, x, 100);
 
 		System.out.print("SparseMatMult vector: ");
 		for (int i = 0; i < N; ++i) {
