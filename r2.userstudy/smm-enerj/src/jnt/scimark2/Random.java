@@ -15,20 +15,20 @@ public class Random {
 
 	int seed = 0;
 
-	public int m[];
+	public @Approx int m[];
 	public int i = 4;
 	public int j = 16;
 
-	public int mdig = 32;
-	public int one = 1;
-	public int m1 = (one << mdig-2) + ((one << mdig-2)-one);
-	public int m2 = one << mdig/2;
+	public @Approx int mdig = 32;
+	public @Approx int one = 1;
+	public @Approx int m1 = (one << mdig-2) + ((one << mdig-2)-one);
+	public @Approx int m2 = one << mdig/2;
 
-	public double dm1 = 1.0 / (double) m1;
+	public @Approx double dm1 = 1.0 / (@Approx double) m1;
 
 	public boolean haveRange = false;
-	public double left  = 0.0;
-	public double width = 1.0;
+	public @Approx double left  = 0.0;
+	public @Approx double width = 1.0;
 
 
 	/* ------------------------------------------------------------------------------
@@ -43,13 +43,13 @@ public class Random {
 		 PUBLIC METHODS
 		 ------------------------------------------------------------------------------ */
 
-	public final synchronized double nextDouble () {
+	public final synchronized @Approx double nextDouble () {
 
-		double ret;
-		int k;
+		@Approx double ret;
+		@Approx int k;
 
 		k = m[i] - m[j]; 
-		if (k < 0) 
+		if (Endorsements.endorse(k) < 0) 
 			k += m1; 
 		m[j] = k; 
 
@@ -78,14 +78,15 @@ public class Random {
 
 	private void initialize (int seed) {
 
-		int jseed, k0, k1, j0, j1, iloop;
+		@Approx int jseed, k0, k1, j0, j1;
+		int iloop;
 	
 		this.seed = seed;
 
 		m = new int[17];
 
-		jseed = Math.min(Math.abs(this.seed),m1);
-		if (jseed % 2 == 0) --jseed;
+		jseed = Math.min(Math.abs(this.seed),Endorsements.endorse(m1));
+		if (Endorsements.endorse(jseed) % 2 == 0) --jseed;
 		k0 = 9069 % m2;
 		k1 = 9069 / m2;
 		j0 = jseed % m2;

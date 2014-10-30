@@ -8,7 +8,7 @@ import enerj.lang.*;
 
 public class SOR
 {
-	public static final void execute( double omega,
+	public static final void execute(double omega,
 			double[][] G,
 			int num_iterations) {
 		int M = G.length;
