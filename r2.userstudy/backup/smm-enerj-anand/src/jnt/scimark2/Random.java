@@ -13,7 +13,7 @@ public class Random {
 		 CLASS VARIABLES
 		 ------------------------------------------------------------------------------ */
 
-	@Approx int seed = 0;
+	int seed = 0;
 
 	public @Approx int m[];
 	public int i = 4;
@@ -83,9 +83,9 @@ public class Random {
 	
 		this.seed = seed;
 
-		m = new @Approx int[17];
+		m = new int[17];
 
-		jseed = Math.min(Math.abs(Endorsements.endorse(this.seed)),Endorsements.endorse(m1));
+		jseed = Math.min(Math.abs(this.seed),Endorsements.endorse(m1));
 		if (Endorsements.endorse(jseed) % 2 == 0) --jseed;
 		k0 = 9069 % m2;
 		k1 = 9069 / m2;

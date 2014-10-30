@@ -1,10 +1,11 @@
 package jnt.scimark2;
 
 /**
-  Evaluation for EnerJ Framework
+  Evaluation for R2 Framework
 */
 
-import enerj.lang.*;
+import chord.analyses.r2.lang.*;
+import chord.analyses.r2.lang.math.*;
 
 public class Random {
 
@@ -13,22 +14,22 @@ public class Random {
 		 CLASS VARIABLES
 		 ------------------------------------------------------------------------------ */
 
-	@Approx int seed = 0;
+	int seed = 0;
 
-	public @Approx int m[];
+	public int m[];
 	public int i = 4;
 	public int j = 16;
 
-	public @Approx int mdig = 32;
-	public @Approx int one = 1;
-	public @Approx int m1 = (one << mdig-2) + ((one << mdig-2)-one);
-	public @Approx int m2 = one << mdig/2;
+	public int mdig = 32;
+	public int one = 1;
+	public int m1 = (one << mdig-2) + ((one << mdig-2)-one);
+	public int m2 = one << mdig/2;
 
-	public @Approx double dm1 = 1.0 / (@Approx double) m1;
+	public double dm1 = 1.0 / (double) m1;
 
 	public boolean haveRange = false;
-	public @Approx double left  = 0.0;
-	public @Approx double width = 1.0;
+	public double left  = 0.0;
+	public double width = 1.0;
 
 
 	/* ------------------------------------------------------------------------------
@@ -43,13 +44,13 @@ public class Random {
 		 PUBLIC METHODS
 		 ------------------------------------------------------------------------------ */
 
-	public final synchronized @Approx double nextDouble () {
+	public final synchronized double nextDouble () {
 
-		@Approx double ret;
-		@Approx int k;
+		double ret;
+		int k;
 
 		k = m[i] - m[j]; 
-		if (Endorsements.endorse(k) < 0) 
+		if (k < 0) 
 			k += m1; 
 		m[j] = k; 
 
@@ -78,15 +79,14 @@ public class Random {
 
 	private void initialize (int seed) {
 
-		@Approx int jseed, k0, k1, j0, j1;
-		int iloop;
-	
+		int jseed, k0, k1, j0, j1, iloop;
+
 		this.seed = seed;
 
-		m = new @Approx int[17];
+		m = new int[17];
 
-		jseed = Math.min(Math.abs(Endorsements.endorse(this.seed)),Endorsements.endorse(m1));
-		if (Endorsements.endorse(jseed) % 2 == 0) --jseed;
+		jseed = Math.min(Math.abs(this.seed),m1);
+		if (jseed % 2 == 0) --jseed;
 		k0 = 9069 % m2;
 		k1 = 9069 / m2;
 		j0 = jseed % m2;
