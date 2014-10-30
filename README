@@ -7,37 +7,37 @@ of program data and operations.
 
 [Compiling R2]
 
-	1. Setting Environmental Variables
+1. Setting Environmental Variables
 
-		To use the R2 framework, first you need to set all the necessary environment variables. 
+	To use the R2 framework, first you need to set all the necessary environment variables. 
 
-		JAVA_HOME and R2_HOME should be set according to your own machine configurations. 
+	JAVA_HOME and R2_HOME should be set according to your own machine configurations. 
 
-			export JAVA_HOME=your/java/installation/path
-			export R2_HOME=your/r2.code/path
+		export JAVA_HOME=your/java/installation/path
+		export R2_HOME=your/r2.code/path
 
-		Once your JAVA_HOME and R2_HOME are set properly, 
-		the following five variables can be just copied and pasted.
+	Once your JAVA_HOME and R2_HOME are set properly, 
+	the following five variables can be just copied and pasted.
 
-			export JSR308=$R2_HOME/checker-framework/
-			export R2_INST=$R2_HOME/r2.optimization
-			export CHORD_MAIN=$R2_HOME/chord/main
-			export R2_ANALYSIS=$R2_HOME/r2.analysis
-			export R2_BENCH=$R2_HOME/r2.apps
+		export JSR308=$R2_HOME/checker-framework/
+		export R2_INST=$R2_HOME/r2.optimization
+		export CHORD_MAIN=$R2_HOME/chord/main
+		export R2_ANALYSIS=$R2_HOME/r2.analysis
+		export R2_BENCH=$R2_HOME/r2.apps
 
-		You can manage your memory configuration of analysis using the following variable. 
-		You can see the chord's reference for detailed information. (https://code.google.com/p/jchord/)
+	You can manage your memory configuration of analysis using the following variable. 
+	You can see the chord's reference for detailed information. (https://code.google.com/p/jchord/)
 
-			export CHORD_MAX_HEAP=8192m
+		export CHORD_MAX_HEAP=8192m
 
-	2. Building R2
+2. Building R2
 
-		We provide a script to build everything called "build.sh".
-		What you have to do is only typing the following:
+	We provide a script to build everything called "build.sh".
+	What you have to do is only typing the following:
 
-			$ ./build.sh 
+		$ ./build.sh 
 
-		This command will make the framework to be ready for use. 
+	This command will make the framework to be ready for use. 
 
 [Using R2]
 
@@ -52,11 +52,11 @@ of program data and operations.
 
     Now, you can run analysis using a tool called "analysis.py" in r2.apps as described in the following command.
 
-    $ ./analyze.py mc
+		$ ./analyze.py mc
 
     Generally, you can put any benchmark name and the name should be matched with the corresponding directory name.
 
-    $ ./analyze.py [bench]
+		$ ./analyze.py [bench]
 
     There are three phases:
       (1) Static Analysis
@@ -72,11 +72,11 @@ of program data and operations.
 
     You can also run the stochastic optimization using "optimize.py" in r2.apps as following:
 
-    $ ./optimize.py mc 1
+		$ ./optimize.py mc 1
 
     [0|1|2|3] represent error and energy models: low, medium, high, and aggressive.
     Therefore, the above command will run the optimization for mc (MonteCarlo) on medium specification.
 
     The following is the general command to run optimization:
 
-    $ ./optimize.py [bench] [0|1|2|3]
+		$ ./optimize.py [bench] [0|1|2|3]
