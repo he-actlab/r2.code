@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="sor" default="build">
+
+    <!-- JSR308 support -->
+    <property environment="env" />
+    <property name="jsr308.dir" value="${env.JSR308}" />
+    <property name="jsr308.bin" value="${env.JSR308}/checkers/binary" />
+    <property name="jsr308.jar" value="${jsr308.bin}/jsr308-all.jar" />
+    <presetdef name="jsr308.javac">
+        <javac fork="yes">
+            <compilerarg line="-J-Xbootclasspath/p:${jsr308.jar}" />
+        </javac>
+    </presetdef>
+
+    <!-- EnerJ checker -->
+    <property name="enerj.jar" value="../../r2.enerj/build/enerj.jar" />
+    <property name="cfrt.jar" value="../../checker-runtime/build/cfrt.jar" />
+    <property name="enerj.checker" value="enerj.PrecisionChecker" />
+
+    <!-- Expax -->
+        <property name="r2.dir" value="${env.R2_ANALYSIS}" />
+        <property name="r2.jar" value="${r2.dir}/r2-analysis.jar" />
+
+    <property name="r2bc.info" value="${user.dir}/sor-bc-offset.info" /> 
+    <property name="r2anal.flag" value="${user.dir}/analysis.flag" />
+    <property name="r2anal.result" value="${user.dir}/analysis.result" />
+
+    <condition property="enerjc.args" value="-Alint=mbstatic,r2,${r2anal.flag},${r2bc.info},${r2anal.result}" else="-Alint=mbstatic,simulation,r2,${r2anal.flag},${r2bc.info},${r2anal.result}"> 
+        <isset property="env.EnerJNoSim" />
+    </condition>
+    <condition property="enerjc.verbose" value="false" else="true">
+        <isset property="env.EnerJNoSim" />
+    </condition>
+    <presetdef name="relaxc">
+        <jsr308.javac>
+            <compilerarg line="-Xbootclasspath/a:${cfrt.jar}:${enerj.jar}:${r2.jar} -processorpath ${cfrt.jar}:${enerj.jar} -processor ${enerj.checker}" />
+            <compilerarg line="${enerjc.args}" />
+            <compilerarg line="-r2analflag ${r2anal.flag}" />
+            <compilerarg line="-r2bcinfo ${r2bc.info}" />
+                        <compilerarg line="-r2gen false" />
+                        <compilerarg line="-r2ast false" />
+        </jsr308.javac>
+    </presetdef>
+
+    <target name="copyflag">
+        <exec command="cp ${r2.dir}/analysis.flag ." />
+    </target>
+
+    <target name="build">
+        <mkdir dir="build"/>
+        <relaxc srcdir="src"
+               destdir="build"
+               optimize="true"
+               debug="true"
+               deprecation="true">
+        </relaxc>
+        <jar jarfile="sor.jar" basedir="build"/>
+    </target>
+
+    <target name="clean">
+        <delete dir="build"/>
+        <delete dir="chord_output_r2"/>
+        <delete dir="chord_output"/>
+        <delete dir="eclipse-log"/>
+        <delete file="sor.jar"/>
+    </target>
+
+</project>
