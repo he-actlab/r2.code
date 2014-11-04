@@ -1,0 +1,20 @@
+error level 1...
+genetic algo iteration 1...
+genetic algo iteration 2...
+genetic algorithm finished
+statistic guarantee start
+****** Final Test start ******
+pass - testInput[11]
+pass - testInput[12]
+pass - testInput[13]
+pass - testInput[14]
+pass - testInput[15]
+pass - testInput[16]
+pass - testInput[17]
+pass - testInput[18]
+pass - testInput[19]
+pass - testInput[20]
+****** Final Test end ******
+statistic guarantee end
+sobel: 
+error_med: ['101100010011111000111100111101111100000010100111001011010001100101000000001011001111000110010111110', 49, 0.34260999999999997, 85.047, 42.694804999999995]
