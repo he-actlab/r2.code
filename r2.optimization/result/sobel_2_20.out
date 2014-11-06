@@ -1,0 +1,1346 @@
+starting sobel level 2...
+error level 2...
+genetic algo iteration 1...
+chunk 1 start ...
+candidate gene 0...
+candidate gene 1...
+candidate gene 2...
+candidate gene 3...
+     [gene 3] trainInput[1] error: 1.6192 energy: 90.333333
+     [gene 3] trainInput[2] error: 1.3582 energy: 90.333333
+     [gene 3] trainInput[3] error: 2.3934 energy: 90.333333
+     [gene 3] trainInput[4] error: 1.701 energy: 90.336667
+     [gene 3] trainInput[5] error: 1.9119 energy: 90.33
+     [gene 3] trainInput[6] error: 1.3506 energy: 90.346667
+     [gene 3] trainInput[7] error: 2.2417 energy: 90.33
+     [gene 3] trainInput[8] error: 1.8658 energy: 90.336667
+     [gene 3] trainInput[9] error: 1.9692 energy: 90.33
+     [gene 3] trainInput[10] error: 1.4395 energy: 90.33
+
+          [gene 3] error: 1.78505 energy: 90.334
+
+     [gene 1] trainInput[1] error: 1.2146 energy: 88.466667
+     [gene 1] trainInput[2] error: 1.1091 energy: 88.48
+     [gene 1] trainInput[3] error: 1.9367 energy: 88.456667
+     [gene 1] trainInput[4] error: 1.2858 energy: 88.443333
+     [gene 1] trainInput[5] error: 1.5261 energy: 88.473333
+     [gene 1] trainInput[6] error: 1.0532 energy: 88.453333
+     [gene 1] trainInput[7] error: 2.053 energy: 88.463333
+     [gene 1] trainInput[8] error: 1.4912 energy: 88.476667
+     [gene 1] trainInput[9] error: 1.3787 energy: 88.46
+     [gene 1] trainInput[10] error: 1.5874 energy: 88.47
+
+          [gene 1] error: 1.46358 energy: 88.4643333
+
+     [gene 2] trainInput[1] error: 0.9412 energy: 91.67
+     [gene 2] trainInput[2] error: 0.7124 energy: 91.696667
+     [gene 2] trainInput[3] error: 1.7631 energy: 91.696667
+     [gene 2] trainInput[4] error: 0.8945 energy: 91.696667
+     [gene 2] trainInput[5] error: 1.4293 energy: 91.673333
+     [gene 2] trainInput[6] error: 1.0427 energy: 91.693333
+     [gene 2] trainInput[7] error: 1.4665 energy: 91.67
+     [gene 2] trainInput[8] error: 1.3259 energy: 91.676667
+     [gene 2] trainInput[9] error: 1.1529 energy: 91.696667
+     [gene 2] trainInput[10] error: 1.1767 energy: 91.666667
+
+          [gene 2] error: 1.19052 energy: 91.6836668
+
+     [gene 4] trainInput[1] error: 1.7488 energy: 91.653333
+     [gene 4] trainInput[2] error: 1.6544 energy: 91.646667
+     [gene 4] trainInput[3] error: 2.9215 energy: 91.68
+     [gene 4] trainInput[4] error: 2.0867 energy: 91.68
+     [gene 4] trainInput[5] error: 2.6564 energy: 91.663333
+     [gene 4] trainInput[6] error: 1.6113 energy: 91.66
+     [gene 4] trainInput[7] error: 2.557 energy: 91.66
+     [gene 4] trainInput[8] error: 2.5847 energy: 91.666667
+     [gene 4] trainInput[9] error: 2.1222 energy: 91.67
+     [gene 4] trainInput[10] error: 1.9126 energy: 91.66
+
+          [gene 4] error: 2.18556 energy: 91.664
+
+chunk 2 start ...
+candidate gene 4...
+candidate gene 5...
+candidate gene 6...
+candidate gene 7...
+     [gene 5] trainInput[1] error: 0.9643 energy: 94.81
+     [gene 5] trainInput[2] error: 1.052 energy: 94.82
+     [gene 5] trainInput[3] error: 1.8018 energy: 94.873333
+     [gene 5] trainInput[4] error: 1.3401 energy: 94.813333
+     [gene 5] trainInput[5] error: 1.6557 energy: 94.833333
+     [gene 5] trainInput[6] error: 1.1196 energy: 94.816667
+     [gene 5] trainInput[7] error: 1.6758 energy: 94.81
+     [gene 5] trainInput[8] error: 1.5321 energy: 94.803333
+     [gene 5] trainInput[9] error: 1.3171 energy: 94.823333
+     [gene 5] trainInput[10] error: 1.2392 energy: 94.82
+
+          [gene 5] error: 1.36977 energy: 94.8223332
+
+     [gene 7] trainInput[1] error: 1.3962 energy: 87.38
+     [gene 7] trainInput[2] error: 1.3383 energy: 87.396667
+     [gene 7] trainInput[3] error: 2.3938 energy: 87.396667
+     [gene 7] trainInput[4] error: 1.936 energy: 87.38
+     [gene 7] trainInput[5] error: 2.188 energy: 87.4
+     [gene 7] trainInput[6] error: 1.6524 energy: 87.396667
+     [gene 7] trainInput[7] error: 2.7351 energy: 87.383333
+     [gene 7] trainInput[8] error: 2.111 energy: 87.416667
+     [gene 7] trainInput[9] error: 2.1983 energy: 87.376667
+     [gene 7] trainInput[10] error: 1.5201 energy: 87.4
+
+          [gene 7] error: 1.94692 energy: 87.3926668
+
+     [gene 8] trainInput[1] error: 1.2355 energy: 94.13
+     [gene 8] trainInput[2] error: 1.1316 energy: 94.13
+     [gene 8] trainInput[3] error: 1.7901 energy: 94.14
+     [gene 8] trainInput[4] error: 1.2141 energy: 94.123333
+     [gene 8] trainInput[5] error: 1.3231 energy: 94.133333
+     [gene 8] trainInput[6] error: 1.0413 energy: 94.136667
+     [gene 8] trainInput[7] error: 1.7458 energy: 94.12
+     [gene 8] trainInput[8] error: 1.3622 energy: 94.123333
+     [gene 8] trainInput[9] error: 1.4925 energy: 94.136667
+     [gene 8] trainInput[10] error: 1.2885 energy: 94.143333
+
+          [gene 8] error: 1.36247 energy: 94.1316666
+
+     [gene 6] trainInput[1] error: 1.5341 energy: 90.636667
+     [gene 6] trainInput[2] error: 1.4514 energy: 90.636667
+     [gene 6] trainInput[3] error: 2.3806 energy: 90.63
+     [gene 6] trainInput[4] error: 1.7915 energy: 90.63
+     [gene 6] trainInput[5] error: 2.2679 energy: 90.64
+     [gene 6] trainInput[6] error: 1.457 energy: 90.626667
+     [gene 6] trainInput[7] error: 2.6183 energy: 90.616667
+     [gene 6] trainInput[8] error: 2.0891 energy: 90.623333
+     [gene 6] trainInput[9] error: 2.0281 energy: 90.626667
+     [gene 6] trainInput[10] error: 1.7628 energy: 90.62
+
+          [gene 6] error: 1.93808 energy: 90.6286668
+
+chunk 3 start ...
+candidate gene 8...
+candidate gene 9...
+     [gene 9] trainInput[1] error: 1.4177 energy: 92.81
+     [gene 9] trainInput[2] error: 1.2915 energy: 92.81
+     [gene 9] trainInput[3] error: 2.4026 energy: 92.806667
+     [gene 9] trainInput[4] error: 1.5959 energy: 92.8
+     [gene 9] trainInput[5] error: 2.2346 energy: 92.81
+     [gene 9] trainInput[6] error: 1.2333 energy: 92.813333
+     [gene 9] trainInput[7] error: 2.4757 energy: 92.806667
+     [gene 9] trainInput[8] error: 2.3621 energy: 92.8
+     [gene 9] trainInput[9] error: 2.0173 energy: 92.816667
+     [gene 9] trainInput[10] error: 1.7123 energy: 92.803333
+
+          [gene 9] error: 1.8743 energy: 92.8076667
+
+     [gene 10] trainInput[1] error: 1.2505 energy: 96.17
+     [gene 10] trainInput[2] error: 1.0037 energy: 96.17
+     [gene 10] trainInput[3] error: 1.9311 energy: 96.17
+     [gene 10] trainInput[4] error: 1.0472 energy: 96.166667
+     [gene 10] trainInput[5] error: 1.4965 energy: 96.17
+     [gene 10] trainInput[6] error: 1.2231 energy: 96.17
+     [gene 10] trainInput[7] error: 1.8628 energy: 96.163333
+     [gene 10] trainInput[8] error: 1.4732 energy: 96.17
+     [gene 10] trainInput[9] error: 1.3498 energy: 96.166667
+     [gene 10] trainInput[10] error: 1.197 energy: 96.17
+
+          [gene 10] error: 1.38349 energy: 96.1686667
+
+
+[level 2]:
+1 ['001101100101101111101011101101011100011000110100010101110101000101011101001010100101110111000101111', 44, 1.94692, 87.39266679999999, 44.669793399999996]
+2 ['000101101000010100110100010110100100001111011010011101010001010001111101100111011110011001110100110', 49, 1.4635799999999999, 88.4643333, 44.96395665]
+3 ['011101111010011000100001100000100111000101010011101110110010011001011000011010111000010101011110111', 49, 1.78505, 90.33400000000002, 46.05952500000001]
+4 ['001111000010011010111011111101000111000110111101101101011000100110110111010110100110110101111101101', 40, 1.9380799999999998, 90.62866679999999, 46.283373399999995]
+5 ['110111111000000001100100110111100110110111111010001001110100010011011000101101010110001001010010001', 49, 1.19052, 91.6836668, 46.4370934]
+6 ['000100100101110011010011010111010010110011001011110111001010000100001101011111011100111011001111001', 46, 2.18556, 91.66399999999999, 46.92477999999999]
+7 ['001001001001000001111010101011010011111011000010001001011000011000101100101111100000001110010010000', 57, 1.8742999999999999, 92.8076667, 47.34098335]
+8 ['100011011001101010100011100001110011101011011101011011010001000110000101100001010110011101110100100', 50, 1.36247, 94.13166659999999, 47.747068299999995]
+9 ['110000101100100000001011110000111001001001111011111110011000001111100001000100111101101101010100001', 51, 1.3697700000000002, 94.8223332, 48.0960516]
+10 ['011100100110000000110000001101111001000010111111010101100110001000001000011110001100011100111000000', 57, 1.38349, 96.16866669999999, 48.77607834999999]
+
+genetic algo iteration 2...
+chunk 1 start ...
+candidate gene 0...
+candidate gene 1...
+candidate gene 2...
+candidate gene 3...
+     [gene 1] trainInput[1] error: 1.5212 energy: 87.38
+     [gene 1] trainInput[2] error: 1.585 energy: 87.393333
+     [gene 1] trainInput[3] error: 2.914 energy: 87.403333
+     [gene 1] trainInput[4] error: 1.8813 energy: 87.386667
+     [gene 1] trainInput[5] error: 2.5169 energy: 87.4
+     [gene 1] trainInput[6] error: 1.611 energy: 87.403333
+     [gene 1] trainInput[7] error: 2.8501 energy: 87.386667
+     [gene 1] trainInput[8] error: 2.4258 energy: 87.403333
+     [gene 1] trainInput[9] error: 1.9837 energy: 87.39
+     [gene 1] trainInput[10] error: 1.706 energy: 87.366667
+
+          [gene 1] error: 2.0995 energy: 87.3913333
+
+     [gene 3] trainInput[1] error: 1.0155 energy: 91.44
+     [gene 3] trainInput[2] error: 0.8394 energy: 91.446667
+     [gene 3] trainInput[3] error: 1.8722 energy: 91.46
+     [gene 3] trainInput[4] error: 1.362 energy: 91.466667
+     [gene 3] trainInput[5] error: 1.4044 energy: 91.466667
+     [gene 3] trainInput[6] error: 1.4007 energy: 91.476667
+     [gene 3] trainInput[7] error: 1.8073 energy: 91.453333
+     [gene 3] trainInput[8] error: 1.2793 energy: 91.446667
+     [gene 3] trainInput[9] error: 1.463 energy: 91.446667
+     [gene 3] trainInput[10] error: 1.2587 energy: 91.413333
+
+          [gene 3] error: 1.37025 energy: 91.4516668
+
+     [gene 4] trainInput[1] error: 1.7149 energy: 87.446667
+     [gene 4] trainInput[2] error: 1.4832 energy: 87.456667
+     [gene 4] trainInput[3] error: 2.5521 energy: 87.453333
+     [gene 4] trainInput[4] error: 1.7837 energy: 87.456667
+     [gene 4] trainInput[5] error: 2.3956 energy: 87.45
+     [gene 4] trainInput[6] error: 1.5391 energy: 87.463333
+     [gene 4] trainInput[7] error: 2.3899 energy: 87.446667
+     [gene 4] trainInput[8] error: 2.1874 energy: 87.47
+     [gene 4] trainInput[9] error: 1.9411 energy: 87.46
+     [gene 4] trainInput[10] error: 1.9754 energy: 87.45
+
+          [gene 4] error: 1.99624 energy: 87.4553334
+
+     [gene 2] trainInput[1] error: 0.9587 energy: 91.42
+     [gene 2] trainInput[2] error: 0.6586 energy: 91.5
+     [gene 2] trainInput[3] error: 1.6828 energy: 91.436667
+     [gene 2] trainInput[4] error: 1.1312 energy: 91.43
+     [gene 2] trainInput[5] error: 1.3939 energy: 91.42
+     [gene 2] trainInput[6] error: 0.9732 energy: 91.41
+     [gene 2] trainInput[7] error: 1.7471 energy: 91.43
+     [gene 2] trainInput[8] error: 1.2611 energy: 91.413333
+     [gene 2] trainInput[9] error: 1.3035 energy: 91.43
+     [gene 2] trainInput[10] error: 1.058 energy: 91.446667
+
+          [gene 2] error: 1.21681 energy: 91.4336667
+
+chunk 2 start ...
+candidate gene 4...
+candidate gene 5...
+candidate gene 6...
+candidate gene 7...
+     [gene 5] trainInput[1] error: 1.4504 energy: 89.93
+     [gene 5] trainInput[2] error: 1.0846 energy: 89.93
+     [gene 5] trainInput[3] error: 2.1709 energy: 89.933333
+     [gene 5] trainInput[4] error: 1.4049 energy: 89.933333
+     [gene 5] trainInput[5] error: 2.1908 energy: 89.943333
+     [gene 5] trainInput[6] error: 1.3599 energy: 89.946667
+     [gene 5] trainInput[7] error: 2.5173 energy: 89.933333
+     [gene 5] trainInput[8] error: 2.0482 energy: 89.933333
+     [gene 5] trainInput[9] error: 1.7198 energy: 89.94
+     [gene 5] trainInput[10] error: 1.674 energy: 89.95
+
+          [gene 5] error: 1.76208 energy: 89.9373332
+
+     [gene 6] trainInput[1] error: 1.7479 energy: 87.78
+     [gene 6] trainInput[2] error: 1.4421 energy: 87.783333
+     [gene 6] trainInput[3] error: 2.5149 energy: 87.776667
+     [gene 6] trainInput[4] error: 1.8273 energy: 87.773333
+     [gene 6] trainInput[5] error: 2.2523 energy: 87.81
+     [gene 6] trainInput[6] error: 1.4044 energy: 87.776667
+     [gene 6] trainInput[7] error: 2.6083 energy: 87.776667
+     [gene 6] trainInput[8] error: 2.0392 energy: 87.783333
+     [gene 6] trainInput[9] error: 2.0476 energy: 87.793333
+     [gene 6] trainInput[10] error: 1.5361 energy: 87.783333
+
+          [gene 6] error: 1.94201 energy: 87.7836666
+
+     [gene 7] trainInput[1] error: 1.8125 energy: 86.77
+     [gene 7] trainInput[2] error: 1.6651 energy: 86.783333
+     [gene 7] trainInput[3] error: 3.106 energy: 86.773333
+     [gene 7] trainInput[4] error: 2.0501 energy: 86.793333
+     [gene 7] trainInput[5] error: 2.4963 energy: 86.793333
+     [gene 7] trainInput[6] error: 1.4596 energy: 86.78
+     [gene 7] trainInput[7] error: 2.9528 energy: 86.81
+     [gene 7] trainInput[8] error: 2.3423 energy: 86.783333
+     [gene 7] trainInput[9] error: 2.3218 energy: 86.776667
+     [gene 7] trainInput[10] error: 2.0423 energy: 86.773333
+
+          [gene 7] error: 2.22488 energy: 86.7836665
+
+     [gene 8] trainInput[1] error: 1.7107 energy: 89.99
+     [gene 8] trainInput[2] error: 1.4214 energy: 89.99
+     [gene 8] trainInput[3] error: 2.7455 energy: 89.986667
+     [gene 8] trainInput[4] error: 2.0856 energy: 89.993333
+     [gene 8] trainInput[5] error: 2.8375 energy: 89.983333
+     [gene 8] trainInput[6] error: 1.3672 energy: 89.983333
+     [gene 8] trainInput[7] error: 2.9244 energy: 89.99
+     [gene 8] trainInput[8] error: 2.4089 energy: 89.996667
+     [gene 8] trainInput[9] error: 2.2168 energy: 89.986667
+     [gene 8] trainInput[10] error: 1.7736 energy: 89.99
+
+          [gene 8] error: 2.14916 energy: 89.989
+
+chunk 3 start ...
+candidate gene 8...
+candidate gene 9...
+     [gene 10] trainInput[1] error: 1.6202 energy: 87.653333
+     [gene 10] trainInput[2] error: 1.6197 energy: 87.653333
+     [gene 10] trainInput[3] error: 2.3691 energy: 87.653333
+     [gene 10] trainInput[4] error: 1.8818 energy: 87.66
+     [gene 10] trainInput[5] error: 2.3478 energy: 87.663333
+     [gene 10] trainInput[6] error: 1.4833 energy: 87.656667
+     [gene 10] trainInput[7] error: 2.3973 energy: 87.646667
+     [gene 10] trainInput[8] error: 2.2098 energy: 87.663333
+     [gene 10] trainInput[9] error: 2.1122 energy: 87.656667
+     [gene 10] trainInput[10] error: 1.6614 energy: 87.703333
+
+          [gene 10] error: 1.97026 energy: 87.6609999
+
+     [gene 9] trainInput[1] error: 0.6468 energy: 89.87
+     [gene 9] trainInput[2] error: 0.5788 energy: 89.856667
+     [gene 9] trainInput[3] error: 1.0114 energy: 89.866667
+     [gene 9] trainInput[4] error: 0.7316 energy: 89.853333
+     [gene 9] trainInput[5] error: 1.2364 energy: 89.873333
+     [gene 9] trainInput[6] error: 0.5944 energy: 89.843333
+     [gene 9] trainInput[7] error: 1.324 energy: 89.866667
+     [gene 9] trainInput[8] error: 0.9224 energy: 89.86
+     [gene 9] trainInput[9] error: 0.7209 energy: 89.86
+     [gene 9] trainInput[10] error: 0.8953 energy: 89.896667
+
+          [gene 9] error: 0.8662 energy: 89.8646667
+
+
+[level 2]:
+1 ['001101100101101111101011101101011100011000110100010101110101000101011101001011100101110111000110111', 43, 2.2248799999999997, 86.7836665, 44.50427325]
+2 ['100111011001101010100011100001110011101111011101010101110101000101011101001010100101110111000101111', 43, 1.9962399999999998, 87.45533340000001, 44.72578670000001]
+3 ['001101100101101111101011101101011100011000110100010101110101000101011101001010100101110111000101111', 44, 2.0995, 87.39133329999999, 44.745416649999996]
+4 ['001101100100101111101011101100011100011000110100010101110101000101011101001010100101110111000101111', 46, 1.9702600000000001, 87.6609999, 44.815629949999995]
+5 ['011101111010011000101011101101011000011000110100010101010101000101011101001010100101110111000101111', 47, 1.9420100000000002, 87.78366659999999, 44.86283829999999]
+6 ['110111110000000001100100110111100110110111111010001101110100010011011100100101010110001001010010001', 49, 0.8662000000000001, 89.86466670000001, 45.36543335000001]
+7 ['001101100101101111100001100000100111000101010011101110110010011001010000111010111000010101011110111', 48, 1.7620799999999999, 89.93733320000001, 45.849706600000005]
+8 ['011101101010011000100001100000100111000101010011101110110010011001011000011011111000010101011101111', 49, 2.1491599999999997, 89.989, 46.06908]
+9 ['110111111001000001100100110111100110110111111010001001000100010011011000101101010110001001010010001', 50, 1.2168100000000002, 91.43366670000002, 46.32523835000001]
+10 ['001101100101101111101011101101011100001000110100011011010001000111000101100001010110011101110100100', 49, 1.37025, 91.45166680000001, 46.410958400000005]
+
+genetic algo iteration 3...
+chunk 1 start ...
+candidate gene 0...
+candidate gene 1...
+candidate gene 2...
+candidate gene 3...
+     [gene 1] trainInput[1] error: 1.7412 energy: 86.78
+     [gene 1] trainInput[2] error: 1.7127 energy: 86.79
+     [gene 1] trainInput[3] error: 3.273 energy: 86.786667
+     [gene 1] trainInput[4] error: 2.086 energy: 86.81
+     [gene 1] trainInput[5] error: 2.7146 energy: 86.803333
+     [gene 1] trainInput[6] error: 1.8371 energy: 86.793333
+     [gene 1] trainInput[7] error: 3.2494 energy: 86.79
+     [gene 1] trainInput[8] error: 2.7618 energy: 86.803333
+     [gene 1] trainInput[9] error: 2.1183 energy: 86.77
+     [gene 1] trainInput[10] error: 1.971 energy: 86.773333
+
+          [gene 1] error: 2.34651 energy: 86.7899999
+
+     [gene 2] trainInput[1] error: 1.4885 energy: 89.716667
+     [gene 2] trainInput[2] error: 1.4153 energy: 89.726667
+     [gene 2] trainInput[3] error: 2.7985 energy: 89.733333
+     [gene 2] trainInput[4] error: 1.887 energy: 89.723333
+     [gene 2] trainInput[5] error: 2.3016 energy: 89.73
+     [gene 2] trainInput[6] error: 1.6605 energy: 89.723333
+     [gene 2] trainInput[7] error: 2.815 energy: 89.723333
+     [gene 2] trainInput[8] error: 2.4579 energy: 89.72
+     [gene 2] trainInput[9] error: 2.0703 energy: 89.733333
+     [gene 2] trainInput[10] error: 1.8271 energy: 89.733333
+
+          [gene 2] error: 2.07217 energy: 89.7263332
+
+     [gene 3] trainInput[1] error: 1.5981 energy: 86.783333
+     [gene 3] trainInput[2] error: 1.5503 energy: 86.773333
+     [gene 3] trainInput[3] error: 3.2771 energy: 86.773333
+     [gene 3] trainInput[4] error: 2.1576 energy: 86.813333
+     [gene 3] trainInput[5] error: 2.4843 energy: 86.816667
+     [gene 3] trainInput[6] error: 1.8315 energy: 86.81
+     [gene 3] trainInput[7] error: 2.9969 energy: 86.816667
+     [gene 3] trainInput[8] error: 2.9481 energy: 86.8
+     [gene 3] trainInput[9] error: 2.1602 energy: 86.78
+     [gene 3] trainInput[10] error: 2.2459 energy: 86.79
+
+          [gene 3] error: 2.325 energy: 86.7956666
+
+     [gene 4] trainInput[1] error: 1.7535 energy: 87.646667
+     [gene 4] trainInput[2] error: 1.6139 energy: 87.646667
+     [gene 4] trainInput[3] error: 2.5733 energy: 87.663333
+     [gene 4] trainInput[4] error: 1.746 energy: 87.676667
+     [gene 4] trainInput[5] error: 2.385 energy: 87.666667
+     [gene 4] trainInput[6] error: 1.5668 energy: 87.633333
+     [gene 4] trainInput[7] error: 2.5808 energy: 87.66
+     [gene 4] trainInput[8] error: 2.191 energy: 87.636667
+     [gene 4] trainInput[9] error: 2.1523 energy: 87.64
+     [gene 4] trainInput[10] error: 1.4207 energy: 87.663333
+
+          [gene 4] error: 1.99833 energy: 87.6533334
+
+chunk 2 start ...
+candidate gene 4...
+candidate gene 5...
+candidate gene 6...
+candidate gene 7...
+     [gene 5] trainInput[1] error: 1.5265 energy: 87.32
+     [gene 5] trainInput[2] error: 1.2508 energy: 87.346667
+     [gene 5] trainInput[3] error: 2.5127 energy: 87.343333
+     [gene 5] trainInput[4] error: 1.8961 energy: 87.32
+     [gene 5] trainInput[5] error: 2.0303 energy: 87.316667
+     [gene 5] trainInput[6] error: 1.6649 energy: 87.333333
+     [gene 5] trainInput[7] error: 2.9445 energy: 87.333333
+     [gene 5] trainInput[8] error: 2.0891 energy: 87.323333
+     [gene 5] trainInput[9] error: 1.8708 energy: 87.31
+     [gene 5] trainInput[10] error: 1.5724 energy: 87.306667
+
+          [gene 5] error: 1.93581 energy: 87.3253333
+
+     [gene 6] trainInput[1] error: 1.2968 energy: 88.646667
+     [gene 6] trainInput[2] error: 1.1498 energy: 88.653333
+     [gene 6] trainInput[3] error: 2.1775 energy: 88.636667
+     [gene 6] trainInput[4] error: 1.4925 energy: 88.623333
+     [gene 6] trainInput[5] error: 1.7933 energy: 88.646667
+     [gene 6] trainInput[6] error: 1.1513 energy: 88.63
+     [gene 6] trainInput[7] error: 1.9083 energy: 88.646667
+     [gene 6] trainInput[8] error: 1.9193 energy: 88.653333
+     [gene 6] trainInput[9] error: 1.5821 energy: 88.626667
+     [gene 6] trainInput[10] error: 1.2686 energy: 88.646667
+
+          [gene 6] error: 1.57395 energy: 88.6410001
+
+     [gene 7] trainInput[1] error: 1.6843 energy: 89.333333
+     [gene 7] trainInput[2] error: 1.5008 energy: 89.33
+     [gene 7] trainInput[3] error: 3.0364 energy: 89.33
+     [gene 7] trainInput[4] error: 1.8401 energy: 89.323333
+     [gene 7] trainInput[5] error: 2.6663 energy: 89.33
+     [gene 7] trainInput[6] error: 1.9066 energy: 89.333333
+     [gene 7] trainInput[7] error: 2.8116 energy: 89.33
+     [gene 7] trainInput[8] error: 2.301 energy: 89.32
+     [gene 7] trainInput[9] error: 2.1165 energy: 89.33
+     [gene 7] trainInput[10] error: 1.8354 energy: 89.323333
+
+          [gene 7] error: 2.1699 energy: 89.3283332
+
+     [gene 8] trainInput[1] error: 0.8474 energy: 91.396667
+     [gene 8] trainInput[2] error: 0.8404 energy: 91.423333
+     [gene 8] trainInput[3] error: 1.5719 energy: 91.393333
+     [gene 8] trainInput[4] error: 1.1848 energy: 91.416667
+     [gene 8] trainInput[5] error: 1.2493 energy: 91.403333
+     [gene 8] trainInput[6] error: 0.727 energy: 91.42
+     [gene 8] trainInput[7] error: 1.4446 energy: 91.403333
+     [gene 8] trainInput[8] error: 1.2776 energy: 91.406667
+     [gene 8] trainInput[9] error: 1.3852 energy: 91.413333
+     [gene 8] trainInput[10] error: 0.8679 energy: 91.476667
+
+          [gene 8] error: 1.13961 energy: 91.4153333
+
+chunk 3 start ...
+candidate gene 8...
+candidate gene 9...
+     [gene 9] trainInput[1] error: 1.0908 energy: 91.443333
+     [gene 9] trainInput[2] error: 1.0077 energy: 91.436667
+     [gene 9] trainInput[3] error: 1.8435 energy: 91.44
+     [gene 9] trainInput[4] error: 1.3386 energy: 91.443333
+     [gene 9] trainInput[5] error: 1.6574 energy: 91.44
+     [gene 9] trainInput[6] error: 0.9608 energy: 91.436667
+     [gene 9] trainInput[7] error: 1.784 energy: 91.436667
+     [gene 9] trainInput[8] error: 1.5606 energy: 91.43
+     [gene 9] trainInput[9] error: 1.2781 energy: 91.45
+     [gene 9] trainInput[10] error: 1.0772 energy: 91.436667
+
+          [gene 9] error: 1.35987 energy: 91.4393334
+
+     [gene 10] trainInput[1] error: 2.0291 energy: 89.13
+     [gene 10] trainInput[2] error: 1.5927 energy: 89.13
+     [gene 10] trainInput[3] error: 2.9559 energy: 89.12
+     [gene 10] trainInput[4] error: 2.1074 energy: 89.123333
+     [gene 10] trainInput[5] error: 2.6328 energy: 89.123333
+     [gene 10] trainInput[6] error: 1.6981 energy: 89.18
+     [gene 10] trainInput[7] error: 2.9589 energy: 89.126667
+     [gene 10] trainInput[8] error: 3.0306 energy: 89.123333
+     [gene 10] trainInput[9] error: 2.7039 energy: 89.123333
+     [gene 10] trainInput[10] error: 1.8637 energy: 89.123333
+
+          [gene 10] error: 2.35731 energy: 89.1303332
+
+
+[level 2]:
+1 ['001101100101101111101011101101011100011000110100010101110101000101011101001011100101110111011101111', 41, 2.3249999999999997, 86.79566659999998, 44.56033329999999]
+2 ['001101100101101111101011101101011100011000110100010101110101000101011101001011100101110111000110111', 43, 2.3465100000000003, 86.78999989999998, 44.56825494999999]
+3 ['001101100101101111101011101100011100011000110100110101110101000101011101001010100101110111000101111', 44, 1.93581, 87.32533330000001, 44.63057165000001]
+4 ['001101100100101111101011101101011100011000110100010101110001000101011101001010100101110111000101111', 46, 1.99833, 87.6533334, 44.825831699999995]
+5 ['011101101010011000100001101101011100011100110100010101110101000101011101000010100101110111000101111', 48, 1.57395, 88.6410001, 45.10747505]
+6 ['001101100111101111101011101101011100011000110100011101110101000100011101001011100101110111000110111', 42, 2.3573100000000005, 89.1303332, 45.7438216]
+7 ['001101100101101111101011100000100111000101010011101110110010011001011000011011111000010101011101111', 45, 2.1698999999999997, 89.3283332, 45.7491166]
+8 ['011101101010011000110001100000100111000101010011101110110010011001011000011011111001010101000110111', 49, 2.0721700000000003, 89.72633320000001, 45.89925160000001]
+9 ['110111111001000001100100110111100110110111111010001001000100010011010000101101010110001001010010001', 51, 1.13961, 91.41533329999999, 46.277471649999995]
+10 ['001101100101101111101001101101011100001000110100011011010001000111000101100001010110011101100100100', 51, 1.3598700000000001, 91.43933340000001, 46.399601700000005]
+
+genetic algo iteration 4...
+chunk 1 start ...
+candidate gene 0...
+candidate gene 1...
+candidate gene 2...
+candidate gene 3...
+     [gene 1] trainInput[1] error: 1.9372 energy: 86.766667
+     [gene 1] trainInput[2] error: 1.5557 energy: 86.763333
+     [gene 1] trainInput[3] error: 3.2092 energy: 86.763333
+     [gene 1] trainInput[4] error: 2.1564 energy: 86.77
+     [gene 1] trainInput[5] error: 2.6387 energy: 86.756667
+     [gene 1] trainInput[6] error: 2.0139 energy: 86.783333
+     [gene 1] trainInput[7] error: 2.8645 energy: 86.783333
+     [gene 1] trainInput[8] error: 2.4216 energy: 86.793333
+     [gene 1] trainInput[9] error: 2.4813 energy: 86.78
+     [gene 1] trainInput[10] error: 2.2219 energy: 86.786667
+
+          [gene 1] error: 2.35004 energy: 86.7746666
+
+     [gene 2] trainInput[1] error: 0.9081 energy: 91.623333
+     [gene 2] trainInput[2] error: 0.7583 energy: 91.62
+     [gene 2] trainInput[3] error: 1.6262 energy: 91.646667
+     [gene 2] trainInput[4] error: 0.8852 energy: 91.676667
+     [gene 2] trainInput[5] error: 1.1693 energy: 91.673333
+     [gene 2] trainInput[6] error: 0.8918 energy: 91.693333
+     [gene 2] trainInput[7] error: 1.5649 energy: 91.643333
+     [gene 2] trainInput[8] error: 1.4181 energy: 91.686667
+     [gene 2] trainInput[9] error: 1.0253 energy: 91.643333
+     [gene 2] trainInput[10] error: 0.9141 energy: 91.69
+
+          [gene 2] error: 1.11613 energy: 91.6596666
+
+     [gene 3] trainInput[1] error: 1.65 energy: 89.196667
+     [gene 3] trainInput[2] error: 1.6847 energy: 89.176667
+     [gene 3] trainInput[3] error: 2.8259 energy: 89.186667
+     [gene 3] trainInput[4] error: 1.977 energy: 89.193333
+     [gene 3] trainInput[5] error: 2.7595 energy: 89.193333
+     [gene 3] trainInput[6] error: 1.912 energy: 89.2
+     [gene 3] trainInput[7] error: 3.1203 energy: 89.206667
+     [gene 3] trainInput[8] error: 2.4813 energy: 89.193333
+     [gene 3] trainInput[9] error: 2.3507 energy: 89.203333
+     [gene 3] trainInput[10] error: 2.0541 energy: 89.193333
+
+          [gene 3] error: 2.28155 energy: 89.1943333
+
+     [gene 4] trainInput[1] error: 1.8222 energy: 89.583333
+     [gene 4] trainInput[2] error: 1.5612 energy: 89.59
+     [gene 4] trainInput[3] error: 2.9541 energy: 89.583333
+     [gene 4] trainInput[4] error: 2.1722 energy: 89.586667
+     [gene 4] trainInput[5] error: 2.6612 energy: 89.59
+     [gene 4] trainInput[6] error: 1.8083 energy: 89.59
+     [gene 4] trainInput[7] error: 2.9681 energy: 89.59
+     [gene 4] trainInput[8] error: 2.4725 energy: 89.59
+     [gene 4] trainInput[9] error: 1.9901 energy: 89.593333
+     [gene 4] trainInput[10] error: 2.1862 energy: 89.59
+
+          [gene 4] error: 2.25961 energy: 89.5886666
+
+chunk 2 start ...
+candidate gene 4...
+candidate gene 5...
+candidate gene 6...
+candidate gene 7...
+     [gene 5] trainInput[1] error: 1.473 energy: 87.803333
+     [gene 5] trainInput[2] error: 1.5253 energy: 87.813333
+     [gene 5] trainInput[3] error: 2.3838 energy: 87.776667
+     [gene 5] trainInput[4] error: 1.6613 energy: 87.78
+     [gene 5] trainInput[5] error: 2.169 energy: 87.81
+     [gene 5] trainInput[6] error: 1.5424 energy: 87.806667
+     [gene 5] trainInput[7] error: 2.497 energy: 87.78
+     [gene 5] trainInput[8] error: 2.149 energy: 87.79
+     [gene 5] trainInput[9] error: 1.9889 energy: 87.773333
+     [gene 5] trainInput[10] error: 1.6827 energy: 87.78
+
+          [gene 5] error: 1.90724 energy: 87.7913333
+
+     [gene 6] trainInput[1] error: 1.6458 energy: 87.336667
+     [gene 6] trainInput[2] error: 1.3545 energy: 87.34
+     [gene 6] trainInput[3] error: 2.616 energy: 87.34
+     [gene 6] trainInput[4] error: 1.6996 energy: 87.34
+     [gene 6] trainInput[5] error: 2.23 energy: 87.336667
+     [gene 6] trainInput[6] error: 1.5362 energy: 87.326667
+     [gene 6] trainInput[7] error: 2.4398 energy: 87.303333
+     [gene 6] trainInput[8] error: 2.3029 energy: 87.333333
+     [gene 6] trainInput[9] error: 1.9696 energy: 87.31
+     [gene 6] trainInput[10] error: 1.8003 energy: 87.316667
+
+          [gene 6] error: 1.95947 energy: 87.3283334
+
+     [gene 7] trainInput[1] error: 1.6563 energy: 89.13
+     [gene 7] trainInput[2] error: 1.5951 energy: 89.126667
+     [gene 7] trainInput[3] error: 3.1143 energy: 89.133333
+     [gene 7] trainInput[4] error: 2.0508 energy: 89.126667
+     [gene 7] trainInput[5] error: 2.6282 energy: 89.13
+     [gene 7] trainInput[6] error: 1.3209 energy: 89.123333
+     [gene 7] trainInput[7] error: 2.7823 energy: 89.13
+     [gene 7] trainInput[8] error: 2.7183 energy: 89.133333
+     [gene 7] trainInput[9] error: 1.8165 energy: 89.12
+     [gene 7] trainInput[10] error: 1.9246 energy: 89.12
+
+          [gene 7] error: 2.16073 energy: 89.1273333
+
+     [gene 8] trainInput[1] error: 1.105 energy: 91.01
+     [gene 8] trainInput[2] error: 0.8926 energy: 91.01
+     [gene 8] trainInput[3] error: 1.6751 energy: 91.02
+     [gene 8] trainInput[4] error: 1.188 energy: 91.01
+     [gene 8] trainInput[5] error: 1.414 energy: 91.033333
+     [gene 8] trainInput[6] error: 0.9426 energy: 91.016667
+     [gene 8] trainInput[7] error: 1.8391 energy: 91.02
+     [gene 8] trainInput[8] error: 1.6885 energy: 91.01
+     [gene 8] trainInput[9] error: 1.2313 energy: 91.006667
+     [gene 8] trainInput[10] error: 1.2816 energy: 91.01
+
+          [gene 8] error: 1.32578 energy: 91.0146667
+
+chunk 3 start ...
+candidate gene 8...
+candidate gene 9...
+     [gene 9] trainInput[1] error: 1.646 energy: 89.556667
+     [gene 9] trainInput[2] error: 1.4894 energy: 89.556667
+     [gene 9] trainInput[3] error: 3.0438 energy: 89.563333
+     [gene 9] trainInput[4] error: 1.973 energy: 89.553333
+     [gene 9] trainInput[5] error: 2.4389 energy: 89.563333
+     [gene 9] trainInput[6] error: 1.8582 energy: 89.55
+     [gene 9] trainInput[7] error: 3.189 energy: 89.553333
+     [gene 9] trainInput[8] error: 3.1478 energy: 89.546667
+     [gene 9] trainInput[9] error: 2.5185 energy: 89.543333
+     [gene 9] trainInput[10] error: 2.0778 energy: 89.556667
+
+          [gene 9] error: 2.33824 energy: 89.5543333
+
+     [gene 10] trainInput[1] error: 1.8461 energy: 87.046667
+     [gene 10] trainInput[2] error: 1.718 energy: 87.05
+     [gene 10] trainInput[3] error: 3.0671 energy: 87.05
+     [gene 10] trainInput[4] error: 2.1188 energy: 87.046667
+     [gene 10] trainInput[5] error: 2.4091 energy: 87.06
+     [gene 10] trainInput[6] error: 1.7993 energy: 87.04
+     [gene 10] trainInput[7] error: 2.7635 energy: 87.043333
+     [gene 10] trainInput[8] error: 2.5143 energy: 87.056667
+     [gene 10] trainInput[9] error: 2.3634 energy: 87.033333
+     [gene 10] trainInput[10] error: 1.7615 energy: 87.04
+
+          [gene 10] error: 2.23611 energy: 87.0466667
+
+
+[level 2]:
+1 ['001101100101101111101011101101011100011000110100010101110101000101011101001011100101110111011101111', 41, 2.3500400000000004, 86.77466659999999, 44.5623533]
+2 ['001101100100101111101011101101011100011000110110010101110001000101011101001011100101110101000110111', 45, 2.23611, 87.04666669999997, 44.641388349999986]
+3 ['001101100101101111101011101100011100011000110100110101110101000101011101001010100101110111010101111', 43, 1.95947, 87.32833340000002, 44.64390170000001]
+4 ['011101101010011000111011101101011100011000110100010101110001000101011101001010100101110111000101011', 47, 1.9072400000000003, 87.79133329999999, 44.849286649999996]
+5 ['001101100111101111101011101101011000011000110100011101110101000100011101001011100101110111000110111', 43, 2.16073, 89.1273333, 45.64403165]
+6 ['001101100101101111101001101101011100001000110100011011010001000001011000011011111000010101011101111', 48, 2.28155, 89.19433330000001, 45.73794165]
+7 ['001101100100101111100001100000100110000101010011101110110010011001011000011011111001010101000111111', 49, 2.25961, 89.58866660000002, 45.92413830000001]
+8 ['001101100111101111101011101101011100011000110100011101110101000100011101001011100101110111100100101', 43, 2.33824, 89.55433329999998, 45.94628664999999]
+9 ['001101100101101111101001101101011100001000110100011011010001000111000111100001010110011101000110111', 48, 1.32578, 91.01466669999999, 46.17022334999999]
+10 ['001101100101101111101011100000100111000101000011101110110010011111000101100001010110011001100100100', 50, 1.1161299999999998, 91.6596666, 46.387898299999996]
+
+genetic algo iteration 5...
+chunk 1 start ...
+candidate gene 0...
+candidate gene 1...
+candidate gene 2...
+candidate gene 3...
+     [gene 1] trainInput[1] error: 1.9031 energy: 86.77
+     [gene 1] trainInput[2] error: 1.9202 energy: 86.77
+     [gene 1] trainInput[3] error: 3.3573 energy: 86.783333
+     [gene 1] trainInput[4] error: 1.8475 energy: 86.776667
+     [gene 1] trainInput[5] error: 2.8684 energy: 86.776667
+     [gene 1] trainInput[6] error: 1.7958 energy: 86.806667
+     [gene 1] trainInput[7] error: 2.9394 energy: 86.783333
+     [gene 1] trainInput[8] error: 2.6407 energy: 86.8
+     [gene 1] trainInput[9] error: 2.5263 energy: 86.823333
+     [gene 1] trainInput[10] error: 2.0546 energy: 86.783333
+
+          [gene 1] error: 2.38533 energy: 86.7873333
+
+     [gene 2] trainInput[1] error: 1.0257 energy: 91.88
+     [gene 2] trainInput[2] error: 0.7658 energy: 91.933333
+     [gene 2] trainInput[3] error: 1.2749 energy: 91.903333
+     [gene 2] trainInput[4] error: 1.0388 energy: 91.92
+     [gene 2] trainInput[5] error: 1.3035 energy: 91.906667
+     [gene 2] trainInput[6] error: 0.9194 energy: 91.893333
+     [gene 2] trainInput[7] error: 1.3376 energy: 91.906667
+     [gene 2] trainInput[8] error: 1.3788 energy: 91.896667
+     [gene 2] trainInput[9] error: 1.2588 energy: 91.916667
+     [gene 2] trainInput[10] error: 1.0931 energy: 91.903333
+
+          [gene 2] error: 1.13964 energy: 91.906
+
+     [gene 3] trainInput[1] error: 1.6018 energy: 89.58
+     [gene 3] trainInput[2] error: 1.4162 energy: 89.586667
+     [gene 3] trainInput[3] error: 2.7548 energy: 89.583333
+     [gene 3] trainInput[4] error: 1.6756 energy: 89.59
+     [gene 3] trainInput[5] error: 2.1319 energy: 89.59
+     [gene 3] trainInput[6] error: 1.4674 energy: 89.593333
+     [gene 3] trainInput[7] error: 2.8247 energy: 89.586667
+     [gene 3] trainInput[8] error: 2.1536 energy: 89.586667
+     [gene 3] trainInput[9] error: 2.2477 energy: 89.586667
+     [gene 3] trainInput[10] error: 1.9561 energy: 89.593333
+
+          [gene 3] error: 2.02298 energy: 89.5876667
+
+     [gene 4] trainInput[1] error: 1.6801 energy: 89.38
+     [gene 4] trainInput[2] error: 1.7009 energy: 89.39
+     [gene 4] trainInput[3] error: 2.6825 energy: 89.383333
+     [gene 4] trainInput[4] error: 1.8835 energy: 89.383333
+     [gene 4] trainInput[5] error: 2.4341 energy: 89.383333
+     [gene 4] trainInput[6] error: 1.6421 energy: 89.383333
+     [gene 4] trainInput[7] error: 2.8343 energy: 89.39
+     [gene 4] trainInput[8] error: 2.4223 energy: 89.39
+     [gene 4] trainInput[9] error: 2.2372 energy: 89.39
+     [gene 4] trainInput[10] error: 2.0003 energy: 89.396667
+
+          [gene 4] error: 2.15173 energy: 89.3869999
+
+chunk 2 start ...
+candidate gene 4...
+candidate gene 5...
+candidate gene 6...
+candidate gene 7...
+     [gene 5] trainInput[1] error: 1.6659 energy: 87.38
+     [gene 5] trainInput[2] error: 1.4644 energy: 87.39
+     [gene 5] trainInput[3] error: 2.8998 energy: 87.383333
+     [gene 5] trainInput[4] error: 1.7505 energy: 87.39
+     [gene 5] trainInput[5] error: 1.9758 energy: 87.37
+     [gene 5] trainInput[6] error: 1.6638 energy: 87.376667
+     [gene 5] trainInput[7] error: 2.4022 energy: 87.39
+     [gene 5] trainInput[8] error: 2.1536 energy: 87.376667
+     [gene 5] trainInput[9] error: 2.1381 energy: 87.393333
+     [gene 5] trainInput[10] error: 1.8813 energy: 87.396667
+
+          [gene 5] error: 1.99954 energy: 87.3846667
+
+     [gene 6] trainInput[1] error: 1.7938 energy: 88.99
+     [gene 6] trainInput[2] error: 1.4815 energy: 89.003333
+     [gene 6] trainInput[3] error: 3.2013 energy: 89.013333
+     [gene 6] trainInput[4] error: 2.0142 energy: 89.006667
+     [gene 6] trainInput[5] error: 2.6134 energy: 88.99
+     [gene 6] trainInput[6] error: 1.8239 energy: 89.006667
+     [gene 6] trainInput[7] error: 3.2019 energy: 89.006667
+     [gene 6] trainInput[8] error: 2.6938 energy: 88.996667
+     [gene 6] trainInput[9] error: 2.107 energy: 89.003333
+     [gene 6] trainInput[10] error: 1.6306 energy: 88.996667
+
+          [gene 6] error: 2.25614 energy: 89.0013334
+
+     [gene 7] trainInput[1] error: 1.8779 energy: 87.023333
+     [gene 7] trainInput[2] error: 1.693 energy: 87.016667
+     [gene 7] trainInput[3] error: 2.942 energy: 86.983333
+     [gene 7] trainInput[4] error: 1.803 energy: 86.986667
+     [gene 7] trainInput[5] error: 2.6362 energy: 87.013333
+     [gene 7] trainInput[6] error: 1.5426 energy: 86.993333
+     [gene 7] trainInput[7] error: 2.6555 energy: 87.0
+     [gene 7] trainInput[8] error: 2.28 energy: 87.036667
+     [gene 7] trainInput[9] error: 2.2731 energy: 87.033333
+     [gene 7] trainInput[10] error: 1.7515 energy: 86.99
+
+          [gene 7] error: 2.14548 energy: 87.0076666
+
+     [gene 8] trainInput[1] error: 1.6878 energy: 86.853333
+     [gene 8] trainInput[2] error: 1.512 energy: 86.856667
+     [gene 8] trainInput[3] error: 2.9725 energy: 86.85
+     [gene 8] trainInput[4] error: 1.9096 energy: 86.833333
+     [gene 8] trainInput[5] error: 2.7782 energy: 86.84
+     [gene 8] trainInput[6] error: 1.7496 energy: 86.843333
+     [gene 8] trainInput[7] error: 3.2209 energy: 86.856667
+     [gene 8] trainInput[8] error: 2.5526 energy: 86.846667
+     [gene 8] trainInput[9] error: 2.2085 energy: 86.85
+     [gene 8] trainInput[10] error: 2.0444 energy: 86.846667
+
+          [gene 8] error: 2.26361 energy: 86.8476667
+
+chunk 3 start ...
+candidate gene 8...
+candidate gene 9...
+     [gene 9] trainInput[1] error: 1.4501 energy: 87.43
+     [gene 9] trainInput[2] error: 1.5 energy: 87.386667
+     [gene 9] trainInput[3] error: 2.7982 energy: 87.393333
+     [gene 9] trainInput[4] error: 1.762 energy: 87.383333
+     [gene 9] trainInput[5] error: 1.9949 energy: 87.393333
+     [gene 9] trainInput[6] error: 1.3788 energy: 87.39
+     [gene 9] trainInput[7] error: 2.7415 energy: 87.396667
+     [gene 9] trainInput[8] error: 2.158 energy: 87.396667
+     [gene 9] trainInput[9] error: 1.9988 energy: 87.4
+     [gene 9] trainInput[10] error: 1.9341 energy: 87.393333
+
+          [gene 9] error: 1.97164 energy: 87.3963333
+
+     [gene 10] trainInput[1] error: 1.8179 energy: 89.453333
+     [gene 10] trainInput[2] error: 1.5248 energy: 89.456667
+     [gene 10] trainInput[3] error: 3.3092 energy: 89.46
+     [gene 10] trainInput[4] error: 1.987 energy: 89.45
+     [gene 10] trainInput[5] error: 2.8181 energy: 89.453333
+     [gene 10] trainInput[6] error: 1.7943 energy: 89.453333
+     [gene 10] trainInput[7] error: 2.8886 energy: 89.45
+     [gene 10] trainInput[8] error: 2.5685 energy: 89.453333
+     [gene 10] trainInput[9] error: 2.2482 energy: 89.453333
+     [gene 10] trainInput[10] error: 2.1214 energy: 89.45
+
+          [gene 10] error: 2.3078 energy: 89.4533332
+
+
+[level 2]:
+1 ['001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110', 45, 2.2636100000000003, 86.84766670000002, 44.55563835000001]
+2 ['001101100100101111101011101101011100011000110110010101111001000101011101001011100101100101000111111', 44, 2.14548, 87.0076666, 44.5765733]
+3 ['001101100101101111101011101101011100011000110100010101110101000101011101001011100101110111011101111', 41, 2.3853299999999997, 86.7873333, 44.58633165]
+4 ['001101000111101111101011101101011100011000110100010101110001000101011101001010101101110111000101011', 45, 1.97164, 87.3963333, 44.683986649999994]
+5 ['001101100101101111101001101101011100001000110100011101110101000101011101001010100111111111010101111', 42, 1.99954, 87.3846667, 44.69210335]
+6 ['001101101101111111101011101100001100011000110100110011010000000001011000011011111000110101011101111', 46, 2.2561400000000003, 89.0013334, 45.6287367]
+7 ['001101100100101111101011101101011110011000110110000101110001000111001101001011100101110101000110111', 45, 2.1517299999999997, 89.38699989999999, 45.769364949999996]
+8 ['001101100101101110100011100000100110000101010011101110110010011001011001011010111001010101000111111', 48, 2.0229799999999996, 89.58766670000003, 45.805323350000016]
+9 ['011101101010011000111011101101011010011000110100011101110101000100011101001011100101110111000110111', 44, 2.3078, 89.45333320000002, 45.88056660000001]
+10 ['001101101100101111100001100000100111000101000011101110110010011111000101100001010110011001100100100', 52, 1.13964, 91.90599999999999, 46.522819999999996]
+
+
+
+****** Statistically Gurantee Start ******
+
+
+Test bestgene from genetic algorithm
+
+['001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110', 45, 2.2636100000000003, 86.84766670000002, 44.55563835000001]
+
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[11] error: 2.3877 energy: 86.836667
+pass - trainInput[11]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[12] error: 1.9093 energy: 86.833333
+pass - trainInput[12]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[13] error: 1.8136 energy: 86.83
+pass - trainInput[13]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[14] error: 2.39 energy: 86.843333
+pass - trainInput[14]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[15] error: 1.6529 energy: 86.83
+pass - trainInput[15]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[16] error: 2.4019 energy: 86.843333
+pass - trainInput[16]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[17] error: 2.0185 energy: 86.84
+pass - trainInput[17]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[18] error: 2.4219 energy: 86.84
+pass - trainInput[18]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[19] error: 1.3814 energy: 86.84
+pass - trainInput[19]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[20] error: 2.036 energy: 86.836667
+pass - trainInput[20]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[21] error: 1.7028 energy: 86.84
+pass - trainInput[21]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[22] error: 1.9023 energy: 86.84
+pass - trainInput[22]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[23] error: 1.9019 energy: 86.84
+pass - trainInput[23]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[24] error: 2.3409 energy: 86.833333
+pass - trainInput[24]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[25] error: 1.8388 energy: 86.836667
+pass - trainInput[25]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[26] error: 1.8426 energy: 86.826667
+pass - trainInput[26]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[27] error: 1.9772 energy: 86.84
+pass - trainInput[27]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[28] error: 3.2347 energy: 86.83
+pass - trainInput[28]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[29] error: 2.0632 energy: 86.84
+pass - trainInput[29]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[30] error: 2.2669 energy: 86.84
+pass - trainInput[30]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[31] error: 1.4819 energy: 86.846667
+pass - trainInput[31]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[32] error: 2.309 energy: 86.85
+pass - trainInput[32]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[33] error: 2.3178 energy: 86.83
+pass - trainInput[33]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[34] error: 2.536 energy: 86.833333
+pass - trainInput[34]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[35] error: 2.1477 energy: 86.836667
+pass - trainInput[35]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[36] error: 1.7189 energy: 86.836667
+pass - trainInput[36]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[37] error: 1.9063 energy: 86.83
+pass - trainInput[37]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[38] error: 3.0198 energy: 86.823333
+pass - trainInput[38]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[39] error: 1.9884 energy: 86.85
+pass - trainInput[39]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[40] error: 2.4082 energy: 86.84
+pass - trainInput[40]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[41] error: 1.7665 energy: 86.833333
+pass - trainInput[41]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[42] error: 1.509 energy: 86.833333
+pass - trainInput[42]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[43] error: 2.5758 energy: 86.81
+pass - trainInput[43]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[44] error: 1.9849 energy: 86.826667
+pass - trainInput[44]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[45] error: 2.1112 energy: 86.84
+pass - trainInput[45]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[46] error: 1.6577 energy: 86.83
+pass - trainInput[46]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[47] error: 2.201 energy: 86.836667
+pass - trainInput[47]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[48] error: 2.3834 energy: 86.843333
+pass - trainInput[48]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[49] error: 1.4409 energy: 86.833333
+pass - trainInput[49]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[50] error: 2.2582 energy: 86.826667
+pass - trainInput[50]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[51] error: 1.7344 energy: 86.836667
+pass - trainInput[51]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[52] error: 2.28 energy: 86.836667
+pass - trainInput[52]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[53] error: 1.7963 energy: 86.836667
+pass - trainInput[53]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[54] error: 1.6013 energy: 86.823333
+pass - trainInput[54]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[55] error: 2.4082 energy: 86.843333
+pass - trainInput[55]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[56] error: 1.5231 energy: 86.84
+pass - trainInput[56]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[57] error: 1.9354 energy: 86.83
+pass - trainInput[57]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[58] error: 2.623 energy: 86.836667
+pass - trainInput[58]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[59] error: 2.8786 energy: 86.876667
+pass - trainInput[59]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[60] error: 2.2853 energy: 86.843333
+pass - trainInput[60]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[61] error: 1.7015 energy: 86.833333
+pass - trainInput[61]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[62] error: 1.5754 energy: 86.84
+pass - trainInput[62]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[63] error: 2.9606 energy: 86.846667
+pass - trainInput[63]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[64] error: 1.7213 energy: 86.833333
+pass - trainInput[64]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[65] error: 1.9582 energy: 86.843333
+pass - trainInput[65]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[66] error: 2.1073 energy: 86.836667
+pass - trainInput[66]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[67] error: 2.8294 energy: 86.83
+pass - trainInput[67]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[68] error: 2.1432 energy: 86.83
+pass - trainInput[68]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[69] error: 2.8242 energy: 86.826667
+pass - trainInput[69]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[70] error: 2.0263 energy: 86.856667
+pass - trainInput[70]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[71] error: 1.5037 energy: 86.85
+pass - trainInput[71]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[72] error: 1.721 energy: 86.833333
+pass - trainInput[72]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[73] error: 3.319 energy: 86.843333
+pass - trainInput[73]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[74] error: 1.4131 energy: 86.833333
+pass - trainInput[74]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[75] error: 0.8202 energy: 86.84
+pass - trainInput[75]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[76] error: 1.5137 energy: 86.833333
+pass - trainInput[76]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[77] error: 2.7442 energy: 86.833333
+pass - trainInput[77]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[78] error: 1.2881 energy: 86.826667
+pass - trainInput[78]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[79] error: 2.5644 energy: 86.836667
+pass - trainInput[79]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[80] error: 1.4045 energy: 86.836667
+pass - trainInput[80]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[81] error: 2.1873 energy: 86.84
+pass - trainInput[81]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[82] error: 2.4038 energy: 86.826667
+pass - trainInput[82]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[83] error: 1.7132 energy: 86.833333
+pass - trainInput[83]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[84] error: 2.2529 energy: 86.826667
+pass - trainInput[84]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[85] error: 2.6016 energy: 86.843333
+pass - trainInput[85]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[86] error: 1.6127 energy: 86.833333
+pass - trainInput[86]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[87] error: 2.274 energy: 86.83
+pass - trainInput[87]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[88] error: 2.2977 energy: 86.823333
+pass - trainInput[88]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[89] error: 2.3732 energy: 86.846667
+pass - trainInput[89]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[90] error: 1.7163 energy: 86.84
+pass - trainInput[90]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[91] error: 2.3628 energy: 86.833333
+pass - trainInput[91]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[92] error: 2.3382 energy: 86.836667
+pass - trainInput[92]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[93] error: 2.3828 energy: 86.843333
+pass - trainInput[93]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[94] error: 1.5288 energy: 86.83
+pass - trainInput[94]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[95] error: 1.2707 energy: 86.846667
+pass - trainInput[95]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[96] error: 1.5528 energy: 86.83
+pass - trainInput[96]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[97] error: 1.7891 energy: 86.826667
+pass - trainInput[97]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[98] error: 2.0995 energy: 86.836667
+pass - trainInput[98]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[99] error: 1.5682 energy: 86.83
+pass - trainInput[99]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[100] error: 1.3501 energy: 86.843333
+pass - trainInput[100]
+
+  ->  Bestgene from genetic algorithm passed the test!
+
+
+****** Final Test start ******
+
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[11] error: 2.3373 energy: 86.84
+pass - testInput[11]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[12] error: 1.9111 energy: 86.84
+pass - testInput[12]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[13] error: 1.5433 energy: 86.83
+pass - testInput[13]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[14] error: 2.2448 energy: 86.833333
+pass - testInput[14]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[15] error: 1.6354 energy: 86.843333
+pass - testInput[15]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[16] error: 2.1263 energy: 86.833333
+pass - testInput[16]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[17] error: 2.0139 energy: 86.836667
+pass - testInput[17]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[18] error: 2.4226 energy: 86.83
+pass - testInput[18]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[19] error: 1.7688 energy: 86.836667
+pass - testInput[19]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[20] error: 2.1681 energy: 86.843333
+pass - testInput[20]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[21] error: 1.9526 energy: 86.83
+pass - testInput[21]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[22] error: 1.8217 energy: 86.843333
+pass - testInput[22]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[23] error: 1.6515 energy: 86.833333
+pass - testInput[23]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[24] error: 2.1674 energy: 86.83
+pass - testInput[24]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[25] error: 2.0428 energy: 86.84
+pass - testInput[25]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[26] error: 1.6513 energy: 86.84
+pass - testInput[26]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[27] error: 2.0753 energy: 86.833333
+pass - testInput[27]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[28] error: 2.9034 energy: 86.83
+pass - testInput[28]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[29] error: 1.9264 energy: 86.843333
+pass - testInput[29]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[30] error: 2.3047 energy: 86.833333
+pass - testInput[30]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[31] error: 1.6061 energy: 86.823333
+pass - testInput[31]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[32] error: 2.2645 energy: 86.84
+pass - testInput[32]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[33] error: 2.2978 energy: 86.84
+pass - testInput[33]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[34] error: 2.7511 energy: 86.836667
+pass - testInput[34]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[35] error: 1.9328 energy: 86.833333
+pass - testInput[35]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[36] error: 1.7991 energy: 86.833333
+pass - testInput[36]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[37] error: 1.7501 energy: 86.843333
+pass - testInput[37]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[38] error: 3.2202 energy: 86.826667
+pass - testInput[38]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[39] error: 1.9021 energy: 86.843333
+pass - testInput[39]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[40] error: 2.3397 energy: 86.83
+pass - testInput[40]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[41] error: 1.4805 energy: 86.833333
+pass - testInput[41]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[42] error: 1.3751 energy: 86.836667
+pass - testInput[42]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[43] error: 2.8205 energy: 86.83
+pass - testInput[43]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[44] error: 1.7948 energy: 86.836667
+pass - testInput[44]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[45] error: 1.8476 energy: 86.836667
+pass - testInput[45]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[46] error: 1.6368 energy: 86.82
+pass - testInput[46]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[47] error: 2.1781 energy: 86.83
+pass - testInput[47]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[48] error: 2.4044 energy: 86.833333
+pass - testInput[48]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[49] error: 1.2307 energy: 86.843333
+pass - testInput[49]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[50] error: 2.1918 energy: 86.83
+pass - testInput[50]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[51] error: 1.8146 energy: 86.833333
+pass - testInput[51]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[52] error: 2.1626 energy: 86.836667
+pass - testInput[52]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[53] error: 1.6393 energy: 86.84
+pass - testInput[53]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[54] error: 1.9607 energy: 86.836667
+pass - testInput[54]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[55] error: 2.3295 energy: 86.836667
+pass - testInput[55]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[56] error: 1.6257 energy: 86.83
+pass - testInput[56]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[57] error: 2.2291 energy: 86.84
+pass - testInput[57]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[58] error: 2.4533 energy: 86.843333
+pass - testInput[58]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[59] error: 3.1305 energy: 86.82
+pass - testInput[59]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[60] error: 2.1669 energy: 86.836667
+pass - testInput[60]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[61] error: 1.6653 energy: 86.826667
+pass - testInput[61]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[62] error: 1.3963 energy: 86.833333
+pass - testInput[62]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[63] error: 2.6284 energy: 86.833333
+pass - testInput[63]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[64] error: 1.6705 energy: 86.833333
+pass - testInput[64]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[65] error: 1.8249 energy: 86.833333
+pass - testInput[65]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[66] error: 1.8734 energy: 86.836667
+pass - testInput[66]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[67] error: 2.6712 energy: 86.83
+pass - testInput[67]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[68] error: 2.2665 energy: 86.843333
+pass - testInput[68]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[69] error: 2.5452 energy: 86.836667
+pass - testInput[69]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[70] error: 2.1301 energy: 86.84
+pass - testInput[70]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[71] error: 1.6614 energy: 86.836667
+pass - testInput[71]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[72] error: 1.5501 energy: 86.833333
+pass - testInput[72]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[73] error: 3.7606 energy: 86.823333
+pass - testInput[73]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[74] error: 1.2196 energy: 86.836667
+pass - testInput[74]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[75] error: 1.0506 energy: 86.836667
+pass - testInput[75]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[76] error: 1.7127 energy: 86.826667
+pass - testInput[76]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[77] error: 2.8251 energy: 86.836667
+pass - testInput[77]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[78] error: 1.2926 energy: 86.836667
+pass - testInput[78]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[79] error: 2.4937 energy: 86.84
+pass - testInput[79]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[80] error: 1.503 energy: 86.836667
+pass - testInput[80]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[81] error: 2.2643 energy: 86.836667
+pass - testInput[81]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[82] error: 2.7345 energy: 86.833333
+pass - testInput[82]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[83] error: 1.5312 energy: 86.836667
+pass - testInput[83]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[84] error: 2.1027 energy: 86.843333
+pass - testInput[84]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[85] error: 2.6238 energy: 86.84
+pass - testInput[85]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[86] error: 2.0065 energy: 86.82
+pass - testInput[86]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[87] error: 2.1493 energy: 86.88
+pass - testInput[87]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[88] error: 2.1552 energy: 86.833333
+pass - testInput[88]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[89] error: 2.2989 energy: 86.843333
+pass - testInput[89]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[90] error: 1.4208 energy: 86.85
+pass - testInput[90]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[91] error: 2.2888 energy: 86.846667
+pass - testInput[91]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[92] error: 1.9936 energy: 86.823333
+pass - testInput[92]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[93] error: 2.2708 energy: 86.83
+pass - testInput[93]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[94] error: 1.3893 energy: 86.84
+pass - testInput[94]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[95] error: 1.5138 energy: 86.83
+pass - testInput[95]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[96] error: 1.6078 energy: 86.83
+pass - testInput[96]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[97] error: 1.6919 energy: 86.883333
+pass - testInput[97]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[98] error: 2.3418 energy: 86.83
+pass - testInput[98]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[99] error: 1.5369 energy: 86.836667
+pass - testInput[99]
+chunk 1 start ...
+     gene[001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110] trainInput[100] error: 1.3314 energy: 86.833333
+pass - testInput[100]
+
+****** Final Test end ******
+
+Bestgene: ['001101100101101111101011101101011100011000110100010001110101000101011101001011100101110111010100110', 45, 2.2636100000000003, 86.84766670000002, 44.55563835000001]
