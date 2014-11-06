@@ -107,16 +107,18 @@ public class ExampleAssociatePoints<T extends ImageSingleBand, TD extends TupleD
 	 */
 	private void describeImage(T input, List<Point2D_F64> points, FastQueue<TD> descs )
 	{
+		/*
 		detDesc.detect(input);
 
 		for( int i = 0; i < detDesc.getNumberOfFeatures(); i++ ) {
 			points.add( detDesc.getLocation(i).copy() );
 			descs.grow().setTo(detDesc.getDescription(i));
 		}
+		*/
 	}
 
 	public static void main( String args[] ) {
-
+/*
 		Class imageType = ImageFloat32.class;
 
 		// select which algorithms to use
@@ -133,5 +135,6 @@ public class ExampleAssociatePoints<T extends ImageSingleBand, TD extends TupleD
 		BufferedImage imageB = UtilImageIO.loadImage("../data/evaluation/stitch/kayak_03.jpg");
 
 		app.associate(imageA,imageB);
+		*/
 	}
 }

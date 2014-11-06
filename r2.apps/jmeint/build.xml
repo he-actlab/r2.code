@@ -18,7 +18,8 @@
     <property name="cfrt.jar" value="../../checker-runtime/build/cfrt.jar" />
     <property name="enerj.checker" value="enerj.PrecisionChecker" />
 
-		<!-- ExpAX -->
+		<!-- R2 -->
+		<property name="r2.dir" value="${env.R2_ANALYSIS}" />
 		<property name="r2.jar" value="${r2.dir}/r2-analysis.jar" />
 
     <property name="r2bc.info" value="${user.dir}/jmeint-bc-offset.info" /> 

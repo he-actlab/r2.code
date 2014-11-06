@@ -36,7 +36,8 @@ my %benchmarks = (
 		"zxing" => "zxing",
 		"sobel" => "sobel",
 		"jmeint" => "jmeint",
-		"simpleRaytracer" => "simpleRaytracer"
+		"simpleRaytracer" => "simpleRaytracer",
+		"boofcv" => "boofcv"
 );
 my @programs = keys %benchmarks;
 

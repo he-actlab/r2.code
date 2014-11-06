@@ -8,6 +8,7 @@ public class Restrict {
 	public static char restrict(char c){return c;}
 	public static short restrict(short s){return s;}
 	public static long restrict(long l){return l;}
+	public static boolean restrict(boolean b){return b;}
 	
 	//TODO generate enough possible precise_all
 	public static double[] restrict_all_FIELD1_TAG1(double[] d){return d;}

@@ -24,6 +24,7 @@ import boofcv.alg.transform.ii.IntegralKernel;
 import boofcv.struct.image.ImageFloat32;
 import boofcv.struct.image.ImageSInt32;
 
+//import chord.analyses.r2.lang.*;
 
 /**
  * <p>
@@ -124,6 +125,8 @@ public class ImplIntegralImageFeatureIntensity {
 
 		float det = Dxx*Dyy-0.81f*Dxy*Dxy;
 
+//		Relax.relax(det);
+		
 		intensity.set(x,y,det);
 	}
 
@@ -199,7 +202,11 @@ public class ImplIntegralImageFeatureIntensity {
 				Dxy *= norm;
 				Dyy *= norm;
 
-				intensity.data[indexDst] = Dxx*Dyy-0.81f*Dxy*Dxy;
+				float ftemp = Dxx*Dyy-0.81f*Dxy*Dxy;
+				
+//				Relax.relax(ftemp);
+				
+				intensity.data[indexDst] = ftemp;
 
 				indexTop += skip;
 				indexBottom += skip;

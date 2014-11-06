@@ -104,7 +104,7 @@ public class StitchingFromMotion2D<I extends ImageBase, IT extends InvertibleTra
 		this.converter = converter;
 		this.maxJumpFraction = maxJumpFraction;
 
-		worldToCurr = (IT)motion.getFirstToCurrent().createInstance();
+//		worldToCurr = (IT)motion.getFirstToCurrent().createInstance();
 	}
 
 	/**
@@ -116,11 +116,11 @@ public class StitchingFromMotion2D<I extends ImageBase, IT extends InvertibleTra
 	 *                    null means no transform.
 	 */
 	public void configure( int widthStitch, int heightStitch , IT worldToInit ) {
-		this.worldToInit = (IT)worldToCurr.createInstance();
-		if( worldToInit != null )
-			this.worldToInit.set(worldToInit);
-		this.widthStitch = widthStitch;
-		this.heightStitch = heightStitch;
+//		this.worldToInit = (IT)worldToCurr.createInstance();
+//		if( worldToInit != null )
+//			this.worldToInit.set(worldToInit);
+//		this.widthStitch = widthStitch;
+//		this.heightStitch = heightStitch;
 	}
 
 	/**
@@ -132,19 +132,20 @@ public class StitchingFromMotion2D<I extends ImageBase, IT extends InvertibleTra
 	 * @return True if the stitched image is updated and false if it failed and was not
 	 */
 	public boolean process( I image ) {
-		if( stitchedImage == null ) {
-			stitchedImage = (I)image._createNew(widthStitch, heightStitch);
-			workImage = (I)image._createNew(widthStitch, heightStitch);
-		}
+//		if( stitchedImage == null ) {
+//			stitchedImage = (I)image._createNew(widthStitch, heightStitch);
+//			workImage = (I)image._createNew(widthStitch, heightStitch);
+//		}
 
-		if( motion.process(image) ) {
-			update(image);
-
-			// check to see if an unstable and improbably solution was generated
-			return !checkLargeMotion(image.width, image.height);
-		} else {
-			return false;
-		}
+//		if( motion.process(image) ) {
+//			update(image);
+//
+//			// check to see if an unstable and improbably solution was generated
+//			return !checkLargeMotion(image.width, image.height);
+//		} else {
+//			return false;
+//		}
+		return false;
 	}
 
 	/**
@@ -211,14 +212,14 @@ public class StitchingFromMotion2D<I extends ImageBase, IT extends InvertibleTra
 	}
 
 	private void computeCurrToInit_PixelTran() {
-		IT initToCurr = motion.getFirstToCurrent();
-		worldToInit.concat(initToCurr, worldToCurr);
-
-		tranWorldToCurr = converter.convertPixel(worldToCurr,tranWorldToCurr);
-
-		IT currToWorld = (IT) this.worldToCurr.invert(null);
-
-		tranCurrToWorld = converter.convertPixel(currToWorld, tranCurrToWorld);
+//		IT initToCurr = motion.getFirstToCurrent();
+//		worldToInit.concat(initToCurr, worldToCurr);
+//
+//		tranWorldToCurr = converter.convertPixel(worldToCurr,tranWorldToCurr);
+//
+//		IT currToWorld = (IT) this.worldToCurr.invert(null);
+//
+//		tranCurrToWorld = converter.convertPixel(currToWorld, tranCurrToWorld);
 	}
 
 	/**
@@ -227,27 +228,27 @@ public class StitchingFromMotion2D<I extends ImageBase, IT extends InvertibleTra
 	 * Must be called after {@link #process(boofcv.struct.image.ImageBase)}.
 	 */
 	public void setOriginToCurrent() {
-		IT currToWorld = (IT)worldToCurr.invert(null);
-		IT oldWorldToNewWorld = (IT) worldToInit.concat(currToWorld,null);
-
-		PixelTransform_F32 newToOld = converter.convertPixel(oldWorldToNewWorld,null);
-
-		// fill in the background color
-		GImageMiscOps.fill(workImage, 0);
-		// render the transform
-		distorter.setModel(newToOld);
-		distorter.apply(stitchedImage, workImage);
-
-		// swap the two images
-		I s = workImage;
-		workImage = stitchedImage;
-		stitchedImage = s;
-
-		// have motion estimates be relative to this frame
-		motion.setToFirst();
-		first = true;
-
-		computeCurrToInit_PixelTran();
+//		IT currToWorld = (IT)worldToCurr.invert(null);
+//		IT oldWorldToNewWorld = (IT) worldToInit.concat(currToWorld,null);
+//
+//		PixelTransform_F32 newToOld = converter.convertPixel(oldWorldToNewWorld,null);
+//
+//		// fill in the background color
+//		GImageMiscOps.fill(workImage, 0);
+//		// render the transform
+//		distorter.setModel(newToOld);
+//		distorter.apply(stitchedImage, workImage);
+//
+//		// swap the two images
+//		I s = workImage;
+//		workImage = stitchedImage;
+//		stitchedImage = s;
+//
+//		// have motion estimates be relative to this frame
+//		motion.setToFirst();
+//		first = true;
+//
+//		computeCurrToInit_PixelTran();
 	}
 
 	/**
@@ -260,32 +261,32 @@ public class StitchingFromMotion2D<I extends ImageBase, IT extends InvertibleTra
 	 */
 	public void resizeStitchImage( int widthStitch, int heightStitch , IT newToOldStitch ) {
 
-		// copy the old image into the new one
-		workImage.reshape(widthStitch,heightStitch);
-		GImageMiscOps.fill(workImage, 0);
-		if( newToOldStitch != null ) {
-			PixelTransform_F32 newToOld = converter.convertPixel(newToOldStitch,null);
-			distorter.setModel(newToOld);
-			distorter.apply(stitchedImage, workImage);
-
-			// update the transforms
-			IT tmp = (IT)worldToCurr.createInstance();
-			newToOldStitch.concat(worldToInit, tmp);
-			worldToInit.set(tmp);
-
-			computeCurrToInit_PixelTran();
-		} else {
-			int overlapWidth = Math.min(widthStitch,stitchedImage.width);
-			int overlapHeight = Math.min(heightStitch,stitchedImage.height);
-			GImageMiscOps.copy(0,0,0,0,overlapWidth,overlapHeight,stitchedImage,workImage);
-		}
-		stitchedImage.reshape(widthStitch,heightStitch);
-		I tmp = stitchedImage;
-		stitchedImage = workImage;
-		workImage = tmp;
-
-		this.widthStitch = widthStitch;
-		this.heightStitch = heightStitch;
+//		// copy the old image into the new one
+//		workImage.reshape(widthStitch,heightStitch);
+//		GImageMiscOps.fill(workImage, 0);
+//		if( newToOldStitch != null ) {
+//			PixelTransform_F32 newToOld = converter.convertPixel(newToOldStitch,null);
+//			distorter.setModel(newToOld);
+//			distorter.apply(stitchedImage, workImage);
+//
+//			// update the transforms
+//			IT tmp = (IT)worldToCurr.createInstance();
+//			newToOldStitch.concat(worldToInit, tmp);
+//			worldToInit.set(tmp);
+//
+//			computeCurrToInit_PixelTran();
+//		} else {
+//			int overlapWidth = Math.min(widthStitch,stitchedImage.width);
+//			int overlapHeight = Math.min(heightStitch,stitchedImage.height);
+//			GImageMiscOps.copy(0,0,0,0,overlapWidth,overlapHeight,stitchedImage,workImage);
+//		}
+//		stitchedImage.reshape(widthStitch,heightStitch);
+//		I tmp = stitchedImage;
+//		stitchedImage = workImage;
+//		workImage = tmp;
+//
+//		this.widthStitch = widthStitch;
+//		this.heightStitch = heightStitch;
 	}
 
 	/**

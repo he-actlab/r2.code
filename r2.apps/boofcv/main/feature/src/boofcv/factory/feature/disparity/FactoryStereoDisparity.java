@@ -103,6 +103,9 @@ public class FactoryStereoDisparity {
 
 		DisparityScoreRowFormat<T,ImageUInt8> alg = null;
 
+		/*
+		 * jspark - comment out due to compilation error
+		 * 
 		switch( whichAlg ) {
 			case RECT:
 				if( imageType == ImageUInt8.class ) {
@@ -136,7 +139,7 @@ public class FactoryStereoDisparity {
 		}
 		if( alg == null)
 			throw new RuntimeException("Image type not supported: "+imageType.getSimpleName() );
-
+		*/
 		return new WrapDisparitySadRect<T,ImageUInt8>(alg);
 	}
 
@@ -186,6 +189,9 @@ public class FactoryStereoDisparity {
 
 		DisparityScoreRowFormat<T,ImageFloat32> alg = null;
 
+		/*
+		 * jspark - comment out due to compilation error
+		 *
 		switch( whichAlg ) {
 			case RECT:
 				if( imageType == ImageUInt8.class ) {
@@ -219,7 +225,7 @@ public class FactoryStereoDisparity {
 		}
 		if( alg == null)
 			throw new RuntimeException("Image type not supported: "+imageType.getSimpleName() );
-
+		*/
 		return new WrapDisparitySadRect<T,ImageFloat32>(alg);
 	}
 

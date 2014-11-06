@@ -73,14 +73,17 @@ public abstract class ImageBase<T extends ImageBase> implements Serializable, Cl
 	 *
 	 * @return true if it is a subimage, otherwise false.
 	 */
+	// called
 	public boolean isSubimage() {
 		return subImage;
 	}
 
+	// called
 	public final boolean isInBounds(int x, int y) {
 		return x >= 0 && x < width && y >= 0 && y < height;
 	}
 
+	// called
 	public int getIndex(int x, int y) {
 		return startIndex + y * stride + x;
 	}
@@ -119,8 +122,13 @@ public abstract class ImageBase<T extends ImageBase> implements Serializable, Cl
 
 	public Point2D_I32 indexToPixel( int index )
 	{
+		/*
+		 * jspark  
+		 *
 		index -= startIndex;
 		return new Point2D_I32( index % stride , index / stride );
+		*/
+		return null;
 	}
 
 	/**
@@ -141,7 +149,12 @@ public abstract class ImageBase<T extends ImageBase> implements Serializable, Cl
 	 * @return Description of the image data structure
 	 */
 	public ImageType<T> getImageType() {
+		/*
+		 * jspark
+		 *
 		return imageType;
+		*/
+		return null;
 	}
 
 	/**
@@ -153,10 +166,15 @@ public abstract class ImageBase<T extends ImageBase> implements Serializable, Cl
 	@SuppressWarnings({"unchecked", "CloneDoesntDeclareCloneNotSupportedException", "CloneDoesntCallSuperClone"})
 	@Override
 	public T clone() {
+		/*
+		 * jspark
+		 *
 		T ret = _createNew(width,height);
 
 		ret.setTo(this);
 
 		return ret;
+		*/
+		return null;
 	}
 }

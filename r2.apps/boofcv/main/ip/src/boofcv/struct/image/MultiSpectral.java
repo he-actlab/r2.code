@@ -79,6 +79,9 @@ public class MultiSpectral<T extends ImageSingleBand> extends ImageMultiBand<Mul
 	 * @param numBands Total number of bands.
 	 */
 	public MultiSpectral(Class<T> type, int width, int height, int numBands) {
+		/*
+		 * jspark
+		 *
 		this.type = type;
 		this.stride = width;
 		this.width = width;
@@ -89,6 +92,7 @@ public class MultiSpectral<T extends ImageSingleBand> extends ImageMultiBand<Mul
 			bands[i] = GeneralizedImageOps.createSingleBand(type, width, height);
 		}
 		this.imageType = ImageType.ms(numBands,type);
+		*/
 	}
 	
 	/**
@@ -98,9 +102,13 @@ public class MultiSpectral<T extends ImageSingleBand> extends ImageMultiBand<Mul
 	 * @param numBands Number of bands in the image.
 	 */
 	public MultiSpectral(Class<T> type, int numBands) {
+		/*
+		 * jspark
+		 *
 		this.type = type;
 		this.bands = (T[]) Array.newInstance(type, numBands);
 		this.imageType = ImageType.ms(numBands,type);
+		*/
 	}
 
 
@@ -110,7 +118,12 @@ public class MultiSpectral<T extends ImageSingleBand> extends ImageMultiBand<Mul
 	 * @return The type of ImageSingleBand which each band is stored as.
 	 */
 	public Class<T> getType() {
+		/*
+		 * jspark 
+		 *
 		return type;
+		*/
+		return null;
 	}
 
 	/**
@@ -120,7 +133,12 @@ public class MultiSpectral<T extends ImageSingleBand> extends ImageMultiBand<Mul
 	 */
 	@Override
 	public int getNumBands() {
+		/*
+		 * jspark
+		 * 
 		return bands.length;
+		*/
+		return -1;
 	}
 
 	/**
@@ -130,10 +148,15 @@ public class MultiSpectral<T extends ImageSingleBand> extends ImageMultiBand<Mul
 	 * @return Image band
 	 */
 	public T getBand(int band) {
+		/*
+		 * jspark
+		 * 
 		if (band >= bands.length || band < 0)
 			throw new IllegalArgumentException("The specified band is out of bounds: "+band);
 
 		return bands[band];
+		*/
+		return null;
 	}
 
 	/**
@@ -151,6 +174,9 @@ public class MultiSpectral<T extends ImageSingleBand> extends ImageMultiBand<Mul
 	 */
 	@Override
 	public MultiSpectral<T> subimage(int x0, int y0, int x1, int y1, MultiSpectral<T> subimage) {
+		/*
+		 * jspark
+		 *
 		if (x0 < 0 || y0 < 0)
 			throw new IllegalArgumentException("x0 or y0 is less than zero");
 		if (x1 < x0 || y1 < y0)
@@ -170,6 +196,8 @@ public class MultiSpectral<T extends ImageSingleBand> extends ImageMultiBand<Mul
 		}
 		
 		return ret;
+		*/
+		return null;
 	}
 
 	/**
@@ -180,6 +208,9 @@ public class MultiSpectral<T extends ImageSingleBand> extends ImageMultiBand<Mul
 	 */
 	@Override
 	public void setTo( MultiSpectral<T> orig) {
+		/*
+		 * jspark
+		 *
 		if (orig.width != width || orig.height != height)
 			throw new IllegalArgumentException("The width and/or height of 'orig' is not the same as this class");
 		if( orig.getNumBands() != getNumBands() )
@@ -191,6 +222,7 @@ public class MultiSpectral<T extends ImageSingleBand> extends ImageMultiBand<Mul
 		for( int i = 0; i < N; i++ ) {
 			bands[i].setTo(orig.getBand(i));
 		}
+		*/
 	}
 
 	/**
@@ -202,7 +234,9 @@ public class MultiSpectral<T extends ImageSingleBand> extends ImageMultiBand<Mul
 	 */
 	@Override
 	public void reshape(int width, int height) {
-
+		/*
+		 * jspark
+		 * 
 		for( int i = 0; i < bands.length; i++ ) {
 			bands[i].reshape(width,height);
 		}
@@ -211,6 +245,7 @@ public class MultiSpectral<T extends ImageSingleBand> extends ImageMultiBand<Mul
 		this.stride = width;
 		this.width = width;
 		this.height = height;
+		*/
 	}
 
 	/**
@@ -222,18 +257,36 @@ public class MultiSpectral<T extends ImageSingleBand> extends ImageMultiBand<Mul
 	 */
 	@Override
 	public MultiSpectral<T> _createNew(int imgWidth, int imgHeight) {
+		/*
+		 * jspark
+		 *
 		return new MultiSpectral<T>(type,imgWidth,imgHeight,bands.length);
+		*/
+		return null;
 	}
 
 	public void setType(Class<T> type) {
+		/*
+		 * jspark
+		 *
 		this.type = type;
+		*/
 	}
 
 	public T[] getBands() {
+		/*
+		 * jspark
+		 * 
 		return bands;
+		*/
+		return null;
 	}
 
 	public void setBands(T[] bands) {
+		/*
+		 * jspark
+		 * 
 		this.bands = bands;
+		*/
 	}
 }

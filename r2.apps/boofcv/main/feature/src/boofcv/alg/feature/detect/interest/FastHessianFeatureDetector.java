@@ -159,7 +159,7 @@ public class FastHessianFeatureDetector<II extends ImageSingleBand> {
 	 *
 	 * @param integral Image transformed into an integral image.
 	 */
-	public void detect( II integral ) {		// R2 - II = ImageFloat32	
+	public void detect( II integral ) {		// R2 - II = ImageFloat32
 		if( intensity == null ) {
 			intensity = new ImageFloat32[3];		// three instances? why?
 			for( int i = 0; i < intensity.length; i++ ) {

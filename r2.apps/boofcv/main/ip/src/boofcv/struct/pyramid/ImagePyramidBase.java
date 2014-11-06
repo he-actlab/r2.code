@@ -61,8 +61,8 @@ public abstract class ImagePyramidBase<T extends ImageSingleBand>
 	 * @param saveOriginalReference If a reference to the full resolution image should be saved instead of copied.
 	 */
 	public ImagePyramidBase( Class<T> imageType , boolean saveOriginalReference ) {
-		this.generator = FactoryImageGenerator.create(imageType);
-		this.saveOriginalReference = saveOriginalReference;
+//		this.generator = FactoryImageGenerator.create(imageType);
+//		this.saveOriginalReference = saveOriginalReference;
 	}
 
 	/**
@@ -73,64 +73,65 @@ public abstract class ImagePyramidBase<T extends ImageSingleBand>
 	 */
 	@Override
 	public void initialize(int width, int height) {
-		// see if it has already been initialized
-		if( bottomWidth == width && bottomHeight == height )
-			return;
-
-		this.bottomWidth = width;
-		this.bottomHeight = height;
-		layers = generator.createArray(getNumLayers());
-		double scaleFactor = getScale(0);
-
-		if (scaleFactor == 1) {
-			if (!saveOriginalReference) {
-				layers[0] = generator.createInstance(bottomWidth, bottomHeight);
-			}
-		} else {
-			layers[0] = generator.createInstance((int)Math.ceil(bottomWidth / scaleFactor), (int)Math.ceil(bottomHeight / scaleFactor));
-		}
-
-		for (int i = 1; i < layers.length; i++) {
-			scaleFactor = getScale(i);
-			layers[i] = generator.createInstance((int)Math.ceil(bottomWidth / scaleFactor), (int)Math.ceil(bottomHeight / scaleFactor));
-		}
+//		// see if it has already been initialized
+//		if( bottomWidth == width && bottomHeight == height )
+//			return;
+//
+//		this.bottomWidth = width;
+//		this.bottomHeight = height;
+//		layers = generator.createArray(getNumLayers());
+//		double scaleFactor = getScale(0);
+//
+//		if (scaleFactor == 1) {
+//			if (!saveOriginalReference) {
+//				layers[0] = generator.createInstance(bottomWidth, bottomHeight);
+//			}
+//		} else {
+//			layers[0] = generator.createInstance((int)Math.ceil(bottomWidth / scaleFactor), (int)Math.ceil(bottomHeight / scaleFactor));
+//		}
+//
+//		for (int i = 1; i < layers.length; i++) {
+//			scaleFactor = getScale(i);
+//			layers[i] = generator.createInstance((int)Math.ceil(bottomWidth / scaleFactor), (int)Math.ceil(bottomHeight / scaleFactor));
+//		}
 	}
 
 	/**
 	 * Used to internally check that the provided scales are valid.
 	 */
 	protected void checkScales() {
-		if( getScale(0) < 0 ) {
-			throw new IllegalArgumentException("The first layer must be more than zero.");
-		}
-
-		double prevScale = 0;
-		for( int i = 0; i < getNumLayers(); i++ ) {
-			double s = getScale(i);
-			if( s < prevScale )
-				throw new IllegalArgumentException("Higher layers must be the same size or larger than previous layers.");
-			prevScale = s;
-		}
+//		if( getScale(0) < 0 ) {
+//			throw new IllegalArgumentException("The first layer must be more than zero.");
+//		}
+//
+//		double prevScale = 0;
+//		for( int i = 0; i < getNumLayers(); i++ ) {
+//			double s = getScale(i);
+//			if( s < prevScale )
+//				throw new IllegalArgumentException("Higher layers must be the same size or larger than previous layers.");
+//			prevScale = s;
+//		}
 	}
 
 	@Override
 	public void setTo(ImagePyramid<T> input) {
-		for( int i = 0; i < layers.length; i++ ) {
-			getLayer(i).setTo(input.getLayer(i));
-		}
+//		for( int i = 0; i < layers.length; i++ ) {
+//			getLayer(i).setTo(input.getLayer(i));
+//		}
 	}
 
 	@Override
 	public T getLayer(int layerNum) {
-		return layers[layerNum];
+//		return layers[layerNum];
+		return null;
 	}
 
 	public void setFirstLayer(T image) {
-		if( saveOriginalReference ) {
-			layers[0] = image;
-		} else {
-			throw new IllegalArgumentException("Attempting to set the first layer when saveOriginalReference is false");
-		}
+//		if( saveOriginalReference ) {
+//			layers[0] = image;
+//		} else {
+//			throw new IllegalArgumentException("Attempting to set the first layer when saveOriginalReference is false");
+//		}
 	}
 
 	@Override
@@ -145,7 +146,8 @@ public abstract class ImagePyramidBase<T extends ImageSingleBand>
 
 	@Override
 	public Class<T> getImageType() {
-		return generator.getType();
+//		return generator.getType();
+		return null;
 	}
 
 	@Override

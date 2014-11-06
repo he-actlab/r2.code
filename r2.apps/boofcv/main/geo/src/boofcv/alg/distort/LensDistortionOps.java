@@ -85,8 +85,11 @@ public class LensDistortionOps {
 		else
 			transform = LensDistortionOps.fullView(param,paramAdj);
 
-		ImageDistort<T,T> distort;
+		ImageDistort<T,T> distort = null;
 
+		/*
+		 * jspark - comment out due to compilation error
+		 *
 		switch( imageType.getFamily() ) {
 			case SINGLE_BAND:
 				distort = FactoryDistort.distort(true,interp, border, bandType);
@@ -99,9 +102,9 @@ public class LensDistortionOps {
 			default:
 				throw new RuntimeException("Unsupported image family: "+imageType.getFamily());
 		}
-
+		
 		distort.setModel(new PointToPixelTransform_F32(transform));
-
+		*/
 		return distort;
 	}
 

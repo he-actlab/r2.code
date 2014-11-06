@@ -77,7 +77,7 @@ public abstract class ImageSingleBand<T extends ImageSingleBand> extends ImageBa
 		this.stride = width;
 		this.width = width;
 		this.height = height;
-		this.imageType = (ImageType)ImageType.single(getClass());
+//		this.imageType = (ImageType)ImageType.single(getClass());
 	}
 
 	protected ImageSingleBand() {
@@ -102,6 +102,9 @@ public abstract class ImageSingleBand<T extends ImageSingleBand> extends ImageBa
 	 */
 	@Override
 	public T subimage(int x0, int y0, int x1, int y1, T subimage) {
+		/*
+		 * jspark - comment out due to compilation error
+		 *
 		if (x0 < 0 || y0 < 0)
 			throw new IllegalArgumentException("x0 or y0 is less than zero");
 		if (x1 < x0 || y1 < y0)
@@ -119,7 +122,8 @@ public abstract class ImageSingleBand<T extends ImageSingleBand> extends ImageBa
 		subimage.height = y1 - y0;
 		subimage.startIndex = startIndex + y0 * stride + x0;
 		subimage.subImage = true;
-
+		*/
+		
 		return subimage;
 	}
 
@@ -157,6 +161,9 @@ public abstract class ImageSingleBand<T extends ImageSingleBand> extends ImageBa
 	@SuppressWarnings({"SuspiciousSystemArraycopy"})
 	@Override
 	public void setTo(T orig) {
+		/*
+		 * jspark - comment out due to compilation error 
+		 *
 		if (orig.width != width || orig.height != height)
 			throw new IllegalArgumentException("The width and/or height of 'orig' is not the same as this class");
 
@@ -171,6 +178,7 @@ public abstract class ImageSingleBand<T extends ImageSingleBand> extends ImageBa
 				indexDst += stride;
 			}
 		}
+		*/
 	}
 
 	/**

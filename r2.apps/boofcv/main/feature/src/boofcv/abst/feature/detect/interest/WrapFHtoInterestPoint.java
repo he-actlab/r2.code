@@ -45,7 +45,7 @@ public class WrapFHtoInterestPoint<T extends ImageSingleBand, II extends ImageSi
 	}
 
 	
-	// R2 - actually this calles detect in FastHessianFeatureDetector
+	// R2 - actually this calls detect in FastHessianFeatureDetector
 	@Override
 	public void detect(T input) {
 		if( integral != null ) {

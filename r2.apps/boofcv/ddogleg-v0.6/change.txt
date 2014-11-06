@@ -1,0 +1,80 @@
+Change log for DDogleg Numerics
+
+Date Format: YEAR-MONTH-DAY
+
+------------------------------------------------------
+Version:  0.6
+Date:
+
+- Switched build to Gradle
+- Added CircularQueue
+- QuickSort and QuickSortArray have been combined into one class
+- QuickSort comparable index has been added
+- Fixed a bug in AxisSplitRuleRandomK where is the number of consider was greater than the DOF it would throw
+  an out of bounds exception.
+- Added vantage point tree (VpTree).
+  * Thanks Karel Petránek
+- Fixed bug in KdTreeMemory.recycleGraph().  Didn't check to see if root was null
+
+------------------------------------------------------
+Version:  0.5
+Date:     2014-06-18
+
+- Added missing functions to GrowQueue_*
+- Nearest-neighbor search
+  * Maximum distance is specified as inclusive
+  * Maximum distance is specified as Euclidean squared
+- Added Counting Sort.  Sorts integer valued elements in O(N) time
+- Added approximate sort.  Counting sort for continuous valued data
+- Fixed bug in SturmSequence where it would get stuck in an infinite loop while bounding the roots
+- Tweaked FastQueue so that it is a valid Java Bean
+
+------------------------------------------------------
+Version:  0.4
+Date:     2013-12-26
+
+- Added N nearest-neighbor search.
+  * Modified NearestNeighbor interface
+  * Standard K-D tree
+  * Best-Bin-First K-D tree
+  * Random Forest K-D tree
+- Changed behavior of K-D tree constructor
+  * Empty leafs will be null instead of identical to the parent.  Duplicate data caused problems when searching
+    for the N nearest-neighbors
+- Refactored and tweaked documentation for ModelMatcher
+- Added ModelMatcherMulti
+  * Can be given different types of models to fit the data to
+  * RansacMulti added and only implementation of it so far
+- Added graph related data structure
+- Created ModelManager for making new instances and copying a model
+  * removed similar functions from ModelGenerator and ModelFitter
+- Added UtilOptimize.step() and changed behavior of UtilOptimize.process()
+- Added forwards + backwards numerical differentiation
+- Added remove(index)
+  * FastQueue and GrowQueue*
+- Renamed some optimization functions for getting size of input and output.  Less confusing now.
+
+------------------------------------------------------
+Version:  0.3
+Date:     2013-04-10
+
+- Added QuickSort_S32
+
+------------------------------------------------------
+Version:  0.2
+Date:     2013-02-16
+
+- Added Nearest-Neighbor Search
+ * Exhaustive
+ * K-D Trees
+ * K-D Random Forests
+- FindRealRootsSturm
+ * Fixed bug where it incorrectly handled the case when the max iterations has been exceeded and no roots were found
+ * Better handling of contradictory number of real roots
+
+------------------------------------------------------
+Version:  0.1
+Date:     2012-11-26
+
+- Initial public release
+- Code from other projects and cleaned up

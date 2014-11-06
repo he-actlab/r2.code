@@ -33,6 +33,8 @@ import georegression.struct.point.Point2D_F64;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
+//import chord.analyses.r2.lang.*;
+
 /**
  * Demonstrates how to detect interest points using the to use {@link InterestPointDetector} interface.
  * InterestPointDetector makes it easy to switch between algorithms, but due to its abstraction it also cause
@@ -64,6 +66,7 @@ public class ExampleInterestPoint {
 
 	private static <T extends ImageSingleBand> void displayResults(BufferedImage image, InterestPointDetector<T> detector)
 	{
+		// detecter = WrapFHtoInterestPoint
 		Graphics2D g2 = image.createGraphics();
 		FancyInterestPointRender render = new FancyInterestPointRender();
 
@@ -79,15 +82,25 @@ public class ExampleInterestPoint {
 			/**
 			 * Just print points instead of circles
 			 */
-				render.addPoint((int)pt.x, (int)pt.y);
+			int x = (int)pt.x;
+			int y = (int)pt.y;
+			
+//			Relax.relax(x);
+//			Relax.relax(y);
+			
+//			render.addPoint(x, y);
+			System.out.println(x + " " + y);
+			
+//			Restrict.restrict(x);
+//			Restrict.restrict(y);
 //			}
 		}
 		// make the circle's thicker
 		g2.setStroke(new BasicStroke(3));
 
 		// just draw the features onto the input image
-		render.draw(g2);
-		ShowImages.showWindow(image, "Detected Features");
+//		render.draw(g2);
+//		ShowImages.showWindow(image, "Detected Features");
 	}
 
 	public static void main( String args[] ) {

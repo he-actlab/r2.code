@@ -1,0 +1,442 @@
+Buildfile: /Users/jspark/projects/r2.code/r2.apps/boofcv/build.xml
+
+build:
+    [mkdir] Created dir: /Users/jspark/projects/r2.code/r2.apps/boofcv/build
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/build.xml:31: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[jsr308.javac] Compiling 1234 source files to /Users/jspark/projects/r2.code/r2.apps/boofcv/build
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:22: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] import sun.awt.image.ByteInterleavedRaster;
+[jsr308.javac]                     ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:23: warning: IntegerInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] import sun.awt.image.IntegerInterleavedRaster;
+[jsr308.javac]                     ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:24: warning: ShortInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] import sun.awt.image.ShortInterleavedRaster;
+[jsr308.javac]                     ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertRaster.java:25: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] import sun.awt.image.ByteInterleavedRaster;
+[jsr308.javac]                     ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertRaster.java:26: warning: IntegerInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] import sun.awt.image.IntegerInterleavedRaster;
+[jsr308.javac]                     ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertRaster.java:27: warning: ShortInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] import sun.awt.image.ShortInterleavedRaster;
+[jsr308.javac]                     ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/testing/BoofTesting.java:25: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] import sun.awt.image.ByteInterleavedRaster;
+[jsr308.javac]                     ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/testing/BoofTesting.java:26: warning: IntegerInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] import sun.awt.image.IntegerInterleavedRaster;
+[jsr308.javac]                     ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/testing/BoofTesting.java:27: warning: ShortInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] import sun.awt.image.ShortInterleavedRaster;
+[jsr308.javac]                     ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/io/src/boofcv/io/image/UtilImageIO.java:26: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] import sun.awt.image.ByteInterleavedRaster;
+[jsr308.javac]                     ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/io/src/boofcv/io/image/UtilImageIO.java:27: warning: IntegerInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] import sun.awt.image.IntegerInterleavedRaster;
+[jsr308.javac]                     ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/visualize/src/boofcv/gui/binary/VisualizeBinaryData.java:27: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] import sun.awt.image.ByteInterleavedRaster;
+[jsr308.javac]                     ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/visualize/src/boofcv/gui/binary/VisualizeBinaryData.java:28: warning: IntegerInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] import sun.awt.image.IntegerInterleavedRaster;
+[jsr308.javac]                     ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/visualize/src/boofcv/gui/edge/VisualizeEdgeFeatures.java:24: warning: IntegerInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] import sun.awt.image.IntegerInterleavedRaster;
+[jsr308.javac]                     ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/visualize/src/boofcv/gui/image/VisualizeImageData.java:26: warning: IntegerInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] import sun.awt.image.IntegerInterleavedRaster;
+[jsr308.javac]                     ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/feature/src/boofcv/factory/feature/disparity/FactoryStereoDisparity.java:109: error: method scoreDisparitySadRect_U8 in class FactoryStereoDisparityAlgs cannot be applied to given types;
+[jsr308.javac] 					alg = FactoryStereoDisparityAlgs.scoreDisparitySadRect_U8(minDisparity,
+[jsr308.javac] 					                                                         ^
+[jsr308.javac]   required: int,int,int,int,DisparitySelect<int[],T#1>
+[jsr308.javac]   found: int,int,int,int,DisparitySelect
+[jsr308.javac]   reason: no instance(s) of type variable(s) T#1 exist so that DisparityScoreSadRect<ImageUInt8,T#1> conforms to DisparityScoreRowFormat<T#2,ImageUInt8>
+[jsr308.javac]   where T#1,T#2 are type-variables:
+[jsr308.javac]     T#1 extends ImageSingleBand declared in method <T#1>scoreDisparitySadRect_U8(int,int,int,int,DisparitySelect<int[],T#1>)
+[jsr308.javac]     T#2 extends ImageSingleBand declared in method <T#2>regionWta(DisparityAlgorithms,int,int,int,int,double,int,double,Class<T#2>)
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/feature/src/boofcv/factory/feature/disparity/FactoryStereoDisparity.java:112: error: method scoreDisparitySadRect_S16 in class FactoryStereoDisparityAlgs cannot be applied to given types;
+[jsr308.javac] 					alg = FactoryStereoDisparityAlgs.scoreDisparitySadRect_S16(minDisparity,
+[jsr308.javac] 					                                                          ^
+[jsr308.javac]   required: int,int,int,int,DisparitySelect<int[],T#1>
+[jsr308.javac]   found: int,int,int,int,DisparitySelect
+[jsr308.javac]   reason: no instance(s) of type variable(s) T#1 exist so that DisparityScoreSadRect<ImageSInt16,T#1> conforms to DisparityScoreRowFormat<T#2,ImageUInt8>
+[jsr308.javac]   where T#1,T#2 are type-variables:
+[jsr308.javac]     T#1 extends ImageSingleBand declared in method <T#1>scoreDisparitySadRect_S16(int,int,int,int,DisparitySelect<int[],T#1>)
+[jsr308.javac]     T#2 extends ImageSingleBand declared in method <T#2>regionWta(DisparityAlgorithms,int,int,int,int,double,int,double,Class<T#2>)
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/feature/src/boofcv/factory/feature/disparity/FactoryStereoDisparity.java:115: error: method scoreDisparitySadRect_F32 in class FactoryStereoDisparityAlgs cannot be applied to given types;
+[jsr308.javac] 					alg = FactoryStereoDisparityAlgs.scoreDisparitySadRect_F32(minDisparity,
+[jsr308.javac] 					                                                          ^
+[jsr308.javac]   required: int,int,int,int,DisparitySelect<float[],T#1>
+[jsr308.javac]   found: int,int,int,int,DisparitySelect
+[jsr308.javac]   reason: no instance(s) of type variable(s) T#1 exist so that DisparityScoreSadRect<ImageFloat32,T#1> conforms to DisparityScoreRowFormat<T#2,ImageUInt8>
+[jsr308.javac]   where T#1,T#2 are type-variables:
+[jsr308.javac]     T#1 extends ImageSingleBand declared in method <T#1>scoreDisparitySadRect_F32(int,int,int,int,DisparitySelect<float[],T#1>)
+[jsr308.javac]     T#2 extends ImageSingleBand declared in method <T#2>regionWta(DisparityAlgorithms,int,int,int,int,double,int,double,Class<T#2>)
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/feature/src/boofcv/factory/feature/disparity/FactoryStereoDisparity.java:122: error: method scoreDisparitySadRectFive_U8 in class FactoryStereoDisparityAlgs cannot be applied to given types;
+[jsr308.javac] 					alg = FactoryStereoDisparityAlgs.scoreDisparitySadRectFive_U8(minDisparity,
+[jsr308.javac] 					                                                             ^
+[jsr308.javac]   required: int,int,int,int,DisparitySelect<int[],T#1>
+[jsr308.javac]   found: int,int,int,int,DisparitySelect
+[jsr308.javac]   reason: no instance(s) of type variable(s) T#1 exist so that DisparityScoreWindowFive<ImageUInt8,T#1> conforms to DisparityScoreRowFormat<T#2,ImageUInt8>
+[jsr308.javac]   where T#1,T#2 are type-variables:
+[jsr308.javac]     T#1 extends ImageSingleBand declared in method <T#1>scoreDisparitySadRectFive_U8(int,int,int,int,DisparitySelect<int[],T#1>)
+[jsr308.javac]     T#2 extends ImageSingleBand declared in method <T#2>regionWta(DisparityAlgorithms,int,int,int,int,double,int,double,Class<T#2>)
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/feature/src/boofcv/factory/feature/disparity/FactoryStereoDisparity.java:125: error: method scoreDisparitySadRectFive_S16 in class FactoryStereoDisparityAlgs cannot be applied to given types;
+[jsr308.javac] 					alg = FactoryStereoDisparityAlgs.scoreDisparitySadRectFive_S16(minDisparity,
+[jsr308.javac] 					                                                              ^
+[jsr308.javac]   required: int,int,int,int,DisparitySelect<int[],T#1>
+[jsr308.javac]   found: int,int,int,int,DisparitySelect
+[jsr308.javac]   reason: no instance(s) of type variable(s) T#1 exist so that DisparityScoreWindowFive<ImageSInt16,T#1> conforms to DisparityScoreRowFormat<T#2,ImageUInt8>
+[jsr308.javac]   where T#1,T#2 are type-variables:
+[jsr308.javac]     T#1 extends ImageSingleBand declared in method <T#1>scoreDisparitySadRectFive_S16(int,int,int,int,DisparitySelect<int[],T#1>)
+[jsr308.javac]     T#2 extends ImageSingleBand declared in method <T#2>regionWta(DisparityAlgorithms,int,int,int,int,double,int,double,Class<T#2>)
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/feature/src/boofcv/factory/feature/disparity/FactoryStereoDisparity.java:128: error: method scoreDisparitySadRectFive_F32 in class FactoryStereoDisparityAlgs cannot be applied to given types;
+[jsr308.javac] 					alg = FactoryStereoDisparityAlgs.scoreDisparitySadRectFive_F32(minDisparity,
+[jsr308.javac] 					                                                              ^
+[jsr308.javac]   required: int,int,int,int,DisparitySelect<float[],T#1>
+[jsr308.javac]   found: int,int,int,int,DisparitySelect
+[jsr308.javac]   reason: no instance(s) of type variable(s) T#1 exist so that DisparityScoreWindowFive<ImageFloat32,T#1> conforms to DisparityScoreRowFormat<T#2,ImageUInt8>
+[jsr308.javac]   where T#1,T#2 are type-variables:
+[jsr308.javac]     T#1 extends ImageSingleBand declared in method <T#1>scoreDisparitySadRectFive_F32(int,int,int,int,DisparitySelect<float[],T#1>)
+[jsr308.javac]     T#2 extends ImageSingleBand declared in method <T#2>regionWta(DisparityAlgorithms,int,int,int,int,double,int,double,Class<T#2>)
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/feature/src/boofcv/factory/feature/disparity/FactoryStereoDisparity.java:192: error: method scoreDisparitySadRect_U8 in class FactoryStereoDisparityAlgs cannot be applied to given types;
+[jsr308.javac] 					alg = FactoryStereoDisparityAlgs.scoreDisparitySadRect_U8(minDisparity,
+[jsr308.javac] 					                                                         ^
+[jsr308.javac]   required: int,int,int,int,DisparitySelect<int[],T#1>
+[jsr308.javac]   found: int,int,int,int,DisparitySelect
+[jsr308.javac]   reason: no instance(s) of type variable(s) T#1 exist so that DisparityScoreSadRect<ImageUInt8,T#1> conforms to DisparityScoreRowFormat<T#2,ImageFloat32>
+[jsr308.javac]   where T#1,T#2 are type-variables:
+[jsr308.javac]     T#1 extends ImageSingleBand declared in method <T#1>scoreDisparitySadRect_U8(int,int,int,int,DisparitySelect<int[],T#1>)
+[jsr308.javac]     T#2 extends ImageSingleBand declared in method <T#2>regionSubpixelWta(DisparityAlgorithms,int,int,int,int,double,int,double,Class<T#2>)
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/feature/src/boofcv/factory/feature/disparity/FactoryStereoDisparity.java:195: error: method scoreDisparitySadRect_S16 in class FactoryStereoDisparityAlgs cannot be applied to given types;
+[jsr308.javac] 					alg = FactoryStereoDisparityAlgs.scoreDisparitySadRect_S16(minDisparity,
+[jsr308.javac] 					                                                          ^
+[jsr308.javac]   required: int,int,int,int,DisparitySelect<int[],T#1>
+[jsr308.javac]   found: int,int,int,int,DisparitySelect
+[jsr308.javac]   reason: no instance(s) of type variable(s) T#1 exist so that DisparityScoreSadRect<ImageSInt16,T#1> conforms to DisparityScoreRowFormat<T#2,ImageFloat32>
+[jsr308.javac]   where T#1,T#2 are type-variables:
+[jsr308.javac]     T#1 extends ImageSingleBand declared in method <T#1>scoreDisparitySadRect_S16(int,int,int,int,DisparitySelect<int[],T#1>)
+[jsr308.javac]     T#2 extends ImageSingleBand declared in method <T#2>regionSubpixelWta(DisparityAlgorithms,int,int,int,int,double,int,double,Class<T#2>)
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/feature/src/boofcv/factory/feature/disparity/FactoryStereoDisparity.java:198: error: method scoreDisparitySadRect_F32 in class FactoryStereoDisparityAlgs cannot be applied to given types;
+[jsr308.javac] 					alg = FactoryStereoDisparityAlgs.scoreDisparitySadRect_F32(minDisparity,
+[jsr308.javac] 					                                                          ^
+[jsr308.javac]   required: int,int,int,int,DisparitySelect<float[],T#1>
+[jsr308.javac]   found: int,int,int,int,DisparitySelect
+[jsr308.javac]   reason: no instance(s) of type variable(s) T#1 exist so that DisparityScoreSadRect<ImageFloat32,T#1> conforms to DisparityScoreRowFormat<T#2,ImageFloat32>
+[jsr308.javac]   where T#1,T#2 are type-variables:
+[jsr308.javac]     T#1 extends ImageSingleBand declared in method <T#1>scoreDisparitySadRect_F32(int,int,int,int,DisparitySelect<float[],T#1>)
+[jsr308.javac]     T#2 extends ImageSingleBand declared in method <T#2>regionSubpixelWta(DisparityAlgorithms,int,int,int,int,double,int,double,Class<T#2>)
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/feature/src/boofcv/factory/feature/disparity/FactoryStereoDisparity.java:205: error: method scoreDisparitySadRectFive_U8 in class FactoryStereoDisparityAlgs cannot be applied to given types;
+[jsr308.javac] 					alg = FactoryStereoDisparityAlgs.scoreDisparitySadRectFive_U8(minDisparity,
+[jsr308.javac] 					                                                             ^
+[jsr308.javac]   required: int,int,int,int,DisparitySelect<int[],T#1>
+[jsr308.javac]   found: int,int,int,int,DisparitySelect
+[jsr308.javac]   reason: no instance(s) of type variable(s) T#1 exist so that DisparityScoreWindowFive<ImageUInt8,T#1> conforms to DisparityScoreRowFormat<T#2,ImageFloat32>
+[jsr308.javac]   where T#1,T#2 are type-variables:
+[jsr308.javac]     T#1 extends ImageSingleBand declared in method <T#1>scoreDisparitySadRectFive_U8(int,int,int,int,DisparitySelect<int[],T#1>)
+[jsr308.javac]     T#2 extends ImageSingleBand declared in method <T#2>regionSubpixelWta(DisparityAlgorithms,int,int,int,int,double,int,double,Class<T#2>)
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/feature/src/boofcv/factory/feature/disparity/FactoryStereoDisparity.java:208: error: method scoreDisparitySadRectFive_S16 in class FactoryStereoDisparityAlgs cannot be applied to given types;
+[jsr308.javac] 					alg = FactoryStereoDisparityAlgs.scoreDisparitySadRectFive_S16(minDisparity,
+[jsr308.javac] 					                                                              ^
+[jsr308.javac]   required: int,int,int,int,DisparitySelect<int[],T#1>
+[jsr308.javac]   found: int,int,int,int,DisparitySelect
+[jsr308.javac]   reason: no instance(s) of type variable(s) T#1 exist so that DisparityScoreWindowFive<ImageSInt16,T#1> conforms to DisparityScoreRowFormat<T#2,ImageFloat32>
+[jsr308.javac]   where T#1,T#2 are type-variables:
+[jsr308.javac]     T#1 extends ImageSingleBand declared in method <T#1>scoreDisparitySadRectFive_S16(int,int,int,int,DisparitySelect<int[],T#1>)
+[jsr308.javac]     T#2 extends ImageSingleBand declared in method <T#2>regionSubpixelWta(DisparityAlgorithms,int,int,int,int,double,int,double,Class<T#2>)
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/feature/src/boofcv/factory/feature/disparity/FactoryStereoDisparity.java:211: error: method scoreDisparitySadRectFive_F32 in class FactoryStereoDisparityAlgs cannot be applied to given types;
+[jsr308.javac] 					alg = FactoryStereoDisparityAlgs.scoreDisparitySadRectFive_F32(minDisparity,
+[jsr308.javac] 					                                                              ^
+[jsr308.javac]   required: int,int,int,int,DisparitySelect<float[],T#1>
+[jsr308.javac]   found: int,int,int,int,DisparitySelect
+[jsr308.javac]   reason: no instance(s) of type variable(s) T#1 exist so that DisparityScoreWindowFive<ImageFloat32,T#1> conforms to DisparityScoreRowFormat<T#2,ImageFloat32>
+[jsr308.javac]   where T#1,T#2 are type-variables:
+[jsr308.javac]     T#1 extends ImageSingleBand declared in method <T#1>scoreDisparitySadRectFive_F32(int,int,int,int,DisparitySelect<float[],T#1>)
+[jsr308.javac]     T#2 extends ImageSingleBand declared in method <T#2>regionSubpixelWta(DisparityAlgorithms,int,int,int,int,double,int,double,Class<T#2>)
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/geo/src/boofcv/alg/distort/LensDistortionOps.java:92: error: method distort in class FactoryDistort cannot be applied to given types;
+[jsr308.javac] 				distort = FactoryDistort.distort(true,interp, border, bandType);
+[jsr308.javac] 				                                ^
+[jsr308.javac]   required: boolean,InterpolatePixelS<Input>,ImageBorder,Class<Output>
+[jsr308.javac]   found: boolean,InterpolatePixelS,ImageBorder,Class
+[jsr308.javac]   reason: inferred type does not conform to upper bound(s)
+[jsr308.javac]     inferred: T
+[jsr308.javac]     upper bound(s): ImageSingleBand
+[jsr308.javac]   where Input,Output,T are type-variables:
+[jsr308.javac]     Input extends ImageSingleBand declared in method <Input,Output>distort(boolean,InterpolatePixelS<Input>,ImageBorder,Class<Output>)
+[jsr308.javac]     Output extends ImageSingleBand declared in method <Input,Output>distort(boolean,InterpolatePixelS<Input>,ImageBorder,Class<Output>)
+[jsr308.javac]     T extends ImageBase declared in method <T>removeDistortion(boolean,BorderType,IntrinsicParameters,IntrinsicParameters,ImageType<T>)
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/geo/src/boofcv/alg/distort/LensDistortionOps.java:96: error: method distortMS in class FactoryDistort cannot be applied to given types;
+[jsr308.javac] 				distort = FactoryDistort.distortMS(true,interp, border, bandType);
+[jsr308.javac] 				                                  ^
+[jsr308.javac]   required: boolean,InterpolatePixelS<Input>,ImageBorder,Class<Output>
+[jsr308.javac]   found: boolean,InterpolatePixelS,ImageBorder,Class
+[jsr308.javac]   reason: no instance(s) of type variable(s) Input,Output exist so that ImageDistort<MultiSpectral<Input>,MultiSpectral<Output>> conforms to ImageDistort<T,T>
+[jsr308.javac]   where Input,Output,T are type-variables:
+[jsr308.javac]     Input extends ImageSingleBand declared in method <Input,Output>distortMS(boolean,InterpolatePixelS<Input>,ImageBorder,Class<Output>)
+[jsr308.javac]     Output extends ImageSingleBand declared in method <Input,Output>distortMS(boolean,InterpolatePixelS<Input>,ImageBorder,Class<Output>)
+[jsr308.javac]     T extends ImageBase declared in method <T>removeDistortion(boolean,BorderType,IntrinsicParameters,IntrinsicParameters,ImageType<T>)
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:50: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 		if (img.getRaster() instanceof ByteInterleavedRaster &&
+[jsr308.javac] 		                               ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:52: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 			ByteInterleavedRaster raster = (ByteInterleavedRaster) img.getRaster();
+[jsr308.javac] 			^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:52: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 			ByteInterleavedRaster raster = (ByteInterleavedRaster) img.getRaster();
+[jsr308.javac] 			                                ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:78: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 		if (img.getRaster() instanceof ByteInterleavedRaster &&
+[jsr308.javac] 		                               ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:81: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 			ByteInterleavedRaster raster = (ByteInterleavedRaster) img.getRaster();
+[jsr308.javac] 			^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:81: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 			ByteInterleavedRaster raster = (ByteInterleavedRaster) img.getRaster();
+[jsr308.javac] 			                                ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:267: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 			if (src.getRaster() instanceof ByteInterleavedRaster &&
+[jsr308.javac] 			                               ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:269: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 				ConvertRaster.bufferedToGray((ByteInterleavedRaster) src.getRaster(), dst);
+[jsr308.javac] 				                              ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:270: warning: IntegerInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 			} else if (src.getRaster() instanceof IntegerInterleavedRaster) {
+[jsr308.javac] 			                                      ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:271: warning: IntegerInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 				ConvertRaster.bufferedToGray((IntegerInterleavedRaster) src.getRaster(), dst);
+[jsr308.javac] 				                              ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:301: warning: ShortInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 			if (src.getRaster() instanceof ShortInterleavedRaster ) {
+[jsr308.javac] 			                               ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:302: warning: ShortInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 				ConvertRaster.bufferedToGray((ShortInterleavedRaster) src.getRaster(), dst);
+[jsr308.javac] 				                              ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:331: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 			if (src.getRaster() instanceof ByteInterleavedRaster &&
+[jsr308.javac] 			                               ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:333: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 				ConvertRaster.bufferedToGray((ByteInterleavedRaster) src.getRaster(), dst);
+[jsr308.javac] 				                              ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:334: warning: IntegerInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 			} else if (src.getRaster() instanceof IntegerInterleavedRaster) {
+[jsr308.javac] 			                                      ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:335: warning: IntegerInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 				ConvertRaster.bufferedToGray((IntegerInterleavedRaster) src.getRaster(), dst);
+[jsr308.javac] 				                              ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:385: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 				if (src.getRaster() instanceof ByteInterleavedRaster &&
+[jsr308.javac] 				                               ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:391: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 						ConvertRaster.bufferedToMulti_U8((ByteInterleavedRaster) src.getRaster(), (MultiSpectral<ImageUInt8>)dst);
+[jsr308.javac] 						                                  ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:393: warning: IntegerInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 				} else if (src.getRaster() instanceof IntegerInterleavedRaster) {
+[jsr308.javac] 				                                      ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:394: warning: IntegerInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 					ConvertRaster.bufferedToMulti_U8((IntegerInterleavedRaster) src.getRaster(), (MultiSpectral<ImageUInt8>)dst);
+[jsr308.javac] 					                                  ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:399: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 				if (src.getRaster() instanceof ByteInterleavedRaster &&
+[jsr308.javac] 				                               ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:405: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 						ConvertRaster.bufferedToMulti_F32((ByteInterleavedRaster) src.getRaster(), (MultiSpectral<ImageFloat32>)dst);
+[jsr308.javac] 						                                   ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:407: warning: IntegerInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 				} else if (src.getRaster() instanceof IntegerInterleavedRaster) {
+[jsr308.javac] 				                                      ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:408: warning: IntegerInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 					ConvertRaster.bufferedToMulti_F32((IntegerInterleavedRaster) src.getRaster(), (MultiSpectral<ImageFloat32>)dst);
+[jsr308.javac] 					                                   ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:483: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 			if (dst.getRaster() instanceof ByteInterleavedRaster &&
+[jsr308.javac] 			                               ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:485: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 				ConvertRaster.grayToBuffered(src, (ByteInterleavedRaster) dst.getRaster());
+[jsr308.javac] 				                                   ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:486: warning: IntegerInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 			} else if (dst.getRaster() instanceof IntegerInterleavedRaster) {
+[jsr308.javac] 			                                      ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:487: warning: IntegerInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 				ConvertRaster.grayToBuffered(src, (IntegerInterleavedRaster) dst.getRaster());
+[jsr308.javac] 				                                   ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:512: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 			if (dst.getRaster() instanceof ByteInterleavedRaster &&
+[jsr308.javac] 			                               ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:514: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 				ConvertRaster.grayToBuffered(src, (ByteInterleavedRaster) dst.getRaster());
+[jsr308.javac] 				                                   ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:515: warning: IntegerInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 			} else if (dst.getRaster() instanceof IntegerInterleavedRaster) {
+[jsr308.javac] 			                                      ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:516: warning: IntegerInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 				ConvertRaster.grayToBuffered(src, (IntegerInterleavedRaster) dst.getRaster());
+[jsr308.javac] 				                                   ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:518: warning: ShortInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 				ConvertRaster.grayToBuffered(src, (ShortInterleavedRaster) dst.getRaster());
+[jsr308.javac] 				                                   ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:544: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 			if (dst.getRaster() instanceof ByteInterleavedRaster &&
+[jsr308.javac] 			                               ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:546: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 				ConvertRaster.grayToBuffered(src, (ByteInterleavedRaster) dst.getRaster());
+[jsr308.javac] 				                                   ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:547: warning: IntegerInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 			} else if (dst.getRaster() instanceof IntegerInterleavedRaster) {
+[jsr308.javac] 			                                      ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:548: warning: IntegerInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 				ConvertRaster.grayToBuffered(src, (IntegerInterleavedRaster) dst.getRaster());
+[jsr308.javac] 				                                   ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:578: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 			if (dst.getRaster() instanceof ByteInterleavedRaster &&
+[jsr308.javac] 			                               ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:580: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 				ConvertRaster.multToBuffered_U8(src, (ByteInterleavedRaster) dst.getRaster());
+[jsr308.javac] 				                                      ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:581: warning: IntegerInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 			} else if (dst.getRaster() instanceof IntegerInterleavedRaster) {
+[jsr308.javac] 			                                      ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:582: warning: IntegerInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 				ConvertRaster.multToBuffered_U8(src, (IntegerInterleavedRaster) dst.getRaster());
+[jsr308.javac] 				                                      ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:612: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 			if (dst.getRaster() instanceof ByteInterleavedRaster &&
+[jsr308.javac] 			                               ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:614: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 				ConvertRaster.multToBuffered_F32(src, (ByteInterleavedRaster) dst.getRaster());
+[jsr308.javac] 				                                       ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:615: warning: IntegerInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 			} else if (dst.getRaster() instanceof IntegerInterleavedRaster) {
+[jsr308.javac] 			                                      ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:616: warning: IntegerInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 				ConvertRaster.multToBuffered_F32(src, (IntegerInterleavedRaster) dst.getRaster());
+[jsr308.javac] 				                                       ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:699: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 			if( raster instanceof ByteInterleavedRaster ) {
+[jsr308.javac] 			                      ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:700: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 				((ByteInterleavedRaster)raster).getDataStorage();
+[jsr308.javac] 				  ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:701: warning: IntegerInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 			} else if( raster instanceof IntegerInterleavedRaster ) {
+[jsr308.javac] 			                             ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertBufferedImage.java:702: warning: IntegerInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 				((IntegerInterleavedRaster)raster).getDataStorage();
+[jsr308.javac] 				  ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertRaster.java:43: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 	public static void bufferedToGray(ByteInterleavedRaster src, ImageUInt8 dst) {
+[jsr308.javac] 	                                  ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertRaster.java:108: warning: ShortInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 	public static void bufferedToGray(ShortInterleavedRaster src, ImageInt16 dst) {
+[jsr308.javac] 	                                  ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertRaster.java:138: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 	public static void bufferedToGray(ByteInterleavedRaster src, ImageFloat32 dst) {
+[jsr308.javac] 	                                  ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertRaster.java:200: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 	public static void bufferedToMulti_U8(ByteInterleavedRaster src, MultiSpectral<ImageUInt8> dst) {
+[jsr308.javac] 	                                      ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertRaster.java:260: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 	public static void bufferedToMulti_F32(ByteInterleavedRaster src, MultiSpectral<ImageFloat32> dst) {
+[jsr308.javac] 	                                       ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertRaster.java:324: warning: IntegerInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 	public static void bufferedToGray(IntegerInterleavedRaster src, ImageUInt8 dst) {
+[jsr308.javac] 	                                  ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertRaster.java:355: warning: IntegerInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 	public static void bufferedToGray(IntegerInterleavedRaster src, ImageFloat32 dst) {
+[jsr308.javac] 	                                  ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertRaster.java:386: warning: IntegerInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 	public static void bufferedToMulti_U8(IntegerInterleavedRaster src, MultiSpectral<ImageUInt8> dst) {
+[jsr308.javac] 	                                      ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertRaster.java:437: warning: IntegerInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 	public static void bufferedToMulti_F32(IntegerInterleavedRaster src, MultiSpectral<ImageFloat32> dst) {
+[jsr308.javac] 	                                       ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertRaster.java:729: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 	public static void grayToBuffered(ImageUInt8 src, ByteInterleavedRaster dst) {
+[jsr308.javac] 	                                                  ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertRaster.java:783: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 	public static void grayToBuffered(ImageInt16 src, ByteInterleavedRaster dst) {
+[jsr308.javac] 	                                                  ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertRaster.java:834: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 	public static void grayToBuffered(ImageFloat32 src, ByteInterleavedRaster dst) {
+[jsr308.javac] 	                                                    ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertRaster.java:885: warning: ShortInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 	public static void grayToBuffered(ImageInt16 src, ShortInterleavedRaster dst) {
+[jsr308.javac] 	                                                  ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertRaster.java:936: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 	public static void multToBuffered_U8(MultiSpectral<ImageUInt8> src, ByteInterleavedRaster dst) {
+[jsr308.javac] 	                                                                    ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertRaster.java:998: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 	public static void multToBuffered_F32(MultiSpectral<ImageFloat32> src, ByteInterleavedRaster dst) {
+[jsr308.javac] 	                                                                       ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertRaster.java:1060: warning: IntegerInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 	public static void grayToBuffered(ImageUInt8 src, IntegerInterleavedRaster dst) {
+[jsr308.javac] 	                                                  ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertRaster.java:1094: warning: IntegerInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 	public static void grayToBuffered(ImageInt16 src, IntegerInterleavedRaster dst) {
+[jsr308.javac] 	                                                  ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertRaster.java:1127: warning: IntegerInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 	public static void grayToBuffered(ImageFloat32 src, IntegerInterleavedRaster dst) {
+[jsr308.javac] 	                                                    ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertRaster.java:1160: warning: IntegerInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 	public static void multToBuffered_U8(MultiSpectral<ImageUInt8> src, IntegerInterleavedRaster dst) {
+[jsr308.javac] 	                                                                    ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/core/image/ConvertRaster.java:1207: warning: IntegerInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 	public static void multToBuffered_F32(MultiSpectral<ImageFloat32> src, IntegerInterleavedRaster dst) {
+[jsr308.javac] 	                                                                       ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/testing/BoofTesting.java:680: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 		if (imgA.getRaster() instanceof ByteInterleavedRaster &&
+[jsr308.javac] 		                                ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/testing/BoofTesting.java:682: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 			ByteInterleavedRaster raster = (ByteInterleavedRaster) imgA.getRaster();
+[jsr308.javac] 			^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/testing/BoofTesting.java:682: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 			ByteInterleavedRaster raster = (ByteInterleavedRaster) imgA.getRaster();
+[jsr308.javac] 			                                ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/testing/BoofTesting.java:728: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 		if (imgA.getRaster() instanceof ByteInterleavedRaster &&
+[jsr308.javac] 		                                ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/testing/BoofTesting.java:730: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 			ByteInterleavedRaster raster = (ByteInterleavedRaster) imgA.getRaster();
+[jsr308.javac] 			^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/testing/BoofTesting.java:730: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 			ByteInterleavedRaster raster = (ByteInterleavedRaster) imgA.getRaster();
+[jsr308.javac] 			                                ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/testing/BoofTesting.java:750: warning: ShortInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 		} else if (imgA.getRaster() instanceof ShortInterleavedRaster) {
+[jsr308.javac] 		                                       ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/testing/BoofTesting.java:751: warning: ShortInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 			ShortInterleavedRaster raster = (ShortInterleavedRaster) imgA.getRaster();
+[jsr308.javac] 			^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/testing/BoofTesting.java:751: warning: ShortInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 			ShortInterleavedRaster raster = (ShortInterleavedRaster) imgA.getRaster();
+[jsr308.javac] 			                                 ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/testing/BoofTesting.java:796: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 		if (imgA.getRaster() instanceof ByteInterleavedRaster &&
+[jsr308.javac] 		                                ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/testing/BoofTesting.java:798: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 			ByteInterleavedRaster raster = (ByteInterleavedRaster) imgA.getRaster();
+[jsr308.javac] 			^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/testing/BoofTesting.java:798: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 			ByteInterleavedRaster raster = (ByteInterleavedRaster) imgA.getRaster();
+[jsr308.javac] 			                                ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/testing/BoofTesting.java:841: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 		if (imgA.getRaster() instanceof ByteInterleavedRaster) {
+[jsr308.javac] 		                                ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/testing/BoofTesting.java:842: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 			ByteInterleavedRaster raster = (ByteInterleavedRaster) imgA.getRaster();
+[jsr308.javac] 			^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/testing/BoofTesting.java:842: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 			ByteInterleavedRaster raster = (ByteInterleavedRaster) imgA.getRaster();
+[jsr308.javac] 			                                ^
+[jsr308.javac] /Users/jspark/projects/r2.code/r2.apps/boofcv/main/ip/src/boofcv/testing/BoofTesting.java:883: warning: ByteInterleavedRaster is internal proprietary API and may be removed in a future release
+[jsr308.javac] 		if( imgA instanceof ByteInterleavedRaster ) {
+[jsr308.javac] 		                    ^
+[jsr308.javac] Note: Some input files use or override a deprecated API.
+[jsr308.javac] Note: Recompile with -Xlint:deprecation for details.
+[jsr308.javac] Note: Some input files use unchecked or unsafe operations.
+[jsr308.javac] Note: Recompile with -Xlint:unchecked for details.
+[jsr308.javac] 14 errors
+[jsr308.javac] 100 warnings

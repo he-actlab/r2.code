@@ -54,96 +54,96 @@ public class ExampleImageFilter {
 
 	public static void procedural( ImageUInt8 input )
 	{
-		ImageUInt8 blurred = new ImageUInt8(input.width,input.height);
-		ImageSInt16 derivX = new ImageSInt16(input.width,input.height);
-		ImageSInt16 derivY = new ImageSInt16(input.width,input.height);
-
-		// Gaussian blur: Convolve a Gaussian kernel
-		BlurImageOps.gaussian(input,blurred,-1,blurRadius,null);
-
-		// Calculate image's derivative
-		GradientSobel.process(blurred, derivX, derivY, FactoryImageBorderAlgs.extend(input));
-
-		// display the results
-		BufferedImage outputImage = VisualizeImageData.colorizeSign(derivX,null,-1);
-		ShowImages.showWindow(outputImage,"Procedural Fixed Type");
+//		ImageUInt8 blurred = new ImageUInt8(input.width,input.height);
+//		ImageSInt16 derivX = new ImageSInt16(input.width,input.height);
+//		ImageSInt16 derivY = new ImageSInt16(input.width,input.height);
+//
+//		// Gaussian blur: Convolve a Gaussian kernel
+//		BlurImageOps.gaussian(input,blurred,-1,blurRadius,null);
+//
+//		// Calculate image's derivative
+//		GradientSobel.process(blurred, derivX, derivY, FactoryImageBorderAlgs.extend(input));
+//
+//		// display the results
+//		BufferedImage outputImage = VisualizeImageData.colorizeSign(derivX,null,-1);
+//		ShowImages.showWindow(outputImage,"Procedural Fixed Type");
 	}
 
 	public static <T extends ImageSingleBand, D extends ImageSingleBand>
 	void generalized( T input )
 	{
-		Class<T> inputType = (Class<T>)input.getClass();
-		Class<D> derivType = GImageDerivativeOps.getDerivativeType(inputType);
-
-		T blurred = GeneralizedImageOps.createSingleBand(inputType, input.width, input.height);
-		D derivX = GeneralizedImageOps.createSingleBand(derivType, input.width, input.height);
-		D derivY = GeneralizedImageOps.createSingleBand(derivType, input.width, input.height);
-
-		// Gaussian blur: Convolve a Gaussian kernel
-		GBlurImageOps.gaussian(input, blurred, -1, blurRadius, null);
-
-		// Calculate image's derivative
-		GImageDerivativeOps.sobel(blurred, derivX, derivY, BorderType.EXTENDED);
-
-		// display the results
-		BufferedImage outputImage = VisualizeImageData.colorizeSign(derivX,null,-1);
-		ShowImages.showWindow(outputImage,"Generalized "+inputType.getSimpleName());
+//		Class<T> inputType = (Class<T>)input.getClass();
+//		Class<D> derivType = GImageDerivativeOps.getDerivativeType(inputType);
+//
+//		T blurred = GeneralizedImageOps.createSingleBand(inputType, input.width, input.height);
+//		D derivX = GeneralizedImageOps.createSingleBand(derivType, input.width, input.height);
+//		D derivY = GeneralizedImageOps.createSingleBand(derivType, input.width, input.height);
+//
+//		// Gaussian blur: Convolve a Gaussian kernel
+//		GBlurImageOps.gaussian(input, blurred, -1, blurRadius, null);
+//
+//		// Calculate image's derivative
+//		GImageDerivativeOps.sobel(blurred, derivX, derivY, BorderType.EXTENDED);
+//
+//		// display the results
+//		BufferedImage outputImage = VisualizeImageData.colorizeSign(derivX,null,-1);
+//		ShowImages.showWindow(outputImage,"Generalized "+inputType.getSimpleName());
 	}
 
 	public static <T extends ImageSingleBand, D extends ImageSingleBand>
 	void filter( T input )
 	{
-		Class<T> inputType = (Class<T>)input.getClass();
-		Class<D> derivType = GImageDerivativeOps.getDerivativeType(inputType);
-
-		T blurred = GeneralizedImageOps.createSingleBand(inputType, input.width, input.height);
-		D derivX = GeneralizedImageOps.createSingleBand(derivType, input.width, input.height);
-		D derivY = GeneralizedImageOps.createSingleBand(derivType, input.width, input.height);
-
-		// declare image filters
-		BlurFilter<T> filterBlur = FactoryBlurFilter.gaussian(inputType, -1, blurRadius);
-		ImageGradient<T,D> gradient = FactoryDerivative.sobel(inputType, derivType);
-
-		// process the image
-		filterBlur.process(input,blurred);
-		gradient.process(blurred,derivX,derivY);
-
-		// display the results
-		BufferedImage outputImage = VisualizeImageData.colorizeSign(derivX,null,-1);
-		ShowImages.showWindow(outputImage,"Filter "+inputType.getSimpleName());
+//		Class<T> inputType = (Class<T>)input.getClass();
+//		Class<D> derivType = GImageDerivativeOps.getDerivativeType(inputType);
+//
+//		T blurred = GeneralizedImageOps.createSingleBand(inputType, input.width, input.height);
+//		D derivX = GeneralizedImageOps.createSingleBand(derivType, input.width, input.height);
+//		D derivY = GeneralizedImageOps.createSingleBand(derivType, input.width, input.height);
+//
+//		// declare image filters
+//		BlurFilter<T> filterBlur = FactoryBlurFilter.gaussian(inputType, -1, blurRadius);
+//		ImageGradient<T,D> gradient = FactoryDerivative.sobel(inputType, derivType);
+//
+//		// process the image
+//		filterBlur.process(input,blurred);
+//		gradient.process(blurred,derivX,derivY);
+//
+//		// display the results
+//		BufferedImage outputImage = VisualizeImageData.colorizeSign(derivX,null,-1);
+//		ShowImages.showWindow(outputImage,"Filter "+inputType.getSimpleName());
 	}
 
 	public static void nogenerics( ImageSingleBand input )
 	{
-		Class inputType = input.getClass();
-		Class derivType = GImageDerivativeOps.getDerivativeType(inputType);
-
-		ImageSingleBand blurred = GeneralizedImageOps.createSingleBand(inputType, input.width, input.height);
-		ImageSingleBand derivX = GeneralizedImageOps.createSingleBand(derivType, input.width, input.height);
-		ImageSingleBand derivY = GeneralizedImageOps.createSingleBand(derivType, input.width, input.height);
-
-		// Gaussian blur: Convolve a Gaussian kernel
-		GBlurImageOps.gaussian(input, blurred, -1, blurRadius, null);
-
-		// Calculate image's derivative
-		GImageDerivativeOps.sobel(blurred, derivX, derivY, BorderType.EXTENDED);
-
-		// display the results
-		BufferedImage outputImage = VisualizeImageData.colorizeSign(derivX,null,-1);
-		ShowImages.showWindow(outputImage,"Generalized "+inputType.getSimpleName());
+//		Class inputType = input.getClass();
+//		Class derivType = GImageDerivativeOps.getDerivativeType(inputType);
+//
+//		ImageSingleBand blurred = GeneralizedImageOps.createSingleBand(inputType, input.width, input.height);
+//		ImageSingleBand derivX = GeneralizedImageOps.createSingleBand(derivType, input.width, input.height);
+//		ImageSingleBand derivY = GeneralizedImageOps.createSingleBand(derivType, input.width, input.height);
+//
+//		// Gaussian blur: Convolve a Gaussian kernel
+//		GBlurImageOps.gaussian(input, blurred, -1, blurRadius, null);
+//
+//		// Calculate image's derivative
+//		GImageDerivativeOps.sobel(blurred, derivX, derivY, BorderType.EXTENDED);
+//
+//		// display the results
+//		BufferedImage outputImage = VisualizeImageData.colorizeSign(derivX,null,-1);
+//		ShowImages.showWindow(outputImage,"Generalized "+inputType.getSimpleName());
 	}
 
 	public static void main( String args[] ) {
-
-		BufferedImage image = UtilImageIO.loadImage("../data/evaluation/standard/lena512.bmp");
-
-		// produces the same results
-		procedural(ConvertBufferedImage.convertFromSingle(image, null, ImageUInt8.class));
-		generalized(ConvertBufferedImage.convertFromSingle(image, null, ImageUInt8.class));
-		filter(ConvertBufferedImage.convertFromSingle(image, null, ImageUInt8.class));
-		nogenerics(ConvertBufferedImage.convertFromSingle(image, null, ImageUInt8.class));
-
-		// try another image input type
-		generalized(ConvertBufferedImage.convertFromSingle(image, null, ImageFloat32.class));
+//
+//		BufferedImage image = UtilImageIO.loadImage("../data/evaluation/standard/lena512.bmp");
+//
+//		// produces the same results
+//		procedural(ConvertBufferedImage.convertFromSingle(image, null, ImageUInt8.class));
+//		generalized(ConvertBufferedImage.convertFromSingle(image, null, ImageUInt8.class));
+//		filter(ConvertBufferedImage.convertFromSingle(image, null, ImageUInt8.class));
+//		nogenerics(ConvertBufferedImage.convertFromSingle(image, null, ImageUInt8.class));
+//
+//		// try another image input type
+//		generalized(ConvertBufferedImage.convertFromSingle(image, null, ImageFloat32.class));
 	}
 }

@@ -48,6 +48,7 @@ public abstract class ImageInterleaved<T extends ImageInterleaved> extends Image
 	 * @param numBands Number of bands/colors.
 	 */
 	protected ImageInterleaved(int width, int height, int numBands) {
+		/*
 		_setData(Array.newInstance(getPrimitiveDataType(), width * height * numBands));
 		this.startIndex = 0;
 		this.stride = width * numBands;
@@ -55,6 +56,7 @@ public abstract class ImageInterleaved<T extends ImageInterleaved> extends Image
 		this.width = width;
 		this.height = height;
 		this.imageType = (ImageType)ImageType.interleaved(numBands, getClass());
+		*/
 	}
 
 	protected ImageInterleaved() {
@@ -75,6 +77,7 @@ public abstract class ImageInterleaved<T extends ImageInterleaved> extends Image
 	 */
 	@Override
 	public T subimage(int x0, int y0, int x1, int y1, T subimage) {
+		/*
 		T ret = _createNew(-1, -1);
 		ret._setData(_getData());
 		ret.stride = Math.max(width * numBands, stride);
@@ -85,10 +88,13 @@ public abstract class ImageInterleaved<T extends ImageInterleaved> extends Image
 		ret.subImage = true;
 
 		return ret;
+		*/
+		return null;
 	}
 
 	@Override
 	public void reshape(int width, int height) {
+		/*
 		if( isSubimage() )
 			throw new IllegalArgumentException("Can't reshape sub-images");
 
@@ -102,6 +108,7 @@ public abstract class ImageInterleaved<T extends ImageInterleaved> extends Image
 		this.width = width;
 		this.height = height;
 		this.stride = width*numBands;
+		*/
 	}
 
 	@Override
@@ -122,6 +129,7 @@ public abstract class ImageInterleaved<T extends ImageInterleaved> extends Image
 	@SuppressWarnings({"SuspiciousSystemArraycopy"})
 	@Override
 	public void setTo(T orig) {
+		/*
 		if (orig.width != width || orig.height != height)
 			throw new IllegalArgumentException("The width and/or height of 'orig' is not the same as this class");
 		if (orig.numBands != numBands)
@@ -138,6 +146,7 @@ public abstract class ImageInterleaved<T extends ImageInterleaved> extends Image
 				indexDst += stride;
 			}
 		}
+		*/
 	}
 
 	@Override
