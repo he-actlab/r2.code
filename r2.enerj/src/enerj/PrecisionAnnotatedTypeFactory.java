@@ -140,7 +140,18 @@ public class PrecisionAnnotatedTypeFactory extends BasicAnnotatedTypeFactory<Pre
 
 	private AnnotatedTypeMirror combineTypeWithType(
 			AnnotatedTypeMirror target, AnnotatedTypeMirror type) throws ContextInTopAccessException {
-
+		
+//		System.out.println("------------------------------------------------------------");
+//		System.out.println("target[" + target.toString() + "]");
+//		System.out.println("targetAnnotations[" + target.getAnnotations().toString() + "]");
+//		System.out.println("type[" + type.toString() + "]");
+//		System.out.println("typeAnnotations[" + type.getAnnotations().toString() +"]");
+//		System.out.println("------------------------------------------------------------");
+//		System.out.println();
+		if (target.getAnnotations().isEmpty()) {
+            // Type parameters (i.e. generics) have no annotations.
+            return type;
+        }
 		AnnotationMirror targetam = target.getAnnotations().iterator().next();
         if (type.getAnnotations().isEmpty()) {
             // Type parameters (i.e. generics) have no annotations.
@@ -191,21 +202,23 @@ public class PrecisionAnnotatedTypeFactory extends BasicAnnotatedTypeFactory<Pre
             AnnotatedArrayType  arrayType = (AnnotatedArrayType) result;
 
             AnnotatedTypeMirror elemType = arrayType.getComponentType().getCopy(true);
-
-            AnnotationMirror elemam = elemType.getAnnotations().iterator().next();
-
-    		// TODO: why is .equals directly not working?
-    		if (elemam.toString().equals(checker.CONTEXT.toString())) {
-
-    			// Don't allow @Top to substitute for @Context.
-    			if (targetam.toString().equals(checker.TOP.toString())) {
-    				throw new ContextInTopAccessException();
-    			}
-
-    			elemType.clearAnnotations();
-    			elemType.addAnnotation(targetam);
-    			arrayType.setComponentType(elemType);
-    		}
+            
+            if (!elemType.getAnnotations().isEmpty()) {
+	            AnnotationMirror elemam = elemType.getAnnotations().iterator().next();
+	
+	    		// TODO: why is .equals directly not working?
+	    		if (elemam.toString().equals(checker.CONTEXT.toString())) {
+	
+	    			// Don't allow @Top to substitute for @Context.
+	    			if (targetam.toString().equals(checker.TOP.toString())) {
+	    				throw new ContextInTopAccessException();
+	    			}
+	
+	    			elemType.clearAnnotations();
+	    			elemType.addAnnotation(targetam);
+	    			arrayType.setComponentType(elemType);
+	    		}
+            }
         }
 
 		return result;

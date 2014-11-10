@@ -1,0 +1,86 @@
+<project name="imagej" default="build">
+	
+	<!-- BootCV libraries -->
+	<property name="core.jar" value="./libraries/core-0.26.jar" />
+	<property name="ddogleg.jar" value="./libraries/ddogleg-0.6.jar" />
+	<property name="geo.jar" value="./libraries/georegression-0.7.jar" />
+	<property name="xmlpull.jar" value="./libraries/xmlpull-1.1.3.1.jar" />
+	<property name="xpp3.jar" value="./libraries/xpp3_min-1.1.4c.jar" />
+	<property name="xstream.jar" value="./libraries/xstream-1.4.7.jar" />
+
+	<!-- JSR308 support -->
+	<property environment="env" />
+	<property name="jsr308.dir" value="${env.JSR308}" />
+	<property name="jsr308.bin" value="${env.JSR308}/checkers/binary" />
+	<property name="jsr308.jar" value="${jsr308.bin}/jsr308-all.jar" />
+	<presetdef name="jsr308.javac">
+			<javac fork="yes">
+					<!-- compilerarg line="-J-Xbootclasspath/p:${jsr308.jar} -target jsr14" / -->
+					<!-- compilerarg line="-J-Xbootclasspath/p:${jsr308.jar} -verbose"/ -->
+					<compilerarg line="-J-Xbootclasspath/p:${jsr308.jar}"/>
+			</javac>
+	</presetdef>
+
+	<!-- EnerJ checker -->
+	<!--property name="enerj.jar" value="../../r2.enerj/build/enerj.jar" />
+	<property name="cfrt.jar" value="../../checker-runtime/build/cfrt.jar" /-->
+	<property name="enerj.jar" value="../../../enerj/enerj/build/enerj.jar" />
+	<property name="cfrt.jar" value="../../../enerj/checker-runtime/build/cfrt.jar" />
+	<property name="enerj.checker" value="enerj.PrecisionChecker" />
+
+	<!-- R2 -->
+	<property name="r2.dir" value="${env.R2_ANALYSIS}" />
+	<property name="r2.jar" value="${r2.dir}/r2-analysis.jar" />
+	<property name="r2bc.info" value="${user.dir}/imagej-bc-offset.info" /> 
+	<property name="r2anal.flag" value="${user.dir}/analysis.flag" />
+	<property name="r2anal.result" value="${user.dir}/analysis.result" />
+
+	<!-- EnerJ Compiler Declaration -->
+	<condition property="enerjc.args" value="-Alint=mbstatic,r2,${r2anal.flag},${r2bc.info},${r2anal.result}" else="-Alint=mbstatic,simulation,r2,${r2anal.flag},${r2bc.info},${r2anal.result}"> 
+			<isset property="env.EnerJNoSim" />
+	</condition>
+	<condition property="enerjc.verbose" value="true" else="true">
+			<isset property="env.EnerJNoSim" />
+	</condition>
+	<presetdef name="enerjc">
+			<jsr308.javac>
+					<compilerarg line="-Xbootclasspath/a:${cfrt.jar}:${enerj.jar}:${r2.jar} -processorpath ${cfrt.jar}:${enerj.jar} -processor ${enerj.checker}" />
+					<compilerarg line="${enerjc.args}" />
+					<!-- compilerarg line="-r2analflag ${r2anal.flag}" />
+					<compilerarg line="-r2bcinfo ${r2bc.info}" />
+					<compilerarg line="-r2gen false" />
+					<compilerarg line="-r2ast false" /-->
+			</jsr308.javac>
+	</presetdef>
+
+	<!-- Build -->
+  <target name="compile" description="Compile everything.">
+    <mkdir dir="build" />
+    <enerjc srcdir="src" 
+						destdir="build" 
+						optimize="on" 
+						debug="on" 
+						includeantruntime="false">
+        <exclude name="plugins/**"/>
+    </enerjc>
+  </target>
+  
+  <target name="build" depends="clean, compile" description="Build ij.jar.">
+    <copy file="IJ_Props.txt" todir="build" />
+    <copy file="images/microscope.gif" tofile="build/microscope.gif" />
+    <copy file="images/about.jpg" tofile="build/about.jpg" />
+		<copy file="plugins/MacAdapter.class" tofile="build/MacAdapter.class" /> 
+		<copy file="plugins/MacClipboard.class" tofile="build/MacClipboard.class" /> 
+    <copy todir="build/macros"><fileset dir="macros"/></copy>
+    <!-- Build ij.jar. -->
+    <jar jarfile="ij.jar" basedir="build" manifest="MANIFEST.MF" />
+  </target>
+
+	<!-- Clean -->
+	<target name="clean">
+		<delete dir="build"/>
+		<delete dir="chord_output"/>
+		<delete file="ij.jar"/>
+	</target>
+
+</project>
