@@ -17,7 +17,18 @@ print('./countLOC.sh "' + cmd + '"')
 os.system('./countLOC.sh "' + cmd + '"')
 textpath = benchpath + 'chord_output/' + bench + '.txt'
 os.system('cat ' + benchpath + 'chord_output/log.txt | grep FILE > ' + textpath)
-if bench != 'zxing':
-	os.system('cd ' + benchdir + '; java LOCCounter ' + textpath + ' ' + benchpath + '/src')
+if bench == 'zxing':
+	os.system('cd ' + benchdir + '; java LOCCounter ' + textpath + ' ' + benchpath + 'core/src ' + benchpath + 'javase/src')
+elif bench == 'boofcv':
+	os.system('cd ' + benchdir + '; java LOCCounter ' + textpath + ' '  + benchpath + 'examples/src ' \
+																		+ benchpath + 'main/calibration/src ' \
+																		+ benchpath + 'main/feature/src ' \
+																		+ benchpath + 'main/geo/src ' \
+																		+ benchpath + 'main/io/src ' \
+																		+ benchpath + 'main/ip/src ' \
+																		+ benchpath + 'main/recognition/src ' \
+																		+ benchpath + 'main/sfm/src ' \
+																		+ benchpath + 'main/visualize.src')
 else:
-	os.system('cd ' + benchdir + '; java LOCCounter ' + textpath + ' ' + benchpath + 'core/src' + ' ' + benchpath + 'javase/src')
+	os.system('cd ' + benchdir + '; java LOCCounter ' + textpath + ' ' + benchpath + '/src')
+

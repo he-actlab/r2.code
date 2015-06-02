@@ -23,7 +23,7 @@
         </java>
     </presetdef>
     
-    <target name="build" depends="jar" />
+    <target name="build" depends="clean, jar" />
 	
     <target name="compile">
         <mkdir dir="${classes.dir}" />

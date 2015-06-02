@@ -78,13 +78,17 @@ class StatGuarantee(object):
             index += 1
     
     def sortOps(self):
+        #for i in range(0, self.nOps):
+        #    if self.cnt[i] != 0:
+        #        self.error[i] = self.error[i] / self.cnt[i]
+        #        self.energy[i] = self.energy[i] / self.cnt[i]
+        #        self.score.append(ScoreInfo(self.error[i] * ERR_WEIGHT + self.energy[i] * ENR_WEIGHT, i))       # the more score has, the higher risk to approixmate  
+        #    else:
+        #        self.score.append(ScoreInfo(0.0, i)) 
+
+        # Just put random number into the score vector
         for i in range(0, self.nOps):
-            if self.cnt[i] != 0:
-                self.error[i] = self.error[i] / self.cnt[i]
-                self.energy[i] = self.energy[i] / self.cnt[i]
-                self.score.append(ScoreInfo(self.error[i] * ERR_WEIGHT + self.energy[i] * ENR_WEIGHT, i))       # the more score has, the higher risk to approixmate  
-            else:
-                self.score.append(ScoreInfo(0.0, i)) 
+            self.score.append(ScoreInfo(random.random(),i))
         self.score = sorted(self.score, key=itemgetter(0), reverse=True)
       
     def zeroBitNum(self, bitvector):
@@ -104,7 +108,7 @@ class StatGuarantee(object):
         newGeneArr = []
         for bit in gene[0]:
             newGeneArr.append(bit)        
-        
+
         indexSet = []
         self.approxCount[level] = 0
         for i in range(0, self.nOps):

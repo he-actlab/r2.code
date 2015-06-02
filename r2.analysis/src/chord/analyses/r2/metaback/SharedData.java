@@ -293,7 +293,10 @@ public class SharedData {
 		}
 		if(o instanceof Binary)
 			return true;
-		return false;
+		else {
+			System.out.println("not approximable operation: " + o.toString());	
+			return false;
+		}
 	}
 	
 	public static boolean isSkippedMethod(Quad i) {

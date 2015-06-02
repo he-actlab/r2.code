@@ -47,6 +47,9 @@ public class TreePathScanner<R, P> extends TreeScanner<R, P> {
         this.path = path;
         try {
             return path.getLeaf().accept(this, p);
+        } catch (Exception exception) {
+//        	exception.printStackTrace();
+        	return null;
         } finally {
             this.path = null;
         }
@@ -60,14 +63,17 @@ public class TreePathScanner<R, P> extends TreeScanner<R, P> {
     public R scan(Tree tree, P p) {
         if (tree == null)
             return null;
-
+        
         TreePath prev = path;
         path = new TreePath(path, tree);
         try {
             return tree.accept(this, p);
+        } catch (Exception exception) {
+//        	exception.printStackTrace();
+        	return null;
         } finally {
             path = prev;
-        }
+        } 
     }
 
     /**

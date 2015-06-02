@@ -1,6 +1,0 @@
-#!/usr/bin/python
-
-import os,sys
-
-os.system('cd ../ ; ./collect_high.py smm-r2 100') 
-

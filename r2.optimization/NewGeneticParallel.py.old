@@ -26,9 +26,9 @@ POPULATION_SIZE = 8
 # POPULATION_SIZE = 2
 MAX_RUNS = 5
 # MAX_RUNS = 1
-MAX_BINARY_SEARCH_DEPTH = 10
+MAX_BINARY_SEARCH_DEPTH = 5
 # MAX_BINARY_SEARCH_DEPTH = 1
-ERR_EXPECTATION = 20
+ERR_EXPECTATION = 5
 # ***** Parameters *****
 
 JarInfo = namedtuple('AppInfo', 'prj_name jar_name src_dir dst_dir')
@@ -120,15 +120,6 @@ def generate(name, bit_size):
         MGeneration[name].append([bitvector, zeroBitNum(bitvector), 0, 0, 0])
         FGeneration[name].append([bitvector, zeroBitNum(bitvector), 0, 0, 0])
         HGeneration[name].append([bitvector, zeroBitNum(bitvector), 0, 0, 0])
-
-    # Try to remove stochastic filtering part
-    bitvector = ''
-    for i in range(bit_size):
-        bitvector += str(random.randrange(0, 2))
-    LBestGene[name] = [bitvector, zeroBitNum(bitvector), 0, 0, 0]
-    MBestGene[name] = [bitvector, zeroBitNum(bitvector), 0, 0, 0]
-    FBestGene[name] = [bitvector, zeroBitNum(bitvector), 0, 0, 0]
-    HBestGene[name] = [bitvector, zeroBitNum(bitvector), 0, 0, 0]
 
 def init(name):
     jar_infos = BENCHMARK[name]
@@ -844,32 +835,21 @@ def runGene(name, gene, level, trainInput):
             energy = ret[1]
             fail = ret[2] 
             
-            print 'error = ' + str(error)
-
             if maxError < error:
                 maxError = error
             if minError > error:
                 minError = error
                 
             if fail == True:
-                print 'fail'
                 failed_num += 1
             
             errorSum += error
             energySum += energy
         
 #             print "gene[" + gene[0] + "] try[" + str(PARALLEL_WIDTH * chunk + j) + "] trainInput[" + str(trainInput) + "] error: " + str(error) + " energy: " + str(energy)
-    
-    
+        
     error = round((errorSum - maxError - minError)/(NUM_RUNS-failed_num-maxmin), 6)
     energy = round(energySum/(NUM_RUNS-failed_num), 6)
-
-    print 'errorSum = ' + str(errorSum)
-    print 'maxError = ' + str(maxError)
-    print 'minError = ' + str(minError)
-    print 'failed_num = ' + str(failed_num)
-    print 'error = ' + str(error)
-    print
     
     logfile.write("     gene[" + gene[0] + "] trainInput[" + str(trainInput) + "] error: " + str(error) + " energy: " + str(energy) + "\n")
     
@@ -960,8 +940,7 @@ def findStatGuaranteeGene(bench, level, trainInputs, testInputs):
         bestgene = FBestGene[bench]
     else:
         bestgene = HBestGene[bench]
-    print bestgene
-
+    
     # bestgene test
     logfile.write('Test bestgene from genetic algorithm\n')
     logfile.write('\n')
@@ -1077,8 +1056,8 @@ def main():
     logfile.write('starting %s level %s...\n' % (bench, level)) # level 0[low], 1[medium], 2[high], 3[aggressive]
     init(bench)
     os.system('cd ../r2.apps ; ./cpDir.py ' + bench)
-#    geneticAlgorithm(bench, int(level), Inputs.BenchInputs[bench].trainInputs)
-#    print "genetic algorithm finished"
+    geneticAlgorithm(bench, int(level), Inputs.BenchInputs[bench].trainInputs)
+    print "genetic algorithm finished"
     print "statistic guarantee start"
     findStatGuaranteeGene(bench, int(level), Inputs.BenchInputs[bench].trainInputs, Inputs.BenchInputs[bench].testInputs)
     print "statistic guarantee end"

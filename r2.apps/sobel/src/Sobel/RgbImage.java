@@ -1,60 +1,19 @@
 package Sobel;
 
-import java.io.IOException;
+import flexjava.lang.*;
 
-
-import chord.analyses.r2.lang.Relax;
-//import chord.analyses.expax.lang.*;
-//import chord.analyses.expax.lang.math.*;
-import Sobel.TextFile.Mode;
-
-
-public class RgbImage {
+public class EdgeDetection {
 	public int width;
 	public int height;
-
 	public int[][][] image;
-	public RgbImage() {}
-
-	public void load(String filePath) throws IOException {
-		TextFile textFile = new TextFile (filePath, Mode.READ);
-
-		width = textFile.loadInt();
-		textFile.loadChar();
-		height = textFile.loadInt();
-
-		image = new int[height][][];
-		for (int i=0; i<height; i++){
-			image[i] = new int[width][];
-			for(int j=0; j<width; j++){
-				image[i][j] = new int[3];
-			}
-		}
-
-		for (int i = 0; i < height; ++i) {
-			for (int j = 0; j < width; j++) {
-				image[i][j][0] = textFile.loadInt();
-				textFile.loadChar();
-				image[i][j][1] = textFile.loadInt();
-				textFile.loadChar();
-				image[i][j][2] = textFile.loadInt();
-				if (j < (width - 1)) {
-					textFile.loadChar();
-				}
-			}
-		}
-	}
-
+	public EdgeDetection() {}
 	public void slideWindow(int x, int y, int[][][] window) {
 		int h = window.length;
 		int w = window[0].length;
-
 		int x0 = x - (int)((float)w/2.);
 		int x1 = x + (int)((float)w/2.);
-
 		int y0 = y - (int)((float)h/2.);
 		int y1 = y + (int)((float)h/2.);
-
 		int r = 0;
 		for (int j = y0; j <= y1; ++j) {
 			if (j < 0 || j >= height) {
@@ -79,36 +38,28 @@ public class RgbImage {
 			r++;
 		}
 	}
-
 	public double sobel (int[][][] window) {
-		double p1 = ( double)luminance(window[0][0]);	
-		double p2 = ( double)luminance(window[0][1]);	
-		double p3 = ( double)luminance(window[0][2]);	
-
-		double p4 = ( double)luminance(window[1][0]);	
-		double p5 = ( double)luminance(window[1][1]);	
-		double p6 = ( double)luminance(window[1][2]);	
-
-		double p7 = ( double)luminance(window[2][0]);	
-		double p8 = ( double)luminance(window[2][1]);	
-		double p9 = ( double)luminance(window[2][2]);	
-
+		double p1 = (double)luminance(window[0][0]);	
+		double p2 = (double)luminance(window[0][1]);	
+		double p3 = (double)luminance(window[0][2]);	
+		double p4 = (double)luminance(window[1][0]);	
+		double p5 = (double)luminance(window[1][1]);	
+		double p6 = (double)luminance(window[1][2]);	
+		double p7 = (double)luminance(window[2][0]);	
+		double p8 = (double)luminance(window[2][1]);	
+		double p9 = (double)luminance(window[2][2]);	
 		double x = (p1 + (p2 + p2) + p3 - p7 - (p8 + p8) - p9); 	
 		double y = (p3 + (p6 + p6) + p9 - p1 - (p4 + p4) - p7);	
-
 		double l = Math.sqrt(x * x + y * y);	
-
 		return l;
 	}
-
 	public  int luminance( int[] rgb) {
 		double rC = 0.30;	
 		double gC = 0.59;	
 		double bC = 0.11;	
 
-		return ( int)(rC * rgb[0] + gC * rgb[1] + bC * rgb[2] + 0.5) % 256;	
+		return (int)(rC * rgb[0] + gC * rgb[1] + bC * rgb[2] + 0.5) % 256;	
 	}
-
 	public void makeGrayscale() {
 		int i;
 		int j;
@@ -120,21 +71,20 @@ public class RgbImage {
 
 		for(i = 0; i < image.length; i++) {
 			for(j = 0; j < image[i].length; j++) {
-				luminance = rC * image[i][j][0] + gC * image[i][j][1] + bC * image[i][j][2];	
+				luminance = rC * image[i][j][0] + 
+							gC * image[i][j][1] + 
+							bC * image[i][j][2];	
 
-				image[i][j][0] = ( int)(luminance * 256);	
-				image[i][j][1] = ( int)(luminance * 256);	
-				image[i][j][2] = ( int)(luminance * 256);	
+				image[i][j][0] = (int)(luminance * 256);	
+				image[i][j][1] = (int)(luminance * 256);	
+				image[i][j][2] = (int)(luminance * 256);	
 			}
 		}
 	}
-
-	public static void main(String[] args) throws IOException {
-		RgbImage rgbImage = new RgbImage();
-		rgbImage.load(args[0]);
-
-		rgbImage.makeGrayscale();
-
+	public static void main(String[] args) {
+		EdgeDetection detector = new EdgeDetection();
+		detector.loadImage(args[0]);
+		detector.makeGrayscale();
 		int[][][] window = new int[3][][];
 		for(int i=0; i<3; i++){
 			window[i] = new int[3][];
@@ -142,23 +92,14 @@ public class RgbImage {
 				window[i][j] = new int[3];
 			}
 		}
-		double l;
-		for (int y=0; y < rgbImage.height; y++) {
-			for (int x=0; x < rgbImage.width; x++) {
-				rgbImage.slideWindow(x,y, window);
-				l = rgbImage.sobel(window);	
-				int L = (int)(l);
-				//additional accept
-//				L = Accept.accept(L);
-				if (L >= 256)
-					L = 255;
-				//additional accept
-//				L = Accept.accept(L);
-				if (L < 0)
-					L = 0;
-				L = Relax.relax(L);
-				System.out.println(L);
-//				L = Precise.precise(L);	
+		for (int y=0; y < detector.height; y++) {
+			for (int x=0; x < detector.width; x++) {
+				detector.slideWindow(x,y, window);
+				double l = detector.sobel(window);	
+				if (l >= 255.0) l = 255.0;
+				if (l < 0.0) l = 0.0;
+				loosen(l);
+				System.out.println(l);
 			}
 		}
 	}

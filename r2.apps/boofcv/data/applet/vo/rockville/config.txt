@@ -1,3 +1,0 @@
-stereo.xml
-left.mjpeg
-right.mjpeg
