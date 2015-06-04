@@ -9,9 +9,9 @@ init()
 os.system("rm -rf src-marked")
 print
 print Fore.MAGENTA + " <<<<< [1] compilation start <<<<< " + Fore.RESET
-os.system("ant clean > /dev/null")
+os.system("./clean.sh > /dev/null")
 os.system("echo false > analysis.flag")
-result = os.popen("ant 2> /dev/null").readlines()
+result = os.popen("./build.sh 2> /dev/null").readlines()
 for line in result:
 	if "error" in line:
 		for line2 in result:
