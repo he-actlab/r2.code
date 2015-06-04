@@ -1,10 +1,13 @@
 import chord.analyses.r2.lang.*;
 
+/**
+	Evaluation for FlexJava framework
+*/
+
 import com.jme.intersection.Intersection;
 import com.jme.math.Vector3f;
 
 import java.util.Random;
-
 
 public class JMEIntTest {
 	public static Random rand;

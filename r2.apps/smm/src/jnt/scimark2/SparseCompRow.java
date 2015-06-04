@@ -1,7 +1,7 @@
 package jnt.scimark2;
 
 /**
- Evaluation for Relax framework
+ Evaluation for FlexJava framework
 */
 
 import chord.analyses.r2.lang.*;

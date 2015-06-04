@@ -1,5 +1,9 @@
 package jnt.scimark2;
 
+/**
+	Evaluation for FlexJava framework
+*/
+
 import chord.analyses.r2.lang.*;
 import chord.analyses.r2.lang.math.*;
 
@@ -142,7 +146,16 @@ public class FFT {
 				j += k ;
 		}
 	}
-	
+
+	private static double[] RandomVector(int N, Random R)
+	{
+		double A[] = new  double[N];
+
+		for (int i=0; i<N; i++)
+			A[i] = R.nextDouble(); 
+		return A;
+	}
+
 	public static void main(String args[])
 	{
 		int N = 16;
@@ -168,15 +181,6 @@ public class FFT {
 			Tighten.tighten(x_i);
 		}
 		System.out.println("");
-	}
-
-	private static double[] RandomVector(int N, Random R)
-	{
-		double A[] = new  double[N];
-
-		for (int i=0; i<N; i++)
-			A[i] = R.nextDouble(); 
-		return A;
 	}
 }
 

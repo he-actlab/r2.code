@@ -2,6 +2,10 @@
  * Stupid simple Raytracer. 
  */
 
+/**
+ Evaluation for FlexJava framework
+*/
+
 import java.awt.*;
 
 import chord.analyses.r2.lang.*;
