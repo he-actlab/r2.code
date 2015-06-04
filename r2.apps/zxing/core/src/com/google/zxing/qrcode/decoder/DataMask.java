@@ -64,7 +64,7 @@ abstract class DataMask {
       for (int j = 0; j < dimension; j++) {
     	boolean b = isMasked(i, j);
     	//additional accept
-//    	b = Relax.relax(b);
+//    	b = Loosen.loosen(b);
         if (b) {
           int offset = i * bits.rowSize + (j >> 5);
           bits.bits[offset] ^= 1 << (j & 0x1f);

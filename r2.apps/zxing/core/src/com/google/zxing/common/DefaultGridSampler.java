@@ -63,10 +63,10 @@ public final class DefaultGridSampler extends GridSampler {
       try {
         for (int x = 0; x < max; x += 2) {
           //additional accept
-//          points = Relax.relax_all_FIELD1_TAG6(points);
+//          points = Loosen.loosen_all_FIELD1_TAG6(points);
           boolean imageGet = image.get((int)points[x], (int)points[x + 1]);
           //additional accept
-//          imageGet = Relax.relax(imageGet);
+//          imageGet = Loosen.loosen(imageGet);
           if (imageGet) {
     	    int offset = y * bits.rowSize + ((x >> 1) >> 5);
     	    bits.bits[offset] |= 1 << ((x >> 1) & 0x1f);

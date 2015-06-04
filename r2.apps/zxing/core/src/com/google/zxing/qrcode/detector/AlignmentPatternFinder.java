@@ -112,7 +112,7 @@ final class AlignmentPatternFinder {
       int currentState = 0;
       while (j < maxJ) {
     	//additional accept
-        if (Relax.relax(image.get(j, i))) {
+        if (Loosen.loosen(image.get(j, i))) {
           // Black pixel
           if (currentState == 1) { // Counting black pixels
             stateCount[currentState]++;
@@ -207,7 +207,7 @@ final class AlignmentPatternFinder {
     // Start counting up from center
     int i = startI;
     //additional accept
-    while (i >= 0 && Relax.relax(image.get(centerJ, i)) && stateCount[1] <= maxCount) {
+    while (i >= 0 && Loosen.loosen(image.get(centerJ, i)) && stateCount[1] <= maxCount) {
       stateCount[1]++;
       i--;
     }
@@ -216,7 +216,7 @@ final class AlignmentPatternFinder {
       return Float.NaN;
     }
     //additional accept
-    while (i >= 0 && !Relax.relax(image.get(centerJ, i)) && stateCount[0] <= maxCount) {
+    while (i >= 0 && !Loosen.loosen(image.get(centerJ, i)) && stateCount[0] <= maxCount) {
       stateCount[0]++;
       i--;
     }
@@ -226,7 +226,7 @@ final class AlignmentPatternFinder {
     // Now also count down from center
     i = startI + 1;
     //additional accept
-    while (i < maxI && Relax.relax(image.get(centerJ, i)) && stateCount[1] <= maxCount) {
+    while (i < maxI && Loosen.loosen(image.get(centerJ, i)) && stateCount[1] <= maxCount) {
       stateCount[1]++;
       i++;
     }
@@ -234,7 +234,7 @@ final class AlignmentPatternFinder {
       return Float.NaN;
     }
     //additional accept
-    while (i < maxI && !Relax.relax(image.get(centerJ, i)) && stateCount[2] <= maxCount) {
+    while (i < maxI && !Loosen.loosen(image.get(centerJ, i)) && stateCount[2] <= maxCount) {
       stateCount[2]++;
       i++;
     }
@@ -274,7 +274,7 @@ final class AlignmentPatternFinder {
         // Look for about the same center and module size:
         boolean cond = center.aboutEquals(estimatedModuleSize, centerI, centerJ);
         //additional accept
-//        cond = Relax.relax(cond);
+//        cond = Loosen.loosen(cond);
         if (cond) {
           ret = new AlignmentPattern(centerJ, centerI, estimatedModuleSize);
         }

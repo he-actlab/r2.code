@@ -106,7 +106,7 @@ public class FinderPatternFinder {
       for (int j = 0; j < maxJ; j++) {
     	boolean cond = image.get(j, i);
     	//additional accept
-    	cond = Relax.relax(cond);
+    	cond = Loosen.loosen(cond);
         if (cond) {
           // Black pixel
           if ((currentState & 1) == 1) { // Counting white pixels
@@ -253,7 +253,7 @@ public class FinderPatternFinder {
     // Start counting up from center
     int i = startI;
     //additional accept
-    while (i >= 0 && Relax.relax(image.get(centerJ, i))) {
+    while (i >= 0 && Loosen.loosen(image.get(centerJ, i))) {
       stateCount[2]++;
       i--;
     }
@@ -262,7 +262,7 @@ public class FinderPatternFinder {
       return Float.NaN;
     }
     //additional accept
-    while (i >= 0 && !Relax.relax(image.get(centerJ, i)) && stateCount[1] <= maxCount) {
+    while (i >= 0 && !Loosen.loosen(image.get(centerJ, i)) && stateCount[1] <= maxCount) {
       stateCount[1]++;
       i--;
     }
@@ -271,7 +271,7 @@ public class FinderPatternFinder {
       return Float.NaN;
     }
     //additional accept
-    while (i >= 0 && Relax.relax(image.get(centerJ, i)) && stateCount[0] <= maxCount) {
+    while (i >= 0 && Loosen.loosen(image.get(centerJ, i)) && stateCount[0] <= maxCount) {
       stateCount[0]++;
       i--;
     }
@@ -282,7 +282,7 @@ public class FinderPatternFinder {
     // Now also count down from center
     i = startI + 1;
     //additional accept
-    while (i < maxI && Relax.relax(image.get(centerJ, i))) {
+    while (i < maxI && Loosen.loosen(image.get(centerJ, i))) {
       stateCount[2]++;
       i++;
     }
@@ -290,7 +290,7 @@ public class FinderPatternFinder {
       return Float.NaN;
     }
     //additional accept
-    while (i < maxI && !Relax.relax(image.get(centerJ, i)) && stateCount[3] < maxCount) {
+    while (i < maxI && !Loosen.loosen(image.get(centerJ, i)) && stateCount[3] < maxCount) {
       stateCount[3]++;
       i++;
     }
@@ -298,7 +298,7 @@ public class FinderPatternFinder {
       return Float.NaN;
     }
     //additional accept
-    while (i < maxI && Relax.relax(image.get(centerJ, i)) && stateCount[4] < maxCount) {
+    while (i < maxI && Loosen.loosen(image.get(centerJ, i)) && stateCount[4] < maxCount) {
       stateCount[4]++;
       i++;
     }
@@ -332,7 +332,7 @@ public class FinderPatternFinder {
 
     int j = startJ;
     //additional accept
-    while (j >= 0 && Relax.relax(image.get(j, centerI))) {
+    while (j >= 0 && Loosen.loosen(image.get(j, centerI))) {
       stateCount[2]++;
       j--;
     }
@@ -340,7 +340,7 @@ public class FinderPatternFinder {
       return Float.NaN;
     }
     //additional accept
-    while (j >= 0 && !Relax.relax(image.get(j, centerI)) && stateCount[1] <= maxCount) {
+    while (j >= 0 && !Loosen.loosen(image.get(j, centerI)) && stateCount[1] <= maxCount) {
       stateCount[1]++;
       j--;
     }
@@ -348,7 +348,7 @@ public class FinderPatternFinder {
       return Float.NaN;
     }
     //additional accept
-    while (j >= 0 && Relax.relax(image.get(j, centerI)) && stateCount[0] <= maxCount) {
+    while (j >= 0 && Loosen.loosen(image.get(j, centerI)) && stateCount[0] <= maxCount) {
       stateCount[0]++;
       j--;
     }
@@ -358,7 +358,7 @@ public class FinderPatternFinder {
 
     j = startJ + 1;
     //additional accept
-    while (j < maxJ && Relax.relax(image.get(j, centerI))) {
+    while (j < maxJ && Loosen.loosen(image.get(j, centerI))) {
       stateCount[2]++;
       j++;
     }
@@ -366,7 +366,7 @@ public class FinderPatternFinder {
       return Float.NaN;
     }
     //additional accept
-    while (j < maxJ && !Relax.relax(image.get(j, centerI)) && stateCount[3] < maxCount) {
+    while (j < maxJ && !Loosen.loosen(image.get(j, centerI)) && stateCount[3] < maxCount) {
       stateCount[3]++;
       j++;
     }
@@ -374,7 +374,7 @@ public class FinderPatternFinder {
       return Float.NaN;
     }
     //additional accept
-    while (j < maxJ && Relax.relax(image.get(j, centerI)) && stateCount[4] < maxCount) {
+    while (j < maxJ && Loosen.loosen(image.get(j, centerI)) && stateCount[4] < maxCount) {
       stateCount[4]++;
       j++;
     }
@@ -426,7 +426,7 @@ public class FinderPatternFinder {
           // Look for about the same center and module size:
           boolean cond = center.aboutEquals(estimatedModuleSize, centerI, centerJ);
           //additional accept
-          cond = Relax.relax(cond);
+          cond = Loosen.loosen(cond);
           if (cond) {
             center.incrementCount();
             found = true;
@@ -537,7 +537,7 @@ public class FinderPatternFinder {
         FinderPattern pattern = (FinderPattern) possibleCenters.elementAt(i);
         boolean cond = (ApproxMath.abs(pattern.getEstimatedModuleSize() - average) > 0.2f * average);
         //additional accept
-        cond = Relax.relax(cond);
+        cond = Loosen.loosen(cond);
         if (cond) {
           possibleCenters.removeElementAt(i);
           i--;

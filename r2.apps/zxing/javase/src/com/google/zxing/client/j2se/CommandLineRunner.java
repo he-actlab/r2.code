@@ -308,7 +308,7 @@ public final class CommandLineRunner {
 			for (int x = 0; x < width; x++) {
 				boolean rowGet = row.get(x);
 				//additional accept
-//				rowGet = Relax.relax(rowGet);
+//				rowGet = Loosen.loosen(rowGet);
 				if (rowGet) {
 					pixels[offset + x] = 0xff000000;
 				} else {
@@ -325,7 +325,7 @@ public final class CommandLineRunner {
 				for (int x = 0; x < width; x++) {
 					boolean matrixGet = matrix.get(x, y);
 					//additional accept
-//					matrixGet = Relax.relax(matrixGet); 
+//					matrixGet = Loosen.loosen(matrixGet); 
 					if (matrixGet) {
 						pixels[offset + x] = 0xff000000;
 					} else {
@@ -336,7 +336,7 @@ public final class CommandLineRunner {
 		} catch (NotFoundException nfe) {
 		}
 		
-		pixels = Relax.relax_all_FIELD1_TAG11(pixels);
+		pixels = Loosen.loosen_all_FIELD1_TAG11(pixels);
 		
 		// Write the result
 		BufferedImage result = new BufferedImage(stride, height, BufferedImage.TYPE_INT_ARGB);

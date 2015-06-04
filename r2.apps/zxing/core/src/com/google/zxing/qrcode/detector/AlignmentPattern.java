@@ -44,7 +44,7 @@ public final class AlignmentPattern extends ResultPoint {
    boolean aboutEquals(float moduleSize, float i, float j) {
 	boolean ret = false;
 	//additional accept
-	moduleSize = Relax.relax(moduleSize);
+	moduleSize = Loosen.loosen(moduleSize);
     if (Math.abs(i - getY()) <= moduleSize && Math.abs(j - getX()) <= moduleSize) {
       float moduleSizeDiff = ApproxMath.abs(moduleSize - estimatedModuleSize);
       ret = moduleSizeDiff <= 1.0f || moduleSizeDiff / estimatedModuleSize <= 1.0f;

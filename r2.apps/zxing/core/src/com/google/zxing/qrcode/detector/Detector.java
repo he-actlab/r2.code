@@ -95,7 +95,7 @@ public class Detector {
 
     float moduleSize = calculateModuleSize(topLeft, topRight, bottomLeft);
     //additional accept
-    moduleSize = Relax.relax(moduleSize);
+    moduleSize = Loosen.loosen(moduleSize);
     if (moduleSize < 1.0f) {
       System.err.println("module too small " + (moduleSize));
       throw NotFoundException.getNotFoundInstance();
@@ -208,15 +208,15 @@ public class Detector {
 	float num; 
 	num = (ResultPoint.distance(topLeft, topRight) / moduleSize);
 	//additional accept
-//	num = Relax.relax(num);
+//	num = Loosen.loosen(num);
     int tltrCentersDimension = round(num);
     num = (ResultPoint.distance(topLeft, bottomLeft) / moduleSize);
 	//additional accept
-//	num = Relax.relax(num);
+//	num = Loosen.loosen(num);
     int tlblCentersDimension = round(num);
     int dimension = ((tltrCentersDimension + tlblCentersDimension) >> 1) + 7;
     //additional accept
-    dimension = Relax.relax(dimension);
+    dimension = Loosen.loosen(dimension);
     switch (dimension & 0x03) { // mod 4
       case 0:
         dimension++;
@@ -299,7 +299,7 @@ public class Detector {
      otherToX = image.getWidth() - 1;
    }
    //additional accept
-//   scale = Relax.relax(scale);
+//   scale = Loosen.loosen(scale);
    int otherToY = (int) (fromY - (toY - fromY) * scale); // EnerJ TODO
 
    scale = 1.0f;
@@ -311,7 +311,7 @@ public class Detector {
      otherToY = image.height - 1;
    }
    //additional accept
-//   scale = Relax.relax(scale);
+//   scale = Loosen.loosen(scale);
    otherToX = (int) (fromX + (otherToX - fromX) * scale); // EnerJ TODO
 
    result += sizeOfBlackWhiteBlackRun(fromX, fromY, otherToX, otherToY);
@@ -352,14 +352,14 @@ public class Detector {
       if (state == 1) { // In white pixels, looking for black
     	//additional accept
     	boolean imageGet = (image.get(realX, realY));
-//    	imageGet = Relax.relax(imageGet);
+//    	imageGet = Loosen.loosen(imageGet);
         if (imageGet) {
           state++;
         }
       } else {
       	//additional accept
       	boolean imageGet = (image.get(realX, realY));
-//      	imageGet = Relax.relax(imageGet);
+//      	imageGet = Loosen.loosen(imageGet);
         if (!imageGet) {
           state++;
         }
@@ -407,7 +407,7 @@ public class Detector {
     int alignmentAreaRightX = ApproxMath.min(image.getWidth() - 1, estAlignmentX + allowance);
     boolean b = (alignmentAreaRightX - alignmentAreaLeftX < overallEstModuleSize * 3);
     //additional accept
-    b = Relax.relax(b);
+    b = Loosen.loosen(b);
     if (b) {
         System.err.println("alignment vs module size");
       throw NotFoundException.getNotFoundInstance();
@@ -417,13 +417,13 @@ public class Detector {
     int alignmentAreaBottomY = ApproxMath.min(image.getHeight() - 1, estAlignmentY + allowance);
 
     //additional accept
-//    alignmentAreaLeftX = Relax.relax(alignmentAreaLeftX);
+//    alignmentAreaLeftX = Loosen.loosen(alignmentAreaLeftX);
     //additional accept
-//    alignmentAreaTopY = Relax.relax(alignmentAreaTopY);
+//    alignmentAreaTopY = Loosen.loosen(alignmentAreaTopY);
     //additional accept
-//    alignmentAreaRightX = Relax.relax(alignmentAreaRightX);
+//    alignmentAreaRightX = Loosen.loosen(alignmentAreaRightX);
     //additional accept
-//    alignmentAreaBottomY = Relax.relax(alignmentAreaBottomY);
+//    alignmentAreaBottomY = Loosen.loosen(alignmentAreaBottomY);
     
     AlignmentPatternFinder alignmentFinder =
         new AlignmentPatternFinder(

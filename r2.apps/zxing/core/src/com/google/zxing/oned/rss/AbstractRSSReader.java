@@ -97,7 +97,7 @@ public abstract class AbstractRSSReader extends OneDReader {
     int firstTwoSum = counters[0] + counters[1];
     int sum = firstTwoSum + counters[2] + counters[3];
     float ratio = (float) firstTwoSum / (float) sum;
-    ratio = Relax.relax(ratio);
+    ratio = Loosen.loosen(ratio);
     if (ratio >= MIN_FINDER_PATTERN_RATIO && ratio <= MAX_FINDER_PATTERN_RATIO) {
       // passes ratio test in spec, but see if the counts are unreasonable
       int minCounter = Integer.MAX_VALUE;

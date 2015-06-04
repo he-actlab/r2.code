@@ -68,7 +68,7 @@ public final class BitMatrix {
     int offset = y * rowSize + (x >> 5);
     int lhs = ((bits[offset] >>> (x & 0x1f)) & 1);
     //additional accept
-//    lhs = Relax.relax(lhs);
+//    lhs = Loosen.loosen(lhs);
     return lhs != 0;
   }
 
@@ -159,7 +159,7 @@ public final class BitMatrix {
   public int[] getTopLeftOnBit() {
     int bitsOffset = 0;
     //additional accept
-    while (bitsOffset < bits.length && Relax.relax(bits[bitsOffset]) == 0) {
+    while (bitsOffset < bits.length && Loosen.loosen(bits[bitsOffset]) == 0) {
       bitsOffset++;
     }
     if (bitsOffset == bits.length) {
@@ -172,7 +172,7 @@ public final class BitMatrix {
     int bit = 0;
     
     //additional accept
-    while (Relax.relax((theBits << (31 - bit))) == 0) {
+    while (Loosen.loosen((theBits << (31 - bit))) == 0) {
       bit++;
     }
     x += bit;
@@ -207,9 +207,9 @@ public final class BitMatrix {
       int lhs = bits[i];
       int rhs = other.bits[i];
       //additional accept
-//      lhs = Relax.relax(lhs);
+//      lhs = Loosen.loosen(lhs);
       //additional accept
-//      rhs = Relax.relax(rhs);
+//      rhs = Loosen.loosen(rhs);
       if (lhs != rhs) {
         ret = false;
       }
@@ -225,7 +225,7 @@ public final class BitMatrix {
     for (int i = 0; i < bits.length; i++) {
       int b = bits[i];
       //additional accept
-//      b = Relax.relax(b);
+//      b = Loosen.loosen(b);
       hash = 31 * hash + (int)(b);
     }
     return hash;
@@ -237,7 +237,7 @@ public final class BitMatrix {
       for (int x = 0; x < width; x++) {
     	boolean get = get(x, y);
     	//additional accept
-//    	get = Relax.relax(get);
+//    	get = Loosen.loosen(get);
         result.append(get ? "X " : "  ");
       }
       result.append('\n');

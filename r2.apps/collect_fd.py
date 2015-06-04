@@ -19,37 +19,60 @@ BMARKS = {
         #Bmark('SciMark2: SMM',        'smm', 'proportion', None),
         #Bmark('SciMark2: LU',         'lu',  'absolute', None),
     #],
-    'FFT' : [
-        Bmark('SciMark2: FFT',        'fft', 'absolute', None),
+     'zxing': [
+        Bmark('zxing', '', 'string', r'Parsed result:\n(\S+)'),
     ],
-    'SOR' : [
-        Bmark('SciMark2: SOR',        'sor', 'absolute', None),
-    ],
-    'MonteCarlo' : [
-        Bmark('SciMark2: MonteCarlo', 'mc',  'proportion', None),
-    ],
-    'SMM' : [
-        Bmark('SciMark2: SMM',        'smm', 'proportion', None),
-    ],
-    'LU' : [
-        Bmark('SciMark2: LU',         'lu',  'absolute', None),
-    ],
-    'zxing': [
-        Bmark('ZXing', '', 'string', r'Parsed result:\n(\S+)'),
+    'zxing-enerj': [
+        Bmark('zxing', '', 'string', r'Parsed result:\n(\S+)'),
     ],
     'jmeint': [
-        Bmark('jME', '', 'boolean', None),
+        Bmark('jmeint', '', 'boolean', None),
     ],
-    'imagefill': [
-        Bmark('ImageJ', '', 10, None),
+    'jmeint-enerj': [
+        Bmark('jmeint', '', 'boolean', None),
     ],
     'simpleRaytracer': [
-        Bmark('Plane', '' , 255, None)
+        Bmark('simpleRaytracer', '' , 255, None)
     ],
-		'sobel': [
-        Bmark('Sobel', '' , 255, None)
+    'simpleRaytracer-enerj': [
+        Bmark('simpleRaytracer', '' , 255, None)
+    ],
+    'sobel': [
+        Bmark('sobel', '' , 255, None)
+    ],
+    'sobel-enerj': [
+        Bmark('sobel', '' , 255, None)
+    ],
+    'fft': [
+        Bmark('fft', '', 'absolute', None)
+    ],
+    'fft-enerj': [
+        Bmark('fft', '', 'absolute', None)
+    ],
+    'sor': [
+        Bmark('sor', '', 'absolute', None)
+    ],
+    'sor-enerj': [
+        Bmark('sor', '', 'absolute', None)
+    ],
+    'lu': [
+        Bmark('lu', '', 'absolute', None)
+    ],
+    'lu-enerj': [
+        Bmark('lu', '', 'absolute', None)
+    ],
+    'mc': [
+        Bmark('mc', '', 'proportion', None)
+    ],
+    'mc-enerj': [
+        Bmark('mc', '', 'proportion', None)
+    ],
+    'smm': [
+        Bmark('smm', '', 'proportion', None)
+    ],
+    'smm-enerj': [
+        Bmark('smm', '', 'proportion', None)
     ]
-
 }
 COMMANDS = {
     'run_precise':   './run.sh -nonoise %s',
@@ -424,4 +447,7 @@ if __name__ == '__main__':
         results = collect_outputs(path, BMARKS[path], apronly, colonly, benchArg)
     print '\n'.join(str(res) for res in results.itervalues())
     total.update(results)
-    dump_json(total, JSON_OUT)
+    if path == 'FFT' or path == 'SOR' or path == 'MonteCarlo' or path == 'SMM' or path == 'LU':
+        dump_json(total, 'scimark2/' + JSON_OUT)
+    else:
+        dump_json(total, path + '/' + JSON_OUT)

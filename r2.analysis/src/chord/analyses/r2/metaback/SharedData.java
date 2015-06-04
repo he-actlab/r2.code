@@ -106,12 +106,12 @@ public class SharedData {
 	
 	static{
 		restrictMethList = new HashSet<String>();
-		restrictMethList.add("restrict");
+		restrictMethList.add("tighten");
 	}
 
 	static{
 		relaxMethList = new HashSet<String>();
-		relaxMethList.add("relax");
+		relaxMethList.add("loosen");
 	}
 	
 	public static boolean isMainMethod(jq_Method m){

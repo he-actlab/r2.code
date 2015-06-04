@@ -427,7 +427,7 @@ public final class Detector {
     for (int x = column; x < column + width; x++) {
       boolean pixel = matrix.get(x, row);
       boolean cond = pixel ^ isWhite;
-      if (Relax.relax(cond)) {
+      if (Loosen.loosen(cond)) {
         counters[counterPosition]++;
       } else {
         if (counterPosition == patternLength - 1) {

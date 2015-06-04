@@ -3,8 +3,13 @@
 from __future__ import division
 from common import *
 import sys
+
+args = sys.argv[1:]
+path = args[0]
+directory = path
+
 #results = json_in()
-results = json.load(open('results.json'))
+results = json.load(open(directory + '/results.json'))
 
 # Constants.
 

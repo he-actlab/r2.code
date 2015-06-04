@@ -60,7 +60,7 @@ for line in lines:
 	else:
 		loc = 'javase\/src-marked\/' + loc
 
-	if ("Relax.java" in loc) or ("Restrain.java" in loc) or ("Tag.java" in loc) or ("ApproxMath.java" in loc) or ("ApproxFloat.java" in loc):
+	if ("Loosen.java" in loc) or ("Tighten.java" in loc) or ("Tag.java" in loc) or ("ApproxMath.java" in loc) or ("ApproxFloat.java" in loc):
 		continue
 
 	# get the content of a certain line of java source code

@@ -125,9 +125,9 @@ public abstract class GridSampler {
       int x = (int) points[offset];
       int y = (int) points[offset + 1];
       //additional accept
-      x = Relax.relax(x);
+      x = Loosen.loosen(x);
       //additional accept
-      y = Relax.relax(y);
+      y = Loosen.loosen(y);
       if (x < -1 || x > width || y < -1 || y > height) {
           if (false) {
               throw NotFoundException.getNotFoundInstance();
@@ -158,9 +158,9 @@ public abstract class GridSampler {
       int x = (int) points[offset];
       int y = (int) points[offset + 1];
       //additional accept
-      x = Relax.relax(x);
+      x = Loosen.loosen(x);
       //additional accept
-      y = Relax.relax(y);
+      y = Loosen.loosen(y);
       if (x < -1 || x > width || y < -1 || y > height) {
           if (false) {
                 throw NotFoundException.getNotFoundInstance();

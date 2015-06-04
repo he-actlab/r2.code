@@ -3,8 +3,13 @@
 from __future__ import division
 from common import *
 import sys
+
+args = sys.argv[1:]
+path = args[0]
+directory = path
+
 #results = json_in()
-results = json.load(open('results.json'))
+results = json.load(open(directory + '/results.json'))
 
 # Constants.
 
@@ -39,6 +44,7 @@ for bmark, _ in BMLONGNAMES.iteritems():
     res = results[bmark]
     
     approx = res['approximateness']
+    
     
     prop_sram = (1 - PROP_MEMORY) * (PROP_CPU_CACHE + PROP_CPU_REG)
     sram_prop_base = prop_sram

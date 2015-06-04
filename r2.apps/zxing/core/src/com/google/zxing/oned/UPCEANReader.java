@@ -110,7 +110,7 @@ public abstract class UPCEANReader extends OneDReader {
     int[] startRange = null;
     int nextStart = 0;
     //additional accept
-    while (!(foundStart = Relax.relax(foundStart))) {
+    while (!(foundStart = Loosen.loosen(foundStart))) {
       startRange = findGuardPattern(row, nextStart, false, START_END_PATTERN);
       int start = startRange[0];
       nextStart = startRange[1];
@@ -267,10 +267,10 @@ public abstract class UPCEANReader extends OneDReader {
     int width = row.getSize();
     boolean isWhite = false;
     //additional accept
-    while (Relax.relax(rowOffset) < width) {
+    while (Loosen.loosen(rowOffset) < width) {
       isWhite = !row.get(rowOffset);
       //additional accept
-      isWhite = Relax.relax(isWhite);
+      isWhite = Loosen.loosen(isWhite);
       if (whiteFirst == isWhite) {
         break;
       }
@@ -285,14 +285,14 @@ public abstract class UPCEANReader extends OneDReader {
       boolean pixel = row.get(x);
       boolean cond = pixel ^ isWhite;
       // additional accept
-      cond = Relax.relax(cond);
+      cond = Loosen.loosen(cond);
       if (cond) {
         counters[counterPosition]++;
       } else {
         if (counterPosition == patternLength - 1) {
           int lhs = patternMatchVariance(counters, pattern, MAX_INDIVIDUAL_VARIANCE);
           //additional accept
-//          lhs = Relax.relax(lhs);
+//          lhs = Loosen.loosen(lhs);
           if (lhs < MAX_AVG_VARIANCE) {
             ret = new int[]{patternStart, x};
             done = true;
@@ -340,9 +340,9 @@ public abstract class UPCEANReader extends OneDReader {
        int[] pattern = patterns[i];
        int variance = patternMatchVariance(counters, pattern, MAX_INDIVIDUAL_VARIANCE);
       //additional accept
-//      variance = Relax.relax(variance);
+//      variance = Loosen.loosen(variance);
       //additional accept
-//      bestVariance = Relax.relax(bestVariance);
+//      bestVariance = Loosen.loosen(bestVariance);
       if (variance < bestVariance) {
         bestVariance = variance;
         bestMatch = i;

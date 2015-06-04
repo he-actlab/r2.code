@@ -97,8 +97,8 @@ public final class PerspectiveTransform {
 	float dy2 = y3 - y2;
     float dy3 = y0 - y1 + y2 - y3;
     //additional accept
-//    dy2 = Relax.relax(dy2);
-//    dy3 = Relax.relax(dy3);
+//    dy2 = Loosen.loosen(dy2);
+//    dy3 = Loosen.loosen(dy3);
     if (dy2 == 0.0f && dy3 == 0.0f) {
       ret = new PerspectiveTransform(x1 - x0, x2 - x1, x0,
           y1 - y0, y2 - y1, y0,

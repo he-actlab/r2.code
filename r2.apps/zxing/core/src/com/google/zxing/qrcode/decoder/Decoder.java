@@ -68,7 +68,7 @@ public final class Decoder {
       for (int j = 0; j < dimension; j++) {
     	//additional accept 
     	boolean b = image[i][j];
-//    	b = Relax.relax(b);
+//    	b = Loosen.loosen(b);
         if (b) {
             int offset = i * bits.rowSize + (j >> 5);
             bits.bits[offset] |= 1 << (j & 0x1f);

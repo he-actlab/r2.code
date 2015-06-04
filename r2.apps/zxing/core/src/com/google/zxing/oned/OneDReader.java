@@ -205,7 +205,7 @@ public abstract class OneDReader implements Reader {
       boolean pixel = row.get(i);
       boolean cond = pixel ^ isWhite;
       //additional accept
-      cond = Relax.relax(cond);
+      cond = Loosen.loosen(cond);
       if (cond) { // that is, exactly one is true
         counters[counterPosition]++;
       } else {
@@ -234,9 +234,9 @@ public abstract class OneDReader implements Reader {
     while (start > 0 && numTransitionsLeft >= 0) {
       boolean rowGet = row.get(--start);
       //additional accept
-//      rowGet = Relax.relax(rowGet);
+//      rowGet = Loosen.loosen(rowGet);
       //additional accept
-//      last = Relax.relax(last);
+//      last = Loosen.loosen(last);
       if (rowGet != last) {
         numTransitionsLeft--;
         last = !last;
@@ -272,9 +272,9 @@ public abstract class OneDReader implements Reader {
       patternLength += pattern[i];
     }
     //additional accept
-//    total = Relax.relax(total);
+//    total = Loosen.loosen(total);
     //additional accept
-//    patternLength = Relax.relax(patternLength);
+//    patternLength = Loosen.loosen(patternLength);
     if (total < patternLength) {
       ret = Integer.MAX_VALUE;
       done = true;
@@ -288,14 +288,14 @@ public abstract class OneDReader implements Reader {
 	      int counter = counters[x] << INTEGER_MATH_SHIFT;
 	      int scaledPattern = pattern[x] * unitBarWidth;
 	      //additional accept
-	//      counter = Relax.relax(counter);
+	//      counter = Loosen.loosen(counter);
 	      //additional accept
-	//      scaledPattern = Relax.relax(scaledPattern);
+	//      scaledPattern = Loosen.loosen(scaledPattern);
 	      int variance = (counter > scaledPattern) ? counter - scaledPattern : scaledPattern - counter;
 	      // addtional accept
-//	      variance = Relax.relax(variance);
+//	      variance = Loosen.loosen(variance);
 	      // addtional accept
-//	      maxIndividualVariance = Relax.relax(maxIndividualVariance);
+//	      maxIndividualVariance = Loosen.loosen(maxIndividualVariance);
 	      if (variance > maxIndividualVariance) {
 	        ret = Integer.MAX_VALUE;
 	        done = true;

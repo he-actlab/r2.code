@@ -165,7 +165,7 @@ public final class CodaBarReader extends OneDReader {
     int width = row.getSize();
     int rowOffset = 0;
     while (rowOffset < width) {
-      if (Relax.relax(row.get(rowOffset))) {
+      if (Loosen.loosen(row.get(rowOffset))) {
         break;
       }
       rowOffset++;
@@ -180,7 +180,7 @@ public final class CodaBarReader extends OneDReader {
     int[] ret = null;
     for (int i = rowOffset; i < width; i++) {
       boolean pixel = row.get(i);
-      pixel = Relax.relax(pixel);
+      pixel = Loosen.loosen(pixel);
       if (pixel ^ isWhite) {
         counters[counterPosition]++;
       } else {

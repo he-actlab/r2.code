@@ -170,7 +170,7 @@ public final class MonochromeRectangleDetector {
     while (start >= minDim) {
       boolean cond = horizontal ? image.get(start, fixedDimension) : image.get(fixedDimension, start);
       //additional accept
-      cond = Relax.relax(cond);
+      cond = Loosen.loosen(cond);
       if (cond) {
         start--;
       } else {
@@ -179,7 +179,7 @@ public final class MonochromeRectangleDetector {
           start--;
           cond = !(horizontal ? image.get(start, fixedDimension) : image.get(fixedDimension, start));
           //additional accept
-          cond = Relax.relax(cond);
+          cond = Loosen.loosen(cond);
         } while (start >= minDim && cond);
         int whiteRunSize = whiteRunStart - start;
         if (start < minDim || whiteRunSize > maxWhiteRun) {

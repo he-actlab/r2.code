@@ -202,7 +202,7 @@ public final class ITFReader extends OneDReader {
     int quietCount = this.narrowLineWidth * 10;  // expect to find this many pixels of quiet zone
 
     for (int i = startPattern - 1; quietCount > 0 && i >= 0; i--) {
-      if (Relax.relax(row.get(i))) {
+      if (Loosen.loosen(row.get(i))) {
         break;
       }
       quietCount--;
@@ -224,7 +224,7 @@ public final class ITFReader extends OneDReader {
     int width = row.getSize();
     int endStart = 0;
     while (endStart < width) {
-      if (Relax.relax(row.get(endStart))) {
+      if (Loosen.loosen(row.get(endStart))) {
         break;
       }
       endStart++;
@@ -297,7 +297,7 @@ public final class ITFReader extends OneDReader {
     for (int x = rowOffset; x < width; x++) {
       boolean pixel = row.get(x);
       boolean cond = pixel ^ isWhite;
-      if (Relax.relax(cond)) {
+      if (Loosen.loosen(cond)) {
         counters[counterPosition]++;
       } else {
         if (counterPosition == patternLength - 1) {

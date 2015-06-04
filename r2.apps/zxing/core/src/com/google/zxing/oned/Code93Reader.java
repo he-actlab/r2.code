@@ -73,7 +73,7 @@ public final class Code93Reader extends OneDReader {
     do {
       recordPattern(row, nextStart, counters);
       int pattern = toPattern(counters);
-      if (Relax.relax(pattern) < 0) {
+      if (Loosen.loosen(pattern) < 0) {
         throw NotFoundException.getNotFoundInstance();
       }
       decodedChar = patternToChar(pattern);
@@ -86,7 +86,7 @@ public final class Code93Reader extends OneDReader {
       while (nextStart < end && !row.get(nextStart)) {
         nextStart++;
       }
-    } while (Relax.relax(decodedChar) != '*');
+    } while (Loosen.loosen(decodedChar) != '*');
     result.deleteCharAt(result.length() - 1); // remove asterisk
 
     // Should be at least one more black module
@@ -121,7 +121,7 @@ public final class Code93Reader extends OneDReader {
     int width = row.getSize();
     int rowOffset = 0;
     while (rowOffset < width) {
-      if (Relax.relax(row.get(rowOffset))) {
+      if (Loosen.loosen(row.get(rowOffset))) {
         break;
       }
       rowOffset++;
@@ -137,7 +137,7 @@ public final class Code93Reader extends OneDReader {
     for (int i = rowOffset; i < width; i++) {
       boolean pixel = row.get(i);
       boolean cond = pixel ^ isWhite;
-      if (Relax.relax(cond)) {
+      if (Loosen.loosen(cond)) {
         counters[counterPosition]++;
       } else {
         if (counterPosition == patternLength - 1) {

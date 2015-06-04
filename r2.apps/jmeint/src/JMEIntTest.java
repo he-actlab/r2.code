@@ -23,12 +23,13 @@ public class JMEIntTest {
 					randvec(), randvec(), randvec(),
 					randvec(), randvec(), randvec()
 					);
-			isec = Relax.relax(isec);
+			isec = Loosen.loosen(isec);
 			if (isec) {
 				System.out.print("1 ");
 			} else {
 				System.out.print("0 ");
 			}
+			Tighten.tighten(isec);
 		}
 		System.out.println("");
 	}

@@ -73,13 +73,13 @@ public final class UPCEReader extends UPCEANReader {
     for (int x = 0; x < 6 && rowOffset < end; x++) {
       int bestMatch = decodeDigit(row, counters, rowOffset, (int [][])L_AND_G_PATTERNS);
       //additional accept
-//      bestMatch = Relax.relax(bestMatch);
+//      bestMatch = Loosen.loosen(bestMatch);
       result.append((char) ('0' + bestMatch % 10));
       for (int i = 0; i < counters.length; i++) {
         rowOffset += counters[i];
       }
       //additional accept
-//      bestMatch = Relax.relax(bestMatch);
+//      bestMatch = Loosen.loosen(bestMatch);
       if (bestMatch >= 10) {
         lgPatternFound |= 1 << (5 - x);
       }

@@ -1,7 +1,7 @@
 package jnt.scimark2;
 
 /**
-  Evaluation for Relax Framework
+  Evaluation for FlexJava Framework
 */
 
 import chord.analyses.r2.lang.*;
@@ -39,11 +39,11 @@ public class MonteCarlo
 		int SEED = Integer.parseInt(args[0]);
 		double out = MonteCarlo.integrate(cycles, SEED); 
 
-		Relax.relax(out);
+		Loosen.loosen(out);
 
 		System.out.println("MonteCarlo out: " + out);
 
-		Restrict.restrict(out);
+		Tighten.tighten(out);
 	}
 
 }

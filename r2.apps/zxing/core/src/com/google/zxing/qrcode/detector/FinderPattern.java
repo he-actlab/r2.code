@@ -61,14 +61,14 @@ public final class FinderPattern extends ResultPoint {
 	boolean ret = false;
 	boolean cond = (ApproxMath.abs(i - getY()) <= moduleSize && ApproxMath.abs(j - getX()) <= moduleSize);
 	//additional accept
-//	cond = Relax.relax(cond);
+//	cond = Loosen.loosen(cond);
     if (cond) {
       float moduleSizeDiff = ApproxMath.abs(moduleSize - estimatedModuleSize);
       //additional accept
-//      moduleSizeDiff = Relax.relax(moduleSizeDiff);
+//      moduleSizeDiff = Loosen.loosen(moduleSizeDiff);
       float temp = estimatedModuleSize;
 //      additional accept
-//      temp = Relax.relax(temp);
+//      temp = Loosen.loosen(temp);
       ret = moduleSizeDiff <= 1.0f || moduleSizeDiff / temp <= 1.0f;
     }
     return ret;

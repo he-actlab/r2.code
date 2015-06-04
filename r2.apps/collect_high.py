@@ -19,77 +19,60 @@ BMARKS = {
         #Bmark('SciMark2: SMM',        'smm', 'proportion', None),
         #Bmark('SciMark2: LU',         'lu',  'absolute', None),
     #],
-    'FFT' : [
-        Bmark('SciMark2: FFT',        'fft', 'absolute', None),
-    ],
-    'SOR' : [
-        Bmark('SciMark2: SOR',        'sor', 'absolute', None),
-    ],
-    'MonteCarlo' : [
-        Bmark('SciMark2: MonteCarlo', 'mc',  'proportion', None),
-    ],
-    'SMM' : [
-        Bmark('SciMark2: SMM',        'smm', 'proportion', None),
-    ],
-    'LU' : [
-        Bmark('SciMark2: LU',         'lu',  'absolute', None),
-    ],
     'zxing': [
-        Bmark('ZXing', '', 'string', r'Parsed result:\n(\S+)'),
+        Bmark('zxing', '', 'string', r'Parsed result:\n(\S+)'),
     ],
-    
+    'zxing-enerj': [
+        Bmark('zxing', '', 'string', r'Parsed result:\n(\S+)'),
+    ],
     'jmeint': [
-        Bmark('jME', '', 'boolean', None),
+        Bmark('jmeint', '', 'boolean', None),
     ],
     'jmeint-enerj': [
-        Bmark('jME', '', 'boolean', None),
-    ],
-    'imagefill': [
-        Bmark('ImageJ', '', 10, None),
+        Bmark('jmeint', '', 'boolean', None),
     ],
     'simpleRaytracer': [
-        Bmark('Plane', '' , 255, None)
+        Bmark('simpleRaytracer', '' , 255, None)
     ],
     'simpleRaytracer-enerj': [
-        Bmark('Plane', '' , 255, None)
+        Bmark('simpleRaytracer', '' , 255, None)
     ],
-	'sobel': [
-        Bmark('Sobel', '' , 255, None)
+    'sobel': [
+        Bmark('sobel', '' , 255, None)
     ],
-	'sobel-enerj': [
-        Bmark('Sobel', '' , 255, None)
-	],
-	'fft': [
-		Bmark('FFT', '', 'absolute', None)
-	],
-	'fft-enerj': [
-		Bmark('FFT', '', 'absolute', None)
-	],
+    'sobel-enerj': [
+        Bmark('sobel', '' , 255, None)
+    ],
+    'fft': [
+        Bmark('fft', '', 'absolute', None)
+    ],
+    'fft-enerj': [
+        Bmark('fft', '', 'absolute', None)
+    ],
     'sor': [
-        Bmark('SOR', '', 'absolute', None)
+        Bmark('sor', '', 'absolute', None)
     ],
     'sor-enerj': [
-        Bmark('SOR', '', 'absolute', None)
+        Bmark('sor', '', 'absolute', None)
     ],
     'lu': [
-        Bmark('LU', '', 'absolute', None)
+        Bmark('lu', '', 'absolute', None)
     ],
     'lu-enerj': [
-        Bmark('LU', '', 'absolute', None)
+        Bmark('lu', '', 'absolute', None)
     ],
     'mc': [
-        Bmark('MonteCarlo', '', 'proportion', None)
+        Bmark('mc', '', 'proportion', None)
     ],
     'mc-enerj': [
-        Bmark('MonteCarlo', '', 'proportion', None)
+        Bmark('mc', '', 'proportion', None)
     ],
     'smm': [
-        Bmark('SparseCompRow', '', 'proportion', None)
+        Bmark('smm', '', 'proportion', None)
     ],
     'smm-enerj': [
-        Bmark('SParseCompRow', '', 'proportion', None)
+        Bmark('smm', '', 'proportion', None)
     ]
-
 }
 COMMANDS = {
     'run_precise':   './run.sh -nonoise %s',
@@ -207,7 +190,6 @@ def run(bmark, noise, benchArg):
                  
     # Write out noise dictionary.
     if noise is not None:
-        #print noise
         logging.debug('writing noise dictionary: %s' % noise)
         with open(NOISE_FILE, 'w') as f:
             json.dump(noise, f)
@@ -221,7 +203,6 @@ def run(bmark, noise, benchArg):
     for arg in benchArg:
         newCmd += " "
         newCmd += arg
-    #print newCmd
     out = shell(newCmd)
     out = re.sub(r'Loading Precision.+', '', out)
     out = out.strip()
@@ -265,7 +246,6 @@ def replicated_run(bmark, noise, benchArg):
 def collect_outputs(path, bmarks, apronly=False, colonly=False, benchArg=[]):
     curdir = os.getcwd()
     os.chdir(path)
-
     # Now rebuild with simulation.
     #logging.info('building %s with simulation' % path)
     #shell(COMMANDS['build_sim'])
@@ -274,15 +254,12 @@ def collect_outputs(path, bmarks, apronly=False, colonly=False, benchArg=[]):
     results = {}
     for bmark in bmarks:
         result = Result(bmark)
-        #print "precise run"
         result.precise_output = run(bmark, None, benchArg)
-#print 'precise_output = ' + repr(result.precise_output)
         logging.debug('output: ' + repr(result.precise_output))
         results[bmark] = result
         
         # Load statistics from precise run.
         results[bmark].stats = summarize_stats(json.load(open(STATS_FILENAME)))
-    
     # Abort if we're just getting the approximateness.
     if apronly:
         os.chdir(curdir)
@@ -300,14 +277,12 @@ def collect_outputs(path, bmarks, apronly=False, colonly=False, benchArg=[]):
         for name, vals in NOISE.iteritems():
             noise[name] = vals[level]
         noise[MODE_KEY] = MODE_DEFAULT
-        #print "default run"
         results[bmark].output_collective[level] = \
             replicated_run(bmark, noise, benchArg)
         
         if colonly:
             # Skip individual variation.
             continue
-        
         # Individual variation.
         for const in NOISE:
             if const == MODES_NOISE_KEY:
@@ -324,7 +299,6 @@ def collect_outputs(path, bmarks, apronly=False, colonly=False, benchArg=[]):
                 else:
                     noise[g_const] = DISABLED
             noise[MODE_KEY] = DISABLED
-            #print "noise run - const = " + str(const) 
             outputs[level] = replicated_run(bmark, noise, benchArg)
 
         # Individual variation for timing error modes.
@@ -343,7 +317,6 @@ def collect_outputs(path, bmarks, apronly=False, colonly=False, benchArg=[]):
                 else:
                     noise[g_const] = DISABLED
             noise[MODE_KEY] = mode
-            #print "modes run - mode = " + str(mode)
             outputs[level] = replicated_run(bmark, noise, benchArg)
     
     os.chdir(curdir)
@@ -374,7 +347,6 @@ def err(x, y, proportion, norm=None):
 def calc_error(bmark, precise_output, approx_outputs):
     errors = []
     for approx_output in approx_outputs:
-#print 'approx_output = ' + repr(approx_output)
         if bmark.output == 'string':
             # String matching on output.
             if approx_output == precise_output:
@@ -448,7 +420,7 @@ def dump_json(results, path):
 
 if __name__ == '__main__':    
     logging.getLogger('').setLevel(logging.INFO)
-   
+    
     path = sys.argv[1]
     benchArg = []
     for i in range(2, len(sys.argv)):
@@ -472,4 +444,7 @@ if __name__ == '__main__':
         results = collect_outputs(path, BMARKS[path], apronly, colonly, benchArg)
     print '\n'.join(str(res) for res in results.itervalues())
     total.update(results)
-    dump_json(total, JSON_OUT)
+    if path == 'FFT' or path == 'SOR' or path == 'MonteCarlo' or path == 'SMM' or path == 'LU':
+        dump_json(total, 'scimark2/' + JSON_OUT)
+    else:
+        dump_json(total, path + '/' + JSON_OUT)

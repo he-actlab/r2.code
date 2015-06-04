@@ -75,7 +75,7 @@ public class Plane {
 				index=y*w+x;
 				
 				// additional accept
-				t = Relax.relax(t);	
+				t = Loosen.loosen(t);	
 				if(t >= 0)
 				{
 					ix=xe+t*xd;
@@ -99,12 +99,17 @@ public class Plane {
 			}
 		}
 
-		pixels = Relax.relax_all_FIELD2_TAG1(pixels);
-		
 		for (int i = 0; i < pixels.length; i++) {
-			System.out.println((pixels[i] & 0xff)+"\n");
-			System.out.println(((pixels[i] >> 8) & 0xff)+"\n");
-			System.out.println(((pixels[i] >> 16) & 0xff)+"\n");
+		
+			int pixels_i = pixels[i];
+
+			Loosen.loosen(pixels_i);
+
+			System.out.println((pixels_i & 0xff)+"\n");
+			System.out.println(((pixels_i >> 8) & 0xff)+"\n");
+			System.out.println(((pixels_i >> 16) & 0xff)+"\n");
+
+			Tighten.tighten(pixels_i);
 		}
 	}
 

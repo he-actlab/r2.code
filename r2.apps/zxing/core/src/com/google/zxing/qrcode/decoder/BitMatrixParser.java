@@ -141,7 +141,7 @@ final class BitMatrixParser {
   private int copyBit(int i, int j, int versionBits) {
 	boolean b = bitMatrix.get(i, j);
 	//additional accept
-//	b = Relax.relax(b);
+//	b = Loosen.loosen(b);
     return b ? (versionBits << 1) | 0x1 : versionBits << 1;
   }
 
@@ -189,7 +189,7 @@ final class BitMatrixParser {
             currentByte <<= 1;
             boolean b = bitMatrix.get(j - col, i);
             //additional accept
-//            b = Relax.relax(b);
+//            b = Loosen.loosen(b);
             if (b) {
               currentByte |= 1;
             }

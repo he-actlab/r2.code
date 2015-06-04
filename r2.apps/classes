@@ -4,7 +4,7 @@ simple Simple
 jmeint JMEIntTest,com.jme.intersection.Intersection,com.jme.math.Vector2f,com.jme.math.Vector3f
 simpleRaytracer Plane
 sobel Sobel.RgbImage,Sobel.TextFile
-lu jnt.scimark2.commandline,jnt.scimark2.kernel,jnt.scimark2.LU,jnt.scimark2.Random
+lu jnt.scimark2.LU,jnt.scimark2.Random
 sor jnt.scimark2.commandline,jnt.scimark2.SOR,jnt.scimark2.kernel,jnt.scimark2.Random
 smm jnt.scimark2.commandline,jnt.scimark2.kernel,jnt.scimark2.Random,jnt.scimark2.SparseCompRow
 zxing com.google.zxing.client.j2se.CommandLineRunner,com.google.zxing.common.BitMatrix,com.google.zxing.common.BitArray,com.google.zxing.common.GridSampler

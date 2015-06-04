@@ -1,12 +1,12 @@
 #!/bin/sh
 enerjdir=../../r2.enerj
 r2jar=$R2_ANALYSIS/r2-analysis.jar
-#classpath=mc.jar:$r2jar
-classpath=new.jar:$r2jar
+classpath=mc.jar:$r2jar
+#classpath=new.jar:$r2jar
 mainclass=jnt.scimark2.MonteCarlo
 
 enerjargs=-noisy
-scimarkargs=
+scimarkargs=100
 for arg
 do
     case "$arg" in

@@ -238,9 +238,9 @@ public final class Detector {
       }
       error += dy;
       //additional accept
-      if (Relax.relax(error) > 0) {
+      if (Loosen.loosen(error) > 0) {
     	//additional accept
-        if (y == Relax.relax(toY)) {
+        if (y == Loosen.loosen(toY)) {
           break;
         }
         y += ystep;

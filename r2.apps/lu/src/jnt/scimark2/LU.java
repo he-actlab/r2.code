@@ -1,7 +1,7 @@
 package jnt.scimark2;
 
 /**
- Evaluation for Relax framework
+ Evaluation for FlexJava framework
 */
 
 import chord.analyses.r2.lang.*;
@@ -16,16 +16,16 @@ public class LU
 
 		boolean done = false;
 		int ret = -1;
-		int minMN = Math.min(M,N);
+		int minMN = ApproxMath.min(M,N);
 
 		for (int j=0; j<minMN; j++)
 		{
 			int jp=j;
 
-			double t = Math.abs(A[j][j]);
+			double t = ApproxMath.abs(A[j][j]);
 			for (int i=j+1; i<M; i++)
 			{
-				double ab = Math.abs(A[i][j]);
+				double ab = ApproxMath.abs(A[i][j]);
 				if (ab > t)
 				{
 					jp = i;
@@ -61,11 +61,9 @@ public class LU
 				{
 					for (int ii=j+1; ii<M; ii++)
 					{
-						double Aii[] = A[ii];
-						double Aj[] = A[j];
-						double AiiJ = Aii[j];
-						for (int jj=j+1; jj<N; jj++)
-							Aii[jj] -= AiiJ * Aj[jj];
+						for (int jj=j+1; jj<N; jj++) {
+							A[ii][jj] -= A[ii][j] * A[j][jj];
+						}
 					}
 				}
 			}
@@ -149,7 +147,7 @@ public class LU
 		}	
 
 		for (int i=0; i<N; i++)
-			for (int j=0; j<N; j++)
+			for (int j=0; j<N; j++) 
 				A[i][j] = R.nextDouble();
 		return A;
 	}
@@ -211,6 +209,12 @@ public class LU
 			LU.factor(( double [][])lu, pivot);
 		}
 
+/*		for (int i=0; i<N; i++){
+			for (int j=0; j<N; j++){
+				Loosen.loosen(lu[i][j]);
+			}
+		}*/
+
 		// verify that LU is correct
 		double b[] = RandomVector(N, R);
 		double x[] = NewVectorCopy(b);
@@ -221,7 +225,13 @@ public class LU
 
 		System.out.print("LU vector: ");
 		for (int i = 0; i < N; ++i) {
-			System.out.print((y[i]) + " ");
+			double y_i = y[i];
+
+			Loosen.loosen(y_i);
+
+			System.out.print(y_i + " ");
+
+			Tighten.tighten(y_i);
 		}
 		System.out.println("");
 	}

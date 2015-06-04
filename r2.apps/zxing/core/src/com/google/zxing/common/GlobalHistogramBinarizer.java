@@ -62,7 +62,7 @@ public class GlobalHistogramBinarizer extends Binarizer {
     for (int x = 0; x < width; x++) {
       int pixel = (localLuminances[x] & 0xff);
       //additional accept
-      pixel = Relax.relax(pixel);
+      pixel = Loosen.loosen(pixel);
       localBuckets[pixel >> LUMINANCE_SHIFT]++;
     }
      int blackPoint = estimateBlackPoint(localBuckets);
@@ -74,9 +74,9 @@ public class GlobalHistogramBinarizer extends Binarizer {
       // A simple -1 4 -1 box filter with a weight of 2.
       int luminance = ((center << 2) - left - right) >> 1;
       // additional accept
-//      luminance = Relax.relax(luminance);
+//      luminance = Loosen.loosen(luminance);
       // additional accept
-//      blackPoint = Relax.relax(blackPoint);
+//      blackPoint = Loosen.loosen(blackPoint);
       if (luminance < blackPoint) {
     	row.bits[x >> 5] |= 1 << (x & 0x1F);
 //        row.set(x);
@@ -105,7 +105,7 @@ public class GlobalHistogramBinarizer extends Binarizer {
       for (int x = width / 5; x < right; x++) {
         int pixel = (localLuminances[x] & 0xff);
         //additional accept
-        pixel = Relax.relax(pixel);
+        pixel = Loosen.loosen(pixel);
         localBuckets[pixel >> LUMINANCE_SHIFT]++; // EnerJ TODO
       }
     }
@@ -120,9 +120,9 @@ public class GlobalHistogramBinarizer extends Binarizer {
       for (int x = 0; x< width; x++) {
         int pixel = (localLuminances[offset + x] & 0xff);
         //additional accept
-//        pixel = Relax.relax(pixel);
+//        pixel = Loosen.loosen(pixel);
         //additional accept
-//        blackPoint = Relax.relax(blackPoint);
+//        blackPoint = Loosen.loosen(blackPoint);
         if (pixel < blackPoint) {
           int offset2 = y * matrix.rowSize + (x >> 5);
           matrix.bits[offset2] |= 1 << (x & 0x1f);
@@ -160,15 +160,15 @@ public class GlobalHistogramBinarizer extends Binarizer {
     int firstPeakSize = 0;
     for (int x = 0; x < numBuckets; x++) {
       // additional accept
-//      buckets = Relax.relax_all_FIELD1_TAG5(buckets);
+//      buckets = Loosen.loosen_all_FIELD1_TAG5(buckets);
       // additional accept
-//      firstPeakSize = Relax.relax(firstPeakSize);
+//      firstPeakSize = Loosen.loosen(firstPeakSize);
       if (buckets[x] > firstPeakSize) {
         firstPeak = x;
         firstPeakSize = buckets[x];
       }
       // additional accept
-//      maxBucketCount = Relax.relax(maxBucketCount);
+//      maxBucketCount = Loosen.loosen(maxBucketCount);
       if (buckets[x] > maxBucketCount) {
         maxBucketCount = buckets[x];
       }
@@ -182,9 +182,9 @@ public class GlobalHistogramBinarizer extends Binarizer {
       // Encourage more distant second peaks by multiplying by square of distance.
       int score = buckets[x] * distanceToBiggest * distanceToBiggest;
       // additional accept 
-//      score = Relax.relax(score);
+//      score = Loosen.loosen(score);
       // additional accept
-//      secondPeakScore = Relax.relax(secondPeakScore);
+//      secondPeakScore = Loosen.loosen(secondPeakScore);
       if (score > secondPeakScore) {
         secondPeak = x;
         secondPeakScore = score;
@@ -213,9 +213,9 @@ public class GlobalHistogramBinarizer extends Binarizer {
       int fromFirst = x - firstPeak;
       int score = fromFirst * fromFirst * (secondPeak - x) * (maxBucketCount - buckets[x]);
       // additional accept
-//      score = Relax.relax(score);
+//      score = Loosen.loosen(score);
       // additional accept
-//      bestValleyScore = Relax.relax(bestValleyScore);
+//      bestValleyScore = Loosen.loosen(bestValleyScore);
       if (score > bestValleyScore) {
         bestValley = x;
         bestValleyScore = score;
