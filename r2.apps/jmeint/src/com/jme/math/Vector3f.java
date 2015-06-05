@@ -32,6 +32,9 @@
 
 package com.jme.math;
 
+import chord.analyses.r2.lang.*;
+import chord.analyses.r2.lang.math.*;
+
 import java.io.Externalizable;
 import java.io.IOException;
 import java.io.ObjectInput;
@@ -291,7 +294,9 @@ public class Vector3f implements Externalizable, Cloneable {
             logger.warning("Provided vector is null, 0 returned.");
             return 0;
         }
-        return x * vec.x + y * vec.y + z * vec.z;
+				float ret = x * vec.x + y * vec.y + z * vec.z;
+				Loosen.loosen(ret);
+        return ret; 
     }
 
     /**
@@ -344,12 +349,15 @@ public class Vector3f implements Externalizable, Cloneable {
         float resX = ((y * otherZ) - (z * otherY)); 
         float resY = ((z * otherX) - (x * otherZ));
         float resZ = ((x * otherY) - (y * otherX));
+				Loosen.loosen(resX);
+				Loosen.loosen(resY);
+				Loosen.loosen(resZ);
         result.set(resX, resY, resZ);
         return result;
     }
 
     /**
-     * <code>crossLocal</code> calculates the cross product of this vector
+    Z* <code>crossLocal</code> calculates the cross product of this vector
      * with a parameter vector v.
      *
      * @param v
@@ -679,6 +687,9 @@ public class Vector3f implements Externalizable, Cloneable {
         result.x = x - vec.x;
         result.y = y - vec.y;
         result.z = z - vec.z;
+				Loosen.loosen(result.x);
+				Loosen.loosen(result.y);
+				Loosen.loosen(result.z);
         return result;
     }
 

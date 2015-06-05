@@ -1,6 +1,7 @@
 package Sobel;
 
-
+import chord.analyses.r2.lang.*;
+import chord.analyses.r2.lang.math.*;
 
 import java.io.*;
 import java.util.Arrays;
@@ -165,6 +166,8 @@ public class TextFile {
 				c = (char)streamTokenizer.ttype;	
 		}
 
+		Loosen.loosen(c);
+
 		return c;
 	}
 
@@ -175,6 +178,8 @@ public class TextFile {
 			streamTokenizer.nextToken ();
 			i = (int)streamTokenizer.nval;
 		}
+
+		Loosen.loosen(i);
 
 		return i;
 	}

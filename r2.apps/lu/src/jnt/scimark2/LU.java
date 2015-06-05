@@ -63,6 +63,7 @@ public class LU
 					{
 						for (int jj=j+1; jj<N; jj++) {
 							A[ii][jj] -= A[ii][j] * A[j][jj];
+							Loosen.loosen(A[ii][jj]);
 						}
 					}
 				}
@@ -70,6 +71,8 @@ public class LU
 		}
 		if(!done)
 			ret = 0;
+
+		Loosen.loosen(ret);
 
 		return ret;
 	}
@@ -102,6 +105,7 @@ public class LU
 			for (int j=i+1; j<N; j++)
 				sum -= LU[i][j] * b[j]; 
 			b[i] = sum / LU[i][i]; 
+			Loosen.loosen(b[i]);
 		}
 	}   
 
@@ -110,8 +114,10 @@ public class LU
 		int N = x.length;
 
 		double y[] = new  double[N];
-		for (int i=0; i<N; i++)
+		for (int i=0; i<N; i++) {
 			y[i] = x[i];
+			Loosen.loosen(y[i]);
+		}
 
 		return y;
 	}
@@ -147,8 +153,10 @@ public class LU
 		}	
 
 		for (int i=0; i<N; i++)
-			for (int j=0; j<N; j++) 
+			for (int j=0; j<N; j++) { 
 				A[i][j] = R.nextDouble();
+				Loosen.loosen(A[i][j]);
+			}
 		return A;
 	}
 
@@ -156,8 +164,10 @@ public class LU
 	{
 		double A[] = new double[N];
 
-		for (int i=0; i<N; i++)
+		for (int i=0; i<N; i++) {
 			A[i] = R.nextDouble(); 
+			Loosen.loosen(A[i]);
+		}
 		return A;
 	}
 
@@ -186,6 +196,7 @@ public class LU
 			}
 
 			y[i] = sum; 
+			Loosen.loosen(y[i]);
 		}
 	}
 
@@ -208,12 +219,6 @@ public class LU
 			CopyMatrix(lu, A);
 			LU.factor(( double [][])lu, pivot);
 		}
-
-/*		for (int i=0; i<N; i++){
-			for (int j=0; j<N; j++){
-				Loosen.loosen(lu[i][j]);
-			}
-		}*/
 
 		// verify that LU is correct
 		double b[] = RandomVector(N, R);

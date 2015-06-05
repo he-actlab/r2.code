@@ -30,8 +30,10 @@ public class FFT {
 		int n =nd/2; 
 		int aprN = n; 
 		double norm=1.0/aprN;
-		for(int i=0; i<nd; i++)
+		for(int i=0; i<nd; i++) {
 			data[i] *= norm; 
+			Loosen.loosen(data[i]);
+		}
 	}
 
 	protected static int log2 (int n){
@@ -102,6 +104,10 @@ public class FFT {
 					data[i+1]+= wd_imag; 
 				}
 			}
+
+			for (int i = 0; i < data.length; i++) {
+				Loosen.loosen(data[i]);
+			}
 		}
 	}
 
@@ -140,6 +146,10 @@ public class FFT {
 					k >>= 1 ; 
 				}
 				j += k ;
+		}
+
+		for (i = 0; i < data.length; i++) {
+			Loosen.loosen(data[i]);	
 		}
 	}
 	

@@ -27,9 +27,11 @@ public class SOR
 				double[] Gi = G[i];
 				double[] Gim1 = G[i-1];
 				double[] Gip1 = G[i+1];
-				for (int j=1; j<Nm1; j++)
+				for (int j=1; j<Nm1; j++) {
 					Gi[j] = omega_over_four * (Gim1[j] + Gip1[j] + Gi[j-1]  
 							+ Gi[j+1]) + one_minus_omega * Gi[j];
+					Loosen.loosen(Gi[j]);
+				}
 			}
 		}
 	}
@@ -41,8 +43,10 @@ public class SOR
 		}	
 
 		for (int i=0; i<N; i++)
-			for (int j=0; j<N; j++)
+			for (int j=0; j<N; j++) {
 				A[i][j] = R.nextDouble();
+				Loosen.loosen(A[i][j]);
+			}
 		return A;
 	}
 

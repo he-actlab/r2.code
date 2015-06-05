@@ -32,6 +32,9 @@
 
 package com.jme.math;
 
+import chord.analyses.r2.lang.*;
+import chord.analyses.r2.lang.math.*;
+
 import java.util.Random;
 
 /**
@@ -411,6 +414,7 @@ final public class FastMath {
         int val3=counterClockwise(t2,t0,p);
         if (val3==0) return 1;
         if (val3!=val1) return 0;
+				Loosen.loosen(val3);
         return val3;
     }
 
@@ -429,10 +433,12 @@ final public class FastMath {
         double det12 = m21 * m32 - m22 * m31;
         double det13 = m21 * m33 - m23 * m31;
         double det23 = m22 * m33 - m23 * m32;
-        return (float) (m00 * (m11 * det23 - m12 * det13 + m13 * det12) - m01
+				float ret = (float) (m00 * (m11 * det23 - m12 * det13 + m13 * det12) - m01
                 * (m10 * det23 - m12 * det03 + m13 * det02) + m02
                 * (m10 * det13 - m11 * det03 + m13 * det01) - m03
                 * (m10 * det12 - m11 * det02 + m12 * det01));
+				Loosen.loosen(ret);
+        return ret;
     }
 
     /**
@@ -452,7 +458,9 @@ final public class FastMath {
      *         <tt>max</tt> (inclusive).
      */
     public static int nextRandomInt(int min, int max) {
-        return (int)(nextRandomFloat() * (max - min + 1)) + min;
+				int ret = (int)(nextRandomFloat() * (max - min + 1)) + min;
+				Loosen.loosen(ret);
+        return ret;
     }
 
     public static int nextRandomInt() {
@@ -470,6 +478,9 @@ final public class FastMath {
         store.x = a * FastMath.cos(sphereCoords.y);
         store.z = a * FastMath.sin(sphereCoords.y);
 
+				Loosen.loosen(store.x);
+				Loosen.loosen(store.y);
+				Loosen.loosen(store.z);
         return store;
     }
 
@@ -490,6 +501,10 @@ final public class FastMath {
         if (cartCoords.x < 0)
             store.y += FastMath.PI;
         store.z = FastMath.asin(cartCoords.y / store.x);
+
+				Loosen.loosen(store.x);
+				Loosen.loosen(store.y);
+				Loosen.loosen(store.z);
         return store;
     }
 
@@ -504,6 +519,9 @@ final public class FastMath {
         store.x = a * FastMath.cos(sphereCoords.y);
         store.y = a * FastMath.sin(sphereCoords.y);
 
+				Loosen.loosen(store.x);			
+				Loosen.loosen(store.y);
+				Loosen.loosen(store.z);
         return store;
     }
 
@@ -524,6 +542,10 @@ final public class FastMath {
         if (cartCoords.x < 0)
             store.z += FastMath.PI;
         store.y = FastMath.asin(cartCoords.y / store.x);
+
+				Loosen.loosen(store.x);
+				Loosen.loosen(store.y);
+				Loosen.loosen(store.z);
         return store;
     }
 
@@ -542,6 +564,7 @@ final public class FastMath {
             val -= range;
         while (val < min)
             val += range;
+				Loosen.loosen(val);
         return val;
     }
 
@@ -553,12 +576,15 @@ final public class FastMath {
      * @return x with its sign changed to match the sign of y.
      */
     public static float copysign(float x, float y) {
+				float ret;
         if (y >= 0 && x <= -0)
-            return -x;
+            ret = -x;
         else if (y < 0 && x >= 0)
-            return -x;
+            ret = -x;
         else
-            return x;
+            ret = x;
+				Loosen.loosen(ret);
+				return ret;
     }
     
     /**
@@ -570,6 +596,8 @@ final public class FastMath {
      * @return clamped input
      */
     public static float clamp(float input, float min, float max) {
-        return (input < min) ? min : (input > max) ? max : input;
+				float ret = (input < min) ? min : (input > max) ? max : input;
+				Loosen.loosen(ret);
+        return ret;
     }
 }

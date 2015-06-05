@@ -218,6 +218,7 @@ public class Intersection {
 				}
 			}
 		}
+		Loosen.loosen(ret);
 		return ret;
 	}
 
@@ -226,6 +227,8 @@ public class Intersection {
 			float c = f[0];
 			f[0] = f[1];
 			f[1] = c;
+			Loosen.loosen(f[0]);
+			Loosen.loosen(f[1]);
 		}
 	}
 
@@ -267,6 +270,7 @@ public class Intersection {
 		} else {
 			ret = true;
 		}
+		Loosen.loosen(ret);
 		return ret;
 	}
 
@@ -322,7 +326,7 @@ public class Intersection {
 			pointInTri(v0f, u0f, u1f, u2f, i0, i1);
 			pointInTri(u0f, v0f, v1f, v2f, i0, i1);
 		}
-
+		Loosen.loosen(ret);
 		return ret;
 	}
 
@@ -348,6 +352,7 @@ public class Intersection {
 			ret = true;
 		else
 			ret = false;
+		Loosen.loosen(ret);
 		return ret;
 	}
 
@@ -364,6 +369,7 @@ public class Intersection {
 			ret = true;
 		if (edgeEdgeTest(v0, u2, u0, i0, i1, aX, aY)) 
 			ret = true;
+		Loosen.loosen(ret);
 		return ret;
 	}
 
@@ -387,6 +393,7 @@ public class Intersection {
 					ret = true;
 			}
 		}
+		Loosen.loosen(ret);
 		return ret;
 	}
 }

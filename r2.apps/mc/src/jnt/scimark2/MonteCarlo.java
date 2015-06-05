@@ -30,6 +30,8 @@ public class MonteCarlo
 				under_curve ++; 
 		}
 		
+		Loosen.loosen(under_curve);
+
 		return ((double) under_curve / Num_samples) * 4.0; 
 	}
 

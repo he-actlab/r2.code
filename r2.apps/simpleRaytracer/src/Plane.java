@@ -28,7 +28,6 @@ public class Plane {
 		h=dd.height;
 		texture=Integer.parseInt(args[0]);
 		light=Integer.parseInt(args[1]);
-		Tag.TAG1();
 		pixels=new int[w*h];	
 		int index,x,y; 
 		float xe,ye,ze,xd,yd,zd;
@@ -68,9 +67,7 @@ public class Plane {
 				zd/=l;	
 
 				float cond = (k-ye)*yd;
-				//additional accept
-//				cond = Accept.accept(cond);
-				if(cond<=0) {
+				if(Loosen.loosen(cond)<=0) {
 					t=-1;	
 				} else {
 					t=(k-ye)/yd;
@@ -78,9 +75,7 @@ public class Plane {
 
 				index=y*w+x;
 				
-				// additional accept
-				t = Loosen.loosen(t);	
-				if(t >= 0)
+				if(Loosen.loosen(t) >= 0)
 				{
 					ix=xe+t*xd;
 					iy=ye+t*yd;
@@ -129,14 +124,14 @@ public class Plane {
 		}
 		b=r;	
 
-		if(texture==1) {
+		if(Loosen.loosen(texture)==1) {
 			col=(255<<24)|(255<<16);
 		} else if(texture==2) {
 			int mrx = ApproxMath.round(x);
 			int mrz = ApproxMath.round(z);
 			v = (mrx + mrz) %2;	
 	
-			if(v==0) {
+			if(Loosen.loosen(v)==0) {
 				col=(255<<24)|b;	
 			} else {
 				col=(255<<24)|(r<<16);	
@@ -146,12 +141,19 @@ public class Plane {
 		if(numIterations == 25) {
 			System.gc(); 
 		}
+
+		Loosen.loosen(col);
+
 		return col;	
 	}
 
 	public static void main(String[] args) {
 		Plane p = new Plane();	
 		p.init(args);
+
+		for (int i = 0; i < pixels.length; i++) {
+			Loosen.loosen(pixels[i]);
+		}
 	}
 
 }

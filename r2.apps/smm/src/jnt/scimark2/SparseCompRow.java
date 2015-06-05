@@ -24,6 +24,7 @@ public class SparseCompRow
 				for (int i=rowR; i<rowRp1; i++)
 					sum += x[ col[i] ] * val[i]; 
 				y[r] = sum; 
+				Loosen.loosen(y[r]);
 			}
 		}
 	}
@@ -31,8 +32,10 @@ public class SparseCompRow
 	private static double[] RandomVector(int N, Random R) {
 		double A[] = new double[N];
 
-		for (int i=0; i<N; i++)
+		for (int i=0; i<N; i++) {
 			A[i] = R.nextDouble(); 
+			Loosen.loosen(A[i]);
+		}
 		return A;
 	}
 

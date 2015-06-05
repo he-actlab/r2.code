@@ -44,6 +44,14 @@ public class RgbImage {
 				}
 			}
 		}
+
+		for (int i = 0; i < height; i++) {
+			for (int j = 0; j < width; j++) {
+				for (int k = 0; k <= 2; k++) {
+					Loosen.loosen(image[i][j][k]);
+				}
+			}
+		}
 	}
 
 	public void slideWindow(int x, int y, int[][][] window) {
@@ -79,6 +87,14 @@ public class RgbImage {
 			}
 			r++;
 		}
+
+		for (int i = 0; i <= 2; i++) {
+			for (int j = 0; j <= 2; j++) {
+				for (int k = 0; k <= 2; k++) {
+					Loosen.loosen(window[i][j][k]);
+				}
+			}
+		}
 	}
 
 	public double sobel (int[][][] window) {
@@ -98,6 +114,8 @@ public class RgbImage {
 		double y = (p3 + (p6 + p6) + p9 - p1 - (p4 + p4) - p7);	
 
 		double l = Math.sqrt(x * x + y * y);	
+
+		Loosen.loosen(l);
 
 		return l;
 	}
@@ -130,6 +148,14 @@ public class RgbImage {
 				image[i][j][0] = ( int)(luminance * 256);	
 				image[i][j][1] = ( int)(luminance * 256);	
 				image[i][j][2] = ( int)(luminance * 256);	
+			}
+		}
+
+		for (i = 0; i < height; i++) {
+			for (j = 0; j < width; j++) {
+				for (int k = 0; k <= 2; k++) {
+					Loosen.loosen(image[i][j][k]);
+				}
 			}
 		}
 	}
