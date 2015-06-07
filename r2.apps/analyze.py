@@ -22,7 +22,6 @@ print "   BUILD SUCCESSFUL"
 print Fore.MAGENTA + " >>>>> [1] compilation end >>>>> " + Fore.RESET
 p = os.popen("pwd | awk -F'/' '{print $NF}'")
 result = p.read()
-print result
 os.system("cd $R2_ANALYSIS; ./runpl.sh " + result.strip('\n') + " > /dev/null 2> /dev/null")
 print
 print Fore.GREEN + " <<<<< [2] r2 analysis start <<<<< " + Fore.RESET
