@@ -30,7 +30,7 @@ if system == "high":
 if system == "medium":
 	system = "med"
 
-p = os.popen("pwd | awk -F'/' '{print $7}'")
+p = os.popen("pwd | awk -F'/' '{print $NF}'")
 result = p.read()
 bench = result.strip('\n')
 
