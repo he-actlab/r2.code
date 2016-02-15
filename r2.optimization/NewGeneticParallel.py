@@ -1077,8 +1077,8 @@ def main():
     logfile.write('starting %s level %s...\n' % (bench, level)) # level 0[low], 1[medium], 2[high], 3[aggressive]
     init(bench)
     os.system('cd ../r2.apps ; ./cpDir.py ' + bench)
-#    geneticAlgorithm(bench, int(level), Inputs.BenchInputs[bench].trainInputs)
-#    print "genetic algorithm finished"
+    geneticAlgorithm(bench, int(level), Inputs.BenchInputs[bench].trainInputs)
+    print "genetic algorithm finished"
     print "statistic guarantee start"
     findStatGuaranteeGene(bench, int(level), Inputs.BenchInputs[bench].trainInputs, Inputs.BenchInputs[bench].testInputs)
     print "statistic guarantee end"
